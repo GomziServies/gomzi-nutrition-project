@@ -696,14 +696,11 @@ function Home() {
           <div className="container-fluid w-80">
             <div className="row py-2">
               <div className="col-12 text-center">
-                <p className="m-0 f-rob-med f-14 d-inline-block">
-                  For Third Party Manufacturing
-                </p>
                 <Link
                   to="/nutrition/white-labelling"
                   className="btn black-btn mx-3 my-2 my-md-0"
                 >
-                  Contact Us
+                  Click Here For Third Party Manufacturing
                 </Link>
               </div>
             </div>

@@ -46,7 +46,7 @@ function GomziNutritionRefuelMassGainerPowder() {
             "/assets/images/nutrition/refuel-muscle-matrix-3-1kg.webp",
             "/assets/images/nutrition/refuel-muscle-matrix-4-1kg.webp",
         ],
-        "2kg-Chocolate": [
+        "3kg-Chocolate": [
             "/assets/images/nutrition/refuel-muscle-matrix-1-2kg.webp",
             "/assets/images/nutrition/refuel-muscle-matrix-2-2kg.webp",
             "/assets/images/nutrition/refuel-muscle-matrix-3-2kg.webp",
@@ -61,21 +61,21 @@ function GomziNutritionRefuelMassGainerPowder() {
                 id: "674839d21d93a5dadbb229da",
                 img: "/assets/images/nutrition/gomzi-nutrition-mass-gainer-powder-1-1kg.webp",
                 name: "Refuel 2.0 Mass Gainer Powder - 1kg",
-                price: "2500",
-                discount: "2500",
+                price: "1499",
+                discount: "1499",
                 size: "1 Kg",
                 dis_point: "15%",
             },
         },
         {
-            key: "2kg-Chocolate",
+            key: "3kg-Chocolate",
             data: {
                 id: "67483a501d93a5dadbb229e4",
                 img: "/assets/images/nutrition/gomzi-nutrition-mass-gainer-powder-1-2kg.webp",
-                name: "Refuel 2.0 Mass Gainer Powder - 2kg",
-                price: "4500",
-                discount: "4500",
-                size: "2 Kg",
+                name: "Refuel 2.0 Mass Gainer Powder - 3kg",
+                price: "3999",
+                discount: "3999",
+                size: "3 Kg",
                 dis_point: "15%",
             },
         }
@@ -83,7 +83,7 @@ function GomziNutritionRefuelMassGainerPowder() {
 
     const sizeOptions = [
         { id: "1kg", label: "1kg" },
-        { id: "2kg", label: "2kg" }
+        { id: "3kg", label: "3kg" }
     ];
 
     const flavorOptions = [{ id: "Chocolate", label: "Chocolate" }];

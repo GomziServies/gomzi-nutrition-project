@@ -428,7 +428,6 @@ function WhiteLabelling() {
           </div>
         </div>
       </section>
-
       <div className="main-content mt-5">
         <section className="checkout-main checkout-page-detail p-lg-4">
           <div className="container-fluid w-80 checkout-padding nav-slider-another">
@@ -553,20 +552,20 @@ function WhiteLabelling() {
                                             70%
                                           </td>
                                         </tr> */}
-                                        <tr className="table-light">
+                                        {/* <tr className="table-light">
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
                                             Min Qty
                                           </td>
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
                                             50
                                           </td>
-                                        </tr>
+                                        </tr> */}
                                         <tr className="table-light">
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
                                             Whey protein concentrate
                                           </td>
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹2300 Per 1kg
+                                            ₹1420 Per 1kg
                                           </td>
                                         </tr>
                                         <tr className="table-light">
@@ -574,7 +573,7 @@ function WhiteLabelling() {
                                             Whey protein isolate
                                           </td>
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹3300 Per 1kg
+                                            ₹2050 Per 1kg
                                           </td>
                                         </tr>
                                         <tr className="table-light">
@@ -582,7 +581,23 @@ function WhiteLabelling() {
                                             100% whey protein blend
                                           </td>
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹1300 Per 1kg
+                                            ₹1250 Per 1kg
+                                          </td>
+                                        </tr>
+                                        <tr className="table-light">
+                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
+                                            100% whey protein
+                                          </td>
+                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
+                                            ₹900 Per 1kg
+                                          </td>
+                                        </tr>
+                                        <tr className="table-light">
+                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
+                                            Mass Gainer
+                                          </td>
+                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
+                                            ₹310 Per 1kg
                                           </td>
                                         </tr>
                                         <tr className="table-light">
@@ -606,7 +621,6 @@ function WhiteLabelling() {
                                   </div>
                                 </blockquote>
                               </div>
-
                               <div className="pb-2 ql-editor descriptionShow text-secondary">
                                 <Link
                                   to="https://api.whatsapp.com/send?phone=6354051487&amp;text= Hello, I have an inquiry about third-party manufacturing for the Whey Protein product."
@@ -745,14 +759,14 @@ function WhiteLabelling() {
                                             70%
                                           </td>
                                         </tr> */}
-                                        <tr className="table-light">
+                                        {/* <tr className="table-light">
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
                                             Min Qty
                                           </td>
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
                                             100
                                           </td>
-                                        </tr>
+                                        </tr> */}
                                         <tr className="table-light">
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
                                             Creatine unflavored
@@ -918,14 +932,14 @@ function WhiteLabelling() {
                                             15-20 Days
                                           </td>
                                         </tr>
-                                        <tr className="table-light">
+                                        {/* <tr className="table-light">
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
                                             Min Qty
                                           </td>
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
                                             120
                                           </td>
-                                        </tr>
+                                        </tr> */}
                                         <tr className="table-light">
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
                                             Peanut butter
@@ -1075,14 +1089,14 @@ function WhiteLabelling() {
                                             15-20 Days
                                           </td>
                                         </tr>
-                                        <tr className="table-light">
+                                        {/* <tr className="table-light">
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
                                             Min Qty
                                           </td>
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
                                             100
                                           </td>
-                                        </tr>
+                                        </tr> */}
                                         <tr className="table-light">
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
                                             Energy drink
@@ -1232,14 +1246,14 @@ function WhiteLabelling() {
                                             15-20 Days
                                           </td>
                                         </tr>
-                                        <tr className="table-light">
+                                        {/* <tr className="table-light">
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
                                             Min Qty
                                           </td>
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
                                             100
                                           </td>
-                                        </tr>
+                                        </tr> */}
                                         <tr className="table-light">
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
                                             Protein Bar
@@ -1633,13 +1647,13 @@ function WhiteLabelling() {
           </div> */}
           <section className="key-features">
             <div className="key-features">
-            <div className="col-12 text-center">
-              <div className="col mb-4 mt-4">
-                <h2 className="f-rob-bol f-30 text-black text-uppercase">
-                  Key Features
-                </h2>
+              <div className="col-12 text-center">
+                <div className="col mb-4 mt-4">
+                  <h2 className="f-rob-bol f-30 text-black text-uppercase">
+                    Key Features
+                  </h2>
+                </div>
               </div>
-            </div>
               <div className="container">
                 <div className="row justify-content-center">
                   {cards.map((card, index) => (
@@ -1658,13 +1672,13 @@ function WhiteLabelling() {
           </section>
           <section className="logo-img-section bg-white py-5">
             <div className="container-fluid mb-4 w-80">
-            <div className="col-12 text-center">
-              <div className="col mb-5 mt-4">
-                <h2 className="f-rob-bol f-30 text-black text-uppercase">
-                  Our Portfolio
-                </h2>
+              <div className="col-12 text-center">
+                <div className="col mb-5 mt-4">
+                  <h2 className="f-rob-bol f-30 text-black text-uppercase">
+                    Our Portfolio
+                  </h2>
+                </div>
               </div>
-            </div>
               <div className="row mt-4">
                 <div className="col-md-3 col-sm-6 col-6 mb-4">
                   <img
@@ -1728,45 +1742,45 @@ function WhiteLabelling() {
           <CertifiedProduct />
           <section className="bg-default">
             <div className="container">
-            <div className="col-12 text-center">
-              <div className="col mt-5 mb-4">
-                <h2 className="f-rob-bol f-30 text-black text-uppercase">
-                  Production House
-                </h2>
-              </div>
-            </div>
-            <div className="item">
-            <div className="blog p-0">
-              <div className="ply position-relative video-container">
-                <img
-                  src={
-                    process.env.PUBLIC_URL +
-                    "/assets/images/nutrition/production-house.webp"
-                  }
-                  width="100%"
-                  className="border-radius-20 video-thumbnail"
-                  alt="fggroup"
-                />
-
-                <div className="video-btn play-btn">
-                  <button
-                    onClick={() => openVideoModal("XM2xXWYxhbw")}
-                    className="custom clickof video-button-bg"
-                  >
-                    <span className="newthing">
-                      <i className="fas fa-play"></i>
-                    </span>
-                  </button>
-                </div>
-
-                <div className="bubble-container">
-                  {[...Array(20)].map((_, i) => (
-                    <div key={i} className={`bubble bubble-${i}`}></div>
-                  ))}
+              <div className="col-12 text-center">
+                <div className="col mt-5 mb-4">
+                  <h2 className="f-rob-bol f-30 text-black text-uppercase">
+                    Production House
+                  </h2>
                 </div>
               </div>
-            </div>
-          </div>
+              <div className="item">
+                <div className="blog p-0">
+                  <div className="ply position-relative video-container">
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        "/assets/images/nutrition/production-house.webp"
+                      }
+                      width="100%"
+                      className="border-radius-20 video-thumbnail"
+                      alt="fggroup"
+                    />
+
+                    <div className="video-btn play-btn">
+                      <button
+                        onClick={() => openVideoModal("XM2xXWYxhbw")}
+                        className="custom clickof video-button-bg"
+                      >
+                        <span className="newthing">
+                          <i className="fas fa-play"></i>
+                        </span>
+                      </button>
+                    </div>
+
+                    <div className="bubble-container">
+                      {[...Array(20)].map((_, i) => (
+                        <div key={i} className={`bubble bubble-${i}`}></div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
           <FactoryPhotoSection />
