@@ -69,8 +69,21 @@ const TrainerNutrition = lazy(() =>
   import("./pages/nutrition/trainer-nutrition")
 );
 const CheckOut = lazy(() => import("./pages/nutrition/check-out"));
+const ContactUs = lazy(() => import("./pages/nutrition/contact-us"));
 const TermsConditionCustomer = lazy(() =>
   import("./pages/nutrition/terms-condition-customer")
+);
+const PrivacyPolicyCustomer = lazy(() =>
+  import("./pages/nutrition/privacy-policy-customer")
+);
+const CancellationPolicyCustomer = lazy(() =>
+  import("./pages/nutrition/cancellation-policy-customer")
+);
+const PricingPolicyCustomer = lazy(() =>
+  import("./pages/nutrition/pricing-policy-customer")
+);
+const ReturnAndRefundPolicyCustomer = lazy(() =>
+  import("./pages/nutrition/return-and-refund-policy-customer")
 );
 const GomziNutritionBuy2MassGainer = lazy(() =>
   import("./pages/nutrition/gomzi-nutrition-buy-2-mass-gainer")
@@ -229,9 +242,26 @@ function App() {
         <Route path="/nutrition/gomzi-nutrition-performance-pre-workout-drink" element={<GomziNutritionPerformancePreWorkoutDrink />} />
         <Route path="/nutrition/gomzi-nutrition-sports-jogger" element={<GomziNutritionSportsJogger />} />
         <Route path="/nutrition/gomzi-nutrition-sports-active-t-shirt" element={<GomziNutritionActiveTShirt />} />
+        <Route path="/nutrition/contact-us" element={<ContactUs />} />
         <Route
           path="/nutrition/terms-condition-customer"
           element={<TermsConditionCustomer />}
+        />
+        <Route
+          path="/nutrition/privacy-policy-customer"
+          element={<PrivacyPolicyCustomer />}
+        />
+        <Route
+          path="/nutrition/cancellation-policy-customer"
+          element={<CancellationPolicyCustomer />}
+        />
+        <Route
+          path="/nutrition/pricing-policy-customer"
+          element={<PricingPolicyCustomer />}
+        />
+        <Route
+          path="/nutrition/return-and-refund-policy-customer"
+          element={<ReturnAndRefundPolicyCustomer />}
         />
         <Route
           path="/nutrition/gomzi-nutrition-buy-2-mass-gainer"
@@ -262,7 +292,6 @@ function App() {
         {/* User Profile */}
         <Route path="/user/profile" element={<UserProfile />} />
         <Route path="/user/order" element={<UserOrder />} />
-        <Route path="/user/order" element={<TermsConditionCustomer />} />
         {/* Add a catch-all route for unmatched routes */}
         <Route path="*" element={<NotFoundPage />} />
 

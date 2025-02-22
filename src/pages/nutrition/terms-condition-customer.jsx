@@ -44,11 +44,11 @@ function TermsConditionCustomer() {
     <>
       <Helmet>
         <title>
-          Gomzi Nutrition Terms & Conditions - Understand Our Policies
+          Terms & Conditions | Gomzi Nutrition Family - Your Trusted Wellness Partner
         </title>
         <meta
           name="description"
-          content="Review the terms and conditions of purchasing from Gomzi Nutrition. Learn about our shipping, returns, and customer service policies for a seamless experience."
+          content="Read the Terms & Conditions for Gomzi Nutrition Family. Learn about our policies, customer rights, and guidelines for a seamless shopping experience."
         />
         <meta
           name="keyword"
@@ -79,11 +79,11 @@ function TermsConditionCustomer() {
         />
         <meta
           property="og:title"
-          content="Gomzi Nutrition Terms & Conditions - Understand Our Policies"
+          content="Terms & Conditions | Gomzi Nutrition Family - Your Trusted Wellness Partner"
         />
         <meta
           property="og:description"
-          content="Review the terms and conditions of purchasing from Gomzi Nutrition. Learn about our shipping, returns, and customer service policies for a seamless experience."
+          content="Read the Terms & Conditions for Gomzi Nutrition Family. Learn about our policies, customer rights, and guidelines for a seamless shopping experience."
         />
         <meta
           property="og:image"
@@ -316,319 +316,41 @@ function TermsConditionCustomer() {
                 <div className="col-12 text-center mb-4 px-4">
                   <div className="ql-editor text-left mt-3">
                     <p className="mb-2">
-                      Welcome to the <strong>Gomzi Nutrition family,</strong>{" "}
-                      your ultimate destination for health and wellness. At
-                      Gomzi Nutrition, we are committed to providing you with
-                      top-notch products and services to support your journey
-                      towards a healthier lifestyle. Before embarking on this
-                      journey with us, please take a moment to familiarize
-                      yourself with our Terms and Conditions.
+                      Welcome to the Gomzi Nutrition family! We are thrilled to be your ultimate destination for health and wellness. At Gomzi Nutrition, our commitment is to provide you with top-notch products and services to support your journey towards a healthier lifestyle. Before you embark on this journey with us, we kindly ask you to familiarize yourself with our Terms and Conditions outlined below.
                     </p>
                     <p className="mb-2">
-                      Agreement Acceptance: By engaging with our Website,
-                      participating in our Rewards or Reviews Program, or
-                      sharing personal information, you signify your
-                      understanding and acceptance of this Agreement. We're
-                      excited to have you on board, but if you don't agree with
-                      these terms, we kindly ask you to refrain from using our
-                      services.
+                      <b>Agreement Acceptance:</b>
                     </p>
                     <p className="mb-2">
-                      By accessing or utilizing the Service, you are consenting
-                      to adhere to these Terms. If you disagree with any portion
-                      of the terms, you are not permitted to access the Service.
+                      <b>(i) Understanding and Acceptance:</b> By engaging with our website, participating in our Rewards or Reviews Program, or sharing any personal information with us, you signify your understanding and acceptance of these Terms and Conditions.
                     </p>
                     <p className="mb-2">
-                      By engaging with the Site, enrolling in the Rewards or
-                      Reviews Program, or divulging any personal details to us:
+                      <b>(ii) Accessing Our Services:</b> By accessing or utilizing our services, you are consenting to adhere to these Terms. If you disagree with any portion of these terms, you are not permitted to access our services.
                     </p>
                     <p className="mb-2">
-                      (i) you acknowledge that you have perused and comprehended
-                      the stipulations of this Agreement,
+                      <b>(iii) Conditions of Engagement:</b> When you engage with our website or services, you agree to the following.
                     </p>
                     <p className="mb-2">
-                      (ii) you agree to and accept being bound by the terms
-                      outlined in this Agreement,
+                      <b>(iv) Acknowledgment:</b> You acknowledge that you have read and understood the stipulations of this Agreement.
                     </p>
                     <p className="mb-2">
-                      (iii) you consent to and undertake to comply with all
-                      relevant laws and regulations concerning the subject
-                      matter of this Agreement.
+                      <b>(v) Binding Agreement:</b> You agree to be bound by the terms outlined in this Agreement.
+                    </p>
+                    <p className="mb-2">
+                      <b>(vi) Compliance:</b> You consent to comply with all relevant laws and regulations concerning the subject matter of this Agreement.
+                    </p>
+                    <p className="mb-2">
+                      <b>(vii) Refraining from Use:</b> <br />
+                      If you do not consent to the terms of this Agreement, we kindly ask you to refrain from:<br />
+                      a. Accessing or utilizing the website.<br />
+                      b. Participating in the Rewards or Reviews Program<br />
+                      c. Disclosing any personal information to us
                     </p>
                     <p>
                       <br />
                     </p>
                     <p className="mb-2">
-                      If you do not consent to the terms of this agreement,
-                      refrain from accessing or utilizing the site,
-                      participating in the rewards program or reviews program,
-                      or disclosing any personal information to us.
-                    </p>
-                    <p className="mb-2">
-                      All details provided to us by you, including sensitive
-                      personal data, are voluntary.
-                    </p>
-                    <p>
-                      <br />
-                    </p>
-                    <h4>
-                      <strong>Voluntary Participation:</strong>
-                    </h4>
-                    <p className="mb-2">
-                      Your involvement in our Rewards and Reviews Programs is
-                      entirely voluntary and is effective until either party
-                      decides to terminate it. You have the freedom to opt-in or
-                      opt-out at any time, with or without cause.
-                    </p>
-                    <h4>
-                      <strong>Ownership of Rights:</strong>
-                    </h4>
-                    <p className="mb-2">
-                      We take great pride in the content we provide on our
-                      Website, and we want to ensure it's protected. Any
-                      unauthorized use, modification, or distribution of our
-                      content without explicit permission is strictly
-                      prohibited.
-                    </p>
-                    <h4>
-                      <strong>Accounts:</strong>
-                    </h4>
-                    <p className="mb-2">
-                      When creating an account with us, please ensure that the
-                      information you provide is accurate and up to date. Your
-                      account security is important to us, so be sure to keep
-                      your password confidential and notify us immediately of
-                      any suspicious activity.
-                    </p>
-                    <h4>
-                      <strong>Links to Other Websites:</strong>
-                    </h4>
-                    <p className="mb-2">
-                      While we strive to provide valuable resources, we
-                      acknowledge that there are other great sources of
-                      information out there. However, we cannot take
-                      responsibility for the content or policies of third-party
-                      websites, so we encourage you to review their terms and
-                      conditions before engaging with them.
-                    </p>
-                    <p>
-                      <br />
-                    </p>
-                    <h4>
-                      <strong>Pricing Information:</strong>
-                    </h4>
-                    <p className="mb-2">
-                      We do our best to ensure that our product and pricing
-                      information is accurate, but occasionally errors may
-                      occur. Rest assured, we reserve the right to correct any
-                      mistakes and update information as needed. Our promotional
-                      offers and discounts are subject to change, so keep an eye
-                      out for the latest deals!
-                    </p>
-                    <p>
-                      <br />
-                    </p>
-                    <h4>
-                      <strong>General Terms of Use:</strong>
-                    </h4>
-                    <p className="mb-2">
-                      Gomzi Nutrition strives to offer the best prices possible
-                      for products and services on our website. However, we
-                      cannot guarantee that our prices will always be the lowest
-                      in the city, region, or geography. Prices and availability
-                      are subject to change without prior notice, and Gomzi
-                      Nutrition bears no consequential liability.
-                    </p>
-                    <p className="mb-2">
-                      Promotional prices displayed for items are valid only
-                      during the specified promotion period and are not
-                      applicable before or after the promotion dates.
-                    </p>
-                    <p className="mb-2">
-                      All product offers are for limited stocks and limited
-                      periods. Gomzi Nutrition reserves the right to modify,
-                      extend, update, or withdraw offers on products without
-                      prior notice. Any changes will be reflected on the website
-                      accordingly.
-                    </p>
-                    <p className="mb-2">
-                      Once a promo code is used, it cannot be refunded in the
-                      event of an order cancellation by the customer.
-                    </p>
-                    <p className="mb-2">
-                      We assure you that all products sold on Gomzi Nutrition
-                      are genuine. Our suppliers are contractually obligated to
-                      provide only authentic products. While we guarantee the
-                      condition of the items you purchase, this guarantee does
-                      not cover manufacturing defects.
-                    </p>
-                    <p className="mb-2">
-                      Gomzi Nutrition reserves the right to cancel orders placed
-                      by users at any time due to various reasons, such as
-                      technical errors or unavailability of stocks. Our decision
-                      to cancel an order is final, and we are not liable for
-                      such cancellations.
-                    </p>
-                    <p className="mb-2">
-                      Please note that the expected delivery time mentioned on
-                      the website may vary from the usual delivery time.
-                    </p>
-                    <p>
-                      <br />
-                    </p>
-                    <h4>
-                      <strong>Quantity Restrictions:</strong>
-                    </h4>
-                    <p className="mb-2">
-                      To ensure fairness and prevent abuse, we may limit the
-                      quantity of items purchased per person, household, or
-                      order. If any restrictions apply to your order, we'll be
-                      sure to notify you.
-                    </p>
-                    <p>
-                      <br />
-                    </p>
-                    <h4>
-                      <strong>Accuracy of Content:</strong>
-                    </h4>
-                    <p className="mb-2">
-                      We strive for accuracy in all aspects of our content, but
-                      we're only human, and errors may happen. If you come
-                      across any inaccuracies, please let us know, and we'll do
-                      our best to rectify them promptly.
-                    </p>
-                    <p>
-                      <br />
-                    </p>
-                    <h4>
-                      <strong>No Healthcare Advice:</strong>
-                    </h4>
-                    <p className="mb-2">
-                      The information and claims presented about products on our
-                      site have not been reviewed by the Food Safety & Security
-                      Authority of India or the United States Food and Drug
-                      Administration. They are not authorized to diagnose,
-                      treat, cure, or prevent any diseases.
-                    </p>
-                    <p className="mb-2">
-                      Our website is not meant to offer medical advice,
-                      diagnosis, or treatment. All content provided, including
-                      information from third-party sites, is for informational
-                      purposes only. It's essential to consult with a healthcare
-                      professional for any medical or health-related concerns.
-                    </p>
-                    <p className="mb-2">
-                      Information on medical conditions, treatments, and
-                      products may be provided in summarized form. Content on
-                      our site, including product labels or packaging, should
-                      not replace advice from a healthcare provider. We
-                      discourage self-management of health issues and advise
-                      contacting a healthcare professional promptly for any
-                      questions.
-                    </p>
-                    <p className="mb-2">
-                      Links to third-party websites do not constitute an
-                      endorsement of their content or services. Users visit such
-                      sites at their own risk. Our site should not be used for
-                      diagnosing or treating health issues, or prescribing
-                      medications or treatments. It's crucial to consult with a
-                      healthcare professional and review product information and
-                      labels before using any medication, supplement, or
-                      starting any exercise or diet program.
-                    </p>
-                    <p className="mb-2">
-                      Individuals may react differently to products, and
-                      interactions with medications should be discussed with a
-                      physician. Comments and product ratings on our site
-                      represent personal views and should not substitute for
-                      medical care or advice from healthcare professionals.
-                    </p>
-                    <p className="mb-2">
-                      Always refer to product labels or packaging before use,
-                      and contact the manufacturer for clarification on labeling
-                      details and recommended usage. We are not liable for
-                      information provided on our site regarding supplement
-                      recommendations or product claims. Dietary products are
-                      not intended to cure, prevent, or treat diseases. Consult
-                      a healthcare professional before starting any diet,
-                      supplement, or exercise program. We do not guarantee or
-                      warranty any products or services sold, and we are not
-                      responsible for damages resulting from information or
-                      services provided, even if we were informed of potential
-                      damages.
-                    </p>
-                    <p>
-                      <br />
-                    </p>
-                    <h4>
-                      <strong>Cancellation by Gomzi Nutrition:</strong>
-                    </h4>
-                    <p className="mb-2">
-                      There might be occasions when Gomzi Nutrition is unable to
-                      accept certain orders and must cancel them. Gomzi
-                      Nutrition reserves the right, at its sole discretion, to
-                      refuse or cancel any order for any reason whatsoever.
-                      Users acknowledge and agree that such actions are
-                      acceptable, and they will not dispute or raise any
-                      objections. Reasons for order cancellation may include,
-                      but are not limited to, product unavailability,
-                      inaccuracies in pricing information, or issues identified
-                      by Gomzi Nutrition's credit and fraud prevention
-                      department.
-                    </p>
-                    <p>
-                      <br />
-                    </p>
-                    <h4>
-                      <strong>Termination:</strong>
-                    </h4>
-                    <p className="mb-2">
-                      We hope your journey with us is a long and fulfilling one,
-                      but if for any reason you wish to terminate your account
-                      or discontinue using our services, you're free to do so at
-                      any time. Just know that we'll be sad to see you go!
-                    </p>
-                    <p>
-                      <br />
-                    </p>
-                    <h4>
-                      <strong>Governing Law:</strong>
-                    </h4>
-                    <p className="mb-2">
-                      These Terms shall be governed by the laws of Delhi, India.
-                      We believe in transparency and fairness, and we strive to
-                      uphold these values in all aspects of our business.
-                    </p>
-                    <p>
-                      <br />
-                    </p>
-                    <h4>
-                      <strong>Changes:</strong>
-                    </h4>
-                    <p className="mb-2">
-                      As we continue to grow and evolve, we may need to make
-                      updates to these Terms from time to time. We'll do our
-                      best to notify you of any changes, but it's always a good
-                      idea to check back periodically for updates.
-                    </p>
-                    <p>
-                      <br />
-                    </p>
-                    <h4>
-                      <strong>Contact Us:</strong>
-                    </h4>
-                    <p className="mb-2">
-                      If you have any questions about this Privacy Policy, the
-                      practices of this site, or your dealings with this site,
-                      please contact us.
-                    </p>
-                    <p className="mb-2">
-                      Thank you for taking the time to review our Terms and
-                      Conditions. We're thrilled to have you as part of the
-                      Gomzi Nutrition family, and we look forward to supporting
-                      you on your journey to better health and wellness! If you
-                      have any questions or concerns, please don't hesitate to
-                      reach out to us.
+                      We are excited to have you on board with Gomzi Nutrition. Your health and wellness journey is important to us, and we are committed to providing you with the best experience possible. If you have any questions or concerns regarding these Terms and Conditions, please do not hesitate to reach out to us.
                     </p>
                   </div>
                 </div>

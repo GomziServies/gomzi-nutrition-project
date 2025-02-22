@@ -174,54 +174,6 @@ function Home() {
     {
       protein: [
         {
-          id: 1,
-          imageSrc:
-            process.env.PUBLIC_URL +
-            "/assets/images/nutrition/whey-protein-concentrate-1-1kg.webp",
-          productLink: "/nutrition/gomzi-nutrition-whey-protein-concentrate",
-          productName: "Whey Protein Concentrate",
-          rating: "4.4",
-          originalPrice: "₹3,500 /-",
-          discountedPrice: "₹3,500 /-",
-          type: "protein",
-        },
-        {
-          id: 2,
-          imageSrc:
-            process.env.PUBLIC_URL +
-            "/assets/images/nutrition/whey-protein-isolate-1-1kg.webp",
-          productLink: "/nutrition/gomzi-nutrition-whey-protein-isolate",
-          productName: "Whey Protein Isolate",
-          rating: "4.7",
-          originalPrice: "₹4,500 /-",
-          discountedPrice: "₹4,500 /-",
-          type: "protein",
-        },
-        {
-          id: 3,
-          imageSrc:
-            process.env.PUBLIC_URL +
-            "/assets/images/nutrition/whey-protein-chocolate-1-1kg.webp",
-          productLink: "/nutrition/gomzi-nutrition-whey-protein-chocolate",
-          productName: "Gomzi Whey Protein",
-          rating: "4.8",
-          originalPrice: "₹3,000 /-",
-          discountedPrice: "₹3,000 /-",
-          type: "protein",
-        },
-        {
-          id: 4,
-          imageSrc:
-            process.env.PUBLIC_URL +
-            "/assets/images/nutrition/gomzi-nutrition-mass-gainer-powder-1-1kg.webp",
-          productLink: "/nutrition/gomzi-nutrition-mass-gainer-powder",
-          productName: "Mass Gainer Powder",
-          rating: "4.7",
-          originalPrice: "₹1,500 /-",
-          discountedPrice: "₹1,500 /-",
-          type: "protein",
-        },
-        {
           id: 5,
           imageSrc:
             process.env.PUBLIC_URL +
@@ -269,47 +221,56 @@ function Home() {
           discountedPrice: "₹2,500 /-",
           type: "protein",
         },
-      ],
-      power: [
         {
           id: 1,
           imageSrc:
             process.env.PUBLIC_URL +
-            "/assets/images/nutrition/ignite-fat-burner-1.webp",
-          productLink: "/nutrition/gomzi-nutrition-ignite-fat-burner",
-          productName: "Ignite Fat Burner Fruit Punch - 250g",
+            "/assets/images/nutrition/whey-protein-concentrate-1-1kg.webp",
+          productLink: "/nutrition/gomzi-nutrition-whey-protein-concentrate",
+          productName: "Whey Protein Concentrate",
           rating: "4.4",
-          originalPrice: "₹2,500 /-",
-          discountedPrice: "₹2,500 /-",
-          type: "power",
-          flavor: "Fruit Punch",
+          originalPrice: "₹3,500 /-",
+          discountedPrice: "₹3,500 /-",
+          type: "protein",
         },
         {
           id: 2,
           imageSrc:
             process.env.PUBLIC_URL +
-            "/assets/images/nutrition/spark-eaa-1.webp",
-          productLink: "/nutrition/gomzi-nutrition-spark-eaa",
-          productName: "Spark EAA Watermelon - 250g",
-          rating: "4.3",
-          originalPrice: "₹2,099 /-",
-          discountedPrice: "₹2,099 /-",
-          type: "power",
-          flavor: "Watermelon",
+            "/assets/images/nutrition/whey-protein-isolate-1-1kg.webp",
+          productLink: "/nutrition/gomzi-nutrition-whey-protein-isolate",
+          productName: "Whey Protein Isolate",
+          rating: "4.7",
+          originalPrice: "₹4,500 /-",
+          discountedPrice: "₹4,500 /-",
+          type: "protein",
         },
         {
           id: 3,
           imageSrc:
             process.env.PUBLIC_URL +
-            "/assets/images/nutrition/atp-creatine-1.webp",
-          productLink: "/nutrition/gomzi-nutrition-atp-creatine",
-          productName: "ATP Creatine Lemon - 250g",
-          rating: "4.5",
-          originalPrice: "₹1,499 /-",
-          discountedPrice: "₹1,499 /-",
-          type: "power",
-          flavor: "Lemon",
+            "/assets/images/nutrition/whey-protein-chocolate-1-1kg.webp",
+          productLink: "/nutrition/gomzi-nutrition-whey-protein-chocolate",
+          productName: "Gomzi Whey Protein",
+          rating: "4.8",
+          originalPrice: "₹3,000 /-",
+          discountedPrice: "₹3,000 /-",
+          type: "protein",
         },
+        {
+          id: 4,
+          imageSrc:
+            process.env.PUBLIC_URL +
+            "/assets/images/nutrition/gomzi-nutrition-mass-gainer-powder-1-1kg.webp",
+          productLink: "/nutrition/gomzi-nutrition-mass-gainer-powder",
+          productName: "Mass Gainer Powder",
+          rating: "4.7",
+          originalPrice: "₹1,500 /-",
+          discountedPrice: "₹1,500 /-",
+          type: "protein",
+        },
+      ],
+      power: [
         {
           id: 4,
           imageSrc:
@@ -348,6 +309,45 @@ function Home() {
           discountedPrice: "₹1,600 /-",
           type: "power",
           flavor: "Cola",
+        },
+        {
+          id: 1,
+          imageSrc:
+            process.env.PUBLIC_URL +
+            "/assets/images/nutrition/ignite-fat-burner-1.webp",
+          productLink: "/nutrition/gomzi-nutrition-ignite-fat-burner",
+          productName: "Ignite Fat Burner Fruit Punch - 250g",
+          rating: "4.4",
+          originalPrice: "₹2,500 /-",
+          discountedPrice: "₹2,500 /-",
+          type: "power",
+          flavor: "Fruit Punch",
+        },
+        {
+          id: 2,
+          imageSrc:
+            process.env.PUBLIC_URL +
+            "/assets/images/nutrition/spark-eaa-1.webp",
+          productLink: "/nutrition/gomzi-nutrition-spark-eaa",
+          productName: "Spark EAA Watermelon - 250g",
+          rating: "4.3",
+          originalPrice: "₹2,099 /-",
+          discountedPrice: "₹2,099 /-",
+          type: "power",
+          flavor: "Watermelon",
+        },
+        {
+          id: 3,
+          imageSrc:
+            process.env.PUBLIC_URL +
+            "/assets/images/nutrition/atp-creatine-1.webp",
+          productLink: "/nutrition/gomzi-nutrition-atp-creatine",
+          productName: "ATP Creatine Lemon - 250g",
+          rating: "4.5",
+          originalPrice: "₹1,499 /-",
+          discountedPrice: "₹1,499 /-",
+          type: "power",
+          flavor: "Lemon",
         },
       ],
       butter: [

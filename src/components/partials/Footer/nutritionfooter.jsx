@@ -6498,30 +6498,43 @@ function NutritionFooter() {
                     FRANCHISE
                   </Link>
                 </p>
+                <p className="mb-4">
+                  <Link
+                    to="/nutrition/contact-us"
+                    target="_blank"
+                  >
+                    Contact Us
+                  </Link>
+                </p>
                 {/* <p className="mb-4">
                   <Link to="/career">CAREERS</Link>
                 </p> */}
               </div>
               <div className="col-md-2 f2">
                 <h4>Information</h4>
-                <p className="mb-4">
+                <p className="mb-3">
                   <Link to="/nutrition/terms-condition-customer">
                     Terms & Conditions
                   </Link>
                 </p>
-                <p className="mb-4">
-                  <Link to="/nutrition/terms-condition-customer">
+                <p className="mb-3">
+                  <Link to="/nutrition/return-and-refund-policy-customer">
                     Return & Refund
                   </Link>
                 </p>
-                <p className="mb-4">
-                  <Link to="/nutrition/terms-condition-customer">
+                <p className="mb-3">
+                  <Link to="/nutrition/privacy-policy-customer">
                     Privacy Policy
                   </Link>
                 </p>
-                <p className="mb-4">
-                  <Link to="/nutrition/terms-condition-customer">
+                <p className="mb-3">
+                  <Link to="/nutrition/cancellation-policy-customer">
                     Cancellation Policy
+                  </Link>
+                </p>
+                <p className="mb-3">
+                  <Link to="/nutrition/pricing-policy-customer">
+                    Pricing Policy
                   </Link>
                 </p>
               </div>
