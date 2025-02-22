@@ -404,13 +404,13 @@ function GomziNutritionRefuelIgniteFatBurner() {
                                                     <ProductButtonsContainer
                                                         products={products}
                                                         toggleMenu={toggleMenu}
-                                                        currentProduct={currentProduct}
+                                                        // currentProduct={currentProduct}
                                                         menuOpen={menuOpen}
                                                         setMenuOpen={setMenuOpen}
                                                         productData={productData}
                                                     />
                                                     <div className="col-12 p-0">
-                                                        <div className="m-0 w-100 px-md-3">
+                                                        {/* <div className="m-0 w-100 px-md-3">
                                                             <div className="common-button-amazon mx-2">
                                                                 <Link to="https://www.amazon.in/dp/B0DFWBLYRW">
                                                                     <button className="bg-dark-section text-uppercase px-3 px-lg-5 py-3 text-white f-16 f-rob-bol">
@@ -419,6 +419,11 @@ function GomziNutritionRefuelIgniteFatBurner() {
                                                                     </button>
                                                                 </Link>
                                                             </div>
+                                                        </div> */}
+                                                        <div className="common-button-amazon mx-2">
+                                                            <button className="bg-danger text-uppercase px-3 px-lg-5 py-3 text-white f-16 f-rob-bol">
+                                                                Out Of Stock
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>

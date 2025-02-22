@@ -272,45 +272,6 @@ function Home() {
       ],
       power: [
         {
-          id: 4,
-          imageSrc:
-            process.env.PUBLIC_URL +
-            "/assets/images/nutrition/refuel-ignite-green-apple-1.webp",
-          productLink: "/nutrition/gomzi-nutrition-refuel-ignite-fat-burner",
-          productName: "Refuel 2.0 Ignite Fat Burner Green Apple - 250g",
-          rating: "4.4",
-          originalPrice: "₹2,500 /-",
-          discountedPrice: "₹2,500 /-",
-          type: "power",
-          flavor: "Green Apple",
-        },
-        {
-          id: 5,
-          imageSrc:
-            process.env.PUBLIC_URL +
-            "/assets/images/nutrition/refuel-eaa-guava-1.webp",
-          productLink: "/nutrition/gomzi-nutrition-refuel-spark-eaa",
-          productName: "Refuel 2.0 Spark EAA Guava - 250g",
-          rating: "4.3",
-          originalPrice: "₹2,100 /-",
-          discountedPrice: "₹2,100 /-",
-          type: "power",
-          flavor: "Guava",
-        },
-        {
-          id: 6,
-          imageSrc:
-            process.env.PUBLIC_URL +
-            "/assets/images/nutrition/refuel-creatine-cola-1.webp",
-          productLink: "/nutrition/gomzi-nutrition-refuel-atp-creatine",
-          productName: "Refuel 2.0 ATP Creatine Cola - 250g",
-          rating: "4.5",
-          originalPrice: "₹1,600 /-",
-          discountedPrice: "₹1,600 /-",
-          type: "power",
-          flavor: "Cola",
-        },
-        {
           id: 1,
           imageSrc:
             process.env.PUBLIC_URL +
@@ -348,6 +309,45 @@ function Home() {
           discountedPrice: "₹1,499 /-",
           type: "power",
           flavor: "Lemon",
+        },
+        {
+          id: 4,
+          imageSrc:
+            process.env.PUBLIC_URL +
+            "/assets/images/nutrition/refuel-ignite-green-apple-1.webp",
+          productLink: "/nutrition/gomzi-nutrition-refuel-ignite-fat-burner",
+          productName: "Refuel 2.0 Ignite Fat Burner Green Apple - 250g",
+          rating: "4.4",
+          originalPrice: "₹2,500 /-",
+          discountedPrice: "₹2,500 /-",
+          type: "power",
+          flavor: "Green Apple",
+        },
+        {
+          id: 5,
+          imageSrc:
+            process.env.PUBLIC_URL +
+            "/assets/images/nutrition/refuel-eaa-guava-1.webp",
+          productLink: "/nutrition/gomzi-nutrition-refuel-spark-eaa",
+          productName: "Refuel 2.0 Spark EAA Guava - 250g",
+          rating: "4.3",
+          originalPrice: "₹2,100 /-",
+          discountedPrice: "₹2,100 /-",
+          type: "power",
+          flavor: "Guava",
+        },
+        {
+          id: 6,
+          imageSrc:
+            process.env.PUBLIC_URL +
+            "/assets/images/nutrition/refuel-creatine-cola-1.webp",
+          productLink: "/nutrition/gomzi-nutrition-refuel-atp-creatine",
+          productName: "Refuel 2.0 ATP Creatine Cola - 250g",
+          rating: "4.5",
+          originalPrice: "₹1,600 /-",
+          discountedPrice: "₹1,600 /-",
+          type: "power",
+          flavor: "Cola",
         },
       ],
       butter: [
