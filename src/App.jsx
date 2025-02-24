@@ -76,6 +76,9 @@ const TermsConditionCustomer = lazy(() =>
 const PrivacyPolicyCustomer = lazy(() =>
   import("./pages/nutrition/privacy-policy-customer")
 );
+const ShippingPolicyCustomer = lazy(() =>
+  import("./pages/nutrition/shipping-policy-customer")
+);
 const CancellationPolicyCustomer = lazy(() =>
   import("./pages/nutrition/cancellation-policy-customer")
 );
@@ -250,6 +253,10 @@ function App() {
         <Route
           path="/nutrition/privacy-policy-customer"
           element={<PrivacyPolicyCustomer />}
+        />
+        <Route
+          path="/nutrition/shipping-policy-customer"
+          element={<ShippingPolicyCustomer />}
         />
         <Route
           path="/nutrition/cancellation-policy-customer"

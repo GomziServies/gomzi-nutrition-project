@@ -6450,7 +6450,7 @@ function NutritionFooter() {
                   </p>
                 </div>
               </div>
-              <div className="col-md-2 f2">
+              {/* <div className="col-md-2 f2">
                 <h4>FG Brands</h4>
                 <p className="mb-4">
                   <Link
@@ -6479,10 +6479,10 @@ function NutritionFooter() {
                 <p className="mb-4">
                   <Link to="/">Nutrition</Link>
                 </p>
-              </div>
+              </div> */}
               <div className="col-md-2 f2">
                 <h4>Links</h4>
-                <p className="mb-4">
+                {/* <p className="mb-4">
                   <Link
                     to="https://fggroup.in/blogs/benefits-of-protein"
                     target="_blank"
@@ -6497,7 +6497,7 @@ function NutritionFooter() {
                   >
                     FRANCHISE
                   </Link>
-                </p>
+                </p> */}
                 <p className="mb-4">
                   <Link
                     to="/nutrition/contact-us"
@@ -6510,7 +6510,7 @@ function NutritionFooter() {
                   <Link to="/career">CAREERS</Link>
                 </p> */}
               </div>
-              <div className="col-md-2 f2">
+              <div className="col-md-4 f2">
                 <h4>Information</h4>
                 <p className="mb-3">
                   <Link to="/nutrition/terms-condition-customer">
@@ -6535,6 +6535,11 @@ function NutritionFooter() {
                 <p className="mb-3">
                   <Link to="/nutrition/pricing-policy-customer">
                     Pricing Policy
+                  </Link>
+                </p>
+                <p className="mb-3">
+                  <Link to="/nutrition/shipping-policy-customer">
+                    Shipping Policy
                   </Link>
                 </p>
               </div>
