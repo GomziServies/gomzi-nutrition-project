@@ -1,4 +1,3 @@
-// Yash sutariya
 const fs = require('fs');
 const { SitemapStream, streamToPromise } = require('sitemap');
 
