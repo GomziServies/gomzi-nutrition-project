@@ -597,7 +597,7 @@ function WhiteLabelling() {
                                             Mass Gainer
                                           </td>
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹310 Per 1kg
+                                            ₹420 Per 1kg
                                           </td>
                                         </tr>
                                         <tr className="table-light">
@@ -772,7 +772,7 @@ function WhiteLabelling() {
                                             Creatine unflavored
                                           </td>
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹420 Per 250gm
+                                            ₹350 Per 250gm
                                           </td>
                                         </tr>
                                         <tr className="table-light">
