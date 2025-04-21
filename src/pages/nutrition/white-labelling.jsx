@@ -565,7 +565,7 @@ function WhiteLabelling() {
                                             Whey protein concentrate
                                           </td>
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹1420 Per 1kg
+                                            ₹1630 Per 1kg
                                           </td>
                                         </tr>
                                         <tr className="table-light">
@@ -573,7 +573,7 @@ function WhiteLabelling() {
                                             Whey protein isolate
                                           </td>
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹2050 Per 1kg
+                                            ₹3000 Per 1kg
                                           </td>
                                         </tr>
                                         <tr className="table-light">
@@ -581,7 +581,7 @@ function WhiteLabelling() {
                                             100% whey protein blend
                                           </td>
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹1250 Per 1kg
+                                            ₹1300 Per 1kg
                                           </td>
                                         </tr>
                                         <tr className="table-light">
@@ -589,7 +589,7 @@ function WhiteLabelling() {
                                             100% whey protein
                                           </td>
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹900 Per 1kg
+                                            ₹1170 Per 1kg
                                           </td>
                                         </tr>
                                         <tr className="table-light">
@@ -1102,7 +1102,7 @@ function WhiteLabelling() {
                                             Energy drink
                                           </td>
                                           <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹18 Per 220ml
+                                            ₹30 Per 220ml
                                           </td>
                                         </tr>
                                         <tr className="table-light">
