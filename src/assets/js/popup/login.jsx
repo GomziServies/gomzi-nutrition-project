@@ -3,6 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 import { toast } from "react-toastify";
 import { axiosInstance } from "../config/api";
+import { Link } from "react-router-dom";
 
 const LoginModal = ({ onClose }) => {
   const [showModal, setShowModal] = useState(true);
@@ -162,13 +163,18 @@ const LoginModal = ({ onClose }) => {
         <Modal.Header closeButton className="border-0">
           <Modal.Title>
             <div className="text-center">
-              <img
-                src={
-                  process.env.PUBLIC_URL + "../assets/images/logo/fg_group.webp"
-                }
-                width="20%"
-                alt="Fg Group"
-              />
+              <Link to="/">
+                <div>
+                  <img
+                    src={
+                      process.env.PUBLIC_URL +
+                      "../assets/images/logo/nutrition-logo.webp"
+                    }
+                    width="40%"
+                    alt="Fg Group"
+                  />
+                </div>
+              </Link>
             </div>
           </Modal.Title>
         </Modal.Header>
@@ -195,15 +201,17 @@ const LoginModal = ({ onClose }) => {
                 width: "100%",
                 color: "#fff",
                 margin: "0",
-                backgroundImage:
-                  "linear-gradient(101deg, rgb(247, 69, 48), rgb(255, 46, 115))",
+                backgroundColor: '#86c33a',
+                border: 'transparent',
+                borderRadius: '23px',
+                marginBottom: '10px',
               }}
               onClick={handleLogin}
             >
               Log In
             </Button>
           </Form>
-          <div className="text-center">
+          {/* <div className="text-center">
             <Button
               onClick={handleSignUpInternational}
               style={{
@@ -218,21 +226,26 @@ const LoginModal = ({ onClose }) => {
             >
               Login For International Student
             </Button>
-          </div>
+          </div> */}
         </Modal.Body>
-      </Modal>
+      </Modal >
       {/* Otp Popup  */}
-      <Modal show={otpDialogOpen} onHide={handleCloseOtpModal} centered>
+      <Modal Modal show={otpDialogOpen} onHide={handleCloseOtpModal} centered >
         <Modal.Header closeButton className="border-0">
           <Modal.Title>
             <div className="text-center">
-              <img
-                src={
-                  process.env.PUBLIC_URL + "../assets/images/logo/fg_group.webp"
-                }
-                width="20%"
-                alt="Fg Group"
-              />
+              <Link to="/">
+                <div>
+                  <img
+                    src={
+                      process.env.PUBLIC_URL +
+                      "../assets/images/logo/nutrition-logo.webp"
+                    }
+                    width="40%"
+                    alt="Fg Group"
+                  />
+                </div>
+              </Link>
             </div>
           </Modal.Title>
         </Modal.Header>
@@ -261,8 +274,10 @@ const LoginModal = ({ onClose }) => {
                 width: "100%",
                 color: "#fff",
                 margin: "0",
-                backgroundImage:
-                  "linear-gradient(101deg, rgb(247, 69, 48), rgb(255, 46, 115))",
+                backgroundColor: '#86c33a',
+                border: 'transparent',
+                borderRadius: '23px',
+                marginBottom: '10px',
               }}
               onClick={handleOtpSubmit}
             >
@@ -272,7 +287,7 @@ const LoginModal = ({ onClose }) => {
         </Modal.Body>
       </Modal>
       {/* Signup Popup  */}
-      <Modal show={showSignUpModal} onHide={handleCloseSignUpModal} centered>
+      <Modal Modal show={showSignUpModal} onHide={handleCloseSignUpModal} centered >
         <Modal.Header closeButton className="border-0">
           <Modal.Title>
             <div className="text-center">
@@ -327,7 +342,7 @@ const LoginModal = ({ onClose }) => {
         </Modal.Body>
       </Modal>
       {/* Email OTP Popup  */}
-      <Modal
+      <Modal Modal
         show={emailOtpDialogOpen}
         onHide={handleCloseEmailOtpModal}
         centered

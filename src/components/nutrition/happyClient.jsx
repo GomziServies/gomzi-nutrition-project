@@ -190,17 +190,17 @@ function HappyClientReview() {
                         "/assets/images/nutrition/nutri-review-video-1.webp"
                       }
                       width="100%"
-                      style={{ borderRadius: "10px" }}
+                      style={{ borderRadius: "10px", cursor: 'pointer' }}
                       alt="fggroup"
                       effect="blur"
                     />
                     <div className="video-btn play-btn">
                       <button
                         onClick={() => openVideoModal("wuNtHkWxUXY")}
-                        className="custom clickof video-button-bg"
+                        className="custom clickof video-button-bg cursor-pointer"
                       >
                         <span className="newthing">
-                          <i className="fas fa-play"></i>
+                          <i className="fas fa-play cursor-pointer"></i>
                         </span>
                       </button>
                     </div>
@@ -218,17 +218,17 @@ function HappyClientReview() {
                         "/assets/images/nutrition/nutri-review-video-2.webp"
                       }
                       width="100%"
-                      style={{ borderRadius: "10px" }}
+                      style={{ borderRadius: "10px", cursor: 'pointer' }}
                       alt="fggroup"
                       effect="blur"
                     />
                     <div className="video-btn play-btn">
                       <button
                         onClick={() => openVideoModal("K04q5L7E4S0")}
-                        className="custom clickof video-button-bg"
+                        className="custom clickof video-button-bg cursor-pointer"
                       >
                         <span className="newthing">
-                          <i className="fas fa-play"></i>
+                          <i className="fas fa-play cursor-pointer"></i>
                         </span>
                       </button>
                     </div>
