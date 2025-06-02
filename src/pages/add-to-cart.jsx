@@ -16,6 +16,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
+
 function AddToCart(productData) {
   const canonicalUrl = window.location.href;
   const [isOpen, setIsOpen] = useState(false);
@@ -216,6 +217,65 @@ function AddToCart(productData) {
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
   };
+
+  const products = [
+    {
+      id: "674838681d93a5dadbb229ad",
+      link: "/nutrition/gomzi-nutrition-refuel-whey-protein-concentrate",
+      image: "/assets/images/nutrition/refuel-concentrate-mawa-kulfi-1-1kg.webp",
+      title: "Refuel 2.0 Whey Protein Concentrate",
+      rating: 4.4,
+      price: "₹4,500/-"
+    },
+    {
+      id: "6748355b1d93a5dadbb226cb",
+      link: "/nutrition/gomzi-nutrition-refuel-whey-protein-isolate",
+      image: "/assets/images/nutrition/refuel-isolate-chocobrownie-1-1kg.webp",
+      title: "Refuel 2.0 Whey Protein Isolate",
+      rating: 4.7,
+      price: "₹5,999/-"
+    },
+    {
+      id: "674833b71d93a5dadbb22142",
+      link: "/nutrition/gomzi-nutrition-refuel-whey-protein",
+      image: "/assets/images/nutrition/refuel-protein-chocolate-1-1kg.webp",
+      title: "Refuel 2.0 Whey Protein 100%",
+      rating: 4.3,
+      price: "₹3,500/-"
+    },
+    {
+      id: "674839d21d93a5dadbb229da",
+      link: "/nutrition/gomzi-nutrition-refuel-mass-gainer-powder",
+      image: "/assets/images/nutrition/refuel-muscle-matrix-1-1kg.webp",
+      title: "Refuel 2.0 Mass Gainer Powder",
+      rating: 4.6,
+      price: "₹2,600/-"
+    },
+    {
+      id: "660e4e38d8ff4f8d9f2a51d4",
+      link: "/nutrition/gomzi-nutrition-ignite-fat-burner",
+      image: "/assets/images/nutrition/ignite-fat-burner-1.webp",
+      title: "Ignite Fat Burner Fruit Punch - 250g",
+      rating: 4.4,
+      price: "₹2,500/-"
+    },
+    {
+      id: "660e4e61d8ff4f8d9f2a51d7",
+      link: "/nutrition/gomzi-nutrition-spark-eaa",
+      image: "/assets/images/nutrition/spark-eaa-1.webp",
+      title: "Refuel 2.0 Spark EAA- 250g",
+      rating: 4.3,
+      price: "₹2,099/-"
+    },
+    {
+      id: "660e4e81d8ff4f8d9f2a51da",
+      link: "//nutrition/gomzi-nutrition-atp-creatine",
+      image: "/assets/images/nutrition/atp-creatine-1.webp",
+      title: "ATP Creatine Lemon - 250g",
+      rating: 4.5,
+      price: "₹1,499/-"
+    },
+  ];
 
   const handleAddToCart = async () => {
     try {
@@ -449,7 +509,7 @@ function AddToCart(productData) {
                                             <div className="cart-add align-items-center mt-3">
                                               <div className="d-flex align-items-center mx-2">
                                                 <i
-                                                  className="fas fa-minus text-dark mr-2"
+                                                  className="fas fa-minus text-dark mr-2 "
                                                   onClick={() =>
                                                     minusQuantity(product._id)
                                                   }
@@ -699,517 +759,70 @@ function AddToCart(productData) {
                   className="owl-theme"
                   {...carouselOptions}
                 >
-                  <div className="item">
-                    <div
-                      className="d-inline-block"
-                      tabIndex="-1"
-                      style={{ width: "100%", display: "inline-block" }}
-                    >
-                      <div className="col-12 nutri-product mb-3">
-                        <div className="pb-3 border text-center bg-white br-15 p-2 d-flex flex-wrap justify-content-center cart-more-product">
-                          <div className="col-12 p-0">
-                            <Link to="/nutrition/gomzi-nutrition-whey-protein-chocolate">
-                              <div className="whey-product-img">
-                                <span className="lazy-load-image-background blur lazy-load-image-loaded">
-                                  <LazyLoadImage
-                                    src={
-                                      process.env.PUBLIC_URL +
-                                      "/assets/images/nutrition/whey-protein-chocolate-1-1kg.webp"
-                                    }
-                                    alt="Whey Protein"
-                                    className="img-fluid mx-auto product-img"
-                                    effect="blur"
-                                    loading="lazy"
-                                  />
+                  {products.map((product, index) => (
+                    <div className="item" key={index}>
+                      <div
+                        className="d-inline-block"
+                        tabIndex="-1"
+                        style={{ width: "100%", display: "inline-block" }}
+                      >
+                        <div className="col-12 nutri-product mb-3">
+                          <div className="pb-3 border text-center bg-white br-15 p-2 d-flex flex-wrap justify-content-center cart-more-product">
+                            <div className="col-12 p-0">
+                              <Link to={product.link}>
+                                <div className="whey-product-img">
+                                  <span className="lazy-load-image-background blur lazy-load-image-loaded">
+                                    <LazyLoadImage
+                                      src={process.env.PUBLIC_URL + product.image}
+                                      alt={product.title}
+                                      className="img-fluid mx-auto product-img"
+                                      effect="blur"
+                                      loading="lazy"
+                                    />
+                                  </span>
+                                </div>
+                              </Link>
+                            </div>
+                            <div className="col-12 p-0">
+                              <Link
+                                to={product.link}
+                                className="text-ellipse-custom text-secondary mb-0 mt-1 f-rob-med f-20"
+                              >
+                                <b>{product.title}</b>
+                              </Link>
+                            </div>
+                            <div className="col-12">
+                              <div className="d-flex align-items-center justify-content-center my-2">
+                                <span className="d-flex product-rating f-14 text-secondary">
+                                  <i
+                                    className="fas fa-star mr-2"
+                                    style={{
+                                      color: "#fcae2a",
+                                      lineHeight: "1.5",
+                                    }}
+                                  ></i>
+                                  {product.rating}
                                 </span>
                               </div>
-                            </Link>
-                          </div>
-                          <div className="col-12 p-0">
-                            <Link
-                              to="/nutrition/gomzi-nutrition-whey-protein-chocolate"
-                              className="text-ellipse-custom text-secondary mb-0 mt-1 f-rob-med f-20"
-                            >
-                              <b>Whey Protein 100%</b>
-                            </Link>
-                          </div>
-                          <div className="col-12">
-                            <div className="d-flex align-items-center justify-content-center my-2">
-                              <span className="d-flex product-rating f-14 text-secondary">
-                                <i
-                                  className="fas fa-star mr-2"
-                                  style={{
-                                    color: "#fcae2a",
-                                    lineHeight: "1.5",
-                                  }}
-                                ></i>
-                                4.8
+                            </div>
+                            <div className="col-12 d-block align-self-end pb-3">
+                              <span className="d-inline-block text-center text-black f-rob-bol f-20">
+                                {product.price}
                               </span>
                             </div>
-                          </div>
-                          <div className="col-12 d-block align-self-end pb-3">
-                            {/* <span className="d-inline-block text-red mr-2 f-rob-bol f-18">
-                              <del>₹3,000/-</del>
-                            </span>
-                            <span className="d-inline-block text-black f-rob-bol f-20">
-                              ₹2,550/-
-                            </span> */}
-                            <span className="d-inline-block text-center text-black f-rob-bol f-20">
-                              ₹3,000/-
-                            </span>
-                          </div>
-                          <div className="common-button-amazon mt-2">
-                            <button
-                              className="bg-dark-section text-uppercase px-4 text-white f-16 f-rob-bol"
-                              onClick={() =>
-                                toggleMenu({ id: "660e4b68d8ff4f8d9f2a51bc" })
-                              }
-                            >
-                              Add To Cart
-                            </button>
+                            <div className="common-button-amazon mt-2">
+                              <button
+                                className="bg-dark-section text-uppercase px-4 text-white f-16 f-rob-bol"
+                                onClick={() => toggleMenu({ id: product.id })}
+                              >
+                                Add To Cart
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="item">
-                    <div
-                      className="d-inline-block"
-                      tabIndex="-1"
-                      style={{ width: "100%", display: "inline-block" }}
-                    >
-                      <div className="col-12 nutri-product mb-3">
-                        <div className="pb-3 border text-center bg-white br-15 p-2 d-flex flex-wrap justify-content-center cart-more-product">
-                          <div className="col-12 p-0">
-                            <Link to="/nutrition/gomzi-nutrition-whey-protein-concentrate">
-                              <div className="whey-product-img">
-                                <span className="lazy-load-image-background blur lazy-load-image-loaded">
-                                  <LazyLoadImage
-                                    src={
-                                      process.env.PUBLIC_URL +
-                                      "/assets/images/nutrition/whey-protein-concentrate-1-1kg.webp"
-                                    }
-                                    alt="Whey Protein Concentrate"
-                                    className="img-fluid mx-auto product-img"
-                                    effect="blur"
-                                    loading="lazy"
-                                  />
-                                </span>
-                              </div>
-                            </Link>
-                          </div>
-                          <div className="col-12 p-0">
-                            <Link
-                              to="/nutrition/gomzi-nutrition-whey-protein-concentrate"
-                              className="text-ellipse-custom text-secondary mb-0 mt-1 f-rob-med f-20"
-                            >
-                              <b>Whey Protein Concentrate</b>
-                            </Link>
-                          </div>
-                          <div className="col-12">
-                            <div className="d-flex align-items-center justify-content-center my-2">
-                              <span className="d-flex product-rating f-14 text-secondary">
-                                <i
-                                  className="fas fa-star mr-2"
-                                  style={{
-                                    color: "#fcae2a",
-                                    lineHeight: "1.5",
-                                  }}
-                                ></i>
-                                4.4
-                              </span>
-                            </div>
-                          </div>
-                          <div className="col-12 d-block align-self-end pb-3">
-                            {/* <span className="d-inline-block text-red mr-2 f-rob-bol f-18">
-                              <del>₹3,500/-</del>
-                            </span>
-                            <span className="d-inline-block text-black f-rob-bol f-20">
-                              ₹2,970/-
-                            </span> */}
-                            <span className="d-inline-block text-center text-black f-rob-bol f-20">
-                              ₹3,500/-
-                            </span>
-                          </div>
-                          <div className="common-button-amazon mt-2">
-                            <button
-                              className="bg-dark-section text-uppercase px-4 text-white f-16 f-rob-bol"
-                              onClick={() =>
-                                toggleMenu({ id: "660e4addd8ff4f8d9f2a51b6" })
-                              }
-                            >
-                              Add To Cart
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div
-                      className="d-inline-block"
-                      tabIndex="-1"
-                      style={{ width: "100%", display: "inline-block" }}
-                    >
-                      <div className="col-12 nutri-product mb-3">
-                        <div className="pb-3 border text-center bg-white br-15 p-2 d-flex flex-wrap justify-content-center cart-more-product">
-                          <div className="col-12 p-0">
-                            <Link to="/nutrition/gomzi-nutrition-whey-protein-isolate">
-                              <div className="whey-product-img">
-                                <span className="lazy-load-image-background blur lazy-load-image-loaded">
-                                  <LazyLoadImage
-                                    src={
-                                      process.env.PUBLIC_URL +
-                                      "/assets/images/nutrition/whey-protein-isolate-1-1kg.webp"
-                                    }
-                                    alt="Whey Protein Isolate"
-                                    className="img-fluid mx-auto product-img"
-                                    effect="blur"
-                                    loading="lazy"
-                                  />
-                                </span>
-                              </div>
-                            </Link>
-                          </div>
-                          <div className="col-12 p-0">
-                            <Link
-                              to="/nutrition/gomzi-nutrition-whey-protein-isolate"
-                              className="text-ellipse-custom text-secondary mb-0 mt-1 f-rob-med f-20"
-                            >
-                              <b>Whey Protein Isolate</b>
-                            </Link>
-                          </div>
-                          <div className="col-12">
-                            <div className="d-flex align-items-center justify-content-center my-2">
-                              <span className="d-flex product-rating f-14 text-secondary">
-                                <i
-                                  className="fas fa-star mr-2"
-                                  style={{
-                                    color: "#fcae2a",
-                                    lineHeight: "1.5",
-                                  }}
-                                ></i>
-                                4.7
-                              </span>
-                            </div>
-                          </div>
-                          <div className="col-12 d-block align-self-end pb-3">
-                            {/* <span className="d-inline-block text-red mr-2 f-rob-bol f-18">
-                              <del>₹4,500/-</del>
-                            </span>
-                            <span className="d-inline-block text-black f-rob-bol f-20">
-                              ₹3,830/-
-                            </span> */}
-                            <span className="d-inline-block text-center text-black f-rob-bol f-20">
-                              ₹4,500/-
-                            </span>
-                          </div>
-                          <div className="common-button-amazon mt-2">
-                            <button
-                              className="bg-dark-section text-uppercase px-4 text-white f-16 f-rob-bol"
-                              onClick={() =>
-                                toggleMenu({ id: "660e4c37d8ff4f8d9f2a51c5" })
-                              }
-                            >
-                              Add To Cart
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div
-                      className="d-inline-block"
-                      tabIndex="-1"
-                      style={{ width: "100%", display: "inline-block" }}
-                    >
-                      <div className="col-12 nutri-product mb-3">
-                        <div className="pb-3 border text-center bg-white br-15 p-2 d-flex flex-wrap justify-content-center cart-more-product">
-                          <div className="col-12 p-0">
-                            <Link to="/nutrition/gomzi-nutrition-mass-gainer-powder">
-                              <div className="whey-product-img">
-                                <span className="lazy-load-image-background blur lazy-load-image-loaded">
-                                  <LazyLoadImage
-                                    src={
-                                      process.env.PUBLIC_URL +
-                                      "/assets/images/nutrition/gomzi-nutrition-mass-gainer-powder-1-1kg.webp"
-                                    }
-                                    alt="Whey Protein"
-                                    className="img-fluid mx-auto product-img"
-                                    effect="blur"
-                                    loading="lazy"
-                                  />
-                                </span>
-                              </div>
-                            </Link>
-                          </div>
-                          <div className="col-12 p-0">
-                            <Link
-                              to="/nutrition/gomzi-nutrition-mass-gainer-powder"
-                              className="text-ellipse-custom text-secondary mb-0 mt-1 f-rob-med f-20"
-                            >
-                              <b>Mass Gainer Powder</b>
-                            </Link>
-                          </div>
-                          <div className="col-12">
-                            <div className="d-flex align-items-center justify-content-center my-2">
-                              <span className="d-flex product-rating f-14 text-secondary">
-                                <i
-                                  className="fas fa-star mr-2"
-                                  style={{
-                                    color: "#fcae2a",
-                                    lineHeight: "1.5",
-                                  }}
-                                ></i>
-                                4.7
-                              </span>
-                            </div>
-                          </div>
-                          <div className="col-12 d-block align-self-end pb-3">
-                            {/* <span className="d-inline-block text-red mr-2 f-rob-bol f-18">
-                              <del>₹1,500/-</del>
-                            </span>
-                            <span className="d-inline-block text-black f-rob-bol f-20">
-                              ₹1,280/-
-                            </span> */}
-                            <span className="d-inline-block text-center text-black f-rob-bol f-20">
-                              ₹1,500/-
-                            </span>
-                          </div>
-                          <div className="common-button-amazon mt-2">
-                            <button
-                              className="bg-dark-section text-uppercase px-4 text-white f-16 f-rob-bol"
-                              onClick={() =>
-                                toggleMenu({ id: "6611338447003e22aea89fb5" })
-                              }
-                            >
-                              Add To Cart
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div
-                      className="d-inline-block"
-                      tabIndex="-1"
-                      style={{ width: "100%", display: "inline-block" }}
-                    >
-                      <div className="col-12 nutri-product mb-3">
-                        <div className="pb-3 border text-center bg-white br-15 p-2 d-flex flex-wrap justify-content-center cart-more-product">
-                          <div className="col-12 p-0">
-                            <Link to="/nutrition/gomzi-nutrition-ignite-fat-burner">
-                              <div className="whey-product-img">
-                                <span className="lazy-load-image-background blur lazy-load-image-loaded">
-                                  <LazyLoadImage
-                                    src={
-                                      process.env.PUBLIC_URL +
-                                      "/assets/images/nutrition/ignite-fat-burner-1.webp"
-                                    }
-                                    alt="Ignite Fat Burner"
-                                    className="img-fluid mx-auto product-img"
-                                    effect="blur"
-                                    loading="lazy"
-                                  />
-                                </span>
-                              </div>
-                            </Link>
-                          </div>
-                          <div className="col-12 p-0">
-                            <Link
-                              to="/nutrition/gomzi-nutrition-ignite-fat-burner"
-                              className="text-ellipse-custom text-secondary mb-0 mt-1 f-rob-med f-20"
-                            >
-                              <b>Ignite Fat Burner</b>
-                            </Link>
-                          </div>
-                          <div className="col-12">
-                            <div className="d-flex align-items-center justify-content-center my-2">
-                              <span className="d-flex product-rating f-14 text-secondary">
-                                <i
-                                  className="fas fa-star mr-2"
-                                  style={{
-                                    color: "#fcae2a",
-                                    lineHeight: "1.5",
-                                  }}
-                                ></i>
-                                4.4
-                              </span>
-                            </div>
-                          </div>
-                          <div className="col-12 d-block align-self-end pb-3">
-                            {/* <span className="d-inline-block text-red mr-2 f-rob-bol f-18">
-                              <del>₹2,500/-</del>
-                            </span>
-                            <span className="d-inline-block text-black f-rob-bol f-20">
-                              ₹2,120/-
-                            </span> */}
-                            <span className="d-inline-block text-center text-black f-rob-bol f-20">
-                              ₹2,500/-
-                            </span>
-                          </div>
-                          <div className="common-button-amazon mt-2">
-                            <button
-                              className="bg-dark-section text-uppercase px-4 text-white f-16 f-rob-bol"
-                              onClick={() =>
-                                toggleMenu({ id: "660e4e38d8ff4f8d9f2a51d4" })
-                              }
-                            >
-                              Add To Cart
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div
-                      className="d-inline-block"
-                      tabIndex="-1"
-                      style={{ width: "100%", display: "inline-block" }}
-                    >
-                      <div className="col-12 nutri-product mb-3">
-                        <div className="pb-3 border text-center bg-white br-15 p-2 d-flex flex-wrap justify-content-center cart-more-product">
-                          <div className="col-12 p-0">
-                            <Link to="/nutrition/gomzi-nutrition-spark-eaa">
-                              <div className="whey-product-img">
-                                <span className="lazy-load-image-background blur lazy-load-image-loaded">
-                                  <LazyLoadImage
-                                    src={
-                                      process.env.PUBLIC_URL +
-                                      "/assets/images/nutrition/spark-eaa-1.webp"
-                                    }
-                                    alt="Spark EAA"
-                                    className="img-fluid mx-auto product-img"
-                                    effect="blur"
-                                    loading="lazy"
-                                  />
-                                </span>
-                              </div>
-                            </Link>
-                          </div>
-                          <div className="col-12 p-0">
-                            <Link
-                              to="/nutrition/gomzi-nutrition-spark-eaa"
-                              className="text-ellipse-custom text-secondary mb-0 mt-1 f-rob-med f-20"
-                            >
-                              <b>Spark EAA</b>
-                            </Link>
-                          </div>
-                          <div className="col-12">
-                            <div className="d-flex align-items-center justify-content-center my-2">
-                              <span className="d-flex product-rating f-14 text-secondary">
-                                <i
-                                  className="fas fa-star mr-2"
-                                  style={{
-                                    color: "#fcae2a",
-                                    lineHeight: "1.5",
-                                  }}
-                                ></i>
-                                4.3
-                              </span>
-                            </div>
-                          </div>
-                          <div className="col-12 d-block align-self-end pb-3">
-                            {/* <span className="d-inline-block text-red mr-2 f-rob-bol f-18">
-                              <del>₹2,099/-</del>
-                            </span>
-                            <span className="d-inline-block text-black f-rob-bol f-20">
-                              ₹1,790/-
-                            </span> */}
-                            <span className="d-inline-block text-center text-black f-rob-bol f-20">
-                              ₹2,099/-
-                            </span>
-                          </div>
-                          <div className="common-button-amazon mt-2">
-                            <button
-                              className="bg-dark-section text-uppercase px-4 text-white f-16 f-rob-bol"
-                              onClick={() =>
-                                toggleMenu({ id: "660e4e61d8ff4f8d9f2a51d7" })
-                              }
-                            >
-                              Add To Cart
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div
-                      className="d-inline-block"
-                      tabIndex="-1"
-                      style={{ width: "100%", display: "inline-block" }}
-                    >
-                      <div className="col-12 nutri-product mb-3">
-                        <div className="pb-3 border text-center bg-white br-15 p-2 d-flex flex-wrap justify-content-center cart-more-product">
-                          <div className="col-12 p-0">
-                            <Link to="/nutrition/gomzi-nutrition-atp-creatine">
-                              <div className="whey-product-img">
-                                <span className="lazy-load-image-background blur lazy-load-image-loaded">
-                                  <LazyLoadImage
-                                    src={
-                                      process.env.PUBLIC_URL +
-                                      "/assets/images/nutrition/atp-creatine-1.webp"
-                                    }
-                                    alt="ATP Creatine Monohydrate"
-                                    className="img-fluid mx-auto product-img"
-                                    effect="blur"
-                                    loading="lazy"
-                                  />
-                                </span>
-                              </div>
-                            </Link>
-                          </div>
-                          <div className="col-12 p-0">
-                            <Link
-                              to="/nutrition/gomzi-nutrition-atp-creatine"
-                              className="text-ellipse-custom text-secondary mb-0 mt-1 f-rob-med f-20"
-                            >
-                              <b>ATP Creatine Monohydrate</b>
-                            </Link>
-                          </div>
-                          <div className="col-12">
-                            <div className="d-flex align-items-center justify-content-center my-2">
-                              <span className="d-flex product-rating f-14 text-secondary">
-                                <i
-                                  className="fas fa-star mr-2"
-                                  style={{
-                                    color: "#fcae2a",
-                                    lineHeight: "1.5",
-                                  }}
-                                ></i>
-                                4.5
-                              </span>
-                            </div>
-                          </div>
-                          <div className="col-12 d-block align-self-end pb-3">
-                            {/* <span className="d-inline-block text-red mr-2 f-rob-bol f-18">
-                              <del>₹1,499/-</del>
-                            </span>
-                            <span className="d-inline-block text-black f-rob-bol f-20">
-                              ₹1,270/-
-                            </span> */}
-                            <span className="d-inline-block text-center text-black f-rob-bol f-20">
-                              ₹1,499/-
-                            </span>
-                          </div>
-                          <div className="common-button-amazon mt-2">
-                            <button
-                              className="bg-dark-section text-uppercase px-4 text-white f-16 f-rob-bol"
-                              onClick={() =>
-                                toggleMenu({ id: "660e4e81d8ff4f8d9f2a51da" })
-                              }
-                            >
-                              Add To Cart
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  ))}
                 </OwlCarousel>
               </div>
             </div>
