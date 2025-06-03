@@ -50,6 +50,7 @@ const GomziNutritionRefuelIgniteFatBurner = lazy(() => import("./pages/nutrition
 const GomziNutritionRefuelATPCreatine = lazy(() => import("./pages/nutrition/gomzi-nutrition-refuel-atp-creatine"));
 const GomziNutritionRefuelSparkEAA = lazy(() => import("./pages/nutrition/gomzi-nutrition-refuel-spark-eaa"));
 const GomziNutritionRefuelMassGainerPowder = lazy(() => import("./pages/nutrition/gomzi-nutrition-refuel-mass-gainer-powder"));
+const Signature = lazy(() => import("./pages/nutrition/signature"));
 const GomziNutritionChocolateProteinBar = lazy(() =>
   import("./pages/nutrition/gomzi-nutrition-chocolate-protein-bar")
 );
@@ -246,6 +247,7 @@ function App() {
         <Route path="/nutrition/gomzi-nutrition-sports-jogger" element={<GomziNutritionSportsJogger />} />
         <Route path="/nutrition/gomzi-nutrition-sports-active-t-shirt" element={<GomziNutritionActiveTShirt />} />
         <Route path="/nutrition/contact-us" element={<ContactUs />} />
+        <Route path="/nutrition/signature" element={<Signature />} />
         <Route
           path="/nutrition/terms-condition-customer"
           element={<TermsConditionCustomer />}
