@@ -66,6 +66,11 @@ const MobileUserInfo = () => {
                             <i className="fas fa-box mr-3" style={{ fontSize: "18px" }}></i>Orders
                         </a>
                     </li>
+                    <li className="mr-0">
+                        <a href={`${redirectDir}/invoices`}>
+                            <i className="fas fa-box mr-3" style={{ fontSize: "18px" }}></i>Invoice
+                        </a>
+                    </li>
                     <li onClick={logout}>
                         <p><i className="fas fa-sign-out-alt"></i> Log Out</p>
                     </li>
