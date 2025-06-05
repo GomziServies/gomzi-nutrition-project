@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 //User Account
 import Home from "./pages/home";
+import InvoicesList from "./pages/nutrition/InvoicesList";
 // import Sitemap from '../src/components/partials/sitemap';
 
 //Profile
@@ -50,7 +51,7 @@ const GomziNutritionRefuelIgniteFatBurner = lazy(() => import("./pages/nutrition
 const GomziNutritionRefuelATPCreatine = lazy(() => import("./pages/nutrition/gomzi-nutrition-refuel-atp-creatine"));
 const GomziNutritionRefuelSparkEAA = lazy(() => import("./pages/nutrition/gomzi-nutrition-refuel-spark-eaa"));
 const GomziNutritionRefuelMassGainerPowder = lazy(() => import("./pages/nutrition/gomzi-nutrition-refuel-mass-gainer-powder"));
-const Signature = lazy(() => import("./pages/nutrition/signature"));
+const InvoiceViewPage = lazy(() => import("./pages/nutrition/InvoiceViewPage"));
 const GomziNutritionChocolateProteinBar = lazy(() =>
   import("./pages/nutrition/gomzi-nutrition-chocolate-protein-bar")
 );
@@ -247,7 +248,6 @@ function App() {
         <Route path="/nutrition/gomzi-nutrition-sports-jogger" element={<GomziNutritionSportsJogger />} />
         <Route path="/nutrition/gomzi-nutrition-sports-active-t-shirt" element={<GomziNutritionActiveTShirt />} />
         <Route path="/nutrition/contact-us" element={<ContactUs />} />
-        <Route path="/nutrition/signature" element={<Signature />} />
         <Route
           path="/nutrition/terms-condition-customer"
           element={<TermsConditionCustomer />}
@@ -301,6 +301,8 @@ function App() {
         {/* User Profile */}
         <Route path="/user/profile" element={<UserProfile />} />
         <Route path="/user/order" element={<UserOrder />} />
+        <Route path="/invoice" element={<InvoicesList />} />
+        <Route path="/invoice/:invoice_id" element={<InvoiceViewPage />} />
         {/* Add a catch-all route for unmatched routes */}
         <Route path="*" element={<NotFoundPage />} />
 

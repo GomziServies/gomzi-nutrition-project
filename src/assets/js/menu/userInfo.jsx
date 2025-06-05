@@ -73,6 +73,11 @@ const UserInfo = () => {
                                     <i className="fas fa-box mr-1" style={{ fontSize: "18px" }}></i>Orders
                                 </a>
                             </li>
+                            <li className="mr-0">
+                                <a href={`/invoice`}>
+                                    <i className="fas fa-box mr-1" style={{ fontSize: "18px" }}></i>Invoice
+                                </a>
+                            </li>
 
                             <li onClick={logout}>
                                 <button className='video-button-bg'><i className="fas fa-sign-out-alt"></i> Log Out</button>
