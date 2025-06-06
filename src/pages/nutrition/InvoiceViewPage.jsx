@@ -68,7 +68,7 @@ const InvoiceViewPage = () => {
     ctx.lineJoin = "round";
     ctx.lineCap = "round";
     ctx.lineWidth = 2.5;
-    ctx.strokeStyle = "#86C33B";
+    ctx.strokeStyle = "#000000";
 
     ctx.beginPath();
     ctx.moveTo(x, y);
