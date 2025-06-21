@@ -191,11 +191,8 @@ function GomziNutritionSugarguardDiabetesCarePowder() {
           property="og:image"
           content="https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp"
         />
-        <meta
-          property="og:url"
-          content="https://www.gomzilifesciences.in/nutrition/gomzi-nutrition-sugarguard-diabetes-care-powder"
-        />
-        <link rel="canonical" href={{ canonicalUrl }} />
+        <meta property="og:url" content={canonicalUrl} />
+        <link rel="canonical" href={canonicalUrl} />
         <script>
           {`!function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
