@@ -648,8 +648,8 @@ function Home() {
           name="google-site-verification"
           content="Jtkzxut7_V1SD1dhaJP6yr85918OjJSoq-roIEZNsfQ"
         />
-        <meta property="og:url" content="https://www.gomzilifesciences.in/" />
-        <link rel="canonical" href={{ canonicalUrl }} />
+        <meta property="og:url" content={canonicalUrl} />
+        <link rel="canonical" href={canonicalUrl} />
 
         {/* Preconnect to Facebook CDN */}
         <link rel="preconnect" href="https://connect.facebook.net" />
