@@ -165,6 +165,26 @@ function WhiteLabelling() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-J50WNKGW38');`}</noscript>
+        <script type="application/ld+json">
+          {`"@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Gomzilifescience LLP",
+          "url": "https://www.gomzilifesciences.in/nutrition/white-labelling",
+          "logo": "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "8866465275",
+            "contactType": "technical support",
+            "areaServed": "IN",
+            "availableLanguage": "en"
+          },
+          "sameAs": [
+            "https://www.facebook.com/people/Gomzi-Nutrition/61558718185166/",
+            "https://www.instagram.com/gomzi_nutrition/",
+            "https://www.youtube.com/@GomziNutrition",
+            "https://www.linkedin.com/in/gomzi-nutrition-423558312/"
+          ]`}
+        </script>
       </Helmet>
       <NutritionHeader />
       <WhatsappHeaderApp
