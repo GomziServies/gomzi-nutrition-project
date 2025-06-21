@@ -137,11 +137,8 @@ function WhiteLabelling() {
           property="og:image"
           content="https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp"
         />
-        <meta
-          property="og:url"
-          content="https://www.gomzilifesciences.in/nutrition/white-labelling"
-        />
-        <link rel="canonical" href={{ canonicalUrl }} />
+        <meta property="og:url" content={canonicalUrl} />
+        <link rel="canonical" href={canonicalUrl} />
         <script>
           {`!function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -630,7 +627,7 @@ function WhiteLabelling() {
                                   Yes, I am interested!
                                 </Link>
                                 <a
-                                  href={DownloadPdf || '#'}
+                                  href={DownloadPdf || "#"}
                                   download
                                   className="btn-download-brochure mx-2 mt-3"
                                 >
@@ -821,7 +818,7 @@ function WhiteLabelling() {
                                   Yes, I am interested!
                                 </Link>
                                 <a
-                                  href={DownloadPdf || '#'}
+                                  href={DownloadPdf || "#"}
                                   download
                                   className="btn-download-brochure mx-2 mt-3"
                                 >
@@ -978,7 +975,7 @@ function WhiteLabelling() {
                                   Yes, I am interested!
                                 </Link>
                                 <a
-                                  href={DownloadPdf || '#'}
+                                  href={DownloadPdf || "#"}
                                   download
                                   className="btn-download-brochure mx-2 mt-3"
                                 >
@@ -1135,7 +1132,7 @@ function WhiteLabelling() {
                                   Yes, I am interested!
                                 </Link>
                                 <a
-                                  href={DownloadPdf || '#'}
+                                  href={DownloadPdf || "#"}
                                   download
                                   className="btn-download-brochure mx-2 mt-3"
                                 >
@@ -1293,7 +1290,7 @@ function WhiteLabelling() {
                                   Yes, I am interested!
                                 </Link>
                                 <a
-                                  href={DownloadPdf || '#'}
+                                  href={DownloadPdf || "#"}
                                   download
                                   className="btn-download-brochure mx-2 mt-3"
                                 >
