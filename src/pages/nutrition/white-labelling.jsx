@@ -185,6 +185,31 @@ function WhiteLabelling() {
             "https://www.linkedin.com/in/gomzi-nutrition-423558312/"
           ]`}
         </script>
+        <script type="application/ld+json">
+          {`
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          "name": "Start Your Own Supplements Brand with Gomzi Nutrition!",
+          "description": "Ready to Launch Your Own Nutrition or Supplement Brand?
+        With Gomzi Nutrition, you can start your private label supplements business without the headache of owning a factory!
+
+        🚀 We Offer:
+        ✔️ White Labelling & Contract Manufacturing
+        ✔️ Custom Branding Solutions
+        ✔️ Provide Quality, Purity, Safety and Efficacious Nutraceutical Product (Protein Supplements & More)
+        ✔️ End-to-End Support for Startups
+
+        👉 Whether you're a gym owner, influencer, health coach, or entrepreneur — we make launching your own supplement brand EASY and AFFORDABLE.
+
+        🌐 Learn more at: https://www.gomzilifesciences.in/nutrition/white-labelling
+        📞 Contact us for expert guidance and pricing!",
+          "thumbnailUrl": "https://www.gomzilifesciences.in/assets/images/nutrition/gn-video-thumbnail.webp",
+          "uploadDate": "2024-12-20",
+          "duration": "PT2M31S",
+          "contentUrl": "https://www.youtube.com/watch?v=2k4XebVALaE&t=1s",
+          "embedUrl": "https://www.gomzilifesciences.in/nutrition/white-labelling"
+        `}
+        </script>
       </Helmet>
       <NutritionHeader />
       <WhatsappHeaderApp
