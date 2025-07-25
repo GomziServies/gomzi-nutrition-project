@@ -392,7 +392,7 @@ function PricingPolicyCustomer() {
                       <br />
                       Email: gomzinutrition@gmail.com
                       <br />
-                      Phone: +91 83200 77993
+                      Phone: +91 88668 42520
                       <br />
                     </p>
                     <p className="mb-2">

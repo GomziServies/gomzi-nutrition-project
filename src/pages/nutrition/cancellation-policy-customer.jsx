@@ -376,7 +376,7 @@ function CancellationPolicyCustomer() {
                       <br />
                       Email: gomzinutrition@gmail.com
                       <br />
-                      Phone: +91 83200 77993
+                      Phone: +91 88668 42520
                       <br />
                       Include your order number and a brief explanation of why
                       you would like to cancel your order.
