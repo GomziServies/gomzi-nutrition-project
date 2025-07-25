@@ -134,7 +134,7 @@ function ContactUs() {
                       </div>
                       <div class="col-12 p-0">
                         <p class="text-ellipse-custom text-secondary mb-0 mt-1 f-rob-med f-20">
-                          <b>+91 83200 77993</b>
+                          <b>+91 88668 42520</b>
                         </p>
                       </div>
                     </div>
