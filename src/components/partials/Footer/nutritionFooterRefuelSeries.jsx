@@ -6487,7 +6487,7 @@ function NutritionFooterRefuelSeries() {
                 </p>
                 <div className="f2">
                   <p className="mb-2 mt-2">
-                    <Link to="tel:+916354051487">
+                    <Link to="tel:+918866842520">
                       Gautam Jani - +91 63540 51487
                     </Link>
                   </p>

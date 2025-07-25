@@ -376,7 +376,7 @@ function ShippingPolicyCustomer() {
                       If you experience any issues with your delivery, such as a
                       delayed shipment or an incorrect address, please contact
                       our customer service team at gomzinutrition@gmail.com or
-                      +91 83200 77993. We are here to assist you and resolve any
+                      +91 88668 42520. We are here to assist you and resolve any
                       concerns you may have.
                     </p>
                     <p>
