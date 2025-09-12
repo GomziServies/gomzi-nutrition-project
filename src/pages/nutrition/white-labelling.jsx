@@ -11,6 +11,7 @@ import FactoryPhotoSection from "../../components/factoryPhotoSection";
 import { Helmet } from "react-helmet";
 import ProductDesignByGautam from "../../components/nutrition/productDesignByGautam";
 import Testimonials from "../../components/nutrition/testimonials";
+import ThirdPartyManufacturingFAQS from "../../components/nutrition/third-party-manufacturing-faqs";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -92,11 +93,11 @@ function WhiteLabelling() {
       />
       <Helmet>
         <title>
-          White Label Nutrition Products - Gomzi Nutrition Custom Solutions
+          Nutraceuticals third party manufacturers in India, Surat
         </title>
         <meta
           name="description"
-          content="Partner with Gomzi Nutrition for custom white-label nutrition products. Create your own brand with high-quality supplements and personalized packaging."
+          content="Nutraceuticals third party manufacturers in India, Surat offer reliable custom formulations, FSSAI certified quality, and white label solutions for your brand."
         />
         <meta
           name="keyword"
@@ -1828,6 +1829,7 @@ function WhiteLabelling() {
           <FactoryPhotoSection />
           <MainVideoSection />
           <Testimonials />
+          <ThirdPartyManufacturingFAQS />
           <ProductDesignByGautam />
         </section>
       </div>

@@ -1,0 +1,229 @@
+/* Section Styling */
+.faq-section {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Title */
+.faq-title {
+  color: #000;
+  border-left: 6px solid #86c33a;
+  padding-left: 12px;
+}
+
+/* Intro Paragraph */
+.faq-intro {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Accordion Styles */
+.faq-question {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.faq-answer {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Accordion Active State */
+.accordion-button:not(.collapsed) {
+  background-color: #f7fff2;
+  color: #86c33a;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(134, 195, 58, 0.3);
+}
+
+/* Protein Powder Specific */
+
+/* Banner */
+.protein-powder-banner {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin-top: 110px;
+}
+
+.protein-powder-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Container */
+.protein-powder-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Heading */
+.protein-powder-page-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.primory-color {
+  color: #2ab13f; /* primary color */
+}
+
+/* Paragraph */
+.protein-powder-page-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #727272; /* secondary text */
+  margin-bottom: 16px;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+}
+
+
+
+/* sports-nutrition-supplements */
+
+/* Banner */
+.sports-nutrition-supplements-banner {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin-top: 110px;
+}
+
+.sports-nutrition-supplements-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Container */
+.sports-nutrition-supplements-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Heading */
+.sports-nutrition-supplements-page-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.primory-color {
+  color: #2ab13f; /* primary color */
+}
+
+/* Paragraph */
+.sports-nutrition-supplements-page-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #727272; /* secondary text */
+  margin-bottom: 16px;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+}
+
+
+/* Energy-Drink Specific */
+
+/* Banner */
+.energy-drinks-banner {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin-top: 110px;
+}
+
+.energy-drinks-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Container */
+.energy-drinks-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Heading */
+.energy-drinks-page-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.primory-color {
+  color: #2ab13f; /* primary color */
+}
+
+/* Paragraph */
+.energy-drinks-page-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #727272; /* secondary text */
+  margin-bottom: 16px;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+}
+
+
+/* peanut-butter Specific */
+
+/* Banner */
+.peanut-butter-banner {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin-top: 110px;
+}
+
+.peanut-butter-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Container */
+.peanut-butter-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Heading */
+.peanut-butter-page-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.primory-color {
+  color: #2ab13f; /* primary color */
+}
+
+/* Paragraph */
+.peanut-butter-page-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #727272; /* secondary text */
+  margin-bottom: 16px;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+}

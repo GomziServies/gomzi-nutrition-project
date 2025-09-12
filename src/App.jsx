@@ -3,6 +3,10 @@ import { Route, Routes } from "react-router-dom";
 
 //User Account
 import Home from "./pages/home";
+import ProteinPowder from "./pages/third-party-manufacturing.jsx/protein-powder";
+import SportsNutritionSupplements from "./pages/third-party-manufacturing.jsx/sports-nutrition-supplements";
+import PeanutButter from "./pages/third-party-manufacturing.jsx/peanut-butter";
+import EnergyDrink from "./pages/third-party-manufacturing.jsx/energy-drinks";
 // import Sitemap from '../src/components/partials/sitemap';
 
 //Profile
@@ -147,6 +151,27 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+
+        {/*third party manufacturing */}
+        <Route
+          path="/third-party-manufacturing/protein-powder"
+          element={<ProteinPowder />}
+        />
+        
+        <Route
+          path="/third-party-manufacturing/sports-nutrition-supplements"
+          element={<SportsNutritionSupplements />}
+        />
+        
+        <Route
+          path="/third-party-manufacturing/energy-drinks"
+        element={<EnergyDrink />}
+          />
+        
+        <Route
+          path="/third-party-manufacturing/peanut-butter"
+          element={<PeanutButter />}
+        />
 
         {/* nutrition */}
         <Route
