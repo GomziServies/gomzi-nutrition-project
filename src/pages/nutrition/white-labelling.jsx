@@ -666,11 +666,11 @@ function WhiteLabelling() {
                               </div>
                               <div className="pb-2 ql-editor descriptionShow text-secondary">
                                 <Link
-                                  to="https://api.whatsapp.com/send?phone=8866842520&amp;text= Hello, I have an inquiry about third-party manufacturing for the Whey Protein product."
+                                  to="/third-party-manufacturing/protein-powder"
                                   type="button"
                                   className="btn-interested mx-2 mt-3"
                                 >
-                                  Yes, I am interested!
+                                  View More
                                 </Link>
                                 <a
                                   href={DownloadPdf || "#"}
@@ -857,11 +857,11 @@ function WhiteLabelling() {
                               </div>
                               <div className="pb-2 ql-editor descriptionShow text-secondary">
                                 <Link
-                                  to="https://api.whatsapp.com/send?phone=8866842520&amp;text= Hello, I have an inquiry about third-party manufacturing for the Performance Drinks product."
+                                  to="/third-party-manufacturing/sports-nutrition-supplements"
                                   type="button"
                                   className="btn-interested mx-2 mt-3"
                                 >
-                                  Yes, I am interested!
+                                  View More
                                 </Link>
                                 <a
                                   href={DownloadPdf || "#"}
@@ -1014,11 +1014,11 @@ function WhiteLabelling() {
                               </div>
                               <div className="pb-2 ql-editor descriptionShow text-secondary">
                                 <Link
-                                  to="https://api.whatsapp.com/send?phone=8866842520&amp;text= Hello, I have an inquiry about third-party manufacturing for the Peanut Butter product."
+                                  to="/third-party-manufacturing/peanut-butter"
                                   type="button"
                                   className="btn-interested mx-2 mt-3"
                                 >
-                                  Yes, I am interested!
+                                  View More
                                 </Link>
                                 <a
                                   href={DownloadPdf || "#"}
@@ -1171,11 +1171,11 @@ function WhiteLabelling() {
                               </div>
                               <div className="pb-2 ql-editor descriptionShow text-secondary">
                                 <Link
-                                  to="https://api.whatsapp.com/send?phone=8866842520&amp;text= Hello, I have an inquiry about third-party manufacturing for the Energy Drink."
+                                  to="/third-party-manufacturing/energy-drinks"
                                   type="button"
                                   className="btn-interested mx-2 mt-3"
                                 >
-                                  Yes, I am interested!
+                                  View More
                                 </Link>
                                 <a
                                   href={DownloadPdf || "#"}
@@ -1333,7 +1333,7 @@ function WhiteLabelling() {
                                   type="button"
                                   className="btn-interested mx-2 mt-3"
                                 >
-                                  Yes, I am interested!
+                                  View More
                                 </Link>
                                 <a
                                   href={DownloadPdf || "#"}

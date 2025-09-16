@@ -5,8 +5,32 @@ import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import PageMeta from "../../components/PageMeta";
 
 const EnergyDrink = () => {
+    const products = [
+        {
+            id: 1,
+            imageSrc:
+                "/assets/images/third-party-manufacturing/energy-drink.png",
+            productLink: `https://api.whatsapp.com/send?phone=8866842520&text=Hello, I have an inquiry about third-party manufacturing for Performance EAA Drink`,
+            productName: "Performance EAA Drink",
+        },
+        {
+            id: 2,
+            imageSrc:
+                "/assets/images/third-party-manufacturing/energy-drink-cola.png",
+            productLink: `https://api.whatsapp.com/send?phone=8866842520&text=Hello, I have an inquiry about third-party manufacturing for Performance Creatine Drink`,
+            productName: "Performance Creatine Drink",
+        },
+        {
+            id: 3,
+            imageSrc:
+                "/assets/images/third-party-manufacturing/energy-drink-green-apple.png",
+            productLink: `https://api.whatsapp.com/send?phone=8866842520&text=Hello, I have an inquiry about third-party manufacturing for Performance Pre-Workout Drink`,
+            productName: "Performance Pre-Workout Drink",
+        },
+    ];
+
     return (
-        <>
+        <div className="tpm-bg">
             <PageMeta
                 title="Third party energy drink manufacturers in India, Surat"
                 description="Energy drink manufacturers in India ensure premium high-quality, certified production with white labelling, bulk supply and custom energy drink solutions."
@@ -80,9 +104,37 @@ const EnergyDrink = () => {
                     quality.
                 </p>
             </section>
+            <section className="third-party-manufacturing-card-container ">
+                <div className="row mt-3">
+                    {products.map((product) => (
+                        <div key={product.id} className="col-md-4 col-6 mb-4">
+                            <div className="third-party-manufacturing-card text-center bg-white br-15 p-2 d-flex flex-column justify-content-between shadow-sm">
+                                <img
+                                    src={product.imageSrc}
+                                    alt={product.productName}
+                                    className="product-img"
+                                />
+
+                                <h3 className="text-ellipse-custom text-secondary my-4 f-rob-med f-20">
+                                    <b>{product.productName}</b>
+                                </h3>
+                                <div className="mb-1">
+                                    <a
+                                        href={product.productLink}
+                                        className="enquiry-btn"
+                                        target="_blank"
+                                    >
+                                        Enquiry Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
             <NutritionFooter />
-        </>
+        </div>
     );
 };
 

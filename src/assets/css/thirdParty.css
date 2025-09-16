@@ -42,6 +42,10 @@
 
 /* Protein Powder Specific */
 
+
+.tpm-bg{ 
+  background-color: #f6f6f6;
+}
 /* Banner */
 .protein-powder-banner {
   width: 100%;
@@ -61,6 +65,11 @@
   max-width: 1040px;
   margin: 0 auto;
   padding: 40px 20px;
+}
+.third-party-manufacturing-card-container {
+  max-width: 1046px;
+  margin: 0 auto;
+  padding: 0px 20px 40px 20px;
 }
 
 /* Heading */
@@ -85,6 +94,37 @@
   font-family: "Roboto", sans-serif;
   text-align: justify;
 }
+
+.third-party-manufacturing-card {
+  height: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.third-party-manufacturing-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.third-party-manufacturing-card img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.enquiry-btn {
+  display: inline-block;
+  background: #86c33a;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(134, 195, 58, 0.3);
+  transition: all 0.3s ease;
+}
+
 
 
 

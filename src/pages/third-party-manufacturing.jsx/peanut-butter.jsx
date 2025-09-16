@@ -5,8 +5,24 @@ import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import PageMeta from "../../components/PageMeta";
 
 const PeanutButter = () => {
+    const phoneNumber = "8866842520";
+    const baseMessage =
+        "Hello, I have an inquiry about third-party manufacturing for ";
+
+    const products = [
+        {
+            id: 1,
+            imageSrc:
+                "/assets/images/third-party-manufacturing/peanut-butter.png",
+            productName: "Peanut Butter",
+            productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+                baseMessage + "Peanut Butter"
+            )}`,
+        },
+    ];
+
     return (
-        <>
+        <div className="tpm-bg">
             <PageMeta
                 title="Crunchy Peanut Butter manufacturer in Surat, India"
                 description="Peanut butter manufacturer in Surat, India offers reliable third party manufacturing, certified safety, and flexible white label peanut butter services."
@@ -80,9 +96,37 @@ const PeanutButter = () => {
                     brand with certified quality, trust, and innovation.
                 </p>
             </section>
+            <section className="third-party-manufacturing-card-container ">
+                <div className="row mt-3 justify-content-center">
+                    {products.map((product) => (
+                        <div key={product.id} className="col-md-4 col-6 mb-4">
+                            <div className="third-party-manufacturing-card text-center bg-white br-15 p-2 d-flex flex-column justify-content-between shadow-sm">
+                                <img
+                                    src={product.imageSrc}
+                                    alt={product.productName}
+                                    className="product-img"
+                                />
+
+                                <h3 className="text-ellipse-custom text-secondary my-4 f-rob-med f-20">
+                                    <b>{product.productName}</b>
+                                </h3>
+                                <div className="mb-1">
+                                    <a
+                                        href={product.productLink}
+                                        className="enquiry-btn"
+                                        target="_blank"
+                                    >
+                                        Enquiry Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
             <NutritionFooter />
-        </>
+        </div>
     );
 };
 
