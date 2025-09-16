@@ -264,9 +264,9 @@ function WhiteLabelling() {
             <div className="col-12 mt-3">
               <div className="row justify-content-center mb-4">
                 <div className="col-12 text-center px-0">
-                  <h2 className="f-rob-bol f-35">
+                  <h1 className="f-rob-bol f-35">
                     WHY GOMZI LIFESCIENCE LLP..!!!
-                  </h2>
+                  </h1>
                 </div>
                 <div className="col-lg-6 mt-lg-2 d-block d-md-none">
                   <div className="item">
@@ -397,9 +397,9 @@ function WhiteLabelling() {
                 />
               </div>
               <div className="right-section">
-                <h1>
+                <h2 style={{marginBottom:'20px'}}>
                   Our <span className="highlight">Vision</span>
-                </h1>
+                </h2>
                 <p>
                   At Gomzi Lifescience, our vision is to become a globally
                   recognized leader in the development, manufacturing, and
@@ -417,9 +417,9 @@ function WhiteLabelling() {
             {/* Mission Section */}
             <div className="row mission-section align-items-start">
               <div className="right-section">
-                <h1>
+                <h2 style={{marginBottom:'20px'}}>
                   Our <span className="highlight">Mission</span>
-                </h1>
+                </h2>
                 <p>
                   At Gomzi Lifescience, our mission is to design, manufacture,
                   and deliver premium nutraceutical products that meet the
@@ -475,7 +475,7 @@ function WhiteLabelling() {
         <section className="checkout-main checkout-page-detail p-lg-4">
           <div className="container-fluid w-80 checkout-padding nav-slider-another">
             <div className="col-12 px-0 mb-5 text-center">
-              <h1 className="f-rob-bol f-35">Make Your Own Product</h1>
+              <h2 style={{marginBottom:'5px'}} className="f-rob-bol f-35">Make Your Own Product</h2>
               <p>(Third Party Manufacturing)</p>
             </div>
             <OwlCarousel
