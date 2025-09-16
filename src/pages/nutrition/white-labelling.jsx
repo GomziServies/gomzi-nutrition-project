@@ -1333,7 +1333,7 @@ function WhiteLabelling() {
                                   type="button"
                                   className="btn-interested mx-2 mt-3"
                                 >
-                                  View More
+                                  Yes, I am interested!
                                 </Link>
                                 <a
                                   href={DownloadPdf || "#"}
