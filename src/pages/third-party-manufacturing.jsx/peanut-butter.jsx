@@ -3,6 +3,7 @@ import "../../assets/css/thirdParty.css";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import PageMeta from "../../components/PageMeta";
+import { Helmet } from "react-helmet";
 
 const PeanutButter = () => {
     const phoneNumber = "8866842520";
@@ -21,13 +22,58 @@ const PeanutButter = () => {
         },
     ];
 
+    const schemaData = {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        name: " Crunchy Peanut Butter in Surat, India ",
+        image: "https://www.gomzilifesciences.in/assets/images/third-party-manufacturing/peanut-butter.png",
+        description:
+            "Peanut butter manufacturer in Surat, India offers reliable third party manufacturing, certified safety, and flexible white label peanut butter services.",
+        brand: {
+            "@type": "Brand",
+            name: "Gomzilifesciences",
+        },
+        manufacturer: {
+            "@type": "Organization",
+            name: "Gomzilifesciences",
+            logo: "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
+            url: "https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter",
+        },
+        aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.8",
+            reviewCount: "34",
+        },
+        review: [
+            {
+                "@type": "Review",
+                author: {
+                    "@type": "Person",
+                    name: "Chirag Pawar",
+                },
+                datePublished: "2025-01-01",
+                reviewBody:
+                    "Best suppliment manufacturers in India....best quality and affordable pricing !!",
+                name: "Trusted White Label Peanut Butter",
+                reviewRating: {
+                    "@type": "Rating",
+                    ratingValue: "5",
+                    bestRating: "5",
+                },
+            },
+        ],
+    };
     return (
         <div className="tpm-bg">
             <PageMeta
                 title="Crunchy Peanut Butter manufacturer in Surat, India"
                 description="Peanut butter manufacturer in Surat, India offers reliable third party manufacturing, certified safety, and flexible white label peanut butter services."
             />
-
+            <Helmet>
+                <script type="application/ld+json">
+                    {JSON.stringify(schemaData)}
+                </script>
+            </Helmet>
             <NutritionHeader />
 
             {/* Banner Section */}

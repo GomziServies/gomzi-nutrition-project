@@ -3,6 +3,7 @@ import "../../assets/css/thirdParty.css";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import PageMeta from "../../components/PageMeta";
+import { Helmet } from "react-helmet";
 
 const SportsNutritionSupplements = () => {
     const phoneNumber = "8866842520";
@@ -37,12 +38,57 @@ const SportsNutritionSupplements = () => {
         },
     ];
 
+    const schemaData = {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        name: "Sports Nutrition in India, Surat",
+        image: "https://www.gomzilifesciences.in/assets/images/third-party-manufacturing/creatine.png",
+        description:
+            "Best sports nutrition manufacturers in India, Surat provide GMP certified products, white label solutions and bulk sports supplement manufacturing products.",
+        brand: {
+            "@type": "Brand",
+            name: "Gomzilifesciences",
+        },
+        manufacturer: {
+            "@type": "Organization",
+            name: "Gomzilifesciences",
+            logo: "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
+            url: "https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements",
+        },
+        aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.8",
+            reviewCount: "34",
+        },
+        review: [
+            {
+                "@type": "Review",
+                author: {
+                    "@type": "Person",
+                    name: "Umesh Vaghela",
+                },
+                datePublished: "2024-01-12",
+                reviewBody: "Best creatine till date.",
+                name: "Trusted White Label Sports Supplements",
+                reviewRating: {
+                    "@type": "Rating",
+                    ratingValue: "5",
+                    bestRating: "5",
+                },
+            },
+        ],
+    };
     return (
         <div className="tpm-bg">
             <PageMeta
                 title="Top Sports Nutrition Manufacturers in India, Surat"
                 description="Best sports nutrition manufacturers in India, Surat provide GMP certified products, white label solutions and bulk sports supplement manufacturing products."
             />
+            <Helmet>
+                <script type="application/ld+json">
+                    {JSON.stringify(schemaData)}
+                </script>
+            </Helmet>
             <NutritionHeader />
 
             {/* Banner Section */}
