@@ -141,6 +141,45 @@ const PeanutButter = () => {
                     Partner with Gomzilifesciences to build your peanut butter
                     brand with certified quality, trust, and innovation.
                 </p>
+
+                <p className="energy-drinks-page-description">
+                    Our Peanut Butter Sample Range To help our clients experience product quality before bulk orders, we provide 100 gm <a href="https://best-supplement-manufacturer.gomzilifesciences.in/" target="_blank">Peanut Butter sample packs </a>in a variety of flavors:
+                    <ul className="pl-3">
+                        <li>
+                            Natural Peanut Butter (100 gm) - Pure, smooth, and protein-rich.
+                        </li>
+                        <li>
+                            Chocolate Peanut Butter (100 gm) - A delightful mix of taste and nutrition. 
+                        </li>
+                        <li>
+                            Mango Peanut Butter (100 gm) - Unique and refreshing for innovative brand launches. 
+                        </li>
+                    </ul>
+                </p>
+
+                <p className="energy-drinks-page-description">
+                    Each sample pack is designed to help clients test taste, consistency, and market acceptance before scaling up production. If you are comparing options, our competitive peanut butter price 100gm makes it easy to evaluate both quality and affordability. 
+                </p>
+
+                <h4>Customization Options for Brands</h4>
+
+                <p className="energy-drinks-page-description">
+                    At Gomzilifesciences, we understand that every brand has unique requirements. That's why we offer:
+                    <ul className="pl-3">
+                        <li>
+                            Customized protein percentages to suit different market segments.
+                        </li>
+                        <li>
+                            Flexibility in flavors and textures.
+                        </li>
+                        <li>
+                            The cheapest and best bulk pricing without compromising quality.
+                        </li>
+                    </ul>
+                </p>
+                <p className="energy-drinks-page-description">
+                    Whether you are a startup looking to launch your own peanut butter brand or an established company expanding your product line, Gomzilifesciences offers the perfect white label and third party peanut butter manufacturing solutions in Surat, India.
+                </p>
             </section>
             <section className="third-party-manufacturing-card-container ">
                 <div className="row mt-3 justify-content-center">

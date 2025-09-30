@@ -161,6 +161,47 @@ const SportsNutritionSupplements = () => {
                     Choose Gomzilifesciences to grow your sports supplement
                     brand with expertise, trust, and global certification.
                 </p>
+                <p className="energy-drinks-page-description">
+                    Our Sample Range To help our clients experience product quality before full-scale manufacturing, we provide a specialized<a href="https://best-supplement-manufacturer.gomzilifesciences.in/" target="_blank"> sample sachets </a>designed with great taste, purity, and effectiveness.
+                    <ul className="pl-3">
+                        <li>
+                            Creatine Sample (20 gm) - Available in Lemon flavor and Unflavoured option for versatile use.
+                        </li>
+                        <li>
+                            Pre-Workout Sample (20 gm) - Crafted to boost energy and focus, in Fruit Punch and Cola flavors.
+                        </li>
+                        <li>
+                            EAA Sample (20 gm) - Essential amino acids blend, available in refreshing Watermelon flavor.
+                        </li>
+                        <li>
+                            BCAA Sample (20 gm) - Branched-chain amino acids for recovery, in Orange and Cranberry flavors.
+                        </li>
+                    </ul>
+                </p>
+
+                <p className="energy-drinks-page-description">
+                    Each 20 gm trial pack allows brands to test mixability, taste, and performance before bulk orders, making it easier to select the perfect formulations for their target market. 
+                </p>
+
+                <h4>Customization Options</h4>
+
+                <p className="energy-drinks-page-description">
+                    We understand that every brand has unique goals, which is why Gomzilifesciences offers customized formulations at the cheapest and most competitive prices. Clients can choose: 
+                    <ul className="pl-3">
+                        <li>
+                            Protein percentages suited to their audience needs.
+                        </li>
+                        <li>
+                            A wide range of flavor profiles to match customer preferences.
+                        </li>
+                        <li>
+                            Flexible product development tailored to market demand.
+                        </li>
+                    </ul>
+                </p>
+                <p className="energy-drinks-page-description">
+                    With our advanced manufacturing facilities, certified processes, and expertise in sports nutrition third party manufacturing, we ensure that every product is safe, effective, and market-ready.
+                </p>
             </section>
             <section className="third-party-manufacturing-card-container ">
                 <div className="row mt-3">

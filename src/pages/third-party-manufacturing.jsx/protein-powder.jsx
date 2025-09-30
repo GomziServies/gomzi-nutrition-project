@@ -151,6 +151,44 @@ const ProteinPowder = () => {
                     Choose Gomzilifesciences to partner with a manufacturer that
                     blends expertise, compliance, and innovation.
                 </p>
+
+                <p className="energy-drinks-page-description">
+                    Our Sample Range To help our clients experience our product quality before full-scale production, we provide<a href="https://best-supplement-manufacturer.gomzilifesciences.in/" target="_blank"> Protein Powder Sachets </a>premium samples across popular categories: 
+                    <ul className="pl-3">
+                        <li>
+                            Whey Blend Sample (35 gm) - Available in exciting flavors like Mawa Kulfi, Chocolate, Mocha Coffee, and Mango. 
+                        </li>
+                        <li>
+                            Whey Concentrate Sample (35 gm) - Perfect for fitness enthusiasts, available in Mawa Kulfi, Chocolate, Mocha Coffee, and Mango flavors. 
+                        </li>
+                        <li>
+                            Whey Isolate Sample (35 gm) - High-purity protein with delicious flavor options including Mawa Kulfi, Chocolate, Mocha Coffee, and Mango.
+                        </li>
+                        <li>
+                            Mass Gainer Sample (35 gm) - Specially designed for muscle growth, available in rich Chocolate flavor.
+                        </li>
+                    </ul>
+                </p>
+
+                <h4>Customization Options</h4>
+
+                <p className="energy-drinks-page-description">
+                    Every brand is unique, and so are its requirements. That's why Gomzilifesciences provides customizable protein formulations tailored to your needs. Clients can choose: 
+                    <ul className="pl-3">
+                        <li>
+                            Different protein percentages as per their market demand.
+                        </li>
+                        <li>
+                            Preferred flavor options to match consumer tastes.
+                        </li>
+                        <li>
+                            Flexible formulations at the cheapest and most competitive prices without compromising quality.
+                        </li>
+                    </ul>
+                </p>
+                <p className="energy-drinks-page-description">
+                    With our expertise in nutraceutical third party manufacturing, we make it simple for brands to create products that stand out in the market while ensuring safety, purity, and great taste. 
+                </p>
             </section>
             {/* Products Section */}
             <section className="third-party-manufacturing-card-container ">

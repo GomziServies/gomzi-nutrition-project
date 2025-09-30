@@ -150,6 +150,45 @@ const EnergyDrink = () => {
                     drinks that combine taste, performance, and certified
                     quality.
                 </p>
+
+                <p className="energy-drinks-page-description">
+                    Our Energy Drink Bottle Samples With our advanced facilities and certified standards, we ensure every energy drink is crafted with quality, safety, and taste. To showcase our product quality, we provide <a href="https://best-supplement-manufacturer.gomzilifesciences.in/" target="_blank">Energy Drink samples </a>220 ml trial bottles in exciting flavors:
+                    <ul className="pl-3">
+                        <li>
+                            Cola Energy Drink (220 ml) - Classic taste with a powerful energy boost.
+                        </li>
+                        <li>
+                            Guava Energy Drink (220 ml) - Tropical flavor for a refreshing experience.
+                        </li>
+                        <li>
+                            Green Apple Energy Drink (220 ml) - Crisp and tangy for fitness enthusiasts.
+                        </li>
+                    </ul>
+                </p>
+
+                <p className="energy-drinks-page-description">
+                    These samples allow clients to test taste, texture, and consumer response before moving to bulk orders. 
+                </p>
+
+                <h4>Customization Options for Clients</h4>
+
+                <p className="energy-drinks-page-description">
+                    We understand that every brand has unique needs, so Gomzilifesciences offers complete customization options at the cheapest and best prices in the market:
+                    <ul className="pl-3">
+                        <li>
+                            Adjust protein percentages and formulations as per client demand.
+                        </li>
+                        <li>
+                            Develop new flavor profiles to match consumer preferences.
+                        </li>
+                        <li>
+                            Flexible packaging and product development as per market trends.
+                        </li>
+                    </ul>
+                </p>
+                <p className="energy-drinks-page-description">
+                    At Gomzilifesciences, we don't just manufacture drinks—we help you create products that stand out in the sports nutrition and beverage market.
+                </p>
             </section>
             <section className="third-party-manufacturing-card-container ">
                 <div className="row mt-3">
