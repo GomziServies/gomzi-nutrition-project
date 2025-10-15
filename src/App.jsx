@@ -8,6 +8,7 @@ import SportsNutritionSupplements from "./pages/third-party-manufacturing.jsx/sp
 import PeanutButter from "./pages/third-party-manufacturing.jsx/peanut-butter";
 import EnergyDrink from "./pages/third-party-manufacturing.jsx/energy-drinks";
 import InvoicesList from "./pages/nutrition/InvoicesList";
+import AboutUs from "./pages/nutrition/aboutUs";
 // import Sitemap from '../src/components/partials/sitemap';
 
 //Profile
@@ -316,6 +317,10 @@ function App() {
         <Route
           path="/nutrition/gomzi-nutrition-buy-3-combo"
           element={<GomziNutritionBuy3Combo />}
+        />
+        <Route
+          path="/aboutus"
+          element={<AboutUs />}
         />
         <Route
           path="/nutrition/thank-you-for-order"

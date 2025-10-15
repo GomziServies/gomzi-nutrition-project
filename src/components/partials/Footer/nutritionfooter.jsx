@@ -6506,6 +6506,14 @@ function NutritionFooter() {
                     Contact Us
                   </Link>
                 </p>
+                <p className="mb-4">
+                  <Link
+                    to="/aboutUs"
+                    target="_blank"
+                  >
+                    AboutUs
+                  </Link>
+                </p>
                 {/* <p className="mb-4">
                   <Link to="/career">CAREERS</Link>
                 </p> */}

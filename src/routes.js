@@ -55,6 +55,7 @@ const routes = [
   { path: "/nutrition/cancellation-policy-customer" },
   { path: "/nutrition/pricing-policy-customer" },
   { path: "/nutrition/contact-us" },
+  { path: "/aboutus" },
   { path: "/user/profile" },
   { path: "/user/order" },
 ];
