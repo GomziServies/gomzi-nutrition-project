@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "react-bootstrap";
 import ReactPlayer from "react-player";
 
@@ -11,7 +10,7 @@ const HowToUse = ({ src1, src2, src3, src4, step1, step2 }) => {
             <div className="col-12 sidebar-content">
               <div className="tab-pane fade show active">
                 <div className="d-flex align-items-center justify-content-between mb-3">
-                  <div className="col text-center">
+                  <div className="col text-center">z
                     <h2 className="f-rob-bol f-30 text-white text-uppercase">
                       How To Use
                     </h2>

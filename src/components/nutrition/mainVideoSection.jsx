@@ -21,8 +21,8 @@ const MainVideoSection = () => {
     dots: false,
     nav: true,
     navText: [
-      '<i class="fas fa-arrow-left"></i>',
-      '<i class="fas fa-arrow-right"></i>',
+      '<i class="fas fa-arrow-left" aria-hidden="true"></i><span class="sr-only">Previous videos</span>',
+      '<i class="fas fa-arrow-right" aria-hidden="true"></i><span class="sr-only">Next videos</span>',
     ],
     responsive: {
       0: {
@@ -297,6 +297,7 @@ const MainVideoSection = () => {
                           <button
                             onClick={() => openVideoModal("wuNtHkWxUXY")}
                             className="custom clickof video-button-bg"
+                            aria-label="Play video 1"
                           >
                             <span className="newthing">
                               <i className="fas fa-play"></i>
@@ -324,6 +325,7 @@ const MainVideoSection = () => {
                           <button
                             onClick={() => openVideoModal("K04q5L7E4S0")}
                             className="custom clickof video-button-bg"
+                            aria-label="Play video 2"
                           >
                             <span className="newthing">
                               <i className="fas fa-play"></i>
@@ -351,6 +353,7 @@ const MainVideoSection = () => {
                           <button
                             onClick={() => openVideoModal("-UhKGOkjDKQ")}
                             className="custom clickof video-button-bg"
+                            aria-label="Play video 3"
                           >
                             <span className="newthing">
                               <i className="fas fa-play"></i>

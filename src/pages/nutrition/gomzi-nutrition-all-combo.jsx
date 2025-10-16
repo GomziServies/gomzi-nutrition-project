@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
@@ -110,7 +110,7 @@ function GomziNutritionAllCombo() {
     setVideoUrl("");
   };
 
-  const addtocartdata = {
+  const addtocartdata = useMemo(() => ({
     id: "667bb4d375e450a0b5a523c7",
     img: "/assets/images/nutrition/all-product-combo-1.webp",
     name: "All Trial Pouch",
@@ -118,7 +118,7 @@ function GomziNutritionAllCombo() {
     discount: "999",
     size: "Pack Of 7",
     dis_point: "33.35%",
-  };
+  }), []);
 
   const product = [
     "/assets/images/nutrition/all-product-combo-1.webp",
@@ -140,7 +140,7 @@ function GomziNutritionAllCombo() {
         localStorage.removeItem("addtocart");
       }, 2000);
     }
-  }, []);
+  }, [addtocartdata]);
 
   return (
     <>
@@ -363,7 +363,7 @@ function GomziNutritionAllCombo() {
                       id="pills-tab"
                       role="tablist"
                     >
-                      <li className="nav-item f-20 nav-link text-uppercase active show">
+                      <li className="nav-item f-20 nav-link text-uppercase active show" role="tab">
                         Description
                       </li>
                     </ul>

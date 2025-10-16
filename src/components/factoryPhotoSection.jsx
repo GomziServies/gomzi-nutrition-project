@@ -17,8 +17,8 @@ const FactoryPhotoSection = () => {
     dots: false,
     nav: true,
     navText: [
-      '<i class="fas fa-arrow-left"></i>',
-      '<i class="fas fa-arrow-right"></i>',
+      '<i class="fas fa-arrow-left" aria-hidden="true"></i><span class="sr-only">Previous factory images</span>',
+      '<i class="fas fa-arrow-right" aria-hidden="true"></i><span class="sr-only">Next factory images</span>',
     ],
     responsive: {
       0: {

@@ -15,8 +15,8 @@ function MoreProducts() {
     dots: false,
     nav: true,
     navText: [
-      '<i class="fas fa-arrow-left"></i>',
-      '<i class="fas fa-arrow-right"></i>',
+      '<i class="fas fa-arrow-left" aria-hidden="true"></i><span class="sr-only">Previous products</span>',
+      '<i class="fas fa-arrow-right" aria-hidden="true"></i><span class="sr-only">Next products</span>',
     ],
     responsive: {
       0: {

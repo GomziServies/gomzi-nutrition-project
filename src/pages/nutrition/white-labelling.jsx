@@ -29,8 +29,8 @@ function WhiteLabelling() {
     dots: false,
     nav: true,
     navText: [
-      '<i class="fas fa-arrow-left"></i>',
-      '<i class="fas fa-arrow-right"></i>',
+      '<i class="fas fa-arrow-left" aria-hidden="true"></i><span class="sr-only">Previous</span>',
+      '<i class="fas fa-arrow-right" aria-hidden="true"></i><span class="sr-only">Next</span>',
     ],
     responsive: {
       0: {

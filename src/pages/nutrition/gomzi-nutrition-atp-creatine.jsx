@@ -188,7 +188,7 @@ function GomziNutritionATPCreatine() {
       setActiveFlavor(ProductFlavor);
       setCurrentProduct(`${activeSize}-${ProductFlavor}`);
     }
-  }, []);
+  }, [ProductFlavor, activeSize, setCurrentProduct]);
 
   const closeVideoModal = () => {
     setIsVideoOpen(false);

@@ -20,7 +20,7 @@ const ProductBlogs = () => {
                     <div className="blog-product-card bg-white br-15">
                       <span className="lazy-load-image-background blur lazy-load-image-loaded d-inline-block">
                         <img
-                          alt="Top Supplements for Weight Gain: A Comparative..."
+                          alt="Cover for Top Supplements for Weight Gain blog"
                           className="img-fluid product-img"
                           src={
                             process.env.PUBLIC_URL +
@@ -53,7 +53,7 @@ const ProductBlogs = () => {
                     <div className="blog-product-card bg-white br-15">
                       <span className="lazy-load-image-background blur lazy-load-image-loaded d-inline-block">
                         <img
-                          alt="Top Supplements for Weight Gain: A Comparative..."
+                          alt="Cover for How Supplements Help You Live a Healthy Life blog"
                           className="img-fluid product-img"
                           src={
                             process.env.PUBLIC_URL +
@@ -83,7 +83,7 @@ const ProductBlogs = () => {
                     <div className="blog-product-card bg-white br-15">
                       <span className="lazy-load-image-background blur lazy-load-image-loaded d-inline-block">
                         <img
-                          alt="The Ultimate Guide to the Best Whey Protein..."
+                          alt="Cover for The Ultimate Guide to the Best Whey Protein blog"
                           className="img-fluid product-img"
                           src={
                             process.env.PUBLIC_URL +

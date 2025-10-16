@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Helmet } from "react-helmet";
 import NutritionHeader from "../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -26,7 +26,7 @@ function AddToCart(productData) {
   const [totalMRP, setTotalMRP] = React.useState(0);
   const [previousProductData, setPreviousProductData] = useState([]);
 
-  const fetchProductData = async () => {
+  const fetchProductData = useCallback(async () => {
     setLoading(true);
     try {
       const response = await axiosInstance.get(
@@ -81,7 +81,13 @@ function AddToCart(productData) {
       console.error("Error fetching product data:", error);
     }
     setLoading(false);
-  };
+  }, []);
+
+  useEffect(() => {
+    if (productData) {
+      fetchProductData();
+    }
+  }, [productData, fetchProductData]);
 
   const totalMRPCalculation = (data) => {
     const totalMrp = data.map((product) => {
@@ -126,7 +132,7 @@ function AddToCart(productData) {
     if (productData) {
       fetchProductData();
     }
-  }, [productData]);
+  }, [productData, fetchProductData]);
 
   const toggleMenu = async (data) => {
     try {
@@ -341,8 +347,8 @@ function AddToCart(productData) {
     dots: false,
     nav: true,
     navText: [
-      '<i class="fas fa-arrow-left"></i>',
-      '<i class="fas fa-arrow-right"></i>',
+      '<i class="fas fa-arrow-left" aria-hidden="true"></i><span class="sr-only">Previous products</span>',
+      '<i class="fas fa-arrow-right" aria-hidden="true"></i><span class="sr-only">Next products</span>',
     ],
     responsive: {
       0: {

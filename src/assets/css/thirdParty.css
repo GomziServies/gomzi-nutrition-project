@@ -31,13 +31,19 @@
 
 /* Accordion Active State */
 .accordion-button:not(.collapsed) {
-  background-color: #f7fff2;
-  color: #86c33a;
+  background-color: #e8f7e0; /* Lighter green background for better contrast */
+  color: #2e5a00; /* Darker green text for better contrast */
   box-shadow: none;
 }
 
 .accordion-button:focus {
-  box-shadow: 0 0 0 0.25rem rgba(134, 195, 58, 0.3);
+  box-shadow: 0 0 0 0.25rem rgba(134, 195, 58, 0.5); /* Increased opacity for better visibility */
+}
+
+/* Improve contrast for collapsed accordion buttons */
+.accordion-button.collapsed {
+  color: #222; /* Darker text for better readability */
+  font-weight: 500; /* Slightly bolder for better readability */
 }
 
 /* Protein Powder Specific */

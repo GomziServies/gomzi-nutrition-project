@@ -6554,24 +6554,27 @@ function NutritionFooter() {
               <div className="col-md-3 f2">
                 <div className="f3 p-0">
                   <h4>Follow Us</h4>
-                  <Link to="https://www.facebook.com/gajani2/" className="fb">
+                  <Link to="https://www.facebook.com/gajani2/" className="fb" aria-label="Follow us on Facebook">
                     <FontAwesomeIcon icon={faFacebook} />
                   </Link>
                   <Link
                     to="https://www.instagram.com/gomzi_nutrition?igsh=NTc4MTIwNjQ2YQ=="
                     className="insta"
+                    aria-label="Follow us on Instagram"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </Link>
                   <Link
                     to="https://www.youtube.com/channel/UCLyvtq55YZORdV-SN8OQSzQ"
                     className="you"
+                    aria-label="Follow us on YouTube"
                   >
                     <FontAwesomeIcon icon={faYoutube} />
                   </Link>
                   <Link
                     to="https://www.linkedin.com/in/dt-gautam-jani-561a50161/"
                     className="in"
+                    aria-label="Follow us on LinkedIn"
                   >
                     <FontAwesomeIcon icon={faLinkedinIn} />
                   </Link>
@@ -6658,13 +6661,25 @@ function NutritionFooter() {
               </div>
 
               <div className="col-lg-4 col-md-6 c p-0">
-                {links.slice(0, visibleCount)}{" "}
+                {links.slice(0, visibleCount).map((link, index) => (
+                  <div key={`links-${index}`}>
+                    {link}
+                  </div>
+                ))}
               </div>
               <div className="col-lg-4 col-md-6 c p-0">
-                {links1.slice(0, visibleCount)}{" "}
+                {links1.slice(0, visibleCount).map((link, index) => (
+                  <div key={`links1-${index}`}>
+                    {link}
+                  </div>
+                ))}
               </div>
               <div className="col-lg-4 col-md-6 c p-0">
-                {links2.slice(0, visibleCount)}{" "}
+                {links2.slice(0, visibleCount).map((link, index) => (
+                  <div key={`links2-${index}`}>
+                    {link}
+                  </div>
+                ))}
                 {visibleCount < links.length && (
                   <p
                     className="text-white w-100 read-more-but"

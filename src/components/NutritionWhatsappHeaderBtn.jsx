@@ -24,7 +24,7 @@ function NutritionWhatsappHeaderApp({ message, options }) {
   };
 
   return (
-    <button onClick={handleClick} className="inquiry">
+    <button onClick={handleClick} className="inquiry" aria-label="Send inquiry via WhatsApp">
       <i className="fab fa-whatsapp"></i>
     </button>
   );

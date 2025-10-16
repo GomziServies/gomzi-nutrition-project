@@ -26,7 +26,15 @@ function TrainerNutrition() {
   const handleApplyForInquiry = async (e) => {
     e.preventDefault();
     try {
-      let modifiedMessage = `\n\nHouseNo: ${houseno}\n\nRoadName: ${roadname}\n\nPincode: ${pincode}\n\nTraining_Gym: ${traininggym}`;
+      let modifiedMessage = `
+
+HouseNo: ${houseno}
+
+RoadName: ${roadname}
+
+Pincode: ${pincode}
+
+Training_Gym: ${traininggym}`;
       await sendInquiry(
         name,
         email,
@@ -72,8 +80,8 @@ function TrainerNutrition() {
     dots: false,
     nav: true,
     navText: [
-      '<i class="fas fa-arrow-left"></i>',
-      '<i class="fas fa-arrow-right"></i>',
+      '<i class="fas fa-arrow-left" aria-hidden="true"></i><span class="sr-only">Previous trainer</span>',
+      '<i class="fas fa-arrow-right" aria-hidden="true"></i><span class="sr-only">Next trainer</span>',
     ],
     responsive: {
       0: {

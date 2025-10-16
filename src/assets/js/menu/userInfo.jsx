@@ -80,14 +80,14 @@ const UserInfo = () => {
                             </li>
 
                             <li onClick={logout}>
-                                <button className='video-button-bg'><i className="fas fa-sign-out-alt"></i> Log Out</button>
+                                <button className='video-button-bg' aria-label="Logout from your account"><i className="fas fa-sign-out-alt"></i> Log Out</button>
                             </li>
                         </ul>
                     )}
                 </>
             ) : (
                 <li style={{ fontSize: "18px" }} className="ddmenu userInfo">
-                    <button onClick={openModal} style={{ cursor: 'pointer' }} className=' video-button-bg px-0'> Login <i className="far fa-user ml-1"></i></button>
+                    <button onClick={openModal} style={{ cursor: 'pointer' }} className=' video-button-bg px-0' aria-label="Login to your account"> Login <i className="far fa-user ml-1"></i></button>
                     {showModal && <LoginModal onClose={closeModal} />}
                 </li>
             )}

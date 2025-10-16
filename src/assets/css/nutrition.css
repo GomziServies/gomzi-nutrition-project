@@ -255,9 +255,9 @@ a {
   display: block;
   text-align: left;
   width: 100%;
-  color: #7288a2;
+  color: #222; /* Darker text for better contrast */
   font-size: 1.15rem;
-  font-weight: 400;
+  font-weight: 500; /* Slightly bolder for better readability */
   border: none;
   background: none;
   outline: none;
@@ -316,7 +316,7 @@ a {
 }
 
 .accordion button[aria-expanded="true"] {
-  color: #86c33a;
+  color: #2e5a00; /* Darker green for better contrast on light backgrounds */
 }
 
 .accordion button[aria-expanded="true"] .icon::after {
@@ -1629,8 +1629,32 @@ input {
   color: #73788b;
 }
 
+/* Improve contrast for light gray text on white background */
+.bg-white .text-light-gray,
+.text-light-gray.bg-white {
+  color: #555 !important; /* Darker gray for better contrast */
+}
+
+/* Improve contrast for light gray text on white background */
+.bg-white .text-light-gray,
+.text-light-gray.bg-white {
+  color: #555 !important; /* Darker gray for better contrast */
+}
+
 .text-grey {
   color: #bfbdbd;
+}
+
+/* Improve contrast for grey text on white background */
+.bg-white .text-grey,
+.text-grey.bg-white {
+  color: #666 !important; /* Darker grey for better contrast */
+}
+
+/* Improve contrast for grey text on white background */
+.bg-white .text-grey,
+.text-grey.bg-white {
+  color: #666 !important; /* Darker grey for better contrast */
 }
 
 .text-black {
@@ -1649,12 +1673,30 @@ input {
   color: #73788b;
 }
 
+/* Improve contrast for lig gray text on white background */
+.bg-white .text-lig-gray,
+.text-lig-gray.bg-white {
+  color: #555 !important; /* Darker gray for better contrast */
+}
+
 .text-dark-gray {
   color: #9b9b9b;
 }
 
+/* Improve contrast for dark gray text on white background */
+.bg-white .text-dark-gray,
+.text-dark-gray.bg-white {
+  color: #444 !important; /* Darker gray for better contrast */
+}
+
 .text-lig-green {
   color: #5dd97e;
+}
+
+/* Improve contrast for lig green text on white background */
+.bg-white .text-lig-green,
+.text-lig-green.bg-white {
+  color: #2e8b57 !important; /* Darker green for better contrast */
 }
 
 .bg-secondaryyyy {
@@ -1663,6 +1705,13 @@ input {
 
 .bg-yellow {
   background-color: #86c33a;
+}
+
+/* Fix contrast issue for text-white on bg-yellow */
+.bg-yellow .text-white,
+.text-white.bg-yellow {
+  color: #000 !important; /* Changed from white to black for better contrast */
+  font-weight: 500; /* Slightly bolder for better readability */
 }
 
 .bg-pink {
@@ -2460,7 +2509,8 @@ body.cart-body {
 
 .product-tabination-mobile .tab-btn.active {
   background-color: #86c33a;
-  color: white;
+  color: #000; /* Changed from white to black for better contrast */
+  font-weight: 500; /* Slightly bolder for better readability */
 }
 
 .w-250 {
