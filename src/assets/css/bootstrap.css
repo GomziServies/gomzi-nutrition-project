@@ -226,6 +226,11 @@ img {
   border-style: none;
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
 svg:not(:root) {
   overflow: hidden;
 }

@@ -6,7 +6,7 @@ import PageMeta from "../../components/PageMeta";
 import { Helmet } from "react-helmet";
 
 const SportsNutritionSupplements = () => {
-    const phoneNumber = "8866842520";
+    const phoneNumber = "+918866842520";
     const baseMessage =
         "Hello, I have an inquiry about third-party manufacturing for ";
 

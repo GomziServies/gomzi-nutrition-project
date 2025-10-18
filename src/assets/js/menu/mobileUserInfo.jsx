@@ -52,7 +52,7 @@ const MobileUserInfo = () => {
     }, [authorization]);
 
     return (
-        <div>
+        <>
             {userInfo ? (
                 <ul>
                     <li className='mb-1' style={{ cursor: 'pointer' }}>
@@ -71,19 +71,19 @@ const MobileUserInfo = () => {
                             <i className="fas fa-box mr-3" style={{ fontSize: "18px" }}></i>Invoice
                         </a>
                     </li>
-                    <li onClick={logout}>
-                        <p><i className="fas fa-sign-out-alt"></i> Log Out</p>
+                    <li onClick={logout} style={{ cursor: 'pointer' }}>
+                        <span><i className="fas fa-sign-out-alt"></i> Log Out</span>
                     </li>
                 </ul>
             ) : (
                 <ul>
                     <li>
-                        <button onClick={openModal} style={{ cursor: 'pointer' }} className=' video-button-bg'> Login <i className="far fa-user ml-1"></i></button>
+                        <button onClick={openModal} style={{ cursor: 'pointer' }} className=' video-button-bg' aria-label="Login to your account"> Login <i className="far fa-user ml-1"></i></button>
                         {showModal && <CustomModal onClose={closeModal} />}
                     </li>
                 </ul>
             )}
-        </div>
+        </>
     );
 };
 

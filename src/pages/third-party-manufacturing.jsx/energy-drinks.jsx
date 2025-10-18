@@ -11,21 +11,21 @@ const EnergyDrink = () => {
             id: 1,
             imageSrc:
                 "/assets/images/third-party-manufacturing/energy-drink.png",
-            productLink: `https://api.whatsapp.com/send?phone=8866842520&text=Hello, I have an inquiry about third-party manufacturing for Performance EAA Drink`,
+            productLink: `https://api.whatsapp.com/send?phone=+918866842520&text=Hello, I have an inquiry about third-party manufacturing for Performance EAA Drink`,
             productName: "Performance EAA Drink",
         },
         {
             id: 2,
             imageSrc:
                 "/assets/images/third-party-manufacturing/energy-drink-cola.png",
-            productLink: `https://api.whatsapp.com/send?phone=8866842520&text=Hello, I have an inquiry about third-party manufacturing for Performance Creatine Drink`,
+            productLink: `https://api.whatsapp.com/send?phone=+918866842520&text=Hello, I have an inquiry about third-party manufacturing for Performance Creatine Drink`,
             productName: "Performance Creatine Drink",
         },
         {
             id: 3,
             imageSrc:
                 "/assets/images/third-party-manufacturing/energy-drink-green-apple.png",
-            productLink: `https://api.whatsapp.com/send?phone=8866842520&text=Hello, I have an inquiry about third-party manufacturing for Performance Pre-Workout Drink`,
+            productLink: `https://api.whatsapp.com/send?phone=+918866842520&text=Hello, I have an inquiry about third-party manufacturing for Performance Pre-Workout Drink`,
             productName: "Performance Pre-Workout Drink",
         },
     ];
