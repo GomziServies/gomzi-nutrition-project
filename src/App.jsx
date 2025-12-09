@@ -147,6 +147,15 @@ const RefuelSeries = lazy(() => import("./pages/refuel-series/refuel-series"));
 const GomziNutritionRetailerCombo = lazy(() =>
   import("./pages/refuel-series/gomzi-nutrition-retailer-combo")
 );
+const TopSupplementsForWeightGain = lazy(() =>
+  import("./pages/blogs/top-supplements-for-weight-gain")
+);
+const HowSupplementsHelpYouLiveHealthyLife = lazy(() =>
+  import("./pages/blogs/how-supplements-help-you-live-healthy-life")
+);
+const BestWheyProteinInIndia = lazy(() =>
+  import("./pages/blogs/best-whey-protein-in-india")
+);
 
 function App() {
   return (
@@ -239,6 +248,18 @@ function App() {
         <Route
           path="/nutrition/gomzi-nutrition-shaker-bottle"
           element={<GomziNutritionShakerBottle />}
+        />
+        <Route
+          path="/blogs/top-supplements-for-weight-gain"
+          element={ <TopSupplementsForWeightGain /> }
+        />
+        <Route
+          path="/blogs/how-supplements-help-you-live-healthy-life"
+          element={ <HowSupplementsHelpYouLiveHealthyLife /> }
+        />
+        <Route
+          path="/blogs/best-whey-protein-in-india"
+          element={ <BestWheyProteinInIndia /> }
         />
         <Route
           path="/nutrition/gomzi-nutrition-muscle-build-combo"

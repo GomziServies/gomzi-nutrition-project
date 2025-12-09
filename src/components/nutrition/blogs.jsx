@@ -15,7 +15,7 @@ const ProductBlogs = () => {
           <div className="col-12 mt-4">
             <div className="row col-12 pr-0">
               <div className="col-md-6 col-lg-4 col-xl-4 pr-0 mb-3">
-                <Link to="https://fggroup.in/blogs/top-supplements-for-weight-gain" className="cp">
+                <Link to="/blogs/top-supplements-for-weight-gain" className="cp">
                   <div className="blog-product-card-main">
                     <div className="blog-product-card bg-white br-15">
                       <span className="lazy-load-image-background blur lazy-load-image-loaded d-inline-block">
@@ -46,7 +46,7 @@ const ProductBlogs = () => {
               </div>
               <div className="col-md-6 col-lg-4 col-xl-4 pr-0 mb-3">
                 <Link
-                  to="https://fggroup.in/blogs/how-supplements-help-you-live-healthy-life"
+                  to="/blogs/how-supplements-help-you-live-healthy-life"
                   className="cp"
                 >
                   <div className="blog-product-card-main">
@@ -78,7 +78,7 @@ const ProductBlogs = () => {
                 </Link>
               </div>
               <div className="col-md-6 col-lg-4 col-xl-4 pr-0 mb-3">
-                <Link to="https://fggroup.in/blogs/best-whey-protein-in-india" className="cp">
+                <Link to="/blogs/best-whey-protein-in-india" className="cp">
                   <div className="blog-product-card-main">
                     <div className="blog-product-card bg-white br-15">
                       <span className="lazy-load-image-background blur lazy-load-image-loaded d-inline-block">
