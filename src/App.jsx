@@ -9,6 +9,8 @@ import PeanutButter from "./pages/third-party-manufacturing.jsx/peanut-butter";
 import EnergyDrink from "./pages/third-party-manufacturing.jsx/energy-drinks";
 import InvoicesList from "./pages/nutrition/InvoicesList";
 import AboutUs from "./pages/nutrition/aboutUs";
+import HowToStartAPrivateLabelSupplementBrandInIndia from "./pages/white-labelling-blogs/how-to-start-a-private-label-supplement-brand-in-india";
+import WhyPartneringWithTheRightContractManufacturer from "./pages/white-labelling-blogs/why-partnering-with-the-right-contract-manufacturer";
 // import Sitemap from '../src/components/partials/sitemap';
 
 //Profile
@@ -279,6 +281,20 @@ function App() {
           element={<BulkInquiryNutrition />}
         />
         <Route path="/nutrition/white-labelling" element={<WhiteLabelling />} />
+
+
+        {/* white labelling blogs */}
+
+        <Route
+          path="/blogs/how-to-start-a-private-label-supplement-brand-in-india"
+          element={<HowToStartAPrivateLabelSupplementBrandInIndia />}
+        />
+        <Route
+          path="/blogs/why-partnering-with-the-right-contract-manufacturer"
+          element={<WhyPartneringWithTheRightContractManufacturer  />}
+        />
+
+
         <Route path="/nutrition/gomzi-nutrition-refuel-mass-gainer-powder" element={<GomziNutritionRefuelMassGainerPowder />} />
         <Route path="/nutrition/gomzi-nutrition-refuel-spark-eaa" element={<GomziNutritionRefuelSparkEAA />} />
         <Route path="/nutrition/gomzi-nutrition-refuel-atp-creatine" element={<GomziNutritionRefuelATPCreatine />} />
