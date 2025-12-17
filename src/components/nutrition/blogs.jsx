@@ -9,13 +9,18 @@ const ProductBlogs = () => {
         <div className="row py-4">
           <div className="col-12 d-flex align-items-center justify-content-between">
             <div className="col">
-              <h2 className="f-rob-bol f-30 text-black text-uppercase">Blogs</h2>
+              <h2 className="f-rob-bol f-30 text-black text-uppercase">
+                Blogs
+              </h2>
             </div>
           </div>
           <div className="col-12 mt-4">
             <div className="row col-12 pr-0">
               <div className="col-md-6 col-lg-4 col-xl-4 pr-0 mb-3">
-                <Link to="/blogs/top-supplements-for-weight-gain" className="cp">
+                <Link
+                  to="/blogs/top-supplements-for-weight-gain"
+                  className="cp"
+                >
                   <div className="blog-product-card-main">
                     <div className="blog-product-card bg-white br-15">
                       <span className="lazy-load-image-background blur lazy-load-image-loaded d-inline-block">

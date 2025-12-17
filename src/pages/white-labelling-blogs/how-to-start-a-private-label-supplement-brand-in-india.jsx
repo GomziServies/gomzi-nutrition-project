@@ -127,14 +127,22 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       </h3>
                       <p className="blog-text">
                         A private label supplement brand is a business model
-                        where your products are made by a white label supplement
-                        manufacturer, but sold under your own brand name. You
-                        don't need your own factory - Gomzilifesciences (GMP
-                        certified nutraceutical manufacturer) handles the
-                        production, packaging, and quality testing for you. This
-                        makes it easy for new brands to launch protein powders,
-                        energy drinks, peanut butter, and sports supplements
-                        with low investment and faster turnaround.
+                        where your products are made by a{" "}
+                        <a
+                          href="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="blog-text font-black"
+                        >
+                          <strong> white label whey protein</strong>
+                        </a>{" "}
+                        , but sold under your own brand name. You don't need
+                        your own factory - Gomzilifesciences (GMP certified
+                        nutraceutical manufacturer) handles the production,
+                        packaging, and quality testing for you. This makes it
+                        easy for new brands to launch protein powders, energy
+                        drinks, peanut butter, and sports supplements with low
+                        investment and faster turnaround.
                       </p>
 
                       <h3 className="blog-subsection-title">
@@ -290,8 +298,19 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       <p className="blog-text">
                         Non-compliance can lead to fines, product recall, or
                         license cancellation. For detailed information, refer to
-                        the FSSAI Compendium for Health Supplements and
-                        Nutraceuticals.
+                        the
+                        <a
+                          href="https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Nutra_29_09_2021.pdf?utm_source=chatgpt.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="blog-text font-black"
+                        >
+                          <strong>
+                            {" "}
+                            FSSAI Compendium for Health Supplements and
+                            Nutraceuticals.
+                          </strong>
+                        </a>
                       </p>
 
                       <h3 className="blog-subsection-title">
@@ -376,16 +395,67 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       <h3 className="blog-subsection-title">
                         Best Private Label Supplement Products to Start in India
                       </h3>
-                      <p className="blog-text">
+
+                      <div className="row">
+                        <div className="col"></div>
+                        <div className="col-lg-8 mt-3">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              "/assets/images/white-labelling-blogs/Best_Private_Label_Supplement_Products_to_Start_in_India.webp"
+                            }
+                            alt="Fggroup"
+                            width="100%"
+                            style={{ borderRadius: "20px" }}
+                          />
+                        </div>
+                        <div className="col"></div>
+                      </div>
+
+                      <p className="blog-text mt-3">
                         When working with manufacturer, choosing the right
                         products is crucial. Start with fast-moving items that
                         have high demand and easy compliance. Gomzilifescience
-                        is one of the best protein powder third party
-                        manufacturers and white label sports nutrition also
-                        peanut butter powder manufacturers. When starting your
-                        brand, it's a good idea to request nutritional
-                        supplement samples from your OEM nutraceutical
-                        manufacturing.
+                        is one of
+                        <a
+                          href="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="blog-text font-black"
+                        >
+                          <strong>
+                            {" "}
+                            the best protein powder third party manufacturers{" "}
+                          </strong>
+                        </a>
+                        and
+                        <a
+                          href="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="blog-text font-black"
+                        >
+                          <strong> white label sports nutrition</strong>
+                        </a>{" "}
+                        also{" "}
+                        <a
+                          href="https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="blog-text font-black"
+                        >
+                          <strong>peanut butter powder manufacturers.</strong>
+                        </a>{" "}
+                        When starting your brand, it's a good idea to request
+                        <a
+                          href="https://best-supplement-manufacturer.gomzilifesciences.in/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="blog-text font-black"
+                        >
+                          <strong> nutritional supplement samples</strong>
+                        </a>{" "}
+                        from your OEM nutraceutical manufacturing.
                       </p>
 
                       <h4 className="blog-subsection-title">Protein Powder</h4>
@@ -463,8 +533,16 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       <p className="blog-text">
                         Choose a protein supplement manufacturers in india with
                         GMP, ISO, and FSSAI certifications. Companies like
-                        Gomzilifesciences provide transparent ingredient
-                        sourcing, low MOQs, and custom flavors.
+                        <a
+                          href="https://www.gomzilifesciences.in/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="blog-text font-black"
+                        >
+                          <strong> Gomzilifesciences</strong>
+                        </a>{" "}
+                        provide transparent ingredient sourcing, low MOQs, and
+                        custom flavors.
                       </p>
                       <p className="blog-text">
                         <strong>Key factors to consider:</strong>
@@ -521,6 +599,7 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       <h3 className="blog-subsection-title">
                         Creating a Strong Brand Identity
                       </h3>
+
                       <p className="blog-text">
                         Build a supplement brand that stands out:
                       </p>
@@ -538,8 +617,18 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                         </li>
                       </ul>
                       <p className="blog-text">
-                        Explore services from top nutraceuticals manufacturers
-                        in Gujarat
+                        Explore services from
+                        <a
+                          href="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="blog-text font-black"
+                        >
+                          <strong>
+                            {" "}
+                            top nutraceuticals manufacturers in Gujarat
+                          </strong>
+                        </a>{" "}
                       </p>
 
                       <h3 className="blog-subsection-title">
@@ -601,6 +690,22 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       <h2 className="blog-section-title">
                         Business Setup, Costs & Operations
                       </h2>
+
+                      <div className="row">
+                        <div className="col"></div>
+                        <div className="col-lg-8 mt-3">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              "/assets/images/white-labelling-blogs/variable-cost.webp"
+                            }
+                            alt="Fggroup"
+                            width="100%"
+                            style={{ borderRadius: "20px" }}
+                          />
+                        </div>
+                        <div className="col"></div>
+                      </div>
 
                       <h3 className="blog-subsection-title">
                         Cost to Start a Private Label Supplement Brand
@@ -733,6 +838,22 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       <h2 className="blog-section-title">
                         Quality, Testing & Long-Term Growth
                       </h2>
+
+                      <div className="row">
+                        <div className="col"></div>
+                        <div className="col-lg-8 mt-3">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              "/assets/images/white-labelling-blogs/quality-assurance.webp"
+                            }
+                            alt="Fggroup"
+                            width="100%"
+                            style={{ borderRadius: "20px" }}
+                          />
+                        </div>
+                        <div className="col"></div>
+                      </div>
 
                       <ul className="blog-list">
                         <li className="blog-list-item">

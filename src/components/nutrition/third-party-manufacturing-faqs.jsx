@@ -25,7 +25,8 @@ const ProductFAQS = () => {
               their own private-label goods with full customization. <br />
               <b>Gomzilifesciences LLP</b> is ISO 22000:2018 certified with
               trusted approvals like FSSAI, HACCP, GMP, HALAL, and Kosher,
-              ensuring global safety, purity, and effectiveness standards. <br />
+              ensuring global safety, purity, and effectiveness standards.{" "}
+              <br />
               Our advanced facilities and customer-focused approach make it easy
               for businesses to expand their product lines. We provide smooth
               processes, strict quality checks, and quick market access for both
@@ -138,6 +139,152 @@ const ProductFAQS = () => {
                   clinic requirements.
                 </Accordion.Body>
               </Accordion.Item>
+
+              <Accordion.Item eventKey="9" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  What is white labeling in the nutrition industry?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  White labeling lets you sell nutrition products under your own
+                  brand while a third-party manufacturer produces them. It helps
+                  you offer quality supplements without setting up your own
+                  facility.
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="10" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  How does the private labeling process work for supplements?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  You select a formula, customize the packaging, approve the
+                  design, and place your order. The manufacturer handles
+                  production and delivery.
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="11" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  Why should I consider white labeling nutrition products?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  It saves cost, time, and effort by giving you ready-to-brand
+                  products without dealing with manufacturing or inventory.
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="12" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  What types of nutrition products can I white-label?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  You can white-label powders, tablets, capsules, vitamins,
+                  protein products, gummies, liquids, and more pre-formulated or
+                  custom. Gomzilifesciences is one of the most trusted{" "}
+                  <a
+                    className="blog-text-link font-black"
+                    href="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                  >
+                    <strong>white label supplement manufacturer </strong>
+                  </a>
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="13" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  Can I create products for gyms, coaches, or fitness studios?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  Absolutely. Many clients create{" "}
+                  <strong>
+                    GYM-branded whey, pre-workouts, BCAA, vitamins.
+                  </strong>
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="14" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  Do you offer branding and design services?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  Yes, branding, label design, and packaging support are
+                  available to help your product look retail-ready.
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="15" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  What is the minimum order quantity (MOQ)?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  The MOQ generally ranges from 500 to 1,000 units depending on
+                  the product and customization.{" "}
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="16" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  What’s the difference between white label and private label?{" "}
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  White label = ready formulations you can brand. <br />
+                  Private label = fully customized formulas made specifically
+                  for your brand. Gomzi Lifescience, as an established private
+                  label manufacturer in India, handles both types of projects.
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="17" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  How do I know my custom protein formula will remain private
+                  and not be shared with other brands?{" "}
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  Reputable manufacturers sign an NDA (Non-Disclosure Agreement)
+                  to protect your formula, taste profile, and branding. This
+                  agreement ensures your product remains exclusive to your
+                  brand.
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="18" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  Is white labeling a good model for new nutrition brands?{" "}
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  Yes. It’s low-risk, affordable, and helps new brands launch
+                  high-quality supplements quickly.{" "}
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="19" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  What documents or licenses do I need to start selling?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  You only need basic business registration +{" "}
+                  <a
+                    className="blog-text-link font-black"
+                    href="https://fssaiindia.in/fssai-food-safety-license-registration-for/food-marketing-company/"
+                  >
+                    <strong>FSSAI marketing license</strong>
+                  </a>{" "}
+                  . We help with packaging compliance.
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="20" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  Can fitness trainers, gym owners, or influencers launch their
+                  own protein supplement brand?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  Absolutely. White-label protein manufacturing is ideal for gym
+                  trainers, bodybuilders, influencers, coaches, and gym owners
+                  who want to monetize their audience with their own supplement
+                  line.
+                </Accordion.Body>
+              </Accordion.Item>
             </Accordion>
           </div>
         </div>
@@ -147,3 +294,4 @@ const ProductFAQS = () => {
 };
 
 export default ProductFAQS;
+// descriptionShow text-secondary whitelable-decription
