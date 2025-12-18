@@ -30,47 +30,136 @@ const EnergyDrink = () => {
         },
     ];
 
-    const schemaData = {
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        name: "Third party energy drink in India, Surat",
-        image: "https://www.gomzilifesciences.in/assets/images/third-party-manufacturing/energy-drink.png",
-        description:
-            "Energy drink manufacturers in India ensure premium high-quality, certified production with white labelling, bulk supply and custom energy drink solutions.",
-        brand: {
-            "@type": "Brand",
-            name: "Gomzilifesciences",
-        },
-        manufacturer: {
-            "@type": "Organization",
-            name: "Gomzilifesciences",
-            logo: "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
-            url: "https://www.gomzilifesciences.in/third-party-manufacturing/energy-drinks",
-        },
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.8",
-            reviewCount: "34",
-        },
-        review: [
-            {
-                "@type": "Review",
-                author: {
-                    "@type": "Person",
-                    name: "Fenil Vadaliya",
-                },
-                datePublished: "2024-01-11",
-                reviewBody:
-                    "Product quality is Good and Recommended to Purchase. Highly recommended.",
-                name: "Trusted White Label Energy Drinks",
-                reviewRating: {
-                    "@type": "Rating",
-                    ratingValue: "5",
-                    bestRating: "5",
-                },
+    const schemaData = [
+        {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "Third Party Energy Drink in India, Surat",
+            "image": "https://www.gomzilifesciences.in/assets/images/third-party-manufacturing/energy-drink.png",
+            "description":
+                "Energy drink manufacturers in India ensure premium high-quality, certified production with white labelling, bulk supply and custom energy drink solutions.",
+            "brand": {
+                "@type": "Brand",
+                "name": "Gomzilifesciences"
             },
-        ],
-    };
+            "manufacturer": {
+                "@type": "Organization",
+                "name": "Gomzilifesciences",
+                "logo": "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
+                "url": "https://www.gomzilifesciences.in/third-party-manufacturing/energy-drinks"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "34"
+            },
+            "review": [
+                {
+                    "@type": "Review",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Fenil Vadaliya"
+                    },
+                    "datePublished": "2024-01-11",
+                    "reviewBody":
+                        "Product quality is good and recommended to purchase. Highly recommended.",
+                    "name": "Trusted White Label Energy Drinks",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                    }
+                }
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What types of energy drinks can you manufacture?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We manufacture carbonated, non-carbonated, sugar-free, herbal, and vitamin-enriched energy drinks."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you offer third-party manufacturing for energy drinks?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we provide complete third-party energy drink manufacturing so you can launch your brand without owning a factory."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is private-label energy drink manufacturing?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Private-label manufacturing means we create a fully customized energy drink formula and flavour under your brand name."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you offer white-label energy drink options?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we offer ready-made white-label energy drink formulas that allow quick branding and faster market entry."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I start with a small batch for testing?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, low minimum order quantities are available for sampling and market testing."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you help with FSSAI compliance and documentation?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we assist with FSSAI approval, labeling compliance, ingredient testing, and shelf-life documentation."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can you customize flavours and caffeine levels?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, our R&D team customizes flavours, sweetness levels, energy boosters, and caffeine strength as per your brand needs."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What packaging options do you offer?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We provide cans, PET bottles, glass bottles, and fully customized label and packaging designs."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How long does private-label energy drink manufacturing take?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Production generally takes between 3 to 6 weeks depending on formulation customization and packaging requirements."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I get started with third-party energy drink manufacturing?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Simply share your concept, select the formula and packaging, and we manage the complete manufacturing process end-to-end."
+                    }
+                }
+            ]
+        }
+    ];
+
     return (
         <div className="tpm-bg">
             <PageMeta

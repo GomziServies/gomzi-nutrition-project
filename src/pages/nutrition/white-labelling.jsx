@@ -84,6 +84,207 @@ function WhiteLabelling() {
     },
   ];
 
+  const schemaData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Gomzilifesciences",
+      "url": "https://www.gomzilifesciences.in",
+      "logo": "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
+      "sameAs": [
+        "https://www.facebook.com/people/Gomzi-Nutrition/61558718185166/",
+        "https://www.instagram.com/gomzi_nutrition/",
+        "https://www.youtube.com/channel/UCLyvtq55YZORdV-SN8OQSzQ",
+        "https://www.linkedin.com/in/dt-gautam-jani-561a50161/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91 88668 42520",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Hindi", "Gujarati"]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Gomzilifesciences - White Labelling",
+      "image": "https://www.gomzilifesciences.in/assets/images/nutrition/white-labelling-banner-1.webp",
+      "url": "https://www.gomzilifesciences.in/nutrition/white-labelling",
+      "telephone": "+91 88668 42520",
+      "priceRange": "Rs",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "547,548, FIRST FLOOR, RJD TEXTILES PARK, Hazira Rd, Ichchhapor, PAL, Surat, Gujarat 394510",
+        "addressLocality": "Surat",
+        "addressRegion": "Gujarat",
+        "postalCode": "394510",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "21.188333",
+        "longitude": "72.742500"
+      },
+      "openingHours": "Mo-Sa 09:00-20:00",
+      "sameAs": "https://www.gomzilifesciences.in"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "White Labelling & Third Party Manufacturing",
+      "provider": {
+        "@type": "Organization",
+        "name": "Gomzilifesciences"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "description":
+        "We offer white label and third party manufacturing for nutraceuticals, protein powders, sports nutrition, energy drinks, and peanut butter in Surat, India."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Gomzilifesciences",
+          "item": "https://www.gomzilifesciences.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Nutrition",
+          "item": "https://www.gomzilifesciences.in/nutrition/bulk-inquiry-nutrition"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "White Labelling",
+          "item": "https://www.gomzilifesciences.in/nutrition/white-labelling"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is white labeling in the nutrition industry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "White labeling allows you to sell nutrition products under your own brand while a third-party manufacturer handles production."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the private labeling process work for supplements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "You choose a formula, customize packaging, approve designs, and place your order. The manufacturer manages production and delivery."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why should I consider white labeling nutrition products?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "White labeling saves time, cost, and effort by letting you launch branded supplements without manufacturing infrastructure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of nutrition products can I white-label?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "You can white-label protein powders, capsules, tablets, gummies, vitamins, liquids, and customized supplements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can gyms, coaches, or fitness studios launch their own supplements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Yes, white-label manufacturing is ideal for gym owners, trainers, and coaches to create their own supplement brands."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer branding and design services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Yes, we provide complete branding, label design, and packaging support to make products retail-ready."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum order quantity (MOQ)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "MOQ generally ranges from 500 to 1,000 units depending on product type and customization."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What’s the difference between white label and private label?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "White label uses ready-made formulations, while private label involves fully custom formulas made exclusively for your brand."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is formula privacy ensured?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Manufacturers sign NDAs to ensure your formulation, branding, and product details remain confidential."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is white labeling suitable for new nutrition brands?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Yes, it is a low-risk and affordable way for new brands to launch high-quality supplements quickly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What licenses are required to sell supplements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "You typically need a business registration and an FSSAI marketing license. Compliance support is provided."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can influencers or trainers launch their own supplement brand?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Yes, white labeling is ideal for influencers, trainers, and gym owners to launch branded nutrition products."
+          }
+        }
+      ]
+    }
+  ];
+
+
   return (
     <>
       <ModalVideo
@@ -140,124 +341,7 @@ function WhiteLabelling() {
         <meta property="og:url" content={canonicalUrl} />
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">
-          {`"@context": "https://schema.org",
-                "@graph": [
-                  {
-                    "@type": "Organization",
-                    "name": "Gomzilifesciences",
-                    "url": "https://www.gomzilifesciences.in",
-                    "logo": "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
-                    "sameAs": [
-                      "https://www.facebook.com/people/Gomzi-Nutrition/61558718185166/",
-                      "https://www.instagram.com/gomzi_nutrition/",
-                      "https://www.youtube.com/channel/UCLyvtq55YZORdV-SN8OQSzQ",
-                      "https://www.linkedin.com/in/dt-gautam-jani-561a50161/"
-                    ],
-                    "contactPoint": {
-                      "@type": "ContactPoint",
-                      "telephone": "+91 88668 42520",
-                      "contactType": "customer service",
-                      "areaServed": "IN",
-                      "availableLanguage": ["English", "Hindi", "Gujarati"]
-                    }
-                  },
-                  {
-                    "@type": "LocalBusiness",
-                    "name": "Gomzilifesciences - White Labelling",
-                    "image": "https://www.gomzilifesciences.in/assets/images/nutrition/white-labelling-banner-1.webp",
-                    "url": "https://www.gomzilifesciences.in/nutrition/white-labelling",
-                    "telephone": "+91 88668 42520",
-                    "priceRange": "Rs",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "streetAddress": "547,548, FIRST FLOOR, RJD TEXTILES PARK, Hazira Rd, Ichchhapor, PAL, Surat, Gujarat 394510",
-                      "addressLocality": "Surat",
-                      "addressRegion": "Gujarat",
-                      "postalCode": "394510",
-                      "addressCountry": "IN"
-                    },
-                    "geo": {
-                      "@type": "GeoCoordinates",
-                      "latitude": "21.188333° N",
-                      "longitude": "72.742500° E"
-                    },
-                    "openingHours": "Mo-Sa 09:00-20:00",
-                    "sameAs": "https://www.gomzilifesciences.in"
-                  },
-                  {
-                    "@type": "Service",
-                    "serviceType": "White Labelling & Third Party Manufacturing",
-                    "provider": {
-                      "@type": "Organization",
-                      "name": "Gomzilifesciences"
-                    },
-                    "areaServed": {
-                      "@type": "Country",
-                      "name": "India"
-                    },
-                    "description": "We offer white label and third party manufacturing for nutraceuticals, protein powders, sports nutrition, energy drinks, and peanut butter in Surat, India."
-                  },
-                  {
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
-                      {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Gomzilifesciences",
-                        "item": "https://www.gomzilifesciences.in"
-                      },
-                      {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "Nutrition",
-                        "item": "https://www.gomzilifesciences.in/nutrition/bulk-inquiry-nutrition"
-                      },
-                      {
-                        "@type": "ListItem",
-                        "position": 3,
-                        "name": "White Labelling",
-                        "item": "https://www.gomzilifesciences.in/nutrition/white-labelling"
-                      }
-                    ]
-                  },
-                  {
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                      {
-                        "@type": "Question",
-                        "name": "What is white labelling in nutraceutical manufacturing?",
-                        "acceptedAnswer": {
-                          "@type": "Answer",
-                          "text": "White labelling allows you to sell high-quality supplements under your own brand without investing in production facilities."
-                        }
-                      },
-                      {
-                        "@type": "Question",
-                        "name": "Do you provide third party manufacturing services in Surat, India?",
-                        "acceptedAnswer": {
-                          "@type": "Answer",
-                          "text": "Yes, Gomzilifesciences provides trusted third party manufacturing in Surat, India with FSSAI, GMP, and HACCP certified facilities."
-                        }
-                      },
-                      {
-                        "@type": "Question",
-                        "name": "What products are manufactured under white labelling?",
-                        "acceptedAnswer": {
-                          "@type": "Answer",
-                          "text": "We manufacture protein powders, nutraceuticals, sports nutrition, energy drinks, and peanut butter with white label or private label and bulk options."
-                        }
-                      },
-                      {
-                        "@type": "Question",
-                        "name": "Why choose Gomzilifesciences for white labelling?",
-                        "acceptedAnswer": {
-                          "@type": "Answer",
-                          "text": "We are FSSAI, GMP, HACCP, Halal, and Kosher certified, ensuring global quality standards with flexible formulations and bulk supply."
-                        }
-                      }
-                    ]
-                  }
-              ]`}
+          { JSON.stringify(schemaData) }
         </script>
       </Helmet>
       <NutritionHeader />
