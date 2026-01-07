@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./assets/css/nutrition.css";
 import "./assets/css/fg_group.css";
 import "./assets/css/media.css";
+import "./assets/css/about.css";
 const App = lazy(() => import("./App"));
 
 window.$ = $;

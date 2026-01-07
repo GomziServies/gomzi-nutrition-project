@@ -43,21 +43,53 @@ const GomziNutritionSparkEAA = lazy(() =>
 const GomziNutritionATPCreatine = lazy(() =>
   import("./pages/nutrition/gomzi-nutrition-atp-creatine")
 );
-const GomziNutritionActiveTShirt = lazy(() => import("./pages/nutrition/gomzi-nutrition-sports-active-t-shirt"));
-const GomziNutritionSportsJogger = lazy(() => import("./pages/nutrition/gomzi-nutrition-sports-jogger"));
-const GomziNutritionPerformancePreWorkoutDrink = lazy(() => import("./pages/nutrition/gomzi-nutrition-performance-pre-workout-drink"));
-const GomziNutritionPerformanceEAADrink = lazy(() => import("./pages/nutrition/gomzi-nutrition-performance-eaa-drink"));
-const GomziNutritionPerformanceCreatineDrink = lazy(() => import("./pages/nutrition/gomzi-nutrition-performance-creatine-drink"));
-const GomziNutritionMangoChiaSeedCrunchyPeanutButter = lazy(() => import("./pages/nutrition/gomzi-nutrition-mango-chia-seed-crunchy-peanut-butter"));
-const GomziNutritionChocolateCrunchyPeanutButter = lazy(() => import("./pages/nutrition/gomzi-nutrition-chocolate-crunchy-peanut-butter"));
-const GomziNutritionNaturalCrunchyPeanutButter = lazy(() => import("./pages/nutrition/gomzi-nutrition-natural-crunchy-peanut-butter"));
-const GomziNutritionRefuelWheyProtein = lazy(() => import("./pages/nutrition/gomzi-nutrition-refuel-whey-protein"));
-const GomziNutritionRefuelWheyProteinIsolate = lazy(() => import("./pages/nutrition/gomzi-nutrition-refuel-whey-protein-isolate"));
-const GomziNutritionRefuelWheyProteinConcentrate = lazy(() => import("./pages/nutrition/gomzi-nutrition-refuel-whey-protein-concentrate"));
-const GomziNutritionRefuelIgniteFatBurner = lazy(() => import("./pages/nutrition/gomzi-nutrition-refuel-ignite-fat-burner"));
-const GomziNutritionRefuelATPCreatine = lazy(() => import("./pages/nutrition/gomzi-nutrition-refuel-atp-creatine"));
-const GomziNutritionRefuelSparkEAA = lazy(() => import("./pages/nutrition/gomzi-nutrition-refuel-spark-eaa"));
-const GomziNutritionRefuelMassGainerPowder = lazy(() => import("./pages/nutrition/gomzi-nutrition-refuel-mass-gainer-powder"));
+const GomziNutritionActiveTShirt = lazy(() =>
+  import("./pages/nutrition/gomzi-nutrition-sports-active-t-shirt")
+);
+const GomziNutritionSportsJogger = lazy(() =>
+  import("./pages/nutrition/gomzi-nutrition-sports-jogger")
+);
+const GomziNutritionPerformancePreWorkoutDrink = lazy(() =>
+  import("./pages/nutrition/gomzi-nutrition-performance-pre-workout-drink")
+);
+const GomziNutritionPerformanceEAADrink = lazy(() =>
+  import("./pages/nutrition/gomzi-nutrition-performance-eaa-drink")
+);
+const GomziNutritionPerformanceCreatineDrink = lazy(() =>
+  import("./pages/nutrition/gomzi-nutrition-performance-creatine-drink")
+);
+const GomziNutritionMangoChiaSeedCrunchyPeanutButter = lazy(() =>
+  import(
+    "./pages/nutrition/gomzi-nutrition-mango-chia-seed-crunchy-peanut-butter"
+  )
+);
+const GomziNutritionChocolateCrunchyPeanutButter = lazy(() =>
+  import("./pages/nutrition/gomzi-nutrition-chocolate-crunchy-peanut-butter")
+);
+const GomziNutritionNaturalCrunchyPeanutButter = lazy(() =>
+  import("./pages/nutrition/gomzi-nutrition-natural-crunchy-peanut-butter")
+);
+const GomziNutritionRefuelWheyProtein = lazy(() =>
+  import("./pages/nutrition/gomzi-nutrition-refuel-whey-protein")
+);
+const GomziNutritionRefuelWheyProteinIsolate = lazy(() =>
+  import("./pages/nutrition/gomzi-nutrition-refuel-whey-protein-isolate")
+);
+const GomziNutritionRefuelWheyProteinConcentrate = lazy(() =>
+  import("./pages/nutrition/gomzi-nutrition-refuel-whey-protein-concentrate")
+);
+const GomziNutritionRefuelIgniteFatBurner = lazy(() =>
+  import("./pages/nutrition/gomzi-nutrition-refuel-ignite-fat-burner")
+);
+const GomziNutritionRefuelATPCreatine = lazy(() =>
+  import("./pages/nutrition/gomzi-nutrition-refuel-atp-creatine")
+);
+const GomziNutritionRefuelSparkEAA = lazy(() =>
+  import("./pages/nutrition/gomzi-nutrition-refuel-spark-eaa")
+);
+const GomziNutritionRefuelMassGainerPowder = lazy(() =>
+  import("./pages/nutrition/gomzi-nutrition-refuel-mass-gainer-powder")
+);
 const InvoiceViewPage = lazy(() => import("./pages/nutrition/InvoiceViewPage"));
 const GomziNutritionChocolateProteinBar = lazy(() =>
   import("./pages/nutrition/gomzi-nutrition-chocolate-protein-bar")
@@ -158,6 +190,19 @@ const HowSupplementsHelpYouLiveHealthyLife = lazy(() =>
 const BestWheyProteinInIndia = lazy(() =>
   import("./pages/blogs/best-whey-protein-in-india")
 );
+const Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026 =
+  lazy(() =>
+    import(
+      "./pages/blogs/whey-isolate-vs-concentrate-which-one-actually-delivers-better-results-in-2026"
+    )
+  );
+
+ const Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupblueprint = lazy(() => 
+import("./pages/blogs/how-to-launch-a-supplement-brand-with-low-moq-manufacturers-the-2026-startup-blueprint"))
+
+ const Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline = lazy(() => 
+  import("./pages/blogs/from-mass-production-to-micro-batches-how-to-launch-a-personalized-supplement-line")
+)
 
 function App() {
   return (
@@ -170,17 +215,17 @@ function App() {
           path="/third-party-manufacturing/protein-powder"
           element={<ProteinPowder />}
         />
-        
+
         <Route
           path="/third-party-manufacturing/sports-nutrition-supplements"
           element={<SportsNutritionSupplements />}
         />
-        
+
         <Route
           path="/third-party-manufacturing/energy-drinks"
-        element={<EnergyDrink />}
-          />
-        
+          element={<EnergyDrink />}
+        />
+
         <Route
           path="/third-party-manufacturing/peanut-butter"
           element={<PeanutButter />}
@@ -253,15 +298,15 @@ function App() {
         />
         <Route
           path="/blogs/top-supplements-for-weight-gain"
-          element={ <TopSupplementsForWeightGain /> }
+          element={<TopSupplementsForWeightGain />}
         />
         <Route
           path="/blogs/how-supplements-help-you-live-healthy-life"
-          element={ <HowSupplementsHelpYouLiveHealthyLife /> }
+          element={<HowSupplementsHelpYouLiveHealthyLife />}
         />
         <Route
           path="/blogs/best-whey-protein-in-india"
-          element={ <BestWheyProteinInIndia /> }
+          element={<BestWheyProteinInIndia />}
         />
         <Route
           path="/nutrition/gomzi-nutrition-muscle-build-combo"
@@ -282,7 +327,6 @@ function App() {
         />
         <Route path="/nutrition/white-labelling" element={<WhiteLabelling />} />
 
-
         {/* white labelling blogs */}
 
         <Route
@@ -291,25 +335,87 @@ function App() {
         />
         <Route
           path="/blogs/why-partnering-with-the-right-contract-manufacturer"
-          element={<WhyPartneringWithTheRightContractManufacturer  />}
+          element={<WhyPartneringWithTheRightContractManufacturer />}
+        />
+        <Route
+          path="/blogs/whey-isolate-vs-concentrate-which-one-actually-delivers-better-results-in-2026"
+          element={
+            <Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026 />
+          }
+        />
+        <Route
+          path="/blogs/how-to-launch-a-supplement-brand-with-low-moq-manufacturers-the-2026-startup-blueprint"
+          element={
+            <Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupblueprint />
+          }
+        />
+         <Route
+          path="/blogs/from-mass-production-to-micro-batches-how-to-launch-a-personalized-supplement-line"
+          element={
+            <Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline />
+          }
         />
 
-
-        <Route path="/nutrition/gomzi-nutrition-refuel-mass-gainer-powder" element={<GomziNutritionRefuelMassGainerPowder />} />
-        <Route path="/nutrition/gomzi-nutrition-refuel-spark-eaa" element={<GomziNutritionRefuelSparkEAA />} />
-        <Route path="/nutrition/gomzi-nutrition-refuel-atp-creatine" element={<GomziNutritionRefuelATPCreatine />} />
-        <Route path="/nutrition/gomzi-nutrition-refuel-ignite-fat-burner" element={<GomziNutritionRefuelIgniteFatBurner />} />
-        <Route path="/nutrition/gomzi-nutrition-refuel-whey-protein-concentrate" element={<GomziNutritionRefuelWheyProteinConcentrate />} />
-        <Route path="/nutrition/gomzi-nutrition-refuel-whey-protein-isolate" element={<GomziNutritionRefuelWheyProteinIsolate />} />
-        <Route path="/nutrition/gomzi-nutrition-refuel-whey-protein" element={<GomziNutritionRefuelWheyProtein />} />
-        <Route path="/nutrition/gomzi-nutrition-natural-crunchy-peanut-butter" element={<GomziNutritionNaturalCrunchyPeanutButter />} />
-        <Route path="/nutrition/gomzi-nutrition-chocolate-crunchy-peanut-butter" element={<GomziNutritionChocolateCrunchyPeanutButter />} />
-        <Route path="/nutrition/gomzi-nutrition-mango-chia-seed-crunchy-peanut-butter" element={<GomziNutritionMangoChiaSeedCrunchyPeanutButter />} />
-        <Route path="/nutrition/gomzi-nutrition-performance-creatine-drink" element={<GomziNutritionPerformanceCreatineDrink />} />
-        <Route path="/nutrition/gomzi-nutrition-performance-eaa-drink" element={<GomziNutritionPerformanceEAADrink />} />
-        <Route path="/nutrition/gomzi-nutrition-performance-pre-workout-drink" element={<GomziNutritionPerformancePreWorkoutDrink />} />
-        <Route path="/nutrition/gomzi-nutrition-sports-jogger" element={<GomziNutritionSportsJogger />} />
-        <Route path="/nutrition/gomzi-nutrition-sports-active-t-shirt" element={<GomziNutritionActiveTShirt />} />
+        <Route
+          path="/nutrition/gomzi-nutrition-refuel-mass-gainer-powder"
+          element={<GomziNutritionRefuelMassGainerPowder />}
+        />
+        <Route
+          path="/nutrition/gomzi-nutrition-refuel-spark-eaa"
+          element={<GomziNutritionRefuelSparkEAA />}
+        />
+        <Route
+          path="/nutrition/gomzi-nutrition-refuel-atp-creatine"
+          element={<GomziNutritionRefuelATPCreatine />}
+        />
+        <Route
+          path="/nutrition/gomzi-nutrition-refuel-ignite-fat-burner"
+          element={<GomziNutritionRefuelIgniteFatBurner />}
+        />
+        <Route
+          path="/nutrition/gomzi-nutrition-refuel-whey-protein-concentrate"
+          element={<GomziNutritionRefuelWheyProteinConcentrate />}
+        />
+        <Route
+          path="/nutrition/gomzi-nutrition-refuel-whey-protein-isolate"
+          element={<GomziNutritionRefuelWheyProteinIsolate />}
+        />
+        <Route
+          path="/nutrition/gomzi-nutrition-refuel-whey-protein"
+          element={<GomziNutritionRefuelWheyProtein />}
+        />
+        <Route
+          path="/nutrition/gomzi-nutrition-natural-crunchy-peanut-butter"
+          element={<GomziNutritionNaturalCrunchyPeanutButter />}
+        />
+        <Route
+          path="/nutrition/gomzi-nutrition-chocolate-crunchy-peanut-butter"
+          element={<GomziNutritionChocolateCrunchyPeanutButter />}
+        />
+        <Route
+          path="/nutrition/gomzi-nutrition-mango-chia-seed-crunchy-peanut-butter"
+          element={<GomziNutritionMangoChiaSeedCrunchyPeanutButter />}
+        />
+        <Route
+          path="/nutrition/gomzi-nutrition-performance-creatine-drink"
+          element={<GomziNutritionPerformanceCreatineDrink />}
+        />
+        <Route
+          path="/nutrition/gomzi-nutrition-performance-eaa-drink"
+          element={<GomziNutritionPerformanceEAADrink />}
+        />
+        <Route
+          path="/nutrition/gomzi-nutrition-performance-pre-workout-drink"
+          element={<GomziNutritionPerformancePreWorkoutDrink />}
+        />
+        <Route
+          path="/nutrition/gomzi-nutrition-sports-jogger"
+          element={<GomziNutritionSportsJogger />}
+        />
+        <Route
+          path="/nutrition/gomzi-nutrition-sports-active-t-shirt"
+          element={<GomziNutritionActiveTShirt />}
+        />
         <Route path="/nutrition/contact-us" element={<ContactUs />} />
         <Route
           path="/nutrition/terms-condition-customer"
@@ -355,10 +461,7 @@ function App() {
           path="/nutrition/gomzi-nutrition-buy-3-combo"
           element={<GomziNutritionBuy3Combo />}
         />
-        <Route
-          path="/aboutus"
-          element={<AboutUs />}
-        />
+        <Route path="/aboutus" element={<AboutUs />} />
         <Route
           path="/nutrition/thank-you-for-order"
           element={<ThankYouProductPage />}

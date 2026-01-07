@@ -79,7 +79,7 @@ function WhyPartneringWithTheRightContractManufacturer() {
               <Link to="/nutrition/bulk-inquiry-nutrition">
                 <p className="text-white m-0 f-rob-reg f-14 lp-2">
                   Bulk Inquiry Now
-                </p>
+                </p>y
               </Link>
             </div>
           </div>
