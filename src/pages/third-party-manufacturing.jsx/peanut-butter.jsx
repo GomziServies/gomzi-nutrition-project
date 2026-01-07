@@ -22,47 +22,136 @@ const PeanutButter = () => {
         },
     ];
 
-    const schemaData = {
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        name: " Crunchy Peanut Butter in Surat, India ",
-        image: "https://www.gomzilifesciences.in/assets/images/third-party-manufacturing/peanut-butter.png",
-        description:
-            "Peanut butter manufacturer in Surat, India offers reliable third party manufacturing, certified safety, and flexible white label peanut butter services.",
-        brand: {
-            "@type": "Brand",
-            name: "Gomzilifesciences",
-        },
-        manufacturer: {
-            "@type": "Organization",
-            name: "Gomzilifesciences",
-            logo: "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
-            url: "https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter",
-        },
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.8",
-            reviewCount: "34",
-        },
-        review: [
-            {
-                "@type": "Review",
-                author: {
-                    "@type": "Person",
-                    name: "Chirag Pawar",
-                },
-                datePublished: "2025-01-01",
-                reviewBody:
-                    "Best suppliment manufacturers in India....best quality and affordable pricing !!",
-                name: "Trusted White Label Peanut Butter",
-                reviewRating: {
-                    "@type": "Rating",
-                    ratingValue: "5",
-                    bestRating: "5",
-                },
+    const schemaData = [
+        {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "Crunchy Peanut Butter in Surat, India",
+            "image": "https://www.gomzilifesciences.in/assets/images/third-party-manufacturing/peanut-butter.png",
+            "description":
+                "Peanut butter manufacturer in Surat, India offers reliable third party manufacturing, certified safety, and flexible white label peanut butter services.",
+            "brand": {
+                "@type": "Brand",
+                "name": "Gomzilifesciences"
             },
-        ],
-    };
+            "manufacturer": {
+                "@type": "Organization",
+                "name": "Gomzilifesciences",
+                "logo": "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
+                "url": "https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "34"
+            },
+            "review": [
+                {
+                    "@type": "Review",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Chirag Pawar"
+                    },
+                    "datePublished": "2025-01-01",
+                    "reviewBody":
+                        "Best supplement manufacturers in India. Best quality and affordable pricing!",
+                    "name": "Trusted White Label Peanut Butter",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                    }
+                }
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What types of peanut butter can I manufacture with you?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You can manufacture creamy, crunchy, flavored (such as chocolate or seed crunchy), high-protein, or natural peanut butter. We support a wide variety of textures and recipes to suit your brand."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Are white-label or private-label peanut butter services available?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. We offer private-label manufacturing so you can launch your own peanut butter brand using our facility and expertise."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is the minimum order quantity (MOQ) for peanut butter manufacturing?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The MOQ depends on your product formulation and packaging requirements. We work with brand partners to decide a batch size that makes sense for both sides."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can you help with regulatory compliance and food safety documentation?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. We assist with FSSAI licensing, quality testing, labelling requirements, and other regulatory processes required in India."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What packaging and branding options are available for private label peanut butter?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You can choose from various jar sizes, label designs, and branding elements. We manage custom packaging so the product reflects your brand identity."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do you ensure peanut quality and manufacturing safety?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We source premium-quality peanuts, conduct aflatoxin and microbial testing, and use food-safe production lines to ensure consistent quality and safety."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I start with small batch orders?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. You can begin with smaller batches to test the market and increase volumes as your brand grows."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you offer custom flavor development or recipe formulation?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Our R&D team can develop custom recipes such as sugar-free or protein-enriched peanut butter tailored to your brand’s requirements."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What shelf life can I expect for manufactured peanut butter?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Shelf life is typically between 12 to 24 months, depending on formulation, packaging, and storage conditions."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can you manufacture peanut butter for export under my brand?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. We support international private-label manufacturing and assist with export documentation, packaging, and compliance for global markets."
+                    }
+                }
+            ]
+        }
+    ];
+
     return (
         <div className="tpm-bg">
             <PageMeta
