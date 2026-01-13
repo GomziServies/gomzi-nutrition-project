@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import ModalVideo from "react-modal-video";
 
 function Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupblueprint() {
   const canonicalUrl = window.location.href;
@@ -14,8 +15,26 @@ function Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupbluepri
     $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
   }, []);
 
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [videoUrl, setVideoUrl] = useState("");
+  const openVideoModal = (url) => {
+    setIsVideoOpen(true);
+    setVideoUrl(url);
+  };
+
+  const closeVideoModal = () => {
+    setIsVideoOpen(false);
+    setVideoUrl("");
+  };
   return (
     <>
+      {" "}
+      <ModalVideo
+        channel="youtube"
+        isOpen={isVideoOpen}
+        videoId={videoUrl}
+        onClose={closeVideoModal}
+      />
       <Helmet>
         <title>
           Start Your Supplement Brand: Low MOQ Nutra Manufacturers in India
@@ -382,33 +401,31 @@ function Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupbluepri
                     <h2 className="blog-subsection-title">
                       Final Thoughts from Dr. Gautam Jani
                     </h2>
+             
                     <div className="row">
                       <div className="col"></div>
                       <div className="col-lg-8 mt-3">
-                        <div
-                          style={{
-                            position: "relative",
-                            paddingBottom: "56.25%",
-                            height: "0",
-                            overflow: "hidden",
-                            maxWidth: "100%",
-                            borderRadius: "10px",
-                          }}
-                        >
-                          <iframe
-                            src="https://www.youtube.com/embed/XM2xXWYxhbw"
-                            title="FG Group Video"
-                            style={{
-                              position: "absolute",
-                              top: "0",
-                              left: "0",
-                              width: "100%",
-                              height: "100%",
-                              borderRadius: "10px",
-                            }}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          ></iframe>
+                        <div className="ply position-relative">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              "/assets/images/nutrition/nutri-review-video-1.webp"
+                            }
+                            width="100%"
+                            className="border-radius-20"
+                            alt="fggroup"
+                          />
+                          <div className="video-btn play-btn">
+                            <button
+                              onClick={() => openVideoModal("XM2xXWYxhbw")}
+                              className="custom clickof video-button-bg"
+                              aria-label="Play video 1"
+                            >
+                              <span className="newthing">
+                                <i className="fas fa-play"></i>
+                              </span>
+                            </button>
+                          </div>
                         </div>
                       </div>
                       <div className="col"></div>
@@ -429,7 +446,6 @@ function Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupbluepri
           </div>
         </section>
       </div>
-
       <NutritionFooter />
     </>
   );

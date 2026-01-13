@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import ModalVideo from "react-modal-video";
 
 function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
   const canonicalUrl = window.location.href;
@@ -14,8 +15,27 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
     $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
   }, []);
 
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [videoUrl, setVideoUrl] = useState("");
+  const openVideoModal = (url) => {
+    setIsVideoOpen(true);
+    setVideoUrl(url);
+  };
+
+  const closeVideoModal = () => {
+    setIsVideoOpen(false);
+    setVideoUrl("");
+  };
+
   return (
     <>
+      {" "}
+      <ModalVideo
+        channel="youtube"
+        isOpen={isVideoOpen}
+        videoId={videoUrl}
+        onClose={closeVideoModal}
+      />
       <Helmet>
         <title>
           Whey Isolate vs. Concentrate: 2026 Science-Backed Guide to Clean Gains
@@ -103,9 +123,9 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                   <div>
                     <p className="mb-2">
                       The fitness industry in 2026 has moved past basic
-                      supplements. Today, it’s about bioavailability and gut
+                      supplements. Today, its about bioavailability and gut
                       health, and clinical transparency Choosing between Whey
-                      Isolate and Concentrate isn't just a price decision; it’s
+                      Isolate and Concentrate isn't just a price decision; its
                       about how your body utilizes every gram.
                     </p>
                     <p className="mb-2">
@@ -146,8 +166,8 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                       <tbody>
                         <tr>
                           <td>Protein %</td>
-                          <td>70% – 80%</td>
-                          <td>90% – 95%+</td>
+                          <td>70% - 80%</td>
+                          <td>90% - 95%+</td>
                         </tr>
                         <tr>
                           <td>Lactose</td>
@@ -172,7 +192,7 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
 
                   <div>
                     <h2 className="blog-subsection-title">
-                      The Manufacturer’s Secret: Cold-Process Filtration
+                      The Manufacturers Secret: Cold-Process Filtration
                     </h2>
 
                     <div className="row">
@@ -259,7 +279,7 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                       Gomzi Nutrition: Honest Pricing for Your Health.{" "}
                     </p>
 
-                    <div className="row">
+                    {/* <div className="row">
                       <div className="col"></div>
                       <div className="col-lg-8 mt-3">
                         <div
@@ -286,6 +306,34 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                           ></iframe>
+                        </div>
+                      </div>
+                      <div className="col"></div>
+                    </div> */}
+                    <div className="row">
+                      <div className="col"></div>
+                      <div className="col-lg-8 mt-3">
+                        <div className="ply position-relative">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              "/assets/images/nutrition/nutri-review-video-1.webp"
+                            }
+                            width="100%"
+                            className="border-radius-20"
+                            alt="fggroup"
+                          />
+                          <div className="video-btn play-btn">
+                            <button
+                              onClick={() => openVideoModal("49BnVVhBrFI")}
+                              className="custom clickof video-button-bg"
+                              aria-label="Play video 1"
+                            >
+                              <span className="newthing">
+                                <i className="fas fa-play"></i>
+                              </span>
+                            </button>
+                          </div>
                         </div>
                       </div>
                       <div className="col"></div>
@@ -352,7 +400,7 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                   <div>
                     <h2 className="blog-subsection-title">
                       Not Just for Bodybuilders: Protein for Longevity and
-                      Women’s Health
+                      Womens Health
                     </h2>
                     <p className="mt-2">
                       In 2026, protein is the "longevity molecule." Recent
@@ -538,7 +586,7 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                     </h3>
                     <p className="mt-2">
                       {" "}
-                      Yes! Our R&D lab specializes in 2026’s trending flavors
+                      Yes! Our R&D lab specializes in 2026s trending flavors
                       like Turmeric-Latte, Cold-Brew Coffee, and Berry-Hibiscus.{" "}
                     </p>
 
@@ -549,11 +597,11 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                     <p className="mt-2">
                       {" "}
                       Once the formulation is frozen, we can move from
-                      production to dispatch in as little as 15–21 days.{" "}
+                      production to dispatch in as little as 1521 days.{" "}
                     </p>
 
                     <h3 className="blog-subsection-subtitle">
-                      Q: Do you offer sustainable packaging options? 
+                      Q: Do you offer sustainable packaging options?
                     </h3>
                     <p className="mt-2">
                       {" "}
@@ -568,7 +616,6 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
           </div>
         </section>
       </div>
-
       <NutritionFooter />
     </>
   );

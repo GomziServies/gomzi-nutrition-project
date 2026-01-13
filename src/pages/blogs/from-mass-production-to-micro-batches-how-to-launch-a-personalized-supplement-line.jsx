@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import ModalVideo from "react-modal-video";
 
 function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline() {
   const canonicalUrl = window.location.href;
@@ -13,19 +14,25 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
     $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
     $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
   }, []);
-  // const [isVideoOpen, setIsVideoOpen] = useState(false);
-  // const [videoUrl, setVideoUrl] = useState("");
-  // const openVideoModal = (url) => {
-  //   setIsVideoOpen(true);
-  //   setVideoUrl(url);
-  // };
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [videoUrl, setVideoUrl] = useState("");
+  const openVideoModal = (url) => {
+    setIsVideoOpen(true);
+    setVideoUrl(url);
+  };
 
-  // const closeVideoModal = () => {
-  //   setIsVideoOpen(false);
-  //   setVideoUrl("");
-  // };
+  const closeVideoModal = () => {
+    setIsVideoOpen(false);
+    setVideoUrl("");
+  };
   return (
     <>
+      <ModalVideo
+        channel="youtube"
+        isOpen={isVideoOpen}
+        videoId={videoUrl}
+        onClose={closeVideoModal}
+      />
       <Helmet>
         <title>
           How to Launch a Personalized Supplement Line with Micro-Batches
@@ -161,7 +168,7 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                     <p className="mt-3">
                       To compete with giants like{" "}
                       <strong>
-                        Abbott (Abbott’s Libre), Nestlé (Persona Nutrition), and
+                        Abbott (Abbotts Libre), Nestlé (Persona Nutrition), and
                         Bayer (Care/of),
                       </strong>{" "}
                       startups must pivot from mass-market volume to{" "}
@@ -232,6 +239,58 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                       <div className="col"></div>
                     </div>
                     <p className="mt-3 mb-2">
+                      If you are looking for a fast entry into the market with
+                      proven formulas, partnering with a white label products
+                      manufacturer is your best bet. This allow you to pick a
+                      high-quality, pre-tested base formula and apply your
+                      unique branding, cutting down your time-to-market from
+                      months to just weeks.
+                    </p>
+
+                    <ul className="blog-list">
+                      <li>
+                        <strong>Modular Facilities : </strong> Manufacturers
+                        using modular "pods" can switch between custom formulas
+                        in minutes without cross-contamination.
+                      </li>
+                      <li>
+                        <strong>Sachet-First Delivery : </strong>Competitors
+                        like Ritual and HUM Nutrition have shifted to daily
+                        tear-packs. Ensure your partner can handle high-speed,
+                        variable sachet filling.
+                      </li>
+                      <li>
+                        <strong>Clean Label & Transparency : </strong>According
+                        to H&H (2025), Clean Label (no artificial fillers) is
+                        now a mandatory requirement for 2026 international
+                        market access.
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h2 className="blog-subsection-title">
+                      Choosing the Right Production Strategy: White Label vs.
+                      Custom OEM
+                    </h2>
+
+                    <div className="row">
+                      <div className="col"></div>
+                      <div className="col-lg-6 mt-3">
+                        <img
+                          src={
+                            process.env.PUBLIC_URL +
+                            "/assets/images/nutrition/from-mass-production-to-micro-batches-how-to-launch-a-personalized-supplement-line-02.png"
+                          }
+                          alt="Fggroup"
+                          width="100%"
+                          style={{ borderRadius: "20px" }}
+                        />
+                      </div>
+                      <div className="col"></div>
+                    </div>
+                    {/* sdfghjksdfuisdfghj */}
+
+                    <p className="mt-3 mb-2">
                       For those who want to create a product from scratch with a
                       specific secret ingredient, you should look for
                       <strong> OEM manufacturers in India. </strong>
@@ -245,18 +304,13 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                     </p>
                   </div>
 
-              
-
                   <div>
                     <h2 className="blog-subsection-title">
                       Step 3 - Exploiting 2026's "Gold Rush" Niches
                     </h2>
                     <p className="mb-2">
-                      Unlike basic white labeling, OEM (Original Equipment
-                      Manufacturing) gives you total control over the R&D
-                      process, allowing for the "Micro-Batch" customization that
-                      2026 consumers demand especially when integrating
-                      AI-driven biomarkers into your product development.
+                      Don't just launch a "General Wellness" line. Competitor
+                      research shows high growth in these three specific areas:
                     </p>
                     <ol className="blog-list">
                       <li>
@@ -279,21 +333,6 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                       </li>
                     </ol>
                   </div>
-                    <div className="row">
-                      <div className="col"></div>
-                      <div className="col-lg-6 mt-3">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/from-mass-production-to-micro-batches-how-to-launch-a-personalized-supplement-line-02.png"
-                          }
-                          alt="Fggroup"
-                          width="100%"
-                          style={{ borderRadius: "20px" }}
-                        />
-                      </div>
-                      <div className="col"></div>
-                    </div>
 
                   <div>
                     <h2 className="blog-subsection-title">
@@ -348,7 +387,7 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                     <div className="row">
                       <div className="col"></div>
                       <div className="col-lg-8 mt-3">
-                        <div
+                        {/* <div
                           style={{
                             position: "relative",
                             paddingBottom: "56.25%",
@@ -372,8 +411,8 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                           ></iframe>
-                        </div>
-                        {/* <div className="ply position-relative">
+                        </div> */}
+                        <div className="ply position-relative">
                           <img
                             src={
                               process.env.PUBLIC_URL +
@@ -385,7 +424,7 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                           />
                           <div className="video-btn play-btn">
                             <button
-                              onClick={() => openVideoModal("wuNtHkWxUXY")}
+                              onClick={() => openVideoModal("B2XN5aWVozs")}
                               className="custom clickof video-button-bg"
                               aria-label="Play video 1"
                             >
@@ -394,7 +433,7 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                               </span>
                             </button>
                           </div>
-                        </div> */}
+                        </div>
                       </div>
                       <div className="col"></div>
                     </div>
@@ -429,7 +468,6 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
           </div>
         </section>
       </div>
-
       <NutritionFooter />
     </>
   );
