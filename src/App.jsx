@@ -181,6 +181,13 @@ const RefuelSeries = lazy(() => import("./pages/refuel-series/refuel-series"));
 const GomziNutritionRetailerCombo = lazy(() =>
   import("./pages/refuel-series/gomzi-nutrition-retailer-combo")
 );
+
+// Read-more-blogs
+const Readmoreblogs = lazy(() =>
+  import("./components/nutrition/read-more-blogs")
+);
+
+// Blogs
 const TopSupplementsForWeightGain = lazy(() =>
   import("./pages/blogs/top-supplements-for-weight-gain")
 );
@@ -197,12 +204,25 @@ const Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026 =
     )
   );
 
- const Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupblueprint = lazy(() => 
-import("./pages/blogs/how-to-launch-a-supplement-brand-with-low-moq-manufacturers-the-2026-startup-blueprint"))
+const Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupblueprint =
+  lazy(() =>
+    import(
+      "./pages/blogs/how-to-launch-a-supplement-brand-with-low-moq-manufacturers-the-2026-startup-blueprint"
+    )
+  );
 
- const Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline = lazy(() => 
-  import("./pages/blogs/from-mass-production-to-micro-batches-how-to-launch-a-personalized-supplement-line")
-)
+const Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline =
+  lazy(() =>
+    import(
+      "./pages/blogs/from-mass-production-to-micro-batches-how-to-launch-a-personalized-supplement-line"
+    )
+  );
+
+const Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse = lazy(() =>
+  import(
+    "./pages/blogs/how-to-educate-consumers-about-safe-effective-nutraceutical-use"
+  )
+);
 
 function App() {
   return (
@@ -296,6 +316,11 @@ function App() {
           path="/nutrition/gomzi-nutrition-shaker-bottle"
           element={<GomziNutritionShakerBottle />}
         />
+
+        {/* read-more-blogs */}
+        <Route path="/read-more-blogs" element={<Readmoreblogs />} />
+
+        {/* blogs */}
         <Route
           path="/blogs/top-supplements-for-weight-gain"
           element={<TopSupplementsForWeightGain />}
@@ -349,11 +374,15 @@ function App() {
             <Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupblueprint />
           }
         />
-         <Route
+        <Route
           path="/blogs/from-mass-production-to-micro-batches-how-to-launch-a-personalized-supplement-line"
           element={
             <Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline />
           }
+        />
+        <Route
+          path="/blogs/how-to-educate-consumers-about-safe-effective-nutraceutical-use"
+          element={<Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse />}
         />
 
         <Route

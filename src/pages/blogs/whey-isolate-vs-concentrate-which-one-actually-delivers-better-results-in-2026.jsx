@@ -99,7 +99,7 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                   <img
                     src={
                       process.env.PUBLIC_URL +
-                      "/assets/images/nutrition/how-supplements-help-you-live-healthy-life-1.webp"
+                      "/assets/images/nutrition/Depositphotos_146062285_S.webp"
                     }
                     alt="bgImage"
                     className="img-fluid w-100 mh-200 object-fit"
