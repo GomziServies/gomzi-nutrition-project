@@ -17,8 +17,8 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import ModalVideo from "react-modal-video";
 import Whitelabellingblogs from "../../components/nutrition/white-labelling-blogs";
-const MainVideoSection = React.lazy(() =>
-  import("../../components/nutrition/mainVideoSection")
+const MainVideoSection = React.lazy(
+  () => import("../../components/nutrition/mainVideoSection"),
 );
 
 function WhiteLabelling() {
@@ -88,202 +88,191 @@ function WhiteLabelling() {
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Gomzilifesciences",
-      "url": "https://www.gomzilifesciences.in",
-      "logo": "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
-      "sameAs": [
+      name: "Gomzilifesciences",
+      url: "https://www.gomzilifesciences.in",
+      logo: "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
+      sameAs: [
         "https://www.facebook.com/people/Gomzi-Nutrition/61558718185166/",
         "https://www.instagram.com/gomzi_nutrition/",
         "https://www.youtube.com/channel/UCLyvtq55YZORdV-SN8OQSzQ",
-        "https://www.linkedin.com/in/dt-gautam-jani-561a50161/"
+        "https://www.linkedin.com/in/dt-gautam-jani-561a50161/",
       ],
-      "contactPoint": {
+      contactPoint: {
         "@type": "ContactPoint",
-        "telephone": "+91 88668 42520",
-        "contactType": "customer service",
-        "areaServed": "IN",
-        "availableLanguage": ["English", "Hindi", "Gujarati"]
-      }
+        telephone: "+91 88668 42520",
+        contactType: "customer service",
+        areaServed: "IN",
+        availableLanguage: ["English", "Hindi", "Gujarati"],
+      },
     },
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Gomzilifesciences - White Labelling",
-      "image": "https://www.gomzilifesciences.in/assets/images/nutrition/white-labelling-banner-1.webp",
-      "url": "https://www.gomzilifesciences.in/nutrition/white-labelling",
-      "telephone": "+91 88668 42520",
-      "priceRange": "Rs",
-      "address": {
+      name: "Gomzilifesciences - White Labelling",
+      image:
+        "https://www.gomzilifesciences.in/assets/images/nutrition/white-labelling-banner-1.webp",
+      url: "https://www.gomzilifesciences.in/nutrition/white-labelling",
+      telephone: "+91 88668 42520",
+      priceRange: "Rs",
+      address: {
         "@type": "PostalAddress",
-        "streetAddress": "547,548, FIRST FLOOR, RJD TEXTILES PARK, Hazira Rd, Ichchhapor, PAL, Surat, Gujarat 394510",
-        "addressLocality": "Surat",
-        "addressRegion": "Gujarat",
-        "postalCode": "394510",
-        "addressCountry": "IN"
+        streetAddress:
+          "547,548, FIRST FLOOR, RJD TEXTILES PARK, Hazira Rd, Ichchhapor, PAL, Surat, Gujarat 394510",
+        addressLocality: "Surat",
+        addressRegion: "Gujarat",
+        postalCode: "394510",
+        addressCountry: "IN",
       },
-      "geo": {
+      geo: {
         "@type": "GeoCoordinates",
-        "latitude": "21.188333",
-        "longitude": "72.742500"
+        latitude: "21.188333",
+        longitude: "72.742500",
       },
-      "openingHours": "Mo-Sa 09:00-20:00",
-      "sameAs": "https://www.gomzilifesciences.in"
+      openingHours: "Mo-Sa 09:00-20:00",
+      sameAs: "https://www.gomzilifesciences.in",
     },
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "White Labelling & Third Party Manufacturing",
-      "provider": {
+      serviceType: "White Labelling & Third Party Manufacturing",
+      provider: {
         "@type": "Organization",
-        "name": "Gomzilifesciences"
+        name: "Gomzilifesciences",
       },
-      "areaServed": {
+      areaServed: {
         "@type": "Country",
-        "name": "India"
+        name: "India",
       },
-      "description":
-        "We offer white label and third party manufacturing for nutraceuticals, protein powders, sports nutrition, energy drinks, and peanut butter in Surat, India."
+      description:
+        "We offer white label and third party manufacturing for nutraceuticals, protein powders, sports nutrition, energy drinks, and peanut butter in Surat, India.",
     },
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "itemListElement": [
+      itemListElement: [
         {
           "@type": "ListItem",
-          "position": 1,
-          "name": "Gomzilifesciences",
-          "item": "https://www.gomzilifesciences.in"
+          position: 1,
+          name: "Gomzilifesciences",
+          item: "https://www.gomzilifesciences.in",
         },
         {
           "@type": "ListItem",
-          "position": 2,
-          "name": "Nutrition",
-          "item": "https://www.gomzilifesciences.in/nutrition/bulk-inquiry-nutrition"
+          position: 2,
+          name: "Nutrition",
+          item: "https://www.gomzilifesciences.in/nutrition/bulk-inquiry-nutrition",
         },
         {
           "@type": "ListItem",
-          "position": 3,
-          "name": "White Labelling",
-          "item": "https://www.gomzilifesciences.in/nutrition/white-labelling"
-        }
-      ]
+          position: 3,
+          name: "White Labelling",
+          item: "https://www.gomzilifesciences.in/nutrition/white-labelling",
+        },
+      ],
     },
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [
+      mainEntity: [
         {
           "@type": "Question",
-          "name": "What is white labeling in the nutrition industry?",
-          "acceptedAnswer": {
+          name: "What is white labeling in the nutrition industry?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text":
-              "White labeling allows you to sell nutrition products under your own brand while a third-party manufacturer handles production."
-          }
+            text: "White labeling allows you to sell nutrition products under your own brand while a third-party manufacturer handles production.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How does the private labeling process work for supplements?",
-          "acceptedAnswer": {
+          name: "How does the private labeling process work for supplements?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text":
-              "You choose a formula, customize packaging, approve designs, and place your order. The manufacturer manages production and delivery."
-          }
+            text: "You choose a formula, customize packaging, approve designs, and place your order. The manufacturer manages production and delivery.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Why should I consider white labeling nutrition products?",
-          "acceptedAnswer": {
+          name: "Why should I consider white labeling nutrition products?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text":
-              "White labeling saves time, cost, and effort by letting you launch branded supplements without manufacturing infrastructure."
-          }
+            text: "White labeling saves time, cost, and effort by letting you launch branded supplements without manufacturing infrastructure.",
+          },
         },
         {
           "@type": "Question",
-          "name": "What types of nutrition products can I white-label?",
-          "acceptedAnswer": {
+          name: "What types of nutrition products can I white-label?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text":
-              "You can white-label protein powders, capsules, tablets, gummies, vitamins, liquids, and customized supplements."
-          }
+            text: "You can white-label protein powders, capsules, tablets, gummies, vitamins, liquids, and customized supplements.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can gyms, coaches, or fitness studios launch their own supplements?",
-          "acceptedAnswer": {
+          name: "Can gyms, coaches, or fitness studios launch their own supplements?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text":
-              "Yes, white-label manufacturing is ideal for gym owners, trainers, and coaches to create their own supplement brands."
-          }
+            text: "Yes, white-label manufacturing is ideal for gym owners, trainers, and coaches to create their own supplement brands.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Do you offer branding and design services?",
-          "acceptedAnswer": {
+          name: "Do you offer branding and design services?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text":
-              "Yes, we provide complete branding, label design, and packaging support to make products retail-ready."
-          }
+            text: "Yes, we provide complete branding, label design, and packaging support to make products retail-ready.",
+          },
         },
         {
           "@type": "Question",
-          "name": "What is the minimum order quantity (MOQ)?",
-          "acceptedAnswer": {
+          name: "What is the minimum order quantity (MOQ)?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text":
-              "MOQ generally ranges from 500 to 1,000 units depending on product type and customization."
-          }
+            text: "MOQ generally ranges from 500 to 1,000 units depending on product type and customization.",
+          },
         },
         {
           "@type": "Question",
-          "name": "What’s the difference between white label and private label?",
-          "acceptedAnswer": {
+          name: "What’s the difference between white label and private label?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text":
-              "White label uses ready-made formulations, while private label involves fully custom formulas made exclusively for your brand."
-          }
+            text: "White label uses ready-made formulations, while private label involves fully custom formulas made exclusively for your brand.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How is formula privacy ensured?",
-          "acceptedAnswer": {
+          name: "How is formula privacy ensured?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text":
-              "Manufacturers sign NDAs to ensure your formulation, branding, and product details remain confidential."
-          }
+            text: "Manufacturers sign NDAs to ensure your formulation, branding, and product details remain confidential.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is white labeling suitable for new nutrition brands?",
-          "acceptedAnswer": {
+          name: "Is white labeling suitable for new nutrition brands?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text":
-              "Yes, it is a low-risk and affordable way for new brands to launch high-quality supplements quickly."
-          }
+            text: "Yes, it is a low-risk and affordable way for new brands to launch high-quality supplements quickly.",
+          },
         },
         {
           "@type": "Question",
-          "name": "What licenses are required to sell supplements?",
-          "acceptedAnswer": {
+          name: "What licenses are required to sell supplements?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text":
-              "You typically need a business registration and an FSSAI marketing license. Compliance support is provided."
-          }
+            text: "You typically need a business registration and an FSSAI marketing license. Compliance support is provided.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can influencers or trainers launch their own supplement brand?",
-          "acceptedAnswer": {
+          name: "Can influencers or trainers launch their own supplement brand?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text":
-              "Yes, white labeling is ideal for influencers, trainers, and gym owners to launch branded nutrition products."
-          }
-        }
-      ]
-    }
+            text: "Yes, white labeling is ideal for influencers, trainers, and gym owners to launch branded nutrition products.",
+          },
+        },
+      ],
+    },
   ];
-
 
   return (
     <>
@@ -340,9 +329,7 @@ function WhiteLabelling() {
         />
         <meta property="og:url" content={canonicalUrl} />
         <link rel="canonical" href={canonicalUrl} />
-        <script type="application/ld+json">
-          { JSON.stringify(schemaData) }
-        </script>
+        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
       <NutritionHeader />
       <WhatsappHeaderApp
@@ -397,7 +384,8 @@ function WhiteLabelling() {
               <div className="row justify-content-center mb-4">
                 <div className="col-12 text-center px-0">
                   <h1 className="f-rob-bol f-35">
-                    WHY GOMZI LIFESCIENCE LLP..!!!
+                    Third Party Nutraceutical Manufacturer in India - ISO,
+                    WHO-GMP & FSSAI Certified | Gomzi Lifescience LLP
                   </h1>
                 </div>
                 <div className="col-lg-6 mt-lg-2 d-block d-md-none">
@@ -405,6 +393,10 @@ function WhiteLabelling() {
                     <div className="blog p-0">
                       <div className="ply position-relative">
                         <img
+                          src={
+                            process.env.PUBLIC_URL +
+                            "/assets/images/nutrition/gn-video-thumbnail.webp"
+                          }
                           width="100%"
                           className="border-radius-20"
                           alt="fggroup"
@@ -451,21 +443,52 @@ function WhiteLabelling() {
                           solutions.{" "}
                         </p>
                         <p>
-                          Based in Surat, India,
-                          <strong> Gomzi Lifescience LLP</strong> specializes in{" "}
-                          <strong>nutraceutical contract manufacturing,</strong>{" "}
-                          private label manufacturing, custom formulation
-                          development, and custom packaging solutions for brands
-                          across India.{" "}
+                          Based in Surat, Gujarat, we specialize in
+                          <strong>
+                            {" "}
+                            nutraceutical third party manufacturers in India
+                          </strong>{" "}
+                          services, including{" "}
+                          <strong>
+                            dietary supplement contract manufacturing,
+                          </strong>{" "}
+                          private label solutions, and custom formulation
+                          development{" "}
                         </p>
                         <p>
                           As a leading{" "}
-                          <strong>nutraceutical manufacturer in India,</strong>{" "}
-                          we supply premium-quality finished products tailored
-                          to each client’s unique requirements, ensuring
-                          reliability, consistency, and regulatory compliance.{" "}
+                          <strong> nutraceutical manufacturer,</strong> we
+                          provide premium-quality finished products tailored to
+                          each client's unique requirements, ensuring regulatory
+                          compliance and market reliability.{" "}
                         </p>
                       </div>
+
+                      <h2
+                        style={{
+                          marginBottom: "10px",
+                          fontSize: "2rem",
+                          fontFamily: "inherit",
+                          fontWeight: 500,
+                          lineHeight: 1.2,
+                          color: "inherit",
+                          marginTop: "10px",
+                          wordBreak: "keep-all",
+                        }}
+                      >
+                        Partner with a Trusted{" "}
+                        <span
+                          className="highlight"
+                          style={{
+                            color: "#2e7d32",
+                            fontWeight: "bold",
+                          }}
+                        >
+                          White Label Supplement Manufacturer to Launch Your
+                          Brand Fast
+                        </span>{" "}
+                      </h2>
+
                       <div className="descriptionShow text-secondary whitelable-decription">
                         <p className="mb-3 mt-3">
                           <ul className="list-unstyled">
@@ -556,6 +579,17 @@ function WhiteLabelling() {
                 </h2>
                 <div className="descriptionShow text-secondary whitelable-decription">
                   <ul className="list-unstyled mission-list ">
+                    <li className="d-flex align-items-start mb-2">
+                      <div>
+                        <p className="mission-desc">
+                          Leveraging the expertise of top 10 nutrition company
+                          in India standards, Gomzi Lifescience offers
+                          comprehensive support for dietary supplements and
+                          nutraceuticals.
+                        </p>
+                      </div>
+                    </li>
+
                     <li className="d-flex align-items-start mb-2">
                       <div>
                         <h3 className="mission-title">
@@ -688,12 +722,13 @@ function WhiteLabelling() {
             <div className="row mission-section align-items-start">
               <div className="left-section">
                 <h2 style={{ marginBottom: "20px" }}>
-                  Our <span className="highlight">Vision</span>
+                  Our <span className="highlight">Vision:</span> Leading the
+                  Future of Health Supplements
                 </h2>
                 <div className="descriptionShow text-secondary whitelable-decription">
                   <p className="mt-0 mb-0">
                     {" "}
-                    At Gomzi Lifesciences, our vision is to become India’s most
+                    At Gomzi Lifesciences, our vision is to become India's most
                     trusted and globally recognized leader in nutraceutical and{" "}
                     <a
                       className=""
@@ -803,7 +838,8 @@ function WhiteLabelling() {
                       </li>
                       <li>
                         <strong>
-                          Support clients from product development to launch.{" "}
+                          Support clients from product development to
+                          launch.{" "}
                         </strong>
                       </li>
                       <li>
@@ -908,7 +944,8 @@ function WhiteLabelling() {
                     </li>
                     <li>
                       <strong>
-                        Bulk manufacturing for large distributors & exporters{" "}
+                        Bulk manufacturing for large distributors &
+                        exporters{" "}
                       </strong>
                     </li>
                   </ul>
