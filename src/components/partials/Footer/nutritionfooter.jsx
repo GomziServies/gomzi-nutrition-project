@@ -6608,7 +6608,7 @@ function NutritionFooter() {
                 </div>
               </div>
             </div>
-            <div className="row ft">
+            {/* <div className="row ft">
               <div className="col-sm-12 p-0 mb-3">
                 <h4>RELATED SEARCHES</h4>
               </div>
@@ -6690,7 +6690,7 @@ function NutritionFooter() {
                   </p>
                 )}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>

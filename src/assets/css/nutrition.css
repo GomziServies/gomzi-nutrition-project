@@ -5723,10 +5723,12 @@ input[type="number"]::-webkit-outer-spin-button {
   top: 100px;
 }
 
-.section-list li{
+.section-list li {
   margin-bottom: 6px;
   font-size: 1.1rem;
   color: #555;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .vision-mission-container .left-section img {
@@ -5741,7 +5743,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .vision-mission-container .highlight {
-  color: #2e7d32;
+  color: #86c33a;
   /* Darker green for better contrast */
   font-weight: bold;
 }
