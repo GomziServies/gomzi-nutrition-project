@@ -3,14 +3,23 @@ import { Route, Routes } from "react-router-dom";
 
 //User Account
 import Home from "./pages/home";
-import ProteinPowder from "./pages/third-party-manufacturing.jsx/protein-powder";
-import SportsNutritionSupplements from "./pages/third-party-manufacturing.jsx/sports-nutrition-supplements";
-import PeanutButter from "./pages/third-party-manufacturing.jsx/peanut-butter";
-import EnergyDrink from "./pages/third-party-manufacturing.jsx/energy-drinks";
+import PeanutButter from "./pages/third-party-manufacturing/peanut-butter";
+import EnergyDrink from "./pages/third-party-manufacturing/energy-drinks";
 import InvoicesList from "./pages/nutrition/InvoicesList";
 import AboutUs from "./pages/nutrition/aboutUs";
 import HowToStartAPrivateLabelSupplementBrandInIndia from "./pages/white-labelling-blogs/how-to-start-a-private-label-supplement-brand-in-india";
 import WhyPartneringWithTheRightContractManufacturer from "./pages/white-labelling-blogs/why-partnering-with-the-right-contract-manufacturer";
+import Readmorewhitelabelblogs from "./components/nutrition/Read-more-whitelabel-blogs";
+import HowtoManufactureExportReadyNutraceuticalProductsInIndia from "./pages/white-labelling-blogs/how-to-manufacture-export-ready-nutraceutical-products-in-india";
+import The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResults from "./pages/white-labelling-blogs/the-7-best-third-party-tested-protein-powders-2026-guide-reddit-favorites-vs-lab-results";
+import TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025 from "./pages/white-labelling-blogs/the-startups-guide-finding-low-moq-nutraceutical-manufacturers-2025";
+import Top10ThirdPartyBeverageManufacturersInIndiaForStartups from "./pages/white-labelling-blogs/top-10-third-party-beverage-manufacturers-in-india-for-startups";
+import GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025 from "./pages/white-labelling-blogs/gmp-audit-guide-for-nutraceutical-manufacturers-step-by-step-process-2025";
+import MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia from "./pages/white-labelling-blogs/maximize-profit-quality-your-guide-to-private-label-manufacturing-in-india";
+import WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths from "./pages/white-labelling-blogs/what-supplements-actuallywork-debunking-7common-nutraceutical-myths";
+import HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUse from "./pages/white-labelling-blogs/how-to-educate-consumers-about-safe-effective-nutraceutical-use";
+import WheyProteinManufacturing from "./pages/third-party-manufacturing/WheyProteinManufacturing";
+import PerformanceSupplements from "./pages/third-party-manufacturing/PerformanceSupplements";
 // import Sitemap from '../src/components/partials/sitemap';
 
 //Profile
@@ -230,15 +239,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
 
+
         {/*third party manufacturing */}
         <Route
           path="/third-party-manufacturing/protein-powder"
-          element={<ProteinPowder />}
+          element={<WheyProteinManufacturing />}
         />
 
         <Route
           path="/third-party-manufacturing/sports-nutrition-supplements"
-          element={<SportsNutritionSupplements />}
+          element={<PerformanceSupplements />}
         />
 
         <Route
@@ -250,6 +260,12 @@ function App() {
           path="/third-party-manufacturing/peanut-butter"
           element={<PeanutButter />}
         />
+
+        {/* <Route
+          path="/third-party-manufacturing/WheyProteinManufacturing"
+          element={<WheyProteinManufacturing />}
+        /> */}
+
 
         {/* nutrition */}
         <Route
@@ -319,6 +335,8 @@ function App() {
 
         {/* read-more-blogs */}
         <Route path="/read-more-blogs" element={<Readmoreblogs />} />
+        <Route path="/read-more-white-labelling-blogs" element={<Readmorewhitelabelblogs />} />
+        
 
         {/* blogs */}
         <Route
@@ -384,6 +402,55 @@ function App() {
           path="/blogs/how-to-educate-consumers-about-safe-effective-nutraceutical-use"
           element={<Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse />}
         />
+
+
+
+
+        <Route
+          path="/blogs/how-to-manufacture-export-ready-nutraceutical-products-in-india"
+          element={<HowtoManufactureExportReadyNutraceuticalProductsInIndia />}
+        />
+
+        <Route
+          path="/blogs/the-7-best-third-party-tested-protein-powders-2026-guide-reddit-favorites-vs-lab-results"
+          element={<The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResults />}
+        />
+
+        <Route
+          path="/blogs/the-startup's-guide-finding-low-moq-nutraceutical-manufacturers-2025"
+          element={<TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025 />}
+        />
+
+        <Route
+          path="/blogs/top-10-third-party-beverage-manufacturers-in-india-for-startups"
+          element={<Top10ThirdPartyBeverageManufacturersInIndiaForStartups />}
+        />
+
+        <Route
+          path="/blogs/gmp-audit-guide-for-nutraceutical-manufacturers-step-by-step-process-2025"
+          element={<GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025 />}
+        />
+
+        <Route
+          path="/blogs/maximize-profit-quality-your-guide-to-private-label-manufacturing-in-india"
+          element={<MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia />}
+        />
+
+        <Route
+          path="/blogs/what-supplements-actuallywork-debunking-7common-nutraceutical-myths"
+          element={<WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths />}
+        />
+
+        <Route
+          path="/blogs/how-to-educate-consumers-about-safe-effective-nutraceutical-use"
+          element={<HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUse />}
+        />
+
+
+
+
+
+
 
         <Route
           path="/nutrition/gomzi-nutrition-refuel-mass-gainer-powder"

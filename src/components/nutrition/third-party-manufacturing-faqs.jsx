@@ -5,9 +5,9 @@ import "../../assets/css/thirdParty.css";
 const ProductFAQS = () => {
   return (
     <section className="faq-section bg-white py-3 py-md-5">
-      <div className="container-fluid w-80">
+      <div className="" style={{ maxWidth: "90%", margin: "0 auto" }}>
         {/* Intro Paragraph */}
-        <div className="row justify-content-center">
+        {/* <div className="row justify-content-center">
           <div className="col-md-8">
             <h2 className="faq-title f-rob-bol f-30 text-uppercase">
               Nutraceuticals Third Party Manufacturers in India, Surat
@@ -36,7 +36,14 @@ const ProductFAQS = () => {
               commitment, we turn your vision into reality.
             </p>
           </div>
-        </div>
+        </div> */}
+        <div className="col-12 text-center">
+                <div style={{ textAlign: "center", marginBottom: "50px" }}>
+                  <h2 style={{ fontWeight: "700",fontSize:"42px" }}>
+                    FAQ
+                  </h2>
+                </div>
+              </div>
 
         {/* FAQ Section */}
         <div className="row mt-5 pb-5 justify-content-center overflow-hidden">
@@ -127,7 +134,7 @@ const ProductFAQS = () => {
                 </Accordion.Body>
               </Accordion.Item>
 
-              <Accordion.Item eventKey="8" className="mt-3 p-4">
+              {/* <Accordion.Item eventKey="8" className="mt-3 p-4">
                 <Accordion.Header className="faq-question">
                   Can healthcare professionals create their own supplement
                   brand?
@@ -138,9 +145,9 @@ const ProductFAQS = () => {
                   supplements. We even support small-batch manufacturing to suit
                   clinic requirements.
                 </Accordion.Body>
-              </Accordion.Item>
+              </Accordion.Item> */}
 
-              <Accordion.Item eventKey="9" className="mt-3 p-4">
+              {/* <Accordion.Item eventKey="9" className="mt-3 p-4">
                 <Accordion.Header className="faq-question">
                   What is white labeling in the nutrition industry?
                 </Accordion.Header>
@@ -150,9 +157,9 @@ const ProductFAQS = () => {
                   you offer quality supplements without setting up your own
                   facility.
                 </Accordion.Body>
-              </Accordion.Item>
+              </Accordion.Item> */}
 
-              <Accordion.Item eventKey="10" className="mt-3 p-4">
+              {/* <Accordion.Item eventKey="10" className="mt-3 p-4">
                 <Accordion.Header className="faq-question">
                   How does the private labeling process work for supplements?
                 </Accordion.Header>
@@ -161,9 +168,9 @@ const ProductFAQS = () => {
                   design, and place your order. The manufacturer handles
                   production and delivery.
                 </Accordion.Body>
-              </Accordion.Item>
+              </Accordion.Item> */}
 
-              <Accordion.Item eventKey="11" className="mt-3 p-4">
+              {/* <Accordion.Item eventKey="11" className="mt-3 p-4">
                 <Accordion.Header className="faq-question">
                   Why should I consider white labeling nutrition products?
                 </Accordion.Header>
@@ -171,9 +178,9 @@ const ProductFAQS = () => {
                   It saves cost, time, and effort by giving you ready-to-brand
                   products without dealing with manufacturing or inventory.
                 </Accordion.Body>
-              </Accordion.Item>
+              </Accordion.Item> */}
 
-              <Accordion.Item eventKey="12" className="mt-3 p-4">
+              {/* <Accordion.Item eventKey="12" className="mt-3 p-4">
                 <Accordion.Header className="faq-question">
                   What types of nutrition products can I white-label?
                 </Accordion.Header>
@@ -188,9 +195,9 @@ const ProductFAQS = () => {
                     <strong>white label supplement manufacturer </strong>
                   </a>
                 </Accordion.Body>
-              </Accordion.Item>
+              </Accordion.Item> */}
 
-              <Accordion.Item eventKey="13" className="mt-3 p-4">
+              {/* <Accordion.Item eventKey="13" className="mt-3 p-4">
                 <Accordion.Header className="faq-question">
                   Can I create products for gyms, coaches, or fitness studios?
                 </Accordion.Header>
@@ -200,9 +207,9 @@ const ProductFAQS = () => {
                     GYM-branded whey, pre-workouts, BCAA, vitamins.
                   </strong>
                 </Accordion.Body>
-              </Accordion.Item>
+              </Accordion.Item> */}
 
-              <Accordion.Item eventKey="14" className="mt-3 p-4">
+              {/* <Accordion.Item eventKey="14" className="mt-3 p-4">
                 <Accordion.Header className="faq-question">
                   Do you offer branding and design services?
                 </Accordion.Header>
@@ -210,9 +217,9 @@ const ProductFAQS = () => {
                   Yes, branding, label design, and packaging support are
                   available to help your product look retail-ready.
                 </Accordion.Body>
-              </Accordion.Item>
+              </Accordion.Item> */}
 
-              <Accordion.Item eventKey="15" className="mt-3 p-4">
+              {/* <Accordion.Item eventKey="15" className="mt-3 p-4">
                 <Accordion.Header className="faq-question">
                   What is the minimum order quantity (MOQ)?
                 </Accordion.Header>
@@ -220,9 +227,9 @@ const ProductFAQS = () => {
                   The MOQ generally ranges from 500 to 1,000 units depending on
                   the product and customization.{" "}
                 </Accordion.Body>
-              </Accordion.Item>
+              </Accordion.Item> */}
 
-              <Accordion.Item eventKey="16" className="mt-3 p-4">
+              {/* <Accordion.Item eventKey="16" className="mt-3 p-4">
                 <Accordion.Header className="faq-question">
                   What’s the difference between white label and private label?{" "}
                 </Accordion.Header>
@@ -232,9 +239,9 @@ const ProductFAQS = () => {
                   for your brand. Gomzi Lifescience, as an established private
                   label manufacturer in India, handles both types of projects.
                 </Accordion.Body>
-              </Accordion.Item>
+              </Accordion.Item> */}
 
-              <Accordion.Item eventKey="17" className="mt-3 p-4">
+              {/* <Accordion.Item eventKey="17" className="mt-3 p-4">
                 <Accordion.Header className="faq-question">
                   How do I know my custom protein formula will remain private
                   and not be shared with other brands?{" "}
@@ -245,9 +252,9 @@ const ProductFAQS = () => {
                   agreement ensures your product remains exclusive to your
                   brand.
                 </Accordion.Body>
-              </Accordion.Item>
+              </Accordion.Item> */}
 
-              <Accordion.Item eventKey="18" className="mt-3 p-4">
+              {/* <Accordion.Item eventKey="18" className="mt-3 p-4">
                 <Accordion.Header className="faq-question">
                   Is white labeling a good model for new nutrition brands?{" "}
                 </Accordion.Header>
@@ -255,9 +262,9 @@ const ProductFAQS = () => {
                   Yes. It’s low-risk, affordable, and helps new brands launch
                   high-quality supplements quickly.{" "}
                 </Accordion.Body>
-              </Accordion.Item>
+              </Accordion.Item> */}
 
-              <Accordion.Item eventKey="19" className="mt-3 p-4">
+              {/* <Accordion.Item eventKey="19" className="mt-3 p-4">
                 <Accordion.Header className="faq-question">
                   What documents or licenses do I need to start selling?
                 </Accordion.Header>
@@ -271,9 +278,9 @@ const ProductFAQS = () => {
                   </a>{" "}
                   . We help with packaging compliance.
                 </Accordion.Body>
-              </Accordion.Item>
+              </Accordion.Item> */}
 
-              <Accordion.Item eventKey="20" className="mt-3 p-4">
+              {/* <Accordion.Item eventKey="20" className="mt-3 p-4">
                 <Accordion.Header className="faq-question">
                   Can fitness trainers, gym owners, or influencers launch their
                   own protein supplement brand?
@@ -284,7 +291,7 @@ const ProductFAQS = () => {
                   who want to monetize their audience with their own supplement
                   line.
                 </Accordion.Body>
-              </Accordion.Item>
+              </Accordion.Item> */}
             </Accordion>
           </div>
         </div>

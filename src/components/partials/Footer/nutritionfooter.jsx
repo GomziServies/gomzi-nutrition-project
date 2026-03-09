@@ -6434,13 +6434,12 @@ function NutritionFooter() {
               <div className="col-md-3 f1 f2">
                 <h4 className="mb-0">Gomzi Lifesciences LLP</h4>
                 <p>
-                  Transform your physique with Gomzi Nutrition's premium
-                  supplements.
+                  Your Trusted Partner for Premium Nutraceutical Manufacturing.
                 </p>
                 <div className="f2">
                   <p className="mb-2 mt-2">
-                    <Link to="tel:+918866842520">
-                      Gautam Jani - +91 88668 42520
+                    <Link to="tel:+918320077993">
+                      Gautam Jani - +91 8320077993
                     </Link>
                   </p>
                   <p className="mb-4">
@@ -6554,25 +6553,25 @@ function NutritionFooter() {
               <div className="col-md-3 f2">
                 <div className="f3 p-0">
                   <h4>Follow Us</h4>
-                  <Link to="https://www.facebook.com/gajani2/" className="fb" aria-label="Follow us on Facebook">
+                  <Link to="https://www.facebook.com/Gomzilifesciences" className="fb" aria-label="Follow us on Facebook">
                     <FontAwesomeIcon icon={faFacebook} />
                   </Link>
                   <Link
-                    to="https://www.instagram.com/gomzi_nutrition?igsh=NTc4MTIwNjQ2YQ=="
+                    to="https://www.instagram.com/gomzilifesciences/"
                     className="insta"
                     aria-label="Follow us on Instagram"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </Link>
                   <Link
-                    to="https://www.youtube.com/channel/UCLyvtq55YZORdV-SN8OQSzQ"
+                    to="https://www.youtube.com/@Gomzilifesciences"
                     className="you"
                     aria-label="Follow us on YouTube"
                   >
                     <FontAwesomeIcon icon={faYoutube} />
                   </Link>
                   <Link
-                    to="https://www.linkedin.com/in/dt-gautam-jani-561a50161/"
+                    to="https://www.linkedin.com/in/gomzi-lifesciences-423558312/"
                     className="in"
                     aria-label="Follow us on LinkedIn"
                   >
@@ -6608,7 +6607,7 @@ function NutritionFooter() {
                 </div>
               </div>
             </div>
-            <div className="row ft">
+            {/* <div className="row ft">
               <div className="col-sm-12 p-0 mb-3">
                 <h4>RELATED SEARCHES</h4>
               </div>
@@ -6690,7 +6689,7 @@ function NutritionFooter() {
                   </p>
                 )}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>
