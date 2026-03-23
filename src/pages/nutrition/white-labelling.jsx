@@ -2382,7 +2382,7 @@ function WhiteLabelling() {
 
                               <div className="pb-2 ql-editor descriptionShow text-secondary">
                                 <Link
-                                  to="https://api.whatsapp.com/send?phone=+918866842520&amp;text= Hello, I have an inquiry about third-party manufacturing for the Protein Bar."
+                                  to="https://api.whatsapp.com/send?phone=+918320077993&amp;text= Hello, I have an inquiry about third-party manufacturing for the Protein Bar."
                                   type="button"
                                   className="btn-interested mx-2 mt-3"
                                 >
