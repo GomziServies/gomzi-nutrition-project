@@ -5,6 +5,30 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 13,
+    title: "Top 10 Third-Party Nutraceutical Manufacturing Companies in India (2026 Guide)",
+    url: "/blogs/top-10-third-party-nutraceutical-manufacturing-companies-in-india-2026-guide",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/top-10-third-party-beverage-manufacturers-in-india-for-startups.webp",
+  },
+  {
+    number: 12,
+    title: "How Brands Grow Without a Factory: The Ultimate Guide to Third-Party Manufacturing?",
+    url: "/blogs/how-brands-grow-without-a-factory-the-ultimate-guide-to-third-party-manufacturing",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-brands-grow-without-a-factory-the-ultimate-guide-to-third-party-manufacturing.webp",
+  },
+  {
+    number: 11,
+    title: "How to Reduce Lead Times and Costs in Third-Party Manufacturing?",
+    url: "/blogs/how-to-reduce-lead-times-and-costs-in-third-party-manufacturing",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-to-reduce-lead-times-and-costs-in-third-party-manufacturing.webp",
+  },
+  {
     number: 10,
     title: "How to Educate Consumers About Safe & Effective Nutraceutical Use?",
     url: "/blogs/how-to-educate-consumers-about-safe-effective-nutraceutical-use",
@@ -93,7 +117,7 @@ export const whitelabelBloglist = [
   },
 ];
 
-const Readmorewhitelabelblogs = () => {
+const    Readmorewhitelabelblogs = () => {
   const truncateTitle = (text, limit = 60) => {
     return text.length > limit ? text.slice(0, limit) + "..." : text;
   };

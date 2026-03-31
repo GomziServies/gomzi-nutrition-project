@@ -20,6 +20,11 @@ import WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths from "./pag
 import HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUse from "./pages/white-labelling-blogs/how-to-educate-consumers-about-safe-effective-nutraceutical-use";
 import WheyProteinManufacturing from "./pages/third-party-manufacturing/WheyProteinManufacturing";
 import PerformanceSupplements from "./pages/third-party-manufacturing/PerformanceSupplements";
+import Multivitaminstabletpage from "./pages/third-party-manufacturing/multivitamins-tablet-page";
+import MultivitaminTablet from "./pages/third-party-manufacturing/multivitamins-tablet-page";
+import HowtoReduceLeadTimesAndCosts from "./pages/white-labelling-blogs/how-to-reduce-lead-times-and-costs-in-third-party-manufacturing";
+import HowBrandsGrowWithoutFactory from "./pages/white-labelling-blogs/how-brands-grow-without-a-factory-the-ultimate-guide-to-third-party-manufacturing";
+import Top10ThirdPartyNutraceuticalManufacturingCompaniesinIndia from "./pages/white-labelling-blogs/top-10-third-party-nutraceutical-manufacturing-companies-in-india-2026-guide";
 // import Sitemap from '../src/components/partials/sitemap';
 
 //Profile
@@ -261,6 +266,10 @@ function App() {
           element={<PeanutButter />}
         />
 
+        <Route
+          path="/third-party-manufacturing/multivitamins-tablet"
+          element={<MultivitaminTablet />}
+        />
         {/* <Route
           path="/third-party-manufacturing/WheyProteinManufacturing"
           element={<WheyProteinManufacturing />}
@@ -446,8 +455,20 @@ function App() {
           element={<HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUse />}
         />
 
+        <Route
+          path="/blogs/how-to-reduce-lead-times-and-costs-in-third-party-manufacturing"
+          element={<HowtoReduceLeadTimesAndCosts />}
+        />
 
+        <Route
+          path="/blogs/how-brands-grow-without-a-factory-the-ultimate-guide-to-third-party-manufacturing"
+          element={<HowBrandsGrowWithoutFactory />}
+        />
 
+        <Route
+          path="/blogs/top-10-third-party-nutraceutical-manufacturing-companies-in-india-2026-guide"
+          element={<Top10ThirdPartyNutraceuticalManufacturingCompaniesinIndia />}
+        />
 
 
 

@@ -42,7 +42,7 @@ const faqData = [
     question:
       "Q5: How long does the manufacturing process take?",
     answer:
-      (<>The first batch usually takes <strong>45–60 days</strong> (includes formulation and label approval). Repeat orders are faster, typically ready within <strong>25–30 days</strong>.</>),
+      (<>The first batch usually takes <strong>45-60 days</strong> (includes formulation and label approval). Repeat orders are faster, typically ready within <strong>25–30 days</strong>.</>),
   },
   {
     eventKey: "faq6",
@@ -160,7 +160,7 @@ function Top10ThirdPartyNutraceuticalManufacturingCompaniesinIndia () {
                   <img
                     src={
                       process.env.PUBLIC_URL +
-                      "/assets/images/white-labelling-blogs/how-to-educate-consumers-about-safe-effective-nutraceutical-use.webp"
+                      "/assets/images/white-labelling-blogs/quality-assurance.webp"
                     }
                     alt="bgImage"
                     className="img-fluid w-100 mh-200 object-fit"

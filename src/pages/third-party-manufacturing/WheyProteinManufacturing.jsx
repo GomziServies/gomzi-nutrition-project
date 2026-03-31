@@ -41,25 +41,25 @@ const WheyProtein = () => {
     const products = [
         {
             id: 1,
-            imageSrc: "/assets/images/third-party-manufacturing/blend.png",
+            imageSrc: "/assets/images/third-party-manufacturing/blend.webp",
             productName: "Whey Protein Blend",
             productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "Whey Protein Blend")}`,
         },
         {
             id: 2,
-            imageSrc: "/assets/images/third-party-manufacturing/protein.png",
+            imageSrc: "/assets/images/third-party-manufacturing/protein.webp",
             productName: "100% Whey Protein",
             productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "100% Whey Protein")}`,
         },
         {
             id: 3,
-            imageSrc: "/assets/images/third-party-manufacturing/isolate.png",
+            imageSrc: "/assets/images/third-party-manufacturing/isolate.webp",
             productName: "Whey Protein Isolate 90%",
             productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "Whey Protein Isolate 90%")}`,
         },
         {
             id: 4,
-            imageSrc: "/assets/images/third-party-manufacturing/concentrate.png",
+            imageSrc: "/assets/images/third-party-manufacturing/concentrate.webp",
             productName: "Whey Protein Concentrate 80%",
             productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "Whey Protein Concentrate 80%")}`,
         },
@@ -476,7 +476,7 @@ const WheyProtein = () => {
                 <div className="row mt-3">
                     {products.map((product) => (
                         <div key={product.id} className="col-md-3 col-6 mb-4">
-                            <div className="third-party-manufacturing-card text-center bg-white br-15 p-2 d-flex flex-column justify-content-between shadow-sm">
+                            <div className="third-party-manufacturing-card text-center bg-white br-15 p-5 d-flex flex-column justify-content-between shadow-sm">
                                 <img
                                     src={product.imageSrc}
                                     alt={product.productName}
