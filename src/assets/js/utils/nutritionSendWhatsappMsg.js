@@ -11,7 +11,7 @@ function nutritionSendWhatsappMsg(text, option) {
     }
   }
 
-  let url = `https://api.whatsapp.com/send?phone=+918866842520&text=${encodeURIComponent(
+  let url = `https://api.whatsapp.com/send?phone=+918320077993&text=${encodeURIComponent(
     text
   )}`;
   window.open(url, "_blank");
