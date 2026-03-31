@@ -87,9 +87,12 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
       </div>
       <div className="main-content" style={{ marginTop: "150px" }}>
         <section className="blog-main">
-          <div className="container-fluid w-80 p-0">
+          <div className="container-fluid  p-0" style={{ width: "95%" }}>
             <div className="row">
-              <div className="col-12 text-center p-0">
+              <div
+                className="col-12 text-center"
+                style={{ padding: "0px 15px" }}
+              >
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -98,7 +101,10 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                     }
                     alt="bgImage"
                     className="img-fluid w-100 mh-200 object-fit"
-                    style={{ borderRadius: "20px", overflow: "hidden" }}
+                    style={{
+                      borderRadius: "20px",
+                      overflow: "hidden",
+                    }}
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -110,6 +116,7 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
               </div>
             </div>
           </div>
+
           <div className="container-fluid w-80">
             <div className="row">
               <div className="col-12 text-center mb-4 px-4">
@@ -128,14 +135,11 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       <p className="blog-text">
                         A private label supplement brand is a business model
                         where your products are made by a{" "}
-                        <a
-                          href="https://www.gomzilifesciences.in/nutrition/white-labelling"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="blog-text font-black"
-                        >
-                          <strong> white label whey protein</strong>
-                        </a>{" "}
+                        <strong>
+                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                            white label whey protein
+                          </Link>
+                        </strong>{" "}
                         , but sold under your own brand name. You don't need
                         your own factory - Gomzilifesciences (GMP certified
                         nutraceutical manufacturer) handles the production,
@@ -298,19 +302,13 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       <p className="blog-text">
                         Non-compliance can lead to fines, product recall, or
                         license cancellation. For detailed information, refer to
-                        the
-                        <a
-                          href="https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Nutra_29_09_2021.pdf?utm_source=chatgpt.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="blog-text font-black"
-                        >
-                          <strong>
-                            {" "}
+                        the{" "}
+                        <strong>
+                          <Link to="https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Nutra_29_09_2021.pdf?utm_source=chatgpt.com">
                             FSSAI Compendium for Health Supplements and
                             Nutraceuticals.
-                          </strong>
-                        </a>
+                          </Link>
+                        </strong>
                       </p>
 
                       <h3 className="blog-subsection-title">
@@ -396,65 +394,35 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                         Best Private Label Supplement Products to Start in India
                       </h3>
 
-                      <div className="row">
-                        <div className="col"></div>
-                        <div className="col-lg-8 mt-3">
-                          <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/assets/images/white-labelling-blogs/Best_Private_Label_Supplement_Products_to_Start_in_India.webp"
-                            }
-                            alt="Fggroup"
-                            width="100%"
-                            style={{ borderRadius: "20px" }}
-                          />
-                        </div>
-                        <div className="col"></div>
-                      </div>
-
                       <p className="blog-text mt-3">
                         When working with manufacturer, choosing the right
                         products is crucial. Start with fast-moving items that
                         have high demand and easy compliance. Gomzilifescience
-                        is one of
-                        <a
-                          href="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="blog-text font-black"
-                        >
-                          <strong>
-                            {" "}
-                            the best protein powder third party manufacturers{" "}
-                          </strong>
-                        </a>
-                        and
-                        <a
-                          href="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="blog-text font-black"
-                        >
-                          <strong> white label sports nutrition</strong>
-                        </a>{" "}
+                        is one of{" "}
+                        <strong>
+                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder">
+                            the best protein powder third party
+                            manufacturers{" "}
+                          </Link>
+                        </strong>
+                        and{" "}
+                        <strong>
+                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements">
+                            white label sports nutrition{" "}
+                          </Link>
+                        </strong>
                         also{" "}
-                        <a
-                          href="https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="blog-text font-black"
-                        >
-                          <strong>peanut butter powder manufacturers.</strong>
-                        </a>{" "}
-                        When starting your brand, it's a good idea to request
-                        <a
-                          href="https://best-supplement-manufacturer.gomzilifesciences.in/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="blog-text font-black"
-                        >
-                          <strong> nutritional supplement samples</strong>
-                        </a>{" "}
+                        <strong>
+                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter">
+                            peanut butter powder manufacturers.{" "}
+                          </Link>
+                        </strong>
+                        When starting your brand, it's a good idea to request{" "}
+                        <strong>
+                          <Link to="https://best-supplement-manufacturer.gomzilifesciences.in/">
+                            nutritional supplement samples{" "}
+                          </Link>
+                        </strong>
                         from your OEM nutraceutical manufacturing.
                       </p>
 
@@ -533,14 +501,12 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       <p className="blog-text">
                         Choose a protein supplement manufacturers in india with
                         GMP, ISO, and FSSAI certifications. Companies like
-                        <a
-                          href="https://www.gomzilifesciences.in/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="blog-text font-black"
-                        >
-                          <strong> Gomzilifesciences</strong>
-                        </a>{" "}
+                        <strong>
+                          <Link to="https://www.gomzilifesciences.in/">
+                            {" "}
+                            Gomzilifesciences{" "}
+                          </Link>
+                        </strong>
                         provide transparent ingredient sourcing, low MOQs, and
                         custom flavors.
                       </p>
@@ -618,17 +584,12 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       </ul>
                       <p className="blog-text">
                         Explore services from
-                        <a
-                          href="https://www.gomzilifesciences.in/nutrition/white-labelling"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="blog-text font-black"
-                        >
-                          <strong>
+                        <strong>
+                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
                             {" "}
                             top nutraceuticals manufacturers in Gujarat
-                          </strong>
-                        </a>{" "}
+                          </Link>
+                        </strong>
                       </p>
 
                       <h3 className="blog-subsection-title">
@@ -887,7 +848,7 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
 
                       <div className="blog-conclusion">
                         <p className="blog-text">
-                          <strong>Conclusion</strong>
+                          <h2 className="blog-section-title">Conclusion</h2>
                         </p>
                         <p className="blog-text">
                           Starting a private label supplement brand in India is

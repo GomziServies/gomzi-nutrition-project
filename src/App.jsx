@@ -25,6 +25,16 @@ import MultivitaminTablet from "./pages/third-party-manufacturing/multivitamins-
 import HowtoReduceLeadTimesAndCosts from "./pages/white-labelling-blogs/how-to-reduce-lead-times-and-costs-in-third-party-manufacturing";
 import HowBrandsGrowWithoutFactory from "./pages/white-labelling-blogs/how-brands-grow-without-a-factory-the-ultimate-guide-to-third-party-manufacturing";
 import Top10ThirdPartyNutraceuticalManufacturingCompaniesinIndia from "./pages/white-labelling-blogs/top-10-third-party-nutraceutical-manufacturing-companies-in-india-2026-guide";
+import HowEcommerceIsChangingTheNutraceuticalIndustry from "./pages/white-labelling-blogs/how-e-commerce-is-changing-the-nutraceutical-industry";
+import HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite from "./pages/white-labelling-blogs/how-to-educate-consumers-about-safe-effective-nutraceutical-use";
+import The7CostlyMistakestoAvoidWhenChoosingaPrivateLabelNutraceuticalManufacturer from "./pages/white-labelling-blogs/the-7-costly-mistakes-to-avoid-when-choosing-a-private-label-nutraceutical-manufacturer";
+import MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBrands from "./pages/white-labelling-blogs/micro-batch-manufacturing-the-hidden-engine-behind-personalized-nutraceutical-brands";
+import WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverInHouseProduction from "./pages/white-labelling-blogs/why-startups-are-choosing-nutraceutical-third-party-manufacturers-in-india-over-in-house-production";
+import WhyMostSupplementBrandsFailBeforeTheirFirstSale from "./pages/white-labelling-blogs/why-most-supplement-brands-fail-before-their-first-sale";
+import The5LakhVs50LakhWhatChangesInSupplementManufacturing from "./pages/white-labelling-blogs/the-5-lakh-vs-50-lakh-what-changes-in-supplement-manufacturing";
+import CleanLabelSupplementsWhatModernConsumersActuallyWant from "./pages/white-labelling-blogs/clean-label-supplements-what-modern-consumers-actually-want";
+import FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement from "./pages/white-labelling-blogs/from-gym-idea-to-global-brand-the-untold-story-behind-every-successful-supplement";
+import FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality from "./pages/white-labelling-blogs/from-raw-protein-to-finished-powder-what-really-determines-supplement-quality";
 // import Sitemap from '../src/components/partials/sitemap';
 
 //Profile
@@ -33,154 +43,158 @@ const UserOrder = lazy(() => import("./pages/account/order"));
 const AddToCart = lazy(() => import("./pages/add-to-cart"));
 
 // nutrition
-const GomziNutritionWheyProteinIsolate = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-whey-protein-isolate")
+const GomziNutritionWheyProteinIsolate = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-whey-protein-isolate"),
 );
-const BulkInquiryNutrition = lazy(() =>
-  import("./pages/nutrition/bulk-inquriy-nutrition")
+const BulkInquiryNutrition = lazy(
+  () => import("./pages/nutrition/bulk-inquriy-nutrition"),
 );
-const GomziNutritionWheyProtein = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-whey-protein")
+const GomziNutritionWheyProtein = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-whey-protein"),
 );
-const GomziNutritionWheyProteinConcentrate = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-whey-protein-concentrate")
+const GomziNutritionWheyProteinConcentrate = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-whey-protein-concentrate"),
 );
-const GomziNutritionIgniteFatBurner = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-ignite-fat-burner")
+const GomziNutritionIgniteFatBurner = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-ignite-fat-burner"),
 );
-const GomziNutritionMassGainerPowder = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-mass-gainer-powder")
+const GomziNutritionMassGainerPowder = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-mass-gainer-powder"),
 );
-const GomziNutritionSparkEAA = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-spark-eaa")
+const GomziNutritionSparkEAA = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-spark-eaa"),
 );
-const GomziNutritionATPCreatine = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-atp-creatine")
+const GomziNutritionATPCreatine = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-atp-creatine"),
 );
-const GomziNutritionActiveTShirt = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-sports-active-t-shirt")
+const GomziNutritionActiveTShirt = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-sports-active-t-shirt"),
 );
-const GomziNutritionSportsJogger = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-sports-jogger")
+const GomziNutritionSportsJogger = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-sports-jogger"),
 );
-const GomziNutritionPerformancePreWorkoutDrink = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-performance-pre-workout-drink")
+const GomziNutritionPerformancePreWorkoutDrink = lazy(
+  () =>
+    import("./pages/nutrition/gomzi-nutrition-performance-pre-workout-drink"),
 );
-const GomziNutritionPerformanceEAADrink = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-performance-eaa-drink")
+const GomziNutritionPerformanceEAADrink = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-performance-eaa-drink"),
 );
-const GomziNutritionPerformanceCreatineDrink = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-performance-creatine-drink")
+const GomziNutritionPerformanceCreatineDrink = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-performance-creatine-drink"),
 );
-const GomziNutritionMangoChiaSeedCrunchyPeanutButter = lazy(() =>
-  import(
-    "./pages/nutrition/gomzi-nutrition-mango-chia-seed-crunchy-peanut-butter"
-  )
+const GomziNutritionMangoChiaSeedCrunchyPeanutButter = lazy(
+  () =>
+    import("./pages/nutrition/gomzi-nutrition-mango-chia-seed-crunchy-peanut-butter"),
 );
-const GomziNutritionChocolateCrunchyPeanutButter = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-chocolate-crunchy-peanut-butter")
+const GomziNutritionChocolateCrunchyPeanutButter = lazy(
+  () =>
+    import("./pages/nutrition/gomzi-nutrition-chocolate-crunchy-peanut-butter"),
 );
-const GomziNutritionNaturalCrunchyPeanutButter = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-natural-crunchy-peanut-butter")
+const GomziNutritionNaturalCrunchyPeanutButter = lazy(
+  () =>
+    import("./pages/nutrition/gomzi-nutrition-natural-crunchy-peanut-butter"),
 );
-const GomziNutritionRefuelWheyProtein = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-refuel-whey-protein")
+const GomziNutritionRefuelWheyProtein = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-refuel-whey-protein"),
 );
-const GomziNutritionRefuelWheyProteinIsolate = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-refuel-whey-protein-isolate")
+const GomziNutritionRefuelWheyProteinIsolate = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-refuel-whey-protein-isolate"),
 );
-const GomziNutritionRefuelWheyProteinConcentrate = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-refuel-whey-protein-concentrate")
+const GomziNutritionRefuelWheyProteinConcentrate = lazy(
+  () =>
+    import("./pages/nutrition/gomzi-nutrition-refuel-whey-protein-concentrate"),
 );
-const GomziNutritionRefuelIgniteFatBurner = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-refuel-ignite-fat-burner")
+const GomziNutritionRefuelIgniteFatBurner = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-refuel-ignite-fat-burner"),
 );
-const GomziNutritionRefuelATPCreatine = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-refuel-atp-creatine")
+const GomziNutritionRefuelATPCreatine = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-refuel-atp-creatine"),
 );
-const GomziNutritionRefuelSparkEAA = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-refuel-spark-eaa")
+const GomziNutritionRefuelSparkEAA = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-refuel-spark-eaa"),
 );
-const GomziNutritionRefuelMassGainerPowder = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-refuel-mass-gainer-powder")
+const GomziNutritionRefuelMassGainerPowder = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-refuel-mass-gainer-powder"),
 );
 const InvoiceViewPage = lazy(() => import("./pages/nutrition/InvoiceViewPage"));
-const GomziNutritionChocolateProteinBar = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-chocolate-protein-bar")
+const GomziNutritionChocolateProteinBar = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-chocolate-protein-bar"),
 );
-const GomziNutritionAllCombo = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-all-combo")
+const GomziNutritionAllCombo = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-all-combo"),
 );
-const GomziNutritionMuscleBuildCombo = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-muscle-build-combo")
+const GomziNutritionMuscleBuildCombo = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-muscle-build-combo"),
 );
-const GomziNutritionFatLossCombo = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-fat-loss-combo")
+const GomziNutritionFatLossCombo = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-fat-loss-combo"),
 );
-const GomziNutritionShakerBottle = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-shaker-bottle")
+const GomziNutritionShakerBottle = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-shaker-bottle"),
 );
-const TrainerNutrition = lazy(() =>
-  import("./pages/nutrition/trainer-nutrition")
+const TrainerNutrition = lazy(
+  () => import("./pages/nutrition/trainer-nutrition"),
 );
 const CheckOut = lazy(() => import("./pages/nutrition/check-out"));
 const ContactUs = lazy(() => import("./pages/nutrition/contact-us"));
-const TermsConditionCustomer = lazy(() =>
-  import("./pages/nutrition/terms-condition-customer")
+const TermsConditionCustomer = lazy(
+  () => import("./pages/nutrition/terms-condition-customer"),
 );
-const PrivacyPolicyCustomer = lazy(() =>
-  import("./pages/nutrition/privacy-policy-customer")
+const PrivacyPolicyCustomer = lazy(
+  () => import("./pages/nutrition/privacy-policy-customer"),
 );
-const ShippingPolicyCustomer = lazy(() =>
-  import("./pages/nutrition/shipping-policy-customer")
+const ShippingPolicyCustomer = lazy(
+  () => import("./pages/nutrition/shipping-policy-customer"),
 );
-const CancellationPolicyCustomer = lazy(() =>
-  import("./pages/nutrition/cancellation-policy-customer")
+const CancellationPolicyCustomer = lazy(
+  () => import("./pages/nutrition/cancellation-policy-customer"),
 );
-const PricingPolicyCustomer = lazy(() =>
-  import("./pages/nutrition/pricing-policy-customer")
+const PricingPolicyCustomer = lazy(
+  () => import("./pages/nutrition/pricing-policy-customer"),
 );
-const ReturnAndRefundPolicyCustomer = lazy(() =>
-  import("./pages/nutrition/return-and-refund-policy-customer")
+const ReturnAndRefundPolicyCustomer = lazy(
+  () => import("./pages/nutrition/return-and-refund-policy-customer"),
 );
-const GomziNutritionBuy2MassGainer = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-buy-2-mass-gainer")
+const GomziNutritionBuy2MassGainer = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-buy-2-mass-gainer"),
 );
-const GomziNutritionBuy1MassGainer = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-buy-1kg-mass-gainer")
+const GomziNutritionBuy1MassGainer = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-buy-1kg-mass-gainer"),
 );
-const GomziNutritionBuy1KgIsolate = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-buy-1kg-isolate")
+const GomziNutritionBuy1KgIsolate = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-buy-1kg-isolate"),
 );
-const GomziNutritionBuy1KgConcentrate = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-buy-1kg-concentrate")
+const GomziNutritionBuy1KgConcentrate = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-buy-1kg-concentrate"),
 );
-const GomziNutritionBuy3Combo = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-buy-3-combo")
+const GomziNutritionBuy3Combo = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-buy-3-combo"),
 );
 const WhiteLabelling = lazy(() => import("./pages/nutrition/white-labelling"));
-const GomziNutritionAyurstrengthPowder = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-ayurstrength-powder")
+const GomziNutritionAyurstrengthPowder = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-ayurstrength-powder"),
 );
-const GomziNutritionSugarguardDiabetesCarePowder = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-sugarguard-diabetes-care-powder")
+const GomziNutritionSugarguardDiabetesCarePowder = lazy(
+  () =>
+    import("./pages/nutrition/gomzi-nutrition-sugarguard-diabetes-care-powder"),
 );
-const GomziNutritionAyureaseGastricReliefPowder = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-ayurease-gastric-relief-powder")
+const GomziNutritionAyureaseGastricReliefPowder = lazy(
+  () =>
+    import("./pages/nutrition/gomzi-nutrition-ayurease-gastric-relief-powder"),
 );
-const GomziNutritionB12Veda = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-b12-veda")
+const GomziNutritionB12Veda = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-b12-veda"),
 );
-const GomziNutritionSlimAyurFatLossPowder = lazy(() =>
-  import("./pages/nutrition/gomzi-nutrition-slimayur-fat-loss-powder")
+const GomziNutritionSlimAyurFatLossPowder = lazy(
+  () => import("./pages/nutrition/gomzi-nutrition-slimayur-fat-loss-powder"),
 );
-const GomziNutritionboweleaseConstipationReliefPowder = lazy(() =>
-  import(
-    "./pages/nutrition/gomzi-nutrition-bowelease-constipation-relief-powder"
-  )
+const GomziNutritionboweleaseConstipationReliefPowder = lazy(
+  () =>
+    import("./pages/nutrition/gomzi-nutrition-bowelease-constipation-relief-powder"),
 );
-const ThankYouProductPage = lazy(() =>
-  import("./pages/nutrition/thank-you-purchase-product")
+const ThankYouProductPage = lazy(
+  () => import("./pages/nutrition/thank-you-purchase-product"),
 );
 
 // ScrollRestoration
@@ -192,50 +206,46 @@ const NotFoundPage = lazy(() => import("./pages/404"));
 
 //Refuel Series
 const RefuelSeries = lazy(() => import("./pages/refuel-series/refuel-series"));
-const GomziNutritionRetailerCombo = lazy(() =>
-  import("./pages/refuel-series/gomzi-nutrition-retailer-combo")
+const GomziNutritionRetailerCombo = lazy(
+  () => import("./pages/refuel-series/gomzi-nutrition-retailer-combo"),
 );
 
 // Read-more-blogs
-const Readmoreblogs = lazy(() =>
-  import("./components/nutrition/read-more-blogs")
+const Readmoreblogs = lazy(
+  () => import("./components/nutrition/read-more-blogs"),
 );
 
 // Blogs
-const TopSupplementsForWeightGain = lazy(() =>
-  import("./pages/blogs/top-supplements-for-weight-gain")
+const TopSupplementsForWeightGain = lazy(
+  () => import("./pages/blogs/top-supplements-for-weight-gain"),
 );
-const HowSupplementsHelpYouLiveHealthyLife = lazy(() =>
-  import("./pages/blogs/how-supplements-help-you-live-healthy-life")
+const HowSupplementsHelpYouLiveHealthyLife = lazy(
+  () => import("./pages/blogs/how-supplements-help-you-live-healthy-life"),
 );
-const BestWheyProteinInIndia = lazy(() =>
-  import("./pages/blogs/best-whey-protein-in-india")
+const BestWheyProteinInIndia = lazy(
+  () => import("./pages/blogs/best-whey-protein-in-india"),
 );
 const Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026 =
-  lazy(() =>
-    import(
-      "./pages/blogs/whey-isolate-vs-concentrate-which-one-actually-delivers-better-results-in-2026"
-    )
+  lazy(
+    () =>
+      import("./pages/blogs/whey-isolate-vs-concentrate-which-one-actually-delivers-better-results-in-2026"),
   );
 
 const Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupblueprint =
-  lazy(() =>
-    import(
-      "./pages/blogs/how-to-launch-a-supplement-brand-with-low-moq-manufacturers-the-2026-startup-blueprint"
-    )
+  lazy(
+    () =>
+      import("./pages/blogs/how-to-launch-a-supplement-brand-with-low-moq-manufacturers-the-2026-startup-blueprint"),
   );
 
 const Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline =
-  lazy(() =>
-    import(
-      "./pages/blogs/from-mass-production-to-micro-batches-how-to-launch-a-personalized-supplement-line"
-    )
+  lazy(
+    () =>
+      import("./pages/blogs/from-mass-production-to-micro-batches-how-to-launch-a-personalized-supplement-line"),
   );
 
-const Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse = lazy(() =>
-  import(
-    "./pages/blogs/how-to-educate-consumers-about-safe-effective-nutraceutical-use"
-  )
+const Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse = lazy(
+  () =>
+    import("./pages/blogs/how-to-educate-consumers-about-safe-effective-nutraceutical-use"),
 );
 
 function App() {
@@ -243,7 +253,6 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-
 
         {/*third party manufacturing */}
         <Route
@@ -274,7 +283,6 @@ function App() {
           path="/third-party-manufacturing/WheyProteinManufacturing"
           element={<WheyProteinManufacturing />}
         /> */}
-
 
         {/* nutrition */}
         <Route
@@ -344,8 +352,10 @@ function App() {
 
         {/* read-more-blogs */}
         <Route path="/read-more-blogs" element={<Readmoreblogs />} />
-        <Route path="/read-more-white-labelling-blogs" element={<Readmorewhitelabelblogs />} />
-        
+        <Route
+          path="/read-more-white-labelling-blogs"
+          element={<Readmorewhitelabelblogs />}
+        />
 
         {/* blogs */}
         <Route
@@ -412,9 +422,6 @@ function App() {
           element={<Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse />}
         />
 
-
-
-
         <Route
           path="/blogs/how-to-manufacture-export-ready-nutraceutical-products-in-india"
           element={<HowtoManufactureExportReadyNutraceuticalProductsInIndia />}
@@ -422,12 +429,16 @@ function App() {
 
         <Route
           path="/blogs/the-7-best-third-party-tested-protein-powders-2026-guide-reddit-favorites-vs-lab-results"
-          element={<The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResults />}
+          element={
+            <The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResults />
+          }
         />
 
         <Route
-          path="/blogs/the-startup's-guide-finding-low-moq-nutraceutical-manufacturers-2025"
-          element={<TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025 />}
+          path="/blogs/the-startups-guide-finding-low-moq-nutraceutical-manufacturers-2025"
+          element={
+            <TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025 />
+          }
         />
 
         <Route
@@ -437,22 +448,30 @@ function App() {
 
         <Route
           path="/blogs/gmp-audit-guide-for-nutraceutical-manufacturers-step-by-step-process-2025"
-          element={<GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025 />}
+          element={
+            <GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025 />
+          }
         />
 
         <Route
           path="/blogs/maximize-profit-quality-your-guide-to-private-label-manufacturing-in-india"
-          element={<MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia />}
+          element={
+            <MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia />
+          }
         />
 
         <Route
           path="/blogs/what-supplements-actuallywork-debunking-7common-nutraceutical-myths"
-          element={<WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths />}
+          element={
+            <WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths />
+          }
         />
 
         <Route
-          path="/blogs/how-to-educate-consumers-about-safe-effective-nutraceutical-use"
-          element={<HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUse />}
+          path="/blogs/how-to-educate-consumers-about-safe-effective-nutraceutical-usewhite"
+          element={
+            <HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite />
+          }
         />
 
         <Route
@@ -467,11 +486,67 @@ function App() {
 
         <Route
           path="/blogs/top-10-third-party-nutraceutical-manufacturing-companies-in-india-2026-guide"
-          element={<Top10ThirdPartyNutraceuticalManufacturingCompaniesinIndia />}
+          element={
+            <Top10ThirdPartyNutraceuticalManufacturingCompaniesinIndia />
+          }
         />
 
+        <Route
+          path="/blogs/how-e-commerce-is-changing-the-nutraceutical-industry"
+          element={<HowEcommerceIsChangingTheNutraceuticalIndustry />}
+        />
 
+        <Route
+          path="/blogs/the-7-costly-mistakes-to-avoid-when-choosing-a-private-label-nutraceutical-manufacturer"
+          element={
+            <The7CostlyMistakestoAvoidWhenChoosingaPrivateLabelNutraceuticalManufacturer />
+          }
+        />
 
+        <Route
+          path="/blogs/micro-batch-manufacturing-the-hidden-engine-behind-personalized-nutraceutical-brands"
+          element={
+            <MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBrands />
+          }
+        />
+
+        <Route
+          path="/blogs/why-startups-are-choosing-nutraceutical-third-party-manufacturers-in-india-over-in-house-production"
+          element={
+            <WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverInHouseProduction />
+          }
+        />
+
+        <Route
+          path="/blogs/why-most-supplement-brands-fail-before-their-first-sale"
+          element={<WhyMostSupplementBrandsFailBeforeTheirFirstSale />}
+        />
+
+        <Route
+          path="/blogs/the-5-lakh-vs-50-lakh-what-changes-in-supplement-manufacturing"
+          element={<The5LakhVs50LakhWhatChangesInSupplementManufacturing />}
+        />
+
+        <Route
+          path="/blogs/clean-label-supplements-what-modern-consumers-actually-want"
+          element={<CleanLabelSupplementsWhatModernConsumersActuallyWant />}
+        />
+
+        <Route
+          path="/blogs/from-gym-idea-to-global-brand-the-untold-story-behind-every-successful-supplement"
+          element={
+            <FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement />
+          }
+        />
+
+        <Route
+          path="/blogs/from-raw-protein-to-finished-powder-what-really-determines-supplement-quality"
+          element={
+            <FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality />
+          }
+        />
+
+        {/* --- */}
 
         <Route
           path="/nutrition/gomzi-nutrition-refuel-mass-gainer-powder"

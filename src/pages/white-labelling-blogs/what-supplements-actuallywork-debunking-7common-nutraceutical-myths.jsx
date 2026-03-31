@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -12,7 +12,8 @@ import { Accordion } from "react-bootstrap";
 const faqData = [
   {
     eventKey: "faq1",
-    question: "1. Why should I care about where my supplements are manufactured?",
+    question:
+      "1. Why should I care about where my supplements are manufactured?",
     answer:
       "Integrity starts at the source. A reputable nutraceutical supplement manufacturer uses third-party testing to ensure what is on the label is actually in the bottle, free from heavy metals or fillers.",
   },
@@ -21,18 +22,23 @@ const faqData = [
     question: "2. Is Whey Protein Concentrate better than Isolate?",
     answer: (
       <>
-        Not necessarily "better," just different! Concentrate is often more affordable and contains more healthy fats and immune-boosting nutrients.{" "}
-        <strong>Isolate</strong> is better for those who are strictly lactose intolerant.
+        Not necessarily "better," just different! Concentrate is often more
+        affordable and contains more healthy fats and immune-boosting nutrients.{" "}
+        <strong>Isolate</strong> is better for those who are strictly lactose
+        intolerant.
       </>
     ),
   },
   {
     eventKey: "faq3",
-    question: "3. Are there reliable nutraceutical companies in Gujarat for private labeling?",
+    question:
+      "3. Are there reliable nutraceutical companies in Gujarat for private labeling?",
     answer: (
       <>
         Yes! Gujarat is a global hub. Companies like{" "}
-        <strong>Gomzi Nutrition</strong> and <strong>Nutra Healthcare</strong> are leaders in third-party manufacturing, offering everything from whey protein to specialized herbal blends.
+        <strong>Gomzi Nutrition</strong> and <strong>Nutra Healthcare</strong>{" "}
+        are leaders in third-party manufacturing, offering everything from whey
+        protein to specialized herbal blends.
       </>
     ),
   },
@@ -41,7 +47,9 @@ const faqData = [
     question: '4. How do I know if a supplement is a "scam"?',
     answer: (
       <>
-        Look for a <strong>"Batch QR Code."</strong> In 2026, honest brands allow you to scan the bottle to see the lab results for that specific batch. If they hide their data, they are hiding the truth.
+        Look for a <strong>"Batch QR Code."</strong> In 2026, honest brands
+        allow you to scan the bottle to see the lab results for that specific
+        batch. If they hide their data, they are hiding the truth.
       </>
     ),
   },
@@ -64,7 +72,7 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
         <meta
           name="description"
           content=" Stop wasting money on marketing hype. We debunk 7 common supplement myths using 2026 clinical data to reveal what actually works for your health. Read more."
-          />
+        />
         <meta
           name="keyword"
           content="private label supplements, white label supplements, supplement brand, nutraceutical manufacturing, FSSAI license, supplement business"
@@ -75,7 +83,7 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
         />
         <meta
           property="og:description"
-            content=" Stop wasting money on marketing hype. We debunk 7 common supplement myths using 2026 clinical data to reveal what actually works for your health. Read more."
+          content=" Stop wasting money on marketing hype. We debunk 7 common supplement myths using 2026 clinical data to reveal what actually works for your health. Read more."
         />
         <meta
           property="og:image"
@@ -126,9 +134,12 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
       </div>
       <div className="main-content" style={{ marginTop: "150px" }}>
         <section className="blog-main">
-          <div className="container-fluid w-80 p-0">
+          <div className="container-fluid  p-0" style={{ width: "95%" }}>
             <div className="row">
-              <div className="col-12 text-center p-0">
+              <div
+                className="col-12 text-center"
+                style={{ padding: "0px 15px" }}
+              >
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -137,57 +148,73 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                     }
                     alt="bgImage"
                     className="img-fluid w-100 mh-200 object-fit"
-                    style={{ borderRadius: "20px", overflow: "hidden" }}
+                    style={{
+                      borderRadius: "20px",
+                      overflow: "hidden",
+                    }}
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
                     <h1 className="text-white f-rob-bol f-43">
-                      What Supplements Actually Work? Debunking 7 Common Nutraceutical Myths
+                      What Supplements Actually Work? Debunking 7 Common
+                      Nutraceutical Myths
                     </h1>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
           <div className="container-fluid w-80">
             <div className="row">
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-
                     {/* Intro */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
-                        What Supplements Actually Work? Debunking 7 Common Nutraceutical Myths
+                        What Supplements Actually Work? Debunking 7 Common
+                        Nutraceutical Myths
                       </h2>
 
                       {/* ✅ IMAGE 1 - Main Intro Section */}
                       <div className="blog-img-wrapper my-4 text-center">
                         <img
-                          src={process.env.PUBLIC_URL + "/assets/images/white-labelling-blogs/what-supplements-1.webp"}
+                          src={
+                            process.env.PUBLIC_URL +
+                            "/assets/images/white-labelling-blogs/what-supplements-1.webp"
+                          }
                           alt="What Supplements Actually Work - Nutraceutical Myths"
                           className="img-fluid"
-                          style={{ borderRadius: "12px", width: "80%", objectFit: "cover" }}
+                          style={{
+                            borderRadius: "12px",
+                            width: "80%",
+                            objectFit: "cover",
+                          }}
                         />
                       </div>
 
-                      <p className="blog-text ">
-                        In 2026, our medicine cabinets are full, but our clarity is at an all-time low. With the rise of "miracle" pills on social media, it is harder than ever to distinguish between marketing hype and true cellular support.
+                      <p className="blog-text " style={{ marginBottom: "8px" }}>
+                        In 2026, our medicine cabinets are full, but our clarity
+                        is at an all-time low. With the rise of "miracle" pills
+                        on social media, it is harder than ever to distinguish
+                        between marketing hype and true cellular support.
                       </p>
-                      <p className="blog-text">
+                      <p className="blog-text" style={{ marginBottom: "8px" }}>
                         Whether you are looking for a reliable{" "}
                         <strong>
-                          <Link
-                            className="blog-text-link"
-                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
-                          >
+                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
                             nutraceutical supplement manufacturer
                           </Link>
                         </strong>{" "}
-                        or just trying to fix your morning vitamin routine, the truth lies in the data.
+                        or just trying to fix your morning vitamin routine, the
+                        truth lies in the data.
                       </p>
                       <p className="blog-text">
-                        Today, we are pulling back the curtain on the most common myths and exploring why the source of your supplements — down to the factory floor — matters more than you think.
+                        Today, we are pulling back the curtain on the most
+                        common myths and exploring why the source of your
+                        supplements — down to the factory floor — matters more
+                        than you think.
                       </p>
                     </div>
 
@@ -200,31 +227,41 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       {/* ✅ IMAGE 2 - Myth #1 */}
                       <div className="blog-img-wrapper my-4 text-center">
                         <img
-                          src={process.env.PUBLIC_URL + "/assets/images/white-labelling-blogs/what-supplements-2.webp"}
+                          src={
+                            process.env.PUBLIC_URL +
+                            "/assets/images/white-labelling-blogs/what-supplements-2.webp"
+                          }
                           alt="Myth - All Protein is Created Equal"
                           className="img-fluid"
-                          style={{ borderRadius: "12px", width: "80%", objectFit: "cover" }}
+                          style={{
+                            borderRadius: "12px",
+                            width: "80%",
+                            objectFit: "cover",
+                          }}
                         />
                       </div>
 
                       <h3 className="blog-subsection-title">The Reality</h3>
                       <p className="blog-text">
-                        Many people think protein is just protein. However, for those focused on muscle preservation (especially alongside GLP-1 treatments), the quality of the source is paramount.
+                        Many people think protein is just protein. However, for
+                        those focused on muscle preservation (especially
+                        alongside GLP-1 treatments), the quality of the source
+                        is paramount.
                       </p>
                       <p className="blog-text">
                         This is why many look for specialized{" "}
                         <strong>
-                          <Link
-                            className="blog-text-link"
-                            to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder"
-                          >
+                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder">
                             whey protein concentrate manufacturers
                           </Link>
                         </strong>{" "}
                         who can provide a complete amino acid profile.
                       </p>
                       <p className="blog-text">
-                        Unlike lower-grade blends, high-quality whey concentrate retains essential bioactive sub-fractions like immunoglobulins that support your immune system while you build lean power.
+                        Unlike lower-grade blends, high-quality whey concentrate
+                        retains essential bioactive sub-fractions like
+                        immunoglobulins that support your immune system while
+                        you build lean power.
                       </p>
                     </div>
 
@@ -237,32 +274,42 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       {/* ✅ IMAGE 3 - Myth #2 */}
                       <div className="blog-img-wrapper my-4 text-center">
                         <img
-                          src={process.env.PUBLIC_URL + "/assets/images/white-labelling-blogs/what-supplements-3.webp"}
+                          src={
+                            process.env.PUBLIC_URL +
+                            "/assets/images/white-labelling-blogs/what-supplements-3.webp"
+                          }
                           alt="Myth - Natural Always Equals Safe"
                           className="img-fluid"
-                          style={{ borderRadius: "12px", width: "80%", objectFit: "cover" }}
+                          style={{
+                            borderRadius: "12px",
+                            width: "80%",
+                            objectFit: "cover",
+                          }}
                         />
                       </div>
 
                       <h3 className="blog-subsection-title">The Reality</h3>
                       <p className="blog-text">
-                        Poison ivy is natural, but you wouldn't eat it. In 2026, the "natural" label is often used to bypass rigorous testing.
+                        Poison ivy is natural, but you wouldn't eat it. In 2026,
+                        the "natural" label is often used to bypass rigorous
+                        testing.
                       </p>
                       <p className="blog-text">
-                        The safest products are those that are "Nature-Identical" but produced in controlled environments.
+                        The safest products are those that are
+                        "Nature-Identical" but produced in controlled
+                        environments.
                       </p>
                       <p className="blog-text">
-                        Top-tier brands ensure safety by partnering with the best
-                        {" "}
+                        Top-tier brands ensure safety by partnering with the
+                        best{" "}
                         <strong>
-                          <Link
-                            className="blog-text-link"
-                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
-                          >
-                           third party manufacturing companies in India
+                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                            third party manufacturing companies in India
                           </Link>
                         </strong>{" "}
-                        that adhere to strict <strong>WHO-GMP</strong> and <strong>FSSAI</strong> standards, ensuring that "natural" doesn't mean "contaminated."
+                        that adhere to strict <strong>WHO-GMP</strong> and{" "}
+                        <strong>FSSAI</strong> standards, ensuring that
+                        "natural" doesn't mean "contaminated."
                       </p>
                     </div>
 
@@ -275,28 +322,37 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       {/* ✅ IMAGE 4 - Myth #3 */}
                       <div className="blog-img-wrapper my-4 text-center">
                         <img
-                          src={process.env.PUBLIC_URL + "/assets/images/white-labelling-blogs/what-supplements-4.webp"}
+                          src={
+                            process.env.PUBLIC_URL +
+                            "/assets/images/white-labelling-blogs/what-supplements-4.webp"
+                          }
                           alt="Myth - Supplements Can Replace Real Food"
                           className="img-fluid"
-                          style={{ borderRadius: "12px", width: "80%", objectFit: "cover" }}
+                          style={{
+                            borderRadius: "12px",
+                            width: "80%",
+                            objectFit: "cover",
+                          }}
                         />
                       </div>
 
                       <h3 className="blog-subsection-title">The Reality</h3>
                       <p className="blog-text">
-                        They are called supplements, not replacements. Even the most advanced formulations are designed to fill gaps, not build the whole bridge.
+                        They are called supplements, not replacements. Even the
+                        most advanced formulations are designed to fill gaps,
+                        not build the whole bridge.
                       </p>
                       <p className="blog-text">
                         For example, while{" "}
                         <strong>
-                          <Link
-                            className="blog-text-link"
-                            to="https://www.gomzilifesciences.in/"
-                          >
+                          <Link to="https://www.gomzilifesciences.in/">
                             Gomzi Lifesciences
                           </Link>
                         </strong>{" "}
-                        provides cutting-edge research and development in the wellness space, their philosophy — and ours — is that precision nutrition works best when paired with a "whole-foods first" mindset.
+                        provides cutting-edge research and development in the
+                        wellness space, their philosophy — and ours — is that
+                        precision nutrition works best when paired with a
+                        "whole-foods first" mindset.
                       </p>
                     </div>
 
@@ -309,21 +365,35 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       {/* ✅ IMAGE 5 - Myth #4 */}
                       <div className="blog-img-wrapper my-4 text-center">
                         <img
-                          src={process.env.PUBLIC_URL + "/assets/images/white-labelling-blogs/what-supplements-5.webp"}
+                          src={
+                            process.env.PUBLIC_URL +
+                            "/assets/images/white-labelling-blogs/what-supplements-5.webp"
+                          }
                           alt="Myth - Gujarat is Only for Pharma Not Nutraceuticals"
                           className="img-fluid"
-                          style={{ borderRadius: "12px", width: "80%", objectFit: "cover" }}
+                          style={{
+                            borderRadius: "12px",
+                            width: "80%",
+                            objectFit: "cover",
+                          }}
                         />
                       </div>
 
                       <h3 className="blog-subsection-title">The Reality</h3>
                       <p className="blog-text">
-                        This is a major misconception. Gujarat has evolved into India's wellness powerhouse.
+                        This is a major misconception. Gujarat has evolved into
+                        India's wellness powerhouse.
                       </p>
                       <p className="blog-text">
                         The state is home to some of the most advanced{" "}
-                        <strong>nutraceutical companies in Gujarat</strong>, such as Nutricore Biosciences, Zydus Lifesciences, and{" "}
-                        <strong>Gomzi Lifesciences (Trustable Third Party Nutraceutical Manufacturer)</strong>. These hubs are leading the world in "Active Aging" technologies and high-purity protein production.
+                        <strong>nutraceutical companies in Gujarat</strong>,
+                        such as Nutricore Biosciences, Zydus Lifesciences, and{" "}
+                        <strong>
+                          Gomzi Lifesciences (Trustable Third Party
+                          Nutraceutical Manufacturer)
+                        </strong>
+                        . These hubs are leading the world in "Active Aging"
+                        technologies and high-purity protein production.
                       </p>
                     </div>
 
@@ -342,20 +412,40 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                           </thead>
                           <tbody>
                             <tr>
-                              <td><strong>"More is Better"</strong></td>
-                              <td>Your body has an absorption ceiling. Excess is usually wasted.</td>
+                              <td>
+                                <strong>"More is Better"</strong>
+                              </td>
+                              <td>
+                                Your body has an absorption ceiling. Excess is
+                                usually wasted.
+                              </td>
                             </tr>
                             <tr>
-                              <td><strong>"Gummies are Candy"</strong></td>
-                              <td>2026 technology allows for potent, sugar-free, bioavailable gummies.</td>
+                              <td>
+                                <strong>"Gummies are Candy"</strong>
+                              </td>
+                              <td>
+                                2026 technology allows for potent, sugar-free,
+                                bioavailable gummies.
+                              </td>
                             </tr>
                             <tr>
-                              <td><strong>"Proteins damage kidneys"</strong></td>
-                              <td>For healthy individuals, science shows protein is safe and essential.</td>
+                              <td>
+                                <strong>"Proteins damage kidneys"</strong>
+                              </td>
+                              <td>
+                                For healthy individuals, science shows protein
+                                is safe and essential.
+                              </td>
                             </tr>
                             <tr>
-                              <td><strong>"Synthetic is Bad"</strong></td>
-                              <td>Sometimes synthetic vitamins are more stable and easier to absorb.</td>
+                              <td>
+                                <strong>"Synthetic is Bad"</strong>
+                              </td>
+                              <td>
+                                Sometimes synthetic vitamins are more stable and
+                                easier to absorb.
+                              </td>
                             </tr>
                           </tbody>
                         </table>
@@ -387,15 +477,16 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                     {/* Conclusion */}
                     <div className="blog-section">
                       <div className="blog-conclusion">
-                        <h2 className="blog-section-title">
-                          Conclusion
-                        </h2>
+                        <h2 className="blog-section-title">Conclusion</h2>
                         <p className="blog-text">
-                          The future of health isn't found in a "magic pill" — it's found in <strong>Precision Nutrition</strong>. By choosing products backed by clinical research and manufactured by trusted partners, you are investing in your long-term functional power.
+                          The future of health isn't found in a "magic pill" —
+                          it's found in <strong>Precision Nutrition</strong>. By
+                          choosing products backed by clinical research and
+                          manufactured by trusted partners, you are investing in
+                          your long-term functional power.
                         </p>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </div>

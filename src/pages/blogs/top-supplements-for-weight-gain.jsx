@@ -40,7 +40,7 @@ function TopSupplementsForWeightGain() {
         <meta property="og:url" content={canonicalUrl} />
         <link rel="canonical" href={canonicalUrl} />
         <script>
-          { `!function(f,b,e,v,n,t,s)
+          {`!function(f,b,e,v,n,t,s)
                     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
                     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
                     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -53,45 +53,45 @@ function TopSupplementsForWeightGain() {
                     `}
         </script>
         <noscript>
-          { `<img height="1" width="1" style="display:none"
+          {`<img height="1" width="1" style="display:none"
                     src="https://www.facebook.com/tr?id=1144699046738070&ev=PageView&noscript=1"
                     />`}
         </noscript>
         <script
           async
-          src={ `https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38` }
+          src={`https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38`}
         ></script>
-        <noscript>{ `window.dataLayer = window.dataLayer || [];
+        <noscript>{`window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', 'G-J50WNKGW38');`}</noscript>
       </Helmet>
       <NutritionHeader />
-          <div className="main-content" style={ { marginTop: "150px" } }>
-            <section className="blog-main">
-              <div className="container-fluid w-80 p-0">
-                <div className="row">
-                  <div className="col-12 text-center p-0">
-                    <div className="details-banner-img position-relative">
-                      <img
-                        src={
-                          process.env.PUBLIC_URL +
-                          "/assets/images/nutrition/top-supplements-for-weight-gain-main.webp"
-                        }
-                        alt="bgImage"
-                        className="img-fluid w-100 mh-200 object-fit"
-                        style={ { borderRadius: '20px', overflow: 'hidden' } }
-                      />
-                      <div className="layer"></div>
-                      <div className="col-12 detail-title">
-                        <h1 className="text-white f-rob-bol f-43">
-                          Top Supplements for Weight Gain: A Comparative Analysis
-                        </h1>
-                      </div>
-                    </div>
+      <div className="main-content" style={{ marginTop: "150px" }}>
+        <section className="blog-main">
+          <div className="container-fluid w-80 p-0">
+            <div className="row">
+              <div className="col-12 text-center p-0">
+                <div className="details-banner-img position-relative">
+                  <img
+                    src={
+                      process.env.PUBLIC_URL +
+                      "/assets/images/nutrition/top-supplements-for-weight-gain-main.webp"
+                    }
+                    alt="bgImage"
+                    className="img-fluid w-100 mh-200 object-fit"
+                    style={{ borderRadius: "20px", overflow: "hidden" }}
+                  />
+                  <div className="layer"></div>
+                  <div className="col-12 detail-title">
+                    <h1 className="text-white f-rob-bol f-43">
+                      Top Supplements for Weight Gain: A Comparative Analysis
+                    </h1>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
           <div className="container-fluid w-80">
             <div className="row">
               <div className="col-12 text-center mb-4 px-4">

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -20,7 +20,8 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
     <>
       <Helmet>
         <title>
-           How to Manufacture Export-Ready Nutraceuticals in India: 2026 Global Guide
+          How to Manufacture Export-Ready Nutraceuticals in India: 2026 Global
+          Guide
         </title>
         <meta
           name="description"
@@ -78,7 +79,7 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
             <div className="item active">
               <Link to="/nutrition/bulk-inquiry-nutrition">
                 <p className="text-white m-0 f-rob-reg f-14 lp-2">
-                  Bulk Inquiry Now 
+                  Bulk Inquiry Now
                 </p>
               </Link>
             </div>
@@ -87,9 +88,12 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
       </div>
       <div className="main-content" style={{ marginTop: "150px" }}>
         <section className="blog-main">
-          <div className="container-fluid w-80 p-0">
+          <div className="container-fluid  p-0" style={{ width: "95%" }}>
             <div className="row">
-              <div className="col-12 text-center p-0">
+              <div
+                className="col-12 text-center"
+                style={{ padding: "0px 15px" }}
+              >
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -98,37 +102,57 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                     }
                     alt="bgImage"
                     className="img-fluid w-100 mh-200 object-fit"
-                    style={{ borderRadius: "20px", overflow: "hidden" }}
+                    style={{
+                      borderRadius: "20px",
+                      overflow: "hidden",
+                    }}
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
                     <h1 className="text-white f-rob-bol f-43">
-                      How to Manufacture Export-Ready Nutraceutical Products in India?
+                      How to Manufacture Export-Ready Nutraceutical Products in
+                      India?
                     </h1>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
           <div className="container-fluid w-80">
             <div className="row">
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-
                     {/* Intro */}
                     <div className="blog-section">
-                      <p className="blog-text">
-                        The global demand for wellness has undergone a seismic shift. No longer is the world looking for just any "health pill"; today's international consumer demands clinical transparency, sustainable sourcing, and absolute purity.
+                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                        The global demand for wellness has undergone a seismic
+                        shift. No longer is the world looking for just any
+                        "health pill"; today's international consumer demands
+                        clinical transparency, sustainable sourcing, and
+                        absolute purity.
+                      </p>
+                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                        For Indian entrepreneurs, this presents a goldmine. With
+                        the Indian nutraceutical market racing toward a{" "}
+                        <strong>$64 billion</strong> valuation by 2030, the path
+                        to going global is wide open for those who prioritize
+                        quality.
+                      </p>
+                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                        However, moving from a local favorite to an
+                        international bestseller requires more than a good
+                        recipe; it requires an "Export-Ready" mindset.
                       </p>
                       <p className="blog-text">
-                        For Indian entrepreneurs, this presents a goldmine. With the Indian nutraceutical market racing toward a <strong>$64 billion</strong> valuation by 2030, the path to going global is wide open for those who prioritize quality.
-                      </p>
-                      <p className="blog-text">
-                        However, moving from a local favorite to an international bestseller requires more than a good recipe; it requires an "Export-Ready" mindset.
-                      </p>
-                      <p className="blog-text">
-                        This guide breaks down exactly <strong>how to manufacture export-ready nutraceutical products in India</strong> and why choosing the right partner is your first step toward global dominance.
+                        This guide breaks down exactly{" "}
+                        <strong>
+                          how to manufacture export-ready nutraceutical products
+                          in India
+                        </strong>{" "}
+                        and why choosing the right partner is your first step
+                        toward global dominance.
                       </p>
                     </div>
 
@@ -138,23 +162,34 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                         1. Decoding the Global "Gatekeepers"
                       </h2>
                       <p className="blog-text">
-                        To sell {" "}
-                        <strong><Link
-                        className="blog-text-link"
-                        to="https://www.gomzilifesciences.in/nutrition/white-labelling"
-                      >
-                         dietary supplements and nutraceuticals
-                      </Link></strong>  in markets like the USA, EU, or the UAE, you must speak their regulatory language. You aren't just following Indian FSSAI rules anymore; you are meeting international benchmarks:
+                        To sell{" "}
+                        <strong>
+                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                            dietary supplements and nutraceuticals
+                          </Link>
+                        </strong>{" "}
+                        in markets like the USA, EU, or the UAE, you must speak
+                        their regulatory language. You aren't just following
+                        Indian FSSAI rules anymore; you are meeting
+                        international benchmarks:
                       </p>
                       <ul className="blog-list">
                         <li className="blog-list-item">
-                          <strong>The USA (FDA & cGMP):</strong> Focuses heavily on the "Supplement Facts" panel and strict Current Good Manufacturing Practices (cGMP) under 21 CFR Part 111.
+                          <strong>The USA (FDA & cGMP):</strong> Focuses heavily
+                          on the "Supplement Facts" panel and strict Current
+                          Good Manufacturing Practices (cGMP) under 21 CFR Part
+                          111.
                         </li>
                         <li className="blog-list-item">
-                          <strong>The European Union (EFSA):</strong> Has some of the world's strictest rules regarding "Health Claims." You cannot simply say a product "boosts immunity" without specific clinical backing.
+                          <strong>The European Union (EFSA):</strong> Has some
+                          of the world's strictest rules regarding "Health
+                          Claims." You cannot simply say a product "boosts
+                          immunity" without specific clinical backing.
                         </li>
                         <li className="blog-list-item">
-                          <strong>The Middle East (HALAL & ESMA):</strong> Requires specialized certifications and often demands bilingual labeling in Arabic.
+                          <strong>The Middle East (HALAL & ESMA):</strong>{" "}
+                          Requires specialized certifications and often demands
+                          bilingual labeling in Arabic.
                         </li>
                       </ul>
                     </div>
@@ -165,56 +200,101 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                         2. The Anatomy of an Export-Quality Product
                       </h2>
                       <p className="blog-text">
-                        If you look at the <strong>best supplement companies</strong> in the world, they don't just sell ingredients; they sell trust. To match their level, your manufacturing process must focus on three core pillars:
+                        If you look at the{" "}
+                        <strong>best supplement companies</strong> in the world,
+                        they don't just sell ingredients; they sell trust. To
+                        match their level, your manufacturing process must focus
+                        on three core pillars:
                       </p>
 
                       <h3 className="blog-subsection-title">
                         A. Bioavailability & Advanced Delivery
                       </h3>
                       <p className="blog-text">
-                        Modern consumers are tired of "pill fatigue." The trend is moving toward <strong>effervescent tablets, gummies, and mouth-dissolving strips.</strong> More importantly, your formula must be bioavailable—meaning the body can actually absorb the nutrients. Using technologies like microencapsulation or liposomal delivery can set your brand apart.
+                        Modern consumers are tired of "pill fatigue." The trend
+                        is moving toward{" "}
+                        <strong>
+                          effervescent tablets, gummies, and mouth-dissolving
+                          strips.
+                        </strong>{" "}
+                        More importantly, your formula must be
+                        bioavailable—meaning the body can actually absorb the
+                        nutrients. Using technologies like microencapsulation or
+                        liposomal delivery can set your brand apart.
                       </p>
 
                       <h3 className="blog-subsection-title">
                         B. Clean Label & Sourcing
                       </h3>
                       <p className="blog-text">
-                        "Clean Label" is the biggest buzzword in global <strong>nutraceutical companies in India.</strong> It means your product is free from artificial colors, GMOs, and hidden fillers.
+                        "Clean Label" is the biggest buzzword in global{" "}
+                        <strong>nutraceutical companies in India.</strong> It
+                        means your product is free from artificial colors, GMOs,
+                        and hidden fillers.
                       </p>
                       <p className="blog-text">
-                        Export-ready products must undergo rigorous testing for heavy metals, pesticides, and microbial counts at the raw material stage.
+                        Export-ready products must undergo rigorous testing for
+                        heavy metals, pesticides, and microbial counts at the
+                        raw material stage.
                       </p>
 
                       <h3 className="blog-subsection-title">
                         C. Stability Testing for Global Transit
                       </h3>
                       <p className="blog-text">
-                        Your product might be made in the cool climate of a lab, but it will travel through high-heat shipping containers across the ocean.
+                        Your product might be made in the cool climate of a lab,
+                        but it will travel through high-heat shipping containers
+                        across the ocean.
                       </p>
                       <p className="blog-text">
-                        Export-ready manufacturing includes "Accelerated Stability Testing" to ensure the product doesn't degrade before it reaches the customer in London or New York.
+                        Export-ready manufacturing includes "Accelerated
+                        Stability Testing" to ensure the product doesn't degrade
+                        before it reaches the customer in London or New York.
                       </p>
                     </div>
 
                     {/* SECTION 3 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
-                        3. Why Your Manufacturing Partner is Your Most Critical Asset
+                        3. Why Your Manufacturing Partner is Your Most Critical
+                        Asset
                       </h2>
-                      <p className="blog-text">
-                        Most brands fail not because their idea was bad, but because their manufacturer couldn't scale to international standards.
+                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                        Most brands fail not because their idea was bad, but
+                        because their manufacturer couldn't scale to
+                        international standards.
+                      </p>
+                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                        This is where specialized{" "}
+                        <strong>supplement manufacturers</strong> come into
+                        play. You need a partner who doesn't just "make" the
+                        product but understands the "Science of Export."
+                      </p>
+                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                        <strong>Gomzi Lifesciences</strong> has emerged as a{" "}
+                        <strong>
+                          top nutraceutical third party manufacturer
+                        </strong>{" "}
+                        in India, specifically for brands looking to capture the
+                        global market. They operate out of state-of-the-art
+                        facilities that prioritize R&D and international
+                        documentation.
+                      </p>
+                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                        Whether it's a high-performance protein blend or a
+                        specialized botanical extract, Gomzi Lifesciences
+                        provides the regulatory support and formulation
+                        expertise needed to ensure your product is market-ready
+                        globally.
                       </p>
                       <p className="blog-text">
-                        This is where specialized <strong>supplement manufacturers</strong> come into play. You need a partner who doesn't just "make" the product but understands the "Science of Export."
-                      </p>
-                      <p className="blog-text">
-                        <strong>Gomzi Lifesciences</strong> has emerged as a <strong>top nutraceutical third party manufacturer</strong> in India, specifically for brands looking to capture the global market. They operate out of state-of-the-art facilities that prioritize R&D and international documentation.
-                      </p>
-                      <p className="blog-text">
-                        Whether it's a high-performance protein blend or a specialized botanical extract, Gomzi Lifesciences provides the regulatory support and formulation expertise needed to ensure your product is market-ready globally.
-                      </p>
-                      <p className="blog-text">
-                        By partnering with a <strong>top nutraceutical third party manufacturer,</strong> you delegate the complex headache of audits and quality control to experts, allowing you to focus 100% on marketing and brand building.
+                        By partnering with a{" "}
+                        <strong>
+                          top nutraceutical third party manufacturer,
+                        </strong>{" "}
+                        you delegate the complex headache of audits and quality
+                        control to experts, allowing you to focus 100% on
+                        marketing and brand building.
                       </p>
                     </div>
 
@@ -224,17 +304,27 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                         4. Competitor Analysis: Staying Ahead in 2026
                       </h2>
                       <p className="blog-text">
-                        The market is crowded, but the "premium" segment is still underserved. While many <strong>supplement manufacturers in India</strong> focus on high-volume, low-cost products, the winners are those focusing on "Niche Specialization."
+                        The market is crowded, but the "premium" segment is
+                        still underserved. While many{" "}
+                        <strong>supplement manufacturers in India</strong> focus
+                        on high-volume, low-cost products, the winners are those
+                        focusing on "Niche Specialization."
                       </p>
                       <ul className="blog-list">
                         <li className="blog-list-item">
-                          <strong>Personalized Nutrition:</strong> Formulations tailored for specific age groups or genetic profiles.
+                          <strong>Personalized Nutrition:</strong> Formulations
+                          tailored for specific age groups or genetic profiles.
                         </li>
                         <li className="blog-list-item">
-                          <strong>Sustainability:</strong> Using eco-friendly, plastic-free packaging that appeals to the "Green Consumer" in Europe and the US.
+                          <strong>Sustainability:</strong> Using eco-friendly,
+                          plastic-free packaging that appeals to the "Green
+                          Consumer" in Europe and the US.
                         </li>
                         <li className="blog-list-item">
-                          <strong>Transparency:</strong> Brands that provide a QR code on the bottle that shows the "Certificate of Analysis" for that specific batch are seeing 30% higher customer retention.
+                          <strong>Transparency:</strong> Brands that provide a
+                          QR code on the bottle that shows the "Certificate of
+                          Analysis" for that specific batch are seeing 30%
+                          higher customer retention.
                         </li>
                       </ul>
                     </div>
@@ -246,16 +336,27 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                       </h2>
                       <ol className="blog-list">
                         <li className="blog-list-item">
-                          <strong>Market Selection:</strong> Don't try to export everywhere. Start with one region (e.g., UAE or UK) and study their specific ingredient "Positive List."
+                          <strong>Market Selection:</strong> Don't try to export
+                          everywhere. Start with one region (e.g., UAE or UK)
+                          and study their specific ingredient "Positive List."
                         </li>
                         <li className="blog-list-item">
-                          <strong>Audit the Facility:</strong> Ensure your manufacturer holds <strong>WHO-GMP, ISO 22000, and HACCP</strong> certifications.
+                          <strong>Audit the Facility:</strong> Ensure your
+                          manufacturer holds{" "}
+                          <strong>WHO-GMP, ISO 22000, and HACCP</strong>{" "}
+                          certifications.
                         </li>
                         <li className="blog-list-item">
-                          <strong>Finalize the Label:</strong> Work with a regulatory consultant to ensure your "Supplement Facts" and "Warnings" are 100% compliant with the destination country.
+                          <strong>Finalize the Label:</strong> Work with a
+                          regulatory consultant to ensure your "Supplement
+                          Facts" and "Warnings" are 100% compliant with the
+                          destination country.
                         </li>
                         <li className="blog-list-item">
-                          <strong>Documentation:</strong> Secure your <strong>Free Sale Certificate (FSC)</strong> and <strong>Importer Exporter Code (IEC)</strong> from the DGFT.
+                          <strong>Documentation:</strong> Secure your{" "}
+                          <strong>Free Sale Certificate (FSC)</strong> and{" "}
+                          <strong>Importer Exporter Code (IEC)</strong> from the
+                          DGFT.
                         </li>
                       </ol>
                     </div>
@@ -264,14 +365,18 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <p className="blog-text">
-                          <strong>Conclusion</strong>
+                          <h2 className="blog-section-title">Conclusion</h2>
                         </p>
                         <p className="blog-text">
-                          The world is ready for Indian wellness. By combining traditional Ayurvedic wisdom with modern clinical science and world-class manufacturing, your brand can stand shoulder-to-shoulder with global giants. Success in this industry isn't about the loudest marketing; it's about the highest quality.
+                          The world is ready for Indian wellness. By combining
+                          traditional Ayurvedic wisdom with modern clinical
+                          science and world-class manufacturing, your brand can
+                          stand shoulder-to-shoulder with global giants. Success
+                          in this industry isn't about the loudest marketing;
+                          it's about the highest quality.
                         </p>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </div>

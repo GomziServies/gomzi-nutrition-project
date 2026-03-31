@@ -406,7 +406,6 @@
 }
 
 @media (max-width: 575.98px) {
-
   #owl-demo1 .owl-prev {
     left: 36%;
   }
@@ -414,7 +413,6 @@
   #owl-demo1 .owl-next {
     right: 36%;
   }
-
 
   .banner2 {
     width: 60%;
@@ -1067,7 +1065,6 @@
 }
 
 @media (max-width: 575px) {
-
   .expert2 {
     margin-left: -6px !important;
   }
@@ -1359,7 +1356,6 @@
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
-
   #owl-demo9 .owl-prev,
   #owl-demo9 .owl-next {
     top: 98%;
@@ -1487,6 +1483,12 @@
   }
 }
 
+@media (min-width: 375px) and (max-width: 768px) {
+  .mt-5 {
+    margin-top: 1rem !important;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   #owl-demo9 .owl-prev {
     left: 42%;
@@ -1599,7 +1601,6 @@
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-
   #fwg-owl .owl-prev,
   #fwg-owl .owl-next {
     padding: 6px 10px !important;
@@ -1677,34 +1678,34 @@
     border-radius: 6px;
     padding: 9px !important;
     margin-left: 5px !important;
-}
-.book_btn .btn2 {
-  color: #000;
-  font-weight: 500;
-  font-size: 16px;
-  border: 3px solid #000;
-  border-radius: 6px;
-  padding: 9px !important;
-}
-.resip p {
-  margin-top: 20px;
-  line-height: 30px;
-  margin-top: 15px !important;
-}
-.resip span {
-  margin-top: 20px;
-  font-size: 16px !important;
-  line-height: 30px;
-}
-.meal p {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 0.30 !important;
-  font-family: Nunito, sans-serif;
-  text-transform: capitalize !important;
-  margin-top: 45px;
-  margin-bottom: 10px;
-}
+  }
+  .book_btn .btn2 {
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    border: 3px solid #000;
+    border-radius: 6px;
+    padding: 9px !important;
+  }
+  .resip p {
+    margin-top: 20px;
+    line-height: 30px;
+    margin-top: 15px !important;
+  }
+  .resip span {
+    margin-top: 20px;
+    font-size: 16px !important;
+    line-height: 30px;
+  }
+  .meal p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 0.3 !important;
+    font-family: Nunito, sans-serif;
+    text-transform: capitalize !important;
+    margin-top: 45px;
+    margin-bottom: 10px;
+  }
 }
 @media (max-width: 575px) {
   .meal p {
@@ -1726,21 +1727,21 @@
     margin: 0;
     padding: 0;
     width: calc(100% - 30px) !important;
-}
-.thumbnail-image img{
-  width: 60px !important;
-}
+  }
+  .thumbnail-image img {
+    width: 60px !important;
+  }
   .owl-dots {
     position: absolute;
     left: 39% !important;
     bottom: -35px;
-}
-#owl-demo2 .owl-dots {
-  left: 35%;
-  position: absolute;
-  left: 20% !important;
-  top: 102%;
-}
+  }
+  #owl-demo2 .owl-dots {
+    left: 35%;
+    position: absolute;
+    left: 20% !important;
+    top: 102%;
+  }
   #owl-demo13 .owl-prev {
     left: 37%;
   }

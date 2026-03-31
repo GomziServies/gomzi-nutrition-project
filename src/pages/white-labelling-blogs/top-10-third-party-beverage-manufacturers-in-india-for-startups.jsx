@@ -8,6 +8,39 @@ import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
+import { Accordion } from "react-bootstrap";
+
+const faqData = [
+  {
+    eventKey: "faq1",
+    question: " 1. What is the typical MOQ for startups?",
+    answer:
+      "   Usually 3,000–10,000 units, some manufacturers accept smaller pilot batches.",
+  },
+  {
+    eventKey: "faq2",
+    question: "2. Can I get custom flavors made?",
+    answer: " Yes, most manufacturers provide R&D and formulation support.",
+  },
+  {
+    eventKey: "faq3",
+    question: " 3. How long does production take?",
+    answer: "  4-8 weeks depending on batch size and packaging type.",
+  },
+  {
+    eventKey: "faq4",
+    question: "4. What certifications should I look for in a manufacturer?",
+    answer:
+      "Look for FSSAI approval, GMP, and HACCP certifications to ensure compliance with safety and quality standards.",
+  },
+  {
+    eventKey: "faq5",
+    question: "5. Are there affordable options for startups?",
+    answer:
+      "  Yes, Gomzilifesciences offer low-MOQ and flexible pricing to help startups launch their beverages without large upfront costs.",
+  },
+];
+
 function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
@@ -85,9 +118,12 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
       </div>
       <div className="main-content" style={{ marginTop: "150px" }}>
         <section className="blog-main">
-          <div className="container-fluid w-80 p-0">
+          <div className="container-fluid  p-0" style={{ width: "95%" }}>
             <div className="row">
-              <div className="col-12 text-center p-0">
+              <div
+                className="col-12 text-center"
+                style={{ padding: "0px 15px" }}
+              >
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -96,7 +132,10 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                     }
                     alt="bgImage"
                     className="img-fluid w-100 mh-200 object-fit"
-                    style={{ borderRadius: "20px", overflow: "hidden" }}
+                    style={{
+                      borderRadius: "20px",
+                      overflow: "hidden",
+                    }}
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -109,6 +148,7 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
               </div>
             </div>
           </div>
+
           <div className="container-fluid w-80">
             <div className="row">
               <div className="col-12 text-center mb-4 px-4">
@@ -172,10 +212,7 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                         startup, that focus should be on brand and sales, not
                         machinery.
                         <strong>
-                          <Link
-                            className="blog-text-link"
-                            to="https://www.gomzilifesciences.in/third-party-manufacturing/energy-drinks"
-                          >
+                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/energy-drinks">
                             Third party beverage manufacturers in India
                           </Link>
                         </strong>{" "}
@@ -190,22 +227,21 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                       </h2>
                       <p className="blog-text">
                         This is the list of 10 companies/service providers
-                        highly relevant for startups looking for <strong>low MOQ</strong> and
-                        specialized contract manufacturing in India:
+                        highly relevant for startups looking for{" "}
+                        <strong>low MOQ</strong> and specialized contract
+                        manufacturing in India:
                       </p>
                       <ol className="blog-list">
                         <li className="blog-list-item">
-                            <strong>
-                          <Link
-                            className="blog-text-link"
-                            to="https://www.gomzilifesciences.in/"
-                          >
-                           Gomzilifesciences
-                          </Link>
-                        </strong>{" "} - Specializes in
-                          Sports Nutrition, Energy Drinks, and Functional
-                          Beverages. It is one of the trusted and affordable
-                          third party energy drink manufacturers in india.
+                          <strong>
+                            <Link to="https://www.gomzilifesciences.in/">
+                              Gomzilifesciences
+                            </Link>
+                          </strong>{" "}
+                          - Specializes in Sports Nutrition, Energy Drinks, and
+                          Functional Beverages. It is one of the trusted and
+                          affordable third party energy drink manufacturers in
+                          india.
                         </li>
                         <li className="blog-list-item">
                           <strong>DH Brands Pvt. Ltd. (Mahaveer Inc)</strong> -
@@ -265,11 +301,15 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                       </h2>
                       <p className="blog-text">
                         India's beverage sector is rapidly growing due to
-                        increasing demand for <strong> functional drinks, energy
-                        beverages, and health-focused beverages.</strong> Local
-                        availability of raw materials, cost efficiency, and
-                        skilled production teams make India a preferred hub for
-                        beverage contract manufacturing services.
+                        increasing demand for{" "}
+                        <strong>
+                          {" "}
+                          functional drinks, energy beverages, and
+                          health-focused beverages.
+                        </strong>{" "}
+                        Local availability of raw materials, cost efficiency,
+                        and skilled production teams make India a preferred hub
+                        for beverage contract manufacturing services.
                       </p>
 
                       <h3 className="blog-subsection-title">
@@ -306,8 +346,8 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                         Cracking the Code: Low MOQ &amp; Pricing Structure
                       </h2>
                       <p className="blog-text">
-                        The most common hurdle for new brands is the <strong>Minimum
-                        Order Quantity (MOQ).</strong>
+                        The most common hurdle for new brands is the{" "}
+                        <strong>Minimum Order Quantity (MOQ).</strong>
                       </p>
 
                       <h3 className="blog-subsection-title">
@@ -318,10 +358,11 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                         aware that the initial financial investment is more than
                         just the cost per unit. This investment includes
                         one-time charges for tooling and R&amp;D. The standard
-                        starting point for production is often between <strong>1,000 to
-                        5,000 liters</strong> per batch, depending on the complexity of
-                        your drink. Always verify the manufacturer's definition
-                        of "low" before committing.
+                        starting point for production is often between{" "}
+                        <strong>1,000 to 5,000 liters</strong> per batch,
+                        depending on the complexity of your drink. Always verify
+                        the manufacturer's definition of "low" before
+                        committing.
                       </p>
 
                       <h3 className="blog-subsection-title">
@@ -335,8 +376,11 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                         bottles) and the complexity of your formulation. Expect
                         an upfront cost for Recipe Development and Formulation
                         (often ₹1.5 Lakh to ₹4 Lakh). This is a vital investment
-                        to ensure your <strong>private label beverage manufacturers
-                        India</strong> partner creates a shelf-stable product you can
+                        to ensure your{" "}
+                        <strong>
+                          private label beverage manufacturers India
+                        </strong>{" "}
+                        partner creates a shelf-stable product you can
                         confidently sell.
                       </p>
                     </div>
@@ -372,7 +416,8 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                           Start small and scale gradually
                         </li>
                         <li className="blog-list-item">
-                          Focus on <strong>unique flavors or functional benefits</strong>
+                          Focus on{" "}
+                          <strong>unique flavors or functional benefits</strong>
                         </li>
                         <li className="blog-list-item">
                           Maintain quality &amp; compliance at every step
@@ -381,83 +426,67 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                           Test market response before scaling production
                         </li>
                         <li className="blog-list-item">
-                          Choose a manufacturer that offers <strong>end-to-end support</strong>
+                          Choose a manufacturer that offers{" "}
+                          <strong>end-to-end support</strong>
                         </li>
                       </ul>
                     </div>
 
                     {/* FAQs */}
+
                     <div className="blog-section">
                       <h2 className="blog-section-title">FAQs</h2>
 
-                      <h3 className="blog-subsection-title">
-                        Q1: What is the typical MOQ for startups?
-                      </h3>
-                      <p className="blog-text">
-                        Usually 3,000–10,000 units, some manufacturers accept
-                        smaller pilot batches.
-                      </p>
-
-                      <h3 className="blog-subsection-title">
-                        Q2: Can I get custom flavors made?
-                      </h3>
-                      <p className="blog-text">
-                        Yes, most manufacturers provide <strong>R&amp;D and formulation
-                        support.</strong>
-                      </p>
-
-                      <h3 className="blog-subsection-title">
-                        Q3: How long does production take?
-                      </h3>
-                      <p className="blog-text">
-                        4–8 weeks depending on batch size and packaging type.
-                      </p>
-
-                      <h3 className="blog-subsection-title">
-                        Q4: What certifications should I look for in a
-                        manufacturer?
-                      </h3>
-                      <p className="blog-text">
-                        Look for <strong>FSSAI approval, GMP, and HACCP</strong> certifications
-                        to ensure compliance with safety and quality standards.
-                      </p>
-
-                      <h3 className="blog-subsection-title">
-                        Q5: Are there affordable options for startups?
-                      </h3>
-                      <p className="blog-text">
-                        Yes,<strong> Gomzilifesciences</strong> offer <strong>low-MOQ</strong> and flexible
-                        pricing to help startups launch their beverages without
-                        large upfront costs.
-                      </p>
+                      <Accordion defaultActiveKey={["faq1"]} alwaysOpen>
+                        {faqData.map((faq) => (
+                          <Accordion.Item
+                            key={faq.eventKey}
+                            eventKey={faq.eventKey}
+                            className="mt-3 p-4"
+                          >
+                            <Accordion.Header className="faq-question">
+                              {faq.question}
+                            </Accordion.Header>
+                            <Accordion.Body className="faq-answer">
+                              {faq.answer}
+                            </Accordion.Body>
+                          </Accordion.Item>
+                        ))}
+                      </Accordion>
                     </div>
 
                     {/* Conclusion */}
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <p className="blog-text">
-                          <strong>
+                          <h2 className="blog-section-title">
+                            {" "}
                             Conclusion: Launch Your Brand, Not a Factory!
-                          </strong>
+                          </h2>
                         </p>
                         <p className="blog-text">
                           Starting a beverage brand in India is a thrilling and
                           rewarding venture. The most critical decision for any
                           startup is choosing whether to manufacture or
                           outsource. By leveraging the expertise and
-                          infrastructure of established <strong>third party beverage
-                          manufacturers in India</strong>, you successfully bypass the
-                          massive upfront costs and regulatory complexities of
-                          plant ownership.
+                          infrastructure of established{" "}
+                          <strong>
+                            third party beverage manufacturers in India
+                          </strong>
+                          , you successfully bypass the massive upfront costs
+                          and regulatory complexities of plant ownership.
                         </p>
                         <p className="blog-text">
-                          We've shown you that finding a <strong>low MOQ beverage
-                          manufacturer India</strong> is entirely possible. By focusing
-                          on partners who specialize in your niche—whether it's
-                          <strong>functional beverage manufacturers in India</strong> like Gomzi
-                          Lifesciences or specialized juice co-packers—you
-                          accelerate your speed to market and ensure quality
-                          control.
+                          We've shown you that finding a{" "}
+                          <strong>low MOQ beverage manufacturer India</strong>{" "}
+                          is entirely possible. By focusing on partners who
+                          specialize in your niche—whether it's
+                          <strong>
+                            functional beverage manufacturers in India
+                          </strong>{" "}
+                          like Gomzi Lifesciences or specialized juice
+                          co-packers—you accelerate your speed to market and
+                          ensure quality control.
                         </p>
                       </div>
                     </div>
