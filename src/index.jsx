@@ -53,6 +53,16 @@ const RedirectFromHtml = ({ children }) => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "virtual_pageview",
+      page_path: location.pathname + location.search,
+      page_title: document.title,
+      page_location: window.location.href,
+    });
+  }, [location.pathname, location.search]);
+
   return children;
 };
 
