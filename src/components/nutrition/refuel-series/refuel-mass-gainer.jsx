@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import SelectableList from "../products/SelectableList";
+import "../../../assets/css/nutrition.css";
 
 const RefuelSeriesMassGainer = () => {
   const [currentProduct, setCurrentProduct] = useState("1kg-Chocolate");
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [activeSize, setActiveSize] = useState("1kg");
   const [activeFlavor, setActiveFlavor] = useState("Chocolate");
-  const [opacity, setOpacity] = useState(1);
+  const [, setOpacity] = useState(1);
   const imageRef = useRef(null);
 
   useEffect(() => {
@@ -22,8 +23,12 @@ const RefuelSeriesMassGainer = () => {
   }, [activeImageIndex]);
 
   const productImages = {
-    "1kg-Chocolate": ["/assets/images/nutrition/refuel-muscle-matrix-1-1kg.webp"],
-    "2kg-Chocolate": ["/assets/images/nutrition/refuel-muscle-matrix-1-2kg.webp"],
+    "1kg-Chocolate": [
+      "/assets/images/nutrition/refuel-muscle-matrix-1-1kg.webp",
+    ],
+    "2kg-Chocolate": [
+      "/assets/images/nutrition/refuel-muscle-matrix-1-2kg.webp",
+    ],
   };
 
   const sizeOptions = [
@@ -61,12 +66,8 @@ const RefuelSeriesMassGainer = () => {
             <div className="col-lg-12 px-md-3 mb-2 mt-2 mt-md-0 order-1">
               <div className="item mb-3">
                 <div
-                  className="product-image-container"
+                  className="product-image-container transition-opacity"
                   ref={imageRef}
-                  style={{
-                    opacity: opacity,
-                    transition: "opacity 0.3s ease-in-out",
-                  }}
                 >
                   <img
                     src={productImages[currentProduct]}

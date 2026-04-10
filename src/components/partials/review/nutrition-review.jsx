@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import LoginModal from "../../../assets/js/popup/login";
 import Swal from "sweetalert2";
 import {
   axiosInstance,
   publicAxiosInstance,
 } from "../../../assets/js/config/api";
+import "../../../assets/css/nutrition.css";
 
 function NutritionReviewSection({ product_id }) {
   const [star, setStar] = useState(1);
@@ -65,29 +66,22 @@ function NutritionReviewSection({ product_id }) {
           setShowModal(true);
         } else {
           console.error("Error:", error);
-          // Swal.fire({
-          //     title: 'Error',
-          //     text: error.message || 'Failed to submit feedback. Please try again later.',
-          //     icon: 'error',
-          // });
         }
       });
   };
 
-  useEffect(() => {
-    getBookFeedback();
-  }, []);
-
-  const getBookFeedback = () => {
+  const getBookFeedback = useCallback(() => {
     publicAxiosInstance
       .get(`/feedback/products?product_id=${product_id}`)
       .then((response) => {
         const { data } = response;
         if (data && data.status === 200) {
           const feedback = data.data;
+
           if (feedback && feedback.length > 0) {
             let totalPoints = 0;
             let feedbackCount = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+
             feedback.forEach((feedbackItem) => {
               totalPoints += feedbackItem.feedback_point;
               feedbackCount[feedbackItem.feedback_point]++;
@@ -102,8 +96,8 @@ function NutritionReviewSection({ product_id }) {
               feedbackCountPercentage[i] =
                 (feedbackCount[i] / feedback.length) * 100 || 0;
             }
-            setStarPercentages(feedbackCountPercentage);
 
+            setStarPercentages(feedbackCountPercentage);
             setReviews(feedback);
           }
         }
@@ -116,6 +110,15 @@ function NutritionReviewSection({ product_id }) {
           icon: "error",
         });
       });
+  }, [product_id]);
+
+  useEffect(() => {
+    getBookFeedback();
+  }, [getBookFeedback]);
+
+  const getWidthClass = (value) => {
+    const rounded = Math.round(value / 10) * 10;
+    return `w-${rounded}`;
   };
 
   return (
@@ -135,10 +138,9 @@ function NutritionReviewSection({ product_id }) {
                   {[1, 2, 3, 4, 5].map((value) => (
                     <i
                       key={value}
-                      className="fas fa-star"
-                      style={{
-                        color: averageRating >= value ? "#f7c434" : "gray",
-                      }}
+                      className={`fas fa-star nutrition-rating-star ${
+                        averageRating >= value ? "active" : ""
+                      }`}
                     ></i>
                   ))}
                   <p id="div_total_review">{totalReviews} reviews</p>
@@ -149,8 +151,9 @@ function NutritionReviewSection({ product_id }) {
                   {[1, 2, 3, 4, 5].map((value) => (
                     <i
                       key={value}
-                      style={{ color: value <= star ? "#f7c434" : "gray" }}
-                      className="fas fa-star"
+                      className={`fas fa-star nutrition-rating-star ${
+                        star >= value ? "active" : ""
+                      }`}
                       onClick={() => handleStarClick(value)}
                     ></i>
                   ))}
@@ -173,7 +176,6 @@ function NutritionReviewSection({ product_id }) {
                 </button>
               </div>
               <div className="col-md-4">
-                {/* Star 5 */}
                 <div>
                   <div className="mell">
                     <p className="my-2" id="star_5">
@@ -183,17 +185,16 @@ function NutritionReviewSection({ product_id }) {
                       {[...Array(5)].map((_, index) => (
                         <i
                           key={index}
-                          className="fas fa-star"
-                          style={{ color: "#f7c434" }}
+                          className="fas fa-star nutrition-rating-star active"
                         ></i>
                       ))}
                     </div>
                   </div>
-                  <div className="progress" style={{ height: "2px" }}>
+                  <div className="progress height-1">
                     <div
-                      className="progress-bar bg-warning"
-                      role="progressbar"
-                      style={{ width: `${starPercentages[5]}%` }}
+                      className={`progress-bar bg-warning progress-bar-custom ${getWidthClass(
+                        starPercentages[5],
+                      )}`}
                       aria-valuenow={starPercentages[5]}
                       aria-valuemin="0"
                       aria-valuemax="100"
@@ -201,7 +202,6 @@ function NutritionReviewSection({ product_id }) {
                   </div>
                 </div>
 
-                {/* Star 4 */}
                 <div>
                   <div className="mell">
                     <p className="my-2" id="star_4">
@@ -211,17 +211,16 @@ function NutritionReviewSection({ product_id }) {
                       {[...Array(4)].map((_, index) => (
                         <i
                           key={index}
-                          className="fas fa-star"
-                          style={{ color: "#f7c434" }}
+                          className="fas fa-star nutrition-rating-star active"
                         ></i>
                       ))}
                     </div>
                   </div>
-                  <div className="progress" style={{ height: "2px" }}>
+                  <div className="progress height-1">
                     <div
-                      className="progress-bar bg-warning"
-                      role="progressbar"
-                      style={{ width: `${starPercentages[4]}%` }}
+                      className={`progress-bar bg-warning progress-bar-custom ${getWidthClass(
+                        starPercentages[4],
+                      )}`}
                       aria-valuenow={starPercentages[4]}
                       aria-valuemin="0"
                       aria-valuemax="100"
@@ -229,8 +228,6 @@ function NutritionReviewSection({ product_id }) {
                   </div>
                 </div>
 
-                {/* Repeat for Star 3, 2, and 1 */}
-                {/* Star 3 */}
                 <div>
                   <div className="mell">
                     <p className="my-2" id="star_3">
@@ -240,17 +237,16 @@ function NutritionReviewSection({ product_id }) {
                       {[...Array(3)].map((_, index) => (
                         <i
                           key={index}
-                          className="fas fa-star"
-                          style={{ color: "#f7c434" }}
+                          className="fas fa-star nutrition-rating-star active"
                         ></i>
                       ))}
                     </div>
                   </div>
-                  <div className="progress" style={{ height: "2px" }}>
+                  <div className="progress height-1">
                     <div
-                      className="progress-bar bg-warning"
-                      role="progressbar"
-                      style={{ width: `${starPercentages[3]}%` }}
+                      className={`progress-bar bg-warning progress-bar-custom ${getWidthClass(
+                        starPercentages[3],
+                      )}`}
                       aria-valuenow={starPercentages[3]}
                       aria-valuemin="0"
                       aria-valuemax="100"
@@ -258,7 +254,6 @@ function NutritionReviewSection({ product_id }) {
                   </div>
                 </div>
 
-                {/* Star 2 */}
                 <div>
                   <div className="mell">
                     <p className="my-2" id="star_2">
@@ -268,17 +263,16 @@ function NutritionReviewSection({ product_id }) {
                       {[...Array(2)].map((_, index) => (
                         <i
                           key={index}
-                          className="fas fa-star"
-                          style={{ color: "#f7c434" }}
+                          className="fas fa-star nutrition-rating-star active"
                         ></i>
                       ))}
                     </div>
                   </div>
-                  <div className="progress" style={{ height: "2px" }}>
+                  <div className="progress height-1">
                     <div
-                      className="progress-bar bg-warning"
-                      role="progressbar"
-                      style={{ width: `${starPercentages[2]}%` }}
+                      className={`progress-bar bg-warning progress-bar-custom ${getWidthClass(
+                        starPercentages[2],
+                      )}`}
                       aria-valuenow={starPercentages[2]}
                       aria-valuemin="0"
                       aria-valuemax="100"
@@ -286,7 +280,6 @@ function NutritionReviewSection({ product_id }) {
                   </div>
                 </div>
 
-                {/* Star 1 */}
                 <div>
                   <div className="mell">
                     <p className="my-2" id="star_1">
@@ -296,17 +289,16 @@ function NutritionReviewSection({ product_id }) {
                       {[...Array(1)].map((_, index) => (
                         <i
                           key={index}
-                          className="fas fa-star"
-                          style={{ color: "#f7c434" }}
+                          className="fas fa-star nutrition-rating-star active"
                         ></i>
                       ))}
                     </div>
                   </div>
-                  <div className="progress" style={{ height: "2px" }}>
+                  <div className="progress height-1">
                     <div
-                      className="progress-bar bg-warning"
-                      role="progressbar"
-                      style={{ width: `${starPercentages[1]}%` }}
+                      className={`progress-bar bg-warning progress-bar-custom ${getWidthClass(
+                        starPercentages[1],
+                      )}`}
                       aria-valuenow={starPercentages[1]}
                       aria-valuemin="0"
                       aria-valuemax="100"
@@ -315,7 +307,7 @@ function NutritionReviewSection({ product_id }) {
                 </div>
               </div>
               <div className="col-md-6 mt-5">
-                <h6 style={{ fontSize: "25px" }}>Reviews</h6>
+                <h6 className="fts-25">Reviews</h6>
                 <div className="revi" id="div_review_codeblock">
                   {reviews.map((feedback, index) => (
                     <div key={index} className="mt-2 mb-4 meal">
@@ -326,13 +318,9 @@ function NutritionReviewSection({ product_id }) {
                       {[1, 2, 3, 4, 5].map((value) => (
                         <i
                           key={value}
-                          className="fas fa-star"
-                          style={{
-                            color:
-                              feedback.feedback_point >= value
-                                ? "#f7c434"
-                                : "gray",
-                          }}
+                          className={`fas fa-star nutrition-rating-star ${
+                            feedback.feedback_point >= value ? "active" : ""
+                          }`}
                         ></i>
                       ))}
                       <span className="w-100 d-block">

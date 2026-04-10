@@ -31,14 +31,6 @@ function GomziNutritionFatLossCombo() {
   const canonicalUrl = window.location.href;
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -47,10 +39,10 @@ function GomziNutritionFatLossCombo() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -69,7 +61,7 @@ function GomziNutritionFatLossCombo() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -78,26 +70,25 @@ function GomziNutritionFatLossCombo() {
     }
   };
 
-  const addProductInCart = async (data) => {
-    try {
-      const response = await axiosInstance.post("/order-cart/add-item", {
-        item_id: data.id,
-        quantity: 1,
-        item_type: "FG_MEAL_PRODUCT",
-      });
-      if (response.data.response === "OK") {
-        setProductData(data);
-        // setMenuOpen(!menuOpen);
-        window.location.href = "/nutrition/cart";
-        localStorage.removeItem("cartAvailable");
-        localStorage.removeItem("productCartAvailable");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const addProductInCart = async (data) => {
+      try {
+        const response = await axiosInstance.post("/order-cart/add-item", {
+          item_id: data.id,
+          quantity: 1,
+          item_type: "FG_MEAL_PRODUCT",
+        });
+        if (response.data.response === "OK") {
+          setProductData(data);
+          window.location.href = "/nutrition/cart";
+          localStorage.removeItem("cartAvailable");
+          localStorage.removeItem("productCartAvailable");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     const localData = JSON.parse(localStorage.getItem("productCartAvailable"));
     const dataAvailable = JSON.parse(localStorage.getItem("cartAvailable"));
     if (localData && dataAvailable) {
@@ -134,6 +125,15 @@ function GomziNutritionFatLossCombo() {
   useEffect(() => {
     const addToCart = localStorage.getItem("addtocart");
     if (addToCart === "true") {
+      const addtocartdata = {
+        id: "6616385f47003e22aea8a103",
+        img: "/assets/images/nutrition/fat-loss-combo-1.webp",
+        name: "Mass Gainer Powder-1kg + Ignite Fat Burner Pre-Workout",
+        price: "9098",
+        discount: "5000",
+        size: "Combo - 1",
+        dis_point: "45%",
+      };
       setTimeout(() => {
         setProductData(addtocartdata);
         setMenuOpen(true);
@@ -146,7 +146,7 @@ function GomziNutritionFatLossCombo() {
     <>
       <Helmet>
         <title>
-          Gomzi Nutrition Fat Loss Combo - Effective Weight Loss & Metabolism
+          Gomzi Lifescience Fat Loss Combo - Effective Weight Loss & Metabolism
           Boost
         </title>
         <meta
@@ -333,8 +333,9 @@ function GomziNutritionFatLossCombo() {
                       <div>
                         <p className="ql-align-justify f-20 mb-1">
                           Total price:{" "}
-                          <b style={{ color: "#86c33a" }}>₹7,730</b>
-                          {/* &nbsp;&nbsp;<del>₹9,098</del> */}
+                          <b className="certified-compliant-div-hspan">
+                            ₹7,730
+                          </b>
                         </p>
                       </div>
                     </div>
@@ -346,7 +347,6 @@ function GomziNutritionFatLossCombo() {
                               <b>Whey Protein Isolate - 1kg</b>
                             </p>
                             <p className="ql-align-justify f-20 mb-1">
-                              {/* <del>₹2,250 </del>&nbsp;&nbsp; */}
                               <b>₹3,830</b>
                             </p>
                           </div>
@@ -358,7 +358,6 @@ function GomziNutritionFatLossCombo() {
                               <b>Spark EAA - 250 gm</b>
                             </p>
                             <p className="ql-align-justify f-20 mb-1">
-                              {/* <del>₹1,899</del>&nbsp;&nbsp; */}
                               <b>₹1,780</b>
                             </p>
                           </div>
@@ -370,7 +369,6 @@ function GomziNutritionFatLossCombo() {
                               <b>Ignite Fat Burner Pre-Workout - 250 gm</b>
                             </p>
                             <p className="ql-align-justify f-20 mb-1">
-                              {/* <del>₹1,599</del>&nbsp;&nbsp; */}
                               <b>₹2,120</b>
                             </p>
                           </div>
@@ -452,11 +450,11 @@ function GomziNutritionFatLossCombo() {
                         <div className="descriptionShow text-secondary">
                           <p>
                             <strong>
-                              Gomzi Nutrition Whey Protein Isolate
+                              Gomzi Lifescience Whey Protein Isolate
                             </strong>
                           </p>
                           <p className="mb-2">
-                            Gomzi Nutrition Whey Protein Isolate is a 100%
+                            Gomzi Lifescience Whey Protein Isolate is a 100%
                             vegetarian, pure protein that boasts a single
                             ingredient profile offering exactly what's on its
                             label. The supplement is made in a GMP-compliant
@@ -501,7 +499,7 @@ function GomziNutritionFatLossCombo() {
                             boundaries.
                           </p>
                           <p>
-                            <strong>Gomzi Nutrition Whey Spark EAA</strong>
+                            <strong>Gomzi Lifescience Whey Spark EAA</strong>
                           </p>
                           <p className="mb-2">
                             SPARK EAA is an advanced science-based solution that

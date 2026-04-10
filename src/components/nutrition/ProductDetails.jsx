@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import AddtoCartOffCanvas from "../addtocartcanvas";
 import ProductPhotoSection from "./productPhotoSection";
+import "../../assets/css/nutrition.css";
 
 const SizeSelector = ({ activeDiv, handleClick }) => {
   return (
@@ -82,8 +83,9 @@ const ProductTitle = ({ currentProduct }) => {
       {Object.entries(titles).map(([key, title]) => (
         <h1
           key={key}
-          className="f-rob-bol f-22 text-bold"
-          style={{ display: currentProduct === key ? "block" : "none" }}
+          className={`f-rob-bol f-22 text-bold ${
+            currentProduct === key ? "show" : "hide"
+          }`}
         >
           {title}
         </h1>
@@ -103,8 +105,9 @@ const PriceDisplay = ({ currentProduct }) => {
       {Object.entries(prices).map(([key, price]) => (
         <div
           key={key}
-          className="d-inline-block"
-          style={{ display: currentProduct === key ? "block" : "none" }}
+          className={`d-inline-block${
+            currentProduct === key ? "show" : "hide"
+          }`}
         >
           <span className="d-inline-block mr-2 f-rob-bol f-20 text-red"></span>
           <span className="d-inline-block mr-2 f-rob-bol f-22">{price}</span>
@@ -140,8 +143,9 @@ const AddToCartButton = ({
             <button
               key={key}
               onClick={() => toggleMenu(addtocartData[key])}
-              style={{ display: currentProduct === key ? "block" : "none" }}
-              className="bg-yellow text-uppercase px-3 px-lg-5 text-white f-16 f-rob-bol rate-btn"
+              className={`bg-yellow text-uppercase px-3 px-lg-5 text-white f-16 f-rob-bol rate-btn ${
+                currentProduct === key ? "show" : "hide"
+              }`}
             >
               Add to Cart
             </button>

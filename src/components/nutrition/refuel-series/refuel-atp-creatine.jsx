@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import SelectableList from "../products/SelectableList";
+import "../../../assets/css/nutrition.css";
 
 const RefuelSeriesATPCreatine = () => {
   const [currentProduct, setCurrentProduct] = useState("250g-Lemon");
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [activeSize, setActiveSize] = useState("250g");
   const [activeFlavor, setActiveFlavor] = useState("Lemon");
-  const [opacity, setOpacity] = useState(1);
+  const [, setOpacity] = useState(1);
   const imageRef = useRef(null);
 
   useEffect(() => {
@@ -60,12 +61,8 @@ const RefuelSeriesATPCreatine = () => {
             <div className="col-lg-12 px-md-3 mb-2 mt-2 mt-md-0 order-1">
               <div className="item mb-3">
                 <div
-                  className="product-image-container"
+                  className="product-image-container transition-opacity"
                   ref={imageRef}
-                  style={{
-                    opacity: opacity,
-                    transition: "opacity 0.3s ease-in-out",
-                  }}
                 >
                   <img
                     src={productImages[currentProduct]}

@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import HomeFooter from "../../components/partials/Footer/footer";
 import { axiosInstance } from "../../assets/js/config/api";
+import "../../assets/css/nutrition.css";
 
 function UserProfile() {
   const [formData, setFormData] = useState({
@@ -33,7 +34,7 @@ function UserProfile() {
     try {
       const response = await axiosInstance.post(
         "/file-upload",
-        formDataForUpload
+        formDataForUpload,
       );
       const photoUrl = response.data.data.fileURLs[0];
 
@@ -76,7 +77,7 @@ function UserProfile() {
     try {
       const response = await axiosInstance.post(
         "/account/update-profile",
-        formData
+        formData,
       );
       if (response.data.data) {
         getUserData();
@@ -133,19 +134,15 @@ function UserProfile() {
         <meta name="keywords" content="" />
       </Helmet>
       <NutritionHeader />
-      <Container className="margintop-nutrition mb-5" >
-        <form
-          onSubmit={handleSubmit}
-          className="border p-4 rounded"
-          style={{ marginTop: "20px" }}
-        >
+      <Container className="margintop-nutrition mb-5">
+        <form onSubmit={handleSubmit} className="border p-4 rounded mt-20">
           <h4 className="border-bottom pb-2 mb-4">User Profile</h4>
           <Row className="align-items-center mb-4">
             <Col md={2} className="text-center">
               <img
                 alt="User"
+                className="br-50-width-100-height-100"
                 src={formData.profilePhoto}
-                style={{ borderRadius: '50%', width: '100px', height: '100px' }}
               />
             </Col>
             <Col md={4}>
@@ -154,7 +151,7 @@ function UserProfile() {
               </h4>
               <input
                 accept="image/*"
-                style={{ display: "none" }}
+                className="d-none "
                 id="profile-photo-upload"
                 type="file"
                 onChange={handlePhotoChange}
@@ -236,11 +233,7 @@ function UserProfile() {
               </Form.Group>
             </Col>
           </Row>
-          <Button
-            type="submit"
-            className="btn-primary mt-4"
-            style={{ marginRight: "10px" }}
-          >
+          <Button type="submit" className="btn-primary mt-4 mr-10">
             Save Changes
           </Button>
         </form>

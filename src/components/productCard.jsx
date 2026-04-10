@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import "../assets/css/nutrition.css";
 
 const ProductCard = ({
   imageSrc,
@@ -21,8 +22,6 @@ const ProductCard = ({
               <span className="lazy-load-image-background blur lazy-load-image-loaded">
                 <LazyLoadImage
                   src={imageSrc}
-                  // Alt text is intentionally left empty because the product name is already displayed as text below the image
-                  // This prevents screen readers from reading the same information twice
                   alt=""
                   className="img-fluid mx-auto product-img"
                   effect="blur"
@@ -44,21 +43,12 @@ const ProductCard = ({
         <div className="col-12">
           <div className="d-flex align-items-center justify-content-center my-2">
             <span className="d-flex product-rating f-14 text-secondary">
-              <i
-                className="fas fa-star mr-2"
-                style={{ color: "#fcae2a", lineHeight: "1.5" }}
-              ></i>
+              <i className="fas fa-star mr-2 product-card-rating"></i>
               {rating}
             </span>
           </div>
         </div>
         <div className="d-block align-self-end pb-3">
-          {/* <span className="d-inline-block text-red mr-2 f-rob-bol f-18">
-            <del>{originalPrice}</del>
-          </span>
-          <span className="d-inline-block text-black f-rob-bol f-20">
-            {discountedPrice}
-          </span> */}
           <span className="d-inline-block text-center text-black f-rob-bol f-20">
             {discountedPrice}
           </span>

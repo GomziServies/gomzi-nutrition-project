@@ -151,14 +151,11 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -166,11 +163,7 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                       "/assets/images/nutrition/best-whey-protein-in-india-main.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -189,21 +182,23 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* SECTION - Introduction */}
                     <div className="blog-section">
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         The nutraceutical industry is undergoing a fundamental
                         transformation. For decades, supplements followed a mass
                         production model — one formula for millions. Today,
                         however, both consumers and{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             supplement manufacturers{" "}
                           </Link>
                         </strong>
                         are shifting toward a more personalized approach.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         But today's consumer expects something radically
                         different :
                         <strong>
@@ -212,7 +207,7 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                           lifestyle, and health goals.
                         </strong>
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         This shift is not small. The personalized nutrition
                         market is projected to grow from
                         <strong>
@@ -220,7 +215,7 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                         </strong>
                         , reflecting explosive demand for tailored solutions.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Behind this transformation lies a{" "}
                         <strong>
                           less visible but critical innovation: Micro-batch
@@ -229,7 +224,6 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                       </p>
                     </div>
 
-                    {/* SECTION I - What is Micro-Batch Manufacturing */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         What is Micro-Batch Manufacturing in Nutraceuticals?
@@ -265,7 +259,6 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                       </p>
                     </div>
 
-                    {/* SECTION II - Why Micro-Batch Manufacturing is Rising Now */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Why Micro-Batch Manufacturing is Rising Now
@@ -343,7 +336,12 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                         You can support this statement with clinical research on
                         nutrition formulation and bioavailability from{" "}
                         <strong>
-                          <Link to="https://www.ncbi.nlm.nih.gov/">NCBI</Link>
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.ncbi.nlm.nih.gov/"
+                          >
+                            NCBI
+                          </Link>
                         </strong>
                         <strong>
                           (National Center for Biotechnology Information).
@@ -351,7 +349,6 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                       </p>
                     </div>
 
-                    {/* SECTION III - Core Advantage */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The Core Advantage: From "Mass Market" to "Market of
@@ -374,37 +371,14 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                         </li>
                       </ul>
                       <p className="blog-text">Brands can now offer :</p>
-                      <ul
-                        className="blog-list"
-                        style={{
-                          pageBreakInside: "avoid",
-                          breakInside: "avoid",
-                        }}
-                      >
-                        <li
-                          className="blog-list-item"
-                          style={{
-                            pageBreakInside: "avoid",
-                            breakInside: "avoid",
-                          }}
-                        >
+                      <ul className="blog-list pageBreakInside">
+                        <li className="blog-list-item pageBreakInside">
                           1000+ variations based on :
-                          <ul
-                            style={{
-                              listStyleType: "circle",
-                              paddingLeft: "28px",
-                              marginTop: "6px",
-                              marginBottom: "0px",
-                              pageBreakInside: "avoid",
-                              breakInside: "avoid",
-                            }}
-                          >
-                            <li style={{ marginBottom: "4px" }}>Age</li>
-                            <li style={{ marginBottom: "4px" }}>Gender</li>
-                            <li style={{ marginBottom: "4px" }}>Lifestyle</li>
-                            <li style={{ marginBottom: "4px" }}>
-                              Health conditions
-                            </li>
+                          <ul className="variation-based">
+                            <li className="mb-4">Age</li>
+                            <li className="mb-4">Gender</li>
+                            <li className="mb-4">Lifestyle</li>
+                            <li className="mb-4">Health conditions</li>
                           </ul>
                         </li>
                       </ul>
@@ -414,7 +388,6 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                       </p>
                     </div>
 
-                    {/* SECTION IV - How Micro-Batch Works */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         How Micro-Batch Manufacturing Works (Behind the Scenes)
@@ -451,7 +424,6 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                       </p>
                     </div>
 
-                    {/* SECTION V - Operational Power */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The Operational Power: Why Brands Prefer It
@@ -509,7 +481,6 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                       </p>
                     </div>
 
-                    {/* SECTION VI - Hidden Challenges */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The Hidden Challenge: Why It's Not Easy
@@ -556,7 +527,10 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                         More SKUs lead to more complex sourcing and logistics,
                         especially for growing{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements"
+                          >
                             gym supplement manufacturers{" "}
                           </Link>
                         </strong>
@@ -564,7 +538,6 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                       </p>
                     </div>
 
-                    {/* SECTION VII - Role of Third-Party Manufacturers */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The Role of Third-Party Manufacturers(CRITICAL INSIGHT)
@@ -605,7 +578,6 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                       </p>
                     </div>
 
-                    {/* SECTION - Conclusion */}
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <h2 className="blog-section-title">
@@ -640,7 +612,6 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                       </div>
                     </div>
 
-                    {/* FAQs */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">FAQs</h2>
 

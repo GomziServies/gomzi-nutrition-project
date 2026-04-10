@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
-import "../../assets/css/blog.css"; // Import the new blog CSS
+import "../../assets/css/blog.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -85,14 +85,11 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -100,11 +97,7 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       "/assets/images/nutrition/best-whey-protein-in-india-main.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -122,7 +115,6 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* SECTION 1: Understanding the Private Label Supplement Market in India */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Understanding the Private Label Supplement Market in
@@ -136,7 +128,10 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                         A private label supplement brand is a business model
                         where your products are made by a{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             white label whey protein
                           </Link>
                         </strong>{" "}
@@ -304,7 +299,10 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                         license cancellation. For detailed information, refer to
                         the{" "}
                         <strong>
-                          <Link to="https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Nutra_29_09_2021.pdf?utm_source=chatgpt.com">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Nutra_29_09_2021.pdf?utm_source=chatgpt.com"
+                          >
                             FSSAI Compendium for Health Supplements and
                             Nutraceuticals.
                           </Link>
@@ -384,7 +382,6 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       </p>
                     </div>
 
-                    {/* SECTION 3: Choosing Your Product Line */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Choosing Your Product Line
@@ -400,26 +397,38 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                         have high demand and easy compliance. Gomzilifescience
                         is one of{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder"
+                          >
                             the best protein powder third party
                             manufacturers{" "}
                           </Link>
                         </strong>
                         and{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements"
+                          >
                             white label sports nutrition{" "}
                           </Link>
                         </strong>
                         also{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter"
+                          >
                             peanut butter powder manufacturers.{" "}
                           </Link>
                         </strong>
                         When starting your brand, it's a good idea to request{" "}
                         <strong>
-                          <Link to="https://best-supplement-manufacturer.gomzilifesciences.in/">
+                          <Link
+                            className="blog-text-link"
+                            to="https://best-supplement-manufacturer.gomzilifesciences.in/"
+                          >
                             nutritional supplement samples{" "}
                           </Link>
                         </strong>
@@ -488,7 +497,6 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       </ul>
                     </div>
 
-                    {/* SECTION 4: Finding & Working With a Private Label Supplement Manufacturer */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Finding & Working With a Private Label Supplement
@@ -502,7 +510,10 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                         Choose a protein supplement manufacturers in india with
                         GMP, ISO, and FSSAI certifications. Companies like
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/"
+                          >
                             {" "}
                             Gomzilifesciences{" "}
                           </Link>
@@ -556,7 +567,6 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       </ul>
                     </div>
 
-                    {/* SECTION 5: Branding, Packaging & Label Design */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Branding, Packaging & Label Design
@@ -585,7 +595,10 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       <p className="blog-text">
                         Explore services from
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             {" "}
                             top nutraceuticals manufacturers in Gujarat
                           </Link>
@@ -646,27 +659,10 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       </ul>
                     </div>
 
-                    {/* SECTION 6: Business Setup, Costs & Operations */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Business Setup, Costs & Operations
                       </h2>
-
-                      <div className="row">
-                        <div className="col"></div>
-                        <div className="col-lg-8 mt-3">
-                          <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/assets/images/white-labelling-blogs/variable-cost.webp"
-                            }
-                            alt="Fggroup"
-                            width="100%"
-                            style={{ borderRadius: "20px" }}
-                          />
-                        </div>
-                        <div className="col"></div>
-                      </div>
 
                       <h3 className="blog-subsection-title">
                         Cost to Start a Private Label Supplement Brand
@@ -728,7 +724,6 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       </ul>
                     </div>
 
-                    {/* SECTION 7: How to Market Your Private Label Supplement Brand */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         How to Market Your Private Label Supplement Brand
@@ -794,27 +789,10 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       </ul>
                     </div>
 
-                    {/* SECTION 8: Quality, Testing & Long-Term Growth */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Quality, Testing & Long-Term Growth
                       </h2>
-
-                      <div className="row">
-                        <div className="col"></div>
-                        <div className="col-lg-8 mt-3">
-                          <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/assets/images/white-labelling-blogs/quality-assurance.webp"
-                            }
-                            alt="Fggroup"
-                            width="100%"
-                            style={{ borderRadius: "20px" }}
-                          />
-                        </div>
-                        <div className="col"></div>
-                      </div>
 
                       <ul className="blog-list">
                         <li className="blog-list-item">

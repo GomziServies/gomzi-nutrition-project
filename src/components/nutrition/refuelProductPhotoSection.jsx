@@ -8,7 +8,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 function RefuelProductPhotoSection({ product }) {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const [opacity, setOpacity] = useState(1);
+  const [, setOpacity] = useState(1);
   const [prevIndex, setPrevIndex] = useState(activeImageIndex);
   const imageRef = useRef(null);
 
@@ -33,17 +33,8 @@ function RefuelProductPhotoSection({ product }) {
       <div className="product-imgs english-book singal-product-img d-none d-lg-block">
         <div className="row">
           <div className="col-12">
-            <div
-              className="main-image text-center"
-              style={{ position: "relative" }}
-            >
-              <div
-                style={{
-                  transition: "opacity 0.5s ease-in-out",
-                  opacity: opacity,
-                }}
-                ref={imageRef}
-              >
+            <div className="main-image text-center video-card-detail">
+              <div className="transition-opacity" ref={imageRef}>
                 <InnerImageZoom
                   src={product[prevIndex]}
                   zoomSrc={product[prevIndex]}
@@ -68,22 +59,12 @@ function RefuelProductPhotoSection({ product }) {
                 >
                   <div className="d-flex">
                     <div className="col-12 px-4 mt-4 text-center">
-                      <div
-                        style={{
-                          width: "100%",
-                          height: "auto",
-                          cursor: "pointer",
-                        }}
-                      >
+                      <div className="w-100-h-auto cp">
                         <LazyLoadImage
                           src={image}
                           alt="FG Group"
                           effect="blur"
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "contain",
-                          }}
+                          className="w-100-h-100-objectfit"
                         />
                       </div>
                     </div>
@@ -97,10 +78,7 @@ function RefuelProductPhotoSection({ product }) {
       <div className="product-imgs english-book singal-product-img d-block d-lg-none">
         <div className="row">
           <div className="col-12">
-            <div
-              className="main-image text-center"
-              style={{ position: "relative" }}
-            >
+            <div className="main-image text-center video-card-detail">
               <LazyLoadImage
                 src={product[prevIndex]}
                 alt="FG Group"
@@ -121,22 +99,12 @@ function RefuelProductPhotoSection({ product }) {
                 >
                   <div className="d-flex">
                     <div className="col-12 px-2 mt-4 text-center">
-                      <div
-                        style={{
-                          width: "100%",
-                          height: "auto",
-                          cursor: "pointer",
-                        }}
-                      >
+                      <div className="w-100-h-auto cp">
                         <LazyLoadImage
                           src={image}
                           alt="FG Group"
                           effect="blur"
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "contain",
-                          }}
+                          className="w-100-h-100-objectfit"
                         />
                       </div>
                     </div>

@@ -4,6 +4,7 @@ import HomeFooter from "../../components/partials/Footer/footer";
 import { axiosInstance } from "../../assets/js/config/api";
 import dayjs from "dayjs";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
+import "../../assets/css/nutrition.css";
 
 function UserOrder() {
   const [orderData, setOrderData] = useState([]);
@@ -21,7 +22,7 @@ function UserOrder() {
             const productItemData = responseData.multiple_items.map((item) => {
               const productData =
                 responseData.user_meal_product.product_details.find(
-                  (product) => product._id === item.item_id
+                  (product) => product._id === item.item_id,
                 );
 
               return {
@@ -61,10 +62,7 @@ function UserOrder() {
       </Helmet>
       <NutritionHeader />
 
-      <div
-        className="container mt-4 mb-4 text-left"
-        style={{ marginTop: "60px" }}
-      >
+      <div className="container mt-4 mb-4 text-left mt-60 ">
         <section>
           <div className="Info">
             <h2>Product Details</h2>
@@ -78,17 +76,14 @@ function UserOrder() {
                 </p>
               </div>
               {order?.user_meal_product?.tracking.some(
-                (trackingElem) => trackingElem.shipment_status === "DELIVERED"
+                (trackingElem) => trackingElem.shipment_status === "DELIVERED",
               ) && (
-                  <div className="col-12 meal">
-                    <p
-                      className="mt-2"
-                      style={{ fontSize: "20px", color: "green" }}
-                    >
-                      Delivered {convertDate(order.updatedAt)}
-                    </p>
-                  </div>
-                )}
+                <div className="col-12 meal">
+                  <p className="mt-2 fts-20-color-green">
+                    Delivered {convertDate(order.updatedAt)}
+                  </p>
+                </div>
+              )}
               {order.items.map((ItemDetails, index) => (
                 <div key={index} className="col-md-8 mt-2 meal">
                   <div className="Grocery2 float-left mt-3 w-100">
@@ -118,12 +113,10 @@ function UserOrder() {
               ))}
               <div className="col-12 row">
                 <div className="col-md-4 meal">
-                  <p className="mt-2 mb-5" style={{ fontSize: "20px" }}>
+                  <p className="mt-2 mb-5 fts-20">
                     Total Amount :- {order.amount} /-
                   </p>
-                  <p className="mt-2" style={{ fontSize: "20px" }}>
-                    Delivery Address :-
-                  </p>
+                  <p className="mt-2 fts-20">Delivery Address :-</p>
                   <span>
                     {order.notes.address_line_1 +
                       (order.notes.address_line_2
@@ -140,19 +133,18 @@ function UserOrder() {
                 order?.user_meal_product?.tracking.length > 0 && (
                   <div className="col-12">
                     <div className="col-12 p-0 mt-5 meal">
-                      <p className="mt-2 mb-3" style={{ fontSize: "20px" }}>
-                        Order Tracking :-
-                      </p>
+                      <p className="mt-2 mb-3 fts-20">Order Tracking :-</p>
                     </div>
                     <div className="row meal">
                       <div
-                        className={`order-tracking ${order.user_meal_product?.tracking.find(
-                          (trackingElem) =>
-                            trackingElem.shipment_status === "PLACED"
-                        )
-                          ? "completed"
-                          : ""
-                          }`}
+                        className={`order-tracking ${
+                          order.user_meal_product?.tracking.find(
+                            (trackingElem) =>
+                              trackingElem.shipment_status === "PLACED",
+                          )
+                            ? "completed"
+                            : ""
+                        }`}
                       >
                         <span className="is-complete"></span>
                         <p>
@@ -161,20 +153,21 @@ function UserOrder() {
                             {convertDate(
                               order.user_meal_product?.tracking.find(
                                 (trackingElem) =>
-                                  trackingElem.shipment_status === "PLACED"
-                              )?.updatedAt
+                                  trackingElem.shipment_status === "PLACED",
+                              )?.updatedAt,
                             )}
                           </span>
                         </p>
                       </div>
                       <div
-                        className={`order-tracking ${order.user_meal_product?.tracking.find(
-                          (trackingElem) =>
-                            trackingElem.shipment_status === "DISPATCHED"
-                        )
-                          ? "completed"
-                          : ""
-                          }`}
+                        className={`order-tracking ${
+                          order.user_meal_product?.tracking.find(
+                            (trackingElem) =>
+                              trackingElem.shipment_status === "DISPATCHED",
+                          )
+                            ? "completed"
+                            : ""
+                        }`}
                       >
                         <span className="is-complete"></span>
                         <p>
@@ -182,27 +175,28 @@ function UserOrder() {
                           <span className="mt-3 d-block">
                             {order.user_meal_product?.tracking.find(
                               (trackingElem) =>
-                                trackingElem.shipment_status === "DISPATCHED"
+                                trackingElem.shipment_status === "DISPATCHED",
                             )
                               ? convertDate(
-                                order.user_meal_product?.tracking.find(
-                                  (trackingElem) =>
-                                    trackingElem.shipment_status ===
-                                    "DISPATCHED"
-                                )?.updatedAt
-                              )
+                                  order.user_meal_product?.tracking.find(
+                                    (trackingElem) =>
+                                      trackingElem.shipment_status ===
+                                      "DISPATCHED",
+                                  )?.updatedAt,
+                                )
                               : ""}
                           </span>
                         </p>
                       </div>
                       <div
-                        className={`order-tracking ${order.user_meal_product?.tracking.find(
-                          (trackingElem) =>
-                            trackingElem.shipment_status === "DELIVERED"
-                        )
-                          ? "completed"
-                          : ""
-                          }`}
+                        className={`order-tracking ${
+                          order.user_meal_product?.tracking.find(
+                            (trackingElem) =>
+                              trackingElem.shipment_status === "DELIVERED",
+                          )
+                            ? "completed"
+                            : ""
+                        }`}
                       >
                         <span className="is-complete"></span>
                         <p>
@@ -210,15 +204,15 @@ function UserOrder() {
                           <span className="mt-3 d-block">
                             {order.user_meal_product?.tracking.find(
                               (trackingElem) =>
-                                trackingElem.shipment_status === "DELIVERED"
+                                trackingElem.shipment_status === "DELIVERED",
                             )
                               ? convertDate(
-                                order.user_meal_product?.tracking.find(
-                                  (trackingElem) =>
-                                    trackingElem.shipment_status ===
-                                    "DELIVERED"
-                                )?.updatedAt
-                              )
+                                  order.user_meal_product?.tracking.find(
+                                    (trackingElem) =>
+                                      trackingElem.shipment_status ===
+                                      "DELIVERED",
+                                  )?.updatedAt,
+                                )
                               : ""}
                           </span>
                         </p>
@@ -278,14 +272,7 @@ function UserOrder() {
             </p>
 
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 1 - ONLINE STORE TERMS
               </h4>
               <br /> By agreeing to these Terms of Service, you represent that
@@ -302,14 +289,7 @@ function UserOrder() {
             </p>
 
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 2 - GENERAL CONDITIONS
               </h4>
               <br /> We reserve the right to refuse service to anyone for any
@@ -328,14 +308,7 @@ function UserOrder() {
             </p>
 
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 3 - ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION
               </h4>
               <br /> We are not responsible if information made available on
@@ -353,14 +326,7 @@ function UserOrder() {
               site.
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 4 - MODIFICATIONS TO THE SERVICE AND PRICES
               </h4>
               <br /> Prices for our products are subject to change without
@@ -371,14 +337,7 @@ function UserOrder() {
               Service.
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 5 - PRODUCTS OR SERVICES
               </h4>
               <br /> Certain products or services may be available exclusively
@@ -402,14 +361,7 @@ function UserOrder() {
               any errors in the Service will be corrected.
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 6 - ACCURACY OF BILLING AND ACCOUNT INFORMATION
               </h4>
               <br /> We reserve the right to refuse any order you place with us.
@@ -432,14 +384,7 @@ function UserOrder() {
               needed. For more detail, please review our Returns Policy.
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 7 - OPTIONAL TOOLS
               </h4>
               <br /> We may provide you with access to third-party tools over
@@ -461,14 +406,7 @@ function UserOrder() {
               of Service.
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 8 - THIRD-PARTY LINKS
               </h4>
               <br /> prohibit orders that, in our sole judgment, appear to/be
@@ -491,14 +429,7 @@ function UserOrder() {
               directed to the third-party.
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 9 - USER COMMENTS, FEEDBACK AND OTHER SUBMISSIONS
               </h4>
               <br /> If, at our request, you send certain specific submissions
@@ -535,14 +466,7 @@ function UserOrder() {
               by you or any third-party.
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 10 - PERSONAL INFORMATION
               </h4>
               <br /> prohibit orders that, in our sole judgment, appear to/be
@@ -550,14 +474,7 @@ function UserOrder() {
               information through the store is governed by our Privacy Policy.
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 11 - ERRORS, INACCURACIES AND OMISSIONS
               </h4>
               <br /> Occasionally there may be information on our site or in the
@@ -577,14 +494,7 @@ function UserOrder() {
               on any related website has been modified or updated.
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 12 - PROHIBITED USES
               </h4>
               <br /> In addition to other prohibitions as set forth in the Terms
@@ -611,14 +521,7 @@ function UserOrder() {
               uses.
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 13 - DISCLAIMER OF WARRANTIES; LIMITATION OF LIABILITY
               </h4>
               <br /> We do not guarantee, represent or warrant that your use of
@@ -657,14 +560,7 @@ function UserOrder() {
               extent permitted by law.
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 14 - INDEMNIFICATION
               </h4>
               <br /> You agree to indemnify, defend and hold harmless
@@ -678,14 +574,7 @@ function UserOrder() {
               rights of a third-party.
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 15 - SEVERABILITY
               </h4>
               <br /> In the event that any provision of these Terms of Service
@@ -697,14 +586,7 @@ function UserOrder() {
               any other remaining provisions.
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 16 - TERMINATION
               </h4>
               <br /> The obligations and liabilities of the parties incurred
@@ -721,14 +603,7 @@ function UserOrder() {
               deny you access to our Services (or any part thereof).
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 17 - ENTIRE AGREEMENT
               </h4>
               <br /> The failure of us to exercise or enforce any right or
@@ -745,14 +620,7 @@ function UserOrder() {
               party.
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 18 - GOVERNING LAW
               </h4>
               <br /> These Terms of Service and any separate agreements whereby
@@ -761,14 +629,7 @@ function UserOrder() {
               Rajasthan
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 19 - CHANGES TO TERMS OF SERVICE
               </h4>
               <br /> You can review the most current version of the Terms of
@@ -781,14 +642,7 @@ function UserOrder() {
               Service constitutes acceptance of those changes.
             </p>
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 20 - CONTACT INFORMATION
               </h4>
               <br /> Questions about the Terms of Service should be sent to us
@@ -803,14 +657,7 @@ function UserOrder() {
           </div>
           <div className="describe">
             <p>
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 1 - WHAT DO WE DO WITH YOUR INFORMATION?
               </h4>
               When you purchase something from our store, as part of the buying
@@ -823,16 +670,7 @@ function UserOrder() {
               emails about our store, new products and other updates.
               <br />
               <br />
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
-                SECTION 2 - CONSENT
-              </h4>
+              <h4 className="text-dark order-h4-title ">SECTION 2 - CONSENT</h4>
               How do you get my consent? When you provide us with personal
               information to complete a transaction, verify your credit card,
               place an order, arrange for a delivery or return a purchase, we
@@ -848,30 +686,14 @@ function UserOrder() {
               SMC Garden, Vesu, Surat, Gujarat 395007
               <br />
               <br />
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 3 - DISCLOSURE
               </h4>
               We may disclose your personal information if we are required by
               law to do so or if you violate our Terms of Service.
               <br />
               <br />
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
-                SECTION 4 - PAYMENT
-              </h4>
+              <h4 className="text-dark order-h4-title ">SECTION 4 - PAYMENT</h4>
               We use Razorpay for processing payments. We/Razorpay do not store
               your card data on their servers. The data is encrypted through the
               Payment Card Industry Data Security Standard (PCI-DSS) when
@@ -887,14 +709,7 @@ function UserOrder() {
               of razorpay on https://razorpay.com
               <br />
               <br />
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 5 - THIRD-PARTY SERVICES
               </h4>
               In general, the third-party providers used by us will only
@@ -921,14 +736,7 @@ function UserOrder() {
               privacy statements.
               <br />
               <br />
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 6 - SECURITY
               </h4>
               To protect your personal information, we take reasonable
@@ -937,28 +745,12 @@ function UserOrder() {
               destroyed.
               <br />
               <br />
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
-                SECTION 7 - COOKIES
-              </h4>
+              <h4 className="text-dark order-h4-title ">SECTION 7 - COOKIES</h4>
               We use cookies to maintain session of your user. It is not used to
               personally identify you on other websites.
               <br />
               <br />
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 8 - AGE OF CONSENT
               </h4>
               By using this site, you represent that you are at least the age of
@@ -968,14 +760,7 @@ function UserOrder() {
               to use this site.
               <br />
               <br />
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 SECTION 9 - CHANGES TO THIS PRIVACY POLICY
               </h4>
               We reserve the right to modify this privacy policy at any time, so
@@ -987,14 +772,7 @@ function UserOrder() {
               use and/or disclose it. If our store is acquired or merged with
               another company, your information may be transferred to the new
               owners so that we may continue to sell products to you.{" "}
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 QUESTIONS AND CONTACT INFORMATION
               </h4>
               If you would like to: access, correct, amend or delete any
@@ -1067,28 +845,14 @@ function UserOrder() {
             </p>
             <p>
               <br />
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 Sale items (if applicable)
               </h4>
               <br /> Only regular priced items may be refunded, unfortunately
               sale items cannot be refunded.
               <br />
               <br />
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
+              <h4 className="text-dark order-h4-title ">
                 Exchanges (if applicable)
               </h4>
               <br /> We only replace items if they are defective or damaged. If
@@ -1097,16 +861,7 @@ function UserOrder() {
               Hub, VIP Road, beside SMC Garden, Vesu, Surat, Gujarat 395007.
               <br />
               <br />
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
-                Gifts
-              </h4>
+              <h4 className="text-dark order-h4-title ">Gifts</h4>
               <br /> If the item was marked as a gift when purchased and shipped
               directly to you, you'll receive a gift credit for the value of
               your return. Once the returned item is received, a gift
@@ -1116,16 +871,7 @@ function UserOrder() {
               giver and he will find out about your return.
               <br />
               <br />
-              <h4
-                className="text-dark"
-                style={{
-                  fontWeight: "600",
-                  fontFamily: "roboto",
-                  fontSize: "20px",
-                }}
-              >
-                Shipping
-              </h4>
+              <h4 className="text-dark order-h4-title ">Shipping</h4>
               <br /> To return your product, you should mail your product to: A-
               301, Ambrosia Business Hub, VIP Road, beside SMC Garden, Vesu,
               Surat, Gujarat 395007. You will be responsible for paying for your

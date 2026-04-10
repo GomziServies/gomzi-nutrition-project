@@ -6,311 +6,318 @@ import PageMeta from "../../components/PageMeta";
 import { Helmet } from "react-helmet";
 
 const EnergyDrink = () => {
-    const products = [
-        {
-            id: 1,
-            imageSrc:
-                "/assets/images/third-party-manufacturing/energy-drink.png",
-            productLink: `https://api.whatsapp.com/send?phone=+918320077993&text=Hello, I have an inquiry about third-party manufacturing for Performance EAA Drink`,
-            productName: "Performance EAA Drink",
-        },
-        {
-            id: 2,
-            imageSrc:
-                "/assets/images/third-party-manufacturing/energy-drink-cola.png",
-            productLink: `https://api.whatsapp.com/send?phone=+918320077993&text=Hello, I have an inquiry about third-party manufacturing for Performance Creatine Drink`,
-            productName: "Performance Creatine Drink",
-        },
-        {
-            id: 3,
-            imageSrc:
-                "/assets/images/third-party-manufacturing/energy-drink-green-apple.png",
-            productLink: `https://api.whatsapp.com/send?phone=+918320077993&text=Hello, I have an inquiry about third-party manufacturing for Performance Pre-Workout Drink`,
-            productName: "Performance Pre-Workout Drink",
-        },
-    ];
+  const products = [
+    {
+      id: 1,
+      imageSrc: "/assets/images/third-party-manufacturing/energy-drink.png",
+      productLink: `https://api.whatsapp.com/send?phone=+918320077993&text=Hello, I have an inquiry about third-party manufacturing for Performance EAA Drink`,
+      productName: "Performance EAA Drink",
+    },
+    {
+      id: 2,
+      imageSrc:
+        "/assets/images/third-party-manufacturing/energy-drink-cola.png",
+      productLink: `https://api.whatsapp.com/send?phone=+918320077993&text=Hello, I have an inquiry about third-party manufacturing for Performance Creatine Drink`,
+      productName: "Performance Creatine Drink",
+    },
+    {
+      id: 3,
+      imageSrc:
+        "/assets/images/third-party-manufacturing/energy-drink-green-apple.png",
+      productLink: `https://api.whatsapp.com/send?phone=+918320077993&text=Hello, I have an inquiry about third-party manufacturing for Performance Pre-Workout Drink`,
+      productName: "Performance Pre-Workout Drink",
+    },
+  ];
 
-    const schemaData = [
+  const schemaData = [
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      name: "Third Party Energy Drink in India, Surat",
+      image:
+        "https://www.gomzilifesciences.in/assets/images/third-party-manufacturing/energy-drink.png",
+      description:
+        "Energy drink manufacturers in India ensure premium high-quality, certified production with white labelling, bulk supply and custom energy drink solutions.",
+      brand: {
+        "@type": "Brand",
+        name: "Gomzilifesciences",
+      },
+      manufacturer: {
+        "@type": "Organization",
+        name: "Gomzilifesciences",
+        logo: "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
+        url: "https://www.gomzilifesciences.in/third-party-manufacturing/energy-drinks",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        reviewCount: "34",
+      },
+      review: [
         {
-            "@context": "https://schema.org/",
-            "@type": "Product",
-            "name": "Third Party Energy Drink in India, Surat",
-            "image": "https://www.gomzilifesciences.in/assets/images/third-party-manufacturing/energy-drink.png",
-            "description":
-                "Energy drink manufacturers in India ensure premium high-quality, certified production with white labelling, bulk supply and custom energy drink solutions.",
-            "brand": {
-                "@type": "Brand",
-                "name": "Gomzilifesciences"
-            },
-            "manufacturer": {
-                "@type": "Organization",
-                "name": "Gomzilifesciences",
-                "logo": "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
-                "url": "https://www.gomzilifesciences.in/third-party-manufacturing/energy-drinks"
-            },
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "reviewCount": "34"
-            },
-            "review": [
-                {
-                    "@type": "Review",
-                    "author": {
-                        "@type": "Person",
-                        "name": "Fenil Vadaliya"
-                    },
-                    "datePublished": "2024-01-11",
-                    "reviewBody":
-                        "Product quality is good and recommended to purchase. Highly recommended.",
-                    "name": "Trusted White Label Energy Drinks",
-                    "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": "5",
-                        "bestRating": "5"
-                    }
-                }
-            ]
+          "@type": "Review",
+          author: {
+            "@type": "Person",
+            name: "Fenil Vadaliya",
+          },
+          datePublished: "2024-01-11",
+          reviewBody:
+            "Product quality is good and recommended to purchase. Highly recommended.",
+          name: "Trusted White Label Energy Drinks",
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: "5",
+            bestRating: "5",
+          },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What types of energy drinks can you manufacture?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We manufacture carbonated, non-carbonated, sugar-free, herbal, and vitamin-enriched energy drinks.",
+          },
         },
         {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "What types of energy drinks can you manufacture?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "We manufacture carbonated, non-carbonated, sugar-free, herbal, and vitamin-enriched energy drinks."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Do you offer third-party manufacturing for energy drinks?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes, we provide complete third-party energy drink manufacturing so you can launch your brand without owning a factory."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What is private-label energy drink manufacturing?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Private-label manufacturing means we create a fully customized energy drink formula and flavour under your brand name."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Do you offer white-label energy drink options?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes, we offer ready-made white-label energy drink formulas that allow quick branding and faster market entry."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can I start with a small batch for testing?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes, low minimum order quantities are available for sampling and market testing."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Do you help with FSSAI compliance and documentation?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes, we assist with FSSAI approval, labeling compliance, ingredient testing, and shelf-life documentation."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can you customize flavours and caffeine levels?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes, our R&D team customizes flavours, sweetness levels, energy boosters, and caffeine strength as per your brand needs."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What packaging options do you offer?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "We provide cans, PET bottles, glass bottles, and fully customized label and packaging designs."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How long does private-label energy drink manufacturing take?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Production generally takes between 3 to 6 weeks depending on formulation customization and packaging requirements."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How do I get started with third-party energy drink manufacturing?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Simply share your concept, select the formula and packaging, and we manage the complete manufacturing process end-to-end."
-                    }
-                }
-            ]
-        }
-    ];
+          "@type": "Question",
+          name: "Do you offer third-party manufacturing for energy drinks?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, we provide complete third-party energy drink manufacturing so you can launch your brand without owning a factory.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is private-label energy drink manufacturing?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Private-label manufacturing means we create a fully customized energy drink formula and flavour under your brand name.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you offer white-label energy drink options?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, we offer ready-made white-label energy drink formulas that allow quick branding and faster market entry.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I start with a small batch for testing?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, low minimum order quantities are available for sampling and market testing.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you help with FSSAI compliance and documentation?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, we assist with FSSAI approval, labeling compliance, ingredient testing, and shelf-life documentation.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can you customize flavours and caffeine levels?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, our R&D team customizes flavours, sweetness levels, energy boosters, and caffeine strength as per your brand needs.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What packaging options do you offer?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We provide cans, PET bottles, glass bottles, and fully customized label and packaging designs.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long does private-label energy drink manufacturing take?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Production generally takes between 3 to 6 weeks depending on formulation customization and packaging requirements.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do I get started with third-party energy drink manufacturing?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Simply share your concept, select the formula and packaging, and we manage the complete manufacturing process end-to-end.",
+          },
+        },
+      ],
+    },
+  ];
 
-    return (
-        <div className="tpm-bg">
-            <PageMeta
-                title="Third party energy drink manufacturers in India, Surat"
-                description="Energy drink manufacturers in India ensure premium high-quality, certified production with white labelling, bulk supply and custom energy drink solutions."
-            />
-            <Helmet>
-                <script type="application/ld+json">
-                    {JSON.stringify(schemaData)}
-                </script>
-            </Helmet>
-            <NutritionHeader />
+  return (
+    <div className="tpm-bg">
+      <PageMeta
+        title="Third party energy drink manufacturers in India, Surat"
+        description="Energy drink manufacturers in India ensure premium high-quality, certified production with white labelling, bulk supply and custom energy drink solutions."
+      />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
+      </Helmet>
+      <NutritionHeader />
 
-            {/* Banner Section */}
-            <div className="energy-drinks-banner">
+      <div className="energy-drinks-banner">
+        <img
+          src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1"
+          alt="Protein Powder Banner"
+          className="energy-drinks-banner-image"
+        />
+      </div>
+
+      <section className="energy-drinks-content energy-drinks-container">
+        <h1 className="energy-drinks-page-title">
+          Third Party{" "}
+          <span className="primory-color">Energy Drink Manufacturers</span> in
+          Surat, India
+        </h1>
+
+        <p className="energy-drinks-page-description">
+          Gomzilifesciences is one of the leading energy drinks manufacturers in
+          India, trusted for third party energy drink manufacturing, beverage
+          solutions, and white label products with certifications from FSSAI,
+          HACCP, GMP, HALAL, and Kosher.
+        </p>
+
+        <p className="energy-drinks-page-description">
+          As an experienced energy drink manufacturer, we specialize in
+          delivering high-performance beverages that meet international safety
+          and quality standards. Recognized among the best energy drinks
+          manufacturers in India, we provide complete support for brands looking
+          to expand in the growing sports and fitness segment. Whether you need
+          third party energy drink manufacturers in India or expert third party
+          beverage manufacturers in India, Gomzilifesciences ensures scalable,
+          innovative, and market-ready solutions.
+        </p>
+
+        <p className="energy-drinks-page-description">
+          Our product portfolio includes{" "}
+          <strong>Creatine, Ignite Workout, EAA, and BCAA</strong>, crafted to
+          support energy, recovery, and endurance. Creatine is available in
+          unflavored, lemon, and cola; Ignite Workout comes in refreshing fruits
+          and green apple; EAA offers watermelon and guava; while BCAA delivers
+          tangy orange for a delicious boost. These performance drinks are
+          packaged in hygienic 220 ml bottles and tins, designed for convenience
+          and mass appeal.
+        </p>
+
+        <p className="energy-drinks-page-description">
+          As a trusted white label products manufacturer, we provide end-to-end
+          services from formulation to attractive packaging, helping businesses
+          launch their own energy drink brand with confidence. Our certified
+          processes ensure safety, innovation, and long-term consumer trust,
+          making us the preferred partner for B2B companies and health-focused
+          brands.
+        </p>
+
+        <p className="energy-drinks-page-description">
+          Choose Gomzilifesciences to power your brand with energy drinks that
+          combine taste, performance, and certified quality.
+        </p>
+
+        <p className="energy-drinks-page-description">
+          Our Energy Drink Bottle Samples With our advanced facilities and
+          certified standards, we ensure every energy drink is crafted with
+          quality, safety, and taste. To showcase our product quality, we
+          provide{" "}
+          <a
+            href="https://best-supplement-manufacturer.gomzilifesciences.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Energy Drink samples{" "}
+          </a>
+          220 ml trial bottles in exciting flavors:
+          <ul className="pl-3">
+            <li>
+              Cola Energy Drink (220 ml) - Classic taste with a powerful energy
+              boost.
+            </li>
+            <li>
+              Guava Energy Drink (220 ml) - Tropical flavor for a refreshing
+              experience.
+            </li>
+            <li>
+              Green Apple Energy Drink (220 ml) - Crisp and tangy for fitness
+              enthusiasts.
+            </li>
+          </ul>
+        </p>
+
+        <p className="energy-drinks-page-description">
+          These samples allow clients to test taste, texture, and consumer
+          response before moving to bulk orders.
+        </p>
+
+        <h4>Customization Options for Clients</h4>
+
+        <p className="energy-drinks-page-description">
+          We understand that every brand has unique needs, so Gomzilifesciences
+          offers complete customization options at the cheapest and best prices
+          in the market:
+          <ul className="pl-3">
+            <li>
+              Adjust protein percentages and formulations as per client demand.
+            </li>
+            <li>Develop new flavor profiles to match consumer preferences.</li>
+            <li>
+              Flexible packaging and product development as per market trends.
+            </li>
+          </ul>
+        </p>
+        <p className="energy-drinks-page-description">
+          At Gomzilifesciences, we don't just manufacture drinks—we help you
+          create products that stand out in the sports nutrition and beverage
+          market.
+        </p>
+      </section>
+      <section className="third-party-manufacturing-card-container ">
+        <div className="row mt-3">
+          {products.map((product) => (
+            <div key={product.id} className="col-md-4 col-6 mb-4">
+              <div className="third-party-manufacturing-card text-center bg-white br-15 p-2 d-flex flex-column justify-content-between shadow-sm">
                 <img
-                    src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1"
-                    alt="Protein Powder Banner"
-                    className="energy-drinks-banner-image"
+                  src={product.imageSrc}
+                  alt={product.productName}
+                  className="product-img"
                 />
-            </div>
 
-            {/* Heading + Paragraph Section */}
-            <section className="energy-drinks-content energy-drinks-container">
-                <h1 className="energy-drinks-page-title">
-                    Third Party{" "}
-                    <span className="primory-color">
-                        Energy Drink Manufacturers
-                    </span>{" "}
-                    in Surat, India
-                </h1>
-
-                <p className="energy-drinks-page-description">
-                    Gomzilifesciences is one of the leading energy drinks
-                    manufacturers in India, trusted for third party energy drink
-                    manufacturing, beverage solutions, and white label products
-                    with certifications from FSSAI, HACCP, GMP, HALAL, and
-                    Kosher.
-                </p>
-
-                <p className="energy-drinks-page-description">
-                    As an experienced energy drink manufacturer, we specialize
-                    in delivering high-performance beverages that meet
-                    international safety and quality standards. Recognized among
-                    the best energy drinks manufacturers in India, we provide
-                    complete support for brands looking to expand in the growing
-                    sports and fitness segment. Whether you need third party
-                    energy drink manufacturers in India or expert third party
-                    beverage manufacturers in India, Gomzilifesciences ensures
-                    scalable, innovative, and market-ready solutions.
-                </p>
-
-                <p className="energy-drinks-page-description">
-                    Our product portfolio includes{" "}
-                    <strong>Creatine, Ignite Workout, EAA, and BCAA</strong>,
-                    crafted to support energy, recovery, and endurance. Creatine
-                    is available in unflavored, lemon, and cola; Ignite Workout
-                    comes in refreshing fruits and green apple; EAA offers
-                    watermelon and guava; while BCAA delivers tangy orange for a
-                    delicious boost. These performance drinks are packaged in
-                    hygienic 220 ml bottles and tins, designed for convenience
-                    and mass appeal.
-                </p>
-
-                <p className="energy-drinks-page-description">
-                    As a trusted white label products manufacturer, we provide
-                    end-to-end services from formulation to attractive
-                    packaging, helping businesses launch their own energy drink
-                    brand with confidence. Our certified processes ensure
-                    safety, innovation, and long-term consumer trust, making us
-                    the preferred partner for B2B companies and health-focused
-                    brands.
-                </p>
-
-                <p className="energy-drinks-page-description">
-                    Choose Gomzilifesciences to power your brand with energy
-                    drinks that combine taste, performance, and certified
-                    quality.
-                </p>
-
-                <p className="energy-drinks-page-description">
-                    Our Energy Drink Bottle Samples With our advanced facilities and certified standards, we ensure every energy drink is crafted with quality, safety, and taste. To showcase our product quality, we provide <a href="https://best-supplement-manufacturer.gomzilifesciences.in/" target="_blank">Energy Drink samples </a>220 ml trial bottles in exciting flavors:
-                    <ul className="pl-3">
-                        <li>
-                            Cola Energy Drink (220 ml) - Classic taste with a powerful energy boost.
-                        </li>
-                        <li>
-                            Guava Energy Drink (220 ml) - Tropical flavor for a refreshing experience.
-                        </li>
-                        <li>
-                            Green Apple Energy Drink (220 ml) - Crisp and tangy for fitness enthusiasts.
-                        </li>
-                    </ul>
-                </p>
-
-                <p className="energy-drinks-page-description">
-                    These samples allow clients to test taste, texture, and consumer response before moving to bulk orders. 
-                </p>
-
-                <h4>Customization Options for Clients</h4>
-
-                <p className="energy-drinks-page-description">
-                    We understand that every brand has unique needs, so Gomzilifesciences offers complete customization options at the cheapest and best prices in the market:
-                    <ul className="pl-3">
-                        <li>
-                            Adjust protein percentages and formulations as per client demand.
-                        </li>
-                        <li>
-                            Develop new flavor profiles to match consumer preferences.
-                        </li>
-                        <li>
-                            Flexible packaging and product development as per market trends.
-                        </li>
-                    </ul>
-                </p>
-                <p className="energy-drinks-page-description">
-                    At Gomzilifesciences, we don't just manufacture drinks—we help you create products that stand out in the sports nutrition and beverage market.
-                </p>
-            </section>
-            <section className="third-party-manufacturing-card-container ">
-                <div className="row mt-3">
-                    {products.map((product) => (
-                        <div key={product.id} className="col-md-4 col-6 mb-4">
-                            <div className="third-party-manufacturing-card text-center bg-white br-15 p-2 d-flex flex-column justify-content-between shadow-sm">
-                                <img
-                                    src={product.imageSrc}
-                                    alt={product.productName}
-                                    className="product-img"
-                                />
-
-                                <h3 className="text-ellipse-custom text-secondary my-4 f-rob-med f-20">
-                                    <b>{product.productName}</b>
-                                </h3>
-                                <div className="mb-1">
-                                    <a
-                                        href={product.productLink}
-                                        className="enquiry-btn"
-                                        target="_blank"
-                                    >
-                                        Enquiry Now
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+                <h3 className="text-ellipse-custom text-secondary my-4 f-rob-med f-20">
+                  <b>{product.productName}</b>
+                </h3>
+                <div className="mb-1">
+                  <a
+                    href={product.productLink}
+                    className="enquiry-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Enquiry Now
+                  </a>
                 </div>
-            </section>
-
-            <NutritionFooter />
+              </div>
+            </div>
+          ))}
         </div>
-    );
+      </section>
+
+      <NutritionFooter />
+    </div>
+  );
 };
 
 export default EnergyDrink;

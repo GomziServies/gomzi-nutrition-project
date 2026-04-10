@@ -16,10 +16,6 @@ function HowSupplementsHelpYouLiveHealthyLife() {
 
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
-  const openVideoModal = (url) => {
-    setIsVideoOpen(true);
-    setVideoUrl(url);
-  };
 
   const closeVideoModal = () => {
     setIsVideoOpen(false);
@@ -36,7 +32,7 @@ function HowSupplementsHelpYouLiveHealthyLife() {
       />
       <Helmet>
         <title>
-          How Supplements Help you live a healthy life | Gomzi Nutrition
+          How Supplements Help you live a healthy life | Gomzi Lifescience
         </title>
         <meta
           name="description"
@@ -88,7 +84,7 @@ function HowSupplementsHelpYouLiveHealthyLife() {
                 gtag('config', 'G-J50WNKGW38');`}</noscript>
       </Helmet>
       <NutritionHeader />
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
           <div className="container-fluid w-80 p-0">
             <div className="row">
@@ -100,8 +96,7 @@ function HowSupplementsHelpYouLiveHealthyLife() {
                       "/assets/images/nutrition/how-supplements-help-you-live-healthy-life-1.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{ borderRadius: "20px", overflow: "hidden" }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -143,65 +138,7 @@ function HowSupplementsHelpYouLiveHealthyLife() {
                       Importance of Health Consciousness in Modern Society:
                     </strong>
                   </p>
-                  {/* <div className="row">
-                    <div className="col"></div>
-                    <div className="col-lg-8 mt-3">
-                      <div
-                        style={{
-                          position: "relative",
-                          paddingBottom: "56.25%",
-                          height: "0",
-                          overflow: "hidden",
-                          maxWidth: "100%",
-                          borderRadius: "10px",
-                        }}
-                      >
-                        <iframe
-                          src="https://www.youtube.com/embed/pyr4KlW1qyo?si=CvLDdyj_s1P3G1HT"
-                          title="FG Group Video"
-                          style={{
-                            position: "absolute",
-                            top: "0",
-                            left: "0",
-                            width: "100%",
-                            height: "100%",
-                            borderRadius: "10px",
-                          }}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
-                    </div>
-                    <div className="col"></div>
-                  </div> */}
-                  <div className="row">
-                    <div className="col"></div>
-                    <div className="col-lg-8 mt-3">
-                      <div className="ply position-relative">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/nutri-review-video-1.webp"
-                          }
-                          width="100%"
-                          className="border-radius-20"
-                          alt="fggroup"
-                        />
-                        <div className="video-btn play-btn">
-                          <button
-                            onClick={() => openVideoModal("pyr4KlW1qyo")}
-                            className="custom clickof video-button-bg"
-                            aria-label="Play video 1"
-                          >
-                            <span className="newthing">
-                              <i className="fas fa-play"></i>
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col"></div>
-                  </div>
+
                   <p>
                     <br />
                   </p>
@@ -278,7 +215,7 @@ function HowSupplementsHelpYouLiveHealthyLife() {
                         }
                         alt="Fggroup"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>
@@ -331,7 +268,7 @@ function HowSupplementsHelpYouLiveHealthyLife() {
                         }
                         alt="zinc"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>
@@ -364,7 +301,7 @@ function HowSupplementsHelpYouLiveHealthyLife() {
                         }
                         alt="Fggroup"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>
@@ -404,7 +341,7 @@ function HowSupplementsHelpYouLiveHealthyLife() {
                         }
                         alt="How supplement help to ive healthy"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>
@@ -438,7 +375,7 @@ function HowSupplementsHelpYouLiveHealthyLife() {
                         }
                         alt="Supplement for healthy life"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>

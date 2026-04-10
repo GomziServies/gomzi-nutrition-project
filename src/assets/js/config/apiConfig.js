@@ -12,7 +12,6 @@ if (
   baseUrl = "https://dev-api.fggroup.in";
 } else {
   baseUrl = "https://dev-api.fggroup.in";
-  // baseUrl = "http://localhost:80";
 }
 
 const apiConfig = {

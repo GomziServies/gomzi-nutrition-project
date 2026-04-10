@@ -7,6 +7,7 @@ import React, {
 } from "react";
 import { Oval } from "react-loader-spinner";
 import ProductCard from "../../productCard";
+import "../../../assets/css/nutrition.css";
 
 const gomzinutrition = [
   {
@@ -413,7 +414,7 @@ const gomzinutrition = [
           process.env.PUBLIC_URL +
           "/assets/images/nutrition/gomzi-nutrition-sports-active-t-shirt-1.webp",
         productLink: "/nutrition/gomzi-nutrition-sports-active-t-shirt",
-        productName: "Gomzi Nutrition Sports T-shirt",
+        productName: "Gomzi Lifescience Sports T-shirt",
         rating: "4.5",
         originalPrice: "₹219 /-",
         discountedPrice: "₹219 /-",
@@ -425,7 +426,7 @@ const gomzinutrition = [
           process.env.PUBLIC_URL +
           "/assets/images/nutrition/gomzi-nutrition-sports-jogger-1.webp",
         productLink: "/nutrition/gomzi-nutrition-sports-jogger",
-        productName: "Gomzi Nutrition Sports Jogger",
+        productName: "Gomzi Lifescience Sports Jogger",
         rating: "4.7",
         originalPrice: "₹499 /-",
         discountedPrice: "₹499 /-",
@@ -444,31 +445,12 @@ const MobileViewMainPhotoSection = () => {
   const loadMoreRef = useRef(null);
   const productsPerPage = 8;
 
-  // useEffect(() => {
-  //   loadInitialProducts();
-  // }, [activeTab]);
-
-  // const loadInitialProducts = () => {
-  //   setIsVisible(false); // Start zoom-out and fade-out transition
-
-  //   setTimeout(() => {
-  //     const initialProducts = gomzinutrition[0][activeTab].slice(
-  //       0,
-  //       productsPerPage
-  //     );
-  //     setProteinProducts(initialProducts);
-  //     setHasMore(true);
-  //     setPage(1);
-  //     setIsVisible(true); // Start zoom-in and fade-in transition
-  //   }, 300); // Match this timeout with CSS transition duration
-  // };
-
   const loadInitialProducts = useCallback(() => {
     setIsVisible(false);
     setTimeout(() => {
       const initialProducts = gomzinutrition[0][activeTab].slice(
         0,
-        productsPerPage
+        productsPerPage,
       );
       setProteinProducts(initialProducts);
       setHasMore(true);
@@ -480,27 +462,6 @@ const MobileViewMainPhotoSection = () => {
   useEffect(() => {
     loadInitialProducts();
   }, [loadInitialProducts]);
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       if (entries[0].isIntersecting && hasMore) {
-  //         loadMoreProducts();
-  //       }
-  //     },
-  //     { threshold: 1.0 }
-  //   );
-
-  //   if (loadMoreRef.current) {
-  //     observer.observe(loadMoreRef.current);
-  //   }
-
-  //   return () => {
-  //     if (loadMoreRef.current) {
-  //       observer.unobserve(loadMoreRef.current);
-  //     }
-  //   };
-  // }, [hasMore, page]);
 
   const loadMoreProducts = useCallback(() => {
     const start = page * productsPerPage;
@@ -523,7 +484,7 @@ const MobileViewMainPhotoSection = () => {
           loadMoreProducts();
         }
       },
-      { threshold: 1.0 }
+      { threshold: 1.0 },
     );
 
     const currentRef = loadMoreRef.current;
@@ -537,7 +498,7 @@ const MobileViewMainPhotoSection = () => {
         observer.unobserve(currentRef);
       }
     };
-  }, [hasMore, page, loadMoreProducts]); // Added `loadMoreProducts` as dependency
+  }, [hasMore, page, loadMoreProducts]);
 
   const handleTabClick = (tab) => {
     if (tab !== activeTab) {
@@ -641,7 +602,7 @@ const MobileViewMainPhotoSection = () => {
                     <div className="d-flex flex-wrap align-items-center justify-content-between">
                       <div className="col-12">
                         <h2 className="f-rob-bol f-30 text-black text-uppercase">
-                          Gomzi Nutrition
+                          Gomzi Lifescience
                         </h2>
                       </div>
                     </div>
@@ -676,7 +637,7 @@ const MobileViewMainPhotoSection = () => {
                         ))}
                       </Suspense>
                     </div>
-                    <div ref={loadMoreRef} style={{ height: "1px" }}></div>
+                    <div ref={loadMoreRef} className="height-1"></div>
                   </div>
                 </section>
               </div>

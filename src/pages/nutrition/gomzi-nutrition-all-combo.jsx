@@ -31,14 +31,6 @@ function GomziNutritionAllCombo() {
   const isAuthenticated = !!localStorage.getItem("fg_group_user_authorization");
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -47,10 +39,10 @@ function GomziNutritionAllCombo() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -69,7 +61,6 @@ function GomziNutritionAllCombo() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
           window.location.href = "/nutrition/cart";
         }
       }
@@ -87,7 +78,6 @@ function GomziNutritionAllCombo() {
       });
       if (response.data.response === "OK") {
         setProductData(data);
-        // setMenuOpen(!menuOpen);
         window.location.href = "/nutrition/cart";
         localStorage.removeItem("cartAvailable");
         localStorage.removeItem("productCartAvailable");
@@ -110,15 +100,18 @@ function GomziNutritionAllCombo() {
     setVideoUrl("");
   };
 
-  const addtocartdata = useMemo(() => ({
-    id: "667bb4d375e450a0b5a523c7",
-    img: "/assets/images/nutrition/all-product-combo-1.webp",
-    name: "All Trial Pouch",
-    price: "1499",
-    discount: "999",
-    size: "Pack Of 7",
-    dis_point: "33.35%",
-  }), []);
+  const addtocartdata = useMemo(
+    () => ({
+      id: "667bb4d375e450a0b5a523c7",
+      img: "/assets/images/nutrition/all-product-combo-1.webp",
+      name: "All Trial Pouch",
+      price: "1499",
+      discount: "999",
+      size: "Pack Of 7",
+      dis_point: "33.35%",
+    }),
+    [],
+  );
 
   const product = [
     "/assets/images/nutrition/all-product-combo-1.webp",
@@ -146,7 +139,7 @@ function GomziNutritionAllCombo() {
     <>
       <Helmet>
         <title>
-          Gomzi Nutrition All Combo - Complete Nutrition Stack for Health &
+          Gomzi Lifescience All Combo - Complete Nutrition Stack for Health &
           Fitness
         </title>
         <meta
@@ -231,7 +224,7 @@ function GomziNutritionAllCombo() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Gomzi Nutrition All Sample Combo. "
+          "Hello, I wanted to know more about Gomzi Lifescience All Sample Combo. "
         }
         options={{ pageRef: true }}
       />
@@ -363,7 +356,10 @@ function GomziNutritionAllCombo() {
                       id="pills-tab"
                       role="tablist"
                     >
-                      <li className="nav-item f-20 nav-link text-uppercase active show" role="tab">
+                      <li
+                        className="nav-item f-20 nav-link text-uppercase active show"
+                        role="tab"
+                      >
                         Description
                       </li>
                     </ul>
@@ -384,7 +380,7 @@ function GomziNutritionAllCombo() {
                             <strong>Whey Protein Blend</strong>
                           </p>
                           <p className="mb-3">
-                            Gomzi Nutrition Whey Protein Blend is a Blend of
+                            Gomzi Lifescience Whey Protein Blend is a Blend of
                             Whey Isolate and Whey Concentrate And Whey powder.
                             It is packed with 20.02g of 100% High Quality whey
                             protein per serving (30g scoop). The benchmark and
@@ -399,7 +395,7 @@ function GomziNutritionAllCombo() {
                             <strong>Whey Protein Concentrate</strong>
                           </p>
                           <p className="mb-3">
-                            Essentially, Gomzi Nutrition whey protein contains
+                            Essentially, Gomzi Lifescience whey protein contains
                             24.1g of Protein and 4.98g of BCAA. Each combination
                             of whey provides different amounts and combinations
                             of amino acids, resulting in different effects on
@@ -416,7 +412,7 @@ function GomziNutritionAllCombo() {
                             <strong>Whey Protein Isolate</strong>
                           </p>
                           <p className="mb-3">
-                            Gomzi Nutrition Whey Protein Isolate is a 100%
+                            Gomzi Lifescience Whey Protein Isolate is a 100%
                             vegetarian, pure protein that boasts a single
                             ingredient profile offering exactly what's on its
                             label. The supplement is made in a GMP-complaint

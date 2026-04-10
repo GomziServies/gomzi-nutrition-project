@@ -36,7 +36,7 @@ function GomziNutritionATPCreatine() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [activeSize, setActiveSize] = useState("250g");
   const [activeFlavor, setActiveFlavor] = useState("Lemon");
-  const [opacity, setOpacity] = useState(1);
+  const [, setOpacity] = useState(1);
   const imageRef = useRef(null);
   const canonicalUrl = window.location.href;
   const isAuthenticated = !!localStorage.getItem("fg_group_user_authorization");
@@ -111,14 +111,6 @@ function GomziNutritionATPCreatine() {
   };
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -127,10 +119,10 @@ function GomziNutritionATPCreatine() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -149,7 +141,7 @@ function GomziNutritionATPCreatine() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -167,7 +159,7 @@ function GomziNutritionATPCreatine() {
       });
       if (response.data.response === "OK") {
         setProductData(data);
-        // setMenuOpen(!menuOpen);
+
         window.location.href = "/nutrition/cart";
         localStorage.removeItem("cartAvailable");
         localStorage.removeItem("productCartAvailable");
@@ -206,7 +198,7 @@ function GomziNutritionATPCreatine() {
     <>
       <Helmet>
         <title>
-          Gomzi Nutrition ATP Creatine - Enhance Strength & Muscle Performance
+          Gomzi Lifescience ATP Creatine - Enhance Strength & Muscle Performance
         </title>
         <meta
           name="description"
@@ -290,7 +282,7 @@ function GomziNutritionATPCreatine() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Gomzi Nutrition's ATP Creatine Monohydrate. "
+          "Hello, I wanted to know more about Gomzi Lifescience's ATP Creatine Monohydrate. "
         }
         options={{ pageRef: true }}
       />
@@ -301,12 +293,8 @@ function GomziNutritionATPCreatine() {
               <div className="col-12 p-0 px-md-3 px-xl-4 py-3 py-md-3 h-100 mt-5">
                 <div className="col-12 p-0 col-lg-7 h-100 mb-lg-0 px-0 px-md-3 product-detail-left">
                   <div
-                    className="product-image-container"
+                    className="product-image-container transition-opacity"
                     ref={imageRef}
-                    style={{
-                      opacity: opacity,
-                      transition: "opacity 0.3s ease-in-out",
-                    }}
                   >
                     <ProductPhotoSection1
                       images={productImages[currentProduct]}
@@ -348,18 +336,9 @@ function GomziNutritionATPCreatine() {
                     </div>
                     <div className="col-9 pt-2">
                       <div className="d-inline-block">
-                        {/* <span className="d-inline-block mr-2 f-rob-bol f-20 text-red">
-                          {currentProductData.dis_point}
-                        </span> */}
                         <span className="d-inline-block mr-2 f-rob-bol f-22">
                           ₹{currentProductData.discount} /- GST included
                         </span>
-                        {/* <p className="f-20">
-                          MRP:-&nbsp;
-                          <span className="price--line-through">
-                            ₹ {currentProductData.price}
-                          </span>
-                        </p> */}
                       </div>
                     </div>
                     <div className="col-3 text-left text-md-right">
@@ -410,11 +389,6 @@ function GomziNutritionATPCreatine() {
                                   </button>
                                 </Link>
                               </div>
-                              {/* <div className="common-button-amazon mx-2">
-                                <button className="bg-danger text-uppercase px-3 px-lg-5 py-3 text-white f-16 f-rob-bol">
-                                  Out Of Stock
-                                </button>
-                              </div> */}
                             </div>
                           </div>
                         </div>
@@ -476,7 +450,7 @@ function GomziNutritionATPCreatine() {
                         <div className="descriptionShow text-secondary">
                           <p>
                             <strong>
-                              Gomzi Nutrition ATP Creatine Monohydrate
+                              Gomzi Lifescience ATP Creatine Monohydrate
                             </strong>
                           </p>
                           <p className="mb-3">
@@ -487,19 +461,7 @@ function GomziNutritionATPCreatine() {
                             high-intensity activities like weightlifting and
                             sprinting.
                           </p>
-                          {/* <p>
-                            <strong>Weight Loss:</strong>
-                          </p>
-                          <p className="mb-3">
-                            Creatine supplements can help people lose weight by
-                            making their metabolism work better. These are
-                            critical for the construction of muscles and their
-                            capacity to incorporate proteins. Practice and other
-                            ordinary assignments that require energy utilisation
-                            raise digestion and interest in energy age.
-                            Therefore, fat stores are utilised, which might help
-                            with weight reduction.
-                          </p> */}
+
                           <p>
                             <strong>
                               When To Consume Creatine Monohydrate?

@@ -405,6 +405,15 @@
   }
 }
 
+@media (max-width: 576px) {
+  .desktop-banner {
+    display: none !important;
+  }
+  .mobile-banner {
+    display: block !important;
+  }
+}
+
 @media (max-width: 575.98px) {
   #owl-demo1 .owl-prev {
     left: 36%;

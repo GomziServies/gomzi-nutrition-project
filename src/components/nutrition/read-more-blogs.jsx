@@ -119,37 +119,6 @@ const Readmoreblogs = () => {
                   </Link>
                 </div>
               ))}
-              {/* 
-              <div className="col-md-6 col-lg-4 col-xl-4 pr-0 mb-3">
-                <Link to="" className="cp">
-                  <div className="blog-product-card-main">
-                    <div className="blog-product-card bg-white br-15">
-                      <span className="lazy-load-image-background blur lazy-load-image-loaded d-inline-block">
-                        <img
-                          alt="Cover for The Ultimate Guide to the Best Whey Protein blog"
-                          className="img-fluid product-img"
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/best-whey-protein-in-india-main.webp"
-                          }
-                        />
-                      </span>
-                      <div className="col-12 py-3">
-                        <div className="row align-items-center">
-                          <div className="col-10 text-left">
-                            <p className="m-0 f-pop-bol f-16 text-black">
-                              
-                            </p>
-                          </div>
-                          <div className="col-2 text-right">
-                            <i className="fas f-20 fa-arrow-right"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div> */}
             </div>
           </div>
         </div>{" "}

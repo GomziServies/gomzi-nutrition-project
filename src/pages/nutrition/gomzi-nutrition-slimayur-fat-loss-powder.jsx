@@ -31,14 +31,6 @@ function GomziNutritionSlimAyurFatLossPowder() {
   const canonicalUrl = window.location.href;
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -47,10 +39,10 @@ function GomziNutritionSlimAyurFatLossPowder() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -69,7 +61,7 @@ function GomziNutritionSlimAyurFatLossPowder() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -78,31 +70,50 @@ function GomziNutritionSlimAyurFatLossPowder() {
     }
   };
 
-  const addProductInCart = async (data) => {
-    try {
-      const response = await axiosInstance.post("/order-cart/add-item", {
-        item_id: data.id,
-        quantity: 1,
-        item_type: "FG_MEAL_PRODUCT",
-      });
-      if (response.data.response === "OK") {
-        setProductData(data);
-        setMenuOpen(!menuOpen);
-        localStorage.removeItem("cartAvailable");
-        localStorage.removeItem("productCartAvailable");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const addProductInCart = async (data) => {
+      try {
+        const response = await axiosInstance.post("/order-cart/add-item", {
+          item_id: data.id,
+          quantity: 1,
+          item_type: "FG_MEAL_PRODUCT",
+        });
+        if (response.data.response === "OK") {
+          setProductData(data);
+          setMenuOpen((m) => !m);
+          localStorage.removeItem("cartAvailable");
+          localStorage.removeItem("productCartAvailable");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     const localData = JSON.parse(localStorage.getItem("productCartAvailable"));
     const dataAvailable = JSON.parse(localStorage.getItem("cartAvailable"));
     if (localData && dataAvailable) {
       addProductInCart(localData);
     }
   }, []);
+
+  useEffect(() => {
+    if (addToCart === "true") {
+      const addtocartdata = {
+        id: "66e80a3879c30ad8b5e1659e",
+        img: "/assets/images/nutrition/slimayur-fat-loss-powder-1.webp",
+        name: "SlimAyur Fat Loss Powder",
+        price: "1349",
+        discount: "899",
+        size: "Combo - 1",
+        dis_point: "33.35%",
+      };
+      setTimeout(() => {
+        setProductData(addtocartdata);
+        setMenuOpen(true);
+        localStorage.removeItem("addtocart");
+      }, 2000);
+    }
+  }, [addToCart]);
 
   const closeVideoModal = () => {
     setIsVideoOpen(false);
@@ -129,16 +140,6 @@ function GomziNutritionSlimAyurFatLossPowder() {
   const closeModal = () => {
     setShowModal(false);
   };
-
-  useEffect(() => {
-    if (addToCart === "true") {
-      setTimeout(() => {
-        setProductData(addtocartdata);
-        setMenuOpen(true);
-        localStorage.removeItem("addtocart");
-      }, 2000);
-    }
-  }, [addToCart]);
 
   return (
     <>
@@ -264,16 +265,9 @@ function GomziNutritionSlimAyurFatLossPowder() {
                     </div>
                     <div className="col-9 pt-2">
                       <div className="d-inline-block">
-                        {/* <span className="d-inline-block mr-2 f-rob-bol f-20 text-red">
-                          33.35%
-                        </span> */}
                         <span className="d-inline-block mr-2 f-rob-bol f-22">
                           ₹899 /-
                         </span>
-                        {/* <p className="f-20">
-                          MRP:-
-                          <span className="price--line-through">₹1,349/-</span>
-                        </p> */}
                       </div>
                     </div>
                     <div className="col-3 text-left text-md-right">
@@ -321,9 +315,6 @@ function GomziNutritionSlimAyurFatLossPowder() {
                           ) : (
                             ""
                           )}
-                          {/* <button className="bg-light-red d-block text-uppercase px-3 px-lg-5 text-white f-16 f-rob-bol rate-btn-1">
-                            Sold Out
-                          </button> */}
                         </div>
                       </div>
                     </div>

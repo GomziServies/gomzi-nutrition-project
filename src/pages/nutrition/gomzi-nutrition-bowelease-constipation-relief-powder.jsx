@@ -24,21 +24,12 @@ function GomziNutritionboweleaseConstipationReliefPowder() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
-  const addToCart = localStorage.getItem("addtocart");
   const [productData, setProductData] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const canonicalUrl = window.location.href;
   const isAuthenticated = !!localStorage.getItem("fg_group_user_authorization");
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -47,10 +38,10 @@ function GomziNutritionboweleaseConstipationReliefPowder() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -69,7 +60,7 @@ function GomziNutritionboweleaseConstipationReliefPowder() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -78,26 +69,25 @@ function GomziNutritionboweleaseConstipationReliefPowder() {
     }
   };
 
-  const addProductInCart = async (data) => {
-    try {
-      const response = await axiosInstance.post("/order-cart/add-item", {
-        item_id: data.id,
-        quantity: 1,
-        item_type: "FG_MEAL_PRODUCT",
-      });
-      if (response.data.response === "OK") {
-        setProductData(data);
-        // setMenuOpen(!menuOpen);
-        window.location.href = "/nutrition/cart";
-        localStorage.removeItem("cartAvailable");
-        localStorage.removeItem("productCartAvailable");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const addProductInCart = async (data) => {
+      try {
+        const response = await axiosInstance.post("/order-cart/add-item", {
+          item_id: data.id,
+          quantity: 1,
+          item_type: "FG_MEAL_PRODUCT",
+        });
+        if (response.data.response === "OK") {
+          setProductData(data);
+          window.location.href = "/nutrition/cart";
+          localStorage.removeItem("cartAvailable");
+          localStorage.removeItem("productCartAvailable");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     const localData = JSON.parse(localStorage.getItem("productCartAvailable"));
     const dataAvailable = JSON.parse(localStorage.getItem("cartAvailable"));
     if (localData && dataAvailable) {
@@ -132,20 +122,30 @@ function GomziNutritionboweleaseConstipationReliefPowder() {
   };
 
   useEffect(() => {
+    const addToCart = localStorage.getItem("addtocart");
     if (addToCart === "true") {
+      const addtocartdata = {
+        id: "66e809d379c30ad8b5e16598",
+        img: "/assets/images/nutrition/bowelease-constipation-relief-powder-1.webp",
+        name: "bowelease  Constipation Relief Powder",
+        price: "1049",
+        discount: "799",
+        size: "500 gms",
+        dis_point: "38.12%",
+      };
       setTimeout(() => {
         setProductData(addtocartdata);
         setMenuOpen(true);
         localStorage.removeItem("addtocart");
       }, 2000);
     }
-  }, [addToCart]);
+  }, []);
 
   return (
     <>
       <Helmet>
         <title>
-          Gomzi Nutrition bowelease - Effective Constipation Relief Powder
+          Gomzi Lifescience bowelease - Effective Constipation Relief Powder
         </title>
         <meta
           name="description"
@@ -229,7 +229,7 @@ function GomziNutritionboweleaseConstipationReliefPowder() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Gomzi Nutrition bowelease  Constipation Relief Powder. "
+          "Hello, I wanted to know more about Gomzi Lifescience bowelease  Constipation Relief Powder. "
         }
         options={{ pageRef: true }}
       />
@@ -264,16 +264,9 @@ function GomziNutritionboweleaseConstipationReliefPowder() {
                     </div>
                     <div className="col-9 pt-2">
                       <div className="d-inline-block">
-                        {/* <span className="d-inline-block mr-2 f-rob-bol f-20 text-red">
-                          38.12%
-                        </span> */}
                         <span className="d-inline-block mr-2 f-rob-bol f-22">
                           ₹799 /-
                         </span>
-                        {/* <p className="f-20">
-                          MRP:-
-                          <span className="price--line-through">₹1,049/-</span>
-                        </p> */}
                       </div>
                     </div>
                     <div className="col-3 text-left text-md-right">
@@ -321,9 +314,6 @@ function GomziNutritionboweleaseConstipationReliefPowder() {
                           ) : (
                             ""
                           )}
-                          {/* <button className="bg-light-red d-block text-uppercase px-3 px-lg-5 text-white f-16 f-rob-bol rate-btn-1">
-                            Sold Out
-                          </button> */}
                         </div>
                       </div>
                     </div>
@@ -379,7 +369,7 @@ function GomziNutritionboweleaseConstipationReliefPowder() {
                         <div className="descriptionShow text-secondary">
                           <p>
                             <strong>
-                              Gomzi Nutrition bowelease Constipation Relief
+                              Gomzi Lifescience bowelease Constipation Relief
                               Powder
                             </strong>
                           </p>

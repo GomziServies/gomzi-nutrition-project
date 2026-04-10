@@ -22,18 +22,27 @@ function GomziNutritionRetailerCombo() {
   const isAuthenticated = !!localStorage.getItem("fg_group_user_authorization");
   const canonicalUrl = window.location.href;
 
-  const addProductInCart = async () => {
-    try {
-      localStorage.setItem("productsData", JSON.stringify(addtocartdata));
-      window.location.href =
-        "/nutrition/check-out?item_id=670a5a7b9a7dbcdce616398d";
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
-    // const localData = JSON.parse(localStorage.getItem("productCartAvailable"));
+    const addtocartdata = {
+      id: "6616357847003e22aea8a0fe",
+      img: "/assets/images/nutrition/retailer-combo-1.webp",
+      name: "Retailer Combo",
+      price: "45400",
+      discount: "20198",
+      totalAmount: "20198",
+      size: "Retailer Combo",
+      dis_point: "55.51%",
+    };
+    const addProductInCart = async () => {
+      try {
+        localStorage.setItem("productsData", JSON.stringify(addtocartdata));
+        window.location.href =
+          "/nutrition/check-out?item_id=670a5a7b9a7dbcdce616398d";
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     const dataAvailable = JSON.parse(localStorage.getItem("cartAvailable"));
     if (dataAvailable) {
       addProductInCart();
@@ -69,35 +78,12 @@ function GomziNutritionRetailerCombo() {
 
   const toggleMenu = async (data) => {
     localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
 
     try {
       if (!isAuthenticated) {
         setShowModal(true);
-        // localStorage.setItem("productCartAvailable", JSON.stringify(data));
         localStorage.setItem("cartAvailable", true);
       } else {
-        // const existingData = JSON.parse(
-        //   localStorage.getItem("addItemInCart")
-        // ) || { products: [] };
-        // const productExists = existingData.products.some(
-        //   (product) => product.product_id === data.id
-        // );
-
-        // if (!productExists) {
-        //   existingData.products.push({
-        //     product_id: data.id,
-        //     quantity: data?.quantity || 1,
-        //     mrpPrice: data.price || 0,
-        //   });
-        // }
-
-        // localStorage.setItem("addItemInCart", JSON.stringify(existingData));
         localStorage.setItem("productsData", JSON.stringify(addtocartdata));
         window.location.href =
           "/nutrition/check-out?item_id=670a5a7b9a7dbcdce616398d";
@@ -169,24 +155,6 @@ function GomziNutritionRetailerCombo() {
                 </div>
                 <div className="col-12 p-0 col-lg-5 mb-3 mt-3 mb-lg-0 product-detail-right">
                   <div className="row">
-                    {/* <div className="col-12 mt-3 d-block d-lg-none">
-                                            <p className="f-rob-bol f-18">Size</p>
-                                            <ul className="list-unstyled mb-0">
-                                                <li className="mr-3 mb-3 d-inline-block">
-                                                    <div className="avail-in-other-size-main">
-                                                        <div className="d-block avail-in-other-size active">
-                                                            <span
-                                                                className="d-block product-type avail-other-size cp active"
-                                                            ><p className="d-block m-0">Combo - 1</p></span
-                                                            >
-                                                            <div className="d-block product-type avail-other-price cp">
-                                                                <p className="d-block m-0">₹900+ ₹749 = ₹1,600</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div> */}
                     <div className="col-12">
                       <h1 className="f-rob-bol f-22 text-bold">
                         Retailer Combo
@@ -435,9 +403,6 @@ function GomziNutritionRetailerCombo() {
                           >
                             Buy Now
                           </button>
-                          {/* <Link to="/nutrition/check-out?item_id=">
-                            Buy Now
-                          </Link> */}
                         </div>
                       </div>
                     </div>

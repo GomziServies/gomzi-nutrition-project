@@ -15,44 +15,45 @@ import { Oval } from "react-loader-spinner";
 import NutritionFooterRefuelSeries from "../../components/partials/Footer/nutritionFooterRefuelSeries";
 import PageMeta from "../../components/PageMeta";
 
-const ProductBlogs = React.lazy(() =>
-  import("../../components/nutrition/blogs")
+const ProductBlogs = React.lazy(
+  () => import("../../components/nutrition/blogs"),
 );
 const ProductFAQS = React.lazy(() => import("../../components/nutrition/faqs"));
-const MainVideoSection = React.lazy(() =>
-  import("../../components/nutrition/mainVideoSection")
+const MainVideoSection = React.lazy(
+  () => import("../../components/nutrition/mainVideoSection"),
 );
-const Testimonials = React.lazy(() =>
-  import("../../components/nutrition/testimonials")
+const Testimonials = React.lazy(
+  () => import("../../components/nutrition/testimonials"),
 );
-const ProductDesignByGautam = React.lazy(() =>
-  import("../../components/nutrition/productDesignByGautam")
+const ProductDesignByGautam = React.lazy(
+  () => import("../../components/nutrition/productDesignByGautam"),
 );
-const CertifiedProduct = React.lazy(() =>
-  import("../../components/nutrition/certified")
+const CertifiedProduct = React.lazy(
+  () => import("../../components/nutrition/certified"),
 );
-const RefuelSeriesIgniteFatBurner = React.lazy(() =>
-  import("../../components/nutrition/refuel-series/refuel-ignite-fat-burner")
+const RefuelSeriesIgniteFatBurner = React.lazy(
+  () =>
+    import("../../components/nutrition/refuel-series/refuel-ignite-fat-burner"),
 );
-const RefuelSeriesSparkEAA = React.lazy(() =>
-  import("../../components/nutrition/refuel-series/refuel-spark-eaa")
+const RefuelSeriesSparkEAA = React.lazy(
+  () => import("../../components/nutrition/refuel-series/refuel-spark-eaa"),
 );
-const RefuelSeriesATPCreatine = React.lazy(() =>
-  import("../../components/nutrition/refuel-series/refuel-atp-creatine")
+const RefuelSeriesATPCreatine = React.lazy(
+  () => import("../../components/nutrition/refuel-series/refuel-atp-creatine"),
 );
-const RefuelSeriesMassGainer = React.lazy(() =>
-  import("../../components/nutrition/refuel-series/refuel-mass-gainer")
+const RefuelSeriesMassGainer = React.lazy(
+  () => import("../../components/nutrition/refuel-series/refuel-mass-gainer"),
 );
-const RefuelSeriesWheyProtein = React.lazy(() =>
-  import("../../components/nutrition/refuel-series/refuel-whey-protein")
+const RefuelSeriesWheyProtein = React.lazy(
+  () => import("../../components/nutrition/refuel-series/refuel-whey-protein"),
 );
-const RefuelSeriesWheyProteinIsolate = React.lazy(() =>
-  import("../../components/nutrition/refuel-series/refuel-whey-protein-isolate")
+const RefuelSeriesWheyProteinIsolate = React.lazy(
+  () =>
+    import("../../components/nutrition/refuel-series/refuel-whey-protein-isolate"),
 );
-const RefuelSeriesWheyProteinConcentrate = React.lazy(() =>
-  import(
-    "../../components/nutrition/refuel-series/refuel-whey-protein-concentrate"
-  )
+const RefuelSeriesWheyProteinConcentrate = React.lazy(
+  () =>
+    import("../../components/nutrition/refuel-series/refuel-whey-protein-concentrate"),
 );
 
 function RefuelSeries() {
@@ -91,7 +92,6 @@ function RefuelSeries() {
           `}
       />
       <Helmet>
-        {/* Preconnect to Facebook CDN */}
         <link rel="preconnect" href="https://connect.facebook.net" />
         <link
           rel="preload"
@@ -156,7 +156,6 @@ function RefuelSeries() {
         <section className="checkout-main checkout-page-detail p-lg-4">
           <div className="container-fluid w-80 checkout-padding">
             <div className="col-12 px-0 mb-5 text-center">
-              {/* <h1 className="f-rob-bol f-35">Refuel 2.0</h1> */}
               <p className="f-rob-bol f-24 mb-2">
                 <b>Exclusively available only offline sales</b>
               </p>
@@ -312,23 +311,7 @@ function RefuelSeries() {
         >
           <ProductDesignByGautam />
         </Suspense>
-        {/* <Suspense
-          fallback={
-            <div className="main-loading-logo">
-              <Oval
-                visible={true}
-                height="60"
-                width="60"
-                color="#4fa94d"
-                ariaLabel="oval-loading"
-                wrapperStyle={{}}
-                wrapperclassName=""
-              />
-            </div>
-          }
-        >
-          <HomePageMoreProduct />
-        </Suspense> */}
+
         <Suspense
           fallback={
             <div className="main-loading-logo">

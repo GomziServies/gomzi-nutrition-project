@@ -60,3 +60,32 @@
   transition: right 0.7s ease-in-out;
   pointer-events: none;
 }
+
+.bg-fff {
+  background: rgb(238 238 238);
+}
+
+.closess-btn {
+  background-color: transparent;
+  border: none;
+  width: 50px;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.fts-21 {
+  font-size: 21px;
+}
+
+.br-5-w-45-h-30 {
+  border-radius: 5px;
+  width: 45px;
+  height: 30px;
+}
+
+.w-100-display-inline-block {
+  width: 100%;
+  display: inline-block;
+}

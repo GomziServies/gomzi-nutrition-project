@@ -87,7 +87,7 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                 gtag('config', 'G-J50WNKGW38');`}</noscript>
       </Helmet>
       <NutritionHeader />
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
           <div className="container-fluid w-80 p-0">
             <div className="row">
@@ -99,8 +99,7 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                       "/assets/images/nutrition/from-mass-production-to-micro-batches-how-to-launch-a-personalized-supplement-line-01.png"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{ borderRadius: "20px", overflow: "hidden" }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -223,21 +222,7 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                     <h2 className="blog-subsection-title">
                       What to Look for in a 2026 Manufacturing Partner:
                     </h2>
-                    <div className="row">
-                      <div className="col"></div>
-                      <div className="col-lg-6 mt-3">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/from-mass-production-to-micro-batches-how-to-launch-a-personalized-supplement-line-01.png"
-                          }
-                          alt="Fggroup"
-                          width="100%"
-                          style={{ borderRadius: "20px" }}
-                        />
-                      </div>
-                      <div className="col"></div>
-                    </div>
+
                     <p className="mt-3 mb-2">
                       If you are looking for a fast entry into the market with
                       proven formulas, partnering with a white label products
@@ -272,23 +257,6 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                       Choosing the Right Production Strategy: White Label vs.
                       Custom OEM
                     </h2>
-
-                    <div className="row">
-                      <div className="col"></div>
-                      <div className="col-lg-6 mt-3">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/from-mass-production-to-micro-batches-how-to-launch-a-personalized-supplement-line-02.png"
-                          }
-                          alt="Fggroup"
-                          width="100%"
-                          style={{ borderRadius: "20px" }}
-                        />
-                      </div>
-                      <div className="col"></div>
-                    </div>
-                    {/* sdfghjksdfuisdfghj */}
 
                     <p className="mt-3 mb-2">
                       For those who want to create a product from scratch with a
@@ -382,36 +350,12 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                       discerning, tech-savvy audience.
                     </p>
                     <h3 className="blog-subsection-subtitle">
-                      Ready to experience the best whey protein brand in India?{" "}
+                      Ready to experience the best whey protein brand in
+                      India?{" "}
                     </h3>
                     <div className="row">
                       <div className="col"></div>
                       <div className="col-lg-8 mt-3">
-                        {/* <div
-                          style={{
-                            position: "relative",
-                            paddingBottom: "56.25%",
-                            height: "0",
-                            overflow: "hidden",
-                            maxWidth: "100%",
-                            borderRadius: "10px",
-                          }}
-                        >
-                          <iframe
-                            src="https://www.youtube.com/embed/B2XN5aWVozs?rel=0"
-                            title="FG Group Video"
-                            style={{
-                              position: "absolute",
-                              top: "0",
-                              left: "0",
-                              width: "100%",
-                              height: "100%",
-                              borderRadius: "10px",
-                            }}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          ></iframe>
-                        </div> */}
                         <div className="ply position-relative">
                           <img
                             src={

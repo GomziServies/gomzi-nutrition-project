@@ -57,83 +57,13 @@ const ProductBlogs = () => {
                   </Link>
                 </div>
               ))}
-
-              {/* <div className="col-md-6 col-lg-4 col-xl-4 pr-0 mb-3">
-                <Link
-                  to="/blogs/how-supplements-help-you-live-healthy-life"
-                  className="cp"
-                >
-                  <div className="blog-product-card-main">
-                    <div className="blog-product-card bg-white br-15">
-                      <span className="lazy-load-image-background blur lazy-load-image-loaded d-inline-block">
-                        <img
-                          alt="Cover for How Supplements Help You Live a Healthy Life blog"
-                          className="img-fluid product-img"
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/how-supplements-help-you-live-healthy-life-1.webp"
-                          }
-                        />
-                      </span>
-                      <div className="col-12 py-3">
-                        <div className="row align-items-center">
-                          <div className="col-10 text-left">
-                            <p className="m-0 f-pop-bol f-16 text-black">
-                              How Supplements Help you live a healthy life.
-                            </p>
-                          </div>
-                          <div className="col-2 text-right">
-                            <i className="fas f-20 fa-arrow-right"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-              <div className="col-md-6 col-lg-4 col-xl-4 pr-0 mb-3">
-                <Link to="/blogs/best-whey-protein-in-india" className="cp">
-                  <div className="blog-product-card-main">
-                    <div className="blog-product-card bg-white br-15">
-                      <span className="lazy-load-image-background blur lazy-load-image-loaded d-inline-block">
-                        <img
-                          alt="Cover for The Ultimate Guide to the Best Whey Protein blog"
-                          className="img-fluid product-img"
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/best-whey-protein-in-india-main.webp"
-                          }
-                        />
-                      </span>
-                      <div className="col-12 py-3">
-                        <div className="row align-items-center">
-                          <div className="col-10 text-left">
-                            <p className="m-0 f-pop-bol f-16 text-black">
-                              The Ultimate Guide to the Best Whey Protein...
-                            </p>
-                          </div>
-                          <div className="col-2 text-right">
-                            <i className="fas f-20 fa-arrow-right"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div> */}
             </div>
           </div>
         </div>{" "}
         <div className="text-center  py-3">
           <Link
             to="/read-more-blogs"
-            className="btn text-white px-4 py-2"
-            style={{
-              backgroundColor: "#6b9c2e",
-              borderRadius: "30px",
-              fontSize: "18px",
-              fontWeight: "500",
-            }}
+            className="btn text-white px-4 py-2 read-more-blogs-btn"
           >
             Read More Blogs...
           </Link>

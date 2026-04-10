@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
-import "../../assets/css/blog.css"; // Import the new blog CSS
+import "../../assets/css/blog.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -20,7 +20,7 @@ function WhyPartneringWithTheRightContractManufacturer() {
       <Helmet>
         <title>
           Why Your Brand's Success Depends on the Right Manufacturing Partner |
-          Gomzi Nutrition
+          Gomzi Lifescience
         </title>{" "}
         <meta
           name="description"
@@ -32,7 +32,7 @@ function WhyPartneringWithTheRightContractManufacturer() {
         />
         <meta
           property="og:title"
-          content="Why Your Brand's Success Depends on the Right Manufacturing Partner | Gomzi Nutrition"
+          content="Why Your Brand's Success Depends on the Right Manufacturing Partner | Gomzi Lifescience"
         />
         <meta
           property="og:description"
@@ -86,14 +86,11 @@ function WhyPartneringWithTheRightContractManufacturer() {
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -101,11 +98,7 @@ function WhyPartneringWithTheRightContractManufacturer() {
                       "/assets/images/nutrition/best-whey-protein-in-india-main.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -124,9 +117,8 @@ function WhyPartneringWithTheRightContractManufacturer() {
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* Introductory paragraph */}
                     <div className="blog-section">
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         The nutraceutical and wellness market in India is
                         expanding at a rapid pace. With consumers becoming more
                         aware of preventive health, immunity support, fitness,
@@ -134,14 +126,17 @@ function WhyPartneringWithTheRightContractManufacturer() {
                         innovative products. But the biggest challenge most
                         companies face is finding a reliable{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             third party nutraceuticals manufacturing partner
                           </Link>
                         </strong>{" "}
                         who can deliver consistent quality, regulatory
                         compliance, and scalable production.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Choosing the right contract manufacturer is not just a
                         business decision it is a brand-defining strategy.
                         Whether you are entering the wellness segment or scaling
@@ -149,7 +144,7 @@ function WhyPartneringWithTheRightContractManufacturer() {
                         your product's efficacy, safety, reliability, and
                         long-term market reputation.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         This article explains why partnering with the right
                         expert is essential, how it affects your brand's
                         success, and what fast-growing companies in India look
@@ -157,7 +152,6 @@ function WhyPartneringWithTheRightContractManufacturer() {
                       </p>
                     </div>
 
-                    {/* SECTION 1: The Rise of Outsourced Manufacturing in India's Wellness Market */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The Rise of Outsourced Manufacturing in India's Wellness
@@ -192,7 +186,10 @@ function WhyPartneringWithTheRightContractManufacturer() {
                         This shift has made businesses search for trusted
                         partners among{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             Nutraceuticals Third Party Manufacturers in India
                           </Link>
                         </strong>{" "}
@@ -200,7 +197,6 @@ function WhyPartneringWithTheRightContractManufacturer() {
                       </p>
                     </div>
 
-                    {/* SECTION 2: Who Needs a Contract Manufacturer? (Target Audience Insights) */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Who Needs a Contract Manufacturer? (Target Audience
@@ -259,7 +255,10 @@ function WhyPartneringWithTheRightContractManufacturer() {
                       <p className="blog-text">
                         These companies search for experienced{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements"
+                          >
                             sports nutrition supplement manufacturers
                           </Link>
                         </strong>{" "}
@@ -336,7 +335,6 @@ function WhyPartneringWithTheRightContractManufacturer() {
                       </p>
                     </div>
 
-                    {/* SECTION 3: Why the Right Contract Manufacturer Determines Your Brand's Success */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Why the Right Contract Manufacturer Determines Your
@@ -356,26 +354,14 @@ function WhyPartneringWithTheRightContractManufacturer() {
                         <div className="col"></div>
 
                         <div className="col-lg-8 mt-3">
-                          <div
-                            style={{
-                              width: "100%",
-                              maxWidth: "1080px",
-                              aspectRatio: "3 / 2",
-                              overflow: "hidden",
-                              borderRadius: "20px",
-                            }}
-                          >
+                          <div className="Right-contract-manufacturer">
                             <img
                               src={
                                 process.env.PUBLIC_URL +
                                 "/assets/images/white-labelling-blogs/product-quality-defines-brand-trust.webp"
                               }
                               alt="FG Group"
-                              style={{
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                              }}
+                              className="Right-contract-manufacturer-img"
                               loading="lazy"
                             />
                           </div>
@@ -435,26 +421,14 @@ function WhyPartneringWithTheRightContractManufacturer() {
                         <div className="col"></div>
 
                         <div className="col-lg-8 mt-3">
-                          <div
-                            style={{
-                              width: "100%",
-                              maxWidth: "1080px",
-                              aspectRatio: "3 / 2",
-                              overflow: "hidden",
-                              borderRadius: "20px",
-                            }}
-                          >
+                          <div className="Right-contract-manufacturer">
                             <img
                               src={
                                 process.env.PUBLIC_URL +
                                 "/assets/images/white-labelling-blogs/r&d-Expertise.webp"
                               }
                               alt="Fggroup"
-                              style={{
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                              }}
+                              className="Right-contract-manufacturer-img"
                               loading="lazy"
                             />
                           </div>
@@ -481,7 +455,10 @@ function WhyPartneringWithTheRightContractManufacturer() {
                       <p className="blog-text">
                         This is especially valuable for categories like{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder"
+                          >
                             white label whey protein
                           </Link>
                         </strong>{" "}
@@ -527,7 +504,6 @@ function WhyPartneringWithTheRightContractManufacturer() {
                       </p>
                     </div>
 
-                    {/* SECTION 4: Competitor Insights - What Other Brands Are Doing Right */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Competitor Insights - What Other Brands Are Doing Right
@@ -559,7 +535,6 @@ function WhyPartneringWithTheRightContractManufacturer() {
                       </p>
                     </div>
 
-                    {/* SECTION 5: How the Right Manufacturer Helps You Stand Out in the Market */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         How the Right Manufacturer Helps You Stand Out in the
@@ -656,7 +631,6 @@ function WhyPartneringWithTheRightContractManufacturer() {
                       </p>
                     </div>
 
-                    {/* SECTION 6: Key Areas to Evaluate Before Selecting a Manufacturer */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Key Areas to Evaluate Before Selecting a Manufacturer
@@ -690,7 +664,6 @@ function WhyPartneringWithTheRightContractManufacturer() {
                       </p>
                     </div>
 
-                    {/* SECTION 7: Why Brands in India Choose Specialized Supplement Manufacturers */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Why Brands in India Choose Specialized Supplement
@@ -720,7 +693,6 @@ function WhyPartneringWithTheRightContractManufacturer() {
                       </p>
                     </div>
 
-                    {/* SECTION 8: The Manufacturing Partner That Brands Trust */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The Manufacturing Partner That Brands Trust
@@ -730,7 +702,10 @@ function WhyPartneringWithTheRightContractManufacturer() {
                         partners who offer reliability, transparency, and strong
                         technical expertise. Companies choose{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/"
+                          >
                             Gomzilifesciences.in
                           </Link>
                         </strong>{" "}
@@ -745,38 +720,22 @@ function WhyPartneringWithTheRightContractManufacturer() {
                       </h3>
                       <p className="blog-text">
                         If you're ready to start your own supplement brand, this
-                        video is a practical walkthrough of how Gomzi Nutrition
-                        supports you at every stage from formulation and
-                        production to packaging and selling. It's the perfect
-                        guide for startups, influencers, and wellness brands
-                        looking for a smooth and successful launch.
+                        video is a practical walkthrough of how Gomzi
+                        Lifescience supports you at every stage from formulation
+                        and production to packaging and selling. It's the
+                        perfect guide for startups, influencers, and wellness
+                        brands looking for a smooth and successful launch.
                       </p>
                       <p className="blog-text">Watch directly on YouTube:</p>
 
                       <div className="row">
                         <div className="col"></div>
                         <div className="col-lg-8 mt-3">
-                          <div
-                            style={{
-                              position: "relative",
-                              paddingBottom: "56.25%",
-                              height: "0",
-                              overflow: "hidden",
-                              maxWidth: "100%",
-                              borderRadius: "10px",
-                            }}
-                          >
+                          <div className="manufacturing-partner-div">
                             <iframe
                               src="https://www.youtube.com/embed/lnhT8_o8h4o"
                               title="FG Group Video"
-                              style={{
-                                position: "absolute",
-                                top: "0",
-                                left: "0",
-                                width: "100%",
-                                height: "100%",
-                                borderRadius: "10px",
-                              }}
+                              className="manufacturing-partner-iframe"
                               frameBorder="0"
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                               allowFullScreen
@@ -788,17 +747,14 @@ function WhyPartneringWithTheRightContractManufacturer() {
 
                       <p className="blog-text mt-3">
                         👉 How to Launch and Sell Your Supplement Product with
-                        Gomzi Nutrition
+                        Gomzi Lifescience
                       </p>
 
                       <div className="blog-conclusion">
                         <p className="blog-text">
                           <h2 className="blog-section-title">Conclusion</h2>
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           Choosing the right contract manufacturer is one of the
                           most important strategic decisions for any
                           nutraceutical or wellness brand. It influences every
@@ -807,10 +763,7 @@ function WhyPartneringWithTheRightContractManufacturer() {
                           scalability. Finding trusted Nutraceuticals Third
                           Party Manufacturers in India is very tough right now.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           As the demand for functional foods, wellness
                           supplements, and fitness-oriented products continues
                           to grow, brands that partner with expert manufacturing

@@ -24,21 +24,12 @@ function GomziNutritionAyureaseGastricReliefPowder() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
-  const addToCart = localStorage.getItem("addtocart");
   const [productData, setProductData] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const canonicalUrl = window.location.href;
   const isAuthenticated = !!localStorage.getItem("fg_group_user_authorization");
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -47,10 +38,10 @@ function GomziNutritionAyureaseGastricReliefPowder() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -69,7 +60,7 @@ function GomziNutritionAyureaseGastricReliefPowder() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -78,26 +69,25 @@ function GomziNutritionAyureaseGastricReliefPowder() {
     }
   };
 
-  const addProductInCart = async (data) => {
-    try {
-      const response = await axiosInstance.post("/order-cart/add-item", {
-        item_id: data.id,
-        quantity: 1,
-        item_type: "FG_MEAL_PRODUCT",
-      });
-      if (response.data.response === "OK") {
-        setProductData(data);
-        // setMenuOpen(!menuOpen);
-        window.location.href = "/nutrition/cart";
-        localStorage.removeItem("cartAvailable");
-        localStorage.removeItem("productCartAvailable");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const addProductInCart = async (data) => {
+      try {
+        const response = await axiosInstance.post("/order-cart/add-item", {
+          item_id: data.id,
+          quantity: 1,
+          item_type: "FG_MEAL_PRODUCT",
+        });
+        if (response.data.response === "OK") {
+          setProductData(data);
+          window.location.href = "/nutrition/cart";
+          localStorage.removeItem("cartAvailable");
+          localStorage.removeItem("productCartAvailable");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     const localData = JSON.parse(localStorage.getItem("productCartAvailable"));
     const dataAvailable = JSON.parse(localStorage.getItem("cartAvailable"));
     if (localData && dataAvailable) {
@@ -132,14 +122,24 @@ function GomziNutritionAyureaseGastricReliefPowder() {
   };
 
   useEffect(() => {
+    const addToCart = localStorage.getItem("addtocart");
     if (addToCart === "true") {
+      const addtocartdata = {
+        id: "66e808f279c30ad8b5e1655d",
+        img: "/assets/images/nutrition/ayurease-gastric-relief-powder-1.webp",
+        name: "Sugarguard Diabetes Care Powder",
+        price: "1099",
+        discount: "689",
+        size: "500 gms",
+        dis_point: "37.30%",
+      };
       setTimeout(() => {
         setProductData(addtocartdata);
         setMenuOpen(true);
         localStorage.removeItem("addtocart");
       }, 2000);
     }
-  }, [addToCart]);
+  }, []);
 
   return (
     <>
@@ -264,16 +264,9 @@ function GomziNutritionAyureaseGastricReliefPowder() {
                     </div>
                     <div className="col-9 pt-2">
                       <div className="d-inline-block">
-                        {/* <span className="d-inline-block mr-2 f-rob-bol f-20 text-red">
-                          37.30%
-                        </span> */}
                         <span className="d-inline-block mr-2 f-rob-bol f-22">
                           ₹689 /-
                         </span>
-                        {/* <p className="f-20">
-                          MRP:-
-                          <span className="price--line-through">₹1,099/-</span>
-                        </p> */}
                       </div>
                     </div>
                     <div className="col-3 text-left text-md-right">
@@ -321,9 +314,6 @@ function GomziNutritionAyureaseGastricReliefPowder() {
                           ) : (
                             ""
                           )}
-                          {/* <button className="bg-light-red d-block text-uppercase px-3 px-lg-5 text-white f-16 f-rob-bol rate-btn-1">
-                            Sold Out
-                          </button> */}
                         </div>
                       </div>
                     </div>

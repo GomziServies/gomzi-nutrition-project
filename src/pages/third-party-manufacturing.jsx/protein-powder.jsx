@@ -195,7 +195,6 @@ const ProteinPowder = () => {
       </Helmet>
       <NutritionHeader />
 
-      {/* Banner Section */}
       <div className="protein-powder-banner">
         <img
           src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1"
@@ -204,7 +203,6 @@ const ProteinPowder = () => {
         />
       </div>
 
-      {/* Heading + Paragraph Section */}
       <section className="protein-powder-content protein-powder-container">
         <h1 className="protein-powder-page-title">
           Third-party And Private Label{" "}
@@ -336,7 +334,7 @@ const ProteinPowder = () => {
           your brand's vision.
         </p>
       </section>
-      {/* Products Section */}
+
       <section className="third-party-manufacturing-card-container ">
         <div className="row mt-3">
           {products.map((product) => (

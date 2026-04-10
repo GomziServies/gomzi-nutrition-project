@@ -5,10 +5,9 @@ import "../../assets/css/about.css";
 const ReviewsSlider = () => {
   const sliderRef = useRef(null);
 
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [, setCanScrollLeft] = useState(false);
+  const [, setCanScrollRight] = useState(true);
 
-  // 🔹 Read More state
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const toggleReadMore = (index) => {
@@ -20,16 +19,6 @@ const ReviewsSlider = () => {
       const { scrollLeft, scrollWidth, offsetWidth } = sliderRef.current;
       setCanScrollLeft(scrollLeft > 0);
       setCanScrollRight(scrollLeft < scrollWidth - offsetWidth - 10);
-    }
-  };
-
-  const scrollNext = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollBy({
-        left: sliderRef.current.offsetWidth / 2,
-        behavior: "smooth",
-      });
-      setTimeout(checkScroll, 300);
     }
   };
 
@@ -112,7 +101,7 @@ Highly recommend Gomzi Lifesciences LLP.`,
     },
     {
       name: "Chirag Pawar",
-      text: `Gomzi nutrition is best premium quality suppliments brand !!
+      text: `Gomzi lifescience is best premium quality suppliments brand !!
 Choco b Whey protein tastes best when consumed in smothee.
 All suppliments are good at taste as well as quality.
 I also kept their suppliments in my gym to recomend others.`,
@@ -145,7 +134,7 @@ Overall good experience`,
     },
     {
       name: "Lakdawala Vraj",
-      text: `Last 2 years i go to the gym every day n im too much serious about fitness but i love to eat sweet n mava kulfi is my most favourite sweet but i didn't eat kulfi last 2 years but now i found gomzi nutrition n it's in mava kulfi flavour and it's tooo tasty n healthy...💕🤞`,
+      text: `Last 2 years i go to the gym every day n im too much serious about fitness but i love to eat sweet n mava kulfi is my most favourite sweet but i didn't eat kulfi last 2 years but now i found gomzi lifescience n it's in mava kulfi flavour and it's tooo tasty n healthy...💕🤞`,
       rating: 5,
     },
     {
@@ -157,16 +146,10 @@ Overall good experience`,
 
   return (
     <div className="reviews-slider">
-      {/* <div className="aboutus-content">
-        <h2 className="reviews-slider__heading">Trusted by Our Clients</h2>
-        <p className="reviews-slider__subtitle">
-          Real reviews from satisfied partners and brands
-        </p> */}
-
       <div class="our-team">
         <div className="ql-editor text-left mt-3">
           <h2 className="mb-3">Trusted by Our Clients</h2>
-          <p className="ml-auto-important" >
+          <p className="ml-auto-important">
             Real reviews from satisfied partners and brands
           </p>
         </div>
@@ -191,7 +174,6 @@ Overall good experience`,
                 </div>
               </div>
 
-              {/* Review Text */}
               <p
                 className={`reviews-slider__text ${
                   expandedIndex === index ? "expanded" : ""
@@ -200,7 +182,6 @@ Overall good experience`,
                 "{review.text}"
               </p>
 
-              {/* Read More */}
               {review.text.length > 150 && (
                 <button
                   className="reviews-slider__readmore"

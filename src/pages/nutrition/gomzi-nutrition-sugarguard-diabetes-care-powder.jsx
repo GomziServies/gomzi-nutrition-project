@@ -31,14 +31,6 @@ function GomziNutritionSugarguardDiabetesCarePowder() {
   const canonicalUrl = window.location.href;
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -47,10 +39,10 @@ function GomziNutritionSugarguardDiabetesCarePowder() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -69,7 +61,6 @@ function GomziNutritionSugarguardDiabetesCarePowder() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
           window.location.href = "/nutrition/cart";
         }
       }
@@ -78,32 +69,24 @@ function GomziNutritionSugarguardDiabetesCarePowder() {
     }
   };
 
-  const addProductInCart = async (data) => {
-    try {
-      const response = await axiosInstance.post("/order-cart/add-item", {
-        item_id: data.id,
-        quantity: 1,
-        item_type: "FG_MEAL_PRODUCT",
-      });
-      if (response.data.response === "OK") {
-        setProductData(data);
-        // setMenuOpen(!menuOpen);
-        window.location.href = "/nutrition/cart";
-        localStorage.removeItem("cartAvailable");
-        localStorage.removeItem("productCartAvailable");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
-    const localData = JSON.parse(localStorage.getItem("productCartAvailable"));
-    const dataAvailable = JSON.parse(localStorage.getItem("cartAvailable"));
-    if (localData && dataAvailable) {
-      addProductInCart(localData);
+    if (addToCart === "true") {
+      const addtocartdata = {
+        id: "66e8099879c30ad8b5e16595",
+        img: "/assets/images/nutrition/sugarguard-diabetes-care-powder-1.webp",
+        name: "Sugarguard Diabetes Care Powder",
+        price: "899",
+        discount: "599",
+        size: "500 gms",
+        dis_point: "15%",
+      };
+      setTimeout(() => {
+        setProductData(addtocartdata);
+        setMenuOpen(true);
+        localStorage.removeItem("addtocart");
+      }, 2000);
     }
-  }, []);
+  }, [addToCart]);
 
   const closeVideoModal = () => {
     setIsVideoOpen(false);
@@ -130,16 +113,6 @@ function GomziNutritionSugarguardDiabetesCarePowder() {
   const closeModal = () => {
     setShowModal(false);
   };
-
-  useEffect(() => {
-    if (addToCart === "true") {
-      setTimeout(() => {
-        setProductData(addtocartdata);
-        setMenuOpen(true);
-        localStorage.removeItem("addtocart");
-      }, 2000);
-    }
-  }, [addToCart]);
 
   return (
     <>
@@ -265,16 +238,9 @@ function GomziNutritionSugarguardDiabetesCarePowder() {
                     </div>
                     <div className="col-9 pt-2">
                       <div className="d-inline-block">
-                        {/* <span className="d-inline-block mr-2 f-rob-bol f-20 text-red">
-                          15%
-                        </span> */}
                         <span className="d-inline-block mr-2 f-rob-bol f-22">
                           ₹599 /-
                         </span>
-                        {/* <p className="f-20">
-                          MRP:-
-                          <span className="price--line-through">₹899/-</span>
-                        </p> */}
                       </div>
                     </div>
                     <div className="col-3 text-left text-md-right">
@@ -322,9 +288,6 @@ function GomziNutritionSugarguardDiabetesCarePowder() {
                           ) : (
                             ""
                           )}
-                          {/* <button className="bg-light-red d-block text-uppercase px-3 px-lg-5 text-white f-16 f-rob-bol rate-btn-1">
-                            Sold Out
-                          </button> */}
                         </div>
                       </div>
                     </div>

@@ -16,7 +16,7 @@ function TopSupplementsForWeightGain() {
   return (
     <>
       <Helmet>
-        <title>Proper Supplement Analysis | Gomzi Nutrition</title>
+        <title>Proper Supplement Analysis | Gomzi Lifescience</title>
         <meta
           name="description"
           content="Explore essential supplements for weight gain, including weight gainers and protein powders, to support muscle growth and achieve your mass gain goals."
@@ -67,7 +67,7 @@ function TopSupplementsForWeightGain() {
                 gtag('config', 'G-J50WNKGW38');`}</noscript>
       </Helmet>
       <NutritionHeader />
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
           <div className="container-fluid w-80 p-0">
             <div className="row">
@@ -79,8 +79,7 @@ function TopSupplementsForWeightGain() {
                       "/assets/images/nutrition/top-supplements-for-weight-gain-main.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{ borderRadius: "20px", overflow: "hidden" }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -170,7 +169,7 @@ function TopSupplementsForWeightGain() {
                         }
                         alt="nutrition role in weight gain"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>
@@ -302,7 +301,7 @@ function TopSupplementsForWeightGain() {
                         }
                         alt="weight gainer for man"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>
@@ -413,7 +412,7 @@ function TopSupplementsForWeightGain() {
                         }
                         alt="weight gainer for man"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>
@@ -542,7 +541,7 @@ function TopSupplementsForWeightGain() {
                         }
                         alt="weight gainer for man"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>

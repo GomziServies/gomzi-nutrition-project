@@ -7,6 +7,7 @@ import "../../assets/css/nutrition.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import ModalVideo from "react-modal-video";
+import "../../assets/css/nutrition.css";
 
 function HappyClientReview() {
   const [videoUrl, setVideoUrl] = useState("");
@@ -22,7 +23,6 @@ function HappyClientReview() {
     setVideoUrl("");
   };
 
-  // Owl Carousel options
   const carouselOptions = {
     loop: true,
     autoplay: true,
@@ -182,7 +182,7 @@ function HappyClientReview() {
           <div className="row" id="explore">
             <div className="col-lg-4 mt-lg-4 ">
               <div className="item">
-                <div className="blog p-0" style={{ borderRadius: "10px" }}>
+                <div className="blog p-0 br-10">
                   <div className="ply position-relative">
                     <LazyLoadImage
                       src={
@@ -190,9 +190,9 @@ function HappyClientReview() {
                         "/assets/images/nutrition/nutri-review-video-1.webp"
                       }
                       width="100%"
-                      style={{ borderRadius: "10px", cursor: 'pointer' }}
                       alt="fggroup"
                       effect="blur"
+                      className="br-10 cp"
                     />
                     <div className="video-btn play-btn">
                       <button
@@ -211,7 +211,7 @@ function HappyClientReview() {
             </div>
             <div className="col-lg-4 mt-lg-4 ">
               <div className="item">
-                <div className="blog p-0" style={{ borderRadius: "10px" }}>
+                <div className="blog p-0 br-10">
                   <div className="ply position-relative">
                     <LazyLoadImage
                       src={
@@ -219,9 +219,9 @@ function HappyClientReview() {
                         "/assets/images/nutrition/nutri-review-video-2.webp"
                       }
                       width="100%"
-                      style={{ borderRadius: "10px", cursor: 'pointer' }}
                       alt="fggroup"
                       effect="blur"
+                      className="br-10 cp"
                     />
                     <div className="video-btn play-btn">
                       <button
@@ -240,7 +240,7 @@ function HappyClientReview() {
             </div>
             <div className="col-lg-4 mt-lg-4 ">
               <div className="item">
-                <div className="blog p-0" style={{ borderRadius: "10px" }}>
+                <div className="blog p-0 br-10">
                   <div className="ply position-relative">
                     <LazyLoadImage
                       src={
@@ -248,7 +248,7 @@ function HappyClientReview() {
                         "/assets/images/nutrition/nutri-review-video-3.webp"
                       }
                       width="100%"
-                      style={{ borderRadius: "10px" }}
+                      className="br-10"
                       alt="fggroup"
                       effect="blur"
                     />

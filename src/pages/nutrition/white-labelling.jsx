@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
@@ -9,7 +8,6 @@ import WhatsappHeaderApp from "../../components/NutritionWhatsappHeaderBtn";
 import CertifiedProduct from "../../components/nutrition/certified";
 import FactoryPhotoSection from "../../components/factoryPhotoSection";
 import { Helmet } from "react-helmet";
-import ProductDesignByGautam from "../../components/nutrition/productDesignByGautam";
 import Testimonials from "../../components/nutrition/testimonials";
 import ThirdPartyManufacturingFAQS from "../../components/nutrition/third-party-manufacturing-faqs";
 import OwlCarousel from "react-owl-carousel";
@@ -19,11 +17,7 @@ import ModalVideo from "react-modal-video";
 import Whitelabellingblogs from "../../components/nutrition/white-labelling-blogs";
 import LifesinceHeader from "../../components/partials/Header/lifesinceheader";
 import WhiteLabellingVideoTestimonials from "./white-labelling-video-testimonials";
-import ServingAcrossIndia from "./ServingAcrossIndia";
 import NutraCTA from "./NutraCTA";
-const MainVideoSection = React.lazy(
-  () => import("../../components/nutrition/mainVideoSection"),
-);
 
 const processSteps = [
   "Product Consultation & Requirement Analysis",
@@ -44,8 +38,6 @@ const brandLogos = [
   "unbreakable-fitness.webp",
   "suppsmart.webp",
 ];
-
-// Duplicate for smooth infinite scroll
 
 const cards = [
   {
@@ -78,36 +70,103 @@ const schemaData = [
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Gomzilifesciences",
+    "@id": "https://www.gomzilifesciences.in/#organization",
+    name: "Gomzi Lifesciences",
     url: "https://www.gomzilifesciences.in",
     logo: "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
     sameAs: [
-      "https://www.facebook.com/people/Gomzi-Nutrition/61558718185166/",
-      "https://www.instagram.com/gomzi_nutrition/",
-      "https://www.youtube.com/channel/UCLyvtq55YZORdV-SN8OQSzQ",
-      "https://www.linkedin.com/in/dt-gautam-jani-561a50161/",
+      "https://www.facebook.com/Gomzilifesciences",
+      "https://www.instagram.com/gomzi_lifesciences/",
+      "https://www.linkedin.com/in/gomzi-lifesciences-423558312/",
+      "https://www.youtube.com/@Gomzilifesciences",
     ],
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+91 88668 42520",
-      contactType: "customer service",
+      telephone: "+918320077993",
+      contactType: "customer support",
       areaServed: "IN",
-      availableLanguage: ["English", "Hindi", "Gujarati"],
+      availableLanguage: ["English", "Hindi", "Gujrati"],
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id":
+      "https://www.gomzilifesciences.in/nutrition/white-labelling/#webpage",
+    url: "https://www.gomzilifesciences.in/nutrition/white-labelling",
+    name: "White Label Protein Powder & Sports Supplement Manufacturer in India",
+    description:
+      "Gomzi Lifesciences offers white label products manufacturing, dietary supplement contract manufacturing, and custom sports supplement manufacturing including protein powders, pre-workout, creatine, and performance supplements and also multitvitamin tablets",
+    inLanguage: "en-IN",
+    about: {
+      "@id": "https://www.gomzilifesciences.in/#organization",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id":
+      "https://www.gomzilifesciences.in/nutrition/white-labelling/#service",
+    serviceType:
+      "Sports Nutrition Supplement Manufacturing & White Label Services",
+    provider: {
+      "@id": "https://www.gomzilifesciences.in/#organization",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "India",
+    },
+    description:
+      "We specialize in protein powder manufacturing, sports nutrition supplement manufacturing, and private label (white label / third party) manufacturing services. Our services include whey protein, mass gainers, pre-workout, creatine, BCAA, multivitamins, and custom nutraceutical formulations.",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Nutraceutical Manufacturing Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Protein Powder Manufacturing",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "private label protein powder manufacturing ",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "third party & white label performance supplement manufacturing",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: " third party Multivitamin & Nutraceutical Manufacturing",
+          },
+        },
+      ],
     },
   },
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Gomzilifesciences - White Labelling",
+    "@id": "https://www.gomzilifesciences.in/#localbusiness",
+    name: "Gomzi Lifesciences",
     image:
       "https://www.gomzilifesciences.in/assets/images/nutrition/white-labelling-banner-1.webp",
     url: "https://www.gomzilifesciences.in/nutrition/white-labelling",
-    telephone: "+91 88668 42520",
-    priceRange: "Rs",
+    telephone: "+918320077993",
+    priceRange: "₹₹",
     address: {
       "@type": "PostalAddress",
       streetAddress:
-        "547,548, FIRST FLOOR, RJD TEXTILES PARK, Hazira Rd, Ichchhapor, PAL, Surat, Gujarat 394510",
+        "443,444,445, 1St Floor, RJD Textile Park, At.Ichchhapor, Hazira Road, Surat, Gujarat 394510 ",
       addressLocality: "Surat",
       addressRegion: "Gujarat",
       postalCode: "394510",
@@ -115,42 +174,34 @@ const schemaData = [
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "21.188333",
-      longitude: "72.742500",
+      latitude: "21.192111595944468",
+      longitude: "72.74163866346777",
     },
     openingHours: "Mo-Sa 09:00-20:00",
-    sameAs: "https://www.gomzilifesciences.in",
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    serviceType: "White Labelling & Third Party Manufacturing",
-    provider: {
-      "@type": "Organization",
-      name: "Gomzilifesciences",
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "India",
-    },
-    description:
-      "We offer white label and third party manufacturing for nutraceuticals, protein powders, sports nutrition, energy drinks, and peanut butter in Surat, India.",
+    sameAs: [
+      "https://www.facebook.com/Gomzilifesciences",
+      "https://www.instagram.com/gomzi_lifesciences/",
+      "https://www.linkedin.com/in/gomzi-lifesciences-423558312/",
+      "https://www.youtube.com/@Gomzilifesciences",
+    ],
   },
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id":
+      "https://www.gomzilifesciences.in/nutrition/white-labelling/#breadcrumb",
     itemListElement: [
       {
         "@type": "ListItem",
         position: 1,
-        name: "Gomzilifesciences",
+        name: "Home",
         item: "https://www.gomzilifesciences.in",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Nutrition",
-        item: "https://www.gomzilifesciences.in/nutrition/bulk-inquiry-nutrition",
+        item: "https://www.gomzilifesciences.in/nutrition",
       },
       {
         "@type": "ListItem",
@@ -163,101 +214,62 @@ const schemaData = [
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://www.gomzilifesciences.in/nutrition/white-labelling/#faq",
     mainEntity: [
       {
         "@type": "Question",
-        name: "What is white labeling in the nutrition industry?",
+        name: "What is third-party nutraceutical manufacturing in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "White labeling allows you to sell nutrition products under your own brand while a third-party manufacturer handles production.",
+          text: "Third-party nutraceutical manufacturing involves outsourcing your supplement production to a specialized company. This allows you to launch your own brand without setting up a factory. At Gomzilifesciences, we provide end-to-end solutions including formulation, manufacturing, packaging, and labeling.",
         },
       },
       {
         "@type": "Question",
-        name: "How does the private labeling process work for supplements?",
+        name: "How do I start my own nutraceutical or supplement brand?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "You choose a formula, customize packaging, approve designs, and place your order. The manufacturer manages production and delivery.",
+          text: "You can choose from our white label nutraceutical products or request a custom formulation. We assist with FSSAI approval, packaging design, and branding so you can focus on marketing and sales.",
         },
       },
       {
         "@type": "Question",
-        name: "Why should I consider white labeling nutrition products?",
+        name: "What certifications do your products have?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "White labeling saves time, cost, and effort by letting you launch branded supplements without manufacturing infrastructure.",
+          text: "Our nutraceuticals are manufactured in facilities certified by FSSAI, GMP, HACCP, and ISO. These certifications ensure product safety, quality, and compliance for both domestic and export markets.",
         },
       },
       {
         "@type": "Question",
-        name: "What types of nutrition products can I white-label?",
+        name: "What is the minimum order quantity (MOQ) for private label supplements?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "You can white-label protein powders, capsules, tablets, gummies, vitamins, liquids, and customized supplements.",
+          text: "MOQ depends on the product type. We offer flexible options across capsules, tablets, powders, and gummies, making it easier for startups and small businesses to launch their brand.",
         },
       },
       {
         "@type": "Question",
-        name: "Can gyms, coaches, or fitness studios launch their own supplements?",
+        name: "Do you provide custom formulations?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, white-label manufacturing is ideal for gym owners, trainers, and coaches to create their own supplement brands.",
+          text: "Yes. Our R&D team develops unique formulations including proteins, herbal supplements, multivitamins, performance drinks, and more to help your brand stand out in the competitive nutraceutical market.",
         },
       },
       {
         "@type": "Question",
-        name: "Do you offer branding and design services?",
+        name: "Can you manufacture supplements for e-commerce brands?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, we provide complete branding, label design, and packaging support to make products retail-ready.",
+          text: "Yes, we manufacture nutraceutical products for Amazon, Flipkart, and D2C brands across India. We also support packaging, barcoding, and compliance to simplify online selling.",
         },
       },
       {
         "@type": "Question",
-        name: "What is the minimum order quantity (MOQ)?",
+        name: "Do you export nutraceutical products to other countries?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "MOQ generally ranges from 500 to 1,000 units depending on product type and customization.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What’s the difference between white label and private label?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "White label uses ready-made formulations, while private label involves fully custom formulas made exclusively for your brand.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How is formula privacy ensured?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Manufacturers sign NDAs to ensure your formulation, branding, and product details remain confidential.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Is white labeling suitable for new nutrition brands?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, it is a low-risk and affordable way for new brands to launch high-quality supplements quickly.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What licenses are required to sell supplements?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "You typically need a business registration and an FSSAI marketing license. Compliance support is provided.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can influencers or trainers launch their own supplement brand?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, white labeling is ideal for influencers, trainers, and gym owners to launch branded nutrition products.",
+          text: "Yes. We work with exporters and international traders, offering bulk nutraceutical manufacturing that meets global regulatory standards with complete documentation and certifications.",
         },
       },
     ],
@@ -269,33 +281,8 @@ function WhiteLabelling() {
 
   const canonicalUrl = window.location.href;
 
-  const carouselOptions = {
-    loop: true,
-    autoplay: false,
-    dots: false,
-    nav: true,
-    navText: [
-      '<i class="fas fa-arrow-left" aria-hidden="true"></i><span class="sr-only">Previous</span>',
-      '<i class="fas fa-arrow-right" aria-hidden="true"></i><span class="sr-only">Next</span>',
-    ],
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 1,
-      },
-      1000: {
-        items: 1,
-      },
-    },
-  };
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
-  const openVideoModal = (url) => {
-    setIsVideoOpen(true);
-    setVideoUrl(url);
-  };
 
   const closeVideoModal = () => {
     setIsVideoOpen(false);
@@ -339,7 +326,7 @@ function WhiteLabelling() {
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
-      {/* <NutritionHeader /> */}
+
       <LifesinceHeader />
       <WhatsappHeaderApp
         message={
@@ -441,28 +428,6 @@ function WhiteLabelling() {
               />
             </div>
           </OwlCarousel>
-          {/* <div className="item active">
-            <img
-              className="d-none d-md-block w-100"
-              src={
-                process.env.PUBLIC_URL +
-                "/assets/images/nutrition/white-labelling-banner-1.webp"
-              }
-              alt="trainer-nutrition-banner"
-              width="100%"
-              height="auto"
-            />
-            <img
-              className="d-block d-md-none w-100"
-              src={
-                process.env.PUBLIC_URL +
-                "/assets/images/nutrition/white-labelling-banner-mobile-1.webp"
-              }
-              alt="trainer-nutrition-banner"
-              width="100%"
-              height="auto"
-            />
-          </div> */}
         </div>
       </section>
       <div className="my-auto">
@@ -483,12 +448,6 @@ function WhiteLabelling() {
           <div className="row justify-content-center w-100 mx-auto">
             <div className="col-12 mt-3">
               <div className="row justify-content-center mb-4">
-                {/* <div className="col-12 text-center px-0">
-                  <h1 className="f-rob-bol f-32">
-                    India's Trusted Nutraceutical Third-Party & White Label
-                    Manufacturer
-                  </h1>
-                </div> */}
                 <div className="col-12 text-center px-0">
                   <h1 className="f-rob-bol f-32">
                     India's Trusted Nutraceutical Third-Party & White Label
@@ -506,21 +465,26 @@ function WhiteLabelling() {
                     </p>
                   </div>
 
-                  {/* Toggle Button */}
-                  <div className="d-flex justify-content-center gap-3 align-items-center mt-3">
+                  <div className="d-flex flex-column flex-md-row justify-content-center gap-3 align-items-center mt-3 mb-3">
+                    <a
+                      href={DownloadPdf || "#"}
+                      download
+                      className="btn fw-bold shadow-lg px-5 py-2 text-uppercase request-toggle"
+                      onMouseOver={(e) =>
+                        (e.currentTarget.style.transform = "scale(1.05)")
+                      }
+                      onMouseOut={(e) =>
+                        (e.currentTarget.style.transform = "scale(1)")
+                      }
+                    >
+                      Download Our Brochure
+                    </a>
+
                     <a
                       href="https://wa.me/918320077993?text=Hello%20I%20want%20to%20request%20a%20quote"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn fw-bold shadow-lg px-5 py-2 text-uppercase"
-                      style={{
-                        backgroundColor: "#86C33A",
-                        color: "#000000",
-                        borderRadius: "50px",
-                        fontSize: "16px",
-                        letterSpacing: "1px",
-                        transition: "transform 0.2s ease",
-                      }}
+                      className="btn fw-bold shadow-lg px-5 py-2 text-uppercase request-toggle"
                       onMouseOver={(e) =>
                         (e.currentTarget.style.transform = "scale(1.05)")
                       }
@@ -544,28 +508,6 @@ function WhiteLabelling() {
                         className="border-radius-20"
                         alt="fggroup"
                       />
-                      {/* <div className="ply position-relative">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/gn-video-thumbnail.webp"
-                          }
-                          width="100%"
-                          className="border-radius-20"
-                          alt="fggroup"
-                        />
-                        <div className="video-btn play-btn">
-                          <button
-                            onClick={() => openVideoModal("2k4XebVALaE")}
-                            className="custom clickof video-button-bg"
-                            aria-label="Play company video"
-                          >
-                            <span className="newthing">
-                              <i className="fas fa-play"></i>
-                            </span>
-                          </button>
-                        </div>
-                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -579,10 +521,7 @@ function WhiteLabelling() {
                     >
                       <div className="descriptionShow text-secondary whitelable-decription">
                         <h2 className="mt-2 mb-2 fs-2 fw-normal lh-sm text-dark text-nowrap">
-                          <span
-                            className="fw-bold"
-                            style={{ color: "#86C33A" }}
-                          >
+                          <span className="fw-bold certified-compliant-div-hspan ">
                             Gomzi Lifesciences LLP ?
                           </span>
                         </h2>
@@ -615,134 +554,14 @@ function WhiteLabelling() {
                           each client's unique requirements, ensuring market
                           reliability, safety, and long-term brand success.
                         </p>
-                        {/* <p className="mt-3">
-                          Gomzi Lifescience LLP offers complete white label and
-                          third-party manufacturing solutions for protein
-                          powders, fitness supplements, and nutraceutical
-                          products with custom branding and bulk production
-                          support.
-                        </p> */}
-                        {/* <p className="mt-3 "> */}
-                        {/* <i className="fas fa-caret-right f-14"></i>{" "} */}
-                        {/* <>Gomzi Lifescience LLP</> is an{" "}
-                          <>ISO 22000:2018, WHO-GMP, HACCP, HALAL</> and{" "}
-                          <>FSSAI - </>
-                          certified company established and run by{" "}
-                          <>Dr. Gautam Jani in 2024. </>
-                        </p> */}
-                        {/* <p className="mt-3 ">
-                          With a vision to deliver international-quality
-                          nutraceutical products at competitive prices, we focus
-                          on innovation, research, and integrated manufacturing
-                          solutions.{" "}
-                        </p>
-                        <p className="mt-3 ">
-                          Based in Surat, Gujarat, we specialize in
-                          <>
-                            {" "}
-                            nutraceutical third party manufacturers in India
-                          </>{" "}
-                          services, including{" "}
-                          <>dietary supplement contract manufacturing,</>{" "}
-                          private label solutions, and custom formulation
-                          development{" "}
-                        </p>
-                        <p className="mt-3 ">
-                          As a leading <> nutraceutical manufacturer,</> we
-                          provide premium-quality finished products tailored to
-                          each client's unique requirements, ensuring regulatory
-                          compliance and market reliability.{" "}
-                        </p> */}
                       </div>
-                      {/* 
-                      <h2
-                        style={{
-                          marginBottom: "10px",
-                          fontSize: "2rem",
-                          fontFamily: "inherit",
-                          fontWeight: 500,
-                          lineHeight: 1.2,
-                          color: "inherit",
-                          marginTop: "10px",
-                          wordBreak: "keep-all",
-                        }}
-                      >
-                        Partner with a Trusted{" "}
-                        <span
-                          className="highlight"
-                          style={{
-                            color: "#86C33A",
-                            fontWeight: "bold",
-                          }}
-                        >
-                          White Label Supplement Manufacturer to Launch Your
-                          Brand Fast
-                        </span>{" "}
-                      </h2>
-
-                      <div className="descriptionShow text-secondary whitelable-decription">
-                        <ul className="mt-2 section-list">
-                          <li>
-                            One Stop Solution For All Your Third Party
-                            Manufacturing Needs in all Sections.
-                          </li>
-                          <li>
-                            In House Designing and Product Development
-                            Facilities.
-                          </li>
-                          <li>Time Bound Delivery Schedules</li>
-                          <li>
-                            Provide Quality, Purity, Safety and Efficacious
-                            Nutraceutical Product
-                          </li>
-                          <li>
-                            Team Of Well Educated & Dynamic Marketing
-                            Professions.
-                          </li>
-                          <li>
-                            Development and Packaging of Products as Per Latest
-                            FSSAI Guidelines.
-                          </li>
-                          <li> WHO/GMP, ISO and FSSAI Approved Plant.</li>
-                          <li> In House R & D Development</li>
-                          <li> In House Well Developed Lab</li>
-                          <li>
-                            Modern Techniques of Science and Infrastructure.
-                          </li>
-                        </ul>
-                      </div> */}
                     </div>
                   </div>
                 </div>
 
                 <div className="col-lg-6 mt-lg-4 d-none d-md-block">
-                  <div
-                    className="item"
-                    style={{ position: "sticky", top: "120px" }}
-                  >
+                  <div className="item white-labelling-position">
                     <div className="blog p-0">
-                      {/* <div className="ply position-relative">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/gn-video-thumbnail.webp"
-                          }
-                          width="100%"
-                          className="border-radius-20"
-                          alt="fggroup"
-                        />
-                        <div className="video-btn play-btn">
-                          <button
-                            onClick={() => openVideoModal("2k4XebVALaE")}
-                            className="custom clickof video-button-bg"
-                            aria-label="Play company video"
-                          >
-                            <span className="newthing">
-                              <i className="fas fa-play"></i>
-                            </span>
-                          </button>
-                        </div>
-                      </div> */}
                       <img
                         src={
                           process.env.PUBLIC_URL +
@@ -756,272 +575,88 @@ function WhiteLabelling() {
                   </div>
                 </div>
 
-                <div className="col-12">
-                  {/* <h2
-                    style={{
-                      marginBottom: "10px",
-                      fontSize: "2rem",
-                      fontFamily: "inherit",
-                      fontWeight: 500,
-                      lineHeight: 1.2,
-                      color: "inherit",
-                      marginTop: "10px",
-                      wordBreak: "keep-all",
-                    }}
-                  >
-                    Partner with a Trusted{" "}
-                    <span
-                      className="highlight"
-                      style={{
-                        color: "#2e7d32",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      White Label Supplement Manufacturer to Launch Your Brand
-                      Fast
-                    </span>{" "}
-                  </h2>
-
-                  <div className="descriptionShow text-secondary whitelable-decription">
-                    <ul className="mt-2 section-list">
-                      <li>
-                        One Stop Solution For All Your Third Party Manufacturing
-                        Needs in all Sections.
-                      </li>
-                      <li>
-                        In House Designing and Product Development Facilities.
-                      </li>
-                      <li>Time Bound Delivery Schedules</li>
-                      <li>
-                        Provide Quality, Purity, Safety and Efficacious
-                        Nutraceutical Product
-                      </li>
-                      <li>
-                        Team Of Well Educated & Dynamic Marketing Professions.
-                      </li>
-                      <li>
-                        Development and Packaging of Products as Per Latest
-                        FSSAI Guidelines.
-                      </li>
-                      <li> WHO/GMP, ISO and FSSAI Approved Plant.</li>
-                      <li> In House R & D Development</li>
-                      <li> In House Well Developed Lab</li>
-                      <li>Modern Techniques of Science and Infrastructure.</li>
-                    </ul>
-                  </div> */}
-                </div>
+                <div className="col-12"></div>
               </div>
             </div>
           </div>
 
           <div className="vision-mission-container mt-0 pt-0">
             <div className="row mission-section align-items-start">
-              <div
-                className="left-section sticky-img d-none d-md-block"
-                style={{}}
-              >
+              <div className="left-section sticky-img d-none d-md-block">
                 <img
                   src="/assets/images/nutrition/what-makes-us.webp"
                   alt="Gomzi Lifescience Third-Party Manufacturing Partner"
-                  className=""
-                  style={{ top: "0px" }}
+                  className="white-labelling-top-0"
                 />
               </div>
               <div className="left-section d-block d-md-none">
                 <img
                   src="/assets/images/nutrition/what-makes-us.webp"
                   alt="Gomzi Lifescience Third-Party Manufacturing Partner"
-                  className=""
-                  style={{ top: "0px", marginBottom: "30px" }}
+                  className="mb-30 white-labelling-top-0"
                 />
               </div>
               <div className="left-section">
-                <h2 style={{ marginBottom: "-24px" }}>
+                <h2 className="mb-24">
                   Our Nutraceutical{" "}
                   <span className="highlight"> Manufacturing Services</span>
                 </h2>
 
                 <div className="row g-5 justify-content-center">
                   <div className="mt-2">
-                    {/* Box 1 */}
                     <div className="col-lg-6 col-md-6 col-sm-12 ">
-                      <div
-                        className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm"
-                        style={{
-                          backgroundColor: "#fff",
-                          borderRadius: "12px",
-                          minHeight: "140px",
-                          borderBottom: "4px solid #86c33a",
-                          boxShadow: "0 10px 20px rgba(0,0,0,0.05)",
-                        }}
-                      >
-                        <i
-                          className="fa fa-check-circle mb-2"
-                          style={{ fontSize: "24px", color: "#86c33a" }}
-                        ></i>
-                        <p
-                          className="f-rob-bol mb-0"
-                          style={{
-                            fontSize: "15px",
-                            color: "#333",
-                            fontWeight: "600",
-                            lineHeight: "1.3",
-                          }}
-                        >
+                      <div className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm manufacturing-services-div ">
+                        <i className="fa fa-check-circle mb-2 manufacturing-services-div-i "></i>
+                        <p className="f-rob-bol mb-0 manufacturing-services-div-i-para">
                           Nutraceutical Third Party Manufacturing in India
                         </p>
                       </div>
                     </div>
 
-                    {/* Box 2 */}
                     <div className="col-lg-6 col-md-6 col-sm-12">
-                      <div
-                        className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm"
-                        style={{
-                          backgroundColor: "#fff",
-                          borderRadius: "12px",
-                          minHeight: "140px",
-                          borderBottom: "4px solid #86c33a",
-                          boxShadow: "0 10px 20px rgba(0,0,0,0.05)",
-                        }}
-                      >
-                        <i
-                          className="fa fa-check-circle mb-2"
-                          style={{ fontSize: "24px", color: "#86c33a" }}
-                        ></i>
-                        <p
-                          className="f-rob-bol mb-0"
-                          style={{
-                            fontSize: "15px",
-                            color: "#333",
-                            fontWeight: "600",
-                            lineHeight: "1.3",
-                          }}
-                        >
+                      <div className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm manufacturing-services-div">
+                        <i className="fa fa-check-circle mb-2 manufacturing-services-div-i "></i>
+                        <p className="f-rob-bol mb-0 manufacturing-services-div-i-para">
                           White Label & Private Label Supplement Manufacturing
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Box 3 */}
                   <div className="mt-2">
                     <div className="col-lg-6 col-md-6 col-sm-12">
-                      <div
-                        className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm"
-                        style={{
-                          backgroundColor: "#fff",
-                          borderRadius: "12px",
-                          minHeight: "140px",
-                          borderBottom: "4px solid #86c33a",
-                          boxShadow: "0 10px 20px rgba(0,0,0,0.05)",
-                        }}
-                      >
-                        <i
-                          className="fa fa-check-circle mb-2"
-                          style={{ fontSize: "24px", color: "#86c33a" }}
-                        ></i>
-                        <p
-                          className="f-rob-bol mb-0"
-                          style={{
-                            fontSize: "15px",
-                            color: "#333",
-                            fontWeight: "600",
-                            lineHeight: "1.3",
-                          }}
-                        >
+                      <div className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm manufacturing-services-div">
+                        <i className="fa fa-check-circle mb-2 manufacturing-services-div-i "></i>
+                        <p className="f-rob-bol mb-0 manufacturing-services-div-i-para">
                           Protein Powder Manufacturing
                         </p>
                       </div>
                     </div>
 
-                    {/* Box 4 */}
                     <div className="col-lg-6 col-md-6 col-sm-12">
-                      <div
-                        className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm"
-                        style={{
-                          backgroundColor: "#fff",
-                          borderRadius: "12px",
-                          minHeight: "140px",
-                          borderBottom: "4px solid #86c33a",
-                          boxShadow: "0 10px 20px rgba(0,0,0,0.05)",
-                        }}
-                      >
-                        <i
-                          className="fa fa-check-circle mb-2"
-                          style={{ fontSize: "24px", color: "#86c33a" }}
-                        ></i>
-                        <p
-                          className="f-rob-bol mb-0"
-                          style={{
-                            fontSize: "15px",
-                            color: "#333",
-                            fontWeight: "600",
-                            lineHeight: "1.3",
-                          }}
-                        >
+                      <div className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm manufacturing-services-div">
+                        <i className="fa fa-check-circle mb-2 manufacturing-services-div-i "></i>
+                        <p className="f-rob-bol mb-0 manufacturing-services-div-i-para">
                           Dietary Supplement Contract Manufacturing
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Box 5 */}
                   <div className="mt-2">
                     <div className="col-lg-6 col-md-6 col-sm-12">
-                      <div
-                        className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm"
-                        style={{
-                          backgroundColor: "#fff",
-                          borderRadius: "12px",
-                          minHeight: "140px",
-                          borderBottom: "4px solid #86c33a",
-                          boxShadow: "0 10px 20px rgba(0,0,0,0.05)",
-                        }}
-                      >
-                        <i
-                          className="fa fa-check-circle mb-2"
-                          style={{ fontSize: "24px", color: "#86c33a" }}
-                        ></i>
-                        <p
-                          className="f-rob-bol mb-0"
-                          style={{
-                            fontSize: "15px",
-                            color: "#333",
-                            fontWeight: "600",
-                            lineHeight: "1.3",
-                          }}
-                        >
+                      <div className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm manufacturing-services-div">
+                        <i className="fa fa-check-circle mb-2 manufacturing-services-div-i "></i>
+                        <p className="f-rob-bol mb-0 manufacturing-services-div-i-para">
                           Custom Formulation & R&D Support
                         </p>
                       </div>
                     </div>
 
-                    {/* Box 6 */}
                     <div className="col-lg-6 col-md-6 col-sm-12 mt-2 mt-md-0">
-                      <div
-                        className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm"
-                        style={{
-                          backgroundColor: "#fff",
-                          borderRadius: "12px",
-                          minHeight: "140px",
-                          borderBottom: "4px solid #86c33a",
-                          boxShadow: "0 10px 20px rgba(0,0,0,0.05)",
-                        }}
-                      >
-                        <i
-                          className="fa fa-check-circle mb-2"
-                          style={{ fontSize: "24px", color: "#86c33a" }}
-                        ></i>
-                        <p
-                          className="f-rob-bol mb-0"
-                          style={{
-                            fontSize: "15px",
-                            color: "#333",
-                            fontWeight: "600",
-                            lineHeight: "1.3",
-                          }}
-                        >
+                      <div className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm manufacturing-services-div">
+                        <i className="fa fa-check-circle mb-2 manufacturing-services-div-i "></i>
+                        <p className="f-rob-bol mb-0 manufacturing-services-div-i-para">
                           Bulk Manufacturing, Packaging & Labeling Solutions
                         </p>
                       </div>
@@ -1031,205 +666,49 @@ function WhiteLabelling() {
               </div>
             </div>
 
-            {/* Product range */}
             <div className="row mission-section align-items-start">
-              <div className="left-section" style={{ order: 2 }}>
-                <h2 style={{ marginBottom: "20px" }}>
+              <div className="left-section product-range-order-2">
+                <h2 className="mb-20">
                   Our <span className="highlight"> Product Range</span>
                 </h2>
-                {/* Link 1 */}
-                {/* <Link
-  to="/third-party-manufacturing/protein-powder"
-  className="text-decoration-none d-block mb-3"
->
-  <div
-    className="d-flex align-items-center p-3"
-    style={{
-      backgroundColor: "#fff",
-      borderRadius: "10px",
-      boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-      borderLeft: "5px solid #86c33a",
-      cursor: "pointer",
-    }}
-  >
-    <p
-      className="f-rob-bol f-20 mb-0"
-      style={{ color: "#333" }}
-    >
-      <strong style={{ color: "#86c33a" }}>
-        Protein Supplements
-      </strong>
-      <br /> Whey Protein, Mass Gainer
-    </p>
-  </div>
-</Link> */}
-<Link to="#" className="text-decoration-none d-block mb-3">
-                  <div
-                    className="d-flex align-items-center p-3"
-                    style={{
-                      backgroundColor: "#fff",
-                      borderRadius: "10px",
-                      boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                      borderLeft: "5px solid #86c33a",
-                    }}
-                  >
-                    <p
-                      className="f-rob-bol f-20 mb-0"
-                      style={{ color: "#333", cursor: "pointer" }}
-                      onClick={() =>
-                        window.open(
-                          "https://wa.me/918320077993?text=Hello%20I%20am%20interested%20in%20Protein%20Powders",
-                          "_blank",
-                        )
-                      }
-                    >
-                      <strong style={{ color: "#86c33a" }}>
-                         Protein Supplements
+
+                <Link
+                  to="/third-party-manufacturing/WheyProteinManufacturing"
+                  className="text-decoration-none d-block mb-3"
+                >
+                  <div className="d-flex align-items-center p-3 product-range-section">
+                    <p className="f-rob-bol f-20 mb-0 gomzi-llp-para ">
+                      <strong className="product-range-section-span-title">
+                        Protein Supplements
                       </strong>
                       <br />
-                     Whey Protein, Mass Gainer
+                      Whey Protein, Mass Gainer
                     </p>
                   </div>
                 </Link>
 
-                {/* Link 2 */}
-               {/* <Link
-  to="/third-party-manufacturing/sports-nutrition-supplements"
-  className="text-decoration-none d-block mb-3"
->
-  <div
-    className="d-flex align-items-center p-3"
-    style={{
-      backgroundColor: "#fff",
-      borderRadius: "10px",
-      boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-      borderLeft: "5px solid #86c33a",
-      cursor: "pointer",
-    }}
-  >
-    <p
-      className="f-rob-bol f-20 mb-0"
-      style={{ color: "#333" }}
-    >
-      <strong style={{ color: "#86c33a" }}>
+                <Link
+                  to="/third-party-manufacturing/performance-supplements"
+                  className="text-decoration-none d-block mb-3"
+                >
+                  <div className="d-flex align-items-center p-3 product-range-section">
+                    <p className="f-rob-bol f-20 mb-0 gomzi-llp-para ">
+                      <strong className="product-range-section-span-title">
                         Performance Supplements
-                      </strong>
-                      <br />
-                      Pre-Workout, Creatine, BCAA, EAA  
-    </p>
-  </div>
-</Link> */}
-<Link to="#" className="text-decoration-none d-block mb-3">
-                  <div
-                    className="d-flex align-items-center p-3"
-                    style={{
-                      backgroundColor: "#fff",
-                      borderRadius: "10px",
-                      boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                      borderLeft: "5px solid #86c33a",
-                    }}
-                  >
-                    <p
-                      className="f-rob-bol f-20 mb-0"
-                      style={{ color: "#333", cursor: "pointer" }}
-                      onClick={() =>
-                        window.open(
-                          "https://wa.me/918320077993?text=Hello%20I%20am%20interested%20in%20Protein%20Powders",
-                          "_blank",
-                        )
-                      }
-                    >
-                      <strong style={{ color: "#86c33a" }}>
-                         Performance Supplements
                       </strong>
                       <br />
                       Pre-Workout, Creatine, BCAA, EAA
                     </p>
                   </div>
                 </Link>
- 
-                {/* Link 3 */}
-                <Link to="#" className="text-decoration-none d-block mb-3">
-                  <div
-                    className="d-flex align-items-center p-3"
-                    style={{
-                      backgroundColor: "#fff",
-                      borderRadius: "10px",
-                      boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                      borderLeft: "5px solid #86c33a",
-                    }}
-                  >
-                    <p
-                      className="f-rob-bol f-20 mb-0"
-                      style={{ color: "#333", cursor: "pointer" }}
-                      onClick={() =>
-                        window.open(
-                          "https://wa.me/918320077993?text=Hello%20I%20am%20interested%20in%20Protein%20Powders",
-                          "_blank",
-                        )
-                      }
-                    >
-                      <strong style={{ color: "#86c33a" }}>
-                        Healthy Nutrition Products
-                      </strong>
-                      <br />
-                      Peanut Butter, Protein Bar
-                    </p>
-                  </div>
-                </Link>
 
-                {/* Link 4 */}
-                <Link to="#" className="text-decoration-none d-block mb-3">
-                  <div
-                    className="d-flex align-items-center p-3"
-                    style={{
-                      backgroundColor: "#fff",
-                      borderRadius: "10px",
-                      boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                      borderLeft: "5px solid #86c33a",
-                    }}
-                  >
-                    <p
-                      className="f-rob-bol f-20 mb-0"
-                      style={{ color: "#333", cursor: "pointer" }}
-                      onClick={() =>
-                        window.open(
-                          "https://wa.me/918320077993?text=Hello%20I%20am%20interested%20in%20Protein%20Powders",
-                          "_blank",
-                        )
-                      }
-                    >
-                      <strong style={{ color: "#86c33a" }}>
-                        Energy & Hydration
-                      </strong>
-                      <br />
-                      Energy Drinks
-                    </p>
-                  </div>
-                </Link>
-
-                {/* Link 5 */}
-                <Link to="#" className="text-decoration-none d-block mb-3">
-                  <div
-                    className="d-flex align-items-center p-3"
-                    style={{
-                      backgroundColor: "#fff",
-                      borderRadius: "10px",
-                      boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                      borderLeft: "5px solid #86c33a",
-                    }}
-                  >
-                    <p
-                      className="f-rob-bol f-20 mb-0"
-                      style={{ color: "#333", cursor: "pointer" }}
-                      onClick={() =>
-                        window.open(
-                          "https://wa.me/918320077993?text=Hello%20I%20am%20interested%20in%20Protein%20Powders",
-                          "_blank",
-                        )
-                      }
-                    >
-                      <strong style={{ color: "#86c33a" }}>
+                <Link
+                  to="/third-party-manufacturing/multivitamins-tablet"
+                  className="text-decoration-none d-block mb-3"
+                >
+                  <div className="d-flex align-items-center p-3 product-range-section">
+                    <p className="f-rob-bol f-20 mb-0 gomzi-llp-para ">
+                      <strong className="product-range-section-span-title">
                         Daily Health Supplements
                       </strong>
                       <br />
@@ -1239,21 +718,17 @@ function WhiteLabelling() {
                 </Link>
               </div>
 
-              {/* ✅ Image - order: 1 on mobile/tablet = pehle dikhe */}
-              <div className="left-section " style={{ order: 1 }}>
+              <div className="left-section product-range-order-1">
                 <img
                   src="/assets/images/nutrition/what-makes-us.webp"
                   alt="Gomzi Lifescience Third-Party Manufacturing Partner"
-                  className=" pb-5 pb-md-0"
-                  style={{ top: "0px" }}
+                  className=" pb-5 pb-md-0 white-labelling-top-0 "
                 />
               </div>
             </div>
 
-            {/* Why Choose Gomzi Lifescience LLP Section */}
             <div className="row mission-section align-items-start">
-              {/* ✅ Image - order: 1 on mobile/tablet = pehle dikhe */}
-              <div className="left-section" style={{ order: 1 }}>
+              <div className="left-section product-range-order-1">
                 <img
                   src="/assets/images/nutrition/white-labelling-vision-001.webp"
                   alt="Gomzi Lifesciences"
@@ -1261,128 +736,56 @@ function WhiteLabelling() {
                 />
               </div>
 
-              <div className="left-section" style={{ order: 2 }}>
-                <h2 style={{ marginBottom: "20px" }}>
+              <div className="left-section product-range-order-2">
+                <h2 className="mb-20 ">
                   Why Choose{" "}
                   <span className="highlight">Gomzi Lifescience LLP?</span>
                 </h2>
 
                 <div className="descriptionShow text-secondary whitelable-decription">
-                  {/* Box 1 */}
                   <div className="mb-3">
-                    <div
-                      className="d-flex align-items-center p-3"
-                      style={{
-                        backgroundColor: "#fff",
-                        borderRadius: "10px",
-                        boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                        borderLeft: "5px solid #86c33a",
-                      }}
-                    >
-                      <p
-                        className="f-rob-bol mb-0"
-                        style={{ color: "#333", fontWeight: "600" }}
-                      >
+                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                      <p className="f-rob-bol mb-0 iso-para ">
                         ISO & WHO-GMP Certified Manufacturing Facility
                       </p>
                     </div>
                   </div>
 
-                  {/* Box 2 */}
                   <div className="mb-3">
-                    <div
-                      className="d-flex align-items-center p-3"
-                      style={{
-                        backgroundColor: "#fff",
-                        borderRadius: "10px",
-                        boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                        borderLeft: "5px solid #86c33a",
-                      }}
-                    >
-                      <p
-                        className="f-rob-bol mb-0"
-                        style={{ color: "#333", fontWeight: "600" }}
-                      >
+                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                      <p className="f-rob-bol mb-0 iso-para ">
                         Research-Driven & Custom Formulation Expertise
                       </p>
                     </div>
                   </div>
 
-                  {/* Box 3 */}
                   <div className="mb-3">
-                    <div
-                      className="d-flex align-items-center p-3"
-                      style={{
-                        backgroundColor: "#fff",
-                        borderRadius: "10px",
-                        boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                        borderLeft: "5px solid #86c33a",
-                      }}
-                    >
-                      <p
-                        className="f-rob-bol mb-0"
-                        style={{ color: "#333", fontWeight: "600" }}
-                      >
+                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                      <p className="f-rob-bol mb-0 iso-para ">
                         Premium Raw Materials & Advanced Manufacturing
                       </p>
                     </div>
                   </div>
 
-                  {/* Box 4 */}
                   <div className="mb-3">
-                    <div
-                      className="d-flex align-items-center p-3"
-                      style={{
-                        backgroundColor: "#fff",
-                        borderRadius: "10px",
-                        boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                        borderLeft: "5px solid #86c33a",
-                      }}
-                    >
-                      <p
-                        className="f-rob-bol mb-0"
-                        style={{ color: "#333", fontWeight: "600" }}
-                      >
+                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                      <p className="f-rob-bol mb-0 iso-para ">
                         Complete Branding & Private Label Support
                       </p>
                     </div>
                   </div>
 
-                  {/* Box 5 */}
                   <div className="mb-3">
-                    <div
-                      className="d-flex align-items-center p-3"
-                      style={{
-                        backgroundColor: "#fff",
-                        borderRadius: "10px",
-                        boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                        borderLeft: "5px solid #86c33a",
-                      }}
-                    >
-                      <p
-                        className="f-rob-bol mb-0"
-                        style={{ color: "#333", fontWeight: "600" }}
-                      >
+                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                      <p className="f-rob-bol mb-0 iso-para ">
                         Competitive Pricing with International Quality
                       </p>
                     </div>
                   </div>
 
-                  {/* Box 6 */}
                   <div className="mb-3">
-                    <div
-                      className="d-flex align-items-center p-3"
-                      style={{
-                        backgroundColor: "#fff",
-                        borderRadius: "10px",
-                        boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                        borderLeft: "5px solid #86c33a",
-                      }}
-                    >
-                      <p
-                        className="f-rob-bol mb-0"
-                        style={{ color: "#333", fontWeight: "600" }}
-                      >
+                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                      <p className="f-rob-bol mb-0 iso-para ">
                         Strict Regulatory & Quality Compliance
                       </p>
                     </div>
@@ -1391,68 +794,29 @@ function WhiteLabelling() {
               </div>
             </div>
 
-            {/* Manufacturing Process Section */}
             <div className="row mission-section align-items-start">
-              <div className="left-section" style={{ order: 2 }}>
-                <h2 style={{ marginBottom: "30px", fontWeight: "700" }}>
+              <div className="left-section product-range-order-2 ">
+                <h2 className="mb-30-fw-700">
                   Our{" "}
-                  <span style={{ color: "#86c33a" }}>
+                  <span className="certified-compliant-div-hspan ">
                     Manufacturing Process
                   </span>
                 </h2>
 
-                <div style={{ position: "relative", paddingLeft: "40px" }}>
-                  {/* Vertical Line */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: "18px",
-                      top: "10px",
-                      bottom: "10px",
-                      width: "3px",
-                      background: "#86c33a",
-                    }}
-                  ></div>
+                <div className="manufacturing-process-div">
+                  <div className="manufacturing-process-steps-div-main"></div>
 
                   {processSteps.map((step, index) => (
                     <div
                       key={index}
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        marginBottom: "35px",
-                        position: "relative",
-                      }}
+                      className="manufacturing-process-steps-div-inner"
                     >
-                      {/* Circle */}
-                      <div
-                        style={{
-                          width: "35px",
-                          height: "35px",
-                          background: "#86c33a",
-                          borderRadius: "50%",
-                          color: "#fff",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          fontWeight: "600",
-                          position: "absolute",
-                          left: "-40px",
-                          boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
-                        }}
-                      >
+                      <div className="manufacturing-process-steps-num ">
                         {index + 1}
                       </div>
 
-                      {/* Text */}
                       <div>
-                        <h6
-                          style={{
-                            margin: 0,
-                            fontWeight: "600",
-                            color: "#000",
-                          }}
-                        >
+                        <h6 className="manufacturing-process-steps-title">
                           {step}
                         </h6>
                       </div>
@@ -1461,1326 +825,24 @@ function WhiteLabelling() {
                 </div>
               </div>
 
-              {/* ✅ Image - order: 1 on mobile/tablet = pehle dikhe */}
-              <div className="left-section mb-2" style={{ order: 1 }}>
+              <div className="left-section mb-2 product-range-order-1">
                 <img
                   src="/assets/images/nutrition/white-labelling-mission-001.webp"
                   alt="Gomzi Lifesciences Manufacturing Process"
-                  className="pb-5 pb-md-0"
-                  style={{ top: "0px" }}
+                  className="pb-5 pb-md-0 white-labelling-top-0 "
                 />
               </div>
             </div>
-
-            {/* ✅ Global Responsive Order + Overlap Fix */}
-            <style>{`
-              /* --- Desktop (1024px+): sticky ON --- */
-              @media (min-width: 1024px) {
-                .mission-section {
-                  display: flex !important;
-                  flex-direction: row !important;
-                  align-items: flex-start !important;
-                }
-                .mission-section .left-section {
-                  order: unset !important;
-                  z-index: 1 !important;
-                }
-                .mission-section .sticky-img {
-                  position: sticky !important;
-                  top: 110px !important;
-                }
-                .mission-section .left-section img {
-                  position: relative !important;
-                  top: 0 !important;
-                  max-width: 100% !important;
-                }
-              }
-
-              /* --- Tablet + Mobile (<1024px): sticky OFF, no overlap --- */
-              @media (max-width: 1023px) {
-                .mission-section {
-                  display: flex !important;
-                  flex-direction: column !important;
-                  align-items: stretch !important;
-                }
-                .mission-section .left-section,
-                .mission-section .sticky-img {
-                  position: relative !important;
-                  top: 0 !important;
-                  z-index: 1 !important;
-                  width: 100% !important;
-                }
-                .mission-section .left-section img {
-                  position: relative !important;
-                  top: 0 !important;
-                  width: 100% !important;
-                  height: auto !important;
-                }
-              }
-            `}</style>
           </div>
         </div>
       </section>
 
       <div className="main-content mt-5">
-        {/* <section className="checkout-main checkout-page-detail p-lg-4">
-          <div className="container-fluid w-80 checkout-padding nav-slider-another">
-            <div className="col-12 px-0 mb-5 text-center">
-              <h2 style={{ marginBottom: "5px" }} className="f-rob-bol f-35">
-                Make Your Own Product
-              </h2>
-              <p>(Third Party Manufacturing)</p>
-            </div>
-            <OwlCarousel
-              id="fwg-owl"
-              className="owl-theme"
-              {...carouselOptions}
-            >
-              <div className="no-gutters active-tab-shadow mb-5 p-4 mx-4">
-                <div className="">
-                  <div className="row w-100 flex-column-reverse flex-md-row ">
-                    <div className="col-lg-6 px-0 px-md-3 mb-2 mt-2 mt-md-0 bulk-inquiry-left order-1">
-                      <div className="item mb-3">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/whey-combo.webp"
-                          }
-                          alt="FG Group"
-                          className="w-100"
-                          width="100%"
-                          height="auto"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6 px-0">
-                      <div className="content-container">
-                        <div className="row" id="concentrate">
-                          <div className="col-12">
-                            <h2 className="f-rob-bol f-35">Whey Protein :</h2>
-                          </div>
-                          <br />
-                          <div className="col-12 return-policy-main">
-                            <div className="mt-3 editor-text">
-                              <div className="card-body tabata p-0">
-                                <blockquote className="blockquote mb-0">
-                                  <div className="schedule">
-                                    <table className="table table-hover">
-                                      <tbody>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Manufacturer
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Gomzi Lifescience LLP
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Packaging Size
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Customized (500 Gm,1 Kg, 2kg)
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Packaging Type
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Jar
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Composition
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            As Per Requirement
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Form
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Powder
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Flavour
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Different Type Of Flavours Are
-                                            Available
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Shelf Life
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            18 Months
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Delivery Time
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            15-20 Days
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              MOQ
-                                            </td>
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              200Kg
-                                            </td>
-                                          </tr>
-                                        <tr className="table-light">
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              Discount On Order
-                                            </td>
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              70%
-                                            </td>
-                                          </tr>
-                                        <tr className="table-light">
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              Min Qty
-                                            </td>
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              50
-                                            </td>
-                                          </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Whey protein concentrate
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹1630 Per 1kg
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Whey protein isolate
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹3000 Per 1kg
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            100% whey protein blend
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹1300 Per 1kg
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            100% whey protein
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹1170 Per 1kg
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Mass Gainer
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹420 Per 1kg
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Design & Packaging
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Included
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Website support & Marketing
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Included
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </div>
-                                </blockquote>
-                              </div>
-                              <div className="pb-2 ql-editor descriptionShow text-secondary">
-                                <Link
-                                  to="/third-party-manufacturing/protein-powder"
-                                  type="button"
-                                  className="btn-interested mx-2 mt-3"
-                                >
-                                  View More
-                                </Link>
-                                <a
-                                  href={DownloadPdf || "#"}
-                                  download
-                                  className="btn-download-brochure mx-2 mt-3"
-                                >
-                                  Download Brochure
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="no-gutters active-tab-shadow mb-5 p-4 mx-4">
-                <div className="">
-                  <div className="row w-100 flex-column-reverse flex-md-row ">
-                    <div className="col-lg-6 px-0 px-md-3 mb-2 mt-2 mt-md-0 bulk-inquiry-left order-1">
-                      <div className="item mb-3">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/performance-combo.webp"
-                          }
-                          alt="FG Group"
-                          className="w-100"
-                          width="100%"
-                          height="auto"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6 px-0">
-                      <div className="content-container">
-                        <div className="row">
-                          <div className="col-12">
-                            <h2 className="f-rob-bol f-35">
-                              Performance Drinks:
-                            </h2>
-                          </div>
-                          <br />
-                          <div className="col-12 return-policy-main">
-                            <div className="mt-3 editor-text">
-                              <div className="card-body tabata p-0">
-                                <blockquote className="blockquote mb-0">
-                                  <div className="schedule">
-                                    <table className="table table-hover">
-                                      <tbody>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Manufacturer
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Gomzi Lifescience LLP
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Packaging Size
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Customized (500 Gm,1 Kg, 2kg)
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Packaging Type
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Jar
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Composition
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            As Per Requirement
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Form
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Powder
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Flavour
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Different Type Of Flavours Are
-                                            Available
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Shelf Life
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            18 Months
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Delivery Time
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            15-20 Days
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              MOQ
-                                            </td>
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              200Kg
-                                            </td>
-                                          </tr>
-                                        <tr className="table-light">
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              Discount On Order
-                                            </td>
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              70%
-                                            </td>
-                                          </tr>
-                                        <tr className="table-light">
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              Min Qty
-                                            </td>
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              100
-                                            </td>
-                                          </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Creatine unflavored
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹350 Per 250gm
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Ignite pre workout
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹440 Per 250gm
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            EAA
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹490 Per 250gm
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Design & Packaging
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Included
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Website support & Marketing
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Included
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </div>
-                                </blockquote>
-                              </div>
-                              <div className="pb-2 ql-editor descriptionShow text-secondary">
-                                <Link
-                                  to="/third-party-manufacturing/sports-nutrition-supplements"
-                                  type="button"
-                                  className="btn-interested mx-2 mt-3"
-                                >
-                                  View More
-                                </Link>
-                                <a
-                                  href={DownloadPdf || "#"}
-                                  download
-                                  className="btn-download-brochure mx-2 mt-3"
-                                >
-                                  Download Brochure
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="no-gutters active-tab-shadow mb-5 p-4 mx-4">
-                <div className="">
-                  <div className="row w-100 flex-column-reverse flex-md-row ">
-                    <div className="col-lg-6 px-0 px-md-3 mb-2 mt-2 mt-md-0 bulk-inquiry-left order-1">
-                      <div className="item mb-3">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/peanut-combo.webp"
-                          }
-                          alt="FG Group"
-                          className="w-100"
-                          width="100%"
-                          height="auto"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6 px-0">
-                      <div className="content-container">
-                        <div className="row">
-                          <div className="col-12">
-                            <h2 className="f-rob-bol f-35">Peanut Butter:</h2>
-                          </div>
-                          <br />
-                          <div className="col-12 return-policy-main">
-                            <div className="mt-3 editor-text">
-                              <div className="card-body tabata p-0">
-                                <blockquote className="blockquote mb-0">
-                                  <div className="schedule">
-                                    <table className="table table-hover">
-                                      <tbody>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Manufacturer
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Gomzi Lifescience LLP
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Packaging Size
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Customized (250 Gm, 500 Gm, 1 kg)
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Packaging Type
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Jar
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Composition
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            As Per Requirement
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Form
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Butter
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Flavour
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Different Type Of Flavours Are
-                                            Available
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Shelf Life
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            12 Months
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Delivery Time
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            15-20 Days
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              Min Qty
-                                            </td>
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              120
-                                            </td>
-                                          </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Peanut butter
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹150 Per 500gm
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Design & Packaging
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Included
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Website support & Marketing
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Included
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </div>
-                                </blockquote>
-                              </div>
-                              <div className="pb-2 ql-editor descriptionShow text-secondary">
-                                <Link
-                                  to="/third-party-manufacturing/peanut-butter"
-                                  type="button"
-                                  className="btn-interested mx-2 mt-3"
-                                >
-                                  View More
-                                </Link>
-                                <a
-                                  href={DownloadPdf || "#"}
-                                  download
-                                  className="btn-download-brochure mx-2 mt-3"
-                                >
-                                  Download Brochure
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="no-gutters active-tab-shadow mb-5 p-4 mx-4">
-                <div className="">
-                  <div className="row w-100 flex-column-reverse flex-md-row ">
-                    <div className="col-lg-6 px-0 px-md-3 mb-2 mt-2 mt-md-0 bulk-inquiry-left order-1">
-                      <div className="item mb-3">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/energy-combo.webp"
-                          }
-                          alt="FG Group"
-                          className="w-100"
-                          width="100%"
-                          height="auto"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6 px-0">
-                      <div className="content-container">
-                        <div className="row">
-                          <div className="col-12">
-                            <h2 className="f-rob-bol f-35">Energy Drink:</h2>
-                          </div>
-                          <br />
-                          <div className="col-12 return-policy-main">
-                            <div className="mt-3 editor-text">
-                              <div className="card-body tabata p-0">
-                                <blockquote className="blockquote mb-0">
-                                  <div className="schedule">
-                                    <table className="table table-hover">
-                                      <tbody>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Manufacturer
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Gomzi Lifescience LLP
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Packaging Size
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Customized (220 ml)
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Packaging Type
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Bottle
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Composition
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            As Per Requirement
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Form
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Liquid
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Flavour
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Different Type Of Flavours Are
-                                            Available
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Shelf Life
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            18 Months
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Delivery Time
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            15-20 Days
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              Min Qty
-                                            </td>
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              100
-                                            </td>
-                                          </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Energy drink
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹30 Per 220ml
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Design & Packaging
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Included
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Website support & Marketing
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Included
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </div>
-                                </blockquote>
-                              </div>
-                              <div className="pb-2 ql-editor descriptionShow text-secondary">
-                                <Link
-                                  to="/third-party-manufacturing/energy-drinks"
-                                  type="button"
-                                  className="btn-interested mx-2 mt-3"
-                                >
-                                  View More
-                                </Link>
-                                <a
-                                  href={DownloadPdf || "#"}
-                                  download
-                                  className="btn-download-brochure mx-2 mt-3"
-                                >
-                                  Download Brochure
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="no-gutters active-tab-shadow mb-5 p-4 mx-4">
-                <div className="">
-                  <div className="row w-100 flex-column-reverse flex-md-row ">
-                    <div className="col-lg-6 px-0 px-md-3 mb-2 mt-2 mt-md-0 bulk-inquiry-left order-1">
-                      <div className="item mb-3">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/protein-bar-whitelabel.webp"
-                          }
-                          alt="FG Group"
-                          className="w-100"
-                          width="100%"
-                          height="auto"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6 px-0">
-                      <div className="content-container">
-                        <div className="row">
-                          <div className="col-12">
-                            <h2 className="f-rob-bol f-35">Protein Bar:</h2>
-                          </div>
-                          <br />
-                          <div className="col-12 return-policy-main">
-                            <div className="mt-3 editor-text">
-                              <div className="card-body tabata p-0">
-                                <blockquote className="blockquote mb-0">
-                                  <div className="schedule">
-                                    <table className="table table-hover">
-                                      <tbody>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Manufacturer
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Gomzi Lifescience LLP
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Packaging Size
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Customized (35g)
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Packaging Type
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Box
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Composition
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            As Per Requirement
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Form
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Solid
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Flavour
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Different Type Of Flavours Are
-                                            Available
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Shelf Life
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            18 Months
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Delivery Time
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            15-20 Days
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              Min Qty
-                                            </td>
-                                            <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                              100
-                                            </td>
-                                          </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Protein Bar
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            ₹55 per pics 35g
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Design & Packaging
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Included
-                                          </td>
-                                        </tr>
-                                        <tr className="table-light">
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Website support & Marketing
-                                          </td>
-                                          <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                            Included
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </div>
-                                </blockquote>
-                              </div>
-
-                              <div className="pb-2 ql-editor descriptionShow text-secondary">
-                                <Link
-                                  to="https://api.whatsapp.com/send?phone=+918320077993&amp;text= Hello, I have an inquiry about third-party manufacturing for the Protein Bar."
-                                  type="button"
-                                  className="btn-interested mx-2 mt-3"
-                                >
-                                  Yes, I am interested!
-                                </Link>
-                                <a
-                                  href={DownloadPdf || "#"}
-                                  download
-                                  className="btn-download-brochure mx-2 mt-3"
-                                >
-                                  Download Brochure
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </OwlCarousel>
-          </div>
-        </section> */}
-        {/* <section className="imanet product-detail-main bg-white">
-            <div className="container-fluid w-80">
-              <div className="row justify-content-center w-100 mx-auto">
-                <div className="col-12 p-0 mt-3">
-                  <div className="row justify-content-center mb-4">
-                    <div className="col-12">
-                      <h2 className="f-rob-bol text-center mb-3 mt-5 f-35">
-                        Rate And Quantity
-                      </h2>
-                    </div>
-                    <div className="col-lg-9 my-3">
-                      <div className="schedule table-responsive">
-                        <table className="table table-hover">
-                          <tbody>
-                            <tr className="table-light">
-                              <th className="bg-green border text-white border-white f-14 text-bold">
-                                No
-                              </th>
-                              <th className="bg-green border text-white border-white f-14 text-bold">
-                                Item
-                              </th>
-                              <th className="bg-green border text-white border-white f-14 text-bold">
-                                Qty
-                              </th>
-                              <th className="bg-green border text-white border-white f-14 text-bold">
-                                Packaging Size
-                              </th>
-                              <th className="bg-green border text-white border-white f-14 text-bold">
-                                Rate
-                              </th>
-                            </tr>
-                            <tr className="table-light">
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                1.
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                100% whey protein blend
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                50
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                1kg
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                ₹1,300
-                              </td>
-                            </tr>
-                            <tr className="table-light">
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                2.
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                Whey protein concentrate
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                50
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                1kg
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                ₹2,300
-                              </td>
-                            </tr>
-                            <tr className="table-light">
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                3.
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                Whey protein isolate
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                50
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                1kg
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                ₹3,300
-                              </td>
-                            </tr>
-                            <tr className="table-light">
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                4.
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                Peanut butter
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                120
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                500gm
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                ₹150
-                              </td>
-                            </tr>
-                            <tr className="table-light">
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                5.
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                Mass gainer
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                25
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                2kg
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                ₹1,300
-                              </td>
-                            </tr>
-                            <tr className="table-light">
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                6.
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                Creatine unflavored
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                100
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                250gm
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                ₹420
-                              </td>
-                            </tr>
-                            <tr className="table-light">
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                7.
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                Ignite pre workout
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                100
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                250gm
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                ₹440
-                              </td>
-                            </tr>
-                            <tr className="table-light">
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                8.
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                EAA
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                100
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                250gm
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                ₹490
-                              </td>
-                            </tr>
-                            <tr className="table-light">
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                9.
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                Energy drink
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                100
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                220ml
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                ₹18
-                              </td>
-                            </tr>
-                            <tr className="table-light">
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                10.
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                Protein Bar
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                100
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                35g
-                              </td>
-                              <td className="bg-light border border-gray text-dark f-14 text-bold">
-                                ₹55 per pics
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section> */}
-        {/* <section className="imanet product-detail-main bg-white"> */}
-        {/* <div className="container-fluid w-80">
-              <div className="row justify-content-center w-100 mx-auto">
-                <div className="col-12 mt-3">
-                  <div className="row justify-content-center mb-4">
-                    <div className="col-9 px-0">
-                      <ul
-                        className="nav nav-pills w-100 nav-justified mb-3 tab-head"
-                        id="pills-tab"
-                        role="tablist"
-                      >
-                        <li className="nav-item f-20 nav-link text-uppercase active show">
-                          Description
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="col-lg-9 my-3 break-all">
-                      <div
-                        className="tab-content tab-detail"
-                        id="pills-tabContent"
-                      >
-                        <div
-                          className="tab-pane fade editor-text active show"
-                          id="pills-home"
-                          role="tabpanel"
-                          aria-labelledby="pills-home-tab"
-                        >
-                          <div className="descriptionShow text-secondary whitelable-decription">
-                            <p className="f-20">
-                              <strong>Key Features:</strong>
-                            </p>
-                            <p className="mb-3 mt-3">
-                              <i className="fas fa-caret-right f-14"></i>{" "}
-                              <b> High-Quality Whey Protein:</b> Our supplement
-                              contains only the finest whey protein, providing a
-                              rich source of essential amino acids for muscle
-                              development and repair.
-                            </p>
-                            <p className="mb-3 mt-3">
-                              <i className="fas fa-caret-right f-14"></i>{" "}
-                              <b> Muscle Growth:</b> The amino acids in whey
-                              protein are essential for building lean muscle mass,
-                              making this supplement ideal for those seeking
-                              muscle growth and definition.
-                            </p>
-                            <p className="mb-3 mt-3">
-                              <i className="fas fa-caret-right f-14"></i>{" "}
-                              <b>Great Taste:</b> We understand that palatability
-                              is crucial. Our whey protein supplement offers a
-                              delicious, easily mixable solution that will have
-                              your customers looking forward to their daily
-                              protein intake.
-                            </p>
-                            <p className="mt-2">
-                              <strong>
-                                Why Choose Our Premium Whey Protein Supplement:
-                              </strong>
-                            </p>
-                            <p className="mb-3 mt-3">
-                              <i className="fas fa-caret-right f-14"></i>{" "}
-                              <b>Customization:</b>Tailor the product to reflect
-                              your brand identity. We offer various flavor options
-                              and packaging choices to create a unique product for
-                              your customers.
-                            </p>
-                            <p className="mb-3 mt-3">
-                              <i className="fas fa-caret-right f-14"></i>{" "}
-                              <b>Quality Assurance: </b> Our supplement meets or
-                              exceeds industry quality standards. We prioritize
-                              rigorous quality control processes and maintain
-                              state-of-the-art manufacturing facilities.
-                            </p>
-                            <p className="mb-3 mt-3">
-                              <i className="fas fa-caret-right f-14"></i>{" "}
-                              <b>Innovation :</b> Stay at the forefront of the
-                              protein supplement sector with our innovative
-                              formulations.
-                            </p>
-                            <p className="mb-3 mt-3">
-                              <i className="fas fa-caret-right f-14"></i>{" "}
-                              <b>Customer-Centric Approach :</b> We provide
-                              personalized support, collaborating closely with you
-                              to ensure your brand's success in the protein
-                              supplement market.
-                            </p>
-                            <p className="mb-3 mt-3">
-                              <i className="fas fa-caret-right f-14"></i>{" "}
-                              <b> Research and Development:</b> Our core strength
-                              lies in our research and development oriented
-                              approach to introduce innovative products with the
-                              help of dedicated professionals engaged in
-                              discovering new ideas, formulations, design, quality
-                              assurance methods.
-                            </p>
-                            <p className="mb-3 mt-3">
-                              <i className="fas fa-caret-right f-14"></i>{" "}
-                              <b> Quality Assurance:</b> At Gomzi Lifescience LLP,
-                              we have a dedicated and committed quality assurance
-                              team which strives for continuous improvements in
-                              our quality and have been constantly working to
-                              enhance the existing quality of products, services
-                              by optimizing production processes, introducing new
-                              methods and process.
-                            </p>
-                            <p className="mb-3 mt-3">
-                              <i className="fas fa-caret-right f-14"></i>{" "}
-                              <b> Private Label:</b>
-                              <ul className="list-unstyled">
-                                <li>1. PRODUCT DEVELOPMENT</li>
-                                <li>2. PACKAGING</li>
-                                <li>3. QUALITY MANAGEMENT</li>
-                                <li>4. CONSULTANCY</li>
-                                <li>5. MARKET ANALYTICS</li>
-                                <li>6. SUSTAINABILITY</li>
-                              </ul>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-        {/* <section className="key-features">
-  <div className="col-12 text-center">
-    <div style={{ textAlign: "center", marginBottom: "50px" }}>
-      <h2 style={{ fontWeight: "700" }}>
-        KEY <span style={{ color: "#86c33a" }}>FEATURES</span>
-      </h2>
-    </div>
-  </div>
-
-  <div className="container-fluid px-5">
-    <div className="row justify-content-center gx-2 flex-nowrap" style={{ overflowX: "auto" }}>
-      {cards.map((card, index) => (
-        <div 
-          className="col-auto mb-4 d-flex justify-content-center" 
-          key={index}
-        >
-          
-          <div className="feature-card">
-            
-            <div className="feature-icon">
-              <i className={card.icon}></i>
-            </div>
-
-            <div className="feature-textBox text-center">
-              <p className="feature-head">{card.title}</p>
-              <span>{card.subtitle}</span>
-            </div>
-
-          </div>
-
-        </div>
-      ))}
-    </div>
-  </div>
-</section> */}
-
         <section className="kf-section">
-          <div style={{ textAlign: "center", marginBottom: "50px" }}>
-            <h2 style={{ fontWeight: "700", fontSize: "42px" }}>
-              KEY <span style={{ color: "#86c33a" }}>FEATURES</span>
+          <div className="certified-compliant-div">
+            <h2 className="certified-compliant-div-h2">
+              KEY{" "}
+              <span className="certified-compliant-div-hspan ">FEATURES</span>
             </h2>
           </div>
 
@@ -2799,49 +861,26 @@ function WhiteLabelling() {
 
         <WhiteLabellingVideoTestimonials />
         <>
-          {/* ── LOGO SCROLL SECTION ── */}
           <section className="logo-img-section bg-white py-5">
             <div className="container-fluid mb-4">
               <div className="col-12 text-center">
-                <div style={{ textAlign: "center", marginBottom: "50px" }}>
-                  <h2 style={{ fontWeight: "700", fontSize: "42px" }}>
+                <div className="certified-compliant-div">
+                  <h2 className="certified-compliant-div-h2">
                     BRANDS{" "}
-                    <span style={{ color: "#86c33a" }}>POWERED BY US</span>
+                    <span className="certified-compliant-div-hspan">
+                      POWERED BY US
+                    </span>
                   </h2>
                 </div>
               </div>
-              <div
-                style={{
-                  overflow: "hidden",
-                  whiteSpace: "nowrap",
-                  position: "relative",
-                }}
-              >
-                <div
-                  style={{
-                    display: "inline-flex",
-                    animation: "scroll 20s linear infinite",
-                  }}
-                >
+              <div className="powered-by-us-div">
+                <div className="scrollLogos-div">
                   {scrollLogos.map((img, index) => (
-                    <div
-                      key={index}
-                      style={{
-                        flex: "0 0 auto",
-                        width: "250px",
-                        padding: "0 25px",
-                      }}
-                    >
+                    <div key={index} className="scrollLogos-div-inner">
                       <img
                         src={`/assets/images/logo/${img}`}
                         alt="logo"
-                        style={{
-                          width: "100%",
-                          height: "140px",
-                          objectFit: "contain",
-                          filter: "grayscale(0%)",
-                          transition: "0.3s",
-                        }}
+                        className="scrollLogos-div-inner-img"
                         onMouseEnter={(e) => {
                           e.target.style.transform = "scale(1.1)";
                         }}
@@ -2853,7 +892,6 @@ function WhiteLabelling() {
                   ))}
                 </div>
 
-                {/* Keyframes */}
                 <style>
                   {`
             @keyframes scroll {
@@ -2908,62 +946,13 @@ function WhiteLabelling() {
             </div>
           </section>
 
-          {/* ── CTA SECTION ── */}
           <NutraCTA />
         </>
         <CertifiedProduct />
-        {/* <section className="bg-default">
-            <div className="container">
-              <div className="col-12 text-center">
-                <div className="col mt-5 mb-4">
-                  <h2 className="f-rob-bol f-30 text-black text-uppercase">
-                    Production House
-                  </h2>
-                </div>
-              </div>
-              <div className="item">
-                <div className="blog p-0">
-                  <div className="ply position-relative video-container">
-                    <img
-                      src={
-                        process.env.PUBLIC_URL +
-                        "/assets/images/nutrition/production-house.webp"
-                      }
-                      width="100%"
-                      className="border-radius-20 video-thumbnail"
-                      alt="fggroup"
-                    />
 
-                    <div className="video-btn play-btn">
-                      <button
-                        onClick={() => openVideoModal("XM2xXWYxhbw")}
-                        className="custom clickof video-button-bg"
-                        aria-label="Play production house video"
-                      >
-                        <span className="newthing">
-                          <i className="fas fa-play"></i>
-                        </span>
-                      </button>
-                    </div>
-
-                    <div className="bubble-container">
-                      {[...Array(20)].map((_, i) => (
-                        <div key={i} className={`bubble bubble-${i}`}></div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section> */}
         <FactoryPhotoSection />
-        {/* <MainVideoSection /> */}
         <Whitelabellingblogs />
         <ThirdPartyManufacturingFAQS />
-        {/* <ServingAcrossIndia/> */}
-
-        {/* <ProductDesignByGautam /> */}
-        {/* </section> */}
       </div>
       <p className="d-none">
         whey protein and, peanut butter peanut butter, peanut butters, why

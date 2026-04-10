@@ -137,16 +137,6 @@ const UserAddressForm = ({ userData, handleFormSubmit }) => {
                   </div>
                 </div>
               </div>
-              {/* <div className="col-12">
-                <div className="common-button">
-                  <button
-                    type="submit"
-                    className="bg-yellow my-2 py-2 text-uppercase text-white f-16 f-rob-bol checkout-add-edit-address"
-                  >
-                    SAVE &amp; CONTINUE
-                  </button>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>

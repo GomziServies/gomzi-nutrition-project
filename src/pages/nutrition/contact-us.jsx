@@ -4,6 +4,7 @@ import "../../assets/css/nutrition.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import WhatsappHeaderApp from "../../components/NutritionWhatsappHeaderBtn";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 function ContactUs() {
   const canonicalUrl = window.location.href;
@@ -11,7 +12,7 @@ function ContactUs() {
   return (
     <>
       <Helmet>
-        <title>Contact Us | Gomzi Nutrition Famil- – We're Here to He</title>
+        <title>Contact Us | Gomzi Lifescience Family – We're Here to He</title>
         <meta
           name="description"
           content="Have questions or need support? Contact Gomzi Nutrition Family for inquiries, assistance, and expert guidance on our nutraceutical products. Get in touch today!"
@@ -112,12 +113,10 @@ function ContactUs() {
                         </div>
                       </div>
                       <div class="col-12 p-0">
-                        <a
-                          class="text-ellipse-custom text-secondary mb-0 mt-1 f-rob-med f-20"
-                          href="/nutrition/gomzi-nutrition-chocolate-protein-bar"
-                        >
-                          <b>gomzinutrition@gmail.com</b>
-                        </a>
+                        <Link to="tel:+918320077993" className="text-secondary">
+                          {" "}
+                          <b>info@gomzilifesciences.in</b>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -134,7 +133,13 @@ function ContactUs() {
                       </div>
                       <div class="col-12 p-0">
                         <p class="text-ellipse-custom text-secondary mb-0 mt-1 f-rob-med f-20">
-                          <b>+91 88668 42520</b>
+                          <Link
+                            to="tel:+918320077993"
+                            className="text-secondary"
+                          >
+                            {" "}
+                            <b>+91 8320077993</b>
+                          </Link>
                         </p>
                       </div>
                     </div>
@@ -145,7 +150,8 @@ function ContactUs() {
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4616.206252088472!2d72.74192247600143!3d21.18855708226951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04d6049b09c4b%3A0x2b5491773a2ee8f3!2sGomzi%20Lifesciences%20LLP%20%7C%20Best%20Nutraceutical%20and%20Ayurvedic%20products%20Manufacturer!5e1!3m2!1sen!2sin!4v1740216368608!5m2!1sen!2sin"
                   height="450"
-                  style={{ border: "0", width: "100%" }}
+                  className="check-out-width-border"
+                  title="Gomzi Lifesciences Location Map"
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"

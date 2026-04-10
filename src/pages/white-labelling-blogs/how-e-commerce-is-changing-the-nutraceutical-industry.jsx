@@ -72,7 +72,10 @@ const faqData = [
         <strong>Bio-Hacking Subscriptions.</strong> Instead of one-time buys,
         consumers are signing up for personalized "stacks." Top{" "}
         <strong>
-          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements">
+          <Link
+            className="blog-text-link"
+            to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements"
+          >
             sports nutrition supplement manufacturers{" "}
           </Link>
         </strong>
@@ -161,14 +164,11 @@ function HowEcommerceIsChangingTheNutraceuticalIndustry() {
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -176,11 +176,7 @@ function HowEcommerceIsChangingTheNutraceuticalIndustry() {
                       "/assets/images/nutrition/best-whey-protein-in-india-main.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -198,7 +194,6 @@ function HowEcommerceIsChangingTheNutraceuticalIndustry() {
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* SECTION I - Introduction */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">Introduction</h2>
                       <ul className="blog-list">
@@ -209,7 +204,10 @@ function HowEcommerceIsChangingTheNutraceuticalIndustry() {
                         <li className="blog-list-item">
                           The role of a{" "}
                           <strong>
-                            <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                            <Link
+                              className="blog-text-link"
+                              to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                            >
                               White Label Supplement Manufacturer{" "}
                             </Link>
                           </strong>
@@ -218,28 +216,11 @@ function HowEcommerceIsChangingTheNutraceuticalIndustry() {
                       </ul>
                     </div>
 
-                    {/* SECTION II - Why E-commerce Brands Prefer Third-Party Manufacturing */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         II. Why E-commerce Brands Prefer Third-Party
                         Manufacturing
                       </h2>
-
-                      <div className="row">
-                        <div className="col"></div>
-                        <div className="col-lg-8 mt-3">
-                          <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/assets/images/white-labelling-blogs/Picture2.webp"
-                            }
-                            alt="Fggroup"
-                            width="100%"
-                            style={{ borderRadius: "20px" }}
-                          />
-                        </div>
-                        <div className="col"></div>
-                      </div>
 
                       <h3 className="blog-subsection-title">Cost-Efficiency</h3>
                       <p className="blog-text">
@@ -262,7 +243,6 @@ function HowEcommerceIsChangingTheNutraceuticalIndustry() {
                       </p>
                     </div>
 
-                    {/* SECTION - Gomzi Strategic Partner */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Why Gomzi Life Sciences is Your Strategic Partner
@@ -286,7 +266,6 @@ function HowEcommerceIsChangingTheNutraceuticalIndustry() {
                       </p>
                     </div>
 
-                    {/* SECTION III - Private vs White Label */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         III. Private Labeling vs. White Labeling: Which Fits
@@ -310,27 +289,10 @@ function HowEcommerceIsChangingTheNutraceuticalIndustry() {
                       </ul>
                     </div>
 
-                    {/* SECTION IV - Quality Factor */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         IV. The "Quality" Factor: Trust in the Online Space
                       </h2>
-
-                      <div className="row">
-                        <div className="col"></div>
-                        <div className="col-lg-8 mt-3">
-                          <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/assets/images/white-labelling-blogs/Picture3.webp"
-                            }
-                            alt="Fggroup"
-                            width="100%"
-                            style={{ borderRadius: "20px" }}
-                          />
-                        </div>
-                        <div className="col"></div>
-                      </div>
 
                       <ul className="blog-list">
                         <li className="blog-list-item">
@@ -344,7 +306,6 @@ function HowEcommerceIsChangingTheNutraceuticalIndustry() {
                       </ul>
                     </div>
 
-                    {/* SECTION V - Why Gomzi is a Leader */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         V. Why Gomzi Life Sciences is a Leader in Third-Party
@@ -363,7 +324,6 @@ function HowEcommerceIsChangingTheNutraceuticalIndustry() {
                       </ul>
                     </div>
 
-                    {/* SECTION VI - Conclusion & CTA */}
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <h2 className="blog-section-title">
@@ -383,28 +343,10 @@ function HowEcommerceIsChangingTheNutraceuticalIndustry() {
                       </div>
                     </div>
 
-                    {/* SECTION -Unique & Researched Content "X-Factors" */}
-
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Unique & Researched Content "X-Factors"
                       </h2>
-
-                      <div className="row">
-                        <div className="col"></div>
-                        <div className="col-lg-8 mt-3">
-                          <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/assets/images/white-labelling-blogs/Picture4.webp"
-                            }
-                            alt="Fggroup"
-                            width="100%"
-                            style={{ borderRadius: "20px" }}
-                          />
-                        </div>
-                        <div className="col"></div>
-                      </div>
 
                       <ul className="blog-list">
                         <p className="blog-text">
@@ -447,7 +389,6 @@ function HowEcommerceIsChangingTheNutraceuticalIndustry() {
                       </ul>
                     </div>
 
-                    {/* FAQs */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">FAQs</h2>
 

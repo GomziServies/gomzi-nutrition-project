@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
@@ -7,17 +7,18 @@ import { axiosInstance } from "../../assets/js/config/api";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import apiConfig from "../../assets/js/config/apiConfig";
+import "../../assets/css/nutrition.css";
 
 const InvoiceViewPage = () => {
   const canvasRef = useRef(null);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [isDrawing, setIsDrawing] = useState(false);
   const [signatureImage, setSignatureImage] = useState(null);
   const [isSaved, setIsSaved] = useState(false);
   const [buttonHover, setButtonHover] = useState({ clear: false, save: false });
   const [isSignatureStarted, setIsSignatureStarted] = useState(true);
   const invoice_id = useParams().invoice_id || null;
-  const [data, setData] = useState({})
+  const [data, setData] = useState({});
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -107,8 +108,8 @@ const InvoiceViewPage = () => {
     setIsSignatureStarted(false);
   };
 
-  function base64ToBlob(base64Data, contentType = 'image/png') {
-    const byteCharacters = atob(base64Data.split(',')[1]);
+  function base64ToBlob(base64Data, contentType = "image/png") {
+    const byteCharacters = atob(base64Data.split(",")[1]);
     const byteArrays = [];
 
     for (let i = 0; i < byteCharacters.length; i += 512) {
@@ -141,38 +142,47 @@ const InvoiceViewPage = () => {
 
     const base64Image = canvas.toDataURL("image/png");
     const blob = base64ToBlob(base64Image);
-    const file = blobToFile(blob, String(data?.name || "").trim() + "_signature.png");
-    console.log('file', file)
+    const file = blobToFile(
+      blob,
+      String(data?.name || "").trim() + "_signature.png",
+    );
+    console.log("file", file);
 
     const formData = new FormData();
-    formData.append('directory', "user-signature");
-    formData.append('files', file);
-    await axios.post(apiConfig.BASE_URL + "/public/v1/file-upload", formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      }
-    },)
+    formData.append("directory", "user-signature");
+    formData.append("files", file);
+    await axios
+      .post(apiConfig.BASE_URL + "/public/v1/file-upload", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
       .then(async (res) => {
-        console.log('res?.data123', res?.data)
+        console.log("res?.data123", res?.data);
         const signature = res?.data?.data?.fileURLs[0];
-        console.log('signature', signature)
-        await axiosInstance.post('/invoice/sign-invoice', {
-          invoice_id,
-          signature_image: signature
-        })
+        console.log("signature", signature);
+        await axiosInstance
+          .post("/invoice/sign-invoice", {
+            invoice_id,
+            signature_image: signature,
+          })
           .then(() => {
             fetchData();
           })
           .catch((error) => {
-            toast.error(error?.message || "Something went wrong while saving the signature.")
-          })
+            toast.error(
+              error?.message ||
+                "Something went wrong while saving the signature.",
+            );
+          });
       })
       .catch((error) => {
-        toast.error(error?.message || "Something went wrong while saving the signature.")
-      })
-    // setSignatureImage(image);
-    setIsSaved(true);
+        toast.error(
+          error?.message || "Something went wrong while saving the signature.",
+        );
+      });
 
+    setIsSaved(true);
   };
 
   const buttonStyle = (type) => ({
@@ -191,213 +201,201 @@ const InvoiceViewPage = () => {
       : "none",
     transition: "all 0.3s ease",
   });
-  const [downloadPDFLoading, setDownloadPDFLoading] = useState(false)
+
+  const [downloadPDFLoading, setDownloadPDFLoading] = useState(false);
   const handleDownloadPDF = async () => {
-    setDownloadPDFLoading(true)
-    await axiosInstance.get('/invoice/generate-invoice-pdf?invoice_id=' + invoice_id)
+    setDownloadPDFLoading(true);
+    await axiosInstance
+      .get("/invoice/generate-invoice-pdf?invoice_id=" + invoice_id)
       .then((res) => {
-        window.open(res?.data?.data?.file_url, '_blank');
+        window.open(res?.data?.data?.file_url, "_blank");
       })
       .catch((error) => {
-        toast.error(error?.message || "Something went wrong while fetching invoices.");
+        toast.error(
+          error?.message || "Something went wrong while fetching invoices.",
+        );
       })
-      .finally(() => setDownloadPDFLoading(false))
+      .finally(() => setDownloadPDFLoading(false));
   };
 
-  const fetchData = async () => {
-    await axiosInstance.get('/invoice/get?invoice_id=' + invoice_id)
+  const fetchData = useCallback(async () => {
+    await axiosInstance
+      .get("/invoice/get?invoice_id=" + invoice_id)
       .then((res) => {
-        console.log('res?.data', res?.data)
         setData(res?.data?.data?.length > 0 ? res?.data?.data[0] : {});
       })
       .catch((error) => {
-        toast.error(error?.message || "Something went wrong while fetching invoices.");
-      })
-  };
+        toast.error(
+          error?.message || "Something went wrong while fetching invoices.",
+        );
+      });
+  }, [invoice_id]);
+
   useEffect(() => {
     if (invoice_id) {
       fetchData();
     } else {
-      navigate('/invoice');
+      navigate("/invoice");
     }
-  }, [invoice_id]);
+  }, [invoice_id, fetchData, navigate]);
 
-  return (<>
-    <NutritionHeader />
-    <div
-      className="signature-container"
-      style={{ maxWidth: "1000px", margin: "125px auto", padding: "2rem" }}
-    >
-      <ToastContainer />
-      <div className="signature-header">
-        <h2>Digital Signature</h2>
-        <p>
-          Your signature is a legally binding representation of your identity.
-          Please sign in the box below using your mouse or touchscreen.
-        </p>
-      </div>
+  return (
+    <>
+      <NutritionHeader />
+      <div className="signature-container invoice-viewpage-div">
+        <ToastContainer />
+        <div className="signature-header">
+          <h2>Digital Signature</h2>
+          <p>
+            Your signature is a legally binding representation of your identity.
+            Please sign in the box below using your mouse or touchscreen.
+          </p>
+        </div>
 
-      <table className="customer-table" style={{ marginBottom: "1rem" }}>
-        <tbody>
-          <tr>
-            <td>
-              <strong style={{ textTransform: 'capitalize' }}>Customer Name</strong>
-            </td>
-            <td>
-              <b style={{ color: "green" }}>:</b> &nbsp;&nbsp; {data?.name}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <strong style={{ textTransform: 'capitalize' }}>Email</strong>
-            </td>
-            <td>
-              <b style={{ color: "green" }}>:</b> &nbsp;&nbsp; {data?.email}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <strong style={{ textTransform: 'capitalize' }}>invoice Number</strong>
-            </td>
-            <td>
-              <b style={{ color: "green" }}>:</b> &nbsp;&nbsp; {data?.invoice_number}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <strong style={{ textTransform: 'capitalize' }}>Date</strong>
-            </td>
-            <td>
-              <b style={{ color: "green" }}>:</b> &nbsp;&nbsp; {data?.date ? new Date(data?.date).toLocaleDateString() : "N/A"}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <strong style={{ textTransform: 'capitalize' }}>Phone Number</strong>
-            </td>
-            <td>
-              <b style={{ color: "green" }}>:</b> &nbsp;&nbsp; {data?.mobile}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <strong style={{ textTransform: 'capitalize' }}>Address</strong>
-            </td>
-            <td>
-              <b style={{ color: "green" }}>:</b> &nbsp;&nbsp; {data?.billing_address?.address_line_1}, {data?.billing_address?.city}, {data?.billing_address?.state}, {data?.billing_address?.pin_code}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div className="payment-table" style={{ marginBottom: "1rem" }}>
-        <table className="w-100">
-          <thead>
-            <tr className="d-flex" style={{ backgroundColor: "#f4fef0", }}>
-              <th className="col-5">
-                Services
-              </th>
-              <th className="col-3">
-                Paid Amount
-              </th>
-              <th className="col-3">
-                Total Amount
-              </th>
-            </tr>
-          </thead>
+        <table className="customer-table mb-1rem ">
           <tbody>
-            {data?.items?.map((val, i) => (
-              <tr className="d-flex" key={i}>
-                <td className="col-5">
-                  {val?.item_name}
-                </td>
-                <td className="col-3">
-                  {val?.amount}
-                </td>
-                <td className="col-3">
-                  {val?.totalAmount}
-                </td>
-              </tr>
-            ))}
+            <tr>
+              <td>
+                <strong className="text-capitalize">Customer Name</strong>
+              </td>
+              <td>
+                <b className="fts-20-color-green">:</b> &nbsp;&nbsp;{" "}
+                {data?.name}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong className="text-capitalize">Email</strong>
+              </td>
+              <td>
+                <b className="fts-20-color-green">:</b> &nbsp;&nbsp;{" "}
+                {data?.email}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong className="text-capitalize">invoice Number</strong>
+              </td>
+              <td>
+                <b className="fts-20-color-green">:</b> &nbsp;&nbsp;{" "}
+                {data?.invoice_number}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong className="text-capitalize">Date</strong>
+              </td>
+              <td>
+                <b className="fts-20-color-green">:</b> &nbsp;&nbsp;{" "}
+                {data?.date ? new Date(data?.date).toLocaleDateString() : "N/A"}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong className="text-capitalize">Phone Number</strong>
+              </td>
+              <td>
+                <b className="fts-20-color-green">:</b> &nbsp;&nbsp;{" "}
+                {data?.mobile}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong className="text-capitalize">Address</strong>
+              </td>
+              <td>
+                <b className="fts-20-color-green">:</b> &nbsp;&nbsp;{" "}
+                {data?.billing_address?.address_line_1},{" "}
+                {data?.billing_address?.city}, {data?.billing_address?.state},{" "}
+                {data?.billing_address?.pin_code}
+              </td>
+            </tr>
           </tbody>
         </table>
-      </div>
 
-      {data?.user_confirmation_signature_image ? (<div className="text-center">
-        <button style={buttonStyle("save")} onClick={handleDownloadPDF} disabled={downloadPDFLoading}>{downloadPDFLoading ? "Loading..." : "Download PDF"}</button>
-      </div>) : <>
-        <div
-          className="signature-canvas-container"
-          style={{ position: "relative", width: "250px", margin: "1rem auto" }}
-        >
-          <canvas
-            ref={canvasRef}
-            onMouseDown={startDrawing}
-            onMouseMove={draw}
-            onMouseUp={stopDrawing}
-            onMouseLeave={stopDrawing}
-            onTouchStart={startDrawing}
-            onTouchMove={draw}
-            onTouchEnd={stopDrawing}
-          />
-          {/* {!isSignatureStarted && (
+        <div className="payment-table mb-1rem">
+          <table className="w-100">
+            <thead>
+              <tr className="d-flex invoice-viewpage-table">
+                <th className="col-5">Services</th>
+                <th className="col-3">Paid Amount</th>
+                <th className="col-3">Total Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data?.items?.map((val, i) => (
+                <tr className="d-flex" key={i}>
+                  <td className="col-5">{val?.item_name}</td>
+                  <td className="col-3">{val?.amount}</td>
+                  <td className="col-3">{val?.totalAmount}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {data?.user_confirmation_signature_image ? (
+          <div className="text-center">
             <button
-              onClick={() => setIsSignatureStarted(true)}
-              className="start_button"
+              style={buttonStyle("save")}
+              onClick={handleDownloadPDF}
+              disabled={downloadPDFLoading}
             >
-              Start Signature
+              {downloadPDFLoading ? "Loading..." : "Download PDF"}
             </button>
-          )} */}
-          {!isDrawing && !signatureImage && isSignatureStarted && (
-            <div
-              style={{
-                position: "absolute",
-                top: "10px",
-                left: "10px",
-                color: "#aaa",
-                pointerEvents: "none",
-                userSelect: "none"
-              }}
-            >
-              Please sign here
+          </div>
+        ) : (
+          <>
+            <div className="signature-canvas-container invoice-viewpage-canvas">
+              <canvas
+                ref={canvasRef}
+                onMouseDown={startDrawing}
+                onMouseMove={draw}
+                onMouseUp={stopDrawing}
+                onMouseLeave={stopDrawing}
+                onTouchStart={startDrawing}
+                onTouchMove={draw}
+                onTouchEnd={stopDrawing}
+              />
+
+              {!isDrawing && !signatureImage && isSignatureStarted && (
+                <div className="invoice-viewpage-isdrawing">
+                  Please sign here
+                </div>
+              )}
             </div>
-          )}
-        </div>
 
-        <div
-          className="signature-buttons"
-          style={{ display: "flex", gap: "1rem", marginBottom: "1rem" }}
-        >
-          <button
-            onClick={clearSignature}
-            onMouseEnter={() =>
-              setButtonHover((prev) => ({ ...prev, clear: true }))
-            }
-            onMouseLeave={() =>
-              setButtonHover((prev) => ({ ...prev, clear: false }))
-            }
-            style={buttonStyle("clear")}
-          >
-            Clear Signature
-          </button>
-          <button
-            onClick={saveSignature}
-            onMouseEnter={() =>
-              setButtonHover((prev) => ({ ...prev, save: true }))
-            }
-            onMouseLeave={() =>
-              setButtonHover((prev) => ({ ...prev, save: false }))
-            }
-            style={buttonStyle("save")}
-          >
-            {isSaved ? "✓ Saved" : "Save Signature"}
-          </button>
-        </div>
-      </>}
-
-    </div>
-    <HomeFooter />
-  </>
+            <div className="signature-buttons d-flex gap-1rem mb-1rem">
+              <button
+                onClick={clearSignature}
+                onMouseEnter={() =>
+                  setButtonHover((prev) => ({ ...prev, clear: true }))
+                }
+                onMouseLeave={() =>
+                  setButtonHover((prev) => ({ ...prev, clear: false }))
+                }
+                style={buttonStyle("clear")}
+              >
+                Clear Signature
+              </button>
+              <button
+                onClick={saveSignature}
+                onMouseEnter={() =>
+                  setButtonHover((prev) => ({ ...prev, save: true }))
+                }
+                onMouseLeave={() =>
+                  setButtonHover((prev) => ({ ...prev, save: false }))
+                }
+                style={buttonStyle("save")}
+              >
+                {isSaved ? "✓ Saved" : "Save Signature"}
+              </button>
+            </div>
+          </>
+        )}
+      </div>
+      <HomeFooter />
+    </>
   );
 };
 

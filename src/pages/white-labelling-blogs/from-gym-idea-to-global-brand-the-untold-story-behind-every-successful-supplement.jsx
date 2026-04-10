@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
-import "../../assets/css/blog.css"; // Import the new blog CSS
+import "../../assets/css/blog.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -162,14 +162,11 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
             </div>
           </section>
         </div>
-        <div className="main-content" style={{ marginTop: "150px" }}>
+        <div className="main-content mb-150">
           <section className="blog-main">
-            <div className="container-fluid  p-0" style={{ width: "95%" }}>
+            <div className="container-fluid  p-0 w-95">
               <div className="row">
-                <div
-                  className="col-12 text-center"
-                  style={{ padding: "0px 15px" }}
-                >
+                <div className="col-12 text-center p-0-p-15">
                   <div className="details-banner-img position-relative">
                     <img
                       src={
@@ -177,11 +174,7 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                         "/assets/images/white-labelling-blogs/what-supplements-1.webp"
                       }
                       alt="bgImage"
-                      className="img-fluid w-100 mh-200 object-fit"
-                      style={{
-                        borderRadius: "20px",
-                        overflow: "hidden",
-                      }}
+                      className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                     />
                     <div className="layer"></div>
                     <div className="col-12 detail-title">
@@ -200,55 +193,33 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                 <div className="col-12 text-center mb-4 px-4">
                   <div className="ql-editor text-left mt-5">
                     <div className="blog-container">
-                      {/* It Always Starts With an Idea */}
                       <div className="blog-section">
                         <h2 className="blog-section-title">
                           It Always Starts With an Idea…
                         </h2>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "8px" }}
-                        >
+                        <p className="blog-text mb-8">
                           It usually begins the same way.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "8px" }}
-                        >
+                        <p className="blog-text mb-8">
                           A gym owner notices his clients struggling with
                           recovery.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "8px" }}
-                        >
+                        <p className="blog-text mb-8">
                           A fitness influencer wants a cleaner, better protein.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "8px" }}
-                        >
+                        <p className="blog-text mb-8">
                           A startup founder sees the growing demand for health
                           supplements.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "8px" }}
-                        >
+                        <p className="blog-text mb-8">
                           An idea is born :{" "}
                           <strong>"Let's build a supplement brand."</strong>
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "8px" }}
-                        >
+                        <p className="blog-text mb-8">
                           But what most people don't realize is — an idea is
                           just 1% of the journey.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "8px" }}
-                        >
+                        <p className="blog-text mb-8">
                           The real challenge? Turning that idea into a{" "}
                           <strong>
                             product people trust, use, and reorder
@@ -256,8 +227,6 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                           .
                         </p>
                       </div>
-
-                      {/* Why This Industry Is Exploding */}
 
                       <div className="blog-section">
                         <h2 className="blog-section-title">
@@ -294,7 +263,6 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                         </p>
                       </div>
 
-                      {/* The Reality Behind a Successful Supplement */}
                       <div className="blog-section">
                         <h2 className="blog-section-title">
                           The Reality Behind a "Successful Supplement"
@@ -327,7 +295,6 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                         </ul>
                       </div>
 
-                      {/* The Journey */}
                       <div className="blog-section">
                         <h2 className="blog-section-title">
                           The Journey: Idea → Product → Brand
@@ -367,25 +334,19 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                         <h3 className="blog-subsection-title">
                           3. Manufacturing Execution
                         </h3>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           Consistency is everything.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           One bad batch = lost customer forever.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           That's why working with the right{" "}
                           <strong>
-                            <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                            <Link
+                              className="blog-text-link"
+                              to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                            >
                               Nutraceutical Supplement Manufacturer White Label
                               in India
                             </Link>
@@ -393,10 +354,7 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                           becomes a critical decision — not just a vendor
                           choice.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "8px" }}
-                        >
+                        <p className="blog-text mb-8">
                           <strong>
                             Regulatory &amp; Compliance: The Ultimate Trust
                             Signal
@@ -414,7 +372,10 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                           the Indian market, it is essential to follow the
                           latest{" "}
                           <strong>
-                            <Link to="https://www.fssai.gov.in/">
+                            <Link
+                              className="blog-text-link"
+                              to="https://www.fssai.gov.in/"
+                            >
                               nutraceutical regulations set by the FSSAI.
                             </Link>
                           </strong>
@@ -422,7 +383,10 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                           worldwide stage, ensuring that manufacturing processes
                           align with{" "}
                           <strong>
-                            <Link to="https://www.fda.gov/food/dietary-supplements">
+                            <Link
+                              className="blog-text-link"
+                              to="https://www.fda.gov/food/dietary-supplements"
+                            >
                               U.S. FDA dietary supplement guidance
                             </Link>
                           </strong>{" "}
@@ -442,15 +406,11 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                         <p className="blog-text">Brands that adapt win.</p>
                       </div>
 
-                      {/* The Rise of Sports Nutrition Brands */}
                       <div className="blog-section">
                         <h2 className="blog-section-title">
                           The Rise of Sports Nutrition Brands
                         </h2>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "8px" }}
-                        >
+                        <p className="blog-text mb-8">
                           Protein is no longer just for bodybuilders.
                         </p>
                         <p className="blog-text">Today:</p>
@@ -459,10 +419,7 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                           <li>Women use protein</li>
                           <li>Beginners use protein</li>
                         </ul>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "8px" }}
-                        >
+                        <p className="blog-text mb-8">
                           Even plant-based protein is growing rapidly due to
                           better digestibility and lifestyle preferences.
                         </p>
@@ -476,15 +433,11 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                         </ul>
                       </div>
 
-                      {/* Why Brands Trust Gomzi Lifesciences */}
                       <div className="blog-section">
                         <h2 className="blog-section-title">
                           Why Brands Trust Gomzi Lifesciences LLP
                         </h2>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "8px" }}
-                        >
+                        <p className="blog-text mb-8">
                           Choosing the right manufacturing partner is one of the
                           most important decisions for your brand.
                         </p>
@@ -492,19 +445,19 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                           At Gomzi Lifesciences LLP, we ensure:
                         </p>
                         <ul className="blog-list">
-                          <li style={{ listStyleType: "none" }}>
+                          <li className="list-none">
                             ✅ Consistent product quality across every batch
                           </li>
-                          <li style={{ listStyleType: "none" }}>
+                          <li className="list-none">
                             ✅ Advanced manufacturing processes
                           </li>
-                          <li style={{ listStyleType: "none" }}>
+                          <li className="list-none">
                             ✅ Strict quality control &amp; compliance
                           </li>
-                          <li style={{ listStyleType: "none" }}>
+                          <li className="list-none">
                             ✅ Scalable production capacity
                           </li>
-                          <li style={{ listStyleType: "none" }}>
+                          <li className="list-none">
                             ✅ End-to-end support from formulation to packaging
                           </li>
                         </ul>
@@ -514,24 +467,15 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                         </p>
                       </div>
 
-                      {/* Why Manufacturing Decides Your Brand's Future */}
                       <div className="blog-section">
                         <h2 className="blog-section-title">
                           Why Manufacturing Decides Your Brand's Future
                         </h2>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "8px" }}
-                        >
-                          Let's be real.
-                        </p>
+                        <p className="blog-text mb-8">Let's be real.</p>
                         <p className="blog-text">
                           You can market a product once.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "8px" }}
-                        >
+                        <p className="blog-text mb-8">
                           But you can only build a brand with{" "}
                           <strong>quality</strong>.
                         </p>
@@ -546,7 +490,10 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                         <p className="blog-text">
                           Working with experienced{" "}
                           <strong>
-                            <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder">
+                            <Link
+                              className="blog-text-link"
+                              to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder"
+                            >
                               {" "}
                               whey protein concentrate manufacturers
                             </Link>
@@ -555,8 +502,6 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                           single time.
                         </p>
                       </div>
-
-                      {/* What Smart Brands Do Differently */}
 
                       <div className="blog-section">
                         <h2 className="blog-section-title">
@@ -571,10 +516,7 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                           <li>Scientific formulation</li>
                           <li>Strong manufacturing partners</li>
                         </ul>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           They understand one thing:
                         </p>
                         <blockquote className="blog-quote">
@@ -587,7 +529,6 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                         </blockquote>
                       </div>
 
-                      {/* Building the Future */}
                       <div className="blog-section">
                         <h2 className="blog-section-title">
                           At Gomzi Lifesciences LLP, we don't just manufacture
@@ -609,44 +550,21 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                         </p>
                       </div>
 
-                      {/* Conclusion */}
                       <div className="blog-section">
                         <div className="blog-conclusion">
                           <h2 className="blog-section-title">Conclusion</h2>
-                          <p
-                            className="blog-text"
-                            style={{ marginBottom: "5px" }}
-                          >
+                          <p className="blog-text mb-5px">
                             Anyone can launch a supplement.
                           </p>
-                          <p
-                            className="blog-text"
-                            style={{ marginBottom: "5px" }}
-                          >
+                          <p className="blog-text mb-5px">
                             But only a few build a brand that lasts.
                           </p>
-                          <p
-                            className="blog-text"
-                            style={{ marginBottom: "5px" }}
-                          >
-                            The difference?
-                          </p>
-                          <p
-                            className="blog-text"
-                            style={{ marginBottom: "5px" }}
-                          >
-                            Not marketing.
-                          </p>
-                          <p
-                            className="blog-text"
-                            style={{ marginBottom: "8px" }}
-                          >
+                          <p className="blog-text mb-5px">The difference?</p>
+                          <p className="blog-text mb-5px">Not marketing.</p>
+                          <p className="blog-text mb-8">
                             But<strong> what's inside the product.</strong>
                           </p>
-                          <p
-                            className="blog-text"
-                            style={{ marginBottom: "5px" }}
-                          >
+                          <p className="blog-text mb-5px">
                             Ready to build your supplement brand the right way?
                             Let's create something your customers don't just try
                             — but trust and reorder.
@@ -654,7 +572,6 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                         </div>
                       </div>
 
-                      {/* FAQs */}
                       <div className="blog-section">
                         <h2 className="blog-section-title">FAQs</h2>
 

@@ -53,9 +53,8 @@ function MoreProducts() {
               >
                 <div className="item">
                   <div
-                    className="d-inline-block"
+                    className="d-inline-block w-100-display-inline-block "
                     tabIndex="-1"
-                    style={{ width: "100%", display: "inline-block" }}
                   >
                     <div className="col-12">
                       <div className="categories-product-main text-center">
@@ -83,9 +82,8 @@ function MoreProducts() {
                 </div>
                 <div className="item">
                   <div
-                    className="d-inline-block"
+                    className="d-inline-block w-100-display-inline-block "
                     tabIndex="-1"
-                    style={{ width: "100%", display: "inline-block" }}
                   >
                     <div className="col-12">
                       <div className="categories-product-main text-center">
@@ -113,9 +111,8 @@ function MoreProducts() {
                 </div>
                 <div className="item">
                   <div
-                    className="d-inline-block"
+                    className="d-inline-block w-100-display-inline-block "
                     tabIndex="-1"
-                    style={{ width: "100%", display: "inline-block" }}
                   >
                     <div className="col-12">
                       <div className="categories-product-main text-center">
@@ -143,9 +140,8 @@ function MoreProducts() {
                 </div>
                 <div className="item">
                   <div
-                    className="d-inline-block"
+                    className="d-inline-block w-100-display-inline-block "
                     tabIndex="-1"
-                    style={{ width: "100%", display: "inline-block" }}
                   >
                     <div className="col-12">
                       <div className="categories-product-main text-center">
@@ -173,9 +169,8 @@ function MoreProducts() {
                 </div>
                 <div className="item">
                   <div
-                    className="d-inline-block"
+                    className="d-inline-block w-100-display-inline-block "
                     tabIndex="-1"
-                    style={{ width: "100%", display: "inline-block" }}
                   >
                     <div className="col-12">
                       <div className="categories-product-main text-center">
@@ -203,9 +198,8 @@ function MoreProducts() {
                 </div>
                 <div className="item">
                   <div
-                    className="d-inline-block"
+                    className="d-inline-block w-100-display-inline-block "
                     tabIndex="-1"
-                    style={{ width: "100%", display: "inline-block" }}
                   >
                     <div className="col-12">
                       <div className="categories-product-main text-center">

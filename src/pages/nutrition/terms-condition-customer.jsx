@@ -144,7 +144,7 @@ function TermsConditionCustomer() {
                     </div>
                     {order?.user_meal_product?.tracking.some(
                       (trackingElem) =>
-                        trackingElem.shipment_status === "DELIVERED"
+                        trackingElem.shipment_status === "DELIVERED",
                     ) && (
                       <div className="col-12 meal">
                         <p className="mt-2 text-success f-20">
@@ -168,12 +168,6 @@ function TermsConditionCustomer() {
                           </span>
                         </div>
                         <div className="price1">
-                          {/* <p className="my-3">
-                            ₹
-                            {order?.product?.price /
-                              order?.user_meal_product?.quantity}
-                            /-
-                          </p> */}
                           <span className="q1">
                             Quantity : {order?.user_meal_product?.quantity}{" "}
                           </span>
@@ -210,7 +204,7 @@ function TermsConditionCustomer() {
                               className={`order-tracking ${
                                 order?.user_meal_product?.tracking.find(
                                   (trackingElem) =>
-                                    trackingElem.shipment_status === "PLACED"
+                                    trackingElem.shipment_status === "PLACED",
                                 )
                                   ? "completed"
                                   : ""
@@ -225,8 +219,8 @@ function TermsConditionCustomer() {
                                     order?.user_meal_product?.tracking.find(
                                       (trackingElem) =>
                                         trackingElem.shipment_status ===
-                                        "PLACED"
-                                    )?.updatedAt
+                                        "PLACED",
+                                    )?.updatedAt,
                                   )}
                                 </span>
                               </p>
@@ -236,7 +230,7 @@ function TermsConditionCustomer() {
                                 order?.user_meal_product?.tracking.find(
                                   (trackingElem) =>
                                     trackingElem.shipment_status ===
-                                    "DISPATCHED"
+                                    "DISPATCHED",
                                 )
                                   ? "completed"
                                   : ""
@@ -250,14 +244,14 @@ function TermsConditionCustomer() {
                                   {order?.user_meal_product?.tracking.find(
                                     (trackingElem) =>
                                       trackingElem.shipment_status ===
-                                      "DISPATCHED"
+                                      "DISPATCHED",
                                   )
                                     ? convertDate(
                                         order?.user_meal_product?.tracking.find(
                                           (trackingElem) =>
                                             trackingElem.shipment_status ===
-                                            "DISPATCHED"
-                                        )?.updatedAt
+                                            "DISPATCHED",
+                                        )?.updatedAt,
                                       )
                                     : ""}
                                 </span>
@@ -267,7 +261,8 @@ function TermsConditionCustomer() {
                               className={`order-tracking ${
                                 order?.user_meal_product?.tracking.find(
                                   (trackingElem) =>
-                                    trackingElem.shipment_status === "DELIVERED"
+                                    trackingElem.shipment_status ===
+                                    "DELIVERED",
                                 )
                                   ? "completed"
                                   : ""
@@ -281,14 +276,14 @@ function TermsConditionCustomer() {
                                   {order?.user_meal_product?.tracking.find(
                                     (trackingElem) =>
                                       trackingElem.shipment_status ===
-                                      "DELIVERED"
+                                      "DELIVERED",
                                   )
                                     ? convertDate(
                                         order?.user_meal_product?.tracking.find(
                                           (trackingElem) =>
                                             trackingElem.shipment_status ===
-                                            "DELIVERED"
-                                        )?.updatedAt
+                                            "DELIVERED",
+                                        )?.updatedAt,
                                       )
                                     : ""}
                                 </span>
@@ -317,13 +312,13 @@ function TermsConditionCustomer() {
                 <div className="col-12 text-center mb-4 px-4">
                   <div className="ql-editor text-left mt-3">
                     <p className="mb-2">
-                      Welcome to the Gomzi Nutrition family! We are thrilled to
-                      be your ultimate destination for health and wellness. At
-                      Gomzi Nutrition, our commitment is to provide you with
-                      top-notch products and services to support your journey
-                      towards a healthier lifestyle. Before you embark on this
-                      journey with us, we kindly ask you to familiarize yourself
-                      with our Terms and Conditions outlined below.
+                      Welcome to the Gomzi Lifescience family! We are thrilled
+                      to be your ultimate destination for health and wellness.
+                      At Gomzi Lifescience, our commitment is to provide you
+                      with top-notch products and services to support your
+                      journey towards a healthier lifestyle. Before you embark
+                      on this journey with us, we kindly ask you to familiarize
+                      yourself with our Terms and Conditions outlined below.
                     </p>
                     <p className="mb-2">
                       <b>Agreement Acceptance:</b>
@@ -373,12 +368,12 @@ function TermsConditionCustomer() {
                       <br />
                     </p>
                     <p className="mb-2">
-                      We are excited to have you on board with Gomzi Nutrition.
-                      Your health and wellness journey is important to us, and
-                      we are committed to providing you with the best experience
-                      possible. If you have any questions or concerns regarding
-                      these Terms and Conditions, please do not hesitate to
-                      reach out to us.
+                      We are excited to have you on board with Gomzi
+                      Lifescience. Your health and wellness journey is important
+                      to us, and we are committed to providing you with the best
+                      experience possible. If you have any questions or concerns
+                      regarding these Terms and Conditions, please do not
+                      hesitate to reach out to us.
                     </p>
                   </div>
                 </div>

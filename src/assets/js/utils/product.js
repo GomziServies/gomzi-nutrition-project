@@ -51,7 +51,7 @@ export const createPaymentProduct = (
   products,
   data,
   coupon_id,
-  payment_mode
+  payment_mode,
 ) => {
   let quantity = data.quantity;
   let address_line_1 = data.address_line_1;
@@ -83,7 +83,7 @@ export const createPaymentProduct = (
     quantity,
     address,
     coupon_id,
-    payment_mode
+    payment_mode,
   );
 };
 
@@ -92,7 +92,7 @@ export const createProductOrder = async (
   quantity = 1,
   address,
   coupon_id,
-  payment_mode
+  payment_mode,
 ) => {
   try {
     if (!products) {
@@ -164,16 +164,14 @@ export const createProductOrder = async (
     if (address_line_2) {
       payload.address_line_2 = String(address_line_2).trim();
     }
-    // Will use after authentication
     localStorage.setItem(
       "tmp_ProductPurchasePayload",
       JSON.stringify({
         ...payload,
         expire: new Date().getTime() + 1000 * 60 * 60 * 5,
-      })
+      }),
     );
 
-    // Check Authentication
     if (
       localStorage.getItem("fg_group_user_authorization") === null ||
       localStorage.getItem("user_info") === null
@@ -181,7 +179,6 @@ export const createProductOrder = async (
       localStorage.removeItem("fg_group_user_authorization");
       localStorage.removeItem("user_info");
 
-      // expire in 5h
       return { showLoginModal: true };
     }
 
@@ -202,10 +199,8 @@ export const createProductOrder = async (
         text: "Please check your email for the invoice.",
         icon: "success",
       }).then(() => {
-        // Remove temporary data and coupon id
         localStorage.removeItem("tmp_ProductPurchasePayload");
         localStorage.removeItem("coupon_id");
-        // Redirect to Order Page
         window.location.href = "/nutrition/thank-you-for-order";
       });
 
@@ -218,10 +213,8 @@ export const createProductOrder = async (
           text: "Please check your email for the invoice.",
           icon: "success",
         }).then(() => {
-          // Remove coupon id
           localStorage.removeItem("coupon_id");
 
-          // Redirect to Order Page
           window.location.href = "/user/order";
         });
       };
@@ -240,10 +233,8 @@ export const createProductOrder = async (
           text: "Please check your email for the invoice.",
           icon: "success",
         }).then(() => {
-          // Remove coupon id
           localStorage.removeItem("coupon_id");
 
-          // Redirect to Order Page
           window.location.href = "/nutrition/thank-you-for-order";
         });
       };

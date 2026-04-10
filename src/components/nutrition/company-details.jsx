@@ -4,7 +4,7 @@ const CompanyDetails = () => {
   return (
     <>
       <p className="ql-align-justify mb-1">
-        <b>Brand:</b> Gomzi Nutrition
+        <b>Brand:</b> Gomzi Lifescience
       </p>
       <p className="ql-align-justify mb-1">
         <b>Manufacturer:</b> 547-548, 1st Floor, Rjd Textiles Park, Pal-Hazira

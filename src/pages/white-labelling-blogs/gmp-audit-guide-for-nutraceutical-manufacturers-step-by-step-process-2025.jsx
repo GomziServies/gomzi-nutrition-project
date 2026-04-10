@@ -82,8 +82,6 @@ function GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025() {
     $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
   }, []);
 
-  //  Steps Array
-
   const stepsData = [
     {
       number: "1",
@@ -96,7 +94,10 @@ function GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025() {
           you're checking the whole factory or just the specific line making
           your product (e.g., the{" "}
           <strong>
-            <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+            <Link
+              className="blog-text-link"
+              to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+            >
               OEM/ODM nutraceutical manufacturing
             </Link>
           </strong>{" "}
@@ -315,14 +316,11 @@ function GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025() {
         </section>
       </div>
 
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -330,11 +328,7 @@ function GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025() {
                       "/assets/images/nutrition/best-whey-protein-in-india-main.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -353,7 +347,6 @@ function GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025() {
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* Intro */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         From Idea to Shelf: Your Ultimate Guide to Hiring
@@ -363,20 +356,23 @@ function GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025() {
                         What to Demand Before Hiring Your Supplement
                         Manufacturer
                       </h3>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Launching a supplement brand is exciting, but the
                         manufacturing process can feel like a maze.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         To build a successful business, you don't just need a
                         vendor — you need a strategic partner who operates at
                         the highest level of quality and professionalism.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         This guide will walk you through what to look for when
                         choosing a{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             best nutraceutical third party manufacturer in India
                           </Link>
                         </strong>{" "}
@@ -387,7 +383,10 @@ function GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025() {
                         Don't let the technical terms scare you! Before you pick
                         a{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             top leading supplement manufacturer
                           </Link>
                         </strong>
@@ -398,116 +397,36 @@ function GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025() {
                       </p>
                     </div>
 
-                    {/*  STEPS - stepsData.map() thi render */}
                     {stepsData.map((step, index) => (
-                      <div
-                        key={step.number}
-                        style={{ display: "flex", gap: "0" }}
-                      >
-                        {/* Left: Timeline circle + vertical line */}
-                        <div
-                          style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            width: "52px",
-                            flexShrink: 0,
-                          }}
-                        >
-                          <div
-                            style={{
-                              width: "44px",
-                              height: "44px",
-                              borderRadius: "50%",
-                              background: "#86c33a",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              fontSize: "18px",
-                              fontWeight: "700",
-                              color: "#fff",
-                              flexShrink: 0,
-                              zIndex: 1,
-                              boxShadow: "0 2px 8px rgba(134,195,58,0.4)",
-                            }}
-                          >
-                            {step.number}
-                          </div>
+                      <div key={step.number} className="d-f-g-0">
+                        <div className="timeline-circle">
+                          <div className="stp-num-div">{step.number}</div>
                           {index < stepsData.length - 1 && (
-                            <div
-                              style={{
-                                width: "2px",
-                                flex: 1,
-                                background: "#86c33a",
-                                opacity: 0.35,
-                                minHeight: "40px",
-                              }}
-                            />
+                            <div className="stp-num" />
                           )}
                         </div>
 
-                        {/* Right: Content */}
-                        <div
-                          style={{
-                            flex: 1,
-                            paddingLeft: "20px",
-                            paddingBottom: "40px",
-                          }}
-                        >
-                          <h2
-                            className="blog-section-title"
-                            style={{ marginTop: "8px", marginBottom: "16px" }}
-                          >
+                        <div className="stp-text">
+                          <h2 className="blog-section-title stp-title">
                             {step.title}
                           </h2>
 
-                          {/* What it is */}
-                          <div style={{ marginBottom: "10px" }}>
-                            <p
-                              style={{
-                                margin: "0 0 2px 0",
-                                fontWeight: "700",
-                                fontSize: "14px",
-                                color: "#86c33a",
-                                textTransform: "uppercase",
-                                letterSpacing: "0.5px",
-                              }}
-                            >
-                              <i
-                                className="fas fa-info-circle"
-                                style={{ marginRight: "6px" }}
-                              ></i>
+                          <div className="mb-10">
+                            <p className="what-it-is">
+                              <i className="fas fa-info-circle mr-6"></i>
                               What it is
                             </p>
-                            <p
-                              className="blog-text"
-                              style={{ margin: "0 0 0 20px" }}
-                            >
-                              {step.whatItIs}
-                            </p>
+                            <p className="blog-text mr-0-20">{step.whatItIs}</p>
                           </div>
 
-                          {/* Simple Check */}
-                          <div style={{ marginBottom: "10px" }}>
-                            <p
-                              style={{
-                                margin: "0 0 2px 0",
-                                fontWeight: "700",
-                                fontSize: "14px",
-                                color: "#86c33a",
-                                textTransform: "uppercase",
-                                letterSpacing: "0.5px",
-                              }}
-                            >
-                              <i
-                                className="fas fa-search"
-                                style={{ marginRight: "6px" }}
-                              ></i>
+                          <div className="mb-10">
+                            <p className="what-it-is">
+                              <i className="fas fa-search mr-6"></i>
                               Simple Check
                             </p>
-                            <div style={{ margin: "0 0 0 20px" }}>
+                            <div className="mr-0-20">
                               {step.simpleCheck ? (
-                                <p className="blog-text" style={{ margin: 0 }}>
+                                <p className="blog-text m-0">
                                   {step.simpleCheck}
                                 </p>
                               ) : (
@@ -516,40 +435,23 @@ function GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025() {
                             </div>
                           </div>
 
-                          {/* Your Takeaway */}
                           <div>
-                            <p
-                              style={{
-                                margin: "0 0 2px 0",
-                                fontWeight: "700",
-                                fontSize: "14px",
-                                color: "#86c33a",
-                                textTransform: "uppercase",
-                                letterSpacing: "0.5px",
-                              }}
-                            >
-                              <i
-                                className="fas fa-lightbulb"
-                                style={{ marginRight: "6px" }}
-                              ></i>
+                            <p className="what-it-is">
+                              <i className="fas fa-lightbulb mr-6"></i>
                               Your Takeaway
                             </p>
-                            <div style={{ margin: "0 0 0 20px" }}>
-                              <p className="blog-text" style={{ margin: 0 }}>
+                            <div className="mr-0-20">
+                              <p className="blog-text m-0">
                                 {step.yourTakeaway}
                               </p>
                               {step.number === "7" && step.extraContent && (
-                                <div style={{ marginTop: "8px" }}>
-                                  {step.extraContent}
-                                </div>
+                                <div className="mt-8">{step.extraContent}</div>
                               )}
                             </div>
                           </div>
                         </div>
                       </div>
                     ))}
-
-                    {/* FAQs */}
 
                     <div className="blog-section">
                       <h2 className="blog-section-title">FAQs</h2>

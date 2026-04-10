@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
-import "../../assets/css/blog.css"; // Import the new blog CSS
+import "../../assets/css/blog.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -18,7 +18,10 @@ const faqData = [
         <p>
           It is{" "}
           <strong>
-            <Link to="https://pmc.ncbi.nlm.nih.gov/articles/PMC8728510/">
+            <Link
+              className="blog-text-link"
+              to="https://pmc.ncbi.nlm.nih.gov/articles/PMC8728510/"
+            >
               raw material selection
             </Link>
           </strong>
@@ -76,7 +79,10 @@ const faqData = [
         <p>
           Consistency depends on strict{" "}
           <strong>
-            <Link to="https://www.fda.gov/food/dietary-supplements-guidance-documents-regulatory-information/backgrounder-final-rule-current-good-manufacturing-practices-cgmps-dietary-supplements">
+            <Link
+              className="blog-text-link"
+              to="https://www.fda.gov/food/dietary-supplements-guidance-documents-regulatory-information/backgrounder-final-rule-current-good-manufacturing-practices-cgmps-dietary-supplements"
+            >
               cGMP (Good Manufacturing Practices)
             </Link>
           </strong>
@@ -165,14 +171,11 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -180,11 +183,7 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       "/assets/images/white-labelling-blogs/what-supplements-1.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -203,37 +202,30 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* Two Scoops, Two Stories */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Two Scoops, Two Stories
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         A customer scrolls through options online and picks
                         between two protein powders.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
-                        Both Promise:
-                      </p>
+                      <p className="blog-text mb-8">Both Promise:</p>
                       <ul className="blog-list">
                         <li>24g protein</li>
                         <li>Faster recovery</li>
                         <li>Better performance</li>
                       </ul>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
-                        They look identical.
-                      </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">They look identical.</p>
+                      <p className="blog-text mb-8">
                         But after a few weeks, one delivers visible results…
                         while the other quietly gets ignored.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         So what really made the difference?
                       </p>
                       <p className="blog-text">It wasn't the label.</p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
-                        It wasn't the flavor.
-                      </p>
+                      <p className="blog-text mb-8">It wasn't the flavor.</p>
                       <p className="blog-text">
                         It was everything that happened{" "}
                         <strong>before the powder reached the jar </strong>
@@ -241,30 +233,32 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       </p>
                     </div>
 
-                    {/* It Starts Long Before Manufacturing */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         It Starts Long Before Manufacturing
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Quality doesn’t begin inside a factory; it begins at the
                         source. For experienced whey protein concentrate
                         manufacturers,{" "}
                         <strong>
-                          <Link to="https://pmc.ncbi.nlm.nih.gov/articles/PMC8728510/">
+                          <Link
+                            className="blog-text-link"
+                            to="https://pmc.ncbi.nlm.nih.gov/articles/PMC8728510/"
+                          >
                             raw material selection
                           </Link>
                         </strong>{" "}
                         is one of the most critical steps in the entire
                         production lifecycle.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Not all protein sources are equal factors such as the
                         cow's diet (grass-fed vs. grain-fed) and the initial
                         microbial load of the liquid whey determine the
                         foundational purity of the batch.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         A reliable manufacturer doesn’t just process whatever
                         ingredients arrive; they carefully evaluate and
                         stabilize these raw materials before production even
@@ -272,23 +266,24 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                         of advanced processing can fully restore the product's
                         nutritional integrity.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Quality doesn’t begin inside a factory.It begins at the
                         source.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         For experienced{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder"
+                          >
                             whey protein concentrate manufacturers,
                           </Link>
                         </strong>{" "}
                         raw material selection is one of the most critical
                         steps. Not all protein sources are equal.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
-                        Key factors include:
-                      </p>
+                      <p className="blog-text mb-8">Key factors include:</p>
                       <ul className="blog-list">
                         <li>Even though</li>
                         <li>Amino acids</li>
@@ -300,25 +295,24 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                         <strong>evaluate and standardize raw materials</strong>{" "}
                         before production even begins.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Because once the base is compromised, no amount of
                         processing can fully fix it.
                       </p>
                     </div>
 
-                    {/* The Transformation: Liquid to Powder */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The Transformation: Liquid to Powder
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Most people don't realize this:
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         protein powders don't start as powder — they start as
                         liquid.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         To convert it, manufacturers use{" "}
                         <strong>spray drying</strong>:
                       </p>
@@ -330,7 +324,7 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                         <li>You're welcome.</li>
                         <li>Fine powder particles are formed</li>
                       </ul>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         This step takes only seconds, but it defines:
                       </p>
                       <ul className="blog-list">
@@ -341,7 +335,10 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       <p className="blog-text">
                         For a{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements"
+                          >
                             custom sports supplement manufacturer
                           </Link>
                         </strong>
@@ -350,22 +347,19 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       </p>
                     </div>
 
-                    {/* Where Things Can Go Wrong */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Where Things Can Go Wrong
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
-                        Proteus
-                      </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">Proteus</p>
+                      <p className="blog-text mb-8">
                         During processing, proteins are exposed to:
                       </p>
                       <ul className="blog-list">
                         <li>Heat</li>
                         <li>Moisture changes</li>
                       </ul>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         If not handled properly, this can lead to structural
                         changes that affect:
                       </p>
@@ -381,25 +375,22 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       </p>
                     </div>
 
-                    {/* The Science You Can't See */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The Science You Can't See: Particle Structure
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Have you ever noticed how some protein powders mix
                         effortlessly, while others form lumps?
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         That's not a coincidence. It's the result of{" "}
                         <strong>particle engineering</strong> — an area where
                         advanced{" "}
                         <strong>whey protein concentrate manufacturers</strong>{" "}
                         focus heavily.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
-                        By controlling:
-                      </p>
+                      <p className="blog-text mb-8">By controlling:</p>
                       <ul className="blog-list">
                         <li>Particle size</li>
                         <li>Shape</li>
@@ -417,19 +408,18 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       </p>
                     </div>
 
-                    {/* Mixability */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Mixability: Where Science Meets the Customer
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8 ">
                         From a customer's perspective, quality often comes down
                         to one simple question:
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         <em>"Does it mix well?"</em>
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         But behind that is a complex balance of:
                       </p>
                       <ul className="blog-list">
@@ -437,7 +427,7 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                         <li>Processing conditions</li>
                         <li>Moisture control</li>
                       </ul>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         A skilled <strong>whey protein manufacturer</strong>{" "}
                         ensures that the powder:
                       </p>
@@ -452,15 +442,14 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       </p>
                     </div>
 
-                    {/* The Real Game-Changer */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The Real Game-Changer: Process Control
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         This is where true manufacturing expertise shows.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Even with high-quality raw materials, poor process
                         control can lead to:
                       </p>
@@ -469,7 +458,7 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                         <li>Taste variation</li>
                         <li>Reduced performance</li>
                       </ul>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         A professional <strong>with</strong> focuses on:
                       </p>
                       <ul className="blog-list">
@@ -484,26 +473,21 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       </p>
                     </div>
 
-                    {/* Shelf Life */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Shelf Life: The Test of Time
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         A high-quality protein powder must perform not just
                         today, but months down the line.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
-                        Factors like:
-                      </p>
+                      <p className="blog-text mb-8">Factors like:</p>
                       <ul className="blog-list">
                         <li>Moisture content</li>
                         <li>Packaging quality</li>
                         <li>Storage conditions</li>
                       </ul>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
-                        directly impact:
-                      </p>
+                      <p className="blog-text mb-8">directly impact:</p>
                       <ul className="blog-list">
                         <li>Shelf life</li>
                         <li>Stability</li>
@@ -517,15 +501,14 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       </p>
                     </div>
 
-                    {/* The Industry Is Evolving */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The Industry Is Evolving
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Today's supplement market is more competitive than ever.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Brands are no longer just looking for manufacturers —
                         they're looking for{" "}
                         <strong>
@@ -533,7 +516,7 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                           consistency.
                         </strong>
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Modern expectations include:
                       </p>
                       <ul className="blog-list">
@@ -548,14 +531,11 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       </p>
                     </div>
 
-                    {/* The Truth Most People Miss */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The Truth Most People Miss
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
-                        Here's the reality:
-                      </p>
+                      <p className="blog-text mb-8">Here's the reality:</p>
                       <blockquote className="blog-quote">
                         <p className="blog-text">
                           <em>
@@ -572,12 +552,11 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       </p>
                     </div>
 
-                    {/* What This Means for Supplement Brands */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         What This Means for Supplement Brands
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Before making a decision, ask:
                       </p>
                       <ul className="blog-list">
@@ -588,7 +567,10 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       <p className="blog-text">
                         The right{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements"
+                          >
                             custom sports supplement manufacturer
                           </Link>
                         </strong>{" "}
@@ -597,13 +579,12 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       </p>
                     </div>
 
-                    {/* About Gomzi */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         About Gomzi Life Sciences
                       </h2>
 
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Gomzilifesciences is a trusted name in the nutraceutical
                         industry, specializing in high-quality protein powders
                         and sports nutrition products. As a reliable{" "}
@@ -615,20 +596,13 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       </p>
                     </div>
 
-                    {/* Final Thought / Conclusion */}
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <h2 className="blog-section-title">Final Thought</h2>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           Great supplements aren't created by chance.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           They are built through:
                         </p>
                         <ul className="blog-list">
@@ -636,18 +610,12 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                           <li>Scientific processing</li>
                           <li>Strict quality control</li>
                         </ul>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           And in a competitive market, the difference between an
                           average product and a premium one often comes down to
                           one thing:{" "}
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           <strong>
                             the expertise of the manufacturer behind it.
                           </strong>
@@ -655,7 +623,6 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       </div>
                     </div>
 
-                    {/* FAQs */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">FAQs</h2>
                       <Accordion defaultActiveKey={["faq1"]} alwaysOpen>

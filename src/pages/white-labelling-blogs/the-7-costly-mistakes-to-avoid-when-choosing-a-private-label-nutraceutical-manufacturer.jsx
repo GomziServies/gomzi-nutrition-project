@@ -388,14 +388,11 @@ function The7CostlyMistakestoAvoidWhenChoosingaPrivateLabelNutraceuticalManufact
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid p-0 " style={{ width: "95%" }}>
+          <div className="container-fluid p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -403,11 +400,7 @@ function The7CostlyMistakestoAvoidWhenChoosingaPrivateLabelNutraceuticalManufact
                       "/assets/images/nutrition/best-whey-protein-in-india-main.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-ing-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -425,23 +418,28 @@ function The7CostlyMistakestoAvoidWhenChoosingaPrivateLabelNutraceuticalManufact
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* Intro */}
                     <div className="blog-section">
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         The{" "}
                         <strong>
-                          <Link to="https://www.grandviewresearch.com/industry-analysis/nutraceuticals-market">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.grandviewresearch.com/industry-analysis/nutraceuticals-market"
+                          >
                             nutraceutical industry growth{" "}
                           </Link>
                         </strong>
                         continues to accelerate as more consumers focus on
                         preventive healthcare, immunity, and overall wellness.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         For startups and wellness brands, launching supplements
                         through{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             private label nutraceutical manufacturing
                           </Link>
                         </strong>{" "}
@@ -449,39 +447,38 @@ function The7CostlyMistakestoAvoidWhenChoosingaPrivateLabelNutraceuticalManufact
                         market.
                       </p>
 
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Instead of investing in expensive manufacturing
                         facilities, brands can partner with experienced
                         supplement manufacturers who handle production,
                         formulation, packaging, and compliance.
                       </p>
 
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         This allows businesses to focus on branding, marketing,
                         and building customer trust.
                       </p>
 
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         However, choosing the wrong manufacturing partner can
                         create serious problems. Poor product quality, delayed
                         production, regulatory issues, and inconsistent supply
                         can negatively impact your brand reputation.
                       </p>
 
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Many brands rush into partnerships without properly
                         evaluating the manufacturer, which often leads to costly
                         mistakes.
                       </p>
 
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         In this guide, we will explore the most common mistakes
                         brands make when choosing a private label nutraceutical
                         manufacturer and how you can avoid them.
                       </p>
                     </div>
 
-                    {/* Why Choosing the Right Manufacturer Matters */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Why Choosing the Right Nutraceutical Manufacturer
@@ -498,28 +495,25 @@ function The7CostlyMistakestoAvoidWhenChoosingaPrivateLabelNutraceuticalManufact
                             }
                             alt="Fggroup"
                             width="100%"
-                            style={{ borderRadius: "20px" }}
+                            className="br-20"
                           />
                         </div>
                         <div className="col"></div>
                       </div>
 
-                      <p
-                        className="blog-text"
-                        style={{ marginTop: "10px", marginBottom: "8px" }}
-                      >
+                      <p className="blog-text mb-8 mt-10">
                         A nutraceutical manufacturer plays a critical role in
                         the success of your supplement brand. They are
                         responsible for sourcing ingredients, producing the
                         product, ensuring quality standards, and complying with
                         regulatory requirements.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         If the manufacturer fails to meet industry standards, it
                         can lead to issues such as poor product effectiveness,
                         safety concerns, or legal complications.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         On the other hand, working with a reliable and
                         experienced manufacturer ensures that your supplements
                         meet high quality standards and build long-term trust
@@ -532,79 +526,25 @@ function The7CostlyMistakestoAvoidWhenChoosingaPrivateLabelNutraceuticalManufact
                       </p>
                     </div>
 
-                    {/* mistake */}
-
                     {stepsData.map((step, index) => (
-                      <div
-                        key={step.number}
-                        style={{ display: "flex", gap: "0" }}
-                      >
-                        {/* Left: Timeline circle + vertical line */}
-                        <div
-                          style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            width: "52px",
-                            flexShrink: 0,
-                          }}
-                        >
-                          <div
-                            style={{
-                              width: "44px",
-                              height: "44px",
-                              borderRadius: "50%",
-                              background: "#86c33a",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              fontSize: "18px",
-                              fontWeight: "700",
-                              color: "#fff",
-                              flexShrink: 0,
-                              zIndex: 1,
-                              boxShadow: "0 2px 8px rgba(134,195,58,0.4)",
-                            }}
-                          >
-                            {step.number}
-                          </div>
+                      <div key={step.number} className="d-f-g-0">
+                        <div className="timeline-circle">
+                          <div className="stp-num-div">{step.number}</div>
                           {index < stepsData.length - 1 && (
-                            <div
-                              style={{
-                                width: "2px",
-                                flex: 1,
-                                background: "#86c33a",
-                                opacity: 0.35,
-                                minHeight: "40px",
-                              }}
-                            />
+                            <div className="stp-num" />
                           )}
                         </div>
 
-                        {/* Right: Content */}
-                        <div
-                          style={{
-                            flex: 1,
-                            paddingLeft: "20px",
-                            paddingBottom: "40px",
-                          }}
-                        >
-                          <h3
-                            className="blog-section-title"
-                            style={{ marginTop: "8px", marginBottom: "16px" }}
-                          >
+                        <div className="stp-text">
+                          <h3 className="blog-section-title stp-title">
                             {step.title}
                           </h3>
 
-                          {/* extraContent */}
-                          <div style={{ marginTop: "8px" }}>
-                            {step.extraContent}
-                          </div>
+                          <div className="mt-8">{step.extraContent}</div>
                         </div>
                       </div>
                     ))}
 
-                    {/* How to Choose */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         How to Choose the Right Private Label Nutraceutical
@@ -645,33 +585,23 @@ function The7CostlyMistakestoAvoidWhenChoosingaPrivateLabelNutraceuticalManufact
                       </p>
                     </div>
 
-                    {/* Final Thoughts */}
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <h2 className="blog-section-title">Final Thoughts</h2>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           Launching a supplement brand through private label
                           manufacturing is an excellent opportunity in today's
                           growing wellness market. However, the success of your
                           brand largely depends on the manufacturing partner you
                           choose.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           By avoiding common mistakes such as ignoring
                           certifications, focusing only on price, and
                           overlooking ingredient transparency, brands can ensure
                           that their supplements meet high quality standards.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           A reliable{" "}
                           <strong>
                             private label nutraceutical manufacturer
@@ -687,7 +617,6 @@ function The7CostlyMistakestoAvoidWhenChoosingaPrivateLabelNutraceuticalManufact
                       </div>
                     </div>
 
-                    {/* FAQs */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">FAQs</h2>
 

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
-import "../../assets/css/blog.css"; // Import the new blog CSS
+import "../../assets/css/blog.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -116,14 +116,11 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -131,11 +128,7 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                       "/assets/images/nutrition/best-whey-protein-in-india-main.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -154,7 +147,6 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* Intro */}
                     <div className="blog-section">
                       <p className="blog-text">
                         Are you ready to launch your drink brand but overwhelmed
@@ -169,7 +161,6 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                       </p>
                     </div>
 
-                    {/* What is Third-Party */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         What is Third-Party &amp; Private-Label Beverage
@@ -191,7 +182,7 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                         <iframe
                           width="70%"
                           height="50vh"
-                          style={{ height: "50vh", borderRadius: "12px" }}
+                          className="overflow br-20"
                           src="https://www.youtube.com/embed/XM2xXWYxhbw?si=LBNn2upJcrvn3aNc"
                           title="YouTube video player"
                           frameBorder="0"
@@ -202,7 +193,6 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                       </div>
                     </div>
 
-                    {/* Why Contract Manufacturing */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Why Contract Manufacturing is the Startup Superpower?
@@ -212,7 +202,10 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                         startup, that focus should be on brand and sales, not
                         machinery.
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/energy-drinks">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/energy-drinks"
+                          >
                             Third party beverage manufacturers in India
                           </Link>
                         </strong>{" "}
@@ -220,7 +213,6 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                       </p>
                     </div>
 
-                    {/* Top 10 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Top 10 Third-Party Beverage Companies
@@ -234,7 +226,10 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                       <ol className="blog-list">
                         <li className="blog-list-item">
                           <strong>
-                            <Link to="https://www.gomzilifesciences.in/">
+                            <Link
+                              className="blog-text-link"
+                              to="https://www.gomzilifesciences.in/"
+                            >
                               Gomzilifesciences
                             </Link>
                           </strong>{" "}
@@ -293,7 +288,6 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                       </ol>
                     </div>
 
-                    {/* Why India */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Why India is a Top Choice for Beverage Contract
@@ -340,7 +334,6 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                       </ul>
                     </div>
 
-                    {/* Low MOQ & Pricing */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Cracking the Code: Low MOQ &amp; Pricing Structure
@@ -385,7 +378,6 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                       </p>
                     </div>
 
-                    {/* Common Mistakes */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Common Mistakes Startups Should Avoid
@@ -406,7 +398,6 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                       </ul>
                     </div>
 
-                    {/* Tips */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Tips for Startup Success
@@ -432,8 +423,6 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                       </ul>
                     </div>
 
-                    {/* FAQs */}
-
                     <div className="blog-section">
                       <h2 className="blog-section-title">FAQs</h2>
 
@@ -454,8 +443,6 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                         ))}
                       </Accordion>
                     </div>
-
-                    {/* Conclusion */}
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <p className="blog-text">

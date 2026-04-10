@@ -71,7 +71,7 @@ function Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse() {
                 gtag('config', 'G-J50WNKGW38');`}</noscript>
       </Helmet>
       <NutritionHeader />
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
           <div className="container-fluid w-80 p-0">
             <div className="row">
@@ -83,8 +83,7 @@ function Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse() {
                       "/assets/images/nutrition/how-to-launch-a-supplement-brand03-02.jpg"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{ borderRadius: "20px", overflow: "hidden" }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -156,7 +155,7 @@ function Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse() {
                           }
                           alt="Fggroup"
                           width="100%"
-                          style={{ borderRadius: "20px" }}
+                          className="br-15"
                         />
                       </div>
                       <div className="col"></div>
@@ -169,58 +168,11 @@ function Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse() {
                       whether your product is just another bottle on the shelf
                       or a trusted health solution.
                     </p>
-                    {/* <table className="blog-table">
-                      <thead>
-                        <th>Feature</th>
-                        <th>Whey Protein Concentrate (WPC)</th>
-                        <th>Whey Protein Isolate (WPI)</th>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Protein %</td>
-                          <td>70% - 80%</td>
-                          <td>90% - 95%+</td>
-                        </tr>
-                        <tr>
-                          <td>Lactose</td>
-                          <td>Low to Moderate</td>
-                          <td>Virtually Zero</td>
-                        </tr>
-                        <tr>
-                          <td>Best For</td>
-                          <td>Daily wellness & Budget</td>
-                          <td>
-                            Isolate vs Concentrate for lean muscle cutting{" "}
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Goal</td>
-                          <td>General Muscle Gain</td>
-                          <td>Fat Loss & High Performance</td>
-                        </tr>
-                      </tbody>
-                    </table> */}
 
                     <h3 className="blog-subsection-subtitle">
                       {" "}
                       1. The Bioavailability Breakdown
                     </h3>
-
-                    <div className="row">
-                      <div className="col"></div>
-                      <div className="col-lg-6 mt-3">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/how-to-educate-consumers-about-safe-02.webp"
-                          }
-                          alt="Fggroup"
-                          width="100%"
-                          style={{ borderRadius: "20px" }}
-                        />
-                      </div>
-                      <div className="col"></div>
-                    </div>
 
                     <p className="mt-3">
                       A safe supplement is only effective if it reaches the
@@ -258,7 +210,7 @@ function Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse() {
                           }
                           alt="Fggroup"
                           width="100%"
-                          style={{ borderRadius: "20px" }}
+                          className="br-15"
                         />
                       </div>
                       <div className="col"></div>
@@ -308,7 +260,7 @@ function Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse() {
                           }
                           alt="Fggroup"
                           width="100%"
-                          style={{ borderRadius: "20px" }}
+                          className="br-15"
                         />
                       </div>
                       <div className="col"></div>
@@ -344,22 +296,6 @@ function Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse() {
                       Why Brands Choose Gomzilifesciences as Third-Party
                       Manufacturing in Surat
                     </h2>
-
-                    <div className="row">
-                      <div className="col"></div>
-                      <div className="col-lg-6 mt-3">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/how-to-launch-a-supplement-brand03.webp"
-                          }
-                          alt="Fggroup"
-                          width="100%"
-                          style={{ borderRadius: "20px" }}
-                        />
-                      </div>
-                      <div className="col"></div>
-                    </div>
 
                     <p className="mt-3">
                       Among the sea of{" "}

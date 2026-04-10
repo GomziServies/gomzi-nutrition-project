@@ -24,21 +24,12 @@ function GomziNutritionB12Veda() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
-  const addToCart = localStorage.getItem("addtocart");
   const [productData, setProductData] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const canonicalUrl = window.location.href;
   const isAuthenticated = !!localStorage.getItem("fg_group_user_authorization");
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -47,10 +38,10 @@ function GomziNutritionB12Veda() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -69,7 +60,7 @@ function GomziNutritionB12Veda() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -78,33 +69,31 @@ function GomziNutritionB12Veda() {
     }
   };
 
-  const addProductInCart = async (data) => {
-    try {
-      const response = await axiosInstance.post("/order-cart/add-item", {
-        item_id: data.id,
-        quantity: 1,
-        item_type: "FG_MEAL_PRODUCT",
-      });
-      if (response.data.response === "OK") {
-        setProductData(data);
-        // setMenuOpen(!menuOpen);
-        window.location.href = "/nutrition/cart";
-        localStorage.removeItem("cartAvailable");
-        localStorage.removeItem("productCartAvailable");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const addProductInCart = async (data) => {
+      try {
+        const response = await axiosInstance.post("/order-cart/add-item", {
+          item_id: data.id,
+          quantity: 1,
+          item_type: "FG_MEAL_PRODUCT",
+        });
+        if (response.data.response === "OK") {
+          setProductData(data);
+          window.location.href = "/nutrition/cart";
+          localStorage.removeItem("cartAvailable");
+          localStorage.removeItem("productCartAvailable");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     const localData = JSON.parse(localStorage.getItem("productCartAvailable"));
     const dataAvailable = JSON.parse(localStorage.getItem("cartAvailable"));
     if (localData && dataAvailable) {
       addProductInCart(localData);
     }
   }, []);
-
   const closeVideoModal = () => {
     setIsVideoOpen(false);
     setVideoUrl("");
@@ -132,20 +121,30 @@ function GomziNutritionB12Veda() {
   };
 
   useEffect(() => {
+    const addToCart = localStorage.getItem("addtocart");
     if (addToCart === "true") {
+      const addtocartdata = {
+        id: "66e807f379c30ad8b5e16525",
+        img: "/assets/images/nutrition/b12-veda-1.webp",
+        name: "Sugarguard Diabetes Care Powder",
+        price: "1649",
+        discount: "999",
+        size: "500 gms",
+        dis_point: "39.41%",
+      };
       setTimeout(() => {
         setProductData(addtocartdata);
         setMenuOpen(true);
         localStorage.removeItem("addtocart");
       }, 2000);
     }
-  }, [addToCart]);
+  }, []);
 
   return (
     <>
       <Helmet>
         <title>
-          Gomzi Nutrition B12 Veda - Boost Energy & Vitality with Vitamin B12
+          Gomzi Lifescience B12 Veda - Boost Energy & Vitality with Vitamin B12
         </title>
         <meta
           name="description"
@@ -184,7 +183,7 @@ function GomziNutritionB12Veda() {
         />
         <meta
           property="og:description"
-          content="Enhance your energy levels and support nerve health with Gomzi Nutrition B12 Veda. A potent source of Vitamin B12 for overall well-being and vitality."
+          content="Enhance your energy levels and support nerve health with Gomzi Lifescience B12 Veda. A potent source of Vitamin B12 for overall well-being and vitality."
         />
         <meta
           property="og:image"
@@ -262,16 +261,9 @@ function GomziNutritionB12Veda() {
                     </div>
                     <div className="col-9 pt-2">
                       <div className="d-inline-block">
-                        {/* <span className="d-inline-block mr-2 f-rob-bol f-20 text-red">
-                          39.41%
-                        </span> */}
                         <span className="d-inline-block mr-2 f-rob-bol f-22">
                           ₹999
                         </span>
-                        {/* <p className="f-20">
-                          MRP:-
-                          <span className="price--line-through">₹1,649/-</span>
-                        </p> */}
                       </div>
                     </div>
                     <div className="col-3 text-left text-md-right">
@@ -319,9 +311,6 @@ function GomziNutritionB12Veda() {
                           ) : (
                             ""
                           )}
-                          {/* <button className="bg-light-red d-block text-uppercase px-3 px-lg-5 text-white f-16 f-rob-bol rate-btn-1">
-                            Sold Out
-                          </button> */}
                         </div>
                       </div>
                     </div>
@@ -376,7 +365,7 @@ function GomziNutritionB12Veda() {
                       >
                         <div className="descriptionShow text-secondary">
                           <p>
-                            <strong>Gomzi Nutrition B12 Veda</strong>
+                            <strong>Gomzi Lifescience B12 Veda</strong>
                           </p>
                           <p className="mb-3">
                             Discover B12Veda: Your Daily Dose of Vitality.

@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import SelectableList from "../products/SelectableList";
+import "../../../assets/css/nutrition.css";
 
 const RefuelSeriesIgniteFatBurner = () => {
   const [currentProduct, setCurrentProduct] = useState("250g-Fruit Punch");
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [activeSize, setActiveSize] = useState("250g");
   const [activeFlavor, setActiveFlavor] = useState("Fruit Punch");
-  const [opacity, setOpacity] = useState(1);
+  const [, setOpacity] = useState(1);
   const imageRef = useRef(null);
 
   useEffect(() => {
@@ -22,8 +23,12 @@ const RefuelSeriesIgniteFatBurner = () => {
   }, [activeImageIndex]);
 
   const productImages = {
-    "250g-Fruit Punch": ["/assets/images/nutrition/refuel-ignite-fruit-punch-1.webp"],
-    "250g-Green Apple": ["/assets/images/nutrition/refuel-ignite-green-apple-1.webp"],
+    "250g-Fruit Punch": [
+      "/assets/images/nutrition/refuel-ignite-fruit-punch-1.webp",
+    ],
+    "250g-Green Apple": [
+      "/assets/images/nutrition/refuel-ignite-green-apple-1.webp",
+    ],
   };
 
   const sizeOptions = [{ id: "250g", label: "250g" }];
@@ -61,12 +66,8 @@ const RefuelSeriesIgniteFatBurner = () => {
             <div className="col-lg-12 px-md-3 mb-2 mt-2 mt-md-0 order-1">
               <div className="item mb-3">
                 <div
-                  className="product-image-container"
+                  className="product-image-container transition-opacity"
                   ref={imageRef}
-                  style={{
-                    opacity: opacity,
-                    transition: "opacity 0.3s ease-in-out",
-                  }}
                 >
                   <img
                     src={productImages[currentProduct]}

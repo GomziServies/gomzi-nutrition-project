@@ -31,7 +31,7 @@ function GomziNutritionChocolateCrunchyPeanutButter() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [activeSize, setActiveSize] = useState("500g");
   const [activeFlavor, setActiveFlavor] = useState("Chocolate");
-  const [opacity, setOpacity] = useState(1);
+  const [, setOpacity] = useState(1);
   const imageRef = useRef(null);
   const canonicalUrl = window.location.href;
   const isAuthenticated = !!localStorage.getItem("fg_group_user_authorization");
@@ -85,14 +85,6 @@ function GomziNutritionChocolateCrunchyPeanutButter() {
   };
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -101,10 +93,10 @@ function GomziNutritionChocolateCrunchyPeanutButter() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -123,7 +115,7 @@ function GomziNutritionChocolateCrunchyPeanutButter() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -141,7 +133,7 @@ function GomziNutritionChocolateCrunchyPeanutButter() {
       });
       if (response.data.response === "OK") {
         setProductData(data);
-        // setMenuOpen(!menuOpen);
+
         window.location.href = "/nutrition/cart";
         localStorage.removeItem("cartAvailable");
         localStorage.removeItem("productCartAvailable");
@@ -175,7 +167,7 @@ function GomziNutritionChocolateCrunchyPeanutButter() {
     <>
       <Helmet>
         <title>
-          Buy Gomzi Nutrition Chocolate Peanut Butter Crunchy Online at Best
+          Buy Gomzi Lifescience Chocolate Peanut Butter Crunchy Online at Best
           Price
         </title>
         <meta
@@ -260,7 +252,7 @@ function GomziNutritionChocolateCrunchyPeanutButter() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Gomzi Nutrition Mass Gainer Powder. "
+          "Hello, I wanted to know more about Gomzi Lifescience Mass Gainer Powder. "
         }
         options={{ pageRef: true }}
       />
@@ -271,12 +263,8 @@ function GomziNutritionChocolateCrunchyPeanutButter() {
               <div className="col-12 p-0 px-md-3 px-xl-4 py-3 py-md-3 h-100 mt-5">
                 <div className="col-12 p-0 col-lg-7 h-100 mb-lg-0 px-0 px-md-3 product-detail-left">
                   <div
-                    className="product-image-container"
+                    className="product-image-container transition-opacity"
                     ref={imageRef}
-                    style={{
-                      opacity: opacity,
-                      transition: "opacity 0.3s ease-in-out",
-                    }}
                   >
                     <ProductPhotoSection1
                       images={productImages[currentProduct]}
@@ -318,18 +306,9 @@ function GomziNutritionChocolateCrunchyPeanutButter() {
                     </div>
                     <div className="col-9 pt-2">
                       <div className="d-inline-block">
-                        {/* <span className="d-inline-block mr-2 f-rob-bol f-20 text-red">
-                                                    {currentProductData.dis_point}
-                                                </span> */}
                         <span className="d-inline-block mr-2 f-rob-bol f-22">
                           ₹{currentProductData.price} /- GST included
                         </span>
-                        {/* <p className="f-20">
-                                                    MRP:-&nbsp;
-                                                    <span className="price--line-through">
-                                                        ₹ {currentProductData.price}
-                                                    </span>
-                                                </p> */}
                       </div>
                     </div>
                     <div className="col-3 text-left text-md-right">
@@ -370,18 +349,6 @@ function GomziNutritionChocolateCrunchyPeanutButter() {
                             setMenuOpen={setMenuOpen}
                             productData={productData}
                           />
-                          {/* <div className="col-12 p-0">
-                                                        <div className="m-0 w-100 px-md-3">
-                                                            <div className="common-button-amazon mx-2">
-                                                                <Link to="https://www.amazon.in/Gomzi-Life-Science-LLP-GAINER/dp/B0DCVNM9MM/ref=sr_1_6?dib=eyJ2IjoiMSJ9.EKgs5TA2pAiBoRIGsq8mINJX7Ayrm7lSHkBJlJ8aCHH8R5dpnoG6ZGeAbkfk6GhY1ZfEb6jFBpBI-PwvPdPYjWqRxjS_8c3AKftqwKeqVAaMAMtmIuT_ygQDnC-MwOHySdrClcvssxheffcy7o91ww.McIjU6fs32mVq1RJoAPygEPCKaTzyvT3Qyvpwyv6JnY&dib_tag=se&keywords=Gomzi+Life+Science+LLP&qid=1725430766&sr=8-6">
-                                                                    <button className="bg-dark-section text-uppercase px-3 px-lg-5 py-3 text-white f-16 f-rob-bol">
-                                                                        <i className="fa-brands fa-amazon ml-4 mr-2 mt-1"></i>{" "}
-                                                                        Also Buy On Amazon
-                                                                    </button>
-                                                                </Link>
-                                                            </div>
-                                                        </div>
-                                                    </div> */}
                         </div>
                       </div>
                     </div>
@@ -392,9 +359,6 @@ function GomziNutritionChocolateCrunchyPeanutButter() {
                           <li className="d-block mb-3">
                             <div className="mb-2 ql-editor descriptionShow text-secondary">
                               <CompanyDetails />
-                              {/* <p className="ql-align-justify">
-                                                                <b>Our USP:</b> Fusion with BCAA Blend
-                                                            </p> */}
                             </div>
                           </li>
                         </ul>
@@ -440,7 +404,7 @@ function GomziNutritionChocolateCrunchyPeanutButter() {
                         <div className="descriptionShow text-secondary">
                           <p>
                             <strong>
-                              Gomzi Nutrition Natural Crunchy Peanut Butter
+                              Gomzi Lifescience Natural Crunchy Peanut Butter
                             </strong>
                           </p>
                           <p className="mb-3">

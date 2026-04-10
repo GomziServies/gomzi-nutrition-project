@@ -141,7 +141,7 @@ function PrivacyPolicyCustomer() {
                     </div>
                     {order?.user_meal_product?.tracking.some(
                       (trackingElem) =>
-                        trackingElem.shipment_status === "DELIVERED"
+                        trackingElem.shipment_status === "DELIVERED",
                     ) && (
                       <div className="col-12 meal">
                         <p className="mt-2 text-success f-20">
@@ -165,12 +165,6 @@ function PrivacyPolicyCustomer() {
                           </span>
                         </div>
                         <div className="price1">
-                          {/* <p className="my-3">
-                            ₹
-                            {order?.product?.price /
-                              order?.user_meal_product?.quantity}
-                            /-
-                          </p> */}
                           <span className="q1">
                             Quantity : {order?.user_meal_product?.quantity}{" "}
                           </span>
@@ -207,7 +201,7 @@ function PrivacyPolicyCustomer() {
                               className={`order-tracking ${
                                 order?.user_meal_product?.tracking.find(
                                   (trackingElem) =>
-                                    trackingElem.shipment_status === "PLACED"
+                                    trackingElem.shipment_status === "PLACED",
                                 )
                                   ? "completed"
                                   : ""
@@ -222,8 +216,8 @@ function PrivacyPolicyCustomer() {
                                     order?.user_meal_product?.tracking.find(
                                       (trackingElem) =>
                                         trackingElem.shipment_status ===
-                                        "PLACED"
-                                    )?.updatedAt
+                                        "PLACED",
+                                    )?.updatedAt,
                                   )}
                                 </span>
                               </p>
@@ -233,7 +227,7 @@ function PrivacyPolicyCustomer() {
                                 order?.user_meal_product?.tracking.find(
                                   (trackingElem) =>
                                     trackingElem.shipment_status ===
-                                    "DISPATCHED"
+                                    "DISPATCHED",
                                 )
                                   ? "completed"
                                   : ""
@@ -247,14 +241,14 @@ function PrivacyPolicyCustomer() {
                                   {order?.user_meal_product?.tracking.find(
                                     (trackingElem) =>
                                       trackingElem.shipment_status ===
-                                      "DISPATCHED"
+                                      "DISPATCHED",
                                   )
                                     ? convertDate(
                                         order?.user_meal_product?.tracking.find(
                                           (trackingElem) =>
                                             trackingElem.shipment_status ===
-                                            "DISPATCHED"
-                                        )?.updatedAt
+                                            "DISPATCHED",
+                                        )?.updatedAt,
                                       )
                                     : ""}
                                 </span>
@@ -264,7 +258,8 @@ function PrivacyPolicyCustomer() {
                               className={`order-tracking ${
                                 order?.user_meal_product?.tracking.find(
                                   (trackingElem) =>
-                                    trackingElem.shipment_status === "DELIVERED"
+                                    trackingElem.shipment_status ===
+                                    "DELIVERED",
                                 )
                                   ? "completed"
                                   : ""
@@ -278,14 +273,14 @@ function PrivacyPolicyCustomer() {
                                   {order?.user_meal_product?.tracking.find(
                                     (trackingElem) =>
                                       trackingElem.shipment_status ===
-                                      "DELIVERED"
+                                      "DELIVERED",
                                   )
                                     ? convertDate(
                                         order?.user_meal_product?.tracking.find(
                                           (trackingElem) =>
                                             trackingElem.shipment_status ===
-                                            "DELIVERED"
-                                        )?.updatedAt
+                                            "DELIVERED",
+                                        )?.updatedAt,
                                       )
                                     : ""}
                                 </span>
@@ -308,13 +303,13 @@ function PrivacyPolicyCustomer() {
               <div className="row">
                 <div className="col-12 pt-4 text-left">
                   <h1 className="f-rob-bol f-30 mb-2 text-black text-uppercase">
-                    <b>Privacy Policy for Gomzi Nutrition</b>
+                    <b>Privacy Policy for Gomzi Lifescience</b>
                   </h1>
                 </div>
                 <div className="col-12 text-center mb-4 px-4">
                   <div className="ql-editor text-left mt-3">
                     <p className="mb-2">
-                      At Gomzi Nutrition, we value your privacy and are
+                      At Gomzi Lifescience, we value your privacy and are
                       committed to protecting your personal information. This
                       Privacy Policy outlines how we collect, use, and safeguard
                       your information when you interact with our website and

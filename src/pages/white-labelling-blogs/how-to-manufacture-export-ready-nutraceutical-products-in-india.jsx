@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
-import "../../assets/css/blog.css"; // Import the new blog CSS
+import "../../assets/css/blog.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -86,14 +86,11 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -101,11 +98,7 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                       "/assets/images/nutrition/best-whey-protein-in-india-main.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -124,23 +117,22 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* Intro */}
                     <div className="blog-section">
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text  mb-8">
                         The global demand for wellness has undergone a seismic
                         shift. No longer is the world looking for just any
                         "health pill"; today's international consumer demands
                         clinical transparency, sustainable sourcing, and
                         absolute purity.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text  mb-8">
                         For Indian entrepreneurs, this presents a goldmine. With
                         the Indian nutraceutical market racing toward a{" "}
                         <strong>$64 billion</strong> valuation by 2030, the path
                         to going global is wide open for those who prioritize
                         quality.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text  mb-8">
                         However, moving from a local favorite to an
                         international bestseller requires more than a good
                         recipe; it requires an "Export-Ready" mindset.
@@ -156,7 +148,6 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                       </p>
                     </div>
 
-                    {/* SECTION 1 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         1. Decoding the Global "Gatekeepers"
@@ -164,7 +155,10 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                       <p className="blog-text">
                         To sell{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             dietary supplements and nutraceuticals
                           </Link>
                         </strong>{" "}
@@ -194,7 +188,6 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                       </ul>
                     </div>
 
-                    {/* SECTION 2 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         2. The Anatomy of an Export-Quality Product
@@ -253,24 +246,23 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                       </p>
                     </div>
 
-                    {/* SECTION 3 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         3. Why Your Manufacturing Partner is Your Most Critical
                         Asset
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text  mb-8">
                         Most brands fail not because their idea was bad, but
                         because their manufacturer couldn't scale to
                         international standards.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text  mb-8">
                         This is where specialized{" "}
                         <strong>supplement manufacturers</strong> come into
                         play. You need a partner who doesn't just "make" the
                         product but understands the "Science of Export."
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text  mb-8">
                         <strong>Gomzi Lifesciences</strong> has emerged as a{" "}
                         <strong>
                           top nutraceutical third party manufacturer
@@ -280,7 +272,7 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                         facilities that prioritize R&D and international
                         documentation.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text  mb-8">
                         Whether it's a high-performance protein blend or a
                         specialized botanical extract, Gomzi Lifesciences
                         provides the regulatory support and formulation
@@ -298,7 +290,6 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                       </p>
                     </div>
 
-                    {/* SECTION 4 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         4. Competitor Analysis: Staying Ahead in 2026
@@ -329,7 +320,6 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                       </ul>
                     </div>
 
-                    {/* SECTION 5 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         5. Your Step-by-Step Roadmap to Exporting
@@ -361,7 +351,6 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                       </ol>
                     </div>
 
-                    {/* Conclusion */}
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <p className="blog-text">

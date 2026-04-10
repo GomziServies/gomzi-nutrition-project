@@ -36,7 +36,7 @@ function GomziNutritionChocolateProteinBar() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [activeSize, setActiveSize] = useState("35g");
   const [activeFlavor, setActiveFlavor] = useState("Chocolate");
-  const [opacity, setOpacity] = useState(1);
+  const [, setOpacity] = useState(1);
   const imageRef = useRef(null);
   const isAuthenticated = !!localStorage.getItem("fg_group_user_authorization");
   const canonicalUrl = window.location.href;
@@ -90,14 +90,6 @@ function GomziNutritionChocolateProteinBar() {
   };
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -106,10 +98,10 @@ function GomziNutritionChocolateProteinBar() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -128,7 +120,7 @@ function GomziNutritionChocolateProteinBar() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -146,7 +138,7 @@ function GomziNutritionChocolateProteinBar() {
       });
       if (response.data.response === "OK") {
         setProductData(data);
-        // setMenuOpen(!menuOpen);
+
         window.location.href = "/nutrition/cart";
         localStorage.removeItem("cartAvailable");
         localStorage.removeItem("productCartAvailable");
@@ -159,15 +151,18 @@ function GomziNutritionChocolateProteinBar() {
   useEffect(() => {
     const localData = JSON.parse(localStorage.getItem("productCartAvailable"));
     const dataAvailable = JSON.parse(localStorage.getItem("cartAvailable"));
+
     if (localData && dataAvailable) {
       addProductInCart(localData);
     }
+  }, []);
 
+  useEffect(() => {
     if (ProductFlavor) {
       setActiveFlavor(ProductFlavor);
       setCurrentProduct(`${activeSize}-${ProductFlavor}`);
     }
-  }, []);
+  }, [ProductFlavor, activeSize]);
 
   const closeVideoModal = () => {
     setIsVideoOpen(false);
@@ -184,7 +179,7 @@ function GomziNutritionChocolateProteinBar() {
   return (
     <>
       <Helmet>
-        <title>Chocolate Peanut Butter Protein Bar By Gomzi Nutrition</title>
+        <title>Chocolate Peanut Butter Protein Bar By Gomzi Lifescience</title>
         <meta
           name="description"
           content="Tired of choosing between health and taste? With Gomzi Nutrition Protein Bar, you get the best of both worlds! Designed for active, health-conscious individuals, this bar is more than just a snack—it's a powerhouse of nutrition, delivering 20g of quality protein paired with a rich chocolaty indulgence."
@@ -267,7 +262,7 @@ function GomziNutritionChocolateProteinBar() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Gomzi Nutrition's ATP Creatine Monohydrate. "
+          "Hello, I wanted to know more about Gomzi Lifescience's ATP Creatine Monohydrate. "
         }
         options={{ pageRef: true }}
       />
@@ -278,12 +273,8 @@ function GomziNutritionChocolateProteinBar() {
               <div className="col-12 p-0 px-md-3 px-xl-4 py-3 py-md-3 h-100 mt-5">
                 <div className="col-12 p-0 col-lg-7 h-100 mb-lg-0 px-0 px-md-3 product-detail-left">
                   <div
-                    className="product-image-container"
+                    className="product-image-container transition-opacity"
                     ref={imageRef}
-                    style={{
-                      opacity: opacity,
-                      transition: "opacity 0.3s ease-in-out",
-                    }}
                   >
                     <ProductPhotoSection1
                       images={productImages[currentProduct]}
@@ -325,18 +316,9 @@ function GomziNutritionChocolateProteinBar() {
                     </div>
                     <div className="col-9 pt-2">
                       <div className="d-inline-block">
-                        {/* <span className="d-inline-block mr-2 f-rob-bol f-20 text-red">
-                          {currentProductData.dis_point}
-                        </span> */}
                         <span className="d-inline-block mr-2 f-rob-bol f-22">
                           ₹{currentProductData.discount} /- GST included
                         </span>
-                        {/* <p className="f-20">
-                          MRP:-&nbsp;
-                          <span className="price--line-through">
-                            ₹ {currentProductData.price}
-                          </span>
-                        </p> */}
                       </div>
                     </div>
                     <div className="col-3 text-left text-md-right">
@@ -377,18 +359,6 @@ function GomziNutritionChocolateProteinBar() {
                             setMenuOpen={setMenuOpen}
                             productData={productData}
                           />
-                          {/* <div className="col-12 p-0">
-                            <div className="m-0 w-100 px-md-3">
-                              <div className="common-button-amazon mx-2">
-                                <Link to="https://www.amazon.in/Gomzi-Life-Science-LLP-CREATINE/dp/B0DCVDN6ZL/ref=sr_1_3?dib=eyJ2IjoiMSJ9.EKgs5TA2pAiBoRIGsq8mINJX7Ayrm7lSHkBJlJ8aCHH8R5dpnoG6ZGeAbkfk6GhY1ZfEb6jFBpBI-PwvPdPYjWqRxjS_8c3AKftqwKeqVAaMAMtmIuT_ygQDnC-MwOHySdrClcvssxheffcy7o91ww.McIjU6fs32mVq1RJoAPygEPCKaTzyvT3Qyvpwyv6JnY&dib_tag=se&keywords=Gomzi+Life+Science+LLP&qid=1725430766&sr=8-3">
-                                  <button className="bg-dark-section text-uppercase px-3 px-lg-5 py-3 text-white f-16 f-rob-bol">
-                                    <i className="fa-brands fa-amazon ml-4 mr-2 mt-1"></i>{" "}
-                                    Also Buy On Amazon
-                                  </button>
-                                </Link>
-                              </div>
-                            </div>
-                          </div> */}
                         </div>
                       </div>
                     </div>
@@ -399,10 +369,6 @@ function GomziNutritionChocolateProteinBar() {
                           <li className="d-block mb-3">
                             <div className="mb-2 ql-editor descriptionShow text-secondary">
                               <CompanyDetails />
-                              {/* <p className="ql-align-justify">
-                                <b>Our USP:</b> Micronized Form For Better Water
-                                Absorbance
-                              </p> */}
                             </div>
                           </li>
                         </ul>
@@ -448,7 +414,7 @@ function GomziNutritionChocolateProteinBar() {
                         <div className="descriptionShow text-secondary">
                           <p className="mb-3">
                             <strong>
-                              Gomzi Nutrition Chocolate Protein Bar
+                              Gomzi Lifescience Chocolate Protein Bar
                             </strong>
                           </p>
                           <p className="mb-4">

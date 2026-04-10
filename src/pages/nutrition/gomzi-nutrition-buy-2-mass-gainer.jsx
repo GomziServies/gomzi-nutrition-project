@@ -31,14 +31,6 @@ function GomziNutritionBuy2MassGainer() {
   const isAuthenticated = !!localStorage.getItem("fg_group_user_authorization");
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -47,10 +39,10 @@ function GomziNutritionBuy2MassGainer() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -69,7 +61,7 @@ function GomziNutritionBuy2MassGainer() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -78,26 +70,25 @@ function GomziNutritionBuy2MassGainer() {
     }
   };
 
-  const addProductInCart = async (data) => {
-    try {
-      const response = await axiosInstance.post("/order-cart/add-item", {
-        item_id: data.id,
-        quantity: 1,
-        item_type: "FG_MEAL_PRODUCT",
-      });
-      if (response.data.response === "OK") {
-        setProductData(data);
-        // setMenuOpen(!menuOpen);
-        window.location.href = "/nutrition/cart";
-        localStorage.removeItem("cartAvailable");
-        localStorage.removeItem("productCartAvailable");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const addProductInCart = async (data) => {
+      try {
+        const response = await axiosInstance.post("/order-cart/add-item", {
+          item_id: data.id,
+          quantity: 1,
+          item_type: "FG_MEAL_PRODUCT",
+        });
+        if (response.data.response === "OK") {
+          setProductData(data);
+          window.location.href = "/nutrition/cart";
+          localStorage.removeItem("cartAvailable");
+          localStorage.removeItem("productCartAvailable");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     const localData = JSON.parse(localStorage.getItem("productCartAvailable"));
     const dataAvailable = JSON.parse(localStorage.getItem("cartAvailable"));
     if (localData && dataAvailable) {
@@ -134,6 +125,15 @@ function GomziNutritionBuy2MassGainer() {
   useEffect(() => {
     const addToCart = localStorage.getItem("addtocart");
     if (addToCart === "true") {
+      const addtocartdata = {
+        id: "66a22f361e55f03e92d535b0",
+        img: "/assets/images/nutrition/gomzi-nutrition-buy-2-mass-gainer-1.webp",
+        name: "Mass Gainer Powder-1kg + ATP Creatine Monohydrate",
+        price: "4499",
+        discount: "3698",
+        size: "Combo",
+        dis_point: "27.40%",
+      };
       setTimeout(() => {
         setProductData(addtocartdata);
         setMenuOpen(true);
@@ -244,24 +244,6 @@ function GomziNutritionBuy2MassGainer() {
                 </div>
                 <div className="col-12 p-0 col-lg-5 mb-3 mt-3 mb-lg-0 product-detail-right">
                   <div className="row">
-                    {/* <div className="col-12 mt-3 d-block d-lg-none">
-                                            <p className="f-rob-bol f-18">Size</p>
-                                            <ul className="list-unstyled mb-0">
-                                                <li className="mr-3 mb-3 d-inline-block">
-                                                    <div className="avail-in-other-size-main">
-                                                        <div className="d-block avail-in-other-size active">
-                                                            <span
-                                                                className="d-block product-type avail-other-size cp active"
-                                                            ><p className="d-block m-0">Combo - 1</p></span
-                                                            >
-                                                            <div className="d-block product-type avail-other-price cp">
-                                                                <p className="d-block m-0">₹1,799 + ₹749 = ₹4,499</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div> */}
                     <div className="col-12">
                       <h1 className="f-rob-bol f-22 text-bold">
                         Buy 2 Mass Gainer-2kg And Get Free Creatine + Shaker
@@ -352,7 +334,6 @@ function GomziNutritionBuy2MassGainer() {
                         <p className="ql-align-justify f-20 mb-1">
                           Total price:{" "}
                           <b className="multi-product-price">₹4,499</b>
-                          {/* &nbsp;&nbsp;<del>₹3,698</del> */}
                         </p>
                       </div>
                     </div>
@@ -430,13 +411,15 @@ function GomziNutritionBuy2MassGainer() {
                       >
                         <div className="descriptionShow text-secondary">
                           <p>
-                            <strong>Gomzi Nutrition Mass Gainer Powder</strong>
+                            <strong>
+                              Gomzi Lifescience Mass Gainer Powder
+                            </strong>
                           </p>
                           <p className="mb-3">
-                            Achieve Your Bulking Goals with Gomzi Nutrition Mass
-                            Gainer Powder. Our specially formulated blend is
-                            designed to support muscle growth, weight gain, and
-                            overall performance for bodybuilders and fitness
+                            Achieve Your Bulking Goals with Gomzi Lifescience
+                            Mass Gainer Powder. Our specially formulated blend
+                            is designed to support muscle growth, weight gain,
+                            and overall performance for bodybuilders and fitness
                             enthusiasts seeking to pack on size and strength
                             effectively.
                           </p>
@@ -489,7 +472,7 @@ function GomziNutritionBuy2MassGainer() {
                           </p>
                           <p>
                             <strong>
-                              Gomzi Nutrition ATP Creatine Monohydrate
+                              Gomzi Lifescience ATP Creatine Monohydrate
                             </strong>
                           </p>
                           <p className="mb-3">

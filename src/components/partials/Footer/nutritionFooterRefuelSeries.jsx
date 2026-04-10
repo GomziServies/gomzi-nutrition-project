@@ -12,6 +12,7 @@ import Modal from "react-bootstrap/Modal";
 import nutritionSendWhatsappMsg from "../../../assets/js/utils/nutritionSendWhatsappMsg";
 import { sendNutritionInquiry } from "../../../assets/js/utils/contact-us";
 import DownloadPDF from "../../../pages/refuel-series/Refuel 2.0.pdf";
+import "../../../assets/css/nutrition.css";
 
 function NutritionFooterRefuelSeries() {
   const [visibleCount, setVisibleCount] = useState(2);
@@ -35,26 +36,23 @@ function NutritionFooterRefuelSeries() {
 
       await sendNutritionInquiry(data);
 
-      // Clear form fields
       setName("");
       setEmail("");
       setMobile("");
       setShow(false);
 
-      // URL of the PDF to download
-      const pdfUrl = DownloadPDF; // Replace with your PDF URL
+      const pdfUrl = DownloadPDF;
       downloadPDF(pdfUrl);
     } catch (error) {
       console.error(error);
     }
   };
 
-  // Function to download the PDF via URL
   const downloadPDF = (url) => {
     const link = document.createElement("a");
     link.href = url;
-    link.target = "_blank"; // Open in new tab if needed
-    link.download = ""; // Use this attribute if you want to suggest a filename
+    link.target = "_blank";
+    link.download = "";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -6473,16 +6471,13 @@ function NutritionFooterRefuelSeries() {
   return (
     <>
       <footer>
-        <div
-          className="container-fluid pt-5 pb-3"
-          style={{ backgroundColor: "black" }}
-        >
+        <div className="container-fluid pt-5 pb-3 bg-black">
           <div className="container ">
             <div className="row ">
               <div className="col-md-3 f1 f2">
                 <h4 className="mb-0">Gomzi Lifesciences LLP</h4>
                 <p>
-                  Transform your physique with Gomzi Nutrition's premium
+                  Transform your physique with Gomzi Lifescience's premium
                   supplements.
                 </p>
                 <div className="f2">
@@ -6546,9 +6541,6 @@ function NutritionFooterRefuelSeries() {
                     FRANCHISE
                   </Link>
                 </p>
-                {/* <p className="mb-4">
-                  <Link to="/career">CAREERS</Link>
-                </p> */}
               </div>
               <div className="col-md-2 f2">
                 <h4>Information</h4>
@@ -6604,8 +6596,8 @@ function NutritionFooterRefuelSeries() {
                     <Link
                       onClick={() =>
                         nutritionSendWhatsappMsg(
-                          "Hello, I'm interested in becoming a distributor of Gomzi Nutrition.",
-                          { pageRef: true }
+                          "Hello, I'm interested in becoming a distributor of Gomzi Lifescience.",
+                          { pageRef: true },
                         )
                       }
                     >
@@ -6616,8 +6608,8 @@ function NutritionFooterRefuelSeries() {
                     <Link
                       onClick={() =>
                         nutritionSendWhatsappMsg(
-                          "Hello, I'm interested in becoming an affiliate of Gomzi Nutrition.",
-                          { pageRef: true }
+                          "Hello, I'm interested in becoming an affiliate of Gomzi Lifescience.",
+                          { pageRef: true },
                         )
                       }
                     >
@@ -6694,9 +6686,8 @@ function NutritionFooterRefuelSeries() {
                 {links2.slice(0, visibleCount)}{" "}
                 {visibleCount < links.length && (
                   <p
-                    className="text-white w-100 read-more-but"
+                    className="text-white w-100 read-more-but cp"
                     onClick={moreKeyword}
-                    style={{ cursor: "pointer" }}
                   >
                     Read More
                   </p>

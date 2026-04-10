@@ -118,14 +118,11 @@ function The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResu
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -133,11 +130,7 @@ function The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResu
                       "/assets/images/white-labelling-blogs/top-7-third-party-tested-brands-of-2026(2).webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -156,53 +149,38 @@ function The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResu
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* Intro */}
                     <div className="blog-section">
-                      {/* Image 1 - small size */}
-
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         In 2026, the "trust gap" in the supplement industry has
                         reached a breaking point. While influencers promote
                         flashy tubs with "proprietary blends," savvy lifters on
                         Reddit are looking for something else: the{" "}
                         <strong>Certificate of Analysis (CoA).</strong>
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         With recent reports of heavy metal contamination and
                         "protein spiking" (where companies add cheap amino acids
                         to cheat lab tests), choosing from the thousands of{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder"
+                          >
                             protein powder companies in India{" "}
                           </Link>
                         </strong>
                         and globally is no longer just about muscle growth —
                         it's about long-term health safety.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "15px" }}>
+                      <p className="blog-text mb-8">
                         This guide cross-references the most upvoted brands on
                         r/Fitness and r/Supplements with the latest 2026 lab
                         data from <strong>NSF, Informed Choice,</strong> and{" "}
                         <strong>Trustified</strong> to help you choose with
                         confidence.
                       </p>
-                      <div className="text-center mb-3">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/white-labelling-blogs/top-7-third-party-tested-brands-of-2026(1).webp"
-                          }
-                          alt="bgImage"
-                          style={{
-                            borderRadius: "16px",
-                            width: "60%",
-                            height: "auto",
-                          }}
-                        />
-                      </div>
                     </div>
 
-                    {/* SECTION 1 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         1. Why Reddit Is the Ultimate "B.S. Filter"
@@ -231,38 +209,18 @@ function The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResu
                       </p>
                     </div>
 
-                    {/* SECTION 2 - Top 7 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Top 7 Third-Party Tested Brands of 2026
                       </h2>
-                      {/* Image 2 - small size */}
-                      <div className="text-center mb-3">
-                        {/* <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/white-labelling-blogs/top-7-third-party-tested-brands-of-2026(2).webp"
-                          }
-                          alt="bgImage"
-                          style={{ borderRadius: "16px", width: "60%", height: "auto" }}
-                        /> */}
-                      </div>
+
+                      <div className="text-center mb-3"></div>
 
                       <h3 className="blog-subsection-title">
                         1. Transparent Labs
                       </h3>
-                      {/* Image 3 - side by side with content */}
+
                       <div className="row align-items-center mb-3">
-                        {/* <div className="col-md-5">
-                          <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/assets/images/white-labelling-blogs/top-7-third-party-tested-brands-of-2026(3).webp"
-                            }
-                            alt="Transparent Labs"
-                            style={{ borderRadius: "16px", width: "100%", height: "auto" }}
-                          />
-                        </div> */}
                         <div className="col-md-7">
                           <p className="blog-text">
                             Consistently the most recommended brand on
@@ -308,7 +266,7 @@ function The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResu
                         3. Gomzi Life Sciences (The New Standard for Indian
                         Purity)
                       </h3>
-                      {/* Image 4 - side by side with content */}
+
                       <div className="row align-items-center mb-3">
                         <div className="col-md-5">
                           <img
@@ -317,11 +275,7 @@ function The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResu
                               "/assets/images/white-labelling-blogs/top-7-third-party-tested-brands-of-2026(4).webp"
                             }
                             alt="Gomzi Life Sciences"
-                            style={{
-                              borderRadius: "16px",
-                              width: "100%",
-                              height: "auto",
-                            }}
+                            className="gls-style"
                           />
                         </div>
                         <div className="col-md-7">
@@ -329,7 +283,10 @@ function The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResu
                             As one of the leading{" "}
                             <strong>protein powder companies in India,</strong>{" "}
                             <strong>
-                              <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                              <Link
+                                className="blog-text-link"
+                                to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                              >
                                 GomziLifeSciences
                               </Link>
                             </strong>{" "}
@@ -352,7 +309,10 @@ function The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResu
                           <p className="blog-text">
                             Beyond powders, they offer expert{" "}
                             <strong>
-                              <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter">
+                              <Link
+                                className="blog-text-link"
+                                to="https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter"
+                              >
                                 peanut butter contract manufacturing{" "}
                               </Link>
                             </strong>{" "}
@@ -450,7 +410,6 @@ function The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResu
                       </ul>
                     </div>
 
-                    {/* SECTION 3 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         3. How to Choose Your Next Tub: The "Big Three" Markers
@@ -484,7 +443,6 @@ function The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResu
                       </ol>
                     </div>
 
-                    {/* Conclusion */}
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <p className="blog-text">
@@ -503,8 +461,6 @@ function The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResu
                         </p>
                       </div>
                     </div>
-
-                    {/* FAQs */}
 
                     <div className="blog-section">
                       <h2 className="blog-section-title">FAQs</h2>

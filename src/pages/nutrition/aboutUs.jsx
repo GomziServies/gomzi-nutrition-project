@@ -24,7 +24,7 @@ function AboutUs() {
     <>
       <Helmet>
         <title>
-          About Us | Gomzi Nutrition Family - Your Trusted Wellness Partner
+          About Us | Gomzi Lifescience Family - Your Trusted Wellness Partner
         </title>
         <meta
           name="description"
@@ -87,19 +87,6 @@ function AboutUs() {
           <div>
             <div className="container-fluid w-80">
               <div className="row ">
-                {/* <div className="col-12 pt-4 text-left ">
-                  <h1 className="f-rob-bol f-30 mb-2 text-black text-uppercase">
-                    <b>About Us</b>
-                  </h1>
-
-                  <p className="mb-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nulla ea quidem dolore dolorum ab doloribus, ipsam
-                    provident, id minus esse est distinctio repudiandae dolorem
-                    voluptates.
-                  </p>
-                </div> */}
-
                 <div className="about-hero">
                   <img
                     src={
@@ -110,26 +97,19 @@ function AboutUs() {
                   />
                   <div className="overlay"></div>
 
-                  {/* Centered Content */}
                   <div className="hero-content">
                     <h1 className="">About Us</h1>
                   </div>
                 </div>
 
                 <div className="col-12 text-center mb-4 px-4">
-                  {/* Why Gomzi Life Sciences */}
                   <div className="aboutus-container">
-                    {/* Sticky YouTube Video */}
-                    <div className="blog p-0" style={{ borderRadius: "10px" }}>
+                    <div className="blog p-0 br-10">
                       <div className="ply position-sticky top-0">
                         <LazyLoadImage
                           src="https://img.youtube.com/vi/XM2xXWYxhbw/hqdefault.jpg"
                           width="100%"
-                          style={{
-                            borderRadius: "10px",
-                            cursor: "pointer",
-                            objectFit: "cover",
-                          }}
+                          className="br-10 cp objectfit-cover"
                           alt="Video thumbnail"
                           effect="blur"
                           onClick={() => openVideoModal("XM2xXWYxhbw")}
@@ -149,7 +129,6 @@ function AboutUs() {
                       </div>
                     </div>
 
-                    {/* Content */}
                     <div className="ql-editor text-left mt-3">
                       <h2 className="mb-3"> WHY GOMZI LIFESCIENCE LLP..!!!</h2>
                       <p className="mb-4">
@@ -193,13 +172,9 @@ function AboutUs() {
                     </div>
                   </div>
 
-                  {/*  Why Choose Us Cards */}
                   <div className="aboutus-cards ">
                     <div className="text-left mt-3 mb-6">
-                      <h2
-                        className="mb-6 text-center"
-                        style={{ marginBottom: "30px" }}
-                      >
+                      <h2 className="mb-6 text-center mb-30">
                         Why Choose Gomzi Life Sciences
                       </h2>
                     </div>
@@ -281,8 +256,6 @@ function AboutUs() {
                     </div>
                   </div>
 
-                  {/* Infrastructure Section */}
-
                   <div class="our-team">
                     <div className="ql-editor text-left mt-4">
                       <h2 className="mb-3">Our Infrastructure</h2>
@@ -331,8 +304,6 @@ function AboutUs() {
                       </div>
                     </div>
                   </div>
-
-                  {/* Our Team */}
 
                   <div class="our-team">
                     <div className="ql-editor text-left mt-3">
@@ -384,109 +355,6 @@ function AboutUs() {
                   </div>
 
                   <ReviewsSlider />
-
-                  {/* who we are */}
-                  {/* <div className="ql-editor text-left mt-3">
-                    <h2 className="mb-3">Who We Are</h2>
-                    <p className="mb-4">
-                      Established in 2024 by Dr. Gautam Jani, Gomzi Lifescience
-                      LLP is one of the fastest-growing nutraceuticals
-                      manufacturers in India. Headquartered in Surat, Gujarat,
-                      we are proud to be an ISO 22000:2018, WHO-GMP, HACCP,
-                      HALAL, and FSSAI certified company. Our core vision is to
-                      provide international-quality health and wellness products
-                      at competitive prices through innovation, integration, and
-                      research.
-                    </p>
-                    <p className="mb-4">
-                      At Gomzilifesciences, we are more than just a
-                      manufacturing company—we are a trusted partner for
-                      businesses looking to grow in the nutraceutical, dietary
-                      supplement, and sports nutrition industries.
-                    </p>
-
-                    <h2 className="mb-3">What We Do</h2>
-                    <p className="mb-4">
-                      We specialize in third party manufacturing in India,
-                      offering end-to-end solutions for nutraceutical finished
-                      products. From protein powders, energy drinks, and sports
-                      supplements to peanut butter and wellness products, our
-                      range is tailored to meet the evolving needs of consumers.
-                    </p>
-                    <p className="mb-4">
-                      As expert supplement manufacturers in India, we focus on
-                      product innovation, purity, and efficacy. Every
-                      formulation is backed by science and manufactured using
-                      modern infrastructure, advanced techniques, and in-house
-                      R&D.
-                    </p>
-
-                    <h2 className="mb-3">White Label Nutrition Solutions</h2>
-                    <p className="mb-4">
-                      Gomzilifesciences also offers white label nutrition
-                      manufacturing to empower start-ups and established
-                      businesses. With in-house product designing, packaging,
-                      and development facilities, we provide a one-stop solution
-                      for launching your own health and wellness brand. Whether
-                      you want to start small or scale big, we make the journey
-                      smooth, cost-effective, and time-efficient.
-                    </p>
-
-                    <h2 className="mb-3">Our Facilities & Standards</h2>
-                    <ul className="mb-4">
-                      <li>
-                        WHO-GMP, ISO, and FSSAI-approved manufacturing plant.
-                      </li>
-                      <li>
-                        Dedicated in-house laboratory for testing and quality
-                        checks.
-                      </li>
-                      <li>
-                        Modern infrastructure supported by advanced scientific
-                        techniques.
-                      </li>
-                      <li>
-                        R&D team focused on creating unique and effective
-                        formulations.
-                      </li>
-                      <li>
-                        Packaging and labeling as per the latest FSSAI
-                        guidelines.
-                      </li>
-                    </ul>
-
-                    <h2 className="mb-3">Why Choose Gomzilifesciences?</h2>
-                    <ol className="mb-4">
-                      <li>
-                        Trusted third party manufacturer in India with global
-                        standards.
-                      </li>
-                      <li>
-                        Certified white label products manufacturer with wide
-                        product categories.
-                      </li>
-                      <li>Guaranteed quality, purity, safety, and efficacy.</li>
-                      <li>Time-bound delivery schedules.</li>
-                      <li>
-                        A dynamic team of skilled professionals and marketing
-                        experts.
-                      </li>
-                    </ol>
-
-                    <h2 className="mb-3">Our Mission</h2>
-                    <p className="mb-4">
-                      Our mission is to make world-class nutraceuticals and
-                      supplements accessible to every brand and consumer. We aim
-                      to build long-term partnerships by delivering products
-                      that reflect trust, quality, and innovation.
-                    </p>
-                    <p className="mb-4">
-                      At Gomzilifesciences, we believe in creating healthier
-                      lifestyles and stronger brands through reliable
-                      manufacturing, certified excellence, and customer-focused
-                      solutions.
-                    </p>
-                  </div> */}
                 </div>
               </div>
             </div>
@@ -514,49 +382,18 @@ function AboutUs() {
       </p>
       <NutritionFooter />
 
-      {/* Video Modal */}
       {videoModal.isOpen && (
         <div
-          className="modal-overlay"
+          className="modal-overlay about-position-fixed"
           onClick={closeVideoModal}
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.7)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 1000,
-          }}
         >
           <div
-            className="modal-content"
+            className="modal-content about-position-relative"
             onClick={(e) => e.stopPropagation()}
-            style={{
-              position: "relative",
-              width: "90%",
-              maxWidth: "800px",
-              backgroundColor: "white",
-              borderRadius: "10px",
-              overflow: "hidden",
-            }}
           >
             <button
               onClick={closeVideoModal}
-              style={{
-                position: "absolute",
-                top: "10px",
-                right: "10px",
-                background: "none",
-                border: "none",
-                fontSize: "24px",
-                cursor: "pointer",
-                zIndex: 1001,
-                color: "black",
-              }}
+              className="about-position-absolute"
               aria-label="Close video"
             >
               ×

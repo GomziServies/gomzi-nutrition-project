@@ -18,21 +18,21 @@ import MobileViewMainPhotoSection from "../components/nutrition/products/mobileV
 
 const ProductBlogs = React.lazy(() => import("../components/nutrition/blogs"));
 const ProductFAQS = React.lazy(() => import("../components/nutrition/faqs"));
-const MainVideoSection = React.lazy(() =>
-  import("../components/nutrition/mainVideoSection")
+const MainVideoSection = React.lazy(
+  () => import("../components/nutrition/mainVideoSection"),
 );
-const HomePageMoreProduct = React.lazy(() =>
-  import("../components/nutrition/homePageMoreProduct")
+const HomePageMoreProduct = React.lazy(
+  () => import("../components/nutrition/homePageMoreProduct"),
 );
 const ProductCard = React.lazy(() => import("../components/productCard"));
-const Testimonials = React.lazy(() =>
-  import("../components/nutrition/testimonials")
+const Testimonials = React.lazy(
+  () => import("../components/nutrition/testimonials"),
 );
-const ProductDesignByGautam = React.lazy(() =>
-  import("../components/nutrition/productDesignByGautam")
+const ProductDesignByGautam = React.lazy(
+  () => import("../components/nutrition/productDesignByGautam"),
 );
-const CertifiedProduct = React.lazy(() =>
-  import("../components/nutrition/certified")
+const CertifiedProduct = React.lazy(
+  () => import("../components/nutrition/certified"),
 );
 
 function Home() {
@@ -55,19 +55,19 @@ function Home() {
     const loadInitialProducts = () => {
       const proteinProducts = gomzinutrition[0].protein.slice(
         0,
-        productsPerPage
+        productsPerPage,
       );
       const powerProducts = gomzinutrition[0].power.slice(0, productsPerPage);
       const ayurvedaProducts = gomzinutrition[0].ayurveda.slice(
         0,
-        productsPerPage
+        productsPerPage,
       );
       const butterProducts = gomzinutrition[0].butter.slice(0, productsPerPage);
       const shakeProducts = gomzinutrition[0].shake.slice(0, productsPerPage);
       const barProducts = gomzinutrition[0].bar.slice(0, productsPerPage);
       const clothesProducts = gomzinutrition[0].clothes.slice(
         0,
-        productsPerPage
+        productsPerPage,
       );
       const energyProducts = gomzinutrition[0].energy.slice(0, productsPerPage);
       setProteinProducts(proteinProducts);
@@ -90,7 +90,7 @@ function Home() {
           loadMoreProducts();
         }
       },
-      { threshold: 1.0 }
+      { threshold: 1.0 },
     );
 
     if (loadMoreRef.current) {
@@ -117,8 +117,8 @@ function Home() {
         });
       },
       {
-        threshold: 0.6, // Adjust threshold for when to consider section in view
-      }
+        threshold: 0.6,
+      },
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -151,13 +151,11 @@ function Home() {
       const targetId = event.currentTarget.getAttribute("href");
       const targetElement = document.querySelector(targetId);
 
-      // Scroll to the target element
       targetElement.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
 
-      // Update active section
       setActiveSection(targetId);
     };
 
@@ -581,7 +579,7 @@ function Home() {
             process.env.PUBLIC_URL +
             "/assets/images/nutrition/gomzi-nutrition-sports-active-t-shirt-1.webp",
           productLink: "/nutrition/gomzi-nutrition-sports-active-t-shirt",
-          productName: "Gomzi Nutrition Sports T-shirt",
+          productName: "Gomzi Lifescience Sports T-shirt",
           rating: "4.5",
           originalPrice: "₹219 /-",
           discountedPrice: "₹219 /-",
@@ -593,7 +591,7 @@ function Home() {
             process.env.PUBLIC_URL +
             "/assets/images/nutrition/gomzi-nutrition-sports-jogger-1.webp",
           productLink: "/nutrition/gomzi-nutrition-sports-jogger",
-          productName: "Gomzi Nutrition Sports Jogger",
+          productName: "Gomzi Lifescience Sports Jogger",
           rating: "4.7",
           originalPrice: "₹499 /-",
           discountedPrice: "₹499 /-",
@@ -607,7 +605,7 @@ function Home() {
     <>
       <Helmet>
         <title>
-          Gomzi Nutrition | Best Whey Protein in India | Premium Supplements
+          Gomzi Lifescience | Best Whey Protein in India | Premium Supplements
         </title>
         <meta
           name="description"
@@ -651,7 +649,6 @@ function Home() {
         <meta property="og:url" content={canonicalUrl} />
         <link rel="canonical" href={canonicalUrl} />
 
-        {/* Preconnect to Facebook CDN */}
         <link rel="preconnect" href="https://connect.facebook.net" />
         <script>
           {`
@@ -677,7 +674,6 @@ function Home() {
           href={`${process.env.PUBLIC_URL}/assets/images/nutrition/nutrition-banner-inner-14.webp`}
           as="image"
         />
-        {/* Google tag (gtag.js) */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38"
@@ -693,7 +689,7 @@ function Home() {
       </Helmet>
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about all Gomzi Nutrition Products. "
+          "Hello, I wanted to know more about all Gomzi Lifescience Products. "
         }
         options={{ pageRef: true }}
       />
@@ -724,7 +720,7 @@ function Home() {
                       process.env.PUBLIC_URL +
                       "/assets/images/nutrition/nutrition-banner-inner-14.webp"
                     }
-                    alt="Gomzi Nutrition Banner"
+                    alt="Gomzi Lifescience Banner"
                     width="100%"
                     height="auto"
                     loading="eager"
@@ -735,7 +731,7 @@ function Home() {
                       process.env.PUBLIC_URL +
                       "/assets/images/nutrition/nutrition-banner-mobile-inner-14.webp"
                     }
-                    alt="Gomzi Nutrition Banner"
+                    alt="Gomzi Lifescience Banner"
                     width="100%"
                     height="auto"
                     loading="eager"
@@ -1012,7 +1008,7 @@ function Home() {
                           ))}
                         </Suspense>
                       </div>
-                      <div ref={loadMoreRef} style={{ height: "1px" }}></div>
+                      <div ref={loadMoreRef} className="height-1"></div>
                     </div>
                   </section>
                   <section className="mt-5" id="power">
@@ -1054,7 +1050,7 @@ function Home() {
                           ))}
                         </Suspense>
                       </div>
-                      <div ref={loadMoreRef} style={{ height: "1px" }}></div>
+                      <div ref={loadMoreRef} className="height-1"></div>
                     </div>
                   </section>
                   <section className="mt-5" id="butter">
@@ -1095,7 +1091,7 @@ function Home() {
                           ))}
                         </Suspense>
                       </div>
-                      <div ref={loadMoreRef} style={{ height: "1px" }}></div>
+                      <div ref={loadMoreRef} className="height-1"></div>
                     </div>
                   </section>
                   <section className="mt-5" id="bar">
@@ -1136,7 +1132,7 @@ function Home() {
                           ))}
                         </Suspense>
                       </div>
-                      <div ref={loadMoreRef} style={{ height: "1px" }}></div>
+                      <div ref={loadMoreRef} className="height-1"></div>
                     </div>
                   </section>
                   <section className="mt-5" id="shake">
@@ -1177,7 +1173,7 @@ function Home() {
                           ))}
                         </Suspense>
                       </div>
-                      <div ref={loadMoreRef} style={{ height: "1px" }}></div>
+                      <div ref={loadMoreRef} className="height-1"></div>
                     </div>
                   </section>
                   <section className="mt-5" id="energy">
@@ -1218,7 +1214,7 @@ function Home() {
                           ))}
                         </Suspense>
                       </div>
-                      <div ref={loadMoreRef} style={{ height: "1px" }}></div>
+                      <div ref={loadMoreRef} className="height-1"></div>
                     </div>
                   </section>
                   <section className="mt-5" id="ayurveda">
@@ -1259,7 +1255,7 @@ function Home() {
                           ))}
                         </Suspense>
                       </div>
-                      <div ref={loadMoreRef} style={{ height: "1px" }}></div>
+                      <div ref={loadMoreRef} className="height-1"></div>
                     </div>
                   </section>
                   <section className="mt-5" id="clothes">
@@ -1300,7 +1296,7 @@ function Home() {
                           ))}
                         </Suspense>
                       </div>
-                      <div ref={loadMoreRef} style={{ height: "1px" }}></div>
+                      <div ref={loadMoreRef} className="height-1"></div>
                     </div>
                   </section>
                 </div>

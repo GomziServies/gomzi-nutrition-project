@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
-import "../../assets/css/blog.css"; // Import the new blog CSS
+import "../../assets/css/blog.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -78,14 +78,14 @@ function HowtoReduceLeadTimesAndCosts() {
             <div className="item active">
               <Link to="/nutrition/bulk-inquiry-nutrition">
                 <p className="text-white m-0 f-rob-reg f-14 lp-2">
-                  Bulk Inquiry Now 
+                  Bulk Inquiry Now
                 </p>
               </Link>
             </div>
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
           <div className="container-fluid w-80 p-0">
             <div className="row">
@@ -97,13 +97,13 @@ function HowtoReduceLeadTimesAndCosts() {
                       "/assets/images/white-labelling-blogs/how-to-reduce-lead-times-and-costs-in-third-party-manufacturing.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{ borderRadius: "20px", overflow: "hidden" }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
                     <h1 className="text-white f-rob-bol f-43">
-                      How to Reduce Lead Times and Costs in Third-Party Manufacturing?
+                      How to Reduce Lead Times and Costs in Third-Party
+                      Manufacturing?
                     </h1>
                   </div>
                 </div>
@@ -115,119 +115,170 @@ function HowtoReduceLeadTimesAndCosts() {
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-
-                    {/* Intro */}
                     <div className="blog-section">
                       <p className="blog-text">
-                        In the fast-evolving landscape of 2026, the demand for
-                        {" "}<strong><Link
-                        className="blog-text-link"
-                        to="https://www.gomzilifesciences.in/nutrition/white-labelling"
-                      >
-                         dietary supplements and nutraceuticals
-                      </Link></strong>{" "}
-
-                          has reached an all-time high. Consumers are no longer just looking for "vitamins"—they want specialized, bioavailable, and fast-acting health solutions.
+                        In the fast-evolving landscape of 2026, the demand for{" "}
+                        <strong>
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
+                            dietary supplements and nutraceuticals
+                          </Link>
+                        </strong>{" "}
+                        has reached an all-time high. Consumers are no longer
+                        just looking for "vitamins"—they want specialized,
+                        bioavailable, and fast-acting health solutions.
                       </p>
                       <p className="blog-text">
-                        For brand owners, this means the pressure to launch products quickly is immense.
+                        For brand owners, this means the pressure to launch
+                        products quickly is immense.
                       </p>
                       <p className="blog-text">
-                        To slash production delays and costs in 2026, brands must adopt five core strategies: <strong>standardizing white-label formulations</strong> to bypass R&D lag, leveraging <strong>domestic vertical sourcing</strong>, optimizing <strong>tiered MOQs</strong>, utilizing <strong>digital label printing</strong>, and integrating <strong>real-time digital quality assurance (QA)</strong> for instant COA generation and shipping.
+                        To slash production delays and costs in 2026, brands
+                        must adopt five core strategies:{" "}
+                        <strong>standardizing white-label formulations</strong>{" "}
+                        to bypass R&D lag, leveraging{" "}
+                        <strong>domestic vertical sourcing</strong>, optimizing{" "}
+                        <strong>tiered MOQs</strong>, utilizing{" "}
+                        <strong>digital label printing</strong>, and integrating{" "}
+                        <strong>
+                          real-time digital quality assurance (QA)
+                        </strong>{" "}
+                        for instant COA generation and shipping.
                       </p>
                       <div className="blog-highlight">
                         <p className="blog-text">
-                          <strong>Short on time? Download the complete 20-point Manufacturer Selection Checklist here.</strong>
+                          <strong>
+                            Short on time? Download the complete 20-point
+                            Manufacturer Selection Checklist here.
+                          </strong>
                         </p>
                       </div>
                     </div>
 
-                    {/* SECTION 1 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         1. Optimize Your MOQ Strategy to Save Capital
                       </h2>
                       <p className="blog-text">
-                        The biggest "cash-trap" for new brands is excessive Minimum Order Quantities (MOQs). High MOQs tie up your capital in inventory that might expire before it sells.
+                        The biggest "cash-trap" for new brands is excessive
+                        Minimum Order Quantities (MOQs). High MOQs tie up your
+                        capital in inventory that might expire before it sells.
                       </p>
                       <ul className="blog-list">
                         <li className="blog-list-item">
-                          <strong>The 2026 Pivot:</strong> Instead of massive single runs, look for manufacturers offering <strong>Tiered MOQs</strong>.
+                          <strong>The 2026 Pivot:</strong> Instead of massive
+                          single runs, look for manufacturers offering{" "}
+                          <strong>Tiered MOQs</strong>.
                         </li>
                         <li className="blog-list-item">
-                          <strong>Cost Tip:</strong> Small-batch flexibility allows you to test market demand for new products like herbal gummies or protein blends without a massive upfront investment.
+                          <strong>Cost Tip:</strong> Small-batch flexibility
+                          allows you to test market demand for new products like
+                          herbal gummies or protein blends without a massive
+                          upfront investment.
                         </li>
                       </ul>
                     </div>
 
-                    {/* SECTION 2 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         2. Standardize Formulations to Avoid "R&D Lag"
                       </h2>
                       <p className="blog-text">
-                        Custom formulations are essential for branding, but they are also the primary cause of lead-time delays. Stability testing and lab trials can take months.
+                        Custom formulations are essential for branding, but they
+                        are also the primary cause of lead-time delays.
+                        Stability testing and lab trials can take months.
                       </p>
                       <ul className="blog-list">
                         <li className="blog-list-item">
-                          <strong>The Strategy:</strong> Leverage "Ready-to-Market" bases for your core products. Many leading 
-                         <strong> nutraceuticals companies in Gujarat</strong> as a global hub for manufacturing maintain a library of pre-stabilized, FSSAI-approved formulas.
+                          <strong>The Strategy:</strong> Leverage
+                          "Ready-to-Market" bases for your core products. Many
+                          leading
+                          <strong>
+                            {" "}
+                            nutraceuticals companies in Gujarat
+                          </strong>{" "}
+                          as a global hub for manufacturing maintain a library
+                          of pre-stabilized, FSSAI-approved formulas.
                         </li>
                         <li className="blog-list-item">
-                          <strong>Lead Time Tip:</strong> Choosing a pre-approved base can reduce your launch window from 120 days to just <strong>30-45 days</strong>.
+                          <strong>Lead Time Tip:</strong> Choosing a
+                          pre-approved base can reduce your launch window from
+                          120 days to just <strong>30-45 days</strong>.
                         </li>
                       </ul>
                     </div>
 
-                    {/* SECTION 3 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         3. Leverage Domestic & Vertical Sourcing
                       </h2>
                       <p className="blog-text">
-                        Global supply chain volatility remains a risk. Top-tier manufacturers are now "reshoring"—sourcing raw materials domestically to avoid international shipping bottlenecks.
+                        Global supply chain volatility remains a risk. Top-tier
+                        manufacturers are now "reshoring"—sourcing raw materials
+                        domestically to avoid international shipping
+                        bottlenecks.
                       </p>
                       <ul className="blog-list">
                         <li className="blog-list-item">
-                          <strong>The Strategy:</strong> Prioritize partners with <strong>Vertical Integration</strong>. A manufacturer that produces its own herbal extracts or has direct ties to local organic farms can bypass middleman delays, saving you 15-20% on raw material costs.
+                          <strong>The Strategy:</strong> Prioritize partners
+                          with <strong>Vertical Integration</strong>. A
+                          manufacturer that produces its own herbal extracts or
+                          has direct ties to local organic farms can bypass
+                          middleman delays, saving you 15-20% on raw material
+                          costs.
                         </li>
                       </ul>
                     </div>
 
-                    {/* SECTION 4 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         4. Strategic Packaging & Digital Labeling
                       </h2>
                       <p className="blog-text">
-                        Packaging is often where the most time is lost. Custom-shaped bottles or complex foils require unique tooling that adds weeks to your timeline.
+                        Packaging is often where the most time is lost.
+                        Custom-shaped bottles or complex foils require unique
+                        tooling that adds weeks to your timeline.
                       </p>
                       <ul className="blog-list">
                         <li className="blog-list-item">
-                          <strong>Standardize the Vessel:</strong> Use industry-standard bottle sizes. This allows automatic filling machines to run at max speed without recalibration.
+                          <strong>Standardize the Vessel:</strong> Use
+                          industry-standard bottle sizes. This allows automatic
+                          filling machines to run at max speed without
+                          recalibration.
                         </li>
                         <li className="blog-list-item">
-                          <strong>Go Digital:</strong> Move to <strong>Digital Label Printing</strong>. It allows for smaller print runs and the ability to update ingredients or FSSAI numbers instantly without wasting thousands of pre-printed labels.
+                          <strong>Go Digital:</strong> Move to{" "}
+                          <strong>Digital Label Printing</strong>. It allows for
+                          smaller print runs and the ability to update
+                          ingredients or FSSAI numbers instantly without wasting
+                          thousands of pre-printed labels.
                         </li>
                       </ul>
                     </div>
 
-                    {/* SECTION 5 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         5. Digital Quality Assurance (QA) Integration
                       </h2>
                       <p className="blog-text">
-                        In 2026, manual paper trails are a bottleneck. Partner with a facility that uses <strong>Real-Time Batch Monitoring</strong>.
+                        In 2026, manual paper trails are a bottleneck. Partner
+                        with a facility that uses{" "}
+                        <strong>Real-Time Batch Monitoring</strong>.
                       </p>
                       <ul className="blog-list">
                         <li className="blog-list-item">
-                          <strong>The Benefit:</strong> When quality checks are digitized, the <strong>Certificate of Analysis (COA) </strong>is generated the moment production ends, allowing you to ship your products immediately rather than waiting days for lab sign-offs.
+                          <strong>The Benefit:</strong> When quality checks are
+                          digitized, the{" "}
+                          <strong>Certificate of Analysis (COA) </strong>is
+                          generated the moment production ends, allowing you to
+                          ship your products immediately rather than waiting
+                          days for lab sign-offs.
                         </li>
                       </ul>
                     </div>
 
-                    {/* SECTION 6 - Summary Table */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Summary of Efficiency Gains
@@ -267,29 +318,29 @@ function HowtoReduceLeadTimesAndCosts() {
                       </div>
                     </div>
 
-                    {/* Conclusion */}
                     <div className="blog-section">
-                      <h2 className="blog-section-title">
-                        Final Thought: Choosing the Right Partner
-                      </h2>
-                      <p className="blog-text">
-                        Reducing lead times isn't just about pushing a factory to work faster; it's about choosing a partner with the right infrastructure. By working with established 
-                      
-                         <strong> nutraceutical companies in India </strong>
-                       you gain access to a robust supply chain and a wealth of pharmaceutical-grade expertise that ensures your brand remains both profitable and compliant.
-                      </p>
-                      <p className="blog-text">
-                        Before you sign a contract with any of the 
-                         nutraceutical companies in India
-                      , make sure they can pass our 20-Point Audit. We've compiled the exact questions our procurement experts use to vet manufacturers in Gujarat.
-                      </p>
-                      {/* <div className="blog-cta">
+                      <div className="blog-conclusion">
+                        <h2 className="blog-section-title">
+                          Final Thought: Choosing the Right Partner
+                        </h2>
                         <p className="blog-text">
-                          <strong>[Download the PDF Checklist Now]</strong>
+                          Reducing lead times isn't just about pushing a factory
+                          to work faster; it's about choosing a partner with the
+                          right infrastructure. By working with established
+                          <strong> nutraceutical companies in India </strong>
+                          you gain access to a robust supply chain and a wealth
+                          of pharmaceutical-grade expertise that ensures your
+                          brand remains both profitable and compliant.
                         </p>
-                      </div> */}
+                        <p className="blog-text">
+                          Before you sign a contract with any of the
+                          nutraceutical companies in India , make sure they can
+                          pass our 20-Point Audit. We've compiled the exact
+                          questions our procurement experts use to vet
+                          manufacturers in Gujarat.
+                        </p>
+                      </div>
                     </div>
-
                   </div>
                 </div>
               </div>

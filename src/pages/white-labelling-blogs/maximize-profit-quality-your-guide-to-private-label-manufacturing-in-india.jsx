@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
-import "../../assets/css/blog.css"; // Import the new blog CSS
+import "../../assets/css/blog.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -201,14 +201,11 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -216,11 +213,7 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
                       "/assets/images/nutrition/best-whey-protein-in-india-main.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -239,14 +232,16 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* Intro */}
                     <div className="blog-section">
                       <p className="blog-text">
                         Launching a high-growth brand requires more than just
                         low-cost production; it demands strategic partnership.
                         The best{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             private label manufacturers in India
                           </Link>
                         </strong>{" "}
@@ -258,7 +253,6 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
                       </p>
                     </div>
 
-                    {/* SECTION 1 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The New Competitive Edge: Innovation and Delivery
@@ -304,7 +298,10 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
                       <p className="blog-text">
                         A skilled{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder"
+                          >
                             protein powder manufacturer India
                           </Link>
                         </strong>{" "}
@@ -314,7 +311,6 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
                       </p>
                     </div>
 
-                    {/* SECTION 2 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Building Trust Through Radical Transparency (The Key
@@ -325,18 +321,17 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
                         the new form of quality assurance. You must provide
                         clear evidence that your{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             private label herbal supplements
                           </Link>
                         </strong>{" "}
                         are ethically sourced and rigorously tested.
                       </p>
 
-                      {/* YouTube Video - GMP Quality Control Process */}
-                      <div
-                        className="blog-video-wrapper"
-                        style={{ margin: "24px 0", textAlign: "center" }}
-                      >
+                      <div className="blog-video-wrapper blog-wrapper-magin-text ">
                         <iframe
                           width="800"
                           height="515"
@@ -346,7 +341,7 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           referrerPolicy="strict-origin-when-cross-origin"
                           allowFullScreen
-                          style={{ maxWidth: "100%", borderRadius: "12px" }}
+                          className="blog-wrapper-magin-text-iframe "
                         ></iframe>
                       </div>
 
@@ -375,7 +370,10 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
                       <p className="blog-text">
                         Gomzi Lifesciences can serve as your dedicated{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter"
+                          >
                             peanut butter third party manufacturer in India
                           </Link>
                         </strong>{" "}
@@ -384,7 +382,6 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
                       </p>
                     </div>
 
-                    {/* SECTION 3 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The Global Launch Accelerator: Export-Ready Solutions
@@ -428,7 +425,6 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
                       </p>
                     </div>
 
-                    {/* SECTION 4 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Your Strategic Partner for Growth: Gomzi Lifesciences
@@ -441,7 +437,10 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
                       <p className="blog-text">
                         {" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/"
+                          >
                             Gomzi Lifesciences
                           </Link>
                         </strong>{" "}
@@ -463,7 +462,6 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
                       </p>
                     </div>
 
-                    {/* SECTION 5 - FAQs */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">FAQs</h2>
 
@@ -485,7 +483,6 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
                       </Accordion>
                     </div>
 
-                    {/* Conclusion */}
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <h2 className="blog-section-title">

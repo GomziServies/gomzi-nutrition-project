@@ -2,11 +2,11 @@ import React from "react";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import "../../assets/css/nutrition.css"
+import "../../assets/css/nutrition.css";
 
 const testimonials = [
   {
-    text: "Gamzi Life Science is a very good work, I have also made this product and they provide very good quality, they do not compromise on quality, moreover they provide timely delivery, if you want to join them then you can join, I have a positive review, thank you gomzi life science and especially Gautam sir is very good, thank you Gautam sir",
+    text: "Gomzi Life Science is a very good work, I have also made this product and they provide very good quality, they do not compromise on quality, moreover they provide timely delivery, if you want to join them then you can join, I have a positive review, thank you gomzi life science and especially Gautam sir is very good, thank you Gautam sir",
     name: "Sarvottam Prasad",
     role: "Founder of Five Fitness",
     rating: 5,
@@ -18,7 +18,20 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: (<> Service 💯<br/>Quality delivered 💯<br/>Coperation 💯<br/>Team support 💯<br/>Overall good experience  </> ),
+    text: (
+      <>
+        {" "}
+        Service 💯
+        <br />
+        Quality delivered 💯
+        <br />
+        Coperation 💯
+        <br />
+        Team support 💯
+        <br />
+        Overall good experience{" "}
+      </>
+    ),
     name: "Bharat bahi Chaudhari",
     role: "Founder of Gravity",
     rating: 5,
@@ -56,9 +69,9 @@ const carouselOptions = {
     `<span class="testi-nav-btn next-btn">&#8594;</span>`,
   ],
   responsive: {
-    0:    { items: 1 },
-    576:  { items: 1 },
-    768:  { items: 2 },
+    0: { items: 1 },
+    576: { items: 1 },
+    768: { items: 2 },
     1024: { items: 3 },
   },
 };
@@ -68,11 +81,7 @@ const TestimonialSection = () => {
     [1, 2, 3, 4, 5].map((star) => (
       <span
         key={star}
-        style={{
-          color: star <= rating ? "#f4b400" : "#e0e0e0",
-          fontSize: "20px",
-          lineHeight: 1,
-        }}
+        className={`star ${star <= rating ? "star-filled" : "star-empty"}`}
       >
         ★
       </span>
@@ -80,13 +89,11 @@ const TestimonialSection = () => {
 
   return (
     <>
-      
-
       <section className="testi-section">
-
-        <div style={{ textAlign: "center", marginBottom: "50px" }}>
-          <h2 style={{ fontWeight: "700",fontSize:"42px" }}>
-             WHAT START-UP <span style={{ color: "#86c33a" }}>FOUNDERS</span> SAY     
+        <div className="certified-compliant-div">
+          <h2 className="certified-compliant-div-h2">
+            WHAT START-UP{" "}
+            <span className="certified-compliant-div-hspan">FOUNDERS</span> SAY
           </h2>
         </div>
 
@@ -97,12 +104,24 @@ const TestimonialSection = () => {
                 <div>
                   <div className="testi-quote-wrap">
                     <div className="testi-quote-mark">
-                      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 17.5C3 13.5 5.8 10.2 10.5 9L11.5 11.5C8.8 12.4 7.2 14.3 7 16.3H11V22H3V17.5Z" fill="white" />
-                        <path d="M15 17.5C15 13.5 17.8 10.2 22.5 9L23.5 11.5C20.8 12.4 19.2 14.3 19 16.3H23V22H15V17.5Z" fill="white" />
+                      <svg
+                        viewBox="0 0 28 28"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3 17.5C3 13.5 5.8 10.2 10.5 9L11.5 11.5C8.8 12.4 7.2 14.3 7 16.3H11V22H3V17.5Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M15 17.5C15 13.5 17.8 10.2 22.5 9L23.5 11.5C20.8 12.4 19.2 14.3 19 16.3H23V22H15V17.5Z"
+                          fill="white"
+                        />
                       </svg>
                     </div>
-                    <div className="testi-stars">{renderStars(item.rating)}</div>
+                    <div className="testi-stars">
+                      {renderStars(item.rating)}
+                    </div>
                   </div>
                   <p className="testi-text">{item.text}</p>
                 </div>
@@ -117,7 +136,6 @@ const TestimonialSection = () => {
             ))}
           </OwlCarousel>
         </div>
-
       </section>
     </>
   );

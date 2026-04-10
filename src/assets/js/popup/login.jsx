@@ -4,6 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import { toast } from "react-toastify";
 import { axiosInstance } from "../config/api";
 import { Link } from "react-router-dom";
+import "../../css/nutrition.css";
 
 const LoginModal = ({ onClose }) => {
   const [showModal, setShowModal] = useState(true);
@@ -65,7 +66,7 @@ const LoginModal = ({ onClose }) => {
       if (response.data.data.authorization) {
         localStorage.setItem(
           "fg_group_user_authorization",
-          response.data.data.authorization
+          response.data.data.authorization,
         );
         toast.success("Successfully Login!");
         handleClose();
@@ -89,7 +90,7 @@ const LoginModal = ({ onClose }) => {
       if (response.status === 200) {
         localStorage.setItem(
           "fg_group_user_authorization",
-          response.data.data.authorization
+          response.data.data.authorization,
         );
         await getUserData();
         setEmailOtpDialogOpen(false);
@@ -110,13 +111,13 @@ const LoginModal = ({ onClose }) => {
         {
           mobile: mobileNumber,
           otp: otpCode,
-        }
+        },
       );
 
       if (response.status === 200) {
         localStorage.setItem(
           "fg_group_user_authorization",
-          response.data.data.authorization
+          response.data.data.authorization,
         );
         await getUserData();
         setOtpDialogOpen(false);
@@ -128,11 +129,6 @@ const LoginModal = ({ onClose }) => {
     } catch (error) {
       console.error("Error in handleOtpSubmit:", error);
     }
-  };
-
-  const handleSignUpInternational = () => {
-    setShowModal(false);
-    setShowSignUpModal(true);
   };
 
   const handleOtpPopupOpen = () => {
@@ -158,7 +154,6 @@ const LoginModal = ({ onClose }) => {
 
   return (
     <>
-      {/* Login Popup  */}
       <Modal show={showModal} onHide={handleClose} centered>
         <Modal.Header closeButton className="border-0">
           <Modal.Title>
@@ -168,7 +163,7 @@ const LoginModal = ({ onClose }) => {
                   <img
                     src={
                       process.env.PUBLIC_URL +
-                      "../assets/images/logo/nutrition-logo.webp"
+                      "../assets/images/logo/gomzi-life-science-logo.webp"
                     }
                     width="40%"
                     alt="Fg Group"
@@ -196,41 +191,16 @@ const LoginModal = ({ onClose }) => {
             </Form.Group>
             <Button
               type="button"
-              className="submit_modal"
-              style={{
-                width: "100%",
-                color: "#fff",
-                margin: "0",
-                backgroundColor: '#86c33a',
-                border: 'transparent',
-                borderRadius: '23px',
-                marginBottom: '10px',
-              }}
+              className="submit_modal login-submit-btn"
               onClick={handleLogin}
             >
               Log In
             </Button>
           </Form>
-          {/* <div className="text-center">
-            <Button
-              onClick={handleSignUpInternational}
-              style={{
-                background: "none",
-                border: "none",
-                color: "#000",
-                textDecorationLine: "underline!important",
-                fontSize: "18px",
-                display: "inline-block",
-              }}
-              className="mt-3"
-            >
-              Login For International Student
-            </Button>
-          </div> */}
         </Modal.Body>
-      </Modal >
-      {/* Otp Popup  */}
-      <Modal Modal show={otpDialogOpen} onHide={handleCloseOtpModal} centered >
+      </Modal>
+
+      <Modal Modal show={otpDialogOpen} onHide={handleCloseOtpModal} centered>
         <Modal.Header closeButton className="border-0">
           <Modal.Title>
             <div className="text-center">
@@ -269,16 +239,7 @@ const LoginModal = ({ onClose }) => {
             </Form.Group>
             <Button
               type="button"
-              className="submit_modal"
-              style={{
-                width: "100%",
-                color: "#fff",
-                margin: "0",
-                backgroundColor: '#86c33a',
-                border: 'transparent',
-                borderRadius: '23px',
-                marginBottom: '10px',
-              }}
+              className="submit_modal login-submit-btn"
               onClick={handleOtpSubmit}
             >
               Verify Otp
@@ -286,14 +247,18 @@ const LoginModal = ({ onClose }) => {
           </Form>
         </Modal.Body>
       </Modal>
-      {/* Signup Popup  */}
-      <Modal Modal show={showSignUpModal} onHide={handleCloseSignUpModal} centered >
+
+      <Modal
+        Modal
+        show={showSignUpModal}
+        onHide={handleCloseSignUpModal}
+        centered
+      >
         <Modal.Header closeButton className="border-0">
           <Modal.Title>
             <div className="text-center">
               <span
-                className="clr1"
-                style={{ fontSize: "25px", color: "#00afef" }}
+                className="clr1 login-signUp-font-color"
                 id="lbl_modal_email"
               >
                 Login / Signup
@@ -303,10 +268,7 @@ const LoginModal = ({ onClose }) => {
         </Modal.Header>
         <Modal.Body>
           <Form>
-            <div
-              className="field_modal"
-              style={{ margin: "20px 0px!important" }}
-            >
+            <div className="field_modal margin-20-0-important">
               <Form.Label className="label_modal">Email</Form.Label>
               <Form.Control
                 type="text"
@@ -316,10 +278,7 @@ const LoginModal = ({ onClose }) => {
                 className="fr"
               />
             </div>
-            <div
-              className="field_modal"
-              style={{ margin: "20px 0px!important" }}
-            >
+            <div className="field_modal margin-20-0-important">
               <Form.Label className="label_modal mt-3">Password</Form.Label>
               <Form.Control
                 type="password"
@@ -329,7 +288,7 @@ const LoginModal = ({ onClose }) => {
                 className="fr"
               />
             </div>
-            <div style={{ margin: "20px 0px!important" }}>
+            <div className="margin-20-0-important">
               <button
                 className="mt-4 sing-up-btn btn"
                 type="button"
@@ -341,8 +300,9 @@ const LoginModal = ({ onClose }) => {
           </Form>
         </Modal.Body>
       </Modal>
-      {/* Email OTP Popup  */}
-      <Modal Modal
+
+      <Modal
+        Modal
         show={emailOtpDialogOpen}
         onHide={handleCloseEmailOtpModal}
         centered
@@ -351,8 +311,7 @@ const LoginModal = ({ onClose }) => {
           <Modal.Title>
             <div className="text-center">
               <span
-                className="clr1"
-                style={{ fontSize: "25px", color: "#00afef" }}
+                className="clr1 login-signUp-font-color"
                 id="lbl_modal_email"
               >
                 Login / Signup
@@ -362,10 +321,7 @@ const LoginModal = ({ onClose }) => {
         </Modal.Header>
         <Modal.Body>
           <Form>
-            <div
-              className="field_modal"
-              style={{ margin: "20px 0px!important" }}
-            >
+            <div className="field_modal margin-20-0-important">
               <Form.Label className="label_modal">Enter Otp</Form.Label>
               <Form.Control
                 type="text"
@@ -375,7 +331,7 @@ const LoginModal = ({ onClose }) => {
                 className="fr"
               />
             </div>
-            <div style={{ margin: "20px 0px!important" }}>
+            <div className="margin-20-0-important">
               <button
                 className="mt-4 sing-up-btn btn"
                 type="button"

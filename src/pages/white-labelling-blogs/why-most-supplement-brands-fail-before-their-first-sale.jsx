@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
-import "../../assets/css/blog.css"; // Import the new blog CSS
+import "../../assets/css/blog.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -82,14 +82,11 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -97,11 +94,7 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       "/assets/images/white-labelling-blogs/what-supplements-1.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -120,43 +113,44 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* Intro */}
                     <div className="blog-section">
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Launching a supplement brand looks simple from the
                         outside. Pick a product, design a label, and start
                         selling — right?
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Many businesses today rely on a{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             white label products manufacturer
                           </Link>{" "}
                         </strong>
                         to simplify this process, but the reality behind
                         building a successful brand is far more complex.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         But the reality is very different.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Behind every successful supplement brand is a series of{" "}
                         <strong>critical decisions</strong>. And most new brands
                         fail not because of marketing… but because of what
                         happens before the product even reaches the market.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Let's understand what really goes wrong.
                       </p>
                     </div>
 
-                    {/* Section 1 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         1. Choosing the Wrong Product Idea
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Many new brands enter the market by following trends.
                       </p>
                       <p className="blog-text">They see:</p>
@@ -165,11 +159,11 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                         <li>Fat burners going viral</li>
                         <li>Energy drinks growing rapidly</li>
                       </ul>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         So they launch the <i>same product</i>.
                       </p>
                       <p className="blog-text">The problem?</p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         There is
                         <strong> no differentiation</strong>.
                       </p>
@@ -180,12 +174,11 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       </p>
                     </div>
 
-                    {/* Section 2 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         2. Poor Formulation Decisions
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         A supplement is not just a mix of ingredients.
                       </p>
                       <p className="blog-text">Many brands:</p>
@@ -194,11 +187,11 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                         <li>Reduce ingredient quality to cut costs</li>
                         <li>Ignore proper dosage</li>
                       </ul>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         This leads to products that may look good on the label
                         but <strong>don't deliver real results</strong>.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         And when customers don't see results, they don't come
                         back.
                       </p>
@@ -207,7 +200,10 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                         products, where formulation directly impacts
                         performance. Some of the{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder"
+                          >
                             largest whey protein manufacturers in India
                           </Link>
                         </strong>{" "}
@@ -216,12 +212,11 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       </p>
                     </div>
 
-                    {/* Section 3 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         3. Focusing Only on Cost, Not Quality
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         One of the biggest mistakes is choosing manufacturing
                         based only on price.
                       </p>
@@ -239,12 +234,11 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       </p>
                     </div>
 
-                    {/* Section 4 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         4. Ignoring Testing and Quality Control
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Many new brands underestimate the importance of testing.
                       </p>
                       <p className="blog-text">Without proper testing:</p>
@@ -259,7 +253,6 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       </p>
                     </div>
 
-                    {/* Section 5 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         5. Lack of Understanding of Compliance
@@ -272,7 +265,12 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       <p className="blog-text">
                         In India, the{" "}
                         <strong>
-                          <Link to="https://www.fssai.gov.in/">FSSAI</Link>
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.fssai.gov.in/"
+                          >
+                            FSSAI
+                          </Link>
                         </strong>{" "}
                         is the primary regulatory body governing food and
                         supplement safety. Referencing their official guidelines
@@ -283,7 +281,6 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       </p>
                     </div>
 
-                    {/* Section 6 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         6. Unrealistic Expectations
@@ -307,8 +304,6 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       </p>
                     </div>
 
-                    {/* What Actually Works */}
-
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         What Actually Works
@@ -316,7 +311,7 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       <p className="blog-text">
                         Successful supplement brands don't rely on shortcuts.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         They focus on building a strong foundation.
                       </p>
                       <p className="blog-text">
@@ -337,17 +332,15 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       </p>
                     </div>
 
-                    {/* Role of Manufacturing */}
-
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         7. The Role of the Right Manufacturing Approach
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         An experienced manufacturing approach doesn't just
                         produce a product — it helps avoid common mistakes.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "5px" }}>
+                      <p className="blog-text mb-5px">
                         From formulation to final production, the focus remains
                         on:
                       </p>
@@ -356,26 +349,29 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                         <li>Consistency</li>
                         <li>Process control</li>
                       </ul>
-                      <p className="blog-text" style={{ marginBottom: "5px" }}>
+                      <p className="blog-text mb-5px">
                         This ensures that the final product is something a brand
                         can confidently stand behind.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "5px" }}>
+                      <p className="blog-text mb-8">
                         Experienced manufacturers understand that success begins
                         long before production — with the right decisions around
                         formulation, sourcing, and process control.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "10px" }}>
+                      <p className="blog-text mb-8">
                         This is especially important in{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements"
+                          >
                             white label sports nutrition
                           </Link>
                         </strong>
                         , where product quality, taste, and consistency directly
                         influence customer retention and brand growth.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "5px" }}>
+                      <p className="blog-text mb-5px">
                         Many new brands try to put 20 different ingredients into
                         one scoop to look "premium."
                       </p>
@@ -394,7 +390,6 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       </ul>
                     </div>
 
-                    {/* Section 8 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         8. Neglecting "Shelf-Appeal" vs. "Unboxing Experience"
@@ -419,30 +414,19 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       </ul>
                     </div>
 
-                    {/* Conclusion */}
-
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <h2 className="blog-section-title">Conclusion</h2>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           A supplement brand is not built in the market — it is
                           built{" "}
                           <strong>before the product is even launched.</strong>
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           The decisions made during the early stages determine
                           whether a brand struggles or succeeds.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           Understanding these hidden challenges can make all the
                           difference between:
                         </p>

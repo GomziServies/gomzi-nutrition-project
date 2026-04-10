@@ -5,13 +5,83 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 30,
+    title:
+      "The Hidden Costs of Starting a Nutraceutical Brand (What Most Manufacturers Don’t Tell You)",
+    url: "/blogs/the-hidden-costs-of-starting-a-nutraceutical-brand",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/the-hidden-costs-of-starting-a-nutraceutical-brand.webp",
+  },
+  {
+    number: 29,
+    title:
+      "Top 10 Nutraceutical Manufacturing Trends 2026 | AI, Sustainability & Smart Production",
+    url: "/blogs/the-future-of-nutraceutical-manufacturing-in 2026-10-game-changing-trends-brands-cant-ignore",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/the-future-of-nutraceutical-manufacturing-in 2026-10-game-changing-trends-brands-cant-ignore.webp",
+  },
+  {
+    number: 28,
+    title:
+      "How Sports Supplements Are Manufactured: From Ingredients to Packaging",
+    url: "/blogs/how-sports-supplements-are-manufactured-from-ingredients-to-packaging",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-sports-supplements-are-manufactured-from-ingredients-to-packaging.webp",
+  },
+  {
+    number: 27,
+    title: "Protein Manufacturing Costs 2026: Whey vs. Plant-Based Analysis",
+    url: "/blogs/whey-vs-plant-protein-which-is-more-profitable-to-manufacture",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/whey-vs-plant-protein-which-is-more-profitable-to-manufacture.webp",
+  },
+  {
+    number: 26,
+    title: "FSSAI vs CDSCO: The 2026 Regulatory Shift in Indian Nutraceuticals",
+    url: "/blogs/from-fssai-to-cdsco-is-the-regulation-of-indian-nutraceuticals-changing-in-2026",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/from-fssai-to-cdsco-is-the-regulation-of-indian-nutraceuticals-changing-in-2026.webp",
+  },
+  {
+    number: 25,
+    title:
+      "How to Launch Your Multivitamin Brand Without Manufacturing Facilities | Step‑by‑Step Guide",
+    url: "/blogs/how-to-launch-your-own-multivitamin-brand-without-manufacturing-facilities",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-to-launch-your-own-multivitamin-brand-without-manufacturing-facilities.webp",
+  },
+  {
+    number: 24,
+    title:
+      "How Fake Supplements Enter the Market (And How to Avoid Them) — Risks, Red Flags & Safety",
+    url: "/blogs/how-fake-supplements-enter-the-market",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-fake-supplements-enter-the-market.webp",
+  },
+  {
+    number: 23,
+    title:
+      "Gym Supplements vs Clinical Nutrition Supplements | Key Differences Explained",
+    url: "/blogs/gym-supplements-vs-clinical-nutrition-supplements-what’s-the-real-difference",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/gym-supplements-vs-clinical-nutrition-supplements-what’s-the-real-difference.webp",
+  },
+  {
     number: 22,
     title:
       "Top 10 Third-Party Nutraceutical Manufacturing Companies in India (2026 Guide)",
     url: "/blogs/top-10-third-party-nutraceutical-manufacturing-companies-in-india-2026-guide",
     imgSrc:
       process.env.PUBLIC_URL +
-      "/assets/images/white-labelling-blogs/top-10-third-party-beverage-manufacturers-in-india-for-startups.webp",
+      "/assets/images/white-labelling-blogs/top-10-third-party-nutraceutical-manufacturers-in-india-for-startups.webp",
   },
   {
     number: 21,
@@ -37,7 +107,7 @@ export const whitelabelBloglist = [
     url: "/blogs/from-raw-protein-to-finished-powder-what-really-determines-supplement-quality",
     imgSrc:
       process.env.PUBLIC_URL +
-      "/assets/images/white-labelling-blogs/clean-label-supplements-what-modern-consumers-actually-want.webp",
+      "/assets/images/white-labelling-blogs/from-raw-protein-to-finished-powder-what-really-determines-supplement-quality.webp",
   },
   {
     number: 18,
@@ -46,7 +116,7 @@ export const whitelabelBloglist = [
     url: "/blogs/from-gym-idea-to-global-brand-the-untold-story-behind-every-successful-supplement",
     imgSrc:
       process.env.PUBLIC_URL +
-      "/assets/images/white-labelling-blogs/clean-label-supplements-what-modern-consumers-actually-want.webp",
+      "/assets/images/white-labelling-blogs/from-gym-idea-to-global-brand-the-untold-story-behind-every-successful-supplement.webp",
   },
   {
     number: 17,
@@ -148,7 +218,7 @@ export const whitelabelBloglist = [
     url: "/blogs/top-10-third-party-beverage-manufacturers-in-india-for-startups",
     imgSrc:
       process.env.PUBLIC_URL +
-      "/assets/images/white-labelling-blogs/top-10-third-party-beverage-manufacturers-in-india-for-startups.webp",
+      "/assets/images/white-labelling-blogs/top-10-third-party-nutraceutical-manufacturers-in-india-for-startups.webp",
   },
   {
     number: 5,
@@ -232,13 +302,7 @@ const Readmorewhitelabelblogs = () => {
                           <span className="lazy-load-image-background blur lazy-load-image-loaded d-block">
                             <img
                               alt="blog cover"
-                              className="img-fluid product-img"
-                              style={{
-                                height: "260px",
-                                width: "100%",
-                                objectFit: "cover",
-                                objectPosition: "center center",
-                              }}
+                              className="img-fluid product-img w-100-h-auto-object-fit "
                               src={blog.imgSrc}
                             />
                           </span>

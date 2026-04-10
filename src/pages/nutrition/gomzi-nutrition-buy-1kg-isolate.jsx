@@ -31,14 +31,6 @@ function GomziNutritionBuy1KgIsolate() {
   const isAuthenticated = !!localStorage.getItem("fg_group_user_authorization");
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -47,10 +39,10 @@ function GomziNutritionBuy1KgIsolate() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -69,7 +61,7 @@ function GomziNutritionBuy1KgIsolate() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -107,6 +99,15 @@ function GomziNutritionBuy1KgIsolate() {
   useEffect(() => {
     const addToCart = localStorage.getItem("addtocart");
     if (addToCart === "true") {
+      const addtocartdata = {
+        id: "66a22f821e55f03e92d535be",
+        img: "/assets/images/nutrition/gomzi-nutrition-buy-1kg-isolate-1.webp",
+        name: "Buy 1kg Isolate And Get Free Ignite Fat Burner Pre-Workout + Shaker",
+        price: "7997",
+        discount: "4499",
+        size: "Combo",
+        dis_point: "43.74%",
+      };
       setTimeout(() => {
         setProductData(addtocartdata);
         setMenuOpen(true);
@@ -118,7 +119,7 @@ function GomziNutritionBuy1KgIsolate() {
   return (
     <>
       <Helmet>
-        <title>Buy 1kg Gomzi Nutrition Whey Protein Isolate</title>
+        <title>Buy 1kg Gomzi Lifescience Whey Protein Isolate</title>
         <meta
           name="description"
           content="Shop Gomzi Nutrition 1kg Whey Protein Isolate for lean muscle gains and fast recovery. Packed with 27g protein per serving, low carbs, and zero sugar."
@@ -306,7 +307,6 @@ function GomziNutritionBuy1KgIsolate() {
                         <p className="ql-align-justify f-20 mb-1">
                           Total price:{" "}
                           <b className="multi-product-price">₹6,800</b>
-                          {/* &nbsp;&nbsp;<del>₹7,997</del> */}
                         </p>
                       </div>
                     </div>
@@ -385,11 +385,11 @@ function GomziNutritionBuy1KgIsolate() {
                         <div className="descriptionShow text-secondary">
                           <p>
                             <strong>
-                              Gomzi Nutrition Whey Protein Isolate
+                              Gomzi Lifescience Whey Protein Isolate
                             </strong>
                           </p>
                           <p className="mb-2">
-                            Gomzi Nutrition Whey Protein Isolate is a 100%
+                            Gomzi Lifescience Whey Protein Isolate is a 100%
                             vegetarian, pure protein that boasts a single
                             ingredient profile offering exactly what's on its
                             label. The supplement is made in a GMP-compliant

@@ -37,7 +37,7 @@ const RedirectFromHtml = ({ children }) => {
     const timer = setTimeout(() => {
       const script = document.createElement("script");
       script.src = "https://www.googletagmanager.com/gtag/js?id=UA-209915471-2";
-      script.async = true; // Ensure async loading
+      script.async = true;
       document.head.appendChild(script);
 
       script.onload = () => {
@@ -75,22 +75,11 @@ root.render(
           <div>
             <div className="main-loading-logo">
               <div className="">
-                {/* <div className='m-auto'>
-              <Oval
-                visible={true}
-                height="60"
-                width="60"
-                color="#4fa94d"
-                ariaLabel="oval-loading"
-                wrapperStyle={{}}
-                wrapperclassName=""
-              />
-            </div> */}
                 <div>
                   <img
                     src={
                       process.env.PUBLIC_URL +
-                      "../assets/images/logo/nutrition-logo.webp"
+                      "../assets/images/logo/gomzi-life-science-logo.webp"
                     }
                     className="img-fluid"
                     width={120}
@@ -107,5 +96,5 @@ root.render(
       </Suspense>
     </RedirectFromHtml>
     <ToastContainer />
-  </BrowserRouter>
+  </BrowserRouter>,
 );

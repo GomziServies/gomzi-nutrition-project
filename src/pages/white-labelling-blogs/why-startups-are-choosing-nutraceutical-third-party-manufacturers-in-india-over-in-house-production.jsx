@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
-import "../../assets/css/blog.css"; // Import the new blog CSS
+import "../../assets/css/blog.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -128,14 +128,11 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -143,11 +140,7 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
                       "/assets/images/white-labelling-blogs/what-supplements-1.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -166,9 +159,8 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* Intro */}
                     <div className="blog-section">
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         India's nutraceutical industry is rapidly evolving,
                         fueled by rising health awareness and demand for
                         preventive healthcare solutions. Recent data even shows
@@ -176,18 +168,21 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
                         highlighting a long-term shift toward wellness-focused
                         lifestyles.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Amid this growth, startups are increasingly moving away
                         from traditional manufacturing models and partnering
                         with{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             nutraceuticals third party manufacturers in India
                           </Link>
                         </strong>
                         .
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         This shift is not just a trend — it's a strategic
                         decision driven by cost efficiency, scalability, and
                         speed.
@@ -196,7 +191,10 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
                         <p className="blog-text">
                           <em>
                             <strong>
-                              <Link to="https://www.trade.gov/index.php/market-intelligence/india-nutraceuticals-industry?utm_source=chatgpt.com">
+                              <Link
+                                className="blog-text-link"
+                                to="https://www.trade.gov/index.php/market-intelligence/india-nutraceuticals-industry?utm_source=chatgpt.com"
+                              >
                                 " India's nutraceutical market{" "}
                               </Link>
                             </strong>
@@ -208,7 +206,6 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
                       </blockquote>
                     </div>
 
-                    {/* The Reality of In-House Manufacturing */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The Reality of In-House Manufacturing
@@ -242,8 +239,6 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
                         </strong>
                       </p>
                     </div>
-
-                    {/* Why Startups Prefer Third-Party Manufacturing */}
 
                     <div className="blog-section">
                       <h2 className="blog-section-title">
@@ -335,7 +330,6 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
                       </p>
                     </div>
 
-                    {/* Why India is the Preferred Hub */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Why India is the Preferred Hub
@@ -363,7 +357,6 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
                       </p>
                     </div>
 
-                    {/* In-House vs Third-Party Comparison Table */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         In-House vs Third-Party Manufacturing: A Strategic
@@ -424,7 +417,6 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
                       </p>
                     </div>
 
-                    {/* Challenges to Consider */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Challenges to Consider
@@ -452,23 +444,22 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
                       </p>
                     </div>
 
-                    {/* Industry Insight */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Industry Insight: The Bigger Picture
                       </h2>
 
-                      <p className="blog-text" style={{ marginBottom: "5px" }}>
+                      <p className="blog-text mb-8">
                         The shift toward third-party manufacturing is part of a
                         broader transformation in how modern brands operate.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "5px" }}>
+                      <p className="blog-text mb-5px">
                         Instead of owning every part of the supply chain,
                         companies are adopting{" "}
                         <strong>asset-light models</strong> focusing on brand
                         value while outsourcing complex operations.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "5px" }}>
+                      <p className="blog-text mb-5px">
                         India has become a leading hub for health and fitness
                         products, with many businesses partnering with{" "}
                         <strong>
@@ -476,28 +467,34 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
                         </strong>{" "}
                         to launch and scale their brands efficiently.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "5px" }}>
+                      <p className="blog-text mb-5px">
                         Along with this growth, the demand for{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder"
+                          >
                             largest whey protein manufacturers in India{" "}
                           </Link>
                         </strong>
                         has increased as consumers look for high-quality protein
                         supplements.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "5px" }}>
+                      <p className="blog-text mb-5">
                         At the same time, brands are also exploring
                         opportunities in{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements"
+                          >
                             private label sports drinks{" "}
                           </Link>
                         </strong>
                         to expand their product range and meet the rising demand
                         for convenient nutrition solutions.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "5px" }}>
+                      <p className="blog-text mb-5">
                         This combination of advanced manufacturing capabilities
                         and diverse product offerings is making India a
                         preferred destination for supplement and functional
@@ -505,14 +502,10 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
                       </p>
                     </div>
 
-                    {/* Conclusion */}
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <h2 className="blog-section-title">Conclusion</h2>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           The rise of{" "}
                           <strong>
                             nutraceuticals third party manufacturers in India
@@ -521,20 +514,14 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
                           startups, outsourcing manufacturing is no longer just
                           an option — it's a strategic necessity.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           By reducing costs, accelerating product launches, and
                           enabling scalability, third-party manufacturing
                           empowers brands to compete in a fast-growing and
                           highly competitive market.
                         </p>
 
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           <strong>
                             Ready To Launch Your Supplement Brand?
                           </strong>
@@ -547,8 +534,6 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
                         </p>
                       </div>
                     </div>
-
-                    {/* FAQs */}
 
                     <div className="blog-section">
                       <h2 className="blog-section-title">FAQs</h2>

@@ -90,7 +90,7 @@ function Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupbluepri
                 gtag('config', 'G-J50WNKGW38');`}</noscript>
       </Helmet>
       <NutritionHeader />
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
           <div className="container-fluid w-80 p-0">
             <div className="row">
@@ -102,8 +102,7 @@ function Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupbluepri
                       "/assets/images/nutrition/how-supplements-help-you-live-healthy-life-1.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{ borderRadius: "20px", overflow: "hidden" }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -164,22 +163,6 @@ function Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupbluepri
                       1. Why Low MOQ is the "Safety Net" for 2026 Startups
                     </h2>
 
-                    <div className="row">
-                      <div className="col"></div>
-                      <div className="col-lg-6 mt-3">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/how-to-launch-a-supplement-brand01.webp"
-                          }
-                          alt="Fggroup"
-                          width="100%"
-                          style={{ borderRadius: "20px" }}
-                        />
-                      </div>
-                      <div className="col"></div>
-                    </div>
-
                     <p className="mt-3">
                       In a market where consumer tastes change weekly, high
                       inventory is a liability.{" "}
@@ -230,22 +213,6 @@ function Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupbluepri
                       {" "}
                       Our Technical Advantage:{" "}
                     </h3>
-
-                    <div className="row">
-                      <div className="col"></div>
-                      <div className="col-lg-6 mt-3">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/how-to-launch-a-supplement-brand02.webp"
-                          }
-                          alt="Fggroup"
-                          width="100%"
-                          style={{ borderRadius: "20px" }}
-                        />
-                      </div>
-                      <div className="col"></div>
-                    </div>
 
                     <ul className="blog-list">
                       <li>
@@ -351,22 +318,6 @@ function Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupbluepri
                       5. Financial Blueprint: Your Path to Market
                     </h2>
 
-                    <div className="row">
-                      <div className="col"></div>
-                      <div className="col-lg-6 mt-3">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/how-to-launch-a-supplement-brand03.webp"
-                          }
-                          alt="Fggroup"
-                          width="100%"
-                          style={{ borderRadius: "20px" }}
-                        />
-                      </div>
-                      <div className="col"></div>
-                    </div>
-
                     <table className="blog-table">
                       <thead>
                         <th>Product Category</th>
@@ -401,7 +352,7 @@ function Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupbluepri
                     <h2 className="blog-subsection-title">
                       Final Thoughts from Dr. Gautam Jani
                     </h2>
-             
+
                     <div className="row">
                       <div className="col"></div>
                       <div className="col-lg-8 mt-3">

@@ -8,8 +8,10 @@ const NotFoundPage = () => {
     <>
       <Helmet>
         <title>404 error page</title>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38"
+        ></script>
         <script>
           {`
           window.dataLayer = window.dataLayer || [];

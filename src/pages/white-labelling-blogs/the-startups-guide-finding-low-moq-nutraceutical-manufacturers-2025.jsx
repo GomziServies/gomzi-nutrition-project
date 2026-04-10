@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
-import "../../assets/css/blog.css"; // Import the new blog CSS
+import "../../assets/css/blog.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -122,7 +122,7 @@ function TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025() {
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
           <div className="container-fluid w-80 p-0">
             <div className="row">
@@ -134,8 +134,7 @@ function TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025() {
                       "/assets/images/nutrition/best-whey-protein-in-india-main.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{ borderRadius: "20px", overflow: "hidden" }}
+                    className="img-fluid w-100 mh-200 object-fit br-20 overflow"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -153,7 +152,6 @@ function TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025() {
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* Intro */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Why Startups Need a Nutraceutical CMO Partner
@@ -163,7 +161,10 @@ function TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025() {
                         a great formula and a solid marketing plan. Partnering
                         with an expert{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             nutraceutical contract manufacturer
                           </Link>
                         </strong>{" "}
@@ -177,7 +178,6 @@ function TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025() {
                       </p>
                     </div>
 
-                    {/* SECTION I */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         I. Unlocking Growth: Key Benefits of Outsourcing
@@ -222,7 +222,7 @@ function TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025() {
                         <iframe
                           width="70%"
                           height="50vh"
-                          style={{ height: "50vh", borderRadius: "12px" }}
+                          className="br-20 overflow"
                           src="https://www.youtube.com/embed/XM2xXWYxhbw?si=LBNn2upJcrvn3aNc"
                           title="YouTube video player"
                           frameBorder="0"
@@ -293,7 +293,6 @@ function TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025() {
                       </ul>
                     </div>
 
-                    {/* SECTION II */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         II. Vetting Your Partner: Key Due Diligence Steps
@@ -310,12 +309,7 @@ function TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025() {
                             "/assets/images/white-labelling-blogs/the-startups-guide-finding-low-moq-nutraceutical-manufacturers-2025.webp"
                           }
                           alt="bgImage"
-                          className="img-fluid object-fit mx-auto d-block"
-                          style={{
-                            borderRadius: "16px",
-                            width: "60%",
-                            height: "auto",
-                          }}
+                          className="img-fluid object-fit mx-auto d-block br-16-h-w"
                         />
                       </div>
                       <h3 className="blog-subsection-title">
@@ -398,7 +392,6 @@ function TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025() {
                       </p>
                     </div>
 
-                    {/* SECTION III */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         III. Navigating Startup Challenges with a CMO
@@ -449,7 +442,6 @@ function TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025() {
                       </ul>
                     </div>
 
-                    {/* SECTION IV - Conclusion */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         IV. Conclusion: Success is in the Selection
@@ -462,7 +454,10 @@ function TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025() {
                           your brand's future. When evaluating partners, always
                           aim for the{" "}
                           <strong>
-                            <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                            <Link
+                              className="blog-text-link"
+                              to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                            >
                               best nutraceutical manufacturing company
                             </Link>
                           </strong>{" "}
@@ -478,8 +473,6 @@ function TheStartupGuideFindingLowMOQNutraceuticalManufacturers2025() {
                         </p>
                       </div>
                     </div>
-
-                    {/* FAQs */}
 
                     <div className="blog-section">
                       <h2 className="blog-section-title">FAQs</h2>

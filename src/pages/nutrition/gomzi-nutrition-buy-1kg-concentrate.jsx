@@ -31,14 +31,6 @@ function GomziNutritionBuy1KgConcentrate() {
   const isAuthenticated = !!localStorage.getItem("fg_group_user_authorization");
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -47,10 +39,10 @@ function GomziNutritionBuy1KgConcentrate() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -69,7 +61,7 @@ function GomziNutritionBuy1KgConcentrate() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -107,6 +99,15 @@ function GomziNutritionBuy1KgConcentrate() {
   useEffect(() => {
     const addToCart = localStorage.getItem("addtocart");
     if (addToCart === "true") {
+      const addtocartdata = {
+        id: "66a22f581e55f03e92d535b9",
+        img: "/assets/images/nutrition/gomzi-nutrition-buy-1kg-concentrate-1.webp",
+        name: "Whey Protein Concentrate-1kg + Spark EAA",
+        price: "3499",
+        discount: "7997",
+        size: "Combo",
+        dis_point: "31.24%",
+      };
       setTimeout(() => {
         setProductData(addtocartdata);
         setMenuOpen(true);
@@ -308,7 +309,6 @@ function GomziNutritionBuy1KgConcentrate() {
                         <p className="ql-align-justify f-20 mb-1">
                           Total price:{" "}
                           <b className="multi-product-price">₹3,499</b>
-                          {/* &nbsp;&nbsp;<del>₹7,997</del> */}
                         </p>
                       </div>
                     </div>
@@ -387,18 +387,18 @@ function GomziNutritionBuy1KgConcentrate() {
                         <div className="descriptionShow text-secondary">
                           <p>
                             <strong>
-                              Gomzi Nutrition Whey Protein Concentrate
+                              Gomzi Lifescience Whey Protein Concentrate
                             </strong>
                           </p>
                           <p className="mb-2">
-                            In the terms of performance, Gomzi Nutrition Whey
+                            In the terms of performance, Gomzi Lifescience Whey
                             Protein Concentrate is an excellent protein
                             supplement for bodybuilders and fitness champions.
                             As a result of the formula, proteins are absorbed by
                             the body in the most bio-available way possible.
                           </p>
                           <p className="mb-3">
-                            Essentially, Gomzi Nutrition whey protein contains
+                            Essentially, Gomzi Lifescience whey protein contains
                             24.1g of Protein and 4.98g of BCAA. Each combination
                             of whey provides different amounts and combinations
                             of amino acids, resulting in different effects on
@@ -412,7 +412,7 @@ function GomziNutritionBuy1KgConcentrate() {
                             protein synthesis rates.
                           </p>
                           <p>
-                            <strong>Gomzi Nutrition Whey Spark EAA</strong>
+                            <strong>Gomzi Lifescience Whey Spark EAA</strong>
                           </p>
                           <p className="mb-2">
                             SPARK EAA is an advanced science-based solution that

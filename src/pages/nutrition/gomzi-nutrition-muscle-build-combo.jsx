@@ -32,14 +32,6 @@ function GomziNutritionMuscleBuildCombo() {
   const canonicalUrl = window.location.href;
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -48,10 +40,10 @@ function GomziNutritionMuscleBuildCombo() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -70,7 +62,7 @@ function GomziNutritionMuscleBuildCombo() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -79,26 +71,25 @@ function GomziNutritionMuscleBuildCombo() {
     }
   };
 
-  const addProductInCart = async (data) => {
-    try {
-      const response = await axiosInstance.post("/order-cart/add-item", {
-        item_id: data.id,
-        quantity: 1,
-        item_type: "FG_MEAL_PRODUCT",
-      });
-      if (response.data.response === "OK") {
-        setProductData(data);
-        // setMenuOpen(!menuOpen);
-        window.location.href = "/nutrition/cart";
-        localStorage.removeItem("cartAvailable");
-        localStorage.removeItem("productCartAvailable");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const addProductInCart = async (data) => {
+      try {
+        const response = await axiosInstance.post("/order-cart/add-item", {
+          item_id: data.id,
+          quantity: 1,
+          item_type: "FG_MEAL_PRODUCT",
+        });
+        if (response.data.response === "OK") {
+          setProductData(data);
+          window.location.href = "/nutrition/cart";
+          localStorage.removeItem("cartAvailable");
+          localStorage.removeItem("productCartAvailable");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     const localData = JSON.parse(localStorage.getItem("productCartAvailable"));
     const dataAvailable = JSON.parse(localStorage.getItem("cartAvailable"));
     if (localData && dataAvailable) {
@@ -134,6 +125,15 @@ function GomziNutritionMuscleBuildCombo() {
 
   useEffect(() => {
     if (addToCart === "true") {
+      const addtocartdata = {
+        id: "6616357847003e22aea8a0fe",
+        img: "/assets/images/nutrition/muscle-build-combo-1.webp",
+        name: "Mass Gainer Powder-1kg + ATP Creatine Monohydrate",
+        price: "2999",
+        discount: "1600",
+        size: "Combo - 1",
+        dis_point: "46.64%",
+      };
       setTimeout(() => {
         setProductData(addtocartdata);
         setMenuOpen(true);
@@ -146,7 +146,8 @@ function GomziNutritionMuscleBuildCombo() {
     <>
       <Helmet>
         <title>
-          Gomzi Nutrition Muscle Build Combo - Ultimate Stack for Muscle Growth
+          Gomzi Lifescience Muscle Build Combo - Ultimate Stack for Muscle
+          Growth
         </title>
         <meta
           name="description"
@@ -242,24 +243,6 @@ function GomziNutritionMuscleBuildCombo() {
                 </div>
                 <div className="col-12 p-0 col-lg-5 mb-3 mt-3 mb-lg-0 product-detail-right">
                   <div className="row">
-                    {/* <div className="col-12 mt-3 d-block d-lg-none">
-                                            <p className="f-rob-bol f-18">Size</p>
-                                            <ul className="list-unstyled mb-0">
-                                                <li className="mr-3 mb-3 d-inline-block">
-                                                    <div className="avail-in-other-size-main">
-                                                        <div className="d-block avail-in-other-size active">
-                                                            <span
-                                                                className="d-block product-type avail-other-size cp active"
-                                                            ><p className="d-block m-0">Combo - 1</p></span
-                                                            >
-                                                            <div className="d-block product-type avail-other-price cp">
-                                                                <p className="d-block m-0">₹900+ ₹749 = ₹1,600</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div> */}
                     <div className="col-12">
                       <h1 className="f-rob-bol f-22 text-bold">
                         Mass Gainer Powder-1kg + ATP Creatine Monohydrate
@@ -328,8 +311,9 @@ function GomziNutritionMuscleBuildCombo() {
                       <div>
                         <p className="ql-align-justify f-20 mb-1">
                           Total price:{" "}
-                          <b style={{ color: "#86c33a" }}>₹2,550</b>
-                          {/* &nbsp;&nbsp;<del>₹3,698</del> */}
+                          <b className="certified-compliant-div-hspan">
+                            ₹2,550
+                          </b>
                         </p>
                       </div>
                     </div>
@@ -341,7 +325,6 @@ function GomziNutritionMuscleBuildCombo() {
                               <b>Mass Gainer Powder - 1kg</b>
                             </p>
                             <p className="ql-align-justify f-20 mb-1">
-                              {/* <del>₹2,199</del>&nbsp;&nbsp; */}
                               <b>₹1280/-</b>
                             </p>
                           </div>
@@ -353,7 +336,6 @@ function GomziNutritionMuscleBuildCombo() {
                               <b>ATP Creatine Monohydrate - 250 gm</b>
                             </p>
                             <p className="ql-align-justify f-20 mb-1">
-                              {/* <del>₹1,600</del>&nbsp;&nbsp; */}
                               <b>₹1270/-</b>
                             </p>
                           </div>
@@ -434,13 +416,15 @@ function GomziNutritionMuscleBuildCombo() {
                       >
                         <div className="descriptionShow text-secondary">
                           <p>
-                            <strong>Gomzi Nutrition Mass Gainer Powder</strong>
+                            <strong>
+                              Gomzi Lifescience Mass Gainer Powder
+                            </strong>
                           </p>
                           <p className="mb-3">
-                            Achieve Your Bulking Goals with Gomzi Nutrition Mass
-                            Gainer Powder. Our specially formulated blend is
-                            designed to support muscle growth, weight gain, and
-                            overall performance for bodybuilders and fitness
+                            Achieve Your Bulking Goals with Gomzi Lifescience
+                            Mass Gainer Powder. Our specially formulated blend
+                            is designed to support muscle growth, weight gain,
+                            and overall performance for bodybuilders and fitness
                             enthusiasts seeking to pack on size and strength
                             effectively.
                           </p>
@@ -493,7 +477,7 @@ function GomziNutritionMuscleBuildCombo() {
                           </p>
                           <p>
                             <strong>
-                              Gomzi Nutrition ATP Creatine Monohydrate
+                              Gomzi Lifescience ATP Creatine Monohydrate
                             </strong>
                           </p>
                           <p className="mb-3">

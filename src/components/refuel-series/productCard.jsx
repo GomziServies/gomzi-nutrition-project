@@ -20,8 +20,6 @@ const ProductCard = ({
               <span className="lazy-load-image-background blur lazy-load-image-loaded">
                 <LazyLoadImage
                   src={imageSrc}
-                  // Alt text is intentionally left empty because the product name is already displayed as text below the image
-                  // This prevents screen readers from reading the same information twice
                   alt=""
                   className="img-fluid mx-auto product-img"
                   effect="blur"

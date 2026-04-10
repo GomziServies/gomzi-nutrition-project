@@ -31,14 +31,6 @@ function GomziNutritionShakerBottle() {
   const canonicalUrl = window.location.href;
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -47,10 +39,10 @@ function GomziNutritionShakerBottle() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -69,7 +61,7 @@ function GomziNutritionShakerBottle() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -78,26 +70,44 @@ function GomziNutritionShakerBottle() {
     }
   };
 
-  const addProductInCart = async (data) => {
-    try {
-      const response = await axiosInstance.post("/order-cart/add-item", {
-        item_id: data.id,
-        quantity: 1,
-        item_type: "FG_MEAL_PRODUCT",
-      });
-      if (response.data.response === "OK") {
-        setProductData(data);
-        // setMenuOpen(!menuOpen);
-        window.location.href = "/nutrition/cart";
-        localStorage.removeItem("cartAvailable");
-        localStorage.removeItem("productCartAvailable");
-      }
-    } catch (error) {
-      console.log(error);
+  useEffect(() => {
+    if (addToCart === "true") {
+      const addtocartdata = {
+        id: "66a32e961e55f03e92d5d364",
+        img: "/assets/images/nutrition/gomzi-nutrition-shaker.webp",
+        name: "Gomzi Nutrition Shaker Bottle",
+        price: "299",
+        discount: "199",
+        size: "500 ml",
+        dis_point: "33.44%",
+      };
+      setTimeout(() => {
+        setProductData(addtocartdata);
+        setMenuOpen(true);
+        localStorage.removeItem("addtocart");
+      }, 2000);
     }
-  };
+  }, [addToCart]);
 
   useEffect(() => {
+    const addProductInCart = async (data) => {
+      try {
+        const response = await axiosInstance.post("/order-cart/add-item", {
+          item_id: data.id,
+          quantity: 1,
+          item_type: "FG_MEAL_PRODUCT",
+        });
+        if (response.data.response === "OK") {
+          setProductData(data);
+          window.location.href = "/nutrition/cart";
+          localStorage.removeItem("cartAvailable");
+          localStorage.removeItem("productCartAvailable");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     const localData = JSON.parse(localStorage.getItem("productCartAvailable"));
     const dataAvailable = JSON.parse(localStorage.getItem("cartAvailable"));
     if (localData && dataAvailable) {
@@ -129,16 +139,6 @@ function GomziNutritionShakerBottle() {
   const closeModal = () => {
     setShowModal(false);
   };
-
-  useEffect(() => {
-    if (addToCart === "true") {
-      setTimeout(() => {
-        setProductData(addtocartdata);
-        setMenuOpen(true);
-        localStorage.removeItem("addtocart");
-      }, 2000);
-    }
-  }, [addToCart]);
 
   return (
     <>
@@ -250,16 +250,9 @@ function GomziNutritionShakerBottle() {
                     </div>
                     <div className="col-9 pt-2">
                       <div className="d-inline-block">
-                        {/* <span className="d-inline-block mr-2 f-rob-bol f-20 text-red">
-                          33.44%
-                        </span> */}
                         <span className="d-inline-block mr-2 f-rob-bol f-22">
                           ₹199 /-
                         </span>
-                        {/* <p className="f-20">
-                          MRP:-
-                          <span className="price--line-through">₹299/-</span>
-                        </p> */}
                       </div>
                     </div>
                     <div className="col-3 text-left text-md-right">

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
-import "../../assets/css/blog.css"; // Import the new blog CSS
+import "../../assets/css/blog.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -132,14 +132,11 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -147,11 +144,7 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       "/assets/images/white-labelling-blogs/what-supplements-1.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -170,40 +163,25 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* Intro */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         What Supplements Actually Work? Debunking 7 Common
                         Nutraceutical Myths
                       </h2>
 
-                      {/* ✅ IMAGE 1 - Main Intro Section */}
-                      <div className="blog-img-wrapper my-4 text-center">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/white-labelling-blogs/what-supplements-1.webp"
-                          }
-                          alt="What Supplements Actually Work - Nutraceutical Myths"
-                          className="img-fluid"
-                          style={{
-                            borderRadius: "12px",
-                            width: "80%",
-                            objectFit: "cover",
-                          }}
-                        />
-                      </div>
-
-                      <p className="blog-text " style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         In 2026, our medicine cabinets are full, but our clarity
                         is at an all-time low. With the rise of "miracle" pills
                         on social media, it is harder than ever to distinguish
                         between marketing hype and true cellular support.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Whether you are looking for a reliable{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             nutraceutical supplement manufacturer
                           </Link>
                         </strong>{" "}
@@ -218,28 +196,10 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       </p>
                     </div>
 
-                    {/* MYTH 1 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Myth #1: All Protein is Created Equal
                       </h2>
-
-                      {/* ✅ IMAGE 2 - Myth #1 */}
-                      <div className="blog-img-wrapper my-4 text-center">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/white-labelling-blogs/what-supplements-2.webp"
-                          }
-                          alt="Myth - All Protein is Created Equal"
-                          className="img-fluid"
-                          style={{
-                            borderRadius: "12px",
-                            width: "80%",
-                            objectFit: "cover",
-                          }}
-                        />
-                      </div>
 
                       <h3 className="blog-subsection-title">The Reality</h3>
                       <p className="blog-text">
@@ -251,7 +211,10 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       <p className="blog-text">
                         This is why many look for specialized{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder"
+                          >
                             whey protein concentrate manufacturers
                           </Link>
                         </strong>{" "}
@@ -265,28 +228,10 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       </p>
                     </div>
 
-                    {/* MYTH 2 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Myth #2: "Natural" Always Equals "Safe"
                       </h2>
-
-                      {/* ✅ IMAGE 3 - Myth #2 */}
-                      <div className="blog-img-wrapper my-4 text-center">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/white-labelling-blogs/what-supplements-3.webp"
-                          }
-                          alt="Myth - Natural Always Equals Safe"
-                          className="img-fluid"
-                          style={{
-                            borderRadius: "12px",
-                            width: "80%",
-                            objectFit: "cover",
-                          }}
-                        />
-                      </div>
 
                       <h3 className="blog-subsection-title">The Reality</h3>
                       <p className="blog-text">
@@ -303,7 +248,10 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                         Top-tier brands ensure safety by partnering with the
                         best{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             third party manufacturing companies in India
                           </Link>
                         </strong>{" "}
@@ -313,28 +261,10 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       </p>
                     </div>
 
-                    {/* MYTH 3 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Myth #3: Supplements Can Replace Real Food
                       </h2>
-
-                      {/* ✅ IMAGE 4 - Myth #3 */}
-                      <div className="blog-img-wrapper my-4 text-center">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/white-labelling-blogs/what-supplements-4.webp"
-                          }
-                          alt="Myth - Supplements Can Replace Real Food"
-                          className="img-fluid"
-                          style={{
-                            borderRadius: "12px",
-                            width: "80%",
-                            objectFit: "cover",
-                          }}
-                        />
-                      </div>
 
                       <h3 className="blog-subsection-title">The Reality</h3>
                       <p className="blog-text">
@@ -345,7 +275,10 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       <p className="blog-text">
                         For example, while{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/"
+                          >
                             Gomzi Lifesciences
                           </Link>
                         </strong>{" "}
@@ -356,28 +289,10 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       </p>
                     </div>
 
-                    {/* MYTH 4 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Myth #4: Gujarat is Only for Pharma, Not Nutraceuticals
                       </h2>
-
-                      {/* ✅ IMAGE 5 - Myth #4 */}
-                      <div className="blog-img-wrapper my-4 text-center">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/white-labelling-blogs/what-supplements-5.webp"
-                          }
-                          alt="Myth - Gujarat is Only for Pharma Not Nutraceuticals"
-                          className="img-fluid"
-                          style={{
-                            borderRadius: "12px",
-                            width: "80%",
-                            objectFit: "cover",
-                          }}
-                        />
-                      </div>
 
                       <h3 className="blog-subsection-title">The Reality</h3>
                       <p className="blog-text">
@@ -397,7 +312,6 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       </p>
                     </div>
 
-                    {/* FACT vs FICTION TABLE */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Fact vs. Fiction: The 2026 Quick Guide
@@ -452,7 +366,6 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       </div>
                     </div>
 
-                    {/* FAQs */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">FAQs</h2>
 
@@ -474,7 +387,6 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       </Accordion>
                     </div>
 
-                    {/* Conclusion */}
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <h2 className="blog-section-title">Conclusion</h2>

@@ -31,14 +31,6 @@ function GomziNutritionBuy3Combo() {
   const isAuthenticated = !!localStorage.getItem("fg_group_user_authorization");
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -47,10 +39,10 @@ function GomziNutritionBuy3Combo() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -69,7 +61,7 @@ function GomziNutritionBuy3Combo() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -78,26 +70,25 @@ function GomziNutritionBuy3Combo() {
     }
   };
 
-  const addProductInCart = async (data) => {
-    try {
-      const response = await axiosInstance.post("/order-cart/add-item", {
-        item_id: data.id,
-        quantity: 1,
-        item_type: "FG_MEAL_PRODUCT",
-      });
-      if (response.data.response === "OK") {
-        setProductData(data);
-        // setMenuOpen(!menuOpen);
-        window.location.href = "/nutrition/cart";
-        localStorage.removeItem("cartAvailable");
-        localStorage.removeItem("productCartAvailable");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const addProductInCart = async (data) => {
+      try {
+        const response = await axiosInstance.post("/order-cart/add-item", {
+          item_id: data.id,
+          quantity: 1,
+          item_type: "FG_MEAL_PRODUCT",
+        });
+        if (response.data.response === "OK") {
+          setProductData(data);
+          window.location.href = "/nutrition/cart";
+          localStorage.removeItem("cartAvailable");
+          localStorage.removeItem("productCartAvailable");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     const localData = JSON.parse(localStorage.getItem("productCartAvailable"));
     const dataAvailable = JSON.parse(localStorage.getItem("cartAvailable"));
     if (localData && dataAvailable) {
@@ -134,6 +125,15 @@ function GomziNutritionBuy3Combo() {
   useEffect(() => {
     const addToCart = localStorage.getItem("addtocart");
     if (addToCart === "true") {
+      const addtocartdata = {
+        id: "66a22fc01e55f03e92d535e2",
+        img: "/assets/images/nutrition/gomzi-nutrition-buy-3-combo-1.webp",
+        name: "Mass Gainer Powder-1kg + Ignite Fat Burner Pre-Workout",
+        price: "1599",
+        discount: "7997",
+        size: "Combo",
+        dis_point: "31.24%",
+      };
       setTimeout(() => {
         setProductData(addtocartdata);
         setMenuOpen(true);
@@ -247,7 +247,7 @@ function GomziNutritionBuy3Combo() {
                   <div className="row">
                     <div className="col-12">
                       <h1 className="f-rob-bol f-22 text-bold">
-                        Buy Gomzi Nutrition ATP Creatine + Ignite Fat Burner
+                        Buy Gomzi Lifescience ATP Creatine + Ignite Fat Burner
                         Pre-Workout + Spark EAA
                       </h1>
                     </div>
@@ -355,7 +355,6 @@ function GomziNutritionBuy3Combo() {
                         <p className="ql-align-justify f-20 mb-1">
                           Total price:{" "}
                           <b className="multi-product-price">₹1,599</b>
-                          {/* &nbsp;&nbsp;<del>₹7,997</del> */}
                         </p>
                       </div>
                     </div>
@@ -434,7 +433,7 @@ function GomziNutritionBuy3Combo() {
                         <div className="descriptionShow text-secondary">
                           <p>
                             <strong>
-                              Gomzi Nutrition ATP Creatine Monohydrate
+                              Gomzi Lifescience ATP Creatine Monohydrate
                             </strong>
                           </p>
                           <p className="mb-2">
@@ -484,7 +483,7 @@ function GomziNutritionBuy3Combo() {
                             boundaries.
                           </p>
                           <p>
-                            <strong>Gomzi Nutrition Whey Spark EAA</strong>
+                            <strong>Gomzi Lifescience Whey Spark EAA</strong>
                           </p>
                           <p className="mb-2">
                             SPARK EAA is an advanced science-based solution that

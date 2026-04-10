@@ -102,7 +102,7 @@ function CheckOut() {
             : productDatas,
           updatedUserData,
           coupon_ids,
-          payment_mode
+          payment_mode,
         );
       } catch (error) {
         console.error("Error during order:", error);
@@ -178,7 +178,7 @@ function CheckOut() {
     <>
       <Helmet>
         <title>
-          Checkout at Gomzi Nutrition - Secure & Fast Payment Options
+          Checkout at Gomzi Lifescience - Secure & Fast Payment Options
         </title>
         <meta
           name="description"
@@ -253,13 +253,7 @@ function CheckOut() {
           gtag('config', 'G-J50WNKGW38');`}</noscript>
       </Helmet>
       <NutritionHeader />
-      {/* <div className="container-fluid checkout-page-main enjoy p-0">
-        <img
-          src={process.env.PUBLIC_URL + "/assets/images/nutrition/enjoy.gif"}
-          width="100%"
-          alt="fggroup"
-        />
-      </div> */}
+
       <div className="main-content margintop-nutrition py-5 checkout-page-main">
         <section className="checkout-main checkout-page-detail p-lg-4">
           <div className="container-fluid w-80 checkout-padding">
@@ -390,113 +384,18 @@ function CheckOut() {
                     </div>
                   </div>
                   <div className="col-12 col-md-5 col-lg-4 px-0 px-md-3 promo-code-sticky mb-2 mt-2 mt-md-0">
-                    {/* <div className="d-block">
-                      <div className="mb-3">
-                        <form>
-                          <div
-                            className="d-block"
-                            tabIndex="-1"
-                            role="dialog"
-                            aria-hidden="true"
-                          >
-                            <div className="modal-dialog m-0 w-100 modal-dialog-centered">
-                              <div className="modal-content br-15 p-3">
-                                <div className="d-flex bg-transparent">
-                                  <div className="col-12 px-0">
-                                    <h3 className="f-pop-sembol f-18">
-                                      Apply Promo Code
-                                    </h3>
-                                  </div>
-                                </div>
-                                <div className="d-flex my-3 align-items-center justify-content-between border p-3 br-15">
-                                  <input
-                                    id="coupon_code"
-                                    type="text"
-                                    placeholder="Enter Coupon Code"
-                                    name="coupon_code"
-                                    className="form-control mr-2"
-                                    value={manualCouponCode}
-                                    onChange={handleOnChange}
-                                    maxLength="100"
-                                  />
-                                  <div className="d-inline-block">
-                                    <button
-                                      id="apply_main_btn"
-                                      type="button"
-                                      onClick={() => handleApplyClick()}
-                                      className="btn btn-success"
-                                    >
-                                      Apply
-                                    </button>
-                                  </div>
-                                </div>
-                                <div className="col-12 apply-promo-modal">
-                                  <div className="mb-3 p-3 border br-15">
-                                    <label className="radio-main m-0 d-block">
-                                      <span className="promo-code py-1 px-3 f-rob-bol f-14">
-                                        GOMZI15
-                                      </span>
-                                      {appliedCodes.includes("GOMZI15") ? (
-                                        <span
-                                          className="remove-btn px-3 text-red f-rob-bol f-14 d-inline-block float-right"
-                                          onClick={() =>
-                                            removePromoCode("GOMZI15")
-                                          }
-                                        >
-                                          Remove
-                                        </span>
-                                      ) : (
-                                        <span
-                                          className="apply-btn px-3 text-green f-rob-bol f-14 d-inline-block float-right"
-                                          onClick={() =>
-                                            applyPromoCode("GOMZI15")
-                                          }
-                                        >
-                                          Apply
-                                        </span>
-                                      )}
-                                      <p className="f-rob-med f-16 mt-2 mb-1">
-                                        Use Code "GOMZI15". For 15% Off
-                                      </p>
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div> */}
                     <div className="col-12 mb-3 border bg-white p-3 br-15 d-block d-md-none price-mb">
                       <div
                         className={`ReactCollapse--collapse ${
                           isOpen ? "open" : ""
                         }`}
                         aria-hidden={!isOpen}
-                        style={{
-                          height: isOpen ? "auto" : "0px",
-                          overflow: "hidden",
-                        }}
                         id="opendata"
                       >
                         <div className="ReactCollapse--content">
                           <div className="col-12 mb-3 bg-white py-2 px-3 d-block d-md-none border-bottom">
                             <div className="col-12 p-0">
                               <ul className="list-unstyled mb-0 amount-payee-list">
-                                {/* <li className="d-block mb-3">
-                                  <div className="d-flex align-items-center justify-content-between">
-                                    <div className="d-inline-block p-0 text-left">
-                                      <p className="m-0 f-rob-reg f-16 text-secondary">
-                                        MRP
-                                      </p>
-                                    </div>
-                                    <div className="d-inline-block p-0 text-right">
-                                      <p className="m-0 f-rob-med f-16">
-                                        ₹{totalMRPPrice}
-                                      </p>
-                                    </div>
-                                  </div>
-                                </li> */}
                                 <li className="d-block mb-3">
                                   <div className="d-flex align-items-center justify-content-between">
                                     <div className="d-inline-block p-0 text-left">
@@ -580,20 +479,6 @@ function CheckOut() {
                       </div>
                       <div className="col-12 p-0 mt-2">
                         <ul className="list-unstyled border-bottom">
-                          {/* <li className="d-block mb-3">
-                            <div className="d-flex align-items-center justify-content-between">
-                              <div className="d-inline-block p-0 text-left">
-                                <p className="m-0 f-rob-reg f-16 text-secondary">
-                                  MRP
-                                </p>
-                              </div>
-                              <div className="d-inline-block p-0 text-right">
-                                <p className="m-0 f-rob-med f-16">
-                                  ₹{totalMRPPrice}
-                                </p>
-                              </div>
-                            </div>
-                          </li> */}
                           <li className="d-block mb-3">
                             <div className="d-flex align-items-center justify-content-between">
                               <div className="d-inline-block p-0 text-left">

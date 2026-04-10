@@ -19,7 +19,7 @@ function ProductPhotoSection({
   fiveGProduct,
 }) {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const [opacity, setOpacity] = useState(1);
+  const [, setOpacity] = useState(1);
   const [prevIndex, setPrevIndex] = useState(activeImageIndex);
   const imageRef = useRef(null);
 
@@ -44,20 +44,13 @@ function ProductPhotoSection({
       <div className="col-12 p-0 product-hori-slider-main">
         <div className="product-imgs one-book singal-product-img d-none d-lg-block">
           <div
-            className="row"
-            style={{
-              display: currentProduct === "two" ? "block" : "none",
-            }}
+            className={`row product-row ${
+              currentProduct === "two" ? "active" : ""
+            }`}
           >
             <div className="col-12">
               <div className="main-image text-center">
-                <div
-                  style={{
-                    transition: "opacity 0.5s ease-in-out",
-                    opacity: opacity,
-                  }}
-                  ref={imageRef}
-                >
+                <div className="transition-opacity " ref={imageRef}>
                   <InnerImageZoom
                     src={twoKgProduct[prevIndex]}
                     zoomSrc={twoKgProduct[prevIndex]}
@@ -75,28 +68,19 @@ function ProductPhotoSection({
                 {twoKgProduct.map((image, index) => (
                   <div
                     key={index}
-                    className={`thumbnail-image ${index === activeImageIndex ? "active" : ""
-                      }`}
+                    className={`thumbnail-image ${
+                      index === activeImageIndex ? "active" : ""
+                    }`}
                     onClick={() => handleThumbnailClick(index)}
                   >
                     <div className="d-flex">
                       <div className="col-12 px-4 mt-4 text-center">
-                        <div
-                          style={{
-                            width: "100%",
-                            height: "auto",
-                            cursor: "pointer",
-                          }}
-                        >
+                        <div className="w-100-h-auto cp">
                           <LazyLoadImage
                             src={image}
                             alt="FG Group"
                             effect="blur"
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              objectFit: "contain",
-                            }}
+                            className="w-100-h-100-objectfit"
                           />
                         </div>
                       </div>
@@ -107,20 +91,13 @@ function ProductPhotoSection({
             </div>
           </div>
           <div
-            className="row"
-            style={{
-              display: currentProduct === "one" ? "block" : "none",
-            }}
+            className={`row product-row ${
+              currentProduct === "one" ? "active" : ""
+            }`}
           >
             <div className="col-12">
               <div className="main-image text-center">
-                <div
-                  style={{
-                    transition: "opacity 0.5s ease-in-out",
-                    opacity: opacity,
-                  }}
-                  ref={imageRef}
-                >
+                <div className="transition-opacity" ref={imageRef}>
                   <InnerImageZoom
                     src={oneKgProduct[prevIndex]}
                     zoomSrc={oneKgProduct[prevIndex]}
@@ -138,28 +115,19 @@ function ProductPhotoSection({
                 {oneKgProduct.map((image, index) => (
                   <div
                     key={index}
-                    className={`thumbnail-image ${index === activeImageIndex ? "active" : ""
-                      }`}
+                    className={`thumbnail-image ${
+                      index === activeImageIndex ? "active" : ""
+                    }`}
                     onClick={() => handleThumbnailClick(index)}
                   >
                     <div className="d-flex">
                       <div className="col-12 px-4 mt-4 text-center">
-                        <div
-                          style={{
-                            width: "100%",
-                            height: "auto",
-                            cursor: "pointer",
-                          }}
-                        >
+                        <div className="w-100-h-auto cp">
                           <LazyLoadImage
                             src={image}
                             alt="FG Group"
                             effect="blur"
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              objectFit: "contain",
-                            }}
+                            className="w-100-h-100-objectfit"
                           />
                         </div>
                       </div>
@@ -170,18 +138,13 @@ function ProductPhotoSection({
             </div>
           </div>
           <div
-            className="row"
-            style={{ display: currentProduct === "five" ? "block" : "none" }}
+            className={`row product-row ${
+              currentProduct === "five" ? "active" : ""
+            }`}
           >
             <div className="col-12">
               <div className="main-image text-center">
-                <div
-                  style={{
-                    transition: "opacity 0.5s ease-in-out",
-                    opacity: opacity,
-                  }}
-                  ref={imageRef}
-                >
+                <div className="transition-opacity" ref={imageRef}>
                   <InnerImageZoom
                     src={fiveGProduct[prevIndex]}
                     zoomSrc={fiveGProduct[prevIndex]}
@@ -199,27 +162,18 @@ function ProductPhotoSection({
                 {fiveGProduct.map((image, index) => (
                   <div
                     key={index}
-                    className={`thumbnail-image ${index === activeImageIndex ? "active" : ""
-                      }`}
+                    className={`thumbnail-image ${
+                      index === activeImageIndex ? "active" : ""
+                    }`}
                     onClick={() => handleThumbnailClick(index)}
                   >
                     <div className="d-flex">
                       <div className="col-12 px-4 mt-4 text-center">
-                        <div
-                          style={{
-                            width: "100%",
-                            height: "auto",
-                            cursor: "pointer",
-                          }}
-                        >
+                        <div className="w-100-h-auto cp">
                           <img
                             src={image}
                             alt="FG Group"
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              objectFit: "contain",
-                            }}
+                            className="w-100-h-100-objectfit"
                           />
                         </div>
                       </div>
@@ -232,10 +186,9 @@ function ProductPhotoSection({
         </div>
         <div className="product-imgs one-book singal-product-img d-block d-lg-none">
           <div
-            className="row"
-            style={{
-              display: currentProduct === "two" ? "block" : "none",
-            }}
+            className={`row product-row ${
+              currentProduct === "two" ? "active" : ""
+            }`}
           >
             <div className="col-12">
               <div className="main-image text-center">
@@ -251,28 +204,19 @@ function ProductPhotoSection({
                 {twoKgProduct.map((image, index) => (
                   <div
                     key={index}
-                    className={`thumbnail-image ${index === activeImageIndex ? "active" : ""
-                      }`}
+                    className={`thumbnail-image ${
+                      index === activeImageIndex ? "active" : ""
+                    }`}
                     onClick={() => handleThumbnailClick(index)}
                   >
                     <div className="d-flex">
                       <div className="col-12 px-2 mt-4 text-center">
-                        <div
-                          style={{
-                            width: "100%",
-                            height: "auto",
-                            cursor: "pointer",
-                          }}
-                        >
+                        <div className="w-100-h-auto cp">
                           <LazyLoadImage
                             src={image}
                             alt="FG Group"
                             effect="blur"
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              objectFit: "contain",
-                            }}
+                            className="w-100-h-100-objectfit"
                           />
                         </div>
                       </div>
@@ -283,20 +227,13 @@ function ProductPhotoSection({
             </div>
           </div>
           <div
-            className="row"
-            style={{
-              display: currentProduct === "one" ? "block" : "none",
-            }}
+            className={`row product-row ${
+              currentProduct === "one" ? "active" : ""
+            }`}
           >
             <div className="col-12">
               <div className="main-image text-center">
-                <div
-                  style={{
-                    transition: "opacity 0.5s ease-in-out",
-                    opacity: opacity,
-                  }}
-                  ref={imageRef}
-                >
+                <div className="transition-opacity" ref={imageRef}>
                   <img
                     src={oneKgProduct[prevIndex]}
                     alt="FG Group"
@@ -310,28 +247,19 @@ function ProductPhotoSection({
                 {oneKgProduct.map((image, index) => (
                   <div
                     key={index}
-                    className={`thumbnail-image ${index === activeImageIndex ? "active" : ""
-                      }`}
+                    className={`thumbnail-image ${
+                      index === activeImageIndex ? "active" : ""
+                    }`}
                     onClick={() => handleThumbnailClick(index)}
                   >
                     <div className="d-flex">
                       <div className="col-12 px-2 mt-4 text-center">
-                        <div
-                          style={{
-                            width: "100%",
-                            height: "auto",
-                            cursor: "pointer",
-                          }}
-                        >
+                        <div className="w-100-h-auto cp">
                           <LazyLoadImage
                             src={image}
                             alt="FG Group"
                             effect="blur"
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              objectFit: "contain",
-                            }}
+                            className="w-100-h-100-objectfit"
                           />
                         </div>
                       </div>
@@ -342,18 +270,13 @@ function ProductPhotoSection({
             </div>
           </div>
           <div
-            className="row"
-            style={{ display: currentProduct === "five" ? "block" : "none" }}
+            className={`row product-row ${
+              currentProduct === "five" ? "active" : ""
+            }`}
           >
             <div className="col-12">
               <div className="main-image text-center">
-                <div
-                  style={{
-                    transition: "opacity 0.5s ease-in-out",
-                    opacity: opacity,
-                  }}
-                  ref={imageRef}
-                >
+                <div className="transition-opacity" ref={imageRef}>
                   <img
                     src={fiveGProduct[prevIndex]}
                     alt="FG Group"
@@ -367,27 +290,18 @@ function ProductPhotoSection({
                 {fiveGProduct.map((image, index) => (
                   <div
                     key={index}
-                    className={`thumbnail-image ${index === activeImageIndex ? "active" : ""
-                      }`}
+                    className={`thumbnail-image ${
+                      index === activeImageIndex ? "active" : ""
+                    }`}
                     onClick={() => handleThumbnailClick(index)}
                   >
                     <div className="d-flex">
                       <div className="col-12 px-2 mt-4 text-center">
-                        <div
-                          style={{
-                            width: "100%",
-                            height: "auto",
-                            cursor: "pointer",
-                          }}
-                        >
+                        <div className="w-100-h-auto cp">
                           <img
                             src={image}
                             alt="FG Group"
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              objectFit: "contain",
-                            }}
+                            className="w-100-h-100-objectfit"
                           />
                         </div>
                       </div>

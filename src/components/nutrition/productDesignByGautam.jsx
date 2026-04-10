@@ -25,9 +25,8 @@ const ProductDesignByGautam = () => {
                               process.env.PUBLIC_URL +
                               "/assets/images/nutrition/gautam-jani.webp"
                             }
-                            className="img-fluid"
+                            className="img-fluid br-15"
                             alt="Dr.gautam Jani"
-                            style={{ borderRadius: "20px" }}
                           />
                         </div>
                         <div className="col-12 col-lg-6 pl-xl-5 text-center mt-3 mt-lg-0">

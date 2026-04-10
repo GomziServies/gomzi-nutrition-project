@@ -25,14 +25,13 @@ export const sendInquiry = async (
   file,
   callback,
   files,
-  branch = null
+  branch = null,
 ) => {
   try {
     if (!name || !email || !mobile || !message || !subject) {
       throw new Error("Missing required field");
     }
 
-    // Validate Email
     let emailRegex =
       /(?:[a-z0-9!#$%&'*+/?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/?^_`{|}~-]+)*|"(?:[\x21\x23-\x5b\x5d-\x7f]|\\[\x21-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x21-\x5a\x53-\x7f]|\\[\x21-\x7f])+)])/;
     email = String(email).toLowerCase().trim();
@@ -75,7 +74,7 @@ export const sendInquiry = async (
 
     const response = await publicAxiosInstance.post(
       `/contact-inquiry`,
-      payload
+      payload,
     );
 
     if (!response.data.response === "OK") {
@@ -112,7 +111,6 @@ export const bookDemoLecture = async (data) => {
     });
   }
 
-  // Validate Email
   let emailRegex =
     /(?:[a-z0-9!#$%&'*+/?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/?^_`{|}~-]+)*|"(?:[\x21\x23-\x5b\x5d-\x7f]|\\[\x21-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x21-\x5a\x53-\x7f]|\\[\x21-\x7f])+)])/;
 
@@ -163,7 +161,6 @@ export const sendNutritionInquiry = async (data) => {
       throw new Error("Missing required field");
     }
 
-    // Validate Email
     let emailRegex =
       /(?:[a-z0-9!#$%&'*+/?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/?^_`{|}~-]+)*|"(?:[\x21\x23-\x5b\x5d-\x7f]|\\[\x21-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x21-\x5a\x53-\x7f]|\\[\x21-\x7f])+)])/;
     const validEmail = String(email).toLowerCase().trim();
@@ -188,7 +185,7 @@ export const sendNutritionInquiry = async (data) => {
 
     const response = await publicAxiosInstance.post(
       "/contact-inquiry",
-      payload
+      payload,
     );
     console.log(payload);
 
@@ -207,7 +204,6 @@ export const sendNutritionInquiry = async (data) => {
   } catch (error) {
     console.error(error);
 
-    // Show error Swal alert
     Swal.fire({
       icon: "error",
       title: "Error",

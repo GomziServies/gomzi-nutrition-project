@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/css/nutrition.css";
 
 function sendToWhatsApp(text, option) {
   if (!text) {
@@ -14,7 +15,7 @@ function sendToWhatsApp(text, option) {
   }
 
   let url = `https://api.whatsapp.com/send?phone=+918320077993&text=${encodeURIComponent(
-    text
+    text,
   )}`;
   window.open(url, "_blank");
 }
@@ -26,14 +27,10 @@ function WhatsAppAnchor({ message, options }) {
 
   return (
     <button
-      style={{ fontSize: "16px" }}
       onClick={handleClick}
-      className="btn btn-started mt-2"
+      className="btn btn-started mt-2 whatsApp-btn-fts-16 "
     >
-      <i
-        className="fab fa-whatsapp mr-2"
-        style={{ color: "#00d146", fontSize: "16px" }}
-      ></i>
+      <i className="fab fa-whatsapp mr-2 whatsApp-btn-fts-16-i"></i>
       WhatsApp
     </button>
   );

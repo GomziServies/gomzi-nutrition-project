@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import SelectableList from "../products/SelectableList";
+import "../../../assets/css/nutrition.css";
 
 const RefuelSeriesSparkEAA = () => {
   const [currentProduct, setCurrentProduct] = useState("250g-Guava");
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [activeSize, setActiveSize] = useState("250g");
   const [activeFlavor, setActiveFlavor] = useState("Guava");
-  const [opacity, setOpacity] = useState(1);
+  const [, setOpacity] = useState(1);
   const imageRef = useRef(null);
 
   useEffect(() => {
@@ -22,7 +23,9 @@ const RefuelSeriesSparkEAA = () => {
   }, [activeImageIndex]);
 
   const productImages = {
-    "250g-Watermelon": ["/assets/images/nutrition/refuel-eaa-watermelon-1.webp"],
+    "250g-Watermelon": [
+      "/assets/images/nutrition/refuel-eaa-watermelon-1.webp",
+    ],
     "250g-Guava": ["/assets/images/nutrition/refuel-eaa-guava-1.webp"],
   };
 
@@ -60,12 +63,8 @@ const RefuelSeriesSparkEAA = () => {
             <div className="col-lg-12 px-md-3 mb-2 mt-2 mt-md-0 order-1">
               <div className="item mb-3">
                 <div
-                  className="product-image-container"
+                  className="product-image-container transition-opacity"
                   ref={imageRef}
-                  style={{
-                    opacity: opacity,
-                    transition: "opacity 0.3s ease-in-out",
-                  }}
                 >
                   <img
                     src={productImages[currentProduct]}

@@ -1,7 +1,6 @@
 import React, { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 
-//User Account
 import Home from "./pages/home";
 import PeanutButter from "./pages/third-party-manufacturing/peanut-butter";
 import EnergyDrink from "./pages/third-party-manufacturing/energy-drinks";
@@ -17,10 +16,8 @@ import Top10ThirdPartyBeverageManufacturersInIndiaForStartups from "./pages/whit
 import GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025 from "./pages/white-labelling-blogs/gmp-audit-guide-for-nutraceutical-manufacturers-step-by-step-process-2025";
 import MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia from "./pages/white-labelling-blogs/maximize-profit-quality-your-guide-to-private-label-manufacturing-in-india";
 import WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths from "./pages/white-labelling-blogs/what-supplements-actuallywork-debunking-7common-nutraceutical-myths";
-import HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUse from "./pages/white-labelling-blogs/how-to-educate-consumers-about-safe-effective-nutraceutical-use";
 import WheyProteinManufacturing from "./pages/third-party-manufacturing/WheyProteinManufacturing";
 import PerformanceSupplements from "./pages/third-party-manufacturing/PerformanceSupplements";
-import Multivitaminstabletpage from "./pages/third-party-manufacturing/multivitamins-tablet-page";
 import MultivitaminTablet from "./pages/third-party-manufacturing/multivitamins-tablet-page";
 import HowtoReduceLeadTimesAndCosts from "./pages/white-labelling-blogs/how-to-reduce-lead-times-and-costs-in-third-party-manufacturing";
 import HowBrandsGrowWithoutFactory from "./pages/white-labelling-blogs/how-brands-grow-without-a-factory-the-ultimate-guide-to-third-party-manufacturing";
@@ -35,14 +32,19 @@ import The5LakhVs50LakhWhatChangesInSupplementManufacturing from "./pages/white-
 import CleanLabelSupplementsWhatModernConsumersActuallyWant from "./pages/white-labelling-blogs/clean-label-supplements-what-modern-consumers-actually-want";
 import FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement from "./pages/white-labelling-blogs/from-gym-idea-to-global-brand-the-untold-story-behind-every-successful-supplement";
 import FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality from "./pages/white-labelling-blogs/from-raw-protein-to-finished-powder-what-really-determines-supplement-quality";
-// import Sitemap from '../src/components/partials/sitemap';
+import GymSupplementsvsClinicalNutritionSupplementsWhatstheRealDifference from "./pages/white-labelling-blogs/gym-supplements-vs-clinical-nutrition-supplements-what’s-the-real-difference";
+import HowFakeSupplementsEntertheMarket from "./pages/white-labelling-blogs/how-fake-supplements-enter-the-market";
+import HowToLaunchYourOwnMultivitaminBrandWithoutManufacturingFacilities from "./pages/white-labelling-blogs/how-to-launch-your-own-multivitamin-brand-without-manufacturing-facilities";
+import FromFSSAItoCDSCOIstheRegulationofIndianNutraceuticalsChangingIn from "./pages/white-labelling-blogs/from-fssai-to-cdsco-is-the-regulation-of-indian-nutraceuticals-changing-in-2026";
+import WheyVsPlantProteinWhichIsMoreProfitabletoManufacture from "./pages/white-labelling-blogs/whey-vs-plant-protein-which-is-more-profitable-to-manufacture";
+import HowSportsSupplementsAreManufacturedFromIngredientstoPackaging from "./pages/white-labelling-blogs/how-sports-supplements-are-manufactured-from-ingredients-to-packaging";
+import TheFutureofNutraceuticalManufacturingin202610GameChangingTrendsBrandsCantIgnore from "./pages/white-labelling-blogs/the-future-of-nutraceutical-manufacturing-in 2026-10-game-changing-trends-brands-cant-ignore";
+import TheHiddenCostsofStartingaNutraceuticalBrand from "./pages/white-labelling-blogs/the-hidden-costs-of-starting-a-nutraceutical-brand";
 
-//Profile
 const UserProfile = lazy(() => import("./pages/account/profile"));
 const UserOrder = lazy(() => import("./pages/account/order"));
 const AddToCart = lazy(() => import("./pages/add-to-cart"));
 
-// nutrition
 const GomziNutritionWheyProteinIsolate = lazy(
   () => import("./pages/nutrition/gomzi-nutrition-whey-protein-isolate"),
 );
@@ -197,25 +199,19 @@ const ThankYouProductPage = lazy(
   () => import("./pages/nutrition/thank-you-purchase-product"),
 );
 
-// ScrollRestoration
-// import ScrollRestoration from "./components/scroll-restoration";
 const ScrollRestoration = lazy(() => import("./components/scroll-restoration"));
 
-//404
 const NotFoundPage = lazy(() => import("./pages/404"));
 
-//Refuel Series
 const RefuelSeries = lazy(() => import("./pages/refuel-series/refuel-series"));
 const GomziNutritionRetailerCombo = lazy(
   () => import("./pages/refuel-series/gomzi-nutrition-retailer-combo"),
 );
 
-// Read-more-blogs
 const Readmoreblogs = lazy(
   () => import("./components/nutrition/read-more-blogs"),
 );
 
-// Blogs
 const TopSupplementsForWeightGain = lazy(
   () => import("./pages/blogs/top-supplements-for-weight-gain"),
 );
@@ -254,7 +250,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        {/*third party manufacturing */}
         <Route
           path="/third-party-manufacturing/protein-powder"
           element={<WheyProteinManufacturing />}
@@ -279,12 +274,17 @@ function App() {
           path="/third-party-manufacturing/multivitamins-tablet"
           element={<MultivitaminTablet />}
         />
-        {/* <Route
+
+        <Route
+          path="/third-party-manufacturing/performance-supplements"
+          element={<PerformanceSupplements />}
+        />
+
+        <Route
           path="/third-party-manufacturing/WheyProteinManufacturing"
           element={<WheyProteinManufacturing />}
-        /> */}
+        />
 
-        {/* nutrition */}
         <Route
           path="/nutrition/gomzi-nutrition-whey-protein-isolate"
           element={<GomziNutritionWheyProteinIsolate />}
@@ -345,19 +345,18 @@ function App() {
           path="/nutrition/gomzi-nutrition-slimayur-fat-loss-powder"
           element={<GomziNutritionSlimAyurFatLossPowder />}
         />
+
         <Route
           path="/nutrition/gomzi-nutrition-shaker-bottle"
           element={<GomziNutritionShakerBottle />}
         />
 
-        {/* read-more-blogs */}
         <Route path="/read-more-blogs" element={<Readmoreblogs />} />
         <Route
           path="/read-more-white-labelling-blogs"
           element={<Readmorewhitelabelblogs />}
         />
 
-        {/* blogs */}
         <Route
           path="/blogs/top-supplements-for-weight-gain"
           element={<TopSupplementsForWeightGain />}
@@ -388,8 +387,6 @@ function App() {
           element={<BulkInquiryNutrition />}
         />
         <Route path="/nutrition/white-labelling" element={<WhiteLabelling />} />
-
-        {/* white labelling blogs */}
 
         <Route
           path="/blogs/how-to-start-a-private-label-supplement-brand-in-india"
@@ -545,8 +542,54 @@ function App() {
             <FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality />
           }
         />
+        <Route
+          path="/blogs/gym-supplements-vs-clinical-nutrition-supplements-what’s-the-real-difference"
+          element={
+            <GymSupplementsvsClinicalNutritionSupplementsWhatstheRealDifference />
+          }
+        />
+        <Route
+          path="/blogs/how-fake-supplements-enter-the-market"
+          element={<HowFakeSupplementsEntertheMarket />}
+        />
 
-        {/* --- */}
+        <Route
+          path="/blogs/how-to-launch-your-own-multivitamin-brand-without-manufacturing-facilities"
+          element={
+            <HowToLaunchYourOwnMultivitaminBrandWithoutManufacturingFacilities />
+          }
+        />
+
+        <Route
+          path="/blogs/from-fssai-to-cdsco-is-the-regulation-of-indian-nutraceuticals-changing-in-2026"
+          element={
+            <FromFSSAItoCDSCOIstheRegulationofIndianNutraceuticalsChangingIn />
+          }
+        />
+
+        <Route
+          path="/blogs/whey-vs-plant-protein-which-is-more-profitable-to-manufacture"
+          element={<WheyVsPlantProteinWhichIsMoreProfitabletoManufacture />}
+        />
+
+        <Route
+          path="/blogs/how-sports-supplements-are-manufactured-from-ingredients-to-packaging"
+          element={
+            <HowSportsSupplementsAreManufacturedFromIngredientstoPackaging />
+          }
+        />
+
+        <Route
+          path="/blogs/the-future-of-nutraceutical-manufacturing-in 2026-10-game-changing-trends-brands-cant-ignore"
+          element={
+            <TheFutureofNutraceuticalManufacturingin202610GameChangingTrendsBrandsCantIgnore />
+          }
+        />
+
+        <Route
+          path="/blogs/the-hidden-costs-of-starting-a-nutraceutical-brand"
+          element={<TheHiddenCostsofStartingaNutraceuticalBrand />}
+        />
 
         <Route
           path="/nutrition/gomzi-nutrition-refuel-mass-gainer-powder"
@@ -659,16 +702,14 @@ function App() {
           element={<ThankYouProductPage />}
         />
         <Route path="/nutrition/cart" element={<AddToCart />} />
-        {/* nutrition */}
-        {/* User Profile */}
+
         <Route path="/user/profile" element={<UserProfile />} />
         <Route path="/user/order" element={<UserOrder />} />
         <Route path="/invoice" element={<InvoicesList />} />
         <Route path="/invoice/:invoice_id" element={<InvoiceViewPage />} />
-        {/* Add a catch-all route for unmatched routes */}
+
         <Route path="*" element={<NotFoundPage />} />
 
-        {/* Refuel Series */}
         <Route path="/refuel-series" element={<RefuelSeries />} />
         <Route
           path="/gomzi-nutrition-retailer-combo"

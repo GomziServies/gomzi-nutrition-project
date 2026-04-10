@@ -12,7 +12,7 @@ import { Accordion } from "react-bootstrap";
 const faqData = [
   {
     eventKey: "faq1",
-    question: "Q: What makes a nutraceutical effective vs. just safe?",
+    question: "1: What makes a nutraceutical effective vs. just safe?",
     answer: (
       <>
         Effectiveness is driven by therapeutic dosage and bioavailability. While
@@ -26,7 +26,7 @@ const faqData = [
   {
     eventKey: "faq2",
     question:
-      "Q: How do I know if a white label products manufacturer is reliable?",
+      "2: How do I know if a white label products manufacturer is reliable?",
     answer: (
       <>
         Look for three things: <strong>Traceability</strong> (can they track the
@@ -38,7 +38,7 @@ const faqData = [
   },
   {
     eventKey: "faq3",
-    question: "Q: Is Clean Label mandatory in 2026?",
+    question: "3: Is Clean Label mandatory in 2026?",
     answer: (
       <>
         While not legally mandatory, it is <strong>"Market Mandatory."</strong>{" "}
@@ -51,7 +51,7 @@ const faqData = [
   {
     eventKey: "faq4",
     question:
-      "Q: What is the benefit of third-party manufacturing over owning a facility?",
+      "4: What is the benefit of third-party manufacturing over owning a facility?",
     answer: (
       <>
         It eliminates massive capital investment in machinery while giving you
@@ -63,7 +63,7 @@ const faqData = [
   {
     eventKey: "faq5",
     question:
-      "Q: Can you help with product approval under FSSAI's new 2026 standards?",
+      "5: Can you help with product approval under FSSAI's new 2026 standards?",
     answer: (
       <>
         Yes. We handle the technical documentation and ensure your formulations
@@ -74,7 +74,7 @@ const faqData = [
   },
   {
     eventKey: "faq6",
-    question: "Q: How do you handle bioavailability in your formulations?",
+    question: "6: How do you handle bioavailability in your formulations?",
     answer: (
       <>
         We use advanced delivery technologies like{" "}
@@ -86,7 +86,7 @@ const faqData = [
   },
   {
     eventKey: "faq7",
-    question: "Q: Is white labeling better for a new startup?",
+    question: "7: Is white labeling better for a new startup?",
     answer: (
       <>
         Yes. As a <strong>white label products manufacturer,</strong> we offer
@@ -97,7 +97,7 @@ const faqData = [
   },
   {
     eventKey: "faq8",
-    question: "Q: Do you offer Clean Label manufacturing?",
+    question: "8: Do you offer Clean Label manufacturing?",
     answer: (
       <>
         Absolutely. We prioritize removing synthetic fillers and artificial
@@ -186,14 +186,11 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -201,11 +198,7 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                       "/assets/images/nutrition/best-whey-protein-in-india-main.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -224,14 +217,16 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* Intro */}
                     <div className="blog-section">
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Launching a supplement brand in India requires more than
                         just a formula; it requires a strategic alliance.
                         Understanding{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/blogs/why-partnering-with-the-right-contract-manufacturer">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/blogs/why-partnering-with-the-right-contract-manufacturer"
+                          >
                             Why Partnering with the Right Contract Manufacturer
                             Matters for Your Brand
                           </Link>
@@ -239,16 +234,19 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                         , is the first step in ensuring your product meets
                         global safety standards.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         The Indian wellness landscape has shifted. By 2026, the
                         consumer is no longer just a buyer — they are a
                         "biohacker" looking for intentional, preventive, and
                         evidence-backed solutions.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         As one of the premier{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             nutraceutical companies in India
                           </Link>
                         </strong>
@@ -262,13 +260,11 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                       </p>
                     </div>
 
-                    {/* SECTION 1 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Educating Consumers on the "Science of Safety"
                       </h2>
 
-                      {/* IMAGE 1 - Below "Educating Consumers on the Science of Safety" heading */}
                       <div className="row">
                         <div className="col"></div>
                         <div className="col-lg-8 mt-3">
@@ -279,7 +275,7 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                             }
                             alt="Fggroup"
                             width="100%"
-                            style={{ borderRadius: "20px" }}
+                            className="br-20"
                           />
                         </div>
                         <div className="col"></div>
@@ -319,8 +315,6 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                         2. Decoding FSSAI & RDA Standards
                       </h3>
 
-                      {/* IMAGE 3 - Below "Decoding FSSAI & RDA Standards" heading */}
-
                       <div className="row">
                         <div className="col"></div>
                         <div className="col-lg-8 mt-3">
@@ -331,7 +325,7 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                             }
                             alt="Fggroup"
                             width="100%"
-                            style={{ borderRadius: "20px" }}
+                            className="br-20"
                           />
                         </div>
                         <div className="col"></div>
@@ -347,7 +341,10 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                           <strong>Clean Label Transparency:</strong> As a
                           dedicated{" "}
                           <strong>
-                            <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                            <Link
+                              className="blog-text-link"
+                              to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                            >
                               private label nutraceutical products manufacturer
                             </Link>
                           </strong>
@@ -364,13 +361,10 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                       </ul>
                     </div>
 
-                    {/* SECTION 2 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         2026 Trending Niches: Lead the Market
                       </h2>
-
-                      {/* IMAGE 4 - Below "2026 Trending Niches: Lead the Market" heading */}
 
                       <div className="row">
                         <div className="col"></div>
@@ -382,7 +376,7 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                             }
                             alt="Fggroup"
                             width="100%"
-                            style={{ borderRadius: "20px" }}
+                            className="br-20"
                           />
                         </div>
                         <div className="col"></div>
@@ -412,14 +406,12 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                       </ul>
                     </div>
 
-                    {/* SECTION 3 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Why Brands Choose Gomzilifesciences as Third-Party
                         Manufacturing in Surat
                       </h2>
 
-                      {/* IMAGE 5 - Below "Why Brands Choose Gomzilifesciences..." heading */}
                       <div className="row">
                         <div className="col"></div>
                         <div className="col-lg-8 mt-3">
@@ -430,7 +422,7 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                             }
                             alt="Fggroup"
                             width="100%"
-                            style={{ borderRadius: "20px" }}
+                            className="br-20"
                           />
                         </div>
                         <div className="col"></div>
@@ -445,7 +437,10 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                         <li>
                           <strong>Low MOQs for Startups:</strong> Test your{" "}
                           <strong>
-                            <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                            <Link
+                              className="blog-text-link"
+                              to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                            >
                               white label products
                             </Link>
                           </strong>{" "}
@@ -468,7 +463,6 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                       </ul>
                     </div>
 
-                    {/* SECTION 4 - FAQs */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         FAQ for Brand Owners & Consumers

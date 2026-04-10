@@ -36,7 +36,7 @@ function GomziNutritionIgniteFatBurner() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [activeSize, setActiveSize] = useState("250g");
   const [activeFlavor, setActiveFlavor] = useState("Fruit Punch");
-  const [opacity, setOpacity] = useState(1);
+  const [, setOpacity] = useState(1);
   const imageRef = useRef(null);
   const isAuthenticated = !!localStorage.getItem("fg_group_user_authorization");
   const canonicalUrl = window.location.href;
@@ -113,14 +113,6 @@ function GomziNutritionIgniteFatBurner() {
   };
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -129,10 +121,10 @@ function GomziNutritionIgniteFatBurner() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -151,7 +143,7 @@ function GomziNutritionIgniteFatBurner() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -160,37 +152,38 @@ function GomziNutritionIgniteFatBurner() {
     }
   };
 
-  const addProductInCart = async (data) => {
-    try {
-      const response = await axiosInstance.post("/order-cart/add-item", {
-        item_id: data.id,
-        quantity: 1,
-        item_type: "FG_MEAL_PRODUCT",
-      });
-      if (response.data.response === "OK") {
-        setProductData(data);
-        // setMenuOpen(!menuOpen);
-        window.location.href = "/nutrition/cart";
-        localStorage.removeItem("cartAvailable");
-        localStorage.removeItem("productCartAvailable");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const addProductInCart = async (data) => {
+      try {
+        const response = await axiosInstance.post("/order-cart/add-item", {
+          item_id: data.id,
+          quantity: 1,
+          item_type: "FG_MEAL_PRODUCT",
+        });
+        if (response.data.response === "OK") {
+          setProductData(data);
+          window.location.href = "/nutrition/cart";
+          localStorage.removeItem("cartAvailable");
+          localStorage.removeItem("productCartAvailable");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     const localData = JSON.parse(localStorage.getItem("productCartAvailable"));
     const dataAvailable = JSON.parse(localStorage.getItem("cartAvailable"));
     if (localData && dataAvailable) {
       addProductInCart(localData);
     }
+  }, []);
 
+  useEffect(() => {
     if (ProductFlavor) {
       setActiveFlavor(ProductFlavor);
       setCurrentProduct(`${activeSize}-${ProductFlavor}`);
     }
-  }, []);
+  }, [ProductFlavor, activeSize]);
 
   const closeVideoModal = () => {
     setIsVideoOpen(false);
@@ -208,7 +201,7 @@ function GomziNutritionIgniteFatBurner() {
     <>
       <Helmet>
         <title>
-          Gomzi Nutrition Ignite Fat Burner - Boost Metabolism & Burn Fat Fast
+          Gomzi Lifescience Ignite Fat Burner - Boost Metabolism & Burn Fat Fast
         </title>
         <meta
           name="description"
@@ -292,7 +285,7 @@ function GomziNutritionIgniteFatBurner() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Gomzi Nutrition Ignite Fat Burner. "
+          "Hello, I wanted to know more about Gomzi Lifescience Ignite Fat Burner. "
         }
         options={{ pageRef: true }}
       />
@@ -303,12 +296,8 @@ function GomziNutritionIgniteFatBurner() {
               <div className="col-12 p-0 px-md-3 px-xl-4 py-3 py-md-3 h-100 mt-5">
                 <div className="col-12 p-0 col-lg-7 h-100 mb-lg-0 px-0 px-md-3 product-detail-left">
                   <div
-                    className="product-image-container"
+                    className="product-image-container transition-opacity"
                     ref={imageRef}
-                    style={{
-                      opacity: opacity,
-                      transition: "opacity 0.3s ease-in-out",
-                    }}
                   >
                     <ProductPhotoSection1
                       images={productImages[currentProduct]}
@@ -354,18 +343,9 @@ function GomziNutritionIgniteFatBurner() {
                     </div>
                     <div className="col-9 pt-2">
                       <div className="d-inline-block">
-                        {/* <span className="d-inline-block mr-2 f-rob-bol f-20 text-red">
-                          {currentProductData.dis_point}
-                        </span> */}
                         <span className="d-inline-block mr-2 f-rob-bol f-22">
                           ₹{currentProductData.discount} /- GST included
                         </span>
-                        {/* <p className="f-20">
-                          MRP:-&nbsp;
-                          <span className="price--line-through">
-                            ₹ {currentProductData.price}
-                          </span>
-                        </p> */}
                       </div>
                     </div>
                     <div className="col-3 text-left text-md-right">
@@ -416,11 +396,6 @@ function GomziNutritionIgniteFatBurner() {
                                   </button>
                                 </Link>
                               </div>
-                              {/* <div className="common-button-amazon mx-2">
-                                <button className="bg-danger text-uppercase px-3 px-lg-5 py-3 text-white f-16 f-rob-bol">
-                                  Out Of Stock
-                                </button>
-                              </div> */}
                             </div>
                           </div>
                         </div>
@@ -481,7 +456,7 @@ function GomziNutritionIgniteFatBurner() {
                       >
                         <div className="descriptionShow text-secondary">
                           <p>
-                            <strong>Gomzi Nutrition Ignite Fat Burner</strong>
+                            <strong>Gomzi Lifescience Ignite Fat Burner</strong>
                           </p>
                           <p className="mb-3">
                             It will suppress your appetite and provide you with

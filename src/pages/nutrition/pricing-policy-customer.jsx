@@ -143,7 +143,7 @@ function PricingPolicyCustomer() {
                     </div>
                     {order?.user_meal_product?.tracking.some(
                       (trackingElem) =>
-                        trackingElem.shipment_status === "DELIVERED"
+                        trackingElem.shipment_status === "DELIVERED",
                     ) && (
                       <div className="col-12 meal">
                         <p className="mt-2 text-success f-20">
@@ -167,12 +167,6 @@ function PricingPolicyCustomer() {
                           </span>
                         </div>
                         <div className="price1">
-                          {/* <p className="my-3">
-                            ₹
-                            {order?.product?.price /
-                              order?.user_meal_product?.quantity}
-                            /-
-                          </p> */}
                           <span className="q1">
                             Quantity : {order?.user_meal_product?.quantity}{" "}
                           </span>
@@ -209,7 +203,7 @@ function PricingPolicyCustomer() {
                               className={`order-tracking ${
                                 order?.user_meal_product?.tracking.find(
                                   (trackingElem) =>
-                                    trackingElem.shipment_status === "PLACED"
+                                    trackingElem.shipment_status === "PLACED",
                                 )
                                   ? "completed"
                                   : ""
@@ -224,8 +218,8 @@ function PricingPolicyCustomer() {
                                     order?.user_meal_product?.tracking.find(
                                       (trackingElem) =>
                                         trackingElem.shipment_status ===
-                                        "PLACED"
-                                    )?.updatedAt
+                                        "PLACED",
+                                    )?.updatedAt,
                                   )}
                                 </span>
                               </p>
@@ -235,7 +229,7 @@ function PricingPolicyCustomer() {
                                 order?.user_meal_product?.tracking.find(
                                   (trackingElem) =>
                                     trackingElem.shipment_status ===
-                                    "DISPATCHED"
+                                    "DISPATCHED",
                                 )
                                   ? "completed"
                                   : ""
@@ -249,14 +243,14 @@ function PricingPolicyCustomer() {
                                   {order?.user_meal_product?.tracking.find(
                                     (trackingElem) =>
                                       trackingElem.shipment_status ===
-                                      "DISPATCHED"
+                                      "DISPATCHED",
                                   )
                                     ? convertDate(
                                         order?.user_meal_product?.tracking.find(
                                           (trackingElem) =>
                                             trackingElem.shipment_status ===
-                                            "DISPATCHED"
-                                        )?.updatedAt
+                                            "DISPATCHED",
+                                        )?.updatedAt,
                                       )
                                     : ""}
                                 </span>
@@ -266,7 +260,8 @@ function PricingPolicyCustomer() {
                               className={`order-tracking ${
                                 order?.user_meal_product?.tracking.find(
                                   (trackingElem) =>
-                                    trackingElem.shipment_status === "DELIVERED"
+                                    trackingElem.shipment_status ===
+                                    "DELIVERED",
                                 )
                                   ? "completed"
                                   : ""
@@ -280,14 +275,14 @@ function PricingPolicyCustomer() {
                                   {order?.user_meal_product?.tracking.find(
                                     (trackingElem) =>
                                       trackingElem.shipment_status ===
-                                      "DELIVERED"
+                                      "DELIVERED",
                                   )
                                     ? convertDate(
                                         order?.user_meal_product?.tracking.find(
                                           (trackingElem) =>
                                             trackingElem.shipment_status ===
-                                            "DELIVERED"
-                                        )?.updatedAt
+                                            "DELIVERED",
+                                        )?.updatedAt,
                                       )
                                     : ""}
                                 </span>
@@ -310,13 +305,13 @@ function PricingPolicyCustomer() {
               <div className="row">
                 <div className="col-12 pt-4 text-left">
                   <h1 className="f-rob-bol f-30 mb-2 text-black text-uppercase">
-                    <b>Pricing Policy for Gomzi Nutrition</b>
+                    <b>Pricing Policy for Gomzi Lifescience</b>
                   </h1>
                 </div>
                 <div className="col-12 text-center mb-4 px-4">
                   <div className="ql-editor text-left mt-3">
                     <p className="mb-2">
-                      At Gomzi Nutrition, we strive to provide our customers
+                      At Gomzi Lifescience, we strive to provide our customers
                       with transparent and fair pricing for our high-quality
                       nutraceutical products. This Pricing Policy outlines how
                       we determine and display prices on our website, including
@@ -396,7 +391,7 @@ function PricingPolicyCustomer() {
                       <br />
                     </p>
                     <p className="mb-2">
-                      Thank you for choosing Gomzi Nutrition! We are dedicated
+                      Thank you for choosing Gomzi Lifescience! We are dedicated
                       to providing you with the best products and services to
                       support your health and wellness journey. We appreciate
                       your understanding of our pricing policy and look forward

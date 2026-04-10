@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
@@ -8,6 +7,7 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
+import "../../../assets/css/nutrition.css";
 
 function HomeFooter() {
   const [visibleCount, setVisibleCount] = useState(2);
@@ -6425,10 +6425,7 @@ function HomeFooter() {
   return (
     <>
       <footer>
-        <div
-          className="container-fluid pt-5 pb-3"
-          style={{ backgroundColor: "black" }}
-        >
+        <div className="container-fluid pt-5 pb-3 bg-black ">
           <div className="container ">
             <div className="row ">
               <div className="col-md-3 f1 f2">
@@ -6530,9 +6527,9 @@ function HomeFooter() {
                   <iframe
                     title="Fg Group"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.3152737271894!2d72.770764!3d21.139848000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0530a562711f1%3A0x3f5ec296b19e2f33!2sFGIIT%20-%20Nutrition%20%26%20Dietitian%20Courses%20In%20Surat%2C%20Personal%20Trainer%20Courses%20In%20Surat%2C%20Diploma%20Courses%20In%20Surat!5e0!3m2!1sen!2sin!4v1711457729537!5m2!1sen!2sin"
-                    style={{ border: "0", borderRadius: "10px" }}
                     allowfullscreen=""
                     loading="lazy"
+                    className="border-none br-10"
                     referrerpolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </div>
@@ -6619,9 +6616,8 @@ function HomeFooter() {
                 {links2.slice(0, visibleCount)}{" "}
                 {visibleCount < links.length && (
                   <p
-                    className="text-white w-100 read-more-but"
+                    className="text-white w-100 read-more-but cp"
                     onClick={moreKeyword}
-                    style={{ cursor: "pointer" }}
                   >
                     Read More
                   </p>

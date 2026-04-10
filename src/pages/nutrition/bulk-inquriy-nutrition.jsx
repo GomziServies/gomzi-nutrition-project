@@ -45,7 +45,7 @@ function BulkInquiryNutrition() {
         window.location.href,
         null,
         null,
-        null
+        null,
       );
       setName("");
       setEmail("");
@@ -77,7 +77,7 @@ function BulkInquiryNutrition() {
     <>
       <Helmet>
         <title>
-          Bulk Nutrition Supplements - Gomzi Nutrition Wholesale & Bulk Orders
+          Bulk Nutrition Supplements - Gomzi Lifescience Wholesale & Bulk Orders
         </title>
         <meta
           name="description"
@@ -215,9 +215,6 @@ function BulkInquiryNutrition() {
                             <ul className="list-unstyled">
                               <li className="d-block mb-3">
                                 <div className="mb-2 ql-editor descriptionShow text-secondary">
-                                  {/* <p className="ql-align-justify mb-2">
-                                                                        - For bulk Enquiry, Distributor have to Given minimum order quantity of 200 Kg
-                                                                    </p> */}
                                   <p className="ql-align-justify mb-3 mt-3">
                                     - Distributor will get 30% discount on the
                                     purchase order.
@@ -256,9 +253,6 @@ function BulkInquiryNutrition() {
                             <ul className="list-unstyled">
                               <li className="d-block mb-3">
                                 <div className="mb-2 ql-editor descriptionShow text-secondary">
-                                  {/* <p className="ql-align-justify mb-2">
-                                                                        - For bulk Enquiry, Distributor have to Given minimum order quantity of 200 Kg
-                                                                    </p> */}
                                   <p className="ql-align-justify mb-3 mt-3">
                                     - Distributor will get 30% discount on the
                                     purchase order.
@@ -297,9 +291,6 @@ function BulkInquiryNutrition() {
                             <ul className="list-unstyled">
                               <li className="d-block mb-3">
                                 <div className="mb-2 ql-editor descriptionShow text-secondary">
-                                  {/* <p className="ql-align-justify mb-2">
-                                                                        - For bulk Enquiry, Distributor have to Given minimum order quantity of 200 Kg
-                                                                    </p> */}
                                   <p className="ql-align-justify mb-3 mt-3">
                                     - Distributor will get 30% discount on the
                                     purchase order.
@@ -338,9 +329,6 @@ function BulkInquiryNutrition() {
                             <ul className="list-unstyled">
                               <li className="d-block mb-3">
                                 <div className="mb-2 ql-editor descriptionShow text-secondary">
-                                  {/* <p className="ql-align-justify mb-2">
-                                                                        - For bulk Enquiry, Distributor have to Given minimum order quantity of 200 Kg
-                                                                    </p> */}
                                   <p className="ql-align-justify mb-3 mt-3">
                                     - Distributor will get 30% discount on the
                                     purchase order.

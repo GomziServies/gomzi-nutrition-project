@@ -45,7 +45,7 @@ Training_Gym: ${traininggym}`;
         window.location.href,
         null,
         null,
-        null
+        null,
       );
       setName("");
       setEmail("");
@@ -73,7 +73,6 @@ Training_Gym: ${traininggym}`;
     }
   };
 
-  // Owl Carousel options
   const carouselOptions = {
     loop: true,
     autoplay: true,

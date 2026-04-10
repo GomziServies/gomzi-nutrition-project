@@ -30,12 +30,12 @@ function AddToCart(productData) {
     setLoading(true);
     try {
       const response = await axiosInstance.get(
-        "/order-cart/get-carts?item_type=FG_MEAL_PRODUCT&is_purchase=true"
+        "/order-cart/get-carts?item_type=FG_MEAL_PRODUCT&is_purchase=true",
       );
       const serverData = response.data.data[0];
       setServerDataID(serverData._id);
       const existingData = JSON.parse(
-        localStorage.getItem("addItemInCart")
+        localStorage.getItem("addItemInCart"),
       ) || { products: [] };
 
       const priceMap = existingData.products.reduce((map, product) => {
@@ -46,14 +46,9 @@ function AddToCart(productData) {
       const itemDataForGetQty = serverData?.items || [];
       const itemDataForGetImgName = serverData?.items_details || [];
 
-      // if (!itemDataForGetQty.length || !itemDataForGetImgName.length) {
-      //   console.error("No items or item details found in the response.");
-      //   return;
-      // }
-
       const combinedData = itemDataForGetQty.map((item) => {
         const itemDetails = itemDataForGetImgName.find(
-          (details) => details._id === item.item_id
+          (details) => details._id === item.item_id,
         );
         if (!itemDetails) {
           console.warn(`No details found for item with id: ${item.item_id}`);
@@ -102,7 +97,7 @@ function AddToCart(productData) {
   const totalAmountCalculation = (data) => {
     const amount = data.reduce(
       (sum, product) => sum + product.price * product.quantity,
-      0
+      0,
     );
     setTotalAmount(amount || 0);
   };
@@ -110,16 +105,16 @@ function AddToCart(productData) {
   const handleRemoveProduct = async (cart_id, product_id) => {
     try {
       await axiosInstance.delete(
-        `/order-cart/remove-item?item_id=${product_id}&cart_id=${serverDataID}`
+        `/order-cart/remove-item?item_id=${product_id}&cart_id=${serverDataID}`,
       );
       setProductDataGet((prevData) =>
-        prevData.filter((product) => product._id !== cart_id)
+        prevData.filter((product) => product._id !== cart_id),
       );
       const existingData = JSON.parse(
-        localStorage.getItem("addItemInCart")
+        localStorage.getItem("addItemInCart"),
       ) || { products: [] };
       existingData.products = existingData.products.filter(
-        (product) => product.product_id !== product_id
+        (product) => product.product_id !== product_id,
       );
       localStorage.setItem("addItemInCart", JSON.stringify(existingData));
       fetchProductData();
@@ -137,10 +132,10 @@ function AddToCart(productData) {
   const toggleMenu = async (data) => {
     try {
       const existingData = JSON.parse(
-        localStorage.getItem("addItemInCart")
+        localStorage.getItem("addItemInCart"),
       ) || { products: [] };
       const productExists = existingData.products.some(
-        (product) => product.product_id === data.id
+        (product) => product.product_id === data.id,
       );
 
       if (!productExists) {
@@ -172,7 +167,7 @@ function AddToCart(productData) {
       const updatedData = prevData.map((product) =>
         product._id === productId
           ? { ...product, quantity: Math.max(1, product.quantity - 1) }
-          : product
+          : product,
       );
       const changedProducts = updatedData.filter((product) => {
         const originalProduct = prevData.find((p) => p._id === product._id);
@@ -192,7 +187,7 @@ function AddToCart(productData) {
       const updatedData = prevData.map((product) =>
         product._id === productId
           ? { ...product, quantity: product.quantity + 1 }
-          : product
+          : product,
       );
 
       const changedProducts = updatedData.filter((product) => {
@@ -287,7 +282,7 @@ function AddToCart(productData) {
     try {
       const changedProducts = productDataGet.filter((currentProduct) => {
         const previousProduct = previousProductData.find(
-          (p) => p._id === currentProduct._id
+          (p) => p._id === currentProduct._id,
         );
         return (
           previousProduct &&
@@ -303,7 +298,7 @@ function AddToCart(productData) {
 
         const response = await axiosInstance.post(
           "/order-cart/add-item",
-          changedProducts[0]
+          changedProducts[0],
         );
 
         if (response.data.status === 200) {
@@ -314,7 +309,7 @@ function AddToCart(productData) {
               products,
               totalAmount,
               totalMRP,
-            })
+            }),
           );
 
           window.location.href = `/nutrition/check-out`;
@@ -331,7 +326,7 @@ function AddToCart(productData) {
             products,
             totalAmount,
             totalMRP,
-          })
+          }),
         );
 
         window.location.href = `/nutrition/check-out`;
@@ -366,11 +361,11 @@ function AddToCart(productData) {
     <>
       <Helmet>
         <title>
-          Gomzi Nutrition | Best Whey Protein in India | Premium Supplements
+          Gomzi Lifescience | Best Whey Protein in India | Premium Supplements
         </title>
         <meta
           name="description"
-          content="Discover Gomzi Nutrition, your go-to destination for the best whey protein and premium nutrition supplements in India. Boost your fitness journey with our high-quality products tailored for muscle growth, weight loss, and overall health."
+          content="Discover Gomzi Lifescience, your go-to destination for the best whey protein and premium nutrition supplements in India. Boost your fitness journey with our high-quality products tailored for muscle growth, weight loss, and overall health."
         />
         <meta
           name="keyword"
@@ -406,7 +401,6 @@ function AddToCart(productData) {
         <meta property="og:url" content={canonicalUrl} />
         <link rel="canonical" href={canonicalUrl} />
 
-        {/* Preconnect to Facebook CDN */}
         <link rel="preconnect" href="https://connect.facebook.net" />
 
         <script>
@@ -435,7 +429,6 @@ function AddToCart(productData) {
           as="image"
         />
 
-        {/* Google tag (gtag.js) */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38"
@@ -450,18 +443,10 @@ function AddToCart(productData) {
           `}
         </script>
       </Helmet>
-      {/* <WhatsappHeaderApp
-        message={
-          "Hello, I wanted to know more about all Gomzi Nutrition Products. "
-        }
-        options={{ pageRef: true }}
-      /> */}
+
       <NutritionHeader />
       <div className="my-auto">
-        <section
-          className="product-tabination bg-secondaryyyy"
-          style={{ marginTop: "100px" }}
-        >
+        <section className="product-tabination bg-secondaryyyy mt-100">
           <div className="container-fluid w-80">
             <div className="row py-4">
               {loading ? (
@@ -523,13 +508,8 @@ function AddToCart(productData) {
                                                     id="txt_quantity"
                                                     value={product.quantity}
                                                     min="1"
-                                                    className="mb-0"
+                                                    className="mb-0 br-5-w-45-h-30 "
                                                     readOnly
-                                                    style={{
-                                                      borderRadius: "5px",
-                                                      width: "45px",
-                                                      height: "30px",
-                                                    }}
                                                   />
                                                 </Form.Group>
                                                 <i
@@ -554,16 +534,11 @@ function AddToCart(productData) {
                                               <div className="remove text-right">
                                                 <button
                                                   type="button"
-                                                  className="closess mr-3 closse-mobile p-0"
-                                                  style={{
-                                                    backgroundColor:
-                                                      "transparent",
-                                                    border: "none",
-                                                  }}
+                                                  className="closess mr-3 closse-mobile p-0 bg-transparent border-none"
                                                   onClick={() =>
                                                     handleRemoveProduct(
                                                       product._id,
-                                                      product.items_id
+                                                      product.items_id,
                                                     )
                                                   }
                                                   aria-label="Remove"
@@ -593,7 +568,6 @@ function AddToCart(productData) {
                                 </div>
                               </div>
                             </div>
-                            {/* <div ref={loadMoreRef} style={{ height: "1px" }}></div> */}
                           </div>
                         </section>
                       </div>
@@ -605,10 +579,6 @@ function AddToCart(productData) {
                             isOpen ? "open" : ""
                           }`}
                           aria-hidden={!isOpen}
-                          style={{
-                            height: isOpen ? "auto" : "0px",
-                            overflow: "hidden",
-                          }}
                           id="opendata"
                         >
                           <div className="ReactCollapse--content">
@@ -767,9 +737,8 @@ function AddToCart(productData) {
                   {products.map((product, index) => (
                     <div className="item" key={index}>
                       <div
-                        className="d-inline-block"
+                        className="d-inline-block w-100-display-inline-block"
                         tabIndex="-1"
-                        style={{ width: "100%", display: "inline-block" }}
                       >
                         <div className="col-12 nutri-product mb-3">
                           <div className="pb-3 border text-center bg-white br-15 p-2 d-flex flex-wrap justify-content-center cart-more-product">
@@ -801,13 +770,7 @@ function AddToCart(productData) {
                             <div className="col-12">
                               <div className="d-flex align-items-center justify-content-center my-2">
                                 <span className="d-flex product-rating f-14 text-secondary">
-                                  <i
-                                    className="fas fa-star mr-2"
-                                    style={{
-                                      color: "#fcae2a",
-                                      lineHeight: "1.5",
-                                    }}
-                                  ></i>
+                                  <i className="fas fa-star mr-2 rating-star"></i>
                                   {product.rating}
                                 </span>
                               </div>

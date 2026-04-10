@@ -3,13 +3,14 @@ import { InnerImageZoom } from "react-inner-image-zoom";
 import "react-inner-image-zoom/lib/InnerImageZoom/styles.min.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import "../../assets/css/nutrition.css";
 
 function ProductPhotoSection1({
   images,
   activeImageIndex,
   setActiveImageIndex,
 }) {
-  const [opacity, setOpacity] = useState(1);
+  const [, setOpacity] = useState(1);
   const [prevIndex, setPrevIndex] = useState(activeImageIndex);
   const imageRef = useRef(null);
 
@@ -35,13 +36,7 @@ function ProductPhotoSection1({
         <div className="row">
           <div className="col-12">
             <div className="main-image text-center">
-              <div
-                style={{
-                  transition: "opacity 0.5s ease-in-out",
-                  opacity: opacity,
-                }}
-                ref={imageRef}
-              >
+              <div className="transition-opacity" ref={imageRef}>
                 <InnerImageZoom
                   src={images[prevIndex]}
                   zoomSrc={images[prevIndex]}
@@ -59,28 +54,19 @@ function ProductPhotoSection1({
               {images.map((image, index) => (
                 <div
                   key={index}
-                  className={`thumbnail-image ${index === activeImageIndex ? "active" : ""
-                    }`}
+                  className={`thumbnail-image ${
+                    index === activeImageIndex ? "active" : ""
+                  }`}
                   onClick={() => setActiveImageIndex(index)}
                 >
                   <div className="d-flex">
                     <div className="col-12 px-4 mt-4 text-center">
-                      <div
-                        style={{
-                          width: "100%",
-                          height: "auto",
-                          cursor: "pointer",
-                        }}
-                      >
+                      <div className="w-100-h-auto cp">
                         <LazyLoadImage
                           src={image}
                           alt="FG Group"
                           effect="blur"
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "contain",
-                          }}
+                          className="w-100-h-100-objectfit "
                         />
                       </div>
                     </div>
@@ -95,13 +81,7 @@ function ProductPhotoSection1({
         <div className="row">
           <div className="col-12">
             <div className="main-image text-center">
-              <div
-                style={{
-                  transition: "opacity 0.5s ease-in-out",
-                  opacity: opacity,
-                }}
-                ref={imageRef}
-              >
+              <div className="transition-opacity" ref={imageRef}>
                 <img src={images[prevIndex]} alt="FG Group" width="100%" />
               </div>
             </div>
@@ -111,28 +91,19 @@ function ProductPhotoSection1({
               {images.map((image, index) => (
                 <div
                   key={index}
-                  className={`thumbnail-image ${index === activeImageIndex ? "active" : ""
-                    }`}
+                  className={`thumbnail-image ${
+                    index === activeImageIndex ? "active" : ""
+                  }`}
                   onClick={() => setActiveImageIndex(index)}
                 >
                   <div className="d-flex">
                     <div className="col-12 px-2 mt-4 text-center">
-                      <div
-                        style={{
-                          width: "100%",
-                          height: "auto",
-                          cursor: "pointer",
-                        }}
-                      >
+                      <div className="w-100-h-auto cp">
                         <LazyLoadImage
                           src={image}
                           alt="FG Group"
                           effect="blur"
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "contain",
-                          }}
+                          className="w-100-h-100-objectfit "
                         />
                       </div>
                     </div>

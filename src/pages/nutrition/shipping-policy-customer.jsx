@@ -143,7 +143,7 @@ function ShippingPolicyCustomer() {
                     </div>
                     {order?.user_meal_product?.tracking.some(
                       (trackingElem) =>
-                        trackingElem.shipment_status === "DELIVERED"
+                        trackingElem.shipment_status === "DELIVERED",
                     ) && (
                       <div className="col-12 meal">
                         <p className="mt-2 text-success f-20">
@@ -167,12 +167,6 @@ function ShippingPolicyCustomer() {
                           </span>
                         </div>
                         <div className="price1">
-                          {/* <p className="my-3">
-                            ₹
-                            {order?.product?.price /
-                              order?.user_meal_product?.quantity}
-                            /-
-                          </p> */}
                           <span className="q1">
                             Quantity : {order?.user_meal_product?.quantity}{" "}
                           </span>
@@ -209,7 +203,7 @@ function ShippingPolicyCustomer() {
                               className={`order-tracking ${
                                 order?.user_meal_product?.tracking.find(
                                   (trackingElem) =>
-                                    trackingElem.shipment_status === "PLACED"
+                                    trackingElem.shipment_status === "PLACED",
                                 )
                                   ? "completed"
                                   : ""
@@ -224,8 +218,8 @@ function ShippingPolicyCustomer() {
                                     order?.user_meal_product?.tracking.find(
                                       (trackingElem) =>
                                         trackingElem.shipment_status ===
-                                        "PLACED"
-                                    )?.updatedAt
+                                        "PLACED",
+                                    )?.updatedAt,
                                   )}
                                 </span>
                               </p>
@@ -235,7 +229,7 @@ function ShippingPolicyCustomer() {
                                 order?.user_meal_product?.tracking.find(
                                   (trackingElem) =>
                                     trackingElem.shipment_status ===
-                                    "DISPATCHED"
+                                    "DISPATCHED",
                                 )
                                   ? "completed"
                                   : ""
@@ -249,14 +243,14 @@ function ShippingPolicyCustomer() {
                                   {order?.user_meal_product?.tracking.find(
                                     (trackingElem) =>
                                       trackingElem.shipment_status ===
-                                      "DISPATCHED"
+                                      "DISPATCHED",
                                   )
                                     ? convertDate(
                                         order?.user_meal_product?.tracking.find(
                                           (trackingElem) =>
                                             trackingElem.shipment_status ===
-                                            "DISPATCHED"
-                                        )?.updatedAt
+                                            "DISPATCHED",
+                                        )?.updatedAt,
                                       )
                                     : ""}
                                 </span>
@@ -266,7 +260,8 @@ function ShippingPolicyCustomer() {
                               className={`order-tracking ${
                                 order?.user_meal_product?.tracking.find(
                                   (trackingElem) =>
-                                    trackingElem.shipment_status === "DELIVERED"
+                                    trackingElem.shipment_status ===
+                                    "DELIVERED",
                                 )
                                   ? "completed"
                                   : ""
@@ -280,14 +275,14 @@ function ShippingPolicyCustomer() {
                                   {order?.user_meal_product?.tracking.find(
                                     (trackingElem) =>
                                       trackingElem.shipment_status ===
-                                      "DELIVERED"
+                                      "DELIVERED",
                                   )
                                     ? convertDate(
                                         order?.user_meal_product?.tracking.find(
                                           (trackingElem) =>
                                             trackingElem.shipment_status ===
-                                            "DELIVERED"
-                                        )?.updatedAt
+                                            "DELIVERED",
+                                        )?.updatedAt,
                                       )
                                     : ""}
                                 </span>
@@ -310,7 +305,7 @@ function ShippingPolicyCustomer() {
               <div className="row">
                 <div className="col-12 pt-4 text-left">
                   <h1 className="f-rob-bol f-30 mb-2 text-black text-uppercase">
-                    <b>Shipping Policy for Gomzi Nutrition</b>
+                    <b>Shipping Policy for Gomzi Lifescience</b>
                   </h1>
                 </div>
                 <div className="col-12 text-center mb-4 px-4">

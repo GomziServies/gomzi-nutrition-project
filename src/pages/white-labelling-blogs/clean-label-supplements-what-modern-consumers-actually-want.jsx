@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
-import "../../assets/css/blog.css"; // Import the new blog CSS
+import "../../assets/css/blog.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -157,14 +157,11 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15 ">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -172,11 +169,7 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                       "/assets/images/white-labelling-blogs/what-supplements-1.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main "
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -195,25 +188,24 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* Intro */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         From Idea to Product: Complete Timeline Guide
                       </h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         <strong>Clean Label Supplements</strong> are the new
                         gold standard in the Indian nutraceutical market, moving
                         away from "proprietary blends" toward total transparency
                         and simplicity.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         In an era where consumers are increasingly wary of
                         artificial fillers, synthetic dyes, and hidden
                         chemicals, a clean label signifies that a product
                         contains only essential, high-quality ingredients that
                         are easy to recognize and understand.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         For a brand, this means prioritizing non-GMO sourcing,
                         eliminating artificial sweeteners like aspartame, and
                         ensuring that every claim — from "grass-fed whey" to
@@ -231,19 +223,18 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                           </em>
                         </p>
                       </blockquote>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         The answer depends on multiple factors such as
                         formulation, ingredient sourcing, manufacturing
                         timelines, packaging, and regulatory approvals.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         With the right planning and an experienced manufacturing
                         partner, you can significantly speed up the process
                         without compromising quality.
                       </p>
                     </div>
 
-                    {/* Understanding the Supplement Launch Timeline */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Understanding the Supplement Launch Timeline
@@ -274,7 +265,6 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                       </p>
                     </div>
 
-                    {/* Step 1 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Step 1: Idea &amp; Product Formulation
@@ -312,7 +302,6 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                       </p>
                     </div>
 
-                    {/* Step 2 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Step 2: Ingredient Sourcing
@@ -338,7 +327,6 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                       </p>
                     </div>
 
-                    {/* Step 3 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Step 3: Manufacturing Process
@@ -346,7 +334,10 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                       <p className="blog-text">
                         Manufacturers follow strict quality standards such as{" "}
                         <strong>
-                          <Link to="https://www.who.int/">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.who.int/"
+                          >
                             Good Manufacturing Practices (GMP guidelines){" "}
                           </Link>
                         </strong>
@@ -381,7 +372,6 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                       </ul>
                     </div>
 
-                    {/* Step 4 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Step 4: Packaging &amp; Labeling
@@ -398,7 +388,7 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                       <h3 className="blog-subsection-title">
                         Time Required: 2–3 weeks
                       </h3>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Labels must comply with regulatory guidelines such as
                         ingredient disclosure and dosage instructions.{" "}
                       </p>
@@ -409,7 +399,10 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                         <li>
                           FSSAI labeling guidelines:{" "}
                           <strong>
-                            <Link to="https://www.fssai.gov.in/">
+                            <Link
+                              className="blog-text-link"
+                              to="https://www.fssai.gov.in/"
+                            >
                               https://www.fssai.gov.in
                             </Link>
                           </strong>
@@ -417,7 +410,6 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                       </ul>
                     </div>
 
-                    {/* Step 5 */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Step 5: Product Ready for Market
@@ -442,7 +434,6 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                       </ul>
                     </div>
 
-                    {/* Factors That Affect Launch Speed */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Factors That Affect Your Launch Speed
@@ -497,7 +488,6 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                       </ul>
                     </div>
 
-                    {/* FAQs */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">FAQs</h2>
 
@@ -519,32 +509,22 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                       </Accordion>
                     </div>
 
-                    {/* Conclusion */}
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <h2 className="blog-section-title">Conclusion</h2>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           Launching a supplement brand doesn't have to take
                           years. With the right planning and manufacturing
                           partner, you can go from{" "}
                           <strong>idea to market in just a few weeks</strong>.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           The key is balancing{" "}
                           <strong>speed, quality, and compliance</strong> to
                           build a successful and trusted brand.
                         </p>
 
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           <strong>
                             Ready to Launch Your Supplement Brand?
                           </strong>

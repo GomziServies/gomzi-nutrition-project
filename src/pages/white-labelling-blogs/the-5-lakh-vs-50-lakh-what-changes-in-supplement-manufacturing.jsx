@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../assets/css/nutrition.css";
-import "../../assets/css/blog.css"; // Import the new blog CSS
+import "../../assets/css/blog.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -178,14 +178,11 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
           </div>
         </section>
       </div>
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
-          <div className="container-fluid  p-0" style={{ width: "95%" }}>
+          <div className="container-fluid  p-0 w-95">
             <div className="row">
-              <div
-                className="col-12 text-center"
-                style={{ padding: "0px 15px" }}
-              >
+              <div className="col-12 text-center p-0-p-15">
                 <div className="details-banner-img position-relative">
                   <img
                     src={
@@ -193,11 +190,7 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
                       "/assets/images/white-labelling-blogs/what-supplements-1.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                    }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -216,29 +209,31 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
               <div className="col-12 text-center mb-4 px-4">
                 <div className="ql-editor text-left mt-5">
                   <div className="blog-container">
-                    {/* Intro */}
                     <div className="blog-section">
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Starting a supplement brand in India is easier than ever
                         but one question confuses almost every beginner:
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         <i>
                           Should you start small with ₹5 lakh, or go big with
                           ₹50 lakh?
                         </i>
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         The answer isn't just about money. It's about{" "}
                         <strong>
                           how your entire brand is built from day one
                         </strong>
                         .
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Whether you're working with{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/nutrition/white-labelling">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/nutrition/white-labelling"
+                          >
                             supplement manufacturers in India{" "}
                           </Link>
                         </strong>
@@ -246,12 +241,11 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
                         impacts your product quality, branding, and long-term
                         success.
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         Let's break this down in a simple, practical way.
                       </p>
                     </div>
 
-                    {/* The Reality Most People Don't Understand */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The Reality Most People Don't Understand
@@ -271,7 +265,6 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
                       </p>
                     </div>
 
-                    {/* ₹5 Lakh Budget */}
                     <div className="blog-section">
                       <h3 className="blog-section-title">
                         ₹5 LAKH BUDGET: STARTING SMALL, TESTING SMART
@@ -323,7 +316,7 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
                       <h3 className="blog-subsection-title">
                         4. Limited Brand Differentiation
                       </h3>
-                      <p className="blog-text" style={{ marginBottom: "5px" }}>
+                      <p className="blog-text mb-5px">
                         At this level, your product may look similar to others.
                       </p>
 
@@ -349,7 +342,6 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
                       </ul>
                     </div>
 
-                    {/* ₹50 Lakh Budget */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         ₹50 LAKH BUDGET: BUILDING A SERIOUS BRAND
@@ -430,7 +422,6 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
                       </ul>
                     </div>
 
-                    {/* Comparison Table */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         ₹5 LAKH vs ₹50 LAKH – SIMPLE COMPARISON
@@ -499,13 +490,12 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
                       </div>
                     </div>
 
-                    {/* Strategy Behind Both Budgets */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         The Strategy Behind Both Budgets
                       </h2>
                       <p className="blog-text">₹5 lakh is not "small".</p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">
                         ₹50 lakh is not "guaranteed success".
                       </p>
                       <p className="blog-text">
@@ -531,25 +521,19 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
                       </ul>
                     </div>
 
-                    {/* A Common Mistake */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">A Common Mistake</h2>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
-                        Many people think:
-                      </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
+                      <p className="blog-text mb-8">Many people think:</p>
+                      <p className="blog-text mb-8">
                         <i>"If I invest more, I'll automatically succeed"</i>
                       </p>
-                      <p className="blog-text" style={{ marginBottom: "8px" }}>
-                        But in reality:
-                      </p>
+                      <p className="blog-text mb-8">But in reality:</p>
                       <ul className="blog-list">
                         <li>A well-marketed ₹5 lakh product can outperform</li>
                         <li>A poorly positioned ₹50 lakh brand can fail</li>
                       </ul>
                     </div>
 
-                    {/* What Manufacturers Actually See */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         What Manufacturers Actually See
@@ -569,7 +553,10 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
                       <p className="blog-text">
                         Especially in categories like{" "}
                         <strong>
-                          <Link to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements">
+                          <Link
+                            className="blog-text-link"
+                            to="https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements"
+                          >
                             white label pre workout{" "}
                           </Link>
                         </strong>
@@ -579,7 +566,6 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
                       </p>
                     </div>
 
-                    {/* Which One Should You Choose */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">
                         Which One Should You Choose?
@@ -604,32 +590,19 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
                       </ul>
                     </div>
 
-                    {/* Conclusion */}
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <h2 className="blog-section-title">Final Thought</h2>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           ₹5 lakh helps you <strong>enter the market</strong>.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           ₹50 lakh helps you <strong>dominate it</strong>.
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           But the smartest path?
                         </p>
-                        <p
-                          className="blog-text"
-                          style={{ marginBottom: "5px" }}
-                        >
+                        <p className="blog-text mb-5px">
                           <strong>
                             Start small → Learn → Scale strategically
                           </strong>
@@ -637,7 +610,6 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
                       </div>
                     </div>
 
-                    {/* FAQs */}
                     <div className="blog-section">
                       <h2 className="blog-section-title">FAQs</h2>
 

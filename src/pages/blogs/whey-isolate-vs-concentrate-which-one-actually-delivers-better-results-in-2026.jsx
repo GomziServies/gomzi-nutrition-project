@@ -17,10 +17,6 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
 
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
-  const openVideoModal = (url) => {
-    setIsVideoOpen(true);
-    setVideoUrl(url);
-  };
 
   const closeVideoModal = () => {
     setIsVideoOpen(false);
@@ -90,7 +86,7 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                 gtag('config', 'G-J50WNKGW38');`}</noscript>
       </Helmet>
       <NutritionHeader />
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
           <div className="container-fluid w-80 p-0">
             <div className="row">
@@ -102,8 +98,7 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                       "/assets/images/nutrition/Depositphotos_146062285_S.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{ borderRadius: "20px", overflow: "hidden" }}
+                    className="img-fluid w-100 mh-200 object-fit blog-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -205,7 +200,7 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                           }
                           alt="Fggroup"
                           width="100%"
-                          style={{ borderRadius: "20px" }}
+                          className="br-15"
                         />
                       </div>
                       <div className="col"></div>
@@ -276,68 +271,8 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                       <strong>best Whey Protein Brand</strong> in India by
                       combining pharmaceutical-grade manufacturing with a
                       transparent supply chain. Watch our brand story here:
-                      Gomzi Nutrition: Honest Pricing for Your Health.{" "}
+                      Gomzi Lifescience: Honest Pricing for Your Health.{" "}
                     </p>
-
-                    {/* <div className="row">
-                      <div className="col"></div>
-                      <div className="col-lg-8 mt-3">
-                        <div
-                          style={{
-                            position: "relative",
-                            paddingBottom: "56.25%",
-                            height: "0",
-                            overflow: "hidden",
-                            maxWidth: "100%",
-                            borderRadius: "10px",
-                          }}
-                        >
-                          <iframe
-                            src="https://www.youtube.com/embed/49BnVVhBrFI"
-                            title="FG Group Video"
-                            style={{
-                              position: "absolute",
-                              top: "0",
-                              left: "0",
-                              width: "100%",
-                              height: "100%",
-                              borderRadius: "10px",
-                            }}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          ></iframe>
-                        </div>
-                      </div>
-                      <div className="col"></div>
-                    </div> */}
-                    <div className="row">
-                      <div className="col"></div>
-                      <div className="col-lg-8 mt-3">
-                        <div className="ply position-relative">
-                          <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/assets/images/nutrition/nutri-review-video-1.webp"
-                            }
-                            width="100%"
-                            className="border-radius-20"
-                            alt="fggroup"
-                          />
-                          <div className="video-btn play-btn">
-                            <button
-                              onClick={() => openVideoModal("49BnVVhBrFI")}
-                              className="custom clickof video-button-bg"
-                              aria-label="Play video 1"
-                            >
-                              <span className="newthing">
-                                <i className="fas fa-play"></i>
-                              </span>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col"></div>
-                    </div>
                   </div>
 
                   <div>
@@ -371,7 +306,8 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                       </li>
                       <li>
                         In 2026, the trend is moving toward transparency knowing
-                        exactly what is inside your tub and how it was filtered.{" "}
+                        exactly what is inside your tub and how it was
+                        filtered.{" "}
                       </li>
                     </ul>
                   </div>
@@ -445,7 +381,8 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                       <strong>nootropic-infused energy formulas </strong> and{" "}
                       <strong>electrolyte-balanced hydration drinks</strong>{" "}
                       that use natural sweeteners like Stevia and Monk Fruit to
-                      meet the clean-label demands of modern Indian consumers{" "}
+                      meet the clean-label demands of modern Indian
+                      consumers{" "}
                     </p>
                   </div>
 
@@ -509,22 +446,6 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                       The Gujarat Advantage: Global Quality, Local Sourcing
                     </h2>
 
-                    <div className="row">
-                      <div className="col"></div>
-                      <div className="col-lg-8 mt-3">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/nutrition/manufacturer-secret-cold-process-02.webp"
-                          }
-                          alt="zinc"
-                          width="100%"
-                          style={{ borderRadius: "20px" }}
-                        />
-                      </div>
-                      <div className="col"></div>
-                    </div>
-
                     <p className="mt-3">
                       we rank among the top{" "}
                       <Link
@@ -587,7 +508,8 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                     <p className="mt-2">
                       {" "}
                       Yes! Our R&D lab specializes in 2026s trending flavors
-                      like Turmeric-Latte, Cold-Brew Coffee, and Berry-Hibiscus.{" "}
+                      like Turmeric-Latte, Cold-Brew Coffee, and
+                      Berry-Hibiscus.{" "}
                     </p>
 
                     <h3 className="blog-subsection-subtitle">

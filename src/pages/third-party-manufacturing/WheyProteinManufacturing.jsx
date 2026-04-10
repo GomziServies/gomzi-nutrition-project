@@ -5,6 +5,8 @@ import PageMeta from "../../components/PageMeta";
 import { Helmet } from "react-helmet";
 import { Accordion } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import DownloadPdf from "../../pdf/whey-protein.pdf";
+import "../../assets/css/blog.css";
 import {
   faChartBar,
   faDna,
@@ -16,102 +18,270 @@ import {
   faUsers,
   faShieldHalved,
   faBolt,
+  faCheckCircle,
   faDroplet,
   faMedal,
   faGem,
   faMugHot,
 } from "@fortawesome/free-solid-svg-icons";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import "../../assets/css/nutrition.css";
 
 const KeyFeatures = ({ features }) => (
-  <div className="whey-key-features-grid">
+  <div className="wh-feat-grid">
     {features.map((feature, index) => (
-      <div key={index} className="whey-key-feature-item">
-        <FontAwesomeIcon icon={feature.icon} className="whey-feature-icon" />
-        <span className="whey-feature-text">{feature.label}</span>
+      <div key={index} className="wh-feat-item">
+        <FontAwesomeIcon icon={feature.icon} className="wh-feat-icon" />
+        <span className="wh-feat-text">{feature.label}</span>
       </div>
     ))}
   </div>
 );
 
-const WheyProtein = () => {
+const testimonials = [
+  {
+    text: "Gomzi Life Science is a very good work, I have also made this product and they provide very good quality, they do not compromise on quality, moreover they provide timely delivery, if you want to join them then you can join, I have a positive review, thank you gomzi life science and especially Gautam sir is very good, thank you Gautam sir",
+    name: "Sarvottam Prasad",
+    role: "Founder of Five Fitness",
+    rating: 5,
+  },
+  {
+    text: "Thank you so much, Dr. Gautam Jani, for building our product exactly as we envisioned for an entry-level nutraceutical brand. Your commitment, understanding of our needs, and attention to detail made a real difference. We’re grateful to have worked with you..",
+    name: "Parth bhai",
+    role: "Founder of NutraXpm",
+    rating: 5,
+  },
+  {
+    text: (
+      <>
+        {" "}
+        Service 💯
+        <br />
+        Quality delivered 💯
+        <br />
+        Coperation 💯
+        <br />
+        Team support 💯
+        <br />
+        Overall good experience{" "}
+      </>
+    ),
+    name: "Bharat bahi Chaudhari",
+    role: "Founder of Gravity",
+    rating: 5,
+  },
+  {
+    text: "I have a very in-depth knowledge about raw ingredients of nutraceuticals products and currently running a nutrition store in ahmedabad.",
+    name: "Mithil Patel",
+    role: "Founder of CleanX",
+    rating: 5,
+  },
+  {
+    text: "We at Pro Wolf Nutrition are truly impressed with Gomzi Life Science for their exceptional supplement manufacturing services. They played a key role in bringing our premium Intence Pre Workout to life — available in our signature Tangy Orange and Green Apple flavors.",
+    name: "Rathod Kishan",
+    role: "Founder of Prowolf",
+    rating: 5,
+  },
+  {
+    text: "I got my brand ready with Gamzi Supplement Manufacturing, and they were incredibly helpful in getting my brand ready and gave me excellent suggestions. This helped me build my brand effectively. They were incredibly helpful and their team is incredibly good, and I look forward to working with them again. Thank you so much!",
+    name: "Samirbhai",
+    role: "Founder of Bio Kinetic",
+    rating: 5,
+  },
+];
+
+const carouselOptions = {
+  loop: true,
+  margin: 24,
+  nav: true,
+  dots: true,
+  autoplay: true,
+  autoplayTimeout: 4000,
+  autoplayHoverPause: true,
+  navText: [
+    `<span class="testi-nav-btn prev-btn">&#8592;</span>`,
+    `<span class="testi-nav-btn next-btn">&#8594;</span>`,
+  ],
+  responsive: {
+    0: { items: 1 },
+    576: { items: 1 },
+    768: { items: 2 },
+    1024: { items: 3 },
+  },
+};
+
+const WheyProteinManufacturing = () => {
   const phoneNumber = "+918320077993";
   const baseMessage =
-    "Hello, I have an inquiry about third-party manufacturing for ";
+    "Hello, I have an inquiry about third-party manufacturing for";
+  const renderStars = (rating) =>
+    [1, 2, 3, 4, 5].map((star) => (
+      <span
+        key={star}
+        className={`star ${star <= rating ? "star-active" : "star-inactive"}`}
+      >
+        ★
+      </span>
+    ));
 
   const products = [
     {
       id: 1,
-      imageSrc: "/assets/images/third-party-manufacturing/blend.webp",
+      imageSrc: "/assets/images/third-party-manufacturing/whey-blend-new.webp",
       productName: "Whey Protein Blend",
       productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "Whey Protein Blend")}`,
     },
     {
       id: 2,
-      imageSrc: "/assets/images/third-party-manufacturing/protein.webp",
+      imageSrc:
+        "/assets/images/third-party-manufacturing/whey-protein-new.webp",
       productName: "100% Whey Protein",
       productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "100% Whey Protein")}`,
     },
     {
       id: 3,
-      imageSrc: "/assets/images/third-party-manufacturing/isolate.webp",
+      imageSrc:
+        "/assets/images/third-party-manufacturing/protein-isolate-new.webp",
       productName: "Whey Protein Isolate 90%",
       productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "Whey Protein Isolate 90%")}`,
     },
     {
       id: 4,
-      imageSrc: "/assets/images/third-party-manufacturing/concentrate.webp",
+      imageSrc:
+        "/assets/images/third-party-manufacturing/protein-concentrate-new.webp",
       productName: "Whey Protein Concentrate 80%",
       productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "Whey Protein Concentrate 80%")}`,
     },
   ];
 
+  const logos = [
+    {
+      id: 1,
+      imageSrc: "/assets/images/third-party-manufacturing/fassai.webp",
+    },
+    {
+      id: 2,
+      imageSrc: "/assets/images/third-party-manufacturing/gmp.webp",
+    },
+    {
+      id: 3,
+      imageSrc: "/assets/images/third-party-manufacturing/haccp.webp",
+    },
+    {
+      id: 4,
+      imageSrc: "/assets/images/third-party-manufacturing/halal.webp",
+    },
+    {
+      id: 5,
+      imageSrc: "/assets/images/third-party-manufacturing/kosher.webp",
+    },
+  ];
+
   const schemaData = [
     {
-      "@context": "https://schema.org/",
+      "@context": "https://schema.org",
       "@type": "Product",
-      name: "Private Label Whey Protein Manufacturer in India, Surat",
+      "@id":
+        "https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder/#product",
+      name: "Private Label Whey Protein Manufacturer in surat, India",
       image:
         "https://www.gomzilifesciences.in/assets/images/third-party-manufacturing/whey-100.png",
       description:
-        "Gomzi Lifescience LLP is a private label whey protein manufacturer in Surat, India. We offer custom formulations, bulk production, and white label whey protein supplements with FSSAI, GMP, HACCP, HALAL and Kosher certifications.",
-      brand: { "@type": "Brand", name: "Gomzilifesciences" },
+        "Gomzi Lifesciences is a leading whey protein manufacturer insurat,  India offering private label, white label, and third party manufacturing for sports nutrition brands. We provide custom formulations, bulk production, and certified supplement manufacturing services.",
+      brand: {
+        "@type": "Brand",
+        name: "Gomzilifesciences",
+      },
       manufacturer: {
         "@type": "Organization",
-        name: "Gomzilifesciences",
-        logo: "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
-        url: "https://www.gomzilifesciences.in/third-party-manufacturing/whey-protein",
+        "@id": "https://www.gomzilifesciences.in/#organization",
       },
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: "4.8",
-        reviewCount: "34",
+        reviewCount: "53",
       },
-      review: [
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.gomzilifesciences.in/#organization",
+      name: "Gomzilifesciences",
+      url: "https://www.gomzilifesciences.in",
+      logo: "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
+      sameAs: [
+        "https://www.facebook.com/Gomzilifesciences",
+        "https://www.instagram.com/gomzi_lifesciences/",
+        "https://www.linkedin.com/in/gomzi-lifesciences-423558312/",
+        "https://www.youtube.com/@Gomzilifesciences",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+91 8320077993",
+        contactType: "customer support",
+        areaServed: "IN",
+        availableLanguage: ["English", "Hindi", "gujrati"],
+      },
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id":
+        "https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder/#webpage",
+      url: "https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder",
+      name: "Whey Protein Manufacturer in India | Private Label Supplement Manufacturing",
+      description:
+        "Explore private label whey protein manufacturing services in India. Gomzi Lifesciences offers custom formulations, contract manufacturing, and bulk production for sports nutrition brands.",
+      inLanguage: "en",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.gomzilifesciences.in/#website",
+      },
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id":
+        "https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder/#breadcrumb",
+      itemListElement: [
         {
-          "@type": "Review",
-          author: { "@type": "Person", name: "Kotadiya Prakash Mohanbhai" },
-          datePublished: "2025-01-01",
-          reviewBody:
-            "All types of whey protein available. Very good hygiene maintained.",
-          name: "Trusted Private Label Whey Protein Manufacturer",
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: "5",
-            bestRating: "5",
-          },
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.gomzilifesciences.in",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Third Party Manufacturing",
+          item: "https://www.gomzilifesciences.in/third-party-manufacturing",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Protein Powder",
+          item: "https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder",
         },
       ],
     },
+
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
+      "@id":
+        "https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder/#faq",
       mainEntity: [
         {
           "@type": "Question",
           name: "What is Whey Protein Blend?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Whey Protein Blend is a formulation that combines different whey protein sources such as whey protein concentrate and whey protein isolate to achieve a balanced nutritional profile and optimized cost structure.",
+            text: "Whey Protein Blend is a formulation that combines different whey protein sources such as whey protein concentrate and whey protein isolate to achieve a balanced nutritional profile and optimized cost structure. It is commonly used in sports nutrition supplements and daily protein products.",
           },
         },
         {
@@ -119,7 +289,7 @@ const WheyProtein = () => {
           name: "What is the difference between Whey Protein Isolate and Whey Protein Concentrate?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Whey Protein Isolate 90% is a highly purified protein produced through advanced filtration that removes most fats and lactose. Whey Protein Concentrate 80% has a balanced nutritional composition and is one of the most widely used ingredients in sports nutrition supplements.",
+            text: "Whey Protein Isolate 90% is a highly purified protein produced through advanced filtration processes that remove most fats and lactose, resulting in faster absorption. Whey Protein Concentrate 80% has a balanced nutritional composition and is one of the most widely used ingredients in sports nutrition supplements.",
           },
         },
         {
@@ -127,7 +297,7 @@ const WheyProtein = () => {
           name: "Who can start a whey protein brand with Gomzi Lifescience?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Our whey protein manufacturing services are suitable for Gym Owners, Fitness Trainers, Sports Nutrition Brands, E-commerce Sellers (Amazon, Flipkart, Shopify), Athletes and Sports Professionals, and Health and Wellness Entrepreneurs.",
+            text: "Our whey protein manufacturing services are suitable for gym owners, fitness trainers, sports nutrition brands, e-commerce sellers (Amazon, Flipkart, Shopify), athletes, sports professionals, and health and wellness entrepreneurs.",
           },
         },
         {
@@ -135,7 +305,7 @@ const WheyProtein = () => {
           name: "What certifications does Gomzi Lifescience hold?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "All products are manufactured under certified quality systems including FSSAI, GMP, HACCP, HALAL and Kosher standards.",
+            text: "All products are manufactured under certified quality systems including FSSAI, GMP, HACCP, HALAL, and Kosher standards.",
           },
         },
         {
@@ -151,7 +321,7 @@ const WheyProtein = () => {
           name: "Which whey protein is best for premium sports nutrition products?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Whey Protein Isolate 90% is preferred for premium and advanced sports nutrition products due to its 90% protein concentration, low lactose and fat content, and fast absorption rate.",
+            text: "Whey Protein Isolate 90% is preferred for premium and advanced sports nutrition products due to its high protein concentration, low lactose and fat content, and fast absorption rate.",
           },
         },
         {
@@ -159,7 +329,7 @@ const WheyProtein = () => {
           name: "What is 100% Whey Protein used for?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "100% Whey Protein formulations are widely used in gym nutrition products, fitness supplements, and athlete-focused protein powders. They support muscle recovery and daily protein intake requirements.",
+            text: "100% Whey Protein formulations are widely used in gym nutrition products, fitness supplements, and athlete-focused protein powders. They are developed to support muscle recovery and daily protein intake requirements.",
           },
         },
         {
@@ -328,7 +498,7 @@ const WheyProtein = () => {
           "Very Low",
           "Very Low",
           "Fast",
-          "Premium",
+          "//Premium",
           "Advanced sports nutrition",
           "Premium athlete products",
         ],
@@ -356,449 +526,472 @@ const WheyProtein = () => {
         description="Gomzi Lifescience LLP is a private label whey protein manufacturer in Surat, India. Custom formulations, bulk production, FSSAI, GMP, HACCP, HALAL and Kosher certified."
       />
       <Helmet>
-        <style>{`
-                    /* Indented content block under any heading */
-                    .section-indent {
-                        padding-left: 24px;
-                        margin-bottom: 32px;
-                    }
-
-                    /* Sub-indent for content inside product categories */
-                    .sub-indent {
-                        padding-left: 20px;
-                        margin-bottom: 24px;
-                    }
-
-                    .whey-key-features-grid {
-                        display: grid;
-                        grid-template-columns: repeat(2, 1fr);
-                        gap: 10px;
-                        margin: 12px 0 20px;
-                    }
-                    .whey-key-feature-item {
-                        display: flex;
-                        align-items: center;
-                        gap: 8px;
-                        background: #dfeedc;
-                        border: 1px solid #b7eab7;
-                        border-radius: 8px;
-                        padding: 8px 12px;
-                    }
-                    .whey-feature-icon { color: #86c33a; font-size: 17px; flex-shrink: 0; }
-                    .whey-feature-text { font-size: 17px; color: #333; font-family: 'Roboto', sans-serif; line-height: 1.4; }
-                    @media (max-width: 576px) {
-                        .whey-key-features-grid { grid-template-columns: 1fr; }
-                        .section-indent { padding-left: 14px; }
-                        .sub-indent { padding-left: 12px; }
-                    }
-
-                    /* Manufacturing Timeline */
-                    .mfg-timeline { position: relative; margin: 18px 0 24px 0; padding: 0; list-style: none; }
-                    .mfg-timeline::before {
-                        content: '';
-                        position: absolute;
-                        left: 14px; top: 8px; bottom: 8px;
-                        width: 3px;
-                        background: linear-gradient(180deg, #86c33a 0%, #b7eab7 100%);
-                        border-radius: 2px;
-                    }
-                    .mfg-timeline-item { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 16px; position: relative; }
-                    .mfg-timeline-item:last-child { margin-bottom: 0; }
-                    .mfg-timeline-number {
-                        width: 30px; height: 30px; min-width: 30px;
-                        border-radius: 50%;
-                        background: #86c33a; color: #fff;
-                        font-size: 15px; font-weight: 700;
-                        font-family: 'Roboto', sans-serif;
-                        display: flex; align-items: center; justify-content: center;
-                        box-shadow: 0 2px 10px rgba(134,195,58,0.30);
-                        z-index: 1; flex-shrink: 0;
-                    }
-                    .mfg-timeline-content {
-                        font-size: 16px; font-family: 'Roboto', sans-serif;
-                        color: #86c33a; font-weight: 600; line-height: 1.5;
-                        flex: 1; margin-top: 10px;
-                    }
-
-                    /* Product Specifications Table */
-                    .whey-specs-table {
-                        width: 100%; border-collapse: collapse;
-                        font-family: 'Roboto', sans-serif; font-size: 15px;
-                        border-radius: 10px; overflow: hidden;
-                        box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-                    }
-                    .whey-specs-table thead tr { background: #86c33a; color: #fff; }
-                    .whey-specs-table thead th { padding: 13px 18px; font-weight: 700; font-size: 15px; letter-spacing: 0.3px; }
-                    .whey-specs-table tbody tr { border-bottom: 1px solid #e8f5e1; }
-                    .whey-specs-table tbody tr:nth-child(even) { background: #f4fbed; }
-                    .whey-specs-table tbody tr:last-child { border-bottom: none; }
-                    .whey-specs-table tbody td { padding: 11px 18px; color: #333; vertical-align: top; }
-                    .whey-specs-table tbody td:first-child { font-weight: 600; color: #555; width: 38%; }
-
-                    /* Whey Comparison Table */
-                    .whey-comparison-desc { font-size: 15px; color: #555; font-family: 'Roboto', sans-serif; margin-bottom: 18px; line-height: 1.6; }
-                    .whey-comparison-desc strong { color: #333; }
-                    .whey-comparison-table-wrap { overflow-x: auto; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
-                    .whey-comparison-table {
-                        width: 100%; border-collapse: collapse;
-                        font-family: 'Roboto', sans-serif; font-size: 14px; min-width: 700px;
-                    }
-                    .whey-comparison-table thead tr { background: #86c33a; color: #fff; }
-                    .whey-comparison-table thead th { padding: 13px 16px; font-weight: 700; font-size: 14px; text-align: left; white-space: nowrap; }
-                    .whey-comparison-table thead th:first-child { background: #6aa82e; }
-                    .whey-comparison-table tbody tr { border-bottom: 1px solid #e8f5e1; }
-                    .whey-comparison-table tbody tr:nth-child(even) { background: #f4fbed; }
-                    .whey-comparison-table tbody tr:last-child { border-bottom: none; }
-                    .whey-comparison-table tbody td { padding: 11px 16px; color: #333; vertical-align: top; }
-                    .whey-comparison-table tbody td:first-child { font-weight: 600; color: #555; background: #f0f8e8; white-space: nowrap; }
-                `}</style>
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
+
       <NutritionHeader />
 
-      {/* Banner Section */}
       <div className="protein-powder-banner">
         <img
-          src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1"
+          src="/assets/images/third-party-manufacturing/whey-protein.webp"
           alt="Whey Protein Manufacturer Banner"
-          className="protein-powder-banner-image"
+          className="protein-powder-banner-image desktop-banner"
+        />
+        <img
+          src="/assets/images/third-party-manufacturing/whey-protein-banner.webp"
+          alt="Whey Protein Manufacturer Banner"
+          className="protein-powder-banner-image mobile-banner"
         />
       </div>
 
-      {/* Heading + Paragraph Section */}
-      <section className="protein-powder-content protein-powder-container">
-        <h1 className="protein-powder-page-title">
-          Private Label{" "}
-          <span className="primory-color">Whey Protein Manufacturer</span> In
-          Surat, India
-        </h1>
-
-        <p className="protein-powder-page-description">
-          Gomzi Lifescience LLP specializes in manufacturing high-quality whey
-          protein supplements for sports nutrition brands, gym owners, fitness
-          trainers, athletes, and e-commerce businesses.
-        </p>
-        <p className="protein-powder-page-description">
-          Our manufacturing facility supports custom formulations, private
-          labeling, and bulk production for whey protein products designed for
-          performance nutrition and daily protein supplementation.
-        </p>
-        <p className="protein-powder-page-description">
-          All products are manufactured under certified quality systems
-          including <strong>FSSAI, GMP, HACCP, HALAL and Kosher</strong>{" "}
-          standards.
-        </p>
-
-        {/* ── Our Whey Protein Product Categories ── */}
-        <h2 className="mb-2">Our Whey Protein Product Categories</h2>
-        <div className="section-indent">
-          <p className="protein-powder-page-description">
-            We manufacture different whey protein formulations depending on
-            protein concentration, filtration process, and intended application
-            in sports nutrition products.
-          </p>
-
-          {productCategories.map((category) => (
-            <div key={category.id} className="mb-4">
-              <h3 className="mb-2">
-                {category.id}. {category.title}
-              </h3>
-              <div className="sub-indent">
-                <p className="protein-powder-page-description">
-                  {category.description1}
-                </p>
-                <p className="protein-powder-page-description">
-                  {category.description2}
-                </p>
-                <h4 className="d-block mb-2">Key Features:</h4>
-                <div className="sub-indent">
-                  <KeyFeatures features={category.features} />
-                </div>
-              </div>
+      <div className="wh-pg">
+        <div className="wh-container">
+          <div className="btn-gp">
+            <div>
+              <a
+                href={DownloadPdf || "#"}
+                download
+                className="download-brochure"
+              >
+                Download Our Brochure
+              </a>
             </div>
-          ))}
-        </div>
+            <div>
+              <a
+                href="https://wa.me/918320077993?text=Hello%20I%20am%20interested%20in%20Protein%20Powders"
+                target="_blank"
+                rel="noreferrer"
+                className="download-brochure"
+              >
+                Enquiry Now
+              </a>
+            </div>
+            <div>
+              <a
+                href="tel:+918320077993"
+                target="_blank"
+                rel="noreferrer"
+                className="download-brochure"
+              >
+                Call To Our Expert Team
+              </a>
+            </div>
+          </div>
 
-        {/* ── Who Can Start ── */}
-        <h2 className="mb-2">Who Can Start a Whey Protein Brand With Us?</h2>
-        <div className="section-indent">
-          <strong style={{ fontSize: "20px" }}>
-            Our whey protein manufacturing services are suitable for:
-          </strong>
-          <ul className="pl-3 mt-2">
-            <li className="protein-powder-page-description">Gym Owners</li>
-            <li className="protein-powder-page-description">
-              Fitness Trainers
-            </li>
-            <li className="protein-powder-page-description">
-              Sports Nutrition Brands
-            </li>
-            <li className="protein-powder-page-description">
-              E-commerce Sellers (Amazon, Flipkart, Shopify)
-            </li>
-            <li className="protein-powder-page-description">
-              Athletes and Sports Professionals
-            </li>
-            <li className="protein-powder-page-description">
-              Health and Wellness Entrepreneurs
-            </li>
-          </ul>
-        </div>
+          <h1 className="wh-page-title">
+            Private Label Whey Protein Manufacturer <br /> In Surat, Gujarat
+          </h1>
 
-        {/* ── Product Specifications ── */}
-        <h2 className="mb-2">Product Specifications:</h2>
-        <div className="section-indent">
-          <table className="whey-specs-table">
-            <thead>
-              <tr>
-                <th>Specification</th>
-                <th>Details</th>
-              </tr>
-            </thead>
-            <tbody>
-              {productSpecs.map((row, idx) => (
-                <tr key={idx}>
-                  <td>{row.specification}</td>
-                  <td>{row.details}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        {/* ── Whey Protein Comparison ── */}
-        <h2 className="mb-2">Whey Protein Comparison:</h2>
-        <div className="section-indent">
-          <p className="whey-comparison-desc">
-            To help supplement brands, gym owners, and fitness businesses choose
-            the right formulation, below is a comparison between different whey
-            protein types manufactured at <strong>Gomzi Lifescience</strong>.
-          </p>
-          <div className="whey-comparison-table-wrap">
-            <table className="whey-comparison-table">
-              <thead>
-                <tr>
-                  <th>Feature</th>
-                  {comparisonData.products.map((p, i) => (
-                    <th key={i}>{p.name}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonData.features.map((feature, rowIdx) => (
-                  <tr key={rowIdx}>
-                    <td>{feature}</td>
-                    {comparisonData.products.map((p, colIdx) => (
-                      <td key={colIdx}>{p.values[rowIdx]}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="whey-protein-div-main">
+            <div>
+              <p className="wh-desc">
+                Gomzi Lifescience LLP specializes in manufacturing high-quality
+                whey protein supplements for sports nutrition brands, gym
+                owners, fitness trainers, athletes, and e-commerce businesses.
+              </p>
+              <p className="wh-desc">
+                Our manufacturing facility supports custom formulations, private
+                labeling, and bulk production for whey protein products designed
+                for performance nutrition and daily protein supplementation.
+              </p>
+              <p className="wh-desc">
+                All products are manufactured under certified quality systems
+                including <strong>FSSAI, GMP, HACCP, HALAL and Kosher</strong>{" "}
+                standards.
+              </p>
+            </div>
+            <div className="blog p-0">
+              <img
+                src={
+                  process.env.PUBLIC_URL +
+                  "/assets/images/nutrition/who-we-are-01.jpeg"
+                }
+                width="100%"
+                className="border-radius-20"
+                alt="fggroup"
+              />
+            </div>
           </div>
         </div>
 
-        {/* ── How to Choose ── */}
-        <h2 className="mb-2">How to Choose the Right Whey Protein Type?</h2>
-        <div className="section-indent">
-          <p className="protein-powder-page-description">
-            Different whey protein formulations are selected depending on the
-            target market, formulation requirements, and desired protein
-            concentration.
-          </p>
-          <ul className="pl-3">
-            <li className="protein-powder-page-description">
-              <strong>Whey Protein Blend</strong> is commonly used in balanced
-              sports nutrition formulations.
-            </li>
-            <li className="protein-powder-page-description">
-              <strong>100% Whey Protein</strong> is widely used for general
-              fitness supplements.
-            </li>
-            <li className="protein-powder-page-description">
-              <strong>Whey Protein Isolate 90%</strong> is preferred for premium
-              and advanced sports nutrition products.
-            </li>
-            <li className="protein-powder-page-description">
-              <strong>Whey Protein Concentrate 80%</strong> is one of the most
-              commonly used whey protein ingredients in protein powders.
-            </li>
-          </ul>
+        <div className="wh-section wh-section-white">
+          <div className="wh-container">
+            <h2 className="wh-sec-title-our-whey-protein f-rob-bol">
+              Our Whey Protein Product Categories
+            </h2>
+            <p className="wh-sec-desc-whey-protein">
+              We manufacture different whey protein formulations depending on
+              protein concentration, filtration process, and intended
+              application in sports nutrition products.
+            </p>
+
+            <div className="wh-cat-list">
+              {productCategories.map((category) => (
+                <div key={category.id} className="wh-cat-row-item">
+                  <div className="wh-cat-row-left">
+                    <div className="wh-cat-row-header">
+                      <div className="wh-cat-num">{category.id}</div>
+                      <div className="wh-cat-title">{category.title}</div>
+                    </div>
+                    <p className="wh-cat-desc">{category.description1}</p>
+                    <p className="wh-cat-desc">{category.description2}</p>
+                    <span className="wh-kf-label">Key Features</span>
+                    <KeyFeatures features={category.features} />
+                  </div>
+                  <div className="wh-prod-card">
+                    <img
+                      src={products[category.id - 1]?.imageSrc}
+                      alt={category.title}
+                      className="wh-cat-row-img"
+                    />
+                    <div className="wh-prod-card-btn">
+                      <a
+                        href={products[category.id - 1]?.productLink}
+                        className="wh-prod-btn"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Enquiry Now
+                      </a>
+                      <a
+                        href="tel:+918320077993"
+                        className="wh-prod-btn"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Call Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* ── Manufacturing Capability ── */}
-        <h2 className="mb-2">Manufacturing Capability</h2>
-        <div className="section-indent">
-          <p className="protein-powder-page-description">
-            At Gomzi Lifescience, we provide manufacturing solutions for all
-            major whey protein formulations used in the sports nutrition
-            industry.
-          </p>
-          <h3 className="mb-2">Our facility supports:</h3>
-          <div className="sub-indent">
-            <ul className="mfg-timeline">
-              {facilitySupports.map((item, idx) => (
-                <li key={idx} className="mfg-timeline-item">
-                  <div className="mfg-timeline-number">{idx + 1}</div>
-                  <div className="mfg-timeline-content">{item}</div>
+        <div className="wh-section wh-section-alt">
+          <div className="wh-container">
+            <h2 className="wh-sec-title">
+              Who Can Start a Whey Protein Brand With Us?
+            </h2>
+            <p className="wh-sec-desc">
+              <strong>
+                Our whey protein manufacturing services are suitable for:
+              </strong>
+            </p>
+            <div className="wh-who-grid">
+              {[
+                "Gym Owners",
+                "Fitness Trainers",
+                "Sports Nutrition Brands",
+                "E-commerce Sellers (Amazon, Flipkart, Shopify)",
+                "Athletes and Sports Professionals",
+                "Health and Wellness Entrepreneurs",
+              ].map((item, i) => (
+                <div key={i} className="wh-who-card">
+                  <FontAwesomeIcon icon={faCheckCircle} />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="wh-section wh-section-white">
+          <div className="wh-container">
+            <h2 className="wh-sec-title">Product Specifications</h2>
+
+            <div className="wh-tbl-wrap">
+              <table className="wh-spec-tbl">
+                <thead>
+                  <tr>
+                    <th>Specification</th>
+                    <th>Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {productSpecs.map((row, idx) => (
+                    <tr key={idx}>
+                      <td>{row.specification}</td>
+                      <td>{row.details}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div className="wh-section wh-section-alt">
+          <div className="wh-container">
+            <h2 className="wh-sec-title">Whey Protein Comparison</h2>
+            <p className="wh-sec-desc">
+              To help supplement brands, gym owners, and fitness businesses
+              choose the right formulation, below is a comparison between
+              different whey protein types manufactured at{" "}
+              <strong>Gomzi Lifescience</strong>.
+            </p>
+            <div className="wh-cmp-wrap">
+              <table className="wh-cmp-tbl">
+                <thead>
+                  <tr>
+                    <th>Feature</th>
+                    {comparisonData.products.map((p, i) => (
+                      <th key={i}>{p.name}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonData.features.map((feature, rowIdx) => (
+                    <tr key={rowIdx}>
+                      <td>{feature}</td>
+                      {comparisonData.products.map((p, colIdx) => (
+                        <td key={colIdx}>{p.values[rowIdx]}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div className="wh-section wh-section-white">
+          <div className="wh-container">
+            <h2 className="wh-sec-title">
+              How to Choose the Right Whey Protein Type?
+            </h2>
+            <p className="wh-sec-desc">
+              Different whey protein formulations are selected depending on the
+              target market, formulation requirements, and desired protein
+              concentration.
+            </p>
+            <ul className="wh-choose-list">
+              {[
+                {
+                  bold: "Whey Protein Blend",
+                  rest: " is commonly used in balanced sports nutrition formulations.",
+                },
+                {
+                  bold: "100% Whey Protein",
+                  rest: " is widely used for general fitness supplements.",
+                },
+                {
+                  bold: "Whey Protein Isolate 90%",
+                  rest: " is preferred for premium and advanced sports nutrition products.",
+                },
+                {
+                  bold: "Whey Protein Concentrate 80%",
+                  rest: " is one of the most commonly used whey protein ingredients in protein powders.",
+                },
+              ].map((item, i) => (
+                <li key={i} className="wh-choose-item">
+                  <div className="wh-choose-n">{i + 1}</div>
+                  <span>
+                    <strong>{item.bold}</strong>
+                    {item.rest}
+                  </span>
                 </li>
               ))}
             </ul>
           </div>
-          <p className="protein-powder-page-description">
-            All products are manufactured under certified systems including:{" "}
-            <strong>FSSAI | GMP | HACCP | HALAL | Kosher</strong>
-          </p>
         </div>
-      </section>
 
-      {/* Products Section */}
-      <section className="third-party-manufacturing-card-container">
-        <div className="row mt-3">
-          {products.map((product) => (
-            <div key={product.id} className="col-md-3 col-6 mb-4">
-              <div className="third-party-manufacturing-card text-center bg-white br-15 p-5 d-flex flex-column justify-content-between shadow-sm">
-                <img
-                  src={product.imageSrc}
-                  alt={product.productName}
-                  className="product-img"
-                />
-                <h3 className="text-ellipse-custom text-secondary my-4 f-rob-med f-20">
-                  <b>{product.productName}</b>
-                </h3>
-                <div className="mb-1">
-                  <a
-                    href={product.productLink}
-                    className="enquiry-btn"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Enquiry Now
-                  </a>
+        <div className="wh-section wh-section-alt">
+          <div className="wh-container">
+            <h2 className="wh-sec-title">Manufacturing Capability</h2>
+            <p className="wh-sec-desc">
+              At Gomzi Lifescience, we provide manufacturing solutions for all
+              major whey protein formulations used in the sports nutrition
+              industry.
+            </p>
+            <div className="wh-mfg-grid">
+              <div>
+                <p className="wh-mfg-left-title">Our facility supports:</p>
+                <ul className="wh-mfg-steps">
+                  {facilitySupports.map((item, idx) => (
+                    <li key={idx} className="wh-mfg-step-row">
+                      <div className="wh-mfg-step-num">{idx + 1}.</div>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="wh-cert-panel">
+                <div className="wh-cert-panel-title">
+                  Certified Quality Standards
+                </div>
+                <div className="wh-cert-panel-sub">
+                  All products are manufactured under certified systems
+                  includings:
+                </div>
+
+                <div className="wh-cert-row">
+                  <div className="logo-src">
+                    {logos.map((logo, i) => (
+                      <img key={i} src={logo.imageSrc} alt="logo" />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
-      </section>
 
-      {/* FAQ Section */}
-      <section className="top-categories-main bg-white py-3 py-md-5">
-        <div className="container-fluid">
-          <div className="row justify-content-center">
-            <div className="col-md-8 d-flex align-items-center justify-content-between">
-              <div className="col">
-                <h2 className="f-rob-bol f-30 text-black text-uppercase">
-                  FAQ's
-                </h2>
-              </div>
+        <div className="wh-section wh-section-white">
+          <section className="testi-section">
+            <div className="testimonial-div">
+              <h2 className="wh-sec-title-our-whey-protein">Testimonials</h2>
             </div>
-          </div>
-          <div className="row mt-4 pb-5 justify-content-center overflow-hidden">
-            <div className="col-md-8">
-              <Accordion defaultActiveKey={["1"]} alwaysOpen>
-                <Accordion.Item eventKey="1" className="mt-3 p-4">
-                  <Accordion.Header className="f-18 lp-2">
-                    What is Whey Protein Blend?
-                  </Accordion.Header>
-                  <Accordion.Body className="mt-3 f-rob-reg f-14 lp-2">
-                    Whey Protein Blend is a formulation that combines different
-                    whey protein sources such as whey protein concentrate and
-                    whey protein isolate to achieve a balanced nutritional
-                    profile and optimized cost structure. It is commonly used in
-                    sports nutrition supplements and daily protein products.
-                  </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="2" className="mt-3 p-4">
-                  <Accordion.Header className="f-18 lp-2">
-                    What is the difference between Whey Protein Isolate and Whey
-                    Protein Concentrate?
-                  </Accordion.Header>
-                  <Accordion.Body className="mt-3 f-rob-reg f-14 lp-2">
-                    Whey Protein Isolate 90% is a highly purified protein
-                    produced through advanced filtration processes that remove
-                    most fats and lactose, resulting in faster absorption. Whey
-                    Protein Concentrate 80% has a balanced nutritional
-                    composition and is one of the most widely used ingredients
-                    in sports nutrition supplements.
-                  </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="3" className="mt-3 p-4">
-                  <Accordion.Header className="f-18 lp-2">
-                    Who can start a whey protein brand with Gomzi Lifescience?
-                  </Accordion.Header>
-                  <Accordion.Body className="mt-3 f-rob-reg f-14 lp-2">
-                    Our whey protein manufacturing services are suitable for Gym
-                    Owners, Fitness Trainers, Sports Nutrition Brands,
-                    E-commerce Sellers (Amazon, Flipkart, Shopify), Athletes and
-                    Sports Professionals, and Health and Wellness Entrepreneurs.
-                  </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="4" className="mt-3 p-4">
-                  <Accordion.Header className="f-18 lp-2">
-                    What certifications does Gomzi Lifescience hold?
-                  </Accordion.Header>
-                  <Accordion.Body className="mt-3 f-rob-reg f-14 lp-2">
-                    All products are manufactured under certified quality
-                    systems including FSSAI, GMP, HACCP, HALAL and Kosher
-                    standards.
-                  </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="5" className="mt-3 p-4">
-                  <Accordion.Header className="f-18 lp-2">
-                    What manufacturing capabilities does Gomzi Lifescience
-                    offer?
-                  </Accordion.Header>
-                  <Accordion.Body className="mt-3 f-rob-reg f-14 lp-2">
-                    Our facility supports custom whey protein formulations,
-                    private label supplement manufacturing, flavor
-                    customization, packaging and labeling, and bulk production
-                    for supplement brands.
-                  </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="6" className="mt-3 p-4">
-                  <Accordion.Header className="f-18 lp-2">
-                    Which whey protein is best for premium sports nutrition
-                    products?
-                  </Accordion.Header>
-                  <Accordion.Body className="mt-3 f-rob-reg f-14 lp-2">
-                    Whey Protein Isolate 90% is preferred for premium and
-                    advanced sports nutrition products due to its 90% protein
-                    concentration, low lactose and fat content, and fast
-                    absorption rate.
-                  </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="7" className="mt-3 p-4">
-                  <Accordion.Header className="f-18 lp-2">
-                    What is 100% Whey Protein used for?
-                  </Accordion.Header>
-                  <Accordion.Body className="mt-3 f-rob-reg f-14 lp-2">
-                    100% Whey Protein formulations are widely used in gym
-                    nutrition products, fitness supplements, and athlete-focused
-                    protein powders. They are developed to support muscle
-                    recovery and daily protein intake requirements.
-                  </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="8" className="mt-3 p-4">
-                  <Accordion.Header className="f-18 lp-2">
-                    Can I get private label whey protein manufacturing in Surat?
-                  </Accordion.Header>
-                  <Accordion.Body className="mt-3 f-rob-reg f-14 lp-2">
-                    Yes. Gomzi Lifescience LLP is based in Surat and specializes
-                    in private label whey protein manufacturing for sports
-                    nutrition brands, gym owners, fitness trainers, athletes,
-                    and e-commerce businesses.
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
+
+            <div className="testi-carousel-wrap">
+              <OwlCarousel className="owl-theme" {...carouselOptions}>
+                {testimonials.map((item, i) => (
+                  <div className="testi-card" key={i}>
+                    <div>
+                      <div className="testi-quote-wrap">
+                        <div className="testi-quote-mark">
+                          <svg
+                            viewBox="0 0 28 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M3 17.5C3 13.5 5.8 10.2 10.5 9L11.5 11.5C8.8 12.4 7.2 14.3 7 16.3H11V22H3V17.5Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M15 17.5C15 13.5 17.8 10.2 22.5 9L23.5 11.5C20.8 12.4 19.2 14.3 19 16.3H23V22H15V17.5Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                        <div className="testi-stars">
+                          {renderStars(item.rating)}
+                        </div>
+                      </div>
+                      <p className="testi-text">{item.text}</p>
+                    </div>
+                    <div className="testi-author">
+                      <div className="testi-author-dot">
+                        {item.name.charAt(0)}
+                      </div>
+                      <div>
+                        <p className="testi-name">{item.name}</p>
+                        <p className="testi-role">{item.role}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </OwlCarousel>
             </div>
+          </section>
+        </div>
+
+        <div className="wh-container">
+          <div className="blog-section">
+            <h2 className="wh-sec-title">FAQ's</h2>
+
+            <Accordion defaultActiveKey={["1"]} alwaysOpen>
+              <Accordion.Item eventKey="1" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  What is Whey Protein Blend?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  Whey Protein Blend is a formulation that combines different
+                  whey protein sources such as whey protein concentrate and whey
+                  protein isolate to achieve a balanced nutritional profile and
+                  optimized cost structure. It is commonly used in sports
+                  nutrition supplements and daily protein products.
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="2" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  What is the difference between Whey Protein Isolate and Whey
+                  Protein Concentrate?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  Whey Protein Isolate 90% is a highly purified protein produced
+                  through advanced filtration processes that remove most fats
+                  and lactose, resulting in faster absorption. Whey Protein
+                  Concentrate 80% has a balanced nutritional composition and is
+                  one of the most widely used ingredients in sports nutrition
+                  supplements.
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="3" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  Who can start a whey protein brand with Gomzi Lifescience?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  Our whey protein manufacturing services are suitable for Gym
+                  Owners, Fitness Trainers, Sports Nutrition Brands, E-commerce
+                  Sellers (Amazon, Flipkart, Shopify), Athletes and Sports
+                  Professionals, and Health and Wellness Entrepreneurs.
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="4" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  What certifications does Gomzi Lifescience hold?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  All products are manufactured under certified quality systems
+                  including FSSAI, GMP, HACCP, HALAL and Kosher standards.
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="5" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  What manufacturing capabilities does Gomzi Lifescience offer?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  Our facility supports custom whey protein formulations,
+                  private label supplement manufacturing, flavor customization,
+                  packaging and labeling, and bulk production for supplement
+                  brands.
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="6" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  Which whey protein is best for premium sports nutrition
+                  products?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  Whey Protein Isolate 90% is preferred for premium and advanced
+                  sports nutrition products due to its 90% protein
+                  concentration, low lactose and fat content, and fast
+                  absorption rate.
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="7" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  What is 100% Whey Protein used for?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  100% Whey Protein formulations are widely used in gym
+                  nutrition products, fitness supplements, and athlete-focused
+                  protein powders. They are developed to support muscle recovery
+                  and daily protein intake requirements.
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="8" className="mt-3 p-4">
+                <Accordion.Header className="faq-question">
+                  Can I get private label whey protein manufacturing in Surat?
+                </Accordion.Header>
+                <Accordion.Body className="faq-answer">
+                  Yes. Gomzi Lifescience LLP is based in Surat and specializes
+                  in private label whey protein manufacturing for sports
+                  nutrition brands, gym owners, fitness trainers, athletes, and
+                  e-commerce businesses.
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
           </div>
         </div>
-      </section>
+      </div>
 
       <NutritionFooter />
     </div>
   );
 };
 
-export default WheyProtein;
+export default WheyProteinManufacturing;

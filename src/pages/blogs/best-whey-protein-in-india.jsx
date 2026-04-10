@@ -17,7 +17,7 @@ function BestWheyProteinInIndia() {
   return (
     <>
       <Helmet>
-        <title>Best Whey Protein in India | Gomzi Nutrition</title>
+        <title>Best Whey Protein in India | Gomzi Lifescience</title>
         <meta
           name="description"
           content="Discover the best whey protein in India and explore the diverse range of whey proteins and find out the best in whey protein for your health."
@@ -28,7 +28,7 @@ function BestWheyProteinInIndia() {
         />
         <meta
           property="og:title"
-          content="Best Whey Protein in India | Gomzi Nutrition"
+          content="Best Whey Protein in India | Gomzi Lifescience"
         />
         <meta
           property="og:description"
@@ -38,13 +38,10 @@ function BestWheyProteinInIndia() {
           property="og:image"
           content="https://fggroup.in/assets/images/logo/fg_group.webp"
         />
-        <meta
-          property="og:url"
-          content={canonicalUrl}
-        />
+        <meta property="og:url" content={canonicalUrl} />
         <link rel="canonical" href={canonicalUrl} />
         <script>
-          { `!function(f,b,e,v,n,t,s)
+          {`!function(f,b,e,v,n,t,s)
                     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
                     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
                     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -57,21 +54,21 @@ function BestWheyProteinInIndia() {
                     `}
         </script>
         <noscript>
-          { `<img height="1" width="1" style="display:none"
+          {`<img height="1" width="1" style="display:none"
                     src="https://www.facebook.com/tr?id=1144699046738070&ev=PageView&noscript=1"
                     />`}
         </noscript>
         <script
           async
-          src={ `https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38` }
+          src={`https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38`}
         ></script>
-        <noscript>{ `window.dataLayer = window.dataLayer || [];
+        <noscript>{`window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', 'G-J50WNKGW38');`}</noscript>
       </Helmet>
       <NutritionHeader />
-      <div className="main-content" style={{ marginTop: "150px" }}>
+      <div className="main-content mb-150">
         <section className="blog-main">
           <div className="container-fluid w-80 p-0">
             <div className="row">
@@ -83,8 +80,7 @@ function BestWheyProteinInIndia() {
                       "/assets/images/nutrition/best-whey-protein-in-india-main.webp"
                     }
                     alt="bgImage"
-                    className="img-fluid w-100 mh-200 object-fit"
-                    style={{borderRadius:'20px', overflow:'hidden'}}
+                    className="img-fluid w-100 mh-200 object-fit log-img-inner-main"
                   />
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
@@ -124,7 +120,7 @@ function BestWheyProteinInIndia() {
                     <br />
                   </p>
                   <p>
-                    Enter Gomzi Nutrition, which offers a curated list of the
+                    Enter Gomzi Lifescience, which offers a curated list of the
                     best whey protein supplements, including our very own
                     acclaimed Whey Protein Hydrolyzed Blend. Whether you're
                     looking for pre-gym supplements or mass gainers, our guide
@@ -136,30 +132,16 @@ function BestWheyProteinInIndia() {
                   </p>
                   <p className="f-22">
                     <strong>
-                      1. Gomzi Nutrition's Whey Protein Hydrolyzed:
+                      1. Gomzi Lifescience's Whey Protein Hydrolyzed:
                     </strong>
                   </p>
-                  <div className="row">
-                    <div className="col"></div>
-                    <div className="col-lg-6 mt-3">
-                      <img
-                        src={
-                          process.env.PUBLIC_URL +
-                          "/assets/images/nutrition/best-whey-protein-in-india-1.webp"
-                        }
-                        alt="Fggroup"
-                        width="100%"
-                        style={{ borderRadius: "20px" }}
-                      />
-                    </div>
-                    <div className="col"></div>
-                  </div>
+
                   <p>
                     <br />
                   </p>
                   <p>
                     As we dive into the wide range of whey products available in
-                    India, Gomzi Nutrition proudly presents its flagship Whey
+                    India, Gomzi Lifescience proudly presents its flagship Whey
                     Protein Hydrolyzed. This specially formulated blend
                     addresses the dynamic needs of fitness enthusiasts, offering
                     a perfect balance of taste and nutrition. For more details,{" "}
@@ -201,7 +183,7 @@ function BestWheyProteinInIndia() {
                         }
                         alt="Fggroup"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>
@@ -250,7 +232,7 @@ function BestWheyProteinInIndia() {
                         }
                         alt="Fggroup"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>
@@ -294,7 +276,7 @@ function BestWheyProteinInIndia() {
                         }
                         alt="Fggroup"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>
@@ -343,7 +325,7 @@ function BestWheyProteinInIndia() {
                         }
                         alt="Fggroup"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>
@@ -387,7 +369,7 @@ function BestWheyProteinInIndia() {
                         }
                         alt="Fggroup"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>
@@ -428,7 +410,7 @@ function BestWheyProteinInIndia() {
                         }
                         alt="Fggroup"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>
@@ -478,7 +460,7 @@ function BestWheyProteinInIndia() {
                         }
                         alt="Fggroup"
                         width="100%"
-                        style={{ borderRadius: "20px" }}
+                        className="br-15"
                       />
                     </div>
                     <div className="col"></div>
@@ -526,7 +508,7 @@ function BestWheyProteinInIndia() {
                   </p>
                   <br />
                   <p>
-                    Gomzi Nutrition provides a range of top-tier whey protein
+                    Gomzi Lifescience provides a range of top-tier whey protein
                     options, ensuring that you have the tools you need to
                     succeed. With our carefully selected list of the best whey
                     protein supplements, you can confidently incorporate these

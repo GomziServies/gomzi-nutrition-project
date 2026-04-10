@@ -144,7 +144,7 @@ function ReturnAndRefundPolicyCustomer() {
                     </div>
                     {order?.user_meal_product?.tracking.some(
                       (trackingElem) =>
-                        trackingElem.shipment_status === "DELIVERED"
+                        trackingElem.shipment_status === "DELIVERED",
                     ) && (
                       <div className="col-12 meal">
                         <p className="mt-2 text-success f-20">
@@ -168,12 +168,6 @@ function ReturnAndRefundPolicyCustomer() {
                           </span>
                         </div>
                         <div className="price1">
-                          {/* <p className="my-3">
-                            ₹
-                            {order?.product?.price /
-                              order?.user_meal_product?.quantity}
-                            /-
-                          </p> */}
                           <span className="q1">
                             Quantity : {order?.user_meal_product?.quantity}{" "}
                           </span>
@@ -210,7 +204,7 @@ function ReturnAndRefundPolicyCustomer() {
                               className={`order-tracking ${
                                 order?.user_meal_product?.tracking.find(
                                   (trackingElem) =>
-                                    trackingElem.shipment_status === "PLACED"
+                                    trackingElem.shipment_status === "PLACED",
                                 )
                                   ? "completed"
                                   : ""
@@ -225,8 +219,8 @@ function ReturnAndRefundPolicyCustomer() {
                                     order?.user_meal_product?.tracking.find(
                                       (trackingElem) =>
                                         trackingElem.shipment_status ===
-                                        "PLACED"
-                                    )?.updatedAt
+                                        "PLACED",
+                                    )?.updatedAt,
                                   )}
                                 </span>
                               </p>
@@ -236,7 +230,7 @@ function ReturnAndRefundPolicyCustomer() {
                                 order?.user_meal_product?.tracking.find(
                                   (trackingElem) =>
                                     trackingElem.shipment_status ===
-                                    "DISPATCHED"
+                                    "DISPATCHED",
                                 )
                                   ? "completed"
                                   : ""
@@ -250,14 +244,14 @@ function ReturnAndRefundPolicyCustomer() {
                                   {order?.user_meal_product?.tracking.find(
                                     (trackingElem) =>
                                       trackingElem.shipment_status ===
-                                      "DISPATCHED"
+                                      "DISPATCHED",
                                   )
                                     ? convertDate(
                                         order?.user_meal_product?.tracking.find(
                                           (trackingElem) =>
                                             trackingElem.shipment_status ===
-                                            "DISPATCHED"
-                                        )?.updatedAt
+                                            "DISPATCHED",
+                                        )?.updatedAt,
                                       )
                                     : ""}
                                 </span>
@@ -267,7 +261,8 @@ function ReturnAndRefundPolicyCustomer() {
                               className={`order-tracking ${
                                 order?.user_meal_product?.tracking.find(
                                   (trackingElem) =>
-                                    trackingElem.shipment_status === "DELIVERED"
+                                    trackingElem.shipment_status ===
+                                    "DELIVERED",
                                 )
                                   ? "completed"
                                   : ""
@@ -281,14 +276,14 @@ function ReturnAndRefundPolicyCustomer() {
                                   {order?.user_meal_product?.tracking.find(
                                     (trackingElem) =>
                                       trackingElem.shipment_status ===
-                                      "DELIVERED"
+                                      "DELIVERED",
                                   )
                                     ? convertDate(
                                         order?.user_meal_product?.tracking.find(
                                           (trackingElem) =>
                                             trackingElem.shipment_status ===
-                                            "DELIVERED"
-                                        )?.updatedAt
+                                            "DELIVERED",
+                                        )?.updatedAt,
                                       )
                                     : ""}
                                 </span>
@@ -317,7 +312,7 @@ function ReturnAndRefundPolicyCustomer() {
                 <div className="col-12 text-center mb-4 px-4">
                   <div className="ql-editor text-left mt-3">
                     <p className="mb-2">
-                      At Gomzi Nutrition, we strive to ensure that you are
+                      At Gomzi Lifescience, we strive to ensure that you are
                       completely satisfied with your purchase. However, we
                       understand that there may be instances where you need to
                       return a product. Please read our Return and Refund Policy

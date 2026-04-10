@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import "../assets/css/nutrition.css";
 
 const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
   const [animateOpen, setAnimateOpen] = useState(false);
@@ -28,12 +29,12 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
     setLoading(true);
     try {
       const response = await axiosInstance.get(
-        "/order-cart/get-carts?item_type=FG_MEAL_PRODUCT&is_purchase=true"
+        "/order-cart/get-carts?item_type=FG_MEAL_PRODUCT&is_purchase=true",
       );
       const serverData = response.data.data[0];
       setServerDataID(serverData._id);
       const existingData = JSON.parse(
-        localStorage.getItem("addItemInCart")
+        localStorage.getItem("addItemInCart"),
       ) || { products: [] };
 
       const priceMap = existingData.products.reduce((map, product) => {
@@ -44,14 +45,9 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
       const itemDataForGetQty = serverData?.items || [];
       const itemDataForGetImgName = serverData?.items_details || [];
 
-      // if (!itemDataForGetQty.length || !itemDataForGetImgName.length) {
-      //   console.error("No items or item details found in the response.");
-      //   return;
-      // }
-
       const combinedData = itemDataForGetQty.map((item) => {
         const itemDetails = itemDataForGetImgName.find(
-          (details) => details._id === item.item_id
+          (details) => details._id === item.item_id,
         );
         if (!itemDetails) {
           console.warn(`No details found for item with id: ${item.item_id}`);
@@ -94,7 +90,7 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
   const totalAmountCalculation = (data) => {
     const amount = data.reduce(
       (sum, product) => sum + product.price * product.quantity,
-      0
+      0,
     );
     setTotalAmount(amount || 0);
   };
@@ -102,16 +98,16 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
   const handleRemoveProduct = async (cart_id, product_id) => {
     try {
       await axiosInstance.delete(
-        `/order-cart/remove-item?item_id=${product_id}&cart_id=${serverDataID}`
+        `/order-cart/remove-item?item_id=${product_id}&cart_id=${serverDataID}`,
       );
       setProductDataGet((prevData) =>
-        prevData.filter((product) => product._id !== cart_id)
+        prevData.filter((product) => product._id !== cart_id),
       );
       const existingData = JSON.parse(
-        localStorage.getItem("addItemInCart")
+        localStorage.getItem("addItemInCart"),
       ) || { products: [] };
       existingData.products = existingData.products.filter(
-        (product) => product.product_id !== product_id
+        (product) => product.product_id !== product_id,
       );
       localStorage.setItem("addItemInCart", JSON.stringify(existingData));
       fetchProductData();
@@ -121,6 +117,8 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
   };
 
   useEffect(() => {
+    const fetchProductData = async () => {};
+
     if (productData) {
       fetchProductData();
     }
@@ -131,7 +129,7 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
       const updatedData = prevData.map((product) =>
         product._id === productId
           ? { ...product, quantity: Math.max(1, product.quantity - 1) }
-          : product
+          : product,
       );
       const changedProducts = updatedData.filter((product) => {
         const originalProduct = prevData.find((p) => p._id === product._id);
@@ -151,7 +149,7 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
       const updatedData = prevData.map((product) =>
         product._id === productId
           ? { ...product, quantity: product.quantity + 1 }
-          : product
+          : product,
       );
 
       const changedProducts = updatedData.filter((product) => {
@@ -182,7 +180,7 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
     try {
       const changedProducts = productDataGet.filter((currentProduct) => {
         const previousProduct = previousProductData.find(
-          (p) => p._id === currentProduct._id
+          (p) => p._id === currentProduct._id,
         );
         return (
           previousProduct &&
@@ -198,7 +196,7 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
 
         const response = await axiosInstance.post(
           "/order-cart/add-item",
-          changedProducts[0]
+          changedProducts[0],
         );
 
         if (response.data.status === 200) {
@@ -209,7 +207,7 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
               products,
               totalAmount,
               totalMRP,
-            })
+            }),
           );
 
           window.location.href = `/nutrition/check-out`;
@@ -226,7 +224,7 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
             products,
             totalAmount,
             totalMRP,
-          })
+          }),
         );
 
         window.location.href = `/nutrition/check-out`;
@@ -262,20 +260,12 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
     <>
       {isOpen && <div className="overlay" onClick={onClose}></div>}
       <div className={`offcanvas ${animateOpen ? "open" : ""}`}>
-        <div
-          className="d-flex justify-content-between px-2 pt-2"
-          style={{ background: "rgb(238 238 238)" }}
-        >
+        <div className="d-flex justify-content-between px-2 pt-2 bg-fff">
           <h4>YOUR CART</h4>
           <button
             type="button"
-            className="closess closse-mobile p-0"
+            className="closess closse-mobile p-0 closess-btn "
             onClick={onClose}
-            style={{
-              backgroundColor: "transparent",
-              border: "none",
-              width: "50px",
-            }}
             data-dismiss="modal"
             aria-label="Close"
           >
@@ -295,7 +285,6 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
                 <div className="col-12 cart-detail py-3">
                   {productDataGet.map((product) => {
                     const totalPrice = product.price * product.quantity;
-                    // const totalMRPPrice = product.mrpPrice * product.quantity;
                     return (
                       <div
                         key={product._id}
@@ -304,10 +293,7 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
                         <div className="media bg-white cart-main">
                           <div className="row">
                             <div className="col-3 p-0">
-                              <span
-                                className="lazy-load-image-background blur lazy-load-image-loaded"
-                                style={{ display: "inline-block" }}
-                              >
+                              <span className="lazy-load-image-background blur lazy-load-image-loaded display-inline-block">
                                 <img
                                   alt="product"
                                   className="img-fluid cp"
@@ -319,15 +305,9 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
                               <div className="media-body align-self-center">
                                 <div className="d-flex justify-content-between">
                                   <div className="col-12 p-0">
-                                    <h3
-                                      className="f-rob-bol d-inline-block cp mb-2"
-                                      style={{ fontSize: "21px" }}
-                                    >
+                                    <h3 className="f-rob-bol d-inline-block cp mb-2 fts-21">
                                       {product.name}
                                     </h3>
-                                    {/* <h3 className="f-rob-bol f-14 cp mb-1">
-                                    ({product.size ? product.size : "N/A"}){" "}
-                                  </h3> */}
                                   </div>
                                 </div>
                                 <div className="cart-add align-items-center mt-3">
@@ -342,13 +322,8 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
                                         id="txt_quantity"
                                         value={product.quantity}
                                         min="1"
-                                        className="mb-0"
+                                        className="mb-0 br-5-w-45-h-30"
                                         readOnly
-                                        style={{
-                                          borderRadius: "5px",
-                                          width: "45px",
-                                          height: "30px",
-                                        }}
                                       />
                                     </Form.Group>
                                     <i
@@ -369,12 +344,6 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
                                     <span className="d-inline-block mr-2 f-rob-bol f-22">
                                       ₹{totalPrice.toFixed(2)}
                                     </span>
-                                    {/* <p>
-                                    MRP:&nbsp;
-                                    <span className="price--line-through">
-                                      ₹{totalMRPPrice}
-                                    </span>
-                                  </p> */}
                                   </div>
                                 </div>
                               </div>
@@ -384,16 +353,11 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
                                 <div className="remove">
                                   <button
                                     type="button"
-                                    className="closess mr-3 closse-mobile p-0"
-                                    style={{
-                                      backgroundColor: "transparent",
-                                      border: "none",
-                                      width: "50px",
-                                    }}
+                                    className="closess mr-3 closse-mobile p-0 closess-btn"
                                     onClick={() =>
                                       handleRemoveProduct(
                                         product._id,
-                                        product.items_id
+                                        product.items_id,
                                       )
                                     }
                                     aria-label="Remove"
@@ -411,10 +375,7 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
                     );
                   })}
                   <div>
-                    <h3
-                      className="f-rob-bol d-inline-block cp mb-2"
-                      style={{ fontSize: "21px" }}
-                    >
+                    <h3 className="f-rob-bol d-inline-block cp mb-2 fts-21">
                       More Products
                     </h3>
                     <OwlCarousel
@@ -424,9 +385,8 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
                     >
                       <div className="item">
                         <div
-                          className="d-inline-block"
+                          className="d-inline-block w-100-display-inline-block"
                           tabIndex="-1"
-                          style={{ width: "100%", display: "inline-block" }}
                         >
                           <div className="col-12">
                             <div className="categories-product-main text-center">
@@ -454,9 +414,8 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
                       </div>
                       <div className="item">
                         <div
-                          className="d-inline-block"
+                          className="d-inline-block w-100-display-inline-block"
                           tabIndex="-1"
-                          style={{ width: "100%", display: "inline-block" }}
                         >
                           <div className="col-12">
                             <div className="categories-product-main text-center">
@@ -484,9 +443,8 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
                       </div>
                       <div className="item">
                         <div
-                          className="d-inline-block"
+                          className="d-inline-block w-100-display-inline-block"
                           tabIndex="-1"
-                          style={{ width: "100%", display: "inline-block" }}
                         >
                           <div className="col-12">
                             <div className="categories-product-main text-center">
@@ -514,9 +472,8 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
                       </div>
                       <div className="item">
                         <div
-                          className="d-inline-block"
+                          className="d-inline-block w-100-display-inline-block"
                           tabIndex="-1"
-                          style={{ width: "100%", display: "inline-block" }}
                         >
                           <div className="col-12">
                             <div className="categories-product-main text-center">
@@ -544,9 +501,8 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
                       </div>
                       <div className="item">
                         <div
-                          className="d-inline-block"
+                          className="d-inline-block w-100-display-inline-block"
                           tabIndex="-1"
-                          style={{ width: "100%", display: "inline-block" }}
                         >
                           <div className="col-12">
                             <div className="categories-product-main text-center">
@@ -574,9 +530,8 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
                       </div>
                       <div className="item">
                         <div
-                          className="d-inline-block"
+                          className="d-inline-block w-100-display-inline-block"
                           tabIndex="-1"
-                          style={{ width: "100%", display: "inline-block" }}
                         >
                           <div className="col-12">
                             <div className="categories-product-main text-center">
@@ -605,10 +560,7 @@ const AddtoCartOffCanvas = ({ isOpen, onClose, productData }) => {
                     </OwlCarousel>
                   </div>
                 </div>
-                <div
-                  className="d-flex flex-column align-items-center checkout-main-1"
-                  style={{ background: "rgb(238 238 238)" }}
-                >
+                <div className="d-flex flex-column align-items-center checkout-main-1 bg-fff">
                   <div className="w-100 p-2 pb-3">
                     <div className="subtotal-main shadow bg-white br-15 mb-3 p-3">
                       <div className="d-flex align-items-center justify-content-between">

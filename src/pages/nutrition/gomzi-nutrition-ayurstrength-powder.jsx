@@ -24,21 +24,12 @@ function GomziNutritionAyurstrengthPowder() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
-  const addToCart = localStorage.getItem("addtocart");
   const [productData, setProductData] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const canonicalUrl = window.location.href;
   const isAuthenticated = !!localStorage.getItem("fg_group_user_authorization");
 
   const toggleMenu = async (data) => {
-    // localStorage.setItem("addtocart", "true");
-    // localStorage.setItem(
-    //   "productData",
-    //   JSON.stringify({
-    //     ...data,
-    //   })
-    // );
-
     try {
       if (!isAuthenticated) {
         setMenuOpen(false);
@@ -47,10 +38,10 @@ function GomziNutritionAyurstrengthPowder() {
         localStorage.setItem("cartAvailable", true);
       } else {
         const existingData = JSON.parse(
-          localStorage.getItem("addItemInCart")
+          localStorage.getItem("addItemInCart"),
         ) || { products: [] };
         const productExists = existingData.products.some(
-          (product) => product.product_id === data.id
+          (product) => product.product_id === data.id,
         );
 
         if (!productExists) {
@@ -69,7 +60,7 @@ function GomziNutritionAyurstrengthPowder() {
         });
         if (response.data.response === "OK") {
           setProductData(data);
-          // setMenuOpen(!menuOpen);
+
           window.location.href = "/nutrition/cart";
         }
       }
@@ -78,26 +69,25 @@ function GomziNutritionAyurstrengthPowder() {
     }
   };
 
-  const addProductInCart = async (data) => {
-    try {
-      const response = await axiosInstance.post("/order-cart/add-item", {
-        item_id: data.id,
-        quantity: 1,
-        item_type: "FG_MEAL_PRODUCT",
-      });
-      if (response.data.response === "OK") {
-        setProductData(data);
-        // setMenuOpen(!menuOpen);
-        window.location.href = "/nutrition/cart";
-        localStorage.removeItem("cartAvailable");
-        localStorage.removeItem("productCartAvailable");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const addProductInCart = async (data) => {
+      try {
+        const response = await axiosInstance.post("/order-cart/add-item", {
+          item_id: data.id,
+          quantity: 1,
+          item_type: "FG_MEAL_PRODUCT",
+        });
+        if (response.data.response === "OK") {
+          setProductData(data);
+          window.location.href = "/nutrition/cart";
+          localStorage.removeItem("cartAvailable");
+          localStorage.removeItem("productCartAvailable");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     const localData = JSON.parse(localStorage.getItem("productCartAvailable"));
     const dataAvailable = JSON.parse(localStorage.getItem("cartAvailable"));
     if (localData && dataAvailable) {
@@ -132,20 +122,31 @@ function GomziNutritionAyurstrengthPowder() {
   };
 
   useEffect(() => {
+    const addToCart = localStorage.getItem("addtocart");
     if (addToCart === "true") {
+      const addtocartdata = {
+        id: "66e8084379c30ad8b5e16528",
+        img: "/assets/images/nutrition/ayurstrength-powder-1.webp",
+        name: "Ayurstrength Powder",
+        price: "1499",
+        discount: "949",
+        size: "500 gms",
+        dis_point: "36.69%",
+      };
       setTimeout(() => {
         setProductData(addtocartdata);
         setMenuOpen(true);
         localStorage.removeItem("addtocart");
       }, 2000);
     }
-  }, [addToCart]);
+  }, []);
 
   return (
     <>
       <Helmet>
         <title>
-          Gomzi Nutrition AyurStrength - Herbal Formula for Strength & Immunity
+          Gomzi Lifescience AyurStrength - Herbal Formula for Strength &
+          Immunity
         </title>
         <meta
           name="description"
@@ -229,7 +230,7 @@ function GomziNutritionAyurstrengthPowder() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Gomzi Nutrition Ayurstrength Powder. "
+          "Hello, I wanted to know more about Gomzi Lifescience Ayurstrength Powder. "
         }
         options={{ pageRef: true }}
       />
@@ -264,16 +265,9 @@ function GomziNutritionAyurstrengthPowder() {
                     </div>
                     <div className="col-9 pt-2">
                       <div className="d-inline-block">
-                        {/* <span className="d-inline-block mr-2 f-rob-bol f-20 text-red">
-                          36.69%
-                        </span> */}
                         <span className="d-inline-block mr-2 f-rob-bol f-22">
                           ₹949 /-
                         </span>
-                        {/* <p className="f-20">
-                          MRP:-
-                          <span className="price--line-through">₹1,499/-</span>
-                        </p> */}
                       </div>
                     </div>
                     <div className="col-3 text-left text-md-right">
@@ -321,9 +315,6 @@ function GomziNutritionAyurstrengthPowder() {
                           ) : (
                             ""
                           )}
-                          {/* <button className="bg-light-red d-block text-uppercase px-3 px-lg-5 text-white f-16 f-rob-bol rate-btn-1">
-                            Sold Out
-                          </button> */}
                         </div>
                       </div>
                     </div>
@@ -378,7 +369,9 @@ function GomziNutritionAyurstrengthPowder() {
                       >
                         <div className="descriptionShow text-secondary">
                           <p>
-                            <strong>Gomzi Nutrition Ayurstrength Powder</strong>
+                            <strong>
+                              Gomzi Lifescience Ayurstrength Powder
+                            </strong>
                           </p>
                           <p className="mb-3">
                             Experience the power of ancient wisdom with
