@@ -198,7 +198,7 @@ function Wheyisolatevsconcentratewhichoneactuallydeliversbetterresultsin2026() {
                             process.env.PUBLIC_URL +
                             "/assets/images/nutrition/manufacturer-secret-cold-process-01.webp"
                           }
-                          alt="Fggroup"
+                          alt="gomzilifesciences"
                           width="100%"
                           className="br-15"
                         />

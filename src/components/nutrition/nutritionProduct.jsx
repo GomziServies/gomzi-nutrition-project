@@ -24,13 +24,13 @@ const NutritionProduct = ({
             <LazyLoadImage
               className="d-none d-md-block border-radius-20"
               src={process.env.PUBLIC_URL + nutritionImg}
-              alt="Fggroup"
+              alt="gomzilifesciences"
               width="100%"
             />
             <LazyLoadImage
               className="d-block d-md-none w-100 mt-3 border-radius-20"
               src={process.env.PUBLIC_URL + nutritionMobileImg}
-              alt="Fggroup"
+              alt="gomzilifesciences"
             />
           </Link>
         </div>

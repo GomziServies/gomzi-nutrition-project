@@ -315,7 +315,7 @@ function CheckOut() {
                                           }
                                           className="border-radius-20"
                                           width="32px"
-                                          alt="fggroup"
+                                          alt="gomzilifesciences"
                                         />
                                       </span>
                                       <span className="checkbox-label">
@@ -341,7 +341,7 @@ function CheckOut() {
                                           }
                                           className="border-radius-20"
                                           width="32px"
-                                          alt="fggroup"
+                                          alt="gomzilifesciences"
                                         />
                                       </span>
                                       <span className="checkbox-label">

@@ -16,7 +16,7 @@ function ProteinComparison() {
               }
               width="100%"
               className="d-none d-md-block"
-              alt="fggroup"
+              alt="gomzilifesciences"
               effect="blur"
             />
             <LazyLoadImage
@@ -26,7 +26,7 @@ function ProteinComparison() {
               }
               width="100%"
               className="d-block d-md-none"
-              alt="fggroup"
+              alt="gomzilifesciences"
               effect="blur"
             />
           </Link>
@@ -37,7 +37,7 @@ function ProteinComparison() {
             }
             width="100%"
             className="mt-5 d-none d-md-block"
-            alt="fggroup"
+            alt="gomzilifesciences"
             effect="blur"
           />
           <LazyLoadImage
@@ -47,7 +47,7 @@ function ProteinComparison() {
             }
             width="100%"
             className="mt-5 d-block d-md-none"
-            alt="fggroup"
+            alt="gomzilifesciences"
             effect="blur"
           />
         </div>

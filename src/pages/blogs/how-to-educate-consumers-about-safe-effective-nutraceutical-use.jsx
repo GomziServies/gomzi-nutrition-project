@@ -153,7 +153,7 @@ function Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse() {
                             process.env.PUBLIC_URL +
                             "/assets/images/nutrition/how-to-educate-consumers-about-safe-01.webp"
                           }
-                          alt="Fggroup"
+                          alt="gomzilifesciences"
                           width="100%"
                           className="br-15"
                         />
@@ -208,7 +208,7 @@ function Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse() {
                             process.env.PUBLIC_URL +
                             "/assets/images/nutrition/how-to-educate-consumers-about-safe-03.webp"
                           }
-                          alt="Fggroup"
+                          alt="gomzilifesciences"
                           width="100%"
                           className="br-15"
                         />
@@ -258,7 +258,7 @@ function Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse() {
                             process.env.PUBLIC_URL +
                             "/assets/images/nutrition/how-to-educate-consumers-about-safe-04.webp"
                           }
-                          alt="Fggroup"
+                          alt="gomzilifesciences"
                           width="100%"
                           className="br-15"
                         />

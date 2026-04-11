@@ -506,7 +506,7 @@ function WhiteLabelling() {
                         }
                         width="100%"
                         className="border-radius-20"
-                        alt="fggroup"
+                        alt="gomzilifesciences"
                       />
                     </div>
                   </div>
@@ -569,7 +569,7 @@ function WhiteLabelling() {
                         }
                         width="100%"
                         className="border-radius-20"
-                        alt="fggroup"
+                        alt="gomzilifesciences"
                       />
                     </div>
                   </div>

@@ -213,7 +213,7 @@ function HowSupplementsHelpYouLiveHealthyLife() {
                           process.env.PUBLIC_URL +
                           "/assets/images/nutrition/how-supplements-help-you-live-healthy-life-3.webp"
                         }
-                        alt="Fggroup"
+                        alt="gomzilifesciences"
                         width="100%"
                         className="br-15"
                       />
@@ -299,7 +299,7 @@ function HowSupplementsHelpYouLiveHealthyLife() {
                           process.env.PUBLIC_URL +
                           "/assets/images/nutrition/how-supplements-help-you-live-healthy-life-5.webp"
                         }
-                        alt="Fggroup"
+                        alt="gomzilifesciences"
                         width="100%"
                         className="br-15"
                       />

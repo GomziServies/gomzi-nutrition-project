@@ -1,5 +1,5 @@
 {
-  "name": "fggroup",
+  "name": "gomzilifesciences",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -35,7 +35,7 @@
     "start": "react-scripts start",
     "prebuild": "node server.js",
     "build": "cross-env CI=false react-scripts build",
-    "postbuild": "react-snap && node scripts/fix-prerender-canonical.js",
+    "postbuild": "node scripts/postbuild-prerender.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

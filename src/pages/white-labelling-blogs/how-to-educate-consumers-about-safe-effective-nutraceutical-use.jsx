@@ -273,7 +273,7 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                               process.env.PUBLIC_URL +
                               "/assets/images/white-labelling-blogs/how-to-educate-1.webp"
                             }
-                            alt="Fggroup"
+                            alt="gomzilifesciences"
                             width="100%"
                             className="br-20"
                           />
@@ -323,7 +323,7 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                               process.env.PUBLIC_URL +
                               "/assets/images/white-labelling-blogs/How-to-Educate-3.webp"
                             }
-                            alt="Fggroup"
+                            alt="gomzilifesciences"
                             width="100%"
                             className="br-20"
                           />
@@ -374,7 +374,7 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                               process.env.PUBLIC_URL +
                               "/assets/images/white-labelling-blogs/How-to-Educate-4.webp"
                             }
-                            alt="Fggroup"
+                            alt="gomzilifesciences"
                             width="100%"
                             className="br-20"
                           />
@@ -420,7 +420,7 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                               process.env.PUBLIC_URL +
                               "/assets/images/white-labelling-blogs/How-to-Educate-5.webp"
                             }
-                            alt="Fggroup"
+                            alt="gomzilifesciences"
                             width="100%"
                             className="br-20"
                           />

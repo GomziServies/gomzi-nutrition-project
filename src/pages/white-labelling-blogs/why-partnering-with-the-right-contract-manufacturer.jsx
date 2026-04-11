@@ -427,7 +427,7 @@ function WhyPartneringWithTheRightContractManufacturer() {
                                 process.env.PUBLIC_URL +
                                 "/assets/images/white-labelling-blogs/r&d-Expertise.webp"
                               }
-                              alt="Fggroup"
+                              alt="gomzilifesciences"
                               className="Right-contract-manufacturer-img"
                               loading="lazy"
                             />

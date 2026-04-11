@@ -190,7 +190,7 @@ function HappyClientReview() {
                         "/assets/images/nutrition/nutri-review-video-1.webp"
                       }
                       width="100%"
-                      alt="fggroup"
+                      alt="gomzilifesciences"
                       effect="blur"
                       className="br-10 cp"
                     />
@@ -219,7 +219,7 @@ function HappyClientReview() {
                         "/assets/images/nutrition/nutri-review-video-2.webp"
                       }
                       width="100%"
-                      alt="fggroup"
+                      alt="gomzilifesciences"
                       effect="blur"
                       className="br-10 cp"
                     />
@@ -249,7 +249,7 @@ function HappyClientReview() {
                       }
                       width="100%"
                       className="br-10"
-                      alt="fggroup"
+                      alt="gomzilifesciences"
                       effect="blur"
                     />
                     <div className="video-btn play-btn">

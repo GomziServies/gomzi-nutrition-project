@@ -493,7 +493,7 @@ function The7CostlyMistakestoAvoidWhenChoosingaPrivateLabelNutraceuticalManufact
                               process.env.PUBLIC_URL +
                               "/assets/images/white-labelling-blogs/Choosing the Right Nutraceutical Manufacturer Matters.webp"
                             }
-                            alt="Fggroup"
+                            alt="gomzilifesciences"
                             width="100%"
                             className="br-20"
                           />

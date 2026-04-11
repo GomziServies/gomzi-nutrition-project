@@ -364,7 +364,7 @@ function Howtolaunchasupplementbrandwithlowmoqmanufacturersthe2026startupbluepri
                             }
                             width="100%"
                             className="border-radius-20"
-                            alt="fggroup"
+                            alt="gomzilifesciences"
                           />
                           <div className="video-btn play-btn">
                             <button

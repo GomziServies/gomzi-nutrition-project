@@ -276,7 +276,7 @@ function AboutUs() {
                             process.env.PUBLIC_URL +
                             "/assets/images/our-team/Infrastructure1.1.webp"
                           }
-                          alt="Fggroup"
+                          alt="gomzilifesciences"
                           width="100%"
                         />
                       </div>
@@ -287,7 +287,7 @@ function AboutUs() {
                             process.env.PUBLIC_URL +
                             "/assets/images/our-team/Infrastructure1.2.webp"
                           }
-                          alt="Fggroup"
+                          alt="gomzilifesciences"
                           width="100%"
                         />
                       </div>
@@ -298,7 +298,7 @@ function AboutUs() {
                             process.env.PUBLIC_URL +
                             "/assets/images/our-team/Infrastructure1.3.webp"
                           }
-                          alt="Fggroup"
+                          alt="gomzilifesciences"
                           width="100%"
                         />
                       </div>
@@ -325,7 +325,7 @@ function AboutUs() {
                             process.env.PUBLIC_URL +
                             "/assets/images/our-team/our-team1.webp"
                           }
-                          alt="Fggroup"
+                          alt="gomzilifesciences"
                           width="100%"
                         />
                       </div>
@@ -336,7 +336,7 @@ function AboutUs() {
                             process.env.PUBLIC_URL +
                             "/assets/images/our-team/our-team2.webp"
                           }
-                          alt="Fggroup"
+                          alt="gomzilifesciences"
                           width="100%"
                         />
                       </div>
@@ -347,7 +347,7 @@ function AboutUs() {
                             process.env.PUBLIC_URL +
                             "/assets/images/our-team/our-team3.webp"
                           }
-                          alt="Fggroup"
+                          alt="gomzilifesciences"
                           width="100%"
                         />
                       </div>

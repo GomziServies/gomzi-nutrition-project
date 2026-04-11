@@ -181,7 +181,7 @@ function BestWheyProteinInIndia() {
                           process.env.PUBLIC_URL +
                           "/assets/images/nutrition/best-whey-protein-in-india-2.webp"
                         }
-                        alt="Fggroup"
+                        alt="gomzilifesciences"
                         width="100%"
                         className="br-15"
                       />
@@ -230,7 +230,7 @@ function BestWheyProteinInIndia() {
                           process.env.PUBLIC_URL +
                           "/assets/images/nutrition/best-whey-protein-in-india-3.webp"
                         }
-                        alt="Fggroup"
+                        alt="gomzilifesciences"
                         width="100%"
                         className="br-15"
                       />
@@ -274,7 +274,7 @@ function BestWheyProteinInIndia() {
                           process.env.PUBLIC_URL +
                           "/assets/images/nutrition/best-whey-protein-in-india-4.webp"
                         }
-                        alt="Fggroup"
+                        alt="gomzilifesciences"
                         width="100%"
                         className="br-15"
                       />
@@ -323,7 +323,7 @@ function BestWheyProteinInIndia() {
                           process.env.PUBLIC_URL +
                           "/assets/images/nutrition/best-whey-protein-in-india-5.webp"
                         }
-                        alt="Fggroup"
+                        alt="gomzilifesciences"
                         width="100%"
                         className="br-15"
                       />
@@ -367,7 +367,7 @@ function BestWheyProteinInIndia() {
                           process.env.PUBLIC_URL +
                           "/assets/images/nutrition/best-whey-protein-in-india-6.webp"
                         }
-                        alt="Fggroup"
+                        alt="gomzilifesciences"
                         width="100%"
                         className="br-15"
                       />
@@ -408,7 +408,7 @@ function BestWheyProteinInIndia() {
                           process.env.PUBLIC_URL +
                           "/assets/images/nutrition/best-whey-protein-in-india-7.webp"
                         }
-                        alt="Fggroup"
+                        alt="gomzilifesciences"
                         width="100%"
                         className="br-15"
                       />
@@ -458,7 +458,7 @@ function BestWheyProteinInIndia() {
                           process.env.PUBLIC_URL +
                           "/assets/images/nutrition/best-whey-protein-in-india-8.webp"
                         }
-                        alt="Fggroup"
+                        alt="gomzilifesciences"
                         width="100%"
                         className="br-15"
                       />
