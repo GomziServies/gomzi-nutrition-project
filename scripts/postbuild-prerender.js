@@ -1,5 +1,9 @@
 const { spawnSync } = require("child_process");
 const path = require("path");
+const fs = require("fs");
+
+const BUILD_DIR = path.resolve(__dirname, "..", "build");
+const REACT_SNAP_MARKER = path.join(BUILD_DIR, "200.html");
 
 function envFlag(name) {
   const value = process.env[name];
@@ -10,7 +14,7 @@ function envFlag(name) {
 function run(command, args) {
   const result = spawnSync(command, args, {
     stdio: "inherit",
-    shell: false,
+    shell: process.platform === "win32",
     env: process.env,
   });
 
@@ -22,6 +26,13 @@ function runReactSnap() {
   const reactSnapBin = path.resolve(__dirname, "..", "node_modules", ".bin", binName);
 
   return run(reactSnapBin, []);
+}
+
+function cleanupStaleReactSnapOutput() {
+  if (fs.existsSync(REACT_SNAP_MARKER)) {
+    fs.unlinkSync(REACT_SNAP_MARKER);
+    console.log("Removed stale build/200.html before prerender.");
+  }
 }
 
 function runCanonicalFix() {
@@ -39,7 +50,8 @@ function shouldSkipPrerender() {
     return true;
   }
 
-  if (envFlag("VERCEL")) {
+  // Skip only on hosted Vercel CI builds; local Vercel build can still prerender.
+  if (envFlag("VERCEL") && envFlag("CI")) {
     return true;
   }
 
@@ -50,6 +62,7 @@ function main() {
   if (shouldSkipPrerender()) {
     console.log("Skipping react-snap prerender for this environment.");
   } else {
+    cleanupStaleReactSnapOutput();
     console.log("Running react-snap prerender...");
     if (!runReactSnap()) {
       process.exit(1);
