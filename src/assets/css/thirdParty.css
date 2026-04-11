@@ -2,12 +2,6 @@
   font-family: "Roboto", sans-serif;
 }
 
-.faq-title {
-  color: #000;
-  border-left: 6px solid #86c33a;
-  padding-left: 12px;
-}
-
 .faq-intro {
   color: #555;
   line-height: 1.7;
@@ -57,31 +51,8 @@
   font-size: 20px;
 }
 
-.read-less-more-div {
-  text-align: center;
-  margin: 12px 0 4px;
-}
-
-.read-less-more-btn {
-  background: #86c33a;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 8px 28px;
-  font-size: 15px;
-  font-family: "'Roboto', sans-serif";
-  font-weight: 600;
-  cursor: "pointer";
-  letter-spacing: 0.3px;
-  transition: background 0.2s;
-}
-
 .nutritional-composition-title {
   margin-top: 40px;
-}
-
-.common-applications-include {
-  font-size: 20px;
 }
 
 .btn-flex {

@@ -1,5 +1,5 @@
 import React, { Suspense, lazy, useEffect } from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import { BrowserRouter, useLocation, useNavigate } from "react-router-dom";
 import $ from "jquery";
 import "./assets/css/bootstrap.css";
@@ -16,6 +16,7 @@ const App = lazy(() => import("./App"));
 window.$ = $;
 window.jQuery = $;
 window.BASE_URL = process.env.PUBLIC_URL;
+const isPrerendering = navigator.userAgent === "ReactSnap";
 
 const RedirectFromHtml = ({ children }) => {
   const location = useLocation();
@@ -34,6 +35,10 @@ const RedirectFromHtml = ({ children }) => {
   }, [location, navigate]);
 
   useEffect(() => {
+    if (isPrerendering) {
+      return;
+    }
+
     const timer = setTimeout(() => {
       const script = document.createElement("script");
       script.src = "https://www.googletagmanager.com/gtag/js?id=UA-209915471-2";
@@ -54,6 +59,10 @@ const RedirectFromHtml = ({ children }) => {
   }, []);
 
   useEffect(() => {
+    if (isPrerendering) {
+      return;
+    }
+
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: "virtual_pageview",
@@ -66,8 +75,7 @@ const RedirectFromHtml = ({ children }) => {
   return children;
 };
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+const app = (
   <BrowserRouter>
     <RedirectFromHtml>
       <Suspense
@@ -96,5 +104,14 @@ root.render(
       </Suspense>
     </RedirectFromHtml>
     <ToastContainer />
-  </BrowserRouter>,
+  </BrowserRouter>
 );
+
+const rootElement = document.getElementById("root");
+
+if (rootElement.hasChildNodes()) {
+  hydrateRoot(rootElement, app);
+} else {
+  const root = createRoot(rootElement);
+  root.render(app);
+}
