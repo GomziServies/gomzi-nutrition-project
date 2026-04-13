@@ -224,6 +224,11 @@ const Howtoeducateconsumersaboutsafeeffectivenutraceuticaluse = lazy(() =>
   )
 );
 
+const SampleBooking = lazy(() =>
+  import("./pages/sample-booking/sample-booking")
+);
+
+
 function App() {
   return (
     <>
@@ -351,6 +356,10 @@ function App() {
           element={<BulkInquiryNutrition />}
         />
         <Route path="/nutrition/white-labelling" element={<WhiteLabelling />} />
+        <Route
+          path="/nutrition/sample-booking-update"
+          element={<SampleBooking />}
+        />
 
         {/* white labelling blogs */}
 
