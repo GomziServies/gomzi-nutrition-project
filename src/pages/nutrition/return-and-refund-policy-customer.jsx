@@ -44,12 +44,12 @@ function ReturnAndRefundPolicyCustomer() {
     <>
       <Helmet>
         <title>
-          Return & Refund Policy | Gomzi Nutrition Family - Hassle-Free
+          Return & Refund Policy | Gomzi Lifescience Family - Hassle-Free
           Nutraceutical Returns
         </title>
         <meta
           name="description"
-          content="Learn about Gomzi Nutrition Family's Return & Refund Policy for nutraceutical products. Easy returns, refund guidelines, and customer-friendly policies for a smooth experience."
+          content="Learn about Gomzi Lifescience Family's Return & Refund Policy for nutraceutical products. Easy returns, refund guidelines, and customer-friendly policies for a smooth experience."
         />
         <meta
           name="keyword"
@@ -80,11 +80,11 @@ function ReturnAndRefundPolicyCustomer() {
         />
         <meta
           property="og:title"
-          content="Return & Refund Policy | Gomzi Nutrition Family - Hassle-Free Nutraceutical Returns"
+          content="Return & Refund Policy | Gomzi Lifescience Family - Hassle-Free Nutraceutical Returns"
         />
         <meta
           property="og:description"
-          content="Learn about Gomzi Nutrition Family's Return & Refund Policy for nutraceutical products. Easy returns, refund guidelines, and customer-friendly policies for a smooth experience."
+          content="Learn about Gomzi Lifescience Family's Return & Refund Policy for nutraceutical products. Easy returns, refund guidelines, and customer-friendly policies for a smooth experience."
         />
         <meta
           property="og:image"
@@ -122,7 +122,7 @@ function ReturnAndRefundPolicyCustomer() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Terms & Conditions for Gomzi Nutrition Details. "
+          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifescience Details. "
         }
         options={{ pageRef: true }}
       />

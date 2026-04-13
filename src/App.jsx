@@ -276,16 +276,6 @@ function App() {
         />
 
         <Route
-          path="/third-party-manufacturing/performance-supplements"
-          element={<PerformanceSupplements />}
-        />
-
-        <Route
-          path="/third-party-manufacturing/WheyProteinManufacturing"
-          element={<WheyProteinManufacturing />}
-        />
-
-        <Route
           path="/nutrition/gomzi-nutrition-whey-protein-isolate"
           element={<GomziNutritionWheyProteinIsolate />}
         />

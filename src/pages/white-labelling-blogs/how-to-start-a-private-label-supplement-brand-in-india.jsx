@@ -32,7 +32,7 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
         />
         <meta
           property="og:title"
-          content="How to Start a Private Label Supplement Brand in India | Gomzi Nutrition"
+          content="How to Start a Private Label Supplement Brand in India | Gomzi Lifescience"
         />
         <meta
           property="og:description"

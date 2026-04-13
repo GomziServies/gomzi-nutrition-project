@@ -44,11 +44,11 @@ function PricingPolicyCustomer() {
     <>
       <Helmet>
         <title>
-          Pricing Policy | Gomzi Nutrition Family - Transparent & Fair Pricing
+          Pricing Policy | Gomzi Lifescience Family - Transparent & Fair Pricing
         </title>
         <meta
           name="description"
-          content="Explore Gomzi Nutrition Family's Pricing Policy. Learn how we ensure fair, competitive, and transparent pricing on all our nutraceutical products."
+          content="Explore Gomzi Lifescience Family's Pricing Policy. Learn how we ensure fair, competitive, and transparent pricing on all our nutraceutical products."
         />
         <meta
           name="keyword"
@@ -79,11 +79,11 @@ function PricingPolicyCustomer() {
         />
         <meta
           property="og:title"
-          content="Pricing Policy | Gomzi Nutrition Family - Transparent & Fair Pricing"
+          content="Pricing Policy | Gomzi Lifescience Family - Transparent & Fair Pricing"
         />
         <meta
           property="og:description"
-          content="Explore Gomzi Nutrition Family's Pricing Policy. Learn how we ensure fair, competitive, and transparent pricing on all our nutraceutical products."
+          content="Explore Gomzi Lifescience Family's Pricing Policy. Learn how we ensure fair, competitive, and transparent pricing on all our nutraceutical products."
         />
         <meta
           property="og:image"
@@ -121,7 +121,7 @@ function PricingPolicyCustomer() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Terms & Conditions for Gomzi Nutrition Details. "
+          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifescience Details. "
         }
         options={{ pageRef: true }}
       />

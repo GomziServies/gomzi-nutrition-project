@@ -36,7 +36,7 @@ function AboutUs() {
         />
         <meta
           property="og:title"
-          content="About Us | Gomzi Nutrition Family - Your Trusted Wellness Partner"
+          content="About Us | Gomzi Lifescience Family - Your Trusted Wellness Partner"
         />
         <meta
           property="og:description"

@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 import { Accordion } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DownloadPdf from "../../pdf/performance-supplement.pdf";
-import "../../assets/css/blog.css"; // Import the new blog CSS
+import "../../assets/css/blog.css";
 
 import {
   faChartBar,
@@ -88,7 +88,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: "I got my brand ready with Gamzi Supplement Manufacturing, and they were incredibly helpful in getting my brand ready and gave me excellent suggestions. This helped me build my brand effectively. They were incredibly helpful and their team is incredibly good, and I look forward to working with them again. Thank you so much!",
+    text: "I got my brand ready with Gomzi Supplement Manufacturing, and they were incredibly helpful in getting my brand ready and gave me excellent suggestions. This helped me build my brand effectively. They were incredibly helpful and their team is incredibly good, and I look forward to working with them again. Thank you so much!",
     name: "Samirbhai",
     role: "Founder of Bio Kinetic",
     rating: 5,
@@ -548,7 +548,7 @@ const PerformanceSupplements = () => {
               <img
                 src={
                   process.env.PUBLIC_URL +
-                  "/assets/images/nutrition/who-we-are-01.jpeg"
+                  "/assets/images/nutrition/who-we-are.webp"
                 }
                 width="100%"
                 className="border-radius-20"
@@ -577,11 +577,12 @@ const PerformanceSupplements = () => {
                   key={category.id}
                   className="wh-cat-row-item-performance-supplement"
                 >
+                  <div className="wh-cat-row-header wh-cat-row-header-top">
+                    <div className="wh-cat-num">{category.id}</div>
+                    <div className="wh-cat-title">{category.title}</div>
+                  </div>
+
                   <div className="wh-cat-row-left">
-                    <div className="wh-cat-row-header">
-                      <div className="wh-cat-num">{category.id}</div>
-                      <div className="wh-cat-title">{category.title}</div>
-                    </div>
                     <p className="wh-cat-desc">{category.description}</p>
 
                     <h4 className="mb-2 wh-kf-label">
@@ -640,7 +641,7 @@ const PerformanceSupplements = () => {
                     <img
                       src={products[category.id - 1]?.imageSrc}
                       alt={category.title}
-                      className="wh-pg wh-cat-row-img-performance "
+                      className="wh-pg wh-cat-row-img-performance"
                     />
                     <div className="wh-prod-card-btn">
                       <a
@@ -718,7 +719,7 @@ const PerformanceSupplements = () => {
           </div>
         </div>
 
-        <div className="wh-section wh-section-alt">
+        <div className="wh-section wh-section-white">
           <div className="wh-container">
             <div className="whey-protein-div-main">
               <div className="whey-protein-div-text-multivitamin">

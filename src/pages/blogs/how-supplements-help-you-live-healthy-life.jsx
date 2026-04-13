@@ -44,7 +44,7 @@ function HowSupplementsHelpYouLiveHealthyLife() {
         />
         <meta
           property="og:title"
-          content="How Supplements Help you live a healthy life | Gomzi Nutrition"
+          content="How Supplements Help you live a healthy life | Gomzi Lifescience"
         />
         <meta
           property="og:description"

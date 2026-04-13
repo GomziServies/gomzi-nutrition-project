@@ -49,7 +49,7 @@ function CancellationPolicyCustomer() {
         </title>
         <meta
           name="description"
-          content="Learn about Gomzi Nutrition Family's Cancellation Policy. Find details on order cancellations, eligibility, and refund procedures for a hassle-free experience."
+          content="Learn about Gomzi Lifescience Family's Cancellation Policy. Find details on order cancellations, eligibility, and refund procedures for a hassle-free experience."
         />
         <meta
           name="keyword"
@@ -80,11 +80,11 @@ function CancellationPolicyCustomer() {
         />
         <meta
           property="og:title"
-          content="Cancellation Policy | Gomzi Nutrition Family - Easy & Transparent Cancellations"
+          content="Cancellation Policy | Gomzi Lifescience Family - Easy & Transparent Cancellations"
         />
         <meta
           property="og:description"
-          content="Learn about Gomzi Nutrition Family's Cancellation Policy. Find details on order cancellations, eligibility, and refund procedures for a hassle-free experience."
+          content="Learn about Gomzi Lifescience Family's Cancellation Policy. Find details on order cancellations, eligibility, and refund procedures for a hassle-free experience."
         />
         <meta
           property="og:image"
@@ -122,7 +122,7 @@ function CancellationPolicyCustomer() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Terms & Conditions for Gomzi Nutrition Details. "
+          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifescience Details. "
         }
         options={{ pageRef: true }}
       />

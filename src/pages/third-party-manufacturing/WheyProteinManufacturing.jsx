@@ -85,7 +85,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: "I got my brand ready with Gamzi Supplement Manufacturing, and they were incredibly helpful in getting my brand ready and gave me excellent suggestions. This helped me build my brand effectively. They were incredibly helpful and their team is incredibly good, and I look forward to working with them again. Thank you so much!",
+    text: "I got my brand ready with Gomzi Supplement Manufacturing, and they were incredibly helpful in getting my brand ready and gave me excellent suggestions. This helped me build my brand effectively. They were incredibly helpful and their team is incredibly good, and I look forward to working with them again. Thank you so much!",
     name: "Samirbhai",
     role: "Founder of Bio Kinetic",
     rating: 5,
@@ -498,7 +498,7 @@ const WheyProteinManufacturing = () => {
           "Very Low",
           "Very Low",
           "Fast",
-          "//Premium",
+          "Premium",
           "Advanced sports nutrition",
           "Premium athlete products",
         ],
@@ -604,7 +604,7 @@ const WheyProteinManufacturing = () => {
               <img
                 src={
                   process.env.PUBLIC_URL +
-                  "/assets/images/nutrition/who-we-are-01.jpeg"
+                  "/assets/images/nutrition/who-we-are.webp"
                 }
                 width="100%"
                 className="border-radius-20"
@@ -628,11 +628,12 @@ const WheyProteinManufacturing = () => {
             <div className="wh-cat-list">
               {productCategories.map((category) => (
                 <div key={category.id} className="wh-cat-row-item">
+                  <div className="wh-cat-row-header wh-cat-row-header-top">
+                    <div className="wh-cat-num">{category.id}</div>
+                    <div className="wh-cat-title">{category.title}</div>
+                  </div>
+
                   <div className="wh-cat-row-left">
-                    <div className="wh-cat-row-header">
-                      <div className="wh-cat-num">{category.id}</div>
-                      <div className="wh-cat-title">{category.title}</div>
-                    </div>
                     <p className="wh-cat-desc">{category.description1}</p>
                     <p className="wh-cat-desc">{category.description2}</p>
                     <span className="wh-kf-label">Key Features</span>
@@ -797,7 +798,7 @@ const WheyProteinManufacturing = () => {
           </div>
         </div>
 
-        <div className="wh-section wh-section-alt">
+        <div className="wh-section wh-section-white">
           <div className="wh-container">
             <h2 className="wh-sec-title">Manufacturing Capability</h2>
             <p className="wh-sec-desc">
@@ -808,14 +809,17 @@ const WheyProteinManufacturing = () => {
             <div className="wh-mfg-grid">
               <div>
                 <p className="wh-mfg-left-title">Our facility supports:</p>
-                <ul className="wh-mfg-steps">
-                  {facilitySupports.map((item, idx) => (
-                    <li key={idx} className="wh-mfg-step-row">
-                      <div className="wh-mfg-step-num">{idx + 1}.</div>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+
+                <div className="section-indent">
+                  <ul className="mfg-timeline">
+                    {facilitySupports.map((item, idx) => (
+                      <li key={idx} className="mfg-timeline-item">
+                        <div className="mfg-timeline-number">{idx + 1}</div>
+                        <div className="mfg-timeline-content">{item}</div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
               <div className="wh-cert-panel">
                 <div className="wh-cert-panel-title">

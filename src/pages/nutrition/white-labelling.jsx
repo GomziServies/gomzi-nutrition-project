@@ -360,7 +360,7 @@ function WhiteLabelling() {
                 className="d-none d-md-block w-100"
                 src={
                   process.env.PUBLIC_URL +
-                  "/assets/images/nutrition/white-labelling-banner-03.jpeg"
+                  "/assets/images/nutrition/white-labelling-banner-03.webp"
                 }
                 alt="Gomzi Lifescience Private Label Supplement banner"
                 width="100%"
@@ -370,7 +370,7 @@ function WhiteLabelling() {
                 className="d-block d-md-none w-100"
                 src={
                   process.env.PUBLIC_URL +
-                  "/assets/images/nutrition/white-labelling-banner-mobile-03.jpeg"
+                  "/assets/images/nutrition/white-labelling-banner-mobile-03.webp"
                 }
                 alt="Gomzi Lifescience Private Label Supplement banner"
                 width="100%"
@@ -382,7 +382,7 @@ function WhiteLabelling() {
                 className="d-none d-md-block lazy"
                 src={
                   process.env.PUBLIC_URL +
-                  "/assets/images/nutrition/white-labelling-banner-02.jpeg"
+                  "/assets/images/nutrition/white-labelling-banner-02.webp"
                 }
                 alt="Gomzi Lifescience Private Label Supplement banner "
                 width="100%"
@@ -394,7 +394,7 @@ function WhiteLabelling() {
                 className="d-block d-md-none w-100 lazy"
                 src={
                   process.env.PUBLIC_URL +
-                  "/assets/images/nutrition/white-labelling-banner-mobile-02.jpeg"
+                  "/assets/images/nutrition/white-labelling-banner-mobile-02.webp"
                 }
                 alt="Gomzi Lifescience Private Label Supplement banner "
                 loading="eager"
@@ -407,7 +407,7 @@ function WhiteLabelling() {
                 className="d-none d-md-block lazy"
                 src={
                   process.env.PUBLIC_URL +
-                  "/assets/images/nutrition/white-labelling-banner-01.jpeg"
+                  "/assets/images/nutrition/white-labelling-banner-01.webp"
                 }
                 alt="Gomzi Lifescience Private Label Supplement banner"
                 width="100%"
@@ -419,7 +419,7 @@ function WhiteLabelling() {
                 className="d-block d-md-none w-100 lazy"
                 src={
                   process.env.PUBLIC_URL +
-                  "/assets/images/nutrition/white-labelling-banner-mobile-01.jpeg"
+                  "/assets/images/nutrition/white-labelling-banner-mobile-01.webp"
                 }
                 alt="Gomzi Lifescience Private Label Supplement banner"
                 loading="eager"
@@ -469,7 +469,7 @@ function WhiteLabelling() {
                     <a
                       href={DownloadPdf || "#"}
                       download
-                      className="btn fw-bold shadow-lg px-5 py-2 text-uppercase request-toggle"
+                      className="btn fw-bold shadow-lg px-5 py-2 text-capitalize request-toggle"
                       onMouseOver={(e) =>
                         (e.currentTarget.style.transform = "scale(1.05)")
                       }
@@ -484,7 +484,7 @@ function WhiteLabelling() {
                       href="https://wa.me/918320077993?text=Hello%20I%20want%20to%20request%20a%20quote"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn fw-bold shadow-lg px-5 py-2 text-uppercase request-toggle"
+                      className="btn fw-bold shadow-lg px-5 py-2 text-capitalize request-toggle"
                       onMouseOver={(e) =>
                         (e.currentTarget.style.transform = "scale(1.05)")
                       }
@@ -502,7 +502,7 @@ function WhiteLabelling() {
                       <img
                         src={
                           process.env.PUBLIC_URL +
-                          "/assets/images/nutrition/who-we-are-01.jpeg"
+                          "/assets/images/nutrition/who-we-are.webp"
                         }
                         width="100%"
                         className="border-radius-20"
@@ -565,7 +565,7 @@ function WhiteLabelling() {
                       <img
                         src={
                           process.env.PUBLIC_URL +
-                          "/assets/images/nutrition/who-we-are-01.jpeg"
+                          "/assets/images/nutrition/who-we-are.webp"
                         }
                         width="100%"
                         className="border-radius-20"
@@ -673,7 +673,7 @@ function WhiteLabelling() {
                 </h2>
 
                 <Link
-                  to="/third-party-manufacturing/WheyProteinManufacturing"
+                  to="/third-party-manufacturing/protein-powder"
                   className="text-decoration-none d-block mb-3"
                 >
                   <div className="d-flex align-items-center p-3 product-range-section">
@@ -688,7 +688,7 @@ function WhiteLabelling() {
                 </Link>
 
                 <Link
-                  to="/third-party-manufacturing/performance-supplements"
+                  to="/third-party-manufacturing/sports-nutrition-supplements"
                   className="text-decoration-none d-block mb-3"
                 >
                   <div className="d-flex align-items-center p-3 product-range-section">

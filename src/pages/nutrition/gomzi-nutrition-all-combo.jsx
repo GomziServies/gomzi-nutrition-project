@@ -144,7 +144,7 @@ function GomziNutritionAllCombo() {
         </title>
         <meta
           name="description"
-          content="Get the ultimate health and fitness support with Gomzi Nutrition All Combo. A complete supplement stack designed for muscle building, fat loss, and overall wellness."
+          content="Get the ultimate health and fitness support with Gomzi Lifescience All Combo. A complete supplement stack designed for muscle building, fat loss, and overall wellness."
         />
         <meta
           name="keyword"
@@ -175,11 +175,11 @@ function GomziNutritionAllCombo() {
         />
         <meta
           property="og:title"
-          content="Gomzi Nutrition All Combo - Complete Nutrition Stack for Health & Fitness"
+          content="Gomzi Lifescience All Combo - Complete Nutrition Stack for Health & Fitness"
         />
         <meta
           property="og:description"
-          content="Get the ultimate health and fitness support with Gomzi Nutrition All Combo. A complete supplement stack designed for muscle building, fat loss, and overall wellness."
+          content="Get the ultimate health and fitness support with Gomzi Lifescience All Combo. A complete supplement stack designed for muscle building, fat loss, and overall wellness."
         />
         <meta
           property="og:image"

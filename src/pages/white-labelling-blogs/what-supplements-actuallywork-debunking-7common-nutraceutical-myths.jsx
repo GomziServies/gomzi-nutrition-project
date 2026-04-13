@@ -36,7 +36,7 @@ const faqData = [
     answer: (
       <>
         Yes! Gujarat is a global hub. Companies like{" "}
-        <strong>Gomzi Nutrition</strong> and <strong>Nutra Healthcare</strong>{" "}
+        <strong>Gomzi Lifescience</strong> and <strong>Nutra Healthcare</strong>{" "}
         are leaders in third-party manufacturing, offering everything from whey
         protein to specialized herbal blends.
       </>

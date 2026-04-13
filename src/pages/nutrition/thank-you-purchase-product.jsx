@@ -10,10 +10,10 @@ function ThankYouProductPage() {
   return (
     <>
       <Helmet>
-        <title>Thank You for Your Order - Gomzi Nutrition Supplements</title>
+        <title>Thank You for Your Order - Gomzi Lifescience Supplements</title>
         <meta
           name="description"
-          content="Thank you for ordering from Gomzi Nutrition! We appreciate your trust in our products. Your order is being processed and will be delivered soon."
+          content="Thank you for ordering from Gomzi Lifescience! We appreciate your trust in our products. Your order is being processed and will be delivered soon."
         />
         <meta
           name="keyword"
@@ -44,11 +44,11 @@ function ThankYouProductPage() {
         />
         <meta
           property="og:title"
-          content="Thank You for Your Order - Gomzi Nutrition Supplements"
+          content="Thank You for Your Order - Gomzi Lifescience Supplements"
         />
         <meta
           property="og:description"
-          content="Thank you for ordering from Gomzi Nutrition! We appreciate your trust in our products. Your order is being processed and will be delivered soon."
+          content="Thank you for ordering from Gomzi Lifescience! We appreciate your trust in our products. Your order is being processed and will be delivered soon."
         />
         <meta
           property="og:image"

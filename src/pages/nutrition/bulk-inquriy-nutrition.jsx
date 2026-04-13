@@ -81,7 +81,7 @@ function BulkInquiryNutrition() {
         </title>
         <meta
           name="description"
-          content="Order nutrition supplements in bulk from Gomzi Nutrition. Ideal for retailers and gyms, we offer wholesale pricing on premium supplements and powders."
+          content="Order nutrition supplements in bulk from Gomzi Lifescience. Ideal for retailers and gyms, we offer wholesale pricing on premium supplements and powders."
         />
         <meta
           name="keyword"
@@ -112,11 +112,11 @@ function BulkInquiryNutrition() {
         />
         <meta
           property="og:title"
-          content="Bulk Nutrition Supplements - Gomzi Nutrition Wholesale & Bulk Orders"
+          content="Bulk Nutrition Supplements - Gomzi Lifescience Wholesale & Bulk Orders"
         />
         <meta
           property="og:description"
-          content="Order nutrition supplements in bulk from Gomzi Nutrition. Ideal for retailers and gyms, we offer wholesale pricing on premium supplements and powders."
+          content="Order nutrition supplements in bulk from Gomzi Lifescience. Ideal for retailers and gyms, we offer wholesale pricing on premium supplements and powders."
         />
         <meta
           property="og:image"
@@ -153,7 +153,7 @@ function BulkInquiryNutrition() {
       </Helmet>
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Bulk Inquiry Partner with Gomzi Nutrition. "
+          "Hello, I wanted to know more about Bulk Inquiry Partner with Gomzi Lifescience. "
         }
         options={{ pageRef: true }}
       />

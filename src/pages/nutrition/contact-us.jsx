@@ -15,7 +15,7 @@ function ContactUs() {
         <title>Contact Us | Gomzi Lifescience Family – We're Here to He</title>
         <meta
           name="description"
-          content="Have questions or need support? Contact Gomzi Nutrition Family for inquiries, assistance, and expert guidance on our nutraceutical products. Get in touch today!"
+          content="Have questions or need support? Contact Gomzi Lifescience Family for inquiries, assistance, and expert guidance on our nutraceutical products. Get in touch today!"
         />
         <meta
           name="keyword"
@@ -46,11 +46,11 @@ function ContactUs() {
         />
         <meta
           property="og:title"
-          content="Contact Us | Gomzi Nutrition Family - We're Here to Help"
+          content="Contact Us | Gomzi Lifescience Family - We're Here to Help"
         />
         <meta
           property="og:description"
-          content="Have questions or need support? Contact Gomzi Nutrition Family for inquiries, assistance, and expert guidance on our nutraceutical products. Get in touch today!"
+          content="Have questions or need support? Contact Gomzi Lifescience Family for inquiries, assistance, and expert guidance on our nutraceutical products. Get in touch today!"
         />
         <meta
           property="og:image"
@@ -88,7 +88,7 @@ function ContactUs() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Terms & Conditions for Gomzi Nutrition Details. "
+          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifescience Details. "
         }
         options={{ pageRef: true }}
       />

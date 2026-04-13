@@ -182,7 +182,7 @@ function CheckOut() {
         </title>
         <meta
           name="description"
-          content="Complete your purchase at Gomzi Nutrition with secure and fast checkout options. Hassle-free payment process for all your nutrition and supplement needs."
+          content="Complete your purchase at Gomzi Lifescience with secure and fast checkout options. Hassle-free payment process for all your nutrition and supplement needs."
         />
         <meta
           name="keyword"
@@ -213,11 +213,11 @@ function CheckOut() {
         />
         <meta
           property="og:title"
-          content="Checkout at Gomzi Nutrition - Secure & Fast Payment Options"
+          content="Checkout at Gomzi Lifescience - Secure & Fast Payment Options"
         />
         <meta
           property="og:description"
-          content="Complete your purchase at Gomzi Nutrition with secure and fast checkout options. Hassle-free payment process for all your nutrition and supplement needs."
+          content="Complete your purchase at Gomzi Lifescience with secure and fast checkout options. Hassle-free payment process for all your nutrition and supplement needs."
         />
         <meta
           property="og:image"

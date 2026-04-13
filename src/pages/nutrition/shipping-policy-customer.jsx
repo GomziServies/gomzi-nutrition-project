@@ -44,11 +44,11 @@ function ShippingPolicyCustomer() {
     <>
       <Helmet>
         <title>
-          Shipping Policy | Gomzi Nutrition Family - Fast & Reliable Delivery
+          Shipping Policy | Gomzi Lifescience Family - Fast & Reliable Delivery
         </title>
         <meta
           name="description"
-          content="Learn about Gomzi Nutrition Family's Shipping Policy. Get details on delivery times, shipping charges, and order tracking for a smooth shopping experience."
+          content="Learn about Gomzi Lifescience Family's Shipping Policy. Get details on delivery times, shipping charges, and order tracking for a smooth shopping experience."
         />
         <meta
           name="keyword"
@@ -79,11 +79,11 @@ function ShippingPolicyCustomer() {
         />
         <meta
           property="og:title"
-          content="Shipping Policy | Gomzi Nutrition Family - Fast & Reliable Delivery"
+          content="Shipping Policy | Gomzi Lifescience Family - Fast & Reliable Delivery"
         />
         <meta
           property="og:description"
-          content="Learn about Gomzi Nutrition Family's Shipping Policy. Get details on delivery times, shipping charges, and order tracking for a smooth shopping experience."
+          content="Learn about Gomzi Lifescience Family's Shipping Policy. Get details on delivery times, shipping charges, and order tracking for a smooth shopping experience."
         />
         <meta
           property="og:image"
@@ -121,7 +121,7 @@ function ShippingPolicyCustomer() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Terms & Conditions for Gomzi Nutrition Details. "
+          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifescience Details. "
         }
         options={{ pageRef: true }}
       />

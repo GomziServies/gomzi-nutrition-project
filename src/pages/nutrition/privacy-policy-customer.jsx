@@ -43,10 +43,10 @@ function PrivacyPolicyCustomer() {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy | Gomzi Nutrition Family</title>
+        <title>Privacy Policy | Gomzi Lifescience Family</title>
         <meta
           name="description"
-          content="Discover how Gomzi Nutrition Family protects your privacy. Read our Privacy Policy to understand data collection, security measures, and your rights as a customer."
+          content="Discover how Gomzi Lifescience Family protects your privacy. Read our Privacy Policy to understand data collection, security measures, and your rights as a customer."
         />
         <meta
           name="keyword"
@@ -77,11 +77,11 @@ function PrivacyPolicyCustomer() {
         />
         <meta
           property="og:title"
-          content="Privacy Policy | Gomzi Nutrition Family"
+          content="Privacy Policy | Gomzi Lifescience Family"
         />
         <meta
           property="og:description"
-          content="Discover how Gomzi Nutrition Family protects your privacy. Read our Privacy Policy to understand data collection, security measures, and your rights as a customer."
+          content="Discover how Gomzi Lifescience Family protects your privacy. Read our Privacy Policy to understand data collection, security measures, and your rights as a customer."
         />
         <meta
           property="og:image"
@@ -119,7 +119,7 @@ function PrivacyPolicyCustomer() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Terms & Conditions for Gomzi Nutrition Details. "
+          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifescience Details. "
         }
         options={{ pageRef: true }}
       />

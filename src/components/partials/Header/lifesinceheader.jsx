@@ -91,14 +91,7 @@ function LifesinceHeader() {
 
             <ul className="mobileUserInfo aa">
               <li>
-                <Link to="#">
-                  Help
-                  <i className="far fa-life-ring ml-2"></i>
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/blog">Blog</Link>
+                <Link to="/read-more-white-labelling-blogs">Blogs</Link>
               </li>
               <li>
                 <Link to="/aboutUs" target="_blank">

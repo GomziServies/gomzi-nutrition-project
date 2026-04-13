@@ -30,7 +30,7 @@ function NutritionFooterRefuelSeries() {
         name,
         email,
         mobile,
-        subject: "Gomzi Nutrition Refuel 2.0",
+        subject: "Gomzi Lifescience Refuel 2.0",
         message: "sadfghjngfrtghg",
       };
 

@@ -99,12 +99,12 @@ Training_Gym: ${traininggym}`;
     <>
       <Helmet>
         <title>
-          Gomzi Nutrition Trainer Packs - Supplements for Fitness Trainers &
+          Gomzi Lifescience Trainer Packs - Supplements for Fitness Trainers &
           Athletes
         </title>
         <meta
           name="description"
-          content="Get customized nutrition packs for trainers with Gomzi Nutrition. Tailored supplements to support athletic performance and achieve fitness goals. Ideal for personal trainers and athletes."
+          content="Get customized nutrition packs for trainers with Gomzi Lifescience. Tailored supplements to support athletic performance and achieve fitness goals. Ideal for personal trainers and athletes."
         />
         <meta
           name="keyword"
@@ -135,11 +135,11 @@ Training_Gym: ${traininggym}`;
         />
         <meta
           property="og:title"
-          content="Gomzi Nutrition Trainer Packs - Supplements for Fitness Trainers & Athletes"
+          content="Gomzi Lifescience Trainer Packs - Supplements for Fitness Trainers & Athletes"
         />
         <meta
           property="og:description"
-          content="Get customized nutrition packs for trainers with Gomzi Nutrition. Tailored supplements to support athletic performance and achieve fitness goals. Ideal for personal trainers and athletes."
+          content="Get customized nutrition packs for trainers with Gomzi Lifescience. Tailored supplements to support athletic performance and achieve fitness goals. Ideal for personal trainers and athletes."
         />
         <meta
           property="og:image"

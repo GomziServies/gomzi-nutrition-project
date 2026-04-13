@@ -27,7 +27,7 @@ function TopSupplementsForWeightGain() {
         />
         <meta
           property="og:title"
-          content="Proper Supplement Analysis | Gomzi Nutrition"
+          content="Proper Supplement Analysis | Gomzi Lifescience"
         />
         <meta
           property="og:description"

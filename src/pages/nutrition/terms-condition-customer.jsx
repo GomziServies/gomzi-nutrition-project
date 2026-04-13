@@ -44,12 +44,12 @@ function TermsConditionCustomer() {
     <>
       <Helmet>
         <title>
-          Terms & Conditions | Gomzi Nutrition Family - Your Trusted Wellness
+          Terms & Conditions | Gomzi Lifescience Family - Your Trusted Wellness
           Partner
         </title>
         <meta
           name="description"
-          content="Read the Terms & Conditions for Gomzi Nutrition Family. Learn about our policies, customer rights, and guidelines for a seamless shopping experience."
+          content="Read the Terms & Conditions for Gomzi Lifescience Family. Learn about our policies, customer rights, and guidelines for a seamless shopping experience."
         />
         <meta
           name="keyword"
@@ -80,11 +80,11 @@ function TermsConditionCustomer() {
         />
         <meta
           property="og:title"
-          content="Terms & Conditions | Gomzi Nutrition Family - Your Trusted Wellness Partner"
+          content="Terms & Conditions | Gomzi Lifescience Family - Your Trusted Wellness Partner"
         />
         <meta
           property="og:description"
-          content="Read the Terms & Conditions for Gomzi Nutrition Family. Learn about our policies, customer rights, and guidelines for a seamless shopping experience."
+          content="Read the Terms & Conditions for Gomzi Lifescience Family. Learn about our policies, customer rights, and guidelines for a seamless shopping experience."
         />
         <meta
           property="og:image"
@@ -122,7 +122,7 @@ function TermsConditionCustomer() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Terms & Conditions for Gomzi Nutrition Details. "
+          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifescience Details. "
         }
         options={{ pageRef: true }}
       />

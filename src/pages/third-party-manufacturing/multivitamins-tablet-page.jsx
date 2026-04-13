@@ -129,7 +129,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: "I got my brand ready with Gamzi Supplement Manufacturing, and they were incredibly helpful in getting my brand ready and gave me excellent suggestions. This helped me build my brand effectively. They were incredibly helpful and their team is incredibly good, and I look forward to working with them again. Thank you so much!",
+    text: "I got my brand ready with Gomzi Supplement Manufacturing, and they were incredibly helpful in getting my brand ready and gave me excellent suggestions. This helped me build my brand effectively. They were incredibly helpful and their team is incredibly good, and I look forward to working with them again. Thank you so much!",
     name: "Samirbhai",
     role: "Founder of Bio Kinetic",
     rating: 5,
@@ -204,7 +204,7 @@ const MultivitaminTablet = () => {
   const schemaData = [
     {
       "@context": "https://schema.org/",
-      "@type": "Product",
+      "@type": "Service",
       "@id":
         "https://www.gomzilifesciences.in/third-party-manufacturing/multivitamins-tablet/#product",
       name: "Multivitamin Tablet Manufacturer in India | Private Label Nutraceutical Manufacturing",
@@ -604,7 +604,7 @@ const MultivitaminTablet = () => {
               <img
                 src={
                   process.env.PUBLIC_URL +
-                  "/assets/images/nutrition/who-we-are-01.jpeg"
+                  "/assets/images/nutrition/who-we-are.webp"
                 }
                 width="100%"
                 className="border-radius-20"
@@ -628,11 +628,12 @@ const MultivitaminTablet = () => {
             <div className="wh-cat-list">
               {productCategories.map((category) => (
                 <div key={category.id} className="wh-cat-row-item">
+                  <div className="wh-cat-row-header wh-cat-row-header-top">
+                    <div className="wh-cat-num">{category.id}</div>
+                    <div className="wh-cat-title">{category.title}</div>
+                  </div>
+
                   <div className="wh-cat-row-left">
-                    <div className="wh-cat-row-header">
-                      <div className="wh-cat-num">{category.id}</div>
-                      <div className="wh-cat-title">{category.title}</div>
-                    </div>
                     <p className="wh-cat-desc">{category.description1}</p>
                     <p className="wh-cat-desc">{category.description2}</p>
                     <span className="wh-kf-label">Key Features</span>
@@ -786,14 +787,17 @@ const MultivitaminTablet = () => {
               in the market.
             </p>
             <h3 className="wh-sec-sub">Our Services Include:</h3>
-            <ul className="wh-mfg-steps point ">
-              {manufacturingServices.map((item, idx) => (
-                <li key={idx} className="wh-mfg-step-row">
-                  <div className="wh-mfg-step-num">{idx + 1}.</div>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+
+            <div className="section-indent">
+              <ul className="mfg-timeline">
+                {manufacturingServices.map((item, idx) => (
+                  <li key={idx} className="mfg-timeline-item">
+                    <div className="mfg-timeline-number">{idx + 1}</div>
+                    <div className="mfg-timeline-content">{item}</div>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <p className="wh-body-text point ">
               As an experienced multivitamin tablet manufacturer, we help
               businesses develop high-quality dietary supplements under their
@@ -811,14 +815,21 @@ const MultivitaminTablet = () => {
             </p>
             <h3 className="wh-sec-sub">Available Packaging Options:</h3>
             <div className="wh-grid-3 point">
-              {["HDPE bottles", "Blister packs", "Strip packaging"].map(
-                (item, idx) => (
-                  <div key={idx} className="wh-grid-item">
-                    <span className="wh-grid-check">➤</span>
-                    {item}
-                  </div>
-                ),
-              )}
+              {[
+                { text: "HDPE bottles", icon: "fa-bottle-water" },
+                { text: "Blister packs", icon: "fa-tablets" },
+                { text: "Strip packaging", icon: "fa-grip-lines" },
+              ].map((item, idx) => (
+                <div key={idx} className="wh-grid-item">
+                  <span className="wh-grid-check">
+                    <i
+                      className={`fas ${item.icon}`}
+                      style={{ color: "#86c33a" }}
+                    ></i>
+                  </span>
+                  {item.text}
+                </div>
+              ))}
             </div>
             <p className="wh-body-text">
               Our packaging solutions support brands looking for private label
@@ -861,14 +872,22 @@ const MultivitaminTablet = () => {
             </p>
             <div className="wh-grid-2">
               {[
-                "FSSAI compliant manufacturing",
-                "GMP certified production facility",
-                "High-quality raw ingredients",
-                "Third-party quality testing",
+                { text: "FSSAI compliant manufacturing", icon: "fa-landmark" },
+                {
+                  text: "GMP certified production facility",
+                  icon: "fa-industry",
+                },
+                { text: "High-quality raw ingredients", icon: "fa-leaf" },
+                { text: "Third-party quality testing", icon: "fa-flask" },
               ].map((item, idx) => (
                 <div key={idx} className="wh-grid-item">
-                  <span className="wh-grid-check">➤</span>
-                  {item}
+                  <span className="wh-grid-check">
+                    <i
+                      className={`fas ${item.icon}`}
+                      style={{ color: "#86c33a" }}
+                    ></i>
+                  </span>
+                  {item.text}
                 </div>
               ))}
             </div>
@@ -893,14 +912,28 @@ const MultivitaminTablet = () => {
             </strong>
             <div className="wh-grid-2">
               {[
-                "General wellness supplements",
-                "Daily nutrition products",
-                "Immune support formulations",
-                "Active lifestyle and fitness supplements",
+                {
+                  text: "General wellness supplements",
+                  icon: "fa-spa",
+                },
+                { text: "Daily nutrition products", icon: "fa-apple-whole" },
+                {
+                  text: "Immune support formulations",
+                  icon: "fa-shield-virus",
+                },
+                {
+                  text: "Active lifestyle and fitness supplements",
+                  icon: "fa-dumbbell",
+                },
               ].map((item, idx) => (
                 <div key={idx} className="wh-grid-item">
-                  <span className="wh-grid-check">➤</span>
-                  {item}
+                  <span className="wh-grid-check">
+                    <i
+                      className={`fas ${item.icon}`}
+                      style={{ color: "#86c33a" }}
+                    ></i>
+                  </span>
+                  {item.text}
                 </div>
               ))}
             </div>
@@ -934,7 +967,7 @@ const MultivitaminTablet = () => {
           </div>
         </div>
 
-        <div className="wh-section wh-section-alt">
+        <div className="wh-section wh-section-white">
           <div className="wh-container">
             <div className="whey-protein-div-main">
               <div className="whey-protein-div-text-multivitamin">
