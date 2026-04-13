@@ -58,6 +58,9 @@ const routes = [
   { path: "/aboutus" },
   { path: "/user/profile" },
   { path: "/user/order" },
+  { path: "/nutrition/sample-booking-update" },
+  
+
 ];
 
 module.exports = routes;

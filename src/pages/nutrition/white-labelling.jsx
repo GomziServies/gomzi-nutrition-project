@@ -326,7 +326,6 @@ function WhiteLabelling() {
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
-
       <LifesinceHeader />
       <WhatsappHeaderApp
         message={
