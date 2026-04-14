@@ -55,6 +55,11 @@ function shouldSkipPrerender() {
     return true;
   }
 
+  // Skip on Netlify CI builds (react-snap requires headless Chrome which is unavailable).
+  if (process.env.NETLIFY === "true" || envFlag("NETLIFY")) {
+    return true;
+  }
+
   return false;
 }
 
