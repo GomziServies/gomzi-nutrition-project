@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import HomeFooter from "../components/partials/Footer/nutritionfooter";
 import NutritionHeader from "../components/partials/Header/nutritionsheader";
@@ -19,6 +18,15 @@ const NotFoundPage = () => {
           gtag('js', new Date());
 
           gtag('config', 'G-J50WNKGW38');
+          `}
+        </script>
+        <script>
+          {`
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "wbdpmwgoji");
           `}
         </script>
       </Helmet>

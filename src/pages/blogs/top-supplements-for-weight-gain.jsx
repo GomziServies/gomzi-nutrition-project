@@ -37,10 +37,10 @@ function TopSupplementsForWeightGain() {
           property="og:image"
           content="https://fggroup.in/assets/images/logo/fg_group.webp"
         />
-        <meta property="og:url" content={canonicalUrl} />
-        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:url" content={ canonicalUrl } />
+        <link rel="canonical" href={ canonicalUrl } />
         <script>
-          {`!function(f,b,e,v,n,t,s)
+          { `!function(f,b,e,v,n,t,s)
                     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
                     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
                     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -53,18 +53,27 @@ function TopSupplementsForWeightGain() {
                     `}
         </script>
         <noscript>
-          {`<img height="1" width="1" style="display:none"
+          { `<img height="1" width="1" style="display:none"
                     src="https://www.facebook.com/tr?id=1144699046738070&ev=PageView&noscript=1"
                     />`}
         </noscript>
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38`}
+          src={ `https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38` }
         ></script>
-        <noscript>{`window.dataLayer = window.dataLayer || [];
+        <noscript>{ `window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', 'G-J50WNKGW38');`}</noscript>
+        <script>
+          { `
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "wbdpmwgoji");
+          `}
+        </script>
       </Helmet>
       <NutritionHeader />
       <div className="main-content mb-150">

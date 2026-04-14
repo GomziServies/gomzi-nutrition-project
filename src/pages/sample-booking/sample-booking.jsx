@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Swal from "sweetalert2";
 import { useSearchParams } from "react-router-dom";
 import { axiosInstance } from "../../assets/js/config/api";
-import NutritionHeader from "../../components/partials/Header/nutritionsheader";
-import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
-import WhatsappHeaderApp from "../../components/NutritionWhatsappHeaderBtn";
 import { Helmet } from "react-helmet";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Row, Col, Form, Button } from "react-bootstrap";
 import "../../assets/css/nutrition.css";
 
 // ─── Constants ──────────────────────────────────────────────────────────────
@@ -198,21 +195,7 @@ const SampleBooking = () => {
     const bookingId = searchParams.get("id");
     const token = searchParams.get("token");
 
-    useEffect(() => {
-        // If token is present in URL, save it to authorize subsequent calls
-        if (token) {
-            localStorage.setItem("fg_group_user_authorization", token);
-        }
-
-        if (bookingId) {
-            fetchBooking();
-        } else {
-            setLoading(false);
-            setError("No Booking ID found in URL");
-        }
-    }, [bookingId, token]);
-
-    const fetchBooking = async () => {
+    const fetchBooking = useCallback(async () => {
         try {
             setLoading(true);
             const res = await axiosInstance.get("/gn-sample-booking/get", {
@@ -241,7 +224,21 @@ const SampleBooking = () => {
         } finally {
             setLoading(false);
         }
-    };
+    }, [bookingId]);
+
+    useEffect(() => {
+        // If token is present in URL, save it to authorize subsequent calls
+        if (token) {
+            localStorage.setItem("fg_group_user_authorization", token);
+        }
+
+        if (bookingId) {
+            fetchBooking();
+        } else {
+            setLoading(false);
+            setError("No Booking ID found in URL");
+        }
+    }, [bookingId, token, fetchBooking]);
 
     const handleProductSave = (productId, data) => {
         const newFeedbacks = { ...savedFeedbacks, [productId]: data };

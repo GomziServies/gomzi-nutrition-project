@@ -29,9 +29,9 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
     <>
       <ModalVideo
         channel="youtube"
-        isOpen={isVideoOpen}
-        videoId={videoUrl}
-        onClose={closeVideoModal}
+        isOpen={ isVideoOpen }
+        videoId={ videoUrl }
+        onClose={ closeVideoModal }
       />
       <Helmet>
         <title>
@@ -57,10 +57,10 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
           property="og:image"
           content="https://fggroup.in/assets/images/logo/fg_group.webp"
         />
-        <meta property="og:url" content={canonicalUrl} />
-        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:url" content={ canonicalUrl } />
+        <link rel="canonical" href={ canonicalUrl } />
         <script>
-          {`!function(f,b,e,v,n,t,s)
+          { `!function(f,b,e,v,n,t,s)
                     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
                     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
                     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -73,18 +73,27 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                     `}
         </script>
         <noscript>
-          {`<img height="1" width="1" style="display:none"
+          { `<img height="1" width="1" style="display:none"
                     src="https://www.facebook.com/tr?id=1144699046738070&ev=PageView&noscript=1"
                     />`}
         </noscript>
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38`}
+          src={ `https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38` }
         ></script>
-        <noscript>{`window.dataLayer = window.dataLayer || [];
+        <noscript>{ `window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', 'G-J50WNKGW38');`}</noscript>
+        <script>
+          { `
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "wbdpmwgoji");
+          `}
+        </script>
       </Helmet>
       <NutritionHeader />
       <div className="main-content mb-150">
@@ -120,25 +129,25 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                     <p className="mb-2">
                       In 2026, the era of buying a generic multivitamin off a
                       retail shelf is fading. Consumers led by Gen Z and
-                      Millennials now define wellness as{" "}
-                      <strong>"optimization"</strong> rather than{" "}
+                      Millennials now define wellness as{ " " }
+                      <strong>"optimization"</strong> rather than{ " " }
                       <strong>"prevention".</strong>
                     </p>
                     <p className="mb-2">
-                      Recent reports from Euromonitor (2025) show that over{" "}
+                      Recent reports from Euromonitor (2025) show that over{ " " }
                       <strong>43% of global consumers</strong> now use
                       supplements weekly, but they are increasingly demanding
                       formulas tailored to their specific biometrics.
                     </p>
                     <p className="mb-2">
                       The health and wellness landscape has shifted toward
-                      precision nutrition. As one of the emerging{" "}
+                      precision nutrition. As one of the emerging{ " " }
                       <Link
                         className="blog-text-link"
                         to="https://www.gomzilifesciences.in/nutrition/white-labelling"
                       >
                         nutraceutical companies in India,
-                      </Link>{" "}
+                      </Link>{ " " }
                       we are seeing a massive trend where brand owners are
                       moving away from generic products toward high-tech,
                       data-driven personalization.
@@ -148,13 +157,13 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                       winning in 2026 is agility and trust.
                     </p>
                     <p className="mb-2">
-                      According to{" "}
+                      According to{ " " }
                       <Link
                         className="blog-text-link"
                         to="https://www.nutritioninsight.com/news/innova-market-insights-top-nutrition-trends-2026.html"
                       >
                         Innova Market Insights,
-                      </Link>{" "}
+                      </Link>{ " " }
                       personalized nutrition is no longer a niche market but a
                       primary consumer expectation in 2026
                     </p>
@@ -165,12 +174,12 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                       The 2026 Competitor Landscape
                     </h2>
                     <p className="mt-3">
-                      To compete with giants like{" "}
+                      To compete with giants like{ " " }
                       <strong>
                         Abbott (Abbotts Libre), Nestlé (Persona Nutrition), and
                         Bayer (Care/of),
-                      </strong>{" "}
-                      startups must pivot from mass-market volume to{" "}
+                      </strong>{ " " }
+                      startups must pivot from mass-market volume to{ " " }
                       <strong>Micro-Batch Agility.</strong>
                     </p>
                   </div>
@@ -182,7 +191,7 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
 
                     <p>
                       Personalization is only as good as the data behind it.
-                      Competitors like <strong>ZOE</strong> and{" "}
+                      Competitors like <strong>ZOE</strong> and{ " " }
                       <strong>Viome</strong> have set the standard by using:
                     </p>
 
@@ -197,7 +206,7 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                         or recovery dosages.
                       </li>
                       <li>
-                        <strong>The AI Edge : </strong>Startups are now using{" "}
+                        <strong>The AI Edge : </strong>Startups are now using{ " " }
                         <strong>LLM-based</strong> systems to translate complex
                         biomarker data into simple daily sachet recommendations.
                       </li>
@@ -214,7 +223,7 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                     </p>
                     <p className="mt-2">
                       To launch a personalized line, you need a partner capable
-                      of <strong>"Plug-and-Produce"</strong> manufacturing.{" "}
+                      of <strong>"Plug-and-Produce"</strong> manufacturing.{ " " }
                     </p>
                   </div>
 
@@ -289,7 +298,7 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                       </li>
                       <li>
                         <strong>
-                          Cognitive "Nootropic" Personalization :{" "}
+                          Cognitive "Nootropic" Personalization :{ " " }
                         </strong>
                         Formulas featuring Lion's Mane, L-Theanine, and Bacopa
                         for professionals and students.
@@ -308,7 +317,7 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                     </h2>
 
                     <p className="mb-2">
-                      With stricter{" "}
+                      With stricter{ " " }
                       <strong>FSSAI, FDA, and EU safety standards</strong> in
                       2026, compliance is your best marketing tool.
                     </p>
@@ -334,13 +343,13 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
 
                     <p className="mt-3">
                       In the fitness sector, the quality of your raw materials
-                      defines your brand. When scouting for{" "}
+                      defines your brand. When scouting for{ " " }
                       <Link
                         className="blog-text-link"
                         to="https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder"
                       >
                         whey protein concentrate manufacturers,
-                      </Link>{" "}
+                      </Link>{ " " }
                       you must ensure the facility uses cold-processing
                       technology to maintain protein integrity.
                     </p>
@@ -351,7 +360,7 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                     </p>
                     <h3 className="blog-subsection-subtitle">
                       Ready to experience the best whey protein brand in
-                      India?{" "}
+                      India?{ " " }
                     </h3>
                     <div className="row">
                       <div className="col"></div>
@@ -368,7 +377,7 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                           />
                           <div className="video-btn play-btn">
                             <button
-                              onClick={() => openVideoModal("B2XN5aWVozs")}
+                              onClick={ () => openVideoModal("B2XN5aWVozs") }
                               className="custom clickof video-button-bg"
                               aria-label="Play video 1"
                             >
@@ -391,12 +400,12 @@ function Frommassproductiontomicrobatcheshowtolaunchapersonalizedsupplementline(
                     <p className="mb-2">
                       Launching a personalized line is no longer about having
                       the biggest factory; it's about having the smartest data.
-                      By focusing on{" "}
-                      <strong>Micro-Batches, AI-driven formulations,</strong>{" "}
-                      and{" "}
+                      By focusing on{ " " }
+                      <strong>Micro-Batches, AI-driven formulations,</strong>{ " " }
+                      and{ " " }
                       <strong>
                         Niche Specialization (like GLP-1 support),
-                      </strong>{" "}
+                      </strong>{ " " }
                       your brand can disrupt the legacy giants.
                     </p>
 
