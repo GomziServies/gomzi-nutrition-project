@@ -19,7 +19,7 @@ export default function NutraceuticalSection() {
             <div className="ns-quote-card">
               <div className="ns-quote-label">Why Us</div>
               <p className="ns-quote-text">
-                Stop promoting <strong>other brands</strong> | Build your .
+                Stop promoting <strong>other brands</strong> | Build your{" "}
                 <strong>own</strong> legacy{" "}
               </p>
             </div>

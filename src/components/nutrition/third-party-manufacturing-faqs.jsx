@@ -9,7 +9,9 @@ const ProductFAQS = () => {
       <div className="max-90-margin-0 ">
         <div className="col-12 text-center">
           <div className="certified-compliant-div">
-            <h2 className="certified-compliant-div-h2">FAQ</h2>
+            <h2 className="certified-compliant-div-h2 barlow-condensed-extra">
+              FAQ
+            </h2>
           </div>
         </div>
 

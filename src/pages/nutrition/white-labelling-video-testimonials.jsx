@@ -125,7 +125,7 @@ const GymVideoTestimonials = () => {
       <section className="vtesti-section">
         <div className="vtesti-inner">
           <div className="certified-compliant-div">
-            <h2 className="certified-compliant-div-h2">
+            <h2 className="certified-compliant-div-h2 barlow-condensed-extra">
               TRUSTED BY{" "}
               <span className="certified-compliant-div-hspan">
                 BRAND FOUNDERS

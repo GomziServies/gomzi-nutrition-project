@@ -687,7 +687,7 @@ function Home() {
           `}
         </script>
         <script>
-          { `
+          {`
           (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -713,6 +713,12 @@ function Home() {
                   className="btn black-btn mx-3 my-2 my-md-0"
                 >
                   Click Here For Third Party Manufacturing
+                </Link>
+                <Link
+                  to="/nutrition/landing-page"
+                  className="btn black-btn mx-3 my-2 my-md-0"
+                >
+                  Landing Page
                 </Link>
               </div>
             </div>

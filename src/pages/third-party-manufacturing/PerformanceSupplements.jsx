@@ -60,13 +60,13 @@ const testimonials = [
     text: (
       <>
         {" "}
-        Service 💯
+        Service 100%
         <br />
-        Quality delivered 💯
+        Quality delivered 100%
         <br />
-        Coperation 💯
+        Coperation 100%
         <br />
-        Team support 💯
+        Team support 100%
         <br />
         Overall good experience{" "}
       </>

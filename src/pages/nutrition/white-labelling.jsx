@@ -448,13 +448,13 @@ function WhiteLabelling() {
             <div className="col-12 mt-3">
               <div className="row justify-content-center mb-4">
                 <div className="col-12 text-center px-0">
-                  <h1 className="f-rob-bol f-32">
+                  <h1 className="barlow-condensed-extra f-32">
                     India's Trusted Nutraceutical Third-Party & White Label
                     Manufacturer
                   </h1>
 
                   <div className="mt-3">
-                    <h3 className="f-rob-bol f-22">
+                    <h3 className="barlow-condensed-semi">
                       ISO 22000:2018 | WHO-GMP | HACCP | HALAL | FSSAI Certified
                       Manufacturing Facility
                     </h3>
@@ -510,6 +510,7 @@ function WhiteLabelling() {
                     </div>
                   </div>
                 </div>
+
                 <div className="col-lg-6 my-0 break-all">
                   <div className="tab-content tab-detail" id="pills-tabContent">
                     <div
@@ -526,11 +527,30 @@ function WhiteLabelling() {
                         </h2>
                         <p className="mt-3">
                           Gomzi Lifescience LLP is a leading nutraceutical
-                          third-party and white label manufacturer in India,
-                          offering complete end-to-end solutions for protein
-                          powders, fitness supplements, and nutraceutical
-                          products.
+                          third-party and white label manufacturer in India, it
+                          is a Surat-based B2B nutraceutical contract
+                          manufacturer built for India's next generation of
+                          supplement brand founders. offers end-to-end private
+                          label manufacturing across three core verticals:{" "}
+                          <strong>
+                            Sports Nutrition Supplements, Multivitamin Tablets,
+                            and Whey Protein
+                          </strong>
+                          .
                         </p>{" "}
+                        <div className="mt-3 mb-3">
+                          <div className="gls-quote-card">
+                            <p className="gls-quote-text">
+                              " From idea to a live, selling brand - most
+                              founders struggle to find one partner who can do
+                              it all.
+                              <strong>
+                                {" "}
+                                Gomzi Lifesciences bridges that gap "
+                              </strong>
+                            </p>
+                          </div>
+                        </div>
                         <p className="mt-3">
                           Established in 2024 and led by Dr. Gautam Jani, we are
                           an ISO 22000:2018, WHO-GMP, HACCP, HALAL, and
@@ -745,7 +765,8 @@ function WhiteLabelling() {
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
                       <p className="f-rob-bol mb-0 iso-para ">
-                        ISO & WHO-GMP Certified Manufacturing Facility
+                        <strong>Low MOQ:</strong> Start from just 50–100 KG per
+                        product
                       </p>
                     </div>
                   </div>
@@ -753,7 +774,8 @@ function WhiteLabelling() {
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
                       <p className="f-rob-bol mb-0 iso-para ">
-                        Research-Driven & Custom Formulation Expertise
+                        <strong>Fast Turnaround:</strong> Get your products
+                        ready in 15–20 days
                       </p>
                     </div>
                   </div>
@@ -761,7 +783,8 @@ function WhiteLabelling() {
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
                       <p className="f-rob-bol mb-0 iso-para ">
-                        Premium Raw Materials & Advanced Manufacturing
+                        <strong>Ready-to-Market Formulations:</strong> No R&D
+                        delays
                       </p>
                     </div>
                   </div>
@@ -769,7 +792,8 @@ function WhiteLabelling() {
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
                       <p className="f-rob-bol mb-0 iso-para ">
-                        Complete Branding & Private Label Support
+                        <strong>Indian Flavour Innovation:</strong> Stand out
+                        with unique taste profiles
                       </p>
                     </div>
                   </div>
@@ -777,7 +801,8 @@ function WhiteLabelling() {
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
                       <p className="f-rob-bol mb-0 iso-para ">
-                        Competitive Pricing with International Quality
+                        <strong>Affordable Manufacturing: </strong>Cost
+                        advantage with Gujarat-based production
                       </p>
                     </div>
                   </div>
@@ -785,7 +810,8 @@ function WhiteLabelling() {
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
                       <p className="f-rob-bol mb-0 iso-para ">
-                        Strict Regulatory & Quality Compliance
+                        <strong>ISO & WHO-GMP:</strong>Certified Manufacturing
+                        Facility
                       </p>
                     </div>
                   </div>
@@ -794,6 +820,45 @@ function WhiteLabelling() {
             </div>
 
             <div className="row mission-section align-items-start">
+              <div className="left-section product-range-order-2">
+                <h2 className="mb-20 text-center">
+                  Our <span className="highlight"> Mission</span>
+                </h2>
+                <div className="mission-box mb-4">
+                  <p className="mission-text">
+                    “ To be the most trusted manufacturing partner for India's
+                    next generation of supplement brand founders - delivering
+                    certified quality, formulation expertise, and brand-building
+                    support from the very first 50 KG. ”
+                  </p>
+                </div>
+              </div>
+
+              <div className="left-section product-range-order-1">
+                <h2 className="mb-20 text-center">
+                  Our <span className="highlight"> Vision</span>
+                </h2>
+
+                <div className="vision-box">
+                  <p className="vision-text">
+                    “ To manufacture the brands that define Indian wellness for
+                    the next decade - built by creators, trainers, and
+                    entrepreneurs who chose GLS as their first and lasting
+                    manufacturing partner. ”
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="row mission-section align-items-start">
+              <div className="left-section mb-2 product-range-order-1">
+                <img
+                  src="/assets/images/nutrition/white-labelling-mission-001.webp"
+                  alt="Gomzi Lifesciences Manufacturing Process"
+                  className="pb-5 pb-md-0 white-labelling-top-0 "
+                />
+              </div>
+
               <div className="left-section product-range-order-2 ">
                 <h2 className="mb-30-fw-700">
                   Our{" "}
@@ -823,12 +888,70 @@ function WhiteLabelling() {
                   ))}
                 </div>
               </div>
+            </div>
 
-              <div className="left-section mb-2 product-range-order-1">
+            <div className="row mission-section align-items-start">
+              <div className="left-section product-range-order-2">
+                <h2 className="mb-20 ">
+                  <strong> More Than White Labelling - We Build Brands</strong>
+                </h2>
+                <p className="mb-3 fts-18">
+                  Most manufacturers stop at production. We go beyond that.
+                </p>
+                <p className="mb-3 fts-18">With Gomzi Lifesciences, you get:</p>
+
+                <div className="descriptionShow text-secondary whitelable-decription">
+                  <div className="mb-3">
+                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                      <p className="f-rob-bol mb-0 iso-para ">
+                        Product selection & guidance
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mb-3">
+                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                      <p className="f-rob-bol mb-0 iso-para ">
+                        Custom branding & label design
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mb-3">
+                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                      <p className="f-rob-bol mb-0 iso-para ">
+                        Packaging solutions
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mb-3">
+                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                      <p className="f-rob-bol mb-0 iso-para ">
+                        Website development support
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mb-3">
+                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                      <p className="f-rob-bol mb-0 iso-para ">
+                        Marketing setup assistance
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="mb-3 fts-18 text-center">
+                  <strong>One partner. Zero hassle. Faster launch.</strong>
+                </p>
+              </div>
+
+              <div className="left-section product-range-order-1">
                 <img
-                  src="/assets/images/nutrition/white-labelling-mission-001.webp"
-                  alt="Gomzi Lifesciences Manufacturing Process"
-                  className="pb-5 pb-md-0 white-labelling-top-0 "
+                  src="/assets/images/nutrition/white-labelling-vision-001.webp"
+                  alt="Gomzi Lifesciences"
+                  className="illustration-image pb-5 pb-md-0"
                 />
               </div>
             </div>
@@ -839,7 +962,7 @@ function WhiteLabelling() {
       <div className="main-content mt-5">
         <section className="kf-section">
           <div className="certified-compliant-div">
-            <h2 className="certified-compliant-div-h2">
+            <h2 className="certified-compliant-div-h2 barlow-condensed-extra">
               KEY{" "}
               <span className="certified-compliant-div-hspan ">FEATURES</span>
             </h2>
@@ -864,7 +987,7 @@ function WhiteLabelling() {
             <div className="container-fluid mb-4">
               <div className="col-12 text-center">
                 <div className="certified-compliant-div">
-                  <h2 className="certified-compliant-div-h2">
+                  <h2 className="certified-compliant-div-h2 barlow-condensed-extra">
                     BRANDS{" "}
                     <span className="certified-compliant-div-hspan">
                       POWERED BY US

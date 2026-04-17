@@ -20,7 +20,9 @@ const Whitelabellingblogs = () => {
           <div className="col-12 d-flex align-items-center justify-content-between">
             <div className="col">
               <div className="certified-compliant-div">
-                <h2 className="certified-compliant-div-h2">BLOGS</h2>
+                <h2 className="certified-compliant-div-h2 barlow-condensed-extra">
+                  BLOGS
+                </h2>
               </div>
             </div>
           </div>

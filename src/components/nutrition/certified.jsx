@@ -19,7 +19,7 @@ const CertifiedProduct = () => {
       <section className="gym-cert-section">
         <div className="gym-cert-inner">
           <div className="certified-compliant-div">
-            <h2 className="certified-compliant-div-h2">
+            <h2 className="certified-compliant-div-h2 barlow-condensed-extra">
               CERTIFIED{" "}
               <span className="certified-compliant-div-hspan">COMPLIANT</span>{" "}
               TRUSTED

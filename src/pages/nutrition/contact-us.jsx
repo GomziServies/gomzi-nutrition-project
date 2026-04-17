@@ -85,7 +85,7 @@ function ContactUs() {
           gtag('js', new Date());
           gtag('config', 'G-J50WNKGW38');`}</noscript>
         <script>
-          { `
+          {`
           (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -157,7 +157,7 @@ function ContactUs() {
               </div>
               <div className="row col-md-6 pr-0">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4616.206252088472!2d72.74192247600143!3d21.18855708226951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04d6049b09c4b%3A0x2b5491773a2ee8f3!2sGomzi%20Lifesciences%20LLP%20%7C%20Best%20Nutraceutical%20and%20Ayurvedic%20products%20Manufacturer!5e1!3m2!1sen!2sin!4v1740216368608!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7440.1362802841695!2d72.73385979145098!3d21.189451922001158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s443%2C444%2C445%2C%201St%20Floor%2C%20RJD%20Textile%20Park%2C%20At.Ichchhapor%2C%20Hazira%20Road%2C%20Surat%2C%20Gujarat%20394510!5e0!3m2!1sen!2sin!4v1776337784490!5m2!1sen!2sin"
                   height="450"
                   className="check-out-width-border"
                   title="Gomzi Lifesciences Location Map"

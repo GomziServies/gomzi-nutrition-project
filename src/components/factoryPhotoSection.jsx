@@ -51,7 +51,7 @@ const FactoryPhotoSection = () => {
       <section className="factory-section">
         <div className="factory-inner">
           <div className="factory-header">
-            <h2 className="manufacturing-unit-title-fw-fs">
+            <h2 className="manufacturing-unit-title-fw-fs barlow-condensed-extra">
               MANUFACTURING{" "}
               <span className="manufacturing-unit-title">UNIT</span>{" "}
             </h2>
