@@ -1,10 +1,10 @@
 [build]
-  command = "npm run build"
+  command = "npm run build:seo"
   publish = "build"
 
 [build.environment]
   CI = "false"
-  SKIP_PRERENDER = "true"
+  FORCE_PRERENDER = "true"
 
 [[redirects]]
   from = "/*"

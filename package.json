@@ -36,6 +36,7 @@
     "prebuild": "node server.js",
     "build": "cross-env CI=false react-scripts build",
     "build:seo": "cross-env FORCE_PRERENDER=true npm run build",
+    "preview:seo": "npm run build:seo && npx serve -s build",
     "postbuild": "node scripts/postbuild-prerender.js",
     "deploy:seo": "cross-env FORCE_PRERENDER=true npx vercel build && npx vercel deploy --prebuilt --prod",
     "test": "react-scripts test",
@@ -44,16 +45,7 @@
   "reactSnap": {
     "inlineCss": false,
     "skipThirdPartyRequests": true,
-    "include": [
-      "/",
-      "/aboutus",
-      "/nutrition/contact-us",
-      "/nutrition/trainer-nutrition",
-      "/nutrition/white-labelling",
-      "/third-party-manufacturing/protein-powder",
-      "/third-party-manufacturing/sports-nutrition-supplements",
-      "/white-labelling-blogs"
-    ]
+    "crawl": true
   },
   "eslintConfig": {
     "extends": [
