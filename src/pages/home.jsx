@@ -714,12 +714,12 @@ function Home() {
                 >
                   Click Here For Third Party Manufacturing
                 </Link>
-                <Link
+                {/* <Link
                   to="/nutrition/landing-page"
                   className="btn black-btn mx-3 my-2 my-md-0"
                 >
                   Landing Page
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
