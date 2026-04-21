@@ -249,11 +249,19 @@ const SampleBooking = lazy(
   () => import("./pages/sample-booking/sample-booking"),
 );
 
+const Wheylanding = lazy(
+  () => import("./pages/whey-landing/whey-landing"),
+);
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+
+        <Route
+          path="/Whey-landing"
+          element={<Wheylanding/>}
+        />
 
         <Route
           path="/third-party-manufacturing/protein-powder"
