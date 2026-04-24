@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const WheyLandingHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -10,6 +10,25 @@ const WheyLandingHeader = () => {
     { label: "How It Works",  href: "#how",          id: "how" },
     { label: "Certifications",href: "#certifications",id: "certifications" },
   ]
+
+  const handleSectionClick = (event, href) => {
+    if (!href || !href.startsWith('#')) {
+      return
+    }
+
+    event.preventDefault()
+
+    const sectionId = href.slice(1)
+    const targetElement = document.getElementById(sectionId)
+    if (!targetElement) {
+      return
+    }
+
+    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    window.history.replaceState(null, '', `#${sectionId}`)
+    setActiveSection(sectionId)
+    setMenuOpen(false)
+  }
 
   // ── SCROLL SPY ──────────────────────────────────────────
   useEffect(() => {
@@ -55,13 +74,18 @@ const WheyLandingHeader = () => {
                 key={link.label}
                 href={link.href}
                 className={activeSection === link.id ? 'active' : ''}
+                onClick={(event) => handleSectionClick(event, link.href)}
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          <a href="#contact" className="wh-cta desktop">
+          <a
+            href="#contact"
+            className="wh-cta desktop"
+            onClick={(event) => handleSectionClick(event, '#contact')}
+          >
             Talk to Our Manufacturing Expert
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M2 7h10M8 3l4 4-4 4" stroke="#ffffff"
@@ -85,13 +109,16 @@ const WheyLandingHeader = () => {
             key={link.label}
             href={link.href}
             className={activeSection === link.id ? 'active' : ''}
-            onClick={() => setMenuOpen(false)}
+            onClick={(event) => handleSectionClick(event, link.href)}
           >
             {link.label}
           </a>
         ))}
-        <a href="#contact" className="wh-cta"
-           onClick={() => setMenuOpen(false)}>
+        <a
+          href="#contact"
+          className="wh-cta"
+          onClick={(event) => handleSectionClick(event, '#contact')}
+        >
           Talk to Our Manufacturing Expert
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M2 7h10M8 3l4 4-4 4" stroke="#ffffff"

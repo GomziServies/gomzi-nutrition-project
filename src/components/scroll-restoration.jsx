@@ -4,23 +4,29 @@ import { useLocation } from "react-router-dom";
 function App() {
   const location = useLocation();
   const isFirstRender = useRef(true);
+  const previousPathname = useRef(location.pathname);
 
   useEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false;
+      previousPathname.current = location.pathname;
       return;
     }
+
+    const isHashOnlyNavigation =
+      previousPathname.current === location.pathname && !!location.hash;
+
+    previousPathname.current = location.pathname;
+
+    if (isHashOnlyNavigation) {
+      return;
+    }
+
     window.scrollTo({
-      top: document.body.scrollHeight / 4,
-      behavior: "instant",
+      top: 0,
+      behavior: "auto",
     });
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }, 700);
-  }, [location]);
+  }, [location.pathname, location.hash]);
 }
 
 export default App;
