@@ -43,7 +43,7 @@ const WheyLandingHeader = () => {
       <header className="wh-header">
         <div className="wh-inner">
 
-          <a href="/" className="wh-brand">
+          <a href="/Whey-landing" className="wh-brand">
             <img src="../assets/images/logo/gomzi-life-science-logo.webp"
                  alt="Gomzi Life Science Logo"
                  className="wh-brand-img" />

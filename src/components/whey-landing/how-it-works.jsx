@@ -39,7 +39,8 @@ const HowItWorks = () => {
     
 
       <section className="hiw-section" id="how">
-        <div className="container">
+        {/* <div className="container"> */}
+        <div className="hiw-inner">
 
           {/* ── Header ── */}
           <div className="row">
@@ -55,7 +56,7 @@ const HowItWorks = () => {
           {/* ── Step Cards ── */}
           <div className="row g-3">
             {steps.map((step) => (
-              <div className="col-12 col-sm-6 col-lg" key={step.number}>
+              <div className="col-12 col-sm-6 col-lg my-3" key={step.number}>
                 <div className="hiw-card">
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <div className="hiw-number">{step.number}</div>

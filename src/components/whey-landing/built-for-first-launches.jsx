@@ -41,7 +41,7 @@ const cards = [
     ),
   },
   {
-    stat: '15–20 Days',
+    stat: '15-20 Days',
     title: 'Delivery timeline',
     desc: 'Move from approval to dispatch on a defined schedule.',
     icon: (
@@ -89,8 +89,8 @@ const BuiltForFirstLaunches = () => {
         center: true,
         navText: ['&#8592;', '&#8594;'],
         responsive: {
-          0: { items: 1, center: true, margin: 14 },
-          640: { items: 2, center: false, margin: 16 },
+          0:    { items: 1, center: true,  margin: 14 },
+          640:  { items: 2, center: false, margin: 16 },
           1024: { items: 3, center: false, margin: 20 },
         },
       })
@@ -103,48 +103,33 @@ const BuiltForFirstLaunches = () => {
   }, [])
 
   return (
-    <>
-  
+    <section className="mfg-section" id="capabilities">
+      <div className="mfg-inner">
 
-      <section className="mfg-section" id="capabilities">
-        <div className="mfg-inner">
+        <h2 className="mfg-headline pb-5">
+          Built For First Launches<br />
+          and <span>Serious Scale.</span>
+        </h2>
 
-          {/* <div className="mfg-badge">
-            <span className="mfg-badge-dot" />
-            Manufacturing partner
-          </div> */}
-
-          <h2 className="mfg-headline">
-            Built For First Launches<br />
-            and <span> Serious Scale.</span>
-          </h2>
-
-          {/* <p className="mfg-subtext">
-            Everything a supplement brand needs to go from idea to shelf -without the usual barriers.
-          </p> */}
-
-          <div className="mfg-carousel-wrap">
-            <div className="owl-carousel owl-theme" id="mfg-owl">
-              {cards.map((card, i) => (
-                <div className="item" key={i}>
-                  <div className="mfg-card">
+        <div className="mfg-carousel-wrap">
+          <div className="owl-carousel owl-theme pb-5" id="mfg-owl">
+            {cards.map((card, i) => (
+              <div className="item" key={i}>
+                <div className="mfg-card">
+                  <div className=" d-flex align-items-center gap-3 ">
                     <div className="mfg-icon-wrap">{card.icon}</div>
-                    <div className="mfg-card-stat">{card.stat}</div>
-                    <div className="mfg-card-title">{card.title}</div>
-                    <div className="mfg-card-desc">{card.desc}</div>
-                    {/* <div className="mfg-card-footer">
-                      <span className="mfg-card-tag">Learn more</span>
-                      <span className="mfg-card-arrow">→</span>
-                    </div> */}
+                  <div className="mfg-card-stat mt-2">{card.stat}</div>
                   </div>
+                  <div className="mfg-card-title">{card.title}</div>
+                  <div className="mfg-card-desc">{card.desc}</div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-
         </div>
-      </section>
-    </>
+
+      </div>
+    </section>
   )
 }
 

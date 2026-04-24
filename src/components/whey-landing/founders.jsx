@@ -1,5 +1,4 @@
-import { useState } from "react";
-
+import { useState, useEffect, useRef } from "react";
 
 const checkItems1 = [
   { title: "Choose the right product.", desc: "Not every formulation fits your audience or your price point." },
@@ -13,8 +12,6 @@ const checkItems2 = [
   { title: "Delivery timeline from approval to dispatch.", desc: "No more guessing when your product will be ready." },
   { title: "Visibility into certifications and quality checks.", desc: "Batch documentation that protects your brand reputation." },
 ];
-
-// const trustItems = ["No credit card needed", "Free to start", "500+ founders helped"];
 
 function CheckIcon() {
   return (
@@ -65,44 +62,61 @@ function AccordionList({ items }) {
 }
 
 export default function FoundersLanding() {
+  const imgRef = useRef(null);
+  const wrapperRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!wrapperRef.current || !imgRef.current) return;
+
+      const rect = wrapperRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      const raw = (windowHeight - rect.top) / (windowHeight * 0.85);
+      const progress = Math.min(Math.max(raw, 0), 1);
+
+      const tx = -130 * (1 - progress);
+
+      requestAnimationFrame(() => {
+        if (!imgRef.current) return;
+        imgRef.current.style.transform = `translateX(${tx}px)`;
+        // imgRef.current.style.opacity = String(progress);
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    const timer = setTimeout(handleScroll, 50);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <>
-      {/* <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" /> */}
-
       {/* ══ SECTION 1 ══ */}
       <section className="founders-section">
         <div className="founders-inner">
 
-          {/* Content Column */}
           <div className="founders-content">
-            
             <h1 className="hero-headline">
               Most Founders Get Stuck Before They Place the Order.
             </h1>
-
             <p className="hero-sub">
               They compare manufacturers. They collect vague quotes. They still don't
               know what to make, what it will cost, or what quality process backs the product.
             </p>
-
-            {/* <div className="divider" /> */}
-
             <AccordionList items={checkItems1} />
-
-
-           
           </div>
 
-          {/* Image Column */}
           <div className="founders-image">
-            <div className="image-placeholder">
-              <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
-                <rect width="52" height="52" rx="12" fill="#6dc52c" fillOpacity="0.18" />
-                <path d="M14 36L21 27L27 33L33 24L40 36H14Z" fill="#6dc52c" fillOpacity="0.5" />
-                <circle cx="20" cy="21" r="4" fill="#6dc52c" fillOpacity="0.6" />
-              </svg>
-              <span>Your image here</span>
-            </div>
+            <img
+              src="/assets/images/whey-landing/sad-owner.webp"
+              alt="Sad founder"
+              style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }}
+            />
           </div>
 
         </div>
@@ -113,27 +127,33 @@ export default function FoundersLanding() {
         <div className="twocol-inner">
           <div className="fl-wrap">
 
-            {/* LEFT -Image */}
-            <div className="fl-image-col">
-              <div className="fl-img-placeholder">
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
-                  <rect width="52" height="52" rx="12" fill="#6dc52c" fillOpacity="0.18" />
-                  <path d="M14 36L21 27L27 33L33 24L40 36H14Z" fill="#6dc52c" fillOpacity="0.5" />
-                  <circle cx="20" cy="21" r="4" fill="#6dc52c" fillOpacity="0.6" />
-                </svg>
-                <span>Your image here</span>
+            {/* LEFT - Scroll-linked image */}
+            <div className="scroll-img-wrapper" ref={wrapperRef}>
+              <div
+                ref={imgRef}
+                className="scroll-img-inner"
+                style={{
+                  transform: "translateX(-130px)",
+                  // opacity: 0,
+                  willChange: "transform, opacity",
+                  transition: "transform 0.08s ease-out, opacity 0.08s ease-out",
+                }}
+              >
+                <img
+                  src="/assets/images/whey-landing/website-product.webp"
+                  alt="Product"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }}
+                />
               </div>
-              <div className="img-corner-badge">Product photo</div>
             </div>
 
-            {/* RIGHT -Content */}
+            {/* RIGHT - Content */}
             <div className="fl-content-col">
               <h2 className="hero-headline-2">Clear Answers You Can Use.</h2>
               <p className="hero-sub-2">
                 Right formulation, realistic pricing, and quality documentation -all in one session.
               </p>
               <AccordionList items={checkItems2} />
-              
             </div>
 
           </div>

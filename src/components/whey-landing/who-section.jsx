@@ -6,13 +6,13 @@ const data = [
     id: "01",
     title: "Start your first brand",
     desc: "You want to launch your own protein. You need clarity on formulation, pricing, and MOQ before you place batch one.",
-    blobColor: "#6dc52c",
+    blobColor: "#a3d666",
   },
   {
     id: "02",
     title: "Scale what already sells",
     desc: "You already have traction. Now you need better control over quality, margins, and production consistency.",
-    blobColor: "#3db87a",
+    blobColor: "#a3d666",
   },
   {
     id: "03",
@@ -22,22 +22,6 @@ const data = [
   },
 ];
 
-const ArrowIcon = ({ className }) => (
-  <svg
-    className={className}
-    width="14"
-    height="14"
-    viewBox="0 0 14 14"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M3 11L11 3M11 3H5M11 3V9" />
-  </svg>
-);
-
 const WhoSection = () => {
   return (
     <section className="ws-root" id="who">
@@ -45,9 +29,8 @@ const WhoSection = () => {
 
         {/* Heading */}
         <h2 className="ws-heading text-center">
-          Build, Scale or <em>Switch.</em>
+          Build, Scale <em>OR</em> Switch.
         </h2>
-
         {/* Cards */}
         <div className="ws-grid">
           {data.map((item) => (
@@ -63,18 +46,14 @@ const WhoSection = () => {
               <div className="ws-card-content">
                 <div className="ws-card-top">
                   <span className="ws-num">{item.id}</span>
-                  <div className="ws-arrow">
-                    <ArrowIcon />
-                  </div>
+                <h4 className="px-3"> {item.title}</h4>
                 </div>
-                <h4>{item.title}</h4>
                 <div className="ws-divider" />
                 <p>{item.desc}</p>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

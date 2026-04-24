@@ -18,6 +18,7 @@ import Whitelabellingblogs from "../../components/nutrition/white-labelling-blog
 import LifesinceHeader from "../../components/partials/Header/lifesinceheader";
 import WhiteLabellingVideoTestimonials from "./white-labelling-video-testimonials";
 import NutraCTA from "./NutraCTA";
+import RequestQuoteModal from "../../components/nutrition/requestquotemodal";
 
 const processSteps = [
   "Product Consultation & Requirement Analysis",
@@ -479,7 +480,7 @@ function WhiteLabelling() {
                       Download Our Brochure
                     </a>
 
-                    <a
+                    {/* <a
                       href="https://wa.me/918320077993?text=Hello%20I%20want%20to%20request%20a%20quote"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -492,7 +493,8 @@ function WhiteLabelling() {
                       }
                     >
                       Request a Quote
-                    </a>
+                    </a> */}
+                    <RequestQuoteModal/>
                   </div>
                 </div>
                 <div className="col-lg-6 mt-lg-2 d-block d-md-none">

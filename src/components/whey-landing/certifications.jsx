@@ -40,7 +40,7 @@ const facilities = [
     id: 1,
     title: 'Manufacturing Floor',
     subtitle: 'Where your product comes to life',
-    image: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&q=80',
+    image: '/assets/images/whey-landing/manufacturing-floor.webp',
     points: [
       'State-of-the-art production lines for tablets, capsules, powders & liquids',
       'Capacity to handle both small pilot batches and large commercial runs',
@@ -51,7 +51,7 @@ const facilities = [
     id: 2,
     title: 'QC Lab',
     subtitle: 'Every batch tested before it leaves',
-    image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80',
+    image: '/assets/images/whey-landing/qclab-image.webp',
     points: [
       'In-house testing for potency, purity, microbial limits and heavy metals',
       'COA issued for every production batch -shareable with your buyers',
@@ -62,7 +62,7 @@ const facilities = [
     id: 3,
     title: 'Packaging Unit',
     subtitle: 'Shelf-ready from day one',
-    image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&q=80',
+    image: '/assets/images/whey-landing/packaging-unit.webp',
     points: [
       'Primary and secondary packaging under one roof -bottles, sachets, pouches',
       'Custom label printing and design support for your private label brand',
@@ -79,19 +79,19 @@ const Certifications = () => {
       
 
       <section className="cert-section " id="certifications">
-        <div className="container">
+        <div className="cert-inner">
 
           {/* Header */}
           <div className="row">
             <div className="col-12">
-              <h2 className="mfg-headline">Protect <span> Your Brand</span> With Proof.</h2>
+              <h2 className="mfg-headline pb-3 ">Protect <span> Your Brand</span> With Proof.</h2>
               
             </div>
           </div>
 
           {/* Certification Cards */}
-          <div className="row mb-4">
-            <div className="col-12">
+          <div className="row mb-5">
+            <div className="col-12 ">
               <div className="cert-tags-scroll">
                 {certifications.map((cert) => (
                   <div key={cert.id} className="cert-tag">
@@ -109,11 +109,12 @@ const Certifications = () => {
           </div>
 
           {/* Feature Cards */}
-          <div className="row g-3 mb-4">
+          <div className="row g-3 ">
             {features.map((f) => (
-              <div key={f.id} className="col-12 col-md-4">
+              <div key={f.id} className="col-12 col-md-4 my-2">
                 <div className="feature-card">
-                  <div
+                 <div className="d-flex align-items-center gap-3 mb-3">
+                   <div
                     className="feature-icon-box"
                     style={{ background: f.iconBg }}
                   >
@@ -128,6 +129,7 @@ const Certifications = () => {
                     />
                   </div>
                   <div className="feature-title">{f.title}</div>
+                 </div>
                   <p className="feature-desc">{f.desc}</p>
                 </div>
               </div>
@@ -135,11 +137,11 @@ const Certifications = () => {
           </div>
           
           {/* Facility Cards -horizontal layout */}
-          <div className="d-flex flex-column gap-3">
+          <div className="d-flex flex-column gap-3 ">
             {facilities.map((fac, index) => (
               <div
                 key={fac.id}
-                className={`facility-row ${index % 2 !== 0 ? 'reverse' : ''}`}
+                className={`my-3 facility-row ${index % 2 !== 0 ? 'reverse' : ''}`}
               >
                 <div className="facility-row-img">
                   <img src={fac.image} alt={fac.title} loading="lazy" />

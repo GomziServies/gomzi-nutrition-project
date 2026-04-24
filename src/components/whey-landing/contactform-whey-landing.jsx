@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-
-
+// import './ContactFormWheyLanding.css'
 
 const CheckCircleIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="#3d7a18" strokeWidth="2.5">
@@ -51,126 +50,118 @@ const ContactFormWheyLanding = () => {
   }
 
   return (
-    <>
-      <div className="whey-wrap">
-        <div className="whey-section">
+    <div className="whey-wrap" id="contact">
+      <div className="whey-section">
 
-          {/* LEFT PANEL */}
-          <div className="whey-left">
-           
+        {/* LEFT PANEL */}
+        <div className="whey-left">
+          <h1 className="hero-headline">
+            Launch Your Own<br />
+            <span>Protein Brand.</span>
+          </h1>
 
-            <h1 className="hero-headline">
-              Launch Your Own<br />
-              <span>Protein Brand.</span>
-            </h1>
+          <p className="hero-sub">
+            Start with clarity on formulation, pricing, quality, and timelines.
+            Then decide the next move with confidence.
+          </p>
 
-            <p className="hero-sub">
-              Start with clarity on formulation, pricing, quality, and timelines.
-              Then decide the next move with confidence.
-            </p>
-
-            <div className="trust-grid">
-              <div className="trust-chip"><CheckCircleIcon /> GMP Certified</div>
-              <div className="trust-chip"><BriefcaseIcon /> Clear MOQ Guidance</div>
-              <div className="trust-chip"><CupIcon /> No Hard Sell</div>
-              <div className="trust-chip"><LockIcon /> Confidential</div>
-            </div>
-
-            <div className="stat-row">
-              <div>
-                <div className="stat-num">500+</div>
-                <div className="stat-label">Brands Launched</div>
-              </div>
-              <div>
-                <div className="stat-num">Free</div>
-                <div className="stat-label">Expert Consultation</div>
-              </div>
-              <div>
-                <div className="stat-num">Launch </div>
-                <div className="stat-label"> in 15-20 Days</div>
-              </div>
-            </div>
+          <div className="trust-grid">
+            <div className="trust-chip"><CheckCircleIcon /> GMP Certified</div>
+            <div className="trust-chip"><BriefcaseIcon /> Clear MOQ Guidance</div>
+            <div className="trust-chip"><CupIcon /> No Hard Sell</div>
+            <div className="trust-chip"><LockIcon /> Confidential</div>
           </div>
 
-          {/* RIGHT PANEL - WHITE THEME */}
-          <div className="whey-right">
-            <div className="form-card">
-              <h2 className="form-title">
-                Talk To Our Manufacturing<br />Expert. Free.
-              </h2>
-              <p className="form-subtitle">
-                Get clarity before you build, scale, or switch.
-              </p>
-              <div className="form-divider" />
-
-              <form onSubmit={handleSubmit}>
-                <div className="field-group">
-                  <label className="field-label">Your Name</label>
-                  <input
-                    className="form-input"
-                    type="text"
-                    name="name"
-                    placeholder="Enter your name"
-                    value={formData.name}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className="field-group">
-                  <label className="field-label">Phone Number</label>
-                  <input
-                    className="form-input"
-                    type="tel"
-                    name="phone"
-                    placeholder="Enter your phone number"
-                    value={formData.phone}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className="field-group">
-                  <label className="field-label">Instagram Handle / Brand Name</label>
-                  <input
-                    className="form-input"
-                    type="text"
-                    name="instagram"
-                    placeholder="@yourhandle or brand name"
-                    value={formData.instagram}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className="field-group">
-                  <label className="field-label">Where Are You Right Now?</label>
-                  <select
-                    className={`form-select ${formData.stage ? 'value-selected' : 'placeholder-active'}`}
-                    name="stage"
-                    value={formData.stage}
-                    onChange={handleChange}
-                  >
-                    <option value="" disabled>Select your stage</option>
-                    <option value="idea">Just an idea -exploring</option>
-                    <option value="formulation">Working on formulation</option>
-                    <option value="batch1">Ready for batch 1</option>
-                    <option value="scaling">Currently scaling</option>
-                    <option value="switching">Looking to switch manufacturer</option>
-                  </select>
-                </div>
-
-                <button type="submit" className="cta-btn">
-                  Talk to Our Manufacturing Expert -It's Free
-                </button>
-              </form>
-
-             
-
-             
+          <div className="stat-row">
+            <div className="stat-item">
+              <div className="stat-num">500+</div>
+              <div className="stat-label">Brands Launched</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-num">Free</div>
+              <div className="stat-label">Expert Consultation</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-num">15-20</div>
+              <div className="stat-label">Days to Launch</div>
             </div>
           </div>
-
         </div>
+
+        {/* RIGHT PANEL */}
+        <div className="whey-right">
+          <div className="form-card">
+            <h2 className="form-title">
+              Talk To Our Manufacturing Expert Free.
+            </h2>
+            <p className="form-subtitle">
+              Get clarity before you build, scale, or switch.
+            </p>
+            <div className="form-divider" />
+
+            <form onSubmit={handleSubmit}>
+              <div className="field-group">
+                <label className="field-label">Your Name</label>
+                <input
+                  className="form-input"
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="field-group">
+                <label className="field-label">Phone Number</label>
+                <input
+                  className="form-input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="field-group">
+                <label className="field-label">Instagram Handle / Brand Name</label>
+                <input
+                  className="form-input"
+                  type="text"
+                  name="instagram"
+                  placeholder="@yourhandle or brand name"
+                  value={formData.instagram}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="field-group">
+                <label className="field-label">Where Are You Right Now?</label>
+                <select
+                  className={`form-select ${formData.stage ? 'value-selected' : 'placeholder-active'}`}
+                  name="stage"
+                  value={formData.stage}
+                  onChange={handleChange}
+                >
+                  <option value="" disabled>Select your stage</option>
+                  <option value="idea">Just an idea - exploring</option>
+                  <option value="formulation">Working on formulation</option>
+                  <option value="batch1">Ready for batch 1</option>
+                  <option value="scaling">Currently scaling</option>
+                  <option value="switching">Looking to switch manufacturer</option>
+                </select>
+              </div>
+
+              <button type="submit" className="cta-btn">
+                Talk to Our Expert - It's Free
+              </button>
+            </form>
+          </div>
+        </div>
+
       </div>
-    </>
+    </div>
   )
 }
 

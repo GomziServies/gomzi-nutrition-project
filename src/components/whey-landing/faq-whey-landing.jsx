@@ -10,7 +10,7 @@ const faqData = [
   {
     id: 'faq-2',
     question: 'Will I get pricing on the call?',
-    answer: 'You\'ll get clear pricing direction, MOQ context, and the variables that affect cost. Final commercials depend on formulation, packaging, and quantity.'
+    answer: "You'll get clear pricing direction, MOQ context, and the variables that affect cost. Final commercials depend on formulation, packaging, and quantity."
   },
   {
     id: 'faq-3',
@@ -29,78 +29,43 @@ const faqData = [
   }
 ]
 
+// ─── ARROW ICON ──────────────────────────────────────────────────────────────
+function ArrowIcon({ isOpen }) {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`faq-arrow-icon ${isOpen ? 'faq-arrow-open' : ''}`}
+    >
+      <path
+        d="M6 9l6 6 6-6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
 // ─── FAQ ITEM ────────────────────────────────────────────────────────────────
 function FAQItem({ question, answer, isOpen, onToggle }) {
   return (
-    <div
-      style={{
-        background: '#ffffff',
-        border: `1.5px solid ${isOpen ? 'rgba(109,197,44,0.35)' : 'rgba(0,0,0,0.09)'}`,
-        borderRadius: 14,
-        overflow: 'hidden',
-        transition: 'border-color 0.2s',
-        marginBottom: 10
-      }}
-    >
+    <div className={`faq-item ${isOpen ? 'faq-item--open' : ''}`}>
       <button
         onClick={onToggle}
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '16px 20px',
-          cursor: 'pointer',
-          fontSize: 15,
-          fontWeight: 600,
-          color: '#232323',
-          gap: 12,
-          userSelect: 'none',
-          background: 'none',
-          border: 'none',
-          width: '100%',
-          textAlign: 'left',
-          fontFamily: 'inherit'
-        }}
+        className="faq-item-btn"
       >
         <span>{question}</span>
-        <span
-          style={{
-            flexShrink: 0,
-            width: 28,
-            height: 28,
-            borderRadius: '50%',
-            border: '1.5px solid #6dc52c',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: isOpen ? '#fff' : '#6dc52c',
-            background: isOpen ? '#6dc52c' : 'transparent',
-            fontSize: 18,
-            fontWeight: 400,
-            transition: 'transform 0.3s, background 0.2s, color 0.2s',
-            transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)',
-            lineHeight: 1
-          }}
-        >
-          +
+        <span className="faq-arrow-wrap">
+          <ArrowIcon isOpen={isOpen} />
         </span>
       </button>
 
-      <div
-        style={{
-          maxHeight: isOpen ? 200 : 0,
-          overflow: 'hidden',
-          transition: 'max-height 0.38s cubic-bezier(0.4,0,0.2,1)'
-        }}
-      >
-        <div
-          style={{
-            padding: '0 20px 16px',
-            fontSize: 14,
-            color: '#3d3d3d',
-            lineHeight: 1.7
-          }}
-        >
+      <div className={`faq-answer-wrap ${isOpen ? 'faq-answer-wrap--open' : ''}`}>
+        <div className="faq-answer-text">
           {answer}
         </div>
       </div>
@@ -110,80 +75,77 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
 
 // ─── MAIN COMPONENT ───────────────────────────────────────────────────────────
 const Faqwheylanding = () => {
-  const [openItems, setOpenItems] = useState({})
+  // ✅ Single open item — string instead of object
+  const [openId, setOpenId] = useState(null)
 
   const toggleItem = (id) => {
-    setOpenItems(prev => ({ ...prev, [id]: !prev[id] }))
+    // Same item click → close it; else open new one (prev closes automatically)
+    setOpenId(prev => (prev === id ? null : id))
   }
 
   return (
-    <>
-      
+    <div className="faq-root">
+      <div className="faq-layout">
 
-      <div className="faq-root">
-        <div className="faq-layout">
+        {/* ── LEFT ── */}
+        <div>
+          <h2 className="faq-left-heading">Know This Before You Move.</h2>
 
-          {/* ── LEFT ── */}
-          <div>
-            <h2 className="faq-left-heading">Know This Before You Move.</h2>
+          {faqData.map(item => (
+            <FAQItem
+              key={item.id}
+              question={item.question}
+              answer={item.answer}
+              isOpen={openId === item.id}
+              onToggle={() => toggleItem(item.id)}
+            />
+          ))}
+        </div>
 
-            {faqData.map(item => (
-              <FAQItem
-                key={item.id}
-                question={item.question}
-                answer={item.answer}
-                isOpen={!!openItems[item.id]}
-                onToggle={() => toggleItem(item.id)}
+        {/* ── RIGHT ── */}
+        <div className="faq-right">
+          <div className="faq-right-inner">
+            <div className="faq-img-box">
+              <img
+                className="product-img"
+                src="/assets/images/whey-landing/faqimage.webp"
+                alt="NARA Health Products"
+                onError={(e) => {
+                  e.target.style.background = 'linear-gradient(135deg, #8cd7e1 0%, #7dd9d9 100%)'
+                  e.target.style.minHeight = '500px'
+                  e.target.style.display = 'block'
+                }}
               />
-            ))}
-          </div>
 
-          {/* ── RIGHT ── */}
-          <div className="faq-right">
-            <div className="faq-right-inner">
-              <div className="faq-img-box">
-                <img
-                  className="product-img"
-                  src="/assets/images/whey-landing/faqimage.webp"
-                  alt="NARA Health Products"
-                  onError={(e) => {
-                    e.target.style.background = 'linear-gradient(135deg, #8cd7e1 0%, #7dd9d9 100%)'
-                    e.target.style.minHeight = '500px'
-                    e.target.style.display = 'block'
-                  }}
-                />
+              {/* Circle decoration */}
+              <img
+                className="faq-circle-deco"
+                src="/assets/images/whey-landing/circle-1.webp"
+                alt=""
+              />
 
-                {/* Circle decoration */}
-                <img
-                  className="faq-circle-deco"
-                  src="/assets/images/whey-landing/circle-1.webp"
-                  alt=""
-                />
-
-                {/* Rating card overlay */}
-                <div className="faq-rating-card">
-                  <p className="faq-rating-title">Gomzi Life Sciences LLP is rated</p>
-                  <div className="faq-stars">
-                    {[1,2,3,4,5].map(star => (
-                      <svg
-                        key={star}
-                        className="faq-star"
-                        style={{ width: 20, height: 20, color: '#f5a623', fill: 'currentColor' }}
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                      </svg>
-                    ))}
-                    <span className="faq-rating-text">4.8 Based on 500 </span>
-                  </div>
+              {/* Rating card overlay */}
+              <div className="faq-rating-card">
+                <p className="faq-rating-title">Gomzi Life Sciences LLP is rated</p>
+                <div className="faq-stars">
+                  {[1, 2, 3, 4, 5].map(star => (
+                    <svg
+                      key={star}
+                      className="faq-star"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                    </svg>
+                  ))}
+                  <span className="faq-rating-text">4.8 Based on 500</span>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
+
       </div>
-    </>
+    </div>
   )
 }
 
