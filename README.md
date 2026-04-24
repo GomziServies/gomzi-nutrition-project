@@ -15,6 +15,17 @@ Notes:
 - `npm start` = client-side rendering during development
 - `npm run build:seo` = production build + react-snap prerender
 
+## Sitemap And Robots Setup
+
+- `npm run generate:seo`
+	- Generates `public/sitemap.xml` and `public/robots.txt`
+	- If `build` folder exists, also updates `build/sitemap.xml` and `build/robots.txt`
+
+- `npm run build:seo`
+	- Automatically runs SEO generation before build (`prebuild`)
+	- Runs react-snap prerender (`postbuild`)
+	- Regenerates sitemap and robots after prerender to keep final build output synced
+
 ## Local And Live Prerender Setup
 
 To see prerendered HTML in `View Source` for local and live:

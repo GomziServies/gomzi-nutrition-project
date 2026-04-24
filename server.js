@@ -3,9 +3,30 @@ const path = require('path');
 const { SitemapStream, streamToPromise } = require('sitemap');
 
 const hostname = 'https://www.gomzilifesciences.in';
-const appFilePath = path.resolve(__dirname, 'src', 'App.jsx');
+const appFileCandidates = [
+    path.resolve(__dirname, 'src', 'App.js'),
+    path.resolve(__dirname, 'src', 'App.jsx')
+];
 const legacyRoutesPath = path.resolve(__dirname, 'src', 'routes.js');
-const sitemapOutputPath = path.resolve(__dirname, 'public', 'sitemap.xml');
+const publicDirPath = path.resolve(__dirname, 'public');
+const buildDirPath = path.resolve(__dirname, 'build');
+const sitemapRelativePath = 'sitemap.xml';
+const robotsRelativePath = 'robots.txt';
+
+function ensureDir(dirPath) {
+    if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath, { recursive: true });
+    }
+}
+
+function writeToPublicAndBuild(relativePath, content) {
+    ensureDir(publicDirPath);
+    fs.writeFileSync(path.resolve(publicDirPath, relativePath), content, 'utf8');
+
+    if (fs.existsSync(buildDirPath)) {
+        fs.writeFileSync(path.resolve(buildDirPath, relativePath), content, 'utf8');
+    }
+}
 
 function normalizePath(routePath) {
     if (typeof routePath !== 'string') {
@@ -28,21 +49,24 @@ function normalizePath(routePath) {
 }
 
 function extractAppRoutes() {
-    if (!fs.existsSync(appFilePath)) {
-        return [];
-    }
-
-    const source = fs.readFileSync(appFilePath, 'utf8');
-    const routeRegex = /<Route\s+path=["']([^"']+)["']/g;
     const paths = [];
-    let match;
 
-    while ((match = routeRegex.exec(source)) !== null) {
-        const normalized = normalizePath(match[1]);
-        if (normalized) {
-            paths.push(normalized);
+    appFileCandidates.forEach((filePath) => {
+        if (!fs.existsSync(filePath)) {
+            return;
         }
-    }
+
+        const source = fs.readFileSync(filePath, 'utf8');
+        const routeRegex = /<Route\b[^>]*\bpath=["']([^"']+)["'][^>]*>/gms;
+        let match;
+
+        while ((match = routeRegex.exec(source)) !== null) {
+            const normalized = normalizePath(match[1]);
+            if (normalized) {
+                paths.push(normalized);
+            }
+        }
+    });
 
     return paths;
 }
@@ -63,7 +87,8 @@ function extractLegacyRoutes() {
 }
 
 function collectAllRoutes() {
-    const all = [...extractAppRoutes(), ...extractLegacyRoutes()];
+    const appRoutes = extractAppRoutes();
+    const all = appRoutes.length > 0 ? appRoutes : extractLegacyRoutes();
     const unique = Array.from(new Set(all));
 
     unique.sort((a, b) => {
@@ -85,12 +110,30 @@ async function generateSitemap() {
 
     sitemap.end();
 
-    const xmlString = await streamToPromise(sitemap);
-    fs.writeFileSync(sitemapOutputPath, xmlString);
+    const xmlString = (await streamToPromise(sitemap)).toString();
+    writeToPublicAndBuild(sitemapRelativePath, xmlString);
     console.log(`Sitemap generated successfully with ${routes.length} routes.`);
 }
 
-generateSitemap().catch((error) => {
-    console.error('Sitemap generation failed:', error);
+function generateRobotsTxt() {
+    const robotsTxt = [
+        'User-agent: *',
+        'Allow: /',
+        `Sitemap: ${hostname}/sitemap.xml`,
+        `Host: ${hostname}`,
+        ''
+    ].join('\n');
+
+    writeToPublicAndBuild(robotsRelativePath, robotsTxt);
+    console.log('robots.txt generated successfully.');
+}
+
+async function main() {
+    await generateSitemap();
+    generateRobotsTxt();
+}
+
+main().catch((error) => {
+    console.error('SEO file generation failed:', error);
     process.exit(1);
 });
