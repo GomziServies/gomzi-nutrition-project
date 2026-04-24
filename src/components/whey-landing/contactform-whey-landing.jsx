@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { publicAxiosInstance } from '../../assets/js/config/api'
 // import './ContactFormWheyLanding.css'
 
 const CheckCircleIcon = () => (
@@ -32,6 +33,12 @@ const LockIcon = () => (
   </svg>
 )
 
+const stageLabels = {
+  Starting_my_first_brand: 'Starting my first brand',
+  already_selling: 'Already selling, looking to scale',
+  switching_manufacturer: 'Switching from another manufacturer'
+}
+
 const ContactFormWheyLanding = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -39,14 +46,62 @@ const ContactFormWheyLanding = () => {
     instagram: '',
     stage: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = (e) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    alert('Form submitted! Our expert will reach out shortly.')
+    if (isSubmitting) return
+
+    const trimmedName = formData.name.trim()
+    const trimmedPhone = formData.phone.replace(/\s/g, '')
+
+    if (!trimmedName) {
+      alert('Please enter your name.')
+      return
+    }
+
+    if (!/^[6-9]\d{9}$/.test(trimmedPhone)) {
+      alert('Please enter a valid 10-digit phone number.')
+      return
+    }
+
+    if (!formData.stage) {
+      alert('Please select your current stage.')
+      return
+    }
+
+    setIsSubmitting(true)
+
+    try {
+      await publicAxiosInstance.post('/contact-inquiry', {
+        subject: 'Whey Landing Contact Form',
+        name: trimmedName,
+        email: `wheylanding+${trimmedPhone}@gomzi.in`,
+        mobile: trimmedPhone,
+        message: [
+          `Instagram Handle / Brand Name: ${formData.instagram.trim() || 'N/A'}`,
+          `Stage: ${stageLabels[formData.stage] || formData.stage}`,
+        ].join('\n'),
+        source: window.location.href,
+      })
+
+      setFormData({
+        name: '',
+        phone: '',
+        instagram: '',
+        stage: ''
+      })
+      alert('Form submitted! Our expert will reach out shortly.')
+    } catch (error) {
+      console.error('Whey landing contact form submission error:', error)
+      alert('Something went wrong. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -145,11 +200,9 @@ const ContactFormWheyLanding = () => {
                   onChange={handleChange}
                 >
                   <option value="" disabled>Select your stage</option>
-                  <option value="idea">Just an idea - exploring</option>
-                  <option value="formulation">Working on formulation</option>
-                  <option value="batch1">Ready for batch 1</option>
-                  <option value="scaling">Currently scaling</option>
-                  <option value="switching">Looking to switch manufacturer</option>
+                  <option value="Starting_my_first_brand">Starting my first brand</option>
+                  <option value="already_selling">Already selling, looking to scale</option>
+                  <option value="switching_manufacturer">Switching from another manufacturer</option>
                 </select>
               </div>
 
