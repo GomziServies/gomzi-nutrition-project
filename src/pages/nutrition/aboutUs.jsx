@@ -1,25 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
+import { Helmet } from "react-helmet";
 import NutritionHeader from "../../components/partials/Header/nutritionsheader";
-import "../../assets/css/nutrition.css";
-import "../../assets/css/about.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import WhatsappHeaderApp from "../../components/NutritionWhatsappHeaderBtn";
-import { Helmet } from "react-helmet";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import ReviewsSlider from "../../components/nutrition/reviewsslider";
+import "../../assets/css/about.css";
+import "../../assets/css/nutrition.css";
 
-function AboutUs() {
+function aboutUs() {
   const canonicalUrl = window.location.href;
-  const [videoModal, setVideoModal] = useState({ isOpen: false, videoId: "" });
-
-  const openVideoModal = (videoId) => {
-    setVideoModal({ isOpen: true, videoId });
-  };
-
-  const closeVideoModal = () => {
-    setVideoModal({ isOpen: false, videoId: "" });
-  };
-
   return (
     <>
       <Helmet>
@@ -91,336 +79,268 @@ function AboutUs() {
         }
         options={{ pageRef: true }}
       />
-      <div className="main-content margintop-nutrition aboutus-page">
-        <section className="blog-main pb-5">
-          <div>
-            <div className="container-fluid w-80">
-              <div className="row ">
-                <div className="about-hero">
-                  <img
-                    src={
-                      process.env.PUBLIC_URL +
-                      "/assets/images/our-team/about-header.webp"
-                    }
-                    alt="About Us Background"
-                  />
-                  <div className="overlay"></div>
 
-                  <div className="hero-content">
-                    <h1 className="">About Us</h1>
-                  </div>
-                </div>
+      <section>
+        {" "}
+        <div className="about-hero-section ">
+          <div className="about-hero-banner">
+            <div className="about-hero-overlay"></div>
+            <div className="about-hero-content">
+              <h1 className="about-title barlow-condensed-semi">
+                We help supplement founders build{" "}
+                <span>brands people trust.</span>
+              </h1>
+              <p className="about-para inter-regular">
+                Gomzi Life Sciences LLP is a Surat-based B2B nutraceutical
+                manufacturing partner for sports nutrition supplements,
+                multivitamin tablets, and whey protein. We support founders from
+                idea to formulation, manufacturing, packaging, and launch.
+              </p>
 
-                <div className="col-12 text-center mb-4 px-4">
-                  <div className="aboutus-container">
-                    <div className="blog p-0 br-10">
-                      <div className="ply position-sticky top-0">
-                        <LazyLoadImage
-                          src="https://img.youtube.com/vi/XM2xXWYxhbw/hqdefault.jpg"
-                          width="100%"
-                          className="br-10 cp objectfit-cover"
-                          alt="Video thumbnail"
-                          effect="blur"
-                          onClick={() => openVideoModal("XM2xXWYxhbw")}
-                        />
+              <div class="about-hero-buttons">
+                <a
+                  href="https://wa.me/918320077993"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="about-primary-btn barlow-condensed-semi"
+                >
+                  Request a Quote
+                </a>
 
-                        <div className="aboutus-video-btn play-btn">
-                          <button
-                            onClick={() => openVideoModal("XM2xXWYxhbw")}
-                            className="custom clickof video-button-bg cursor-pointer"
-                            aria-label="Play video"
-                          >
-                            <span className="newthing">
-                              <i className="fas fa-play cursor-pointer"></i>
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="ql-editor text-left mt-3">
-                      <h2 className="mb-3"> WHY GOMZI LIFESCIENCE LLP..!!!</h2>
-                      <p className="mb-4">
-                        <strong>Gomzi Lifescience LLP.</strong> is an{" "}
-                        <strong>
-                          ISO 22000:2018 & WHO-GMP, HACCP, HALAL, FSSAI
-                          Certified company
-                        </strong>{" "}
-                        Established and Run by{" "}
-                        <strong>Dr. Gautam Jani In 2024.</strong> With the
-                        vision to provide the best possible range of
-                        international quality products at competitive prices
-                        through integration, research and innovation.
-                      </p>
-                      <p className="mb-4">
-                        Gomzili LifeSciences is a trusted leader in{" "}
-                        <strong>white label, OEM/ODM</strong> and{" "}
-                        <strong>contract nutraceutical manufacturing,</strong>
-                        helping brands launch premium-quality supplements under
-                        their own label. With our certified, state-of-the-art
-                        facility in Gujarat, we proudly stand among{" "}
-                        <a href="https://www.gomzilifesciences.in/nutrition/white-labelling">
-                          {" "}
-                          <strong className="blog-text-link ">
-                            {" "}
-                            the top nutraceutical third party manufacturers in
-                            India{" "}
-                          </strong>
-                        </a>{" "}
-                        and one of the most reliable private label supplement
-                        manufacturers
-                      </p>
-                      <p className="mb-4">
-                        <strong>Gomzi Lifescience LLP.</strong> is located in
-                        Surat in India Engaged in supplying Nutraceutical
-                        finished products in accordance to customized
-                        requirement of client in India. It is GMP certified
-                        nutraceutical manufacturer India that provide you
-                        customize solution
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="aboutus-cards ">
-                    <div className="text-left mt-3 mb-6">
-                      <h2 className="mb-6 text-center mb-30">
-                        Why Choose Gomzi Life Sciences
-                      </h2>
-                    </div>
-
-                    <div className="cards-grid mt-6">
-                      {[
-                        {
-                          title: "Market-Ready Formulas",
-                          text: "Products aligned with current trends.",
-                          img: "/assets/images/aboutus/Market-Ready.webp",
-                        },
-                        {
-                          title: "Trusted Ingredients",
-                          text: "Verified, high-quality raw materials.",
-                          img: "/assets/images/aboutus/Trusted-Ingredients.webp",
-                        },
-                        {
-                          title: "Dedicated Support",
-                          text: "One point of contact for smooth coordination.",
-                          img: "/assets/images/aboutus/Dedicated-support.webp",
-                        },
-                        {
-                          title: "Quick Turnaround",
-                          text: "Faster production and delivery timelines.",
-                          img: "/assets/images/aboutus/Quick-turnaround.webp",
-                        },
-                        {
-                          title: "Full Transparency",
-                          text: "Clear communication at every step.",
-                          img: "/assets/images/aboutus/Full-Transparency.webp",
-                        },
-                        {
-                          title: "Premium Packaging",
-                          text: " Modern, brand-enhancing packaging options.",
-                          img: "/assets/images/aboutus/download-removebg-preview.webp",
-                        },
-                        {
-                          title: "Secure Development",
-                          text: " Confidential handling of all formulas. ",
-                          img: "/assets/images/aboutus/Secure-Development.webp",
-                        },
-                        {
-                          title: "Consistent Output",
-                          text: " Reliable quality in every batch.",
-                          img: "/assets/images/aboutus/images-removebg-preview-elementor-io-optimized.webp",
-                        },
-                        {
-                          title: "Ethical Practices",
-                          text: " Clean, safe, responsible manufacturing.",
-                          img: "/assets/images/aboutus/8676176-removebg-preview.webp",
-                        },
-                        {
-                          title: "Flexible Models",
-                          text: "White label, private label, or custom.",
-                          img: "/assets/images/aboutus/png-clipart-computer-icons-flexibility-organization-physical-flexibility-miscellaneous-leaf-removebg-preview.webp",
-                        },
-                        {
-                          title: "Post-Launch Help ",
-                          text: "Support for scaling and new products.",
-                          img: "/assets/images/aboutus/help-elementor-io-optimized-removebg-preview-elementor-io-optimized.webp",
-                        },
-                        {
-                          title: "Complete Documentation",
-                          text: " COA and compliance-ready papers.",
-                          img: "/assets/images/aboutus/Complete-Documentation.webp",
-                        },
-                      ].map((card, index) => (
-                        <div key={index} className="aboutus-card">
-                          <img
-                            src={process.env.PUBLIC_URL + card.img}
-                            alt={card.title}
-                            className="aboutus-card-img"
-                          />
-
-                          <h4 className="aboutus-card-title">{card.title}</h4>
-                          <p className="aboutus-card-text">{card.text}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div class="our-team">
-                    <div className="ql-editor text-left mt-4">
-                      <h2 className="mb-3">Our Infrastructure</h2>
-                      <p className="mb-4">
-                        Behind every product we create is a space built with
-                        care. Our facility is modern, clean and thoughtfully
-                        designed to ensure every supplement is crafted with
-                        precision and safety. From advanced machines to
-                        dedicated R&D spaces, everything works together to bring
-                        your ideas to life with consistency and trust.
-                      </p>
-                    </div>
-
-                    <div class="team-cards">
-                      <div class="team-card">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/our-team/Infrastructure1.1.webp"
-                          }
-                          alt="gomzilifesciences"
-                          width="100%"
-                        />
-                      </div>
-
-                      <div class="team-card">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/our-team/Infrastructure1.2.webp"
-                          }
-                          alt="gomzilifesciences"
-                          width="100%"
-                        />
-                      </div>
-
-                      <div class="team-card">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/our-team/Infrastructure1.3.webp"
-                          }
-                          alt="gomzilifesciences"
-                          width="100%"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="our-team">
-                    <div className="ql-editor text-left mt-3">
-                      <h2 className="mb-3">Our Team</h2>
-                      <p className="mb-4">
-                        Our team is the heart of GomziliLifeSciences. We’re a
-                        group of passionate experts—scientists, nutritionists
-                        and quality professionals who truly care about what we
-                        create. Every formula, every batch and every detail is
-                        handled with dedication, because your brand deserves
-                        nothing less than our very best.
-                      </p>
-                    </div>
-
-                    <div class="team-cards">
-                      <div class="team-card">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/our-team/our-team1.webp"
-                          }
-                          alt="gomzilifesciences"
-                          width="100%"
-                        />
-                      </div>
-
-                      <div class="team-card">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/our-team/our-team2.webp"
-                          }
-                          alt="gomzilifesciences"
-                          width="100%"
-                        />
-                      </div>
-
-                      <div class="team-card">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/assets/images/our-team/our-team3.webp"
-                          }
-                          alt="gomzilifesciences"
-                          width="100%"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <ReviewsSlider />
-                </div>
+                <button
+                  className="about-secondary-btn barlow-condensed-semi"
+                  onClick={() => {
+                    document
+                      .getElementById("journey-section")
+                      .scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  Our Journey
+                </button>
               </div>
             </div>
           </div>
-        </section>
-      </div>
-      <p className="d-none">
-        Gomzi Lifescience, nutraceuticals manufacturer, supplement manufacturer,
-        third party manufacturing, white label nutrition, sports nutrition,
-        protein powders, dietary supplements, ISO certified, FSSAI certified,
-        WHO-GMP certified, HACCP certified, HALAL certified, Dr. Gautam Jani,
-        Surat Gujarat, health and wellness products, innovation integration
-        research, nutraceutical finished products, energy drinks, sports
-        supplements, peanut butter, wellness products, product innovation purity
-        efficacy, modern infrastructure, advanced techniques, in-house R&D,
-        white label nutrition manufacturing, start-ups, established businesses,
-        product designing, packaging development, one-stop solution, launching
-        health wellness brand, WHO-GMP ISO FSSAI-approved manufacturing plant,
-        in-house laboratory, testing quality checks, scientific techniques,
-        unique effective formulations, time-bound delivery schedules, skilled
-        professionals, marketing experts, world-class nutraceuticals,
-        supplements accessible, long-term partnerships, trust quality
-        innovation, healthier lifestyles, stronger brands, reliable
-        manufacturing, certified excellence, customer-focused solutions
-      </p>
-      <NutritionFooter />
+        </div>
+      </section>
 
-      {videoModal.isOpen && (
-        <div
-          className="modal-overlay about-position-fixed"
-          onClick={closeVideoModal}
-        >
-          <div
-            className="modal-content about-position-relative"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={closeVideoModal}
-              className="about-position-absolute"
-              aria-label="Close video"
-            >
-              ×
-            </button>
-            <iframe
-              width="100%"
-              height="450"
-              src={`https://www.youtube.com/embed/${videoModal.videoId}`}
-              title="Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+      <div className="about-hero-features">
+        <div className="inter-regular">50–100 KG MOQ</div>
+        <div className="inter-regular">15–20 Day Delivery</div>
+        <div className="inter-regular">Certified Facility</div>
+        <div className="inter-regular">End-to-End Support</div>
+        <div className="inter-regular">Indian Flavour Innovation</div>
+        <div className="inter-regular">Export Ready</div>
+      </div>
+
+      <section className="why-gls-section">
+        <div className="why-gls-container">
+          <h2 className="why-gls-title barlow-condensed-semi">
+            Why Gomzi Lifesciences Exists
+          </h2>
+
+          <p className="why-gls-desc inter-regular">
+            We were built to solve a simple problem: many new supplement
+            founders have strong ideas, but they need a manufacturer willing to
+            support smaller launches with speed, quality, and guidance.
+          </p>
+
+          <div className="why-gls-grid">
+            <div className="why-gls-card">
+              <div className="why-gls-icon">
+                <i className="fa-solid fa-box-open"></i>
+              </div>
+              <h3 className="barlow-condensed-semi">Low MOQ</h3>
+              <p className="inter-regular">
+                Start with 50–100 KG per SKU and grow without large upfront
+                pressure.
+              </p>
+            </div>
+
+            <div className="why-gls-card">
+              <div className="why-gls-icon">
+                <i className="fa-solid fa-bolt"></i>
+              </div>
+              <h3 className="barlow-condensed-semi">Fast Turnaround</h3>
+              <p className="inter-regular">
+                Standard orders move from confirmation to dispatch in 15–20
+                days.
+              </p>
+            </div>
+
+            <div className="why-gls-card">
+              <div className="why-gls-icon">
+                <i className="fa-solid fa-rocket"></i>
+              </div>
+              <h3 className="barlow-condensed-semi">Brand Launch Support</h3>
+              <p className="inter-regular">
+                We help with formulation, packaging, website, and marketing
+                setup.
+              </p>
+            </div>
+
+            <div className="why-gls-card">
+              <div className="why-gls-icon">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <h3 className="barlow-condensed-semi">Certified Quality</h3>
+              <p className="inter-regular">
+                We operate with FSSAI, GMP, HACCP, Kosher, and Halal
+                certifications.
+              </p>
+            </div>
           </div>
         </div>
-      )}
+      </section>
+
+      <section className="brand-launch-journey-section" id="journey-section">
+        <div className="brand-launch-journey-container">
+          <h2 className="brand-launch-journey-title barlow-condensed-semi">
+            The Gomzi Lifesciences Brand Launch Journey
+          </h2>
+
+          <p className="brand-launch-journey-desc inter-regular">
+            A simple five-step path that turns your supplement idea into a
+            ready-to-sell product and brand.
+          </p>
+
+          <div className="brand-launch-journey-grid">
+            <div className="brand-launch-journey-card">
+              <img src="/assets/images/nutrition/idea-new-2.webp" alt="idea" />
+              <h3 className="barlow-condensed-semi">Idea & Strategy</h3>
+              <p className="inter-regular">
+                We help define the product category, audience, and positioning.
+              </p>
+            </div>
+
+            <div className="brand-launch-journey-card">
+              <img
+                src="/assets/images/nutrition/formulation-new-3.webp"
+                alt="formulation"
+              />
+              <h3 className="barlow-condensed-semi">Formulation Development</h3>
+              <p className="inter-regular">
+                We build the right formulation and share samples for approval.
+              </p>
+            </div>
+
+            <div className="brand-launch-journey-card">
+              <img
+                src="/assets/images/nutrition/manufacturer-new.webp"
+                alt="manufacturing"
+              />
+              <h3 className="barlow-condensed-semi">Manufacturing & QC</h3>
+              <p className="inter-regular">
+                We produce the approved batch with quality checks and
+                documentation.
+              </p>
+            </div>
+
+            <div className="brand-launch-journey-card">
+              <img
+                src="/assets/images/nutrition/whey-protein-combo.webp"
+                alt="packaging"
+              />
+              <h3 className="barlow-condensed-semi">Packaging Design</h3>
+              <p className="inter-regular">
+                We create compliant, premium packaging for retail and online.
+              </p>
+            </div>
+
+            <div className="brand-launch-journey-card">
+              <img
+                src="/assets/images/nutrition/website-new.webp"
+                alt="website"
+              />
+              <h3 className="barlow-condensed-semi">
+                Website & Marketing Setup
+              </h3>
+              <p className="inter-regular">
+                We help you prepare for launch with a digital brand foundation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="core-section">
+        <div className="core-container">
+          <div className="core-left">
+            <h2 className="barlow-condensed-semi">
+              “Most manufacturers stop at production. Gomzi Lifesciences goes
+              further and helps you build a brand.”
+            </h2>
+
+            <p className="inter-regular">
+              That is why we work like a partner, not only a supplier.
+            </p>
+          </div>
+
+          <div className="core-right">
+            <h3 className="barlow-condensed-semi">Our Core Values</h3>
+
+            <ul className="inter-regular">
+              <li>
+                <strong>Certified Integrity:</strong> quality is non-negotiable.
+              </li>
+              <li>
+                <strong>Brand-Builder Mindset:</strong> we think like founders.
+              </li>
+              <li>
+                <strong>Speed as a Standard:</strong> fast delivery is part of
+                our system.
+              </li>
+              <li>
+                <strong>Accessible Craftsmanship:</strong> great quality should
+                be available at small MOQs.
+              </li>
+              <li>
+                <strong>Transparency:</strong> clear pricing and clear
+                formulation communication.
+              </li>
+              <li>
+                <strong>Innovation:</strong> we keep creating differentiated
+                products and flavours.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="brand-start-section">
+        <div className="brand-start-container">
+          <h2 className="brand-start-title barlow-condensed-semi">
+            Start Your Brand With GLS
+          </h2>
+
+          <p className="brand-start-desc inter-regular">
+            Tell us about your product idea, and we’ll help you move from
+            concept to manufacturing to launch.
+          </p>
+
+          <div className="brand-start-core">
+            <h3 className="barlow-condensed-semi">Best for</h3>
+
+            <p className="inter-regular mb-2">
+              Protein powders, sports supplements, and multivitamin brands
+              looking for a reliable manufacturing partner.
+            </p>
+
+            <ul className="inter-regular">
+              <li>
+                <strong>Location: </strong> Surat, Gujarat, India.
+              </li>
+              <li>
+                <strong>Business model: </strong> B2B Third-Party & Private
+                Label Manufacturing.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <NutritionFooter />
     </>
   );
 }
 
-export default AboutUs;
+export default aboutUs;

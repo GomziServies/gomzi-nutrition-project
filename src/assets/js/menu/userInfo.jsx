@@ -59,30 +59,33 @@ const UserInfo = () => {
     <div>
       {userInfo ? (
         <>
-          <li className="mb-1 cursor-pointer" onClick={toggleUserMenu}>
+          <li
+            className="mb-1 cursor-pointer inter-500"
+            onClick={toggleUserMenu}
+          >
             Hi, {userInfo.user.last_name} <i className="far fa-user"></i>
           </li>
           {isUserMenuVisible && (
             <ul>
               <li>
-                <a href={`/user/profile`}>
+                <a href={`/user/profile`} className="inter-500">
                   <i className="far fa-user"></i> Profile
                 </a>
               </li>
               <li className="mr-0">
-                <a href={`/user/order`}>
+                <a href={`/user/order`} className="inter-500">
                   <i className="fas fa-box mr-1 fts-18"></i>Orders
                 </a>
               </li>
               <li className="mr-0">
-                <a href={`/invoice`}>
+                <a href={`/invoice`} className="inter-500">
                   <i className="fas fa-box mr-1 fts-18"></i>Invoice
                 </a>
               </li>
 
               <li onClick={logout}>
                 <button
-                  className="video-button-bg"
+                  className="video-button-bg inter-500"
                   aria-label="Logout from your account"
                 >
                   <i className="fas fa-sign-out-alt"></i> Log Out
@@ -95,7 +98,7 @@ const UserInfo = () => {
         <li className="ddmenu userInfo fts-18">
           <button
             onClick={openModal}
-            className=" video-button-bg px-0 cursor-pointer"
+            className=" video-button-bg px-0 cursor-pointer inter-500"
             aria-label="Login to your account"
           >
             {" "}

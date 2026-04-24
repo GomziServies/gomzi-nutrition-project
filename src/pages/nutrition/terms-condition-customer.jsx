@@ -118,7 +118,7 @@ function TermsConditionCustomer() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-J50WNKGW38');`}</noscript>
-          <script>
+        <script>
           {`
           (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -141,12 +141,14 @@ function TermsConditionCustomer() {
             <div className="container-fluid">
               <div className="container">
                 <div className="Info">
-                  <h2>Product Details</h2>
+                  <h2 className="barlow-condensed-extra f-32">
+                    Product Details
+                  </h2>
                 </div>
                 {orderData.map((order, index) => (
                   <div key={index} className="row border pb-4 rounded mt-5">
                     <div className="calc col-12 mt-1">
-                      <p>
+                      <p className="int-regular">
                         Ordered on {convertDate(order?.createdAt)} | Receipt ID:{" "}
                         {order?.receipt_id}
                       </p>
@@ -156,7 +158,7 @@ function TermsConditionCustomer() {
                         trackingElem.shipment_status === "DELIVERED",
                     ) && (
                       <div className="col-12 meal">
-                        <p className="mt-2 text-success f-20">
+                        <p className="mt-2 text-success f-20 int-regular">
                           Delivered {convertDate(order?.updatedAt)}
                         </p>
                       </div>
@@ -172,15 +174,15 @@ function TermsConditionCustomer() {
                           />
                         </div>
                         <div className="relet1">
-                          <span className="min text-left">
+                          <span className="min text-left int-500">
                             <b>{order?.product?.name}</b>
                           </span>
                         </div>
                         <div className="price1">
-                          <span className="q1">
+                          <span className="q1 int-regular">
                             Quantity : {order?.user_meal_product?.quantity}{" "}
                           </span>
-                          <p className="text-dark ml-3 mt-3">
+                          <p className="text-dark ml-3 mt-3 int-regular">
                             {" "}
                             Total : ₹{order?.product?.price}/-
                           </p>
@@ -189,15 +191,17 @@ function TermsConditionCustomer() {
                     </div>
                     <div className="col-12 row">
                       <div className="col-md-4 meal">
-                        <p className="mt-2 f-20">Delivery Address -</p>
-                        <span>
+                        <p className="mt-2 f-20 int-regular">
+                          Delivery Address -
+                        </p>
+                        <span className="int-regular">
                           {order?.notes?.address_line_1 +
                             (order?.notes?.address_line_2
                               ? ", " + order?.notes?.address_line_2
                               : "")}
                           ,
                         </span>
-                        <span>
+                        <span className="int-regular">
                           {order?.notes?.city}, {order?.notes?.pin_code}
                         </span>
                       </div>
@@ -220,7 +224,7 @@ function TermsConditionCustomer() {
                               }`}
                             >
                               <span className="is-complete"></span>
-                              <p>
+                              <p className="int-regular">
                                 PLACED
                                 <br />
                                 <span>
@@ -246,7 +250,7 @@ function TermsConditionCustomer() {
                               }`}
                             >
                               <span className="is-complete"></span>
-                              <p>
+                              <p className="int-regular">
                                 DISPATCHED
                                 <br />
                                 <span>
@@ -278,7 +282,7 @@ function TermsConditionCustomer() {
                               }`}
                             >
                               <span className="is-complete"></span>
-                              <p>
+                              <p className="int-regular">
                                 DELIVERED
                                 <br />
                                 <span>
@@ -308,66 +312,69 @@ function TermsConditionCustomer() {
           </section>
         </>
       )}
+
       <div className="main-content margintop-nutrition">
         <section className="blog-main pb-5">
           <div>
             <div className="container-fluid w-80">
               <div className="row">
                 <div className="col-12 pt-4 text-left">
-                  <h1 className="f-rob-bol f-30 mb-2 text-black text-uppercase">
-                    <b>Term and Condition For Customer</b>
+                  <h1 className=" f-30 mb-2 text-black text-capitalize barlow-condensed-semi font-weight-normal">
+                    <b>Term and Condition For Brand Founder</b>
                   </h1>
                 </div>
                 <div className="col-12 text-center mb-4 px-4">
                   <div className="ql-editor text-left mt-3">
-                    <p className="mb-2">
-                      Welcome to the Gomzi Lifescience family! We are thrilled
-                      to be your ultimate destination for health and wellness.
-                      At Gomzi Lifescience, our commitment is to provide you
-                      with top-notch products and services to support your
-                      journey towards a healthier lifestyle. Before you embark
-                      on this journey with us, we kindly ask you to familiarize
-                      yourself with our Terms and Conditions outlined below.
+                    <p className="mb-2 int-regular">
+                      Welcome to the Gomzi Lifesciences LLP family. We are
+                      thrilled to be your ultimate destination for health and
+                      wellness. At Gomzi Lifesciences LLP, our commitment is to
+                      provide you with top-notch products and services to
+                      support your journey towards a healthier lifestyle. Before
+                      you embark on this journey with us, we kindly ask you to
+                      familiarize yourself with our Terms and Conditions
+                      outlined below.
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-2 barlow-condensed-semi font-weight-normal f-24">
                       <b>Agreement Acceptance:</b>
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-3 int-regular">
                       <b>(i) Understanding and Acceptance:</b> By engaging with
-                      our website, participating in our Rewards or Reviews
-                      Program, or sharing any personal information with us, you
-                      signify your understanding and acceptance of these Terms
-                      and Conditions.
+                      our e-commerce site, participating in our Rewards or
+                      Reviews Program, or sharing any personal information with
+                      us, you signify your understanding and acceptance of these
+                      Terms and Conditions.
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-3 int-regular">
                       <b>(ii) Accessing Our Services:</b> By accessing or
                       utilizing our services, you are consenting to adhere to
                       these Terms. If you disagree with any portion of these
                       terms, you are not permitted to access our services.
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-3 int-regular">
                       <b>(iii) Conditions of Engagement:</b> When you engage
-                      with our website or services, you agree to the following.
+                      with our e-commerce site or services, you agree to the
+                      following.
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-3 int-regular">
                       <b>(iv) Acknowledgment:</b> You acknowledge that you have
                       read and understood the stipulations of this Agreement.
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-3 int-regular">
                       <b>(v) Binding Agreement:</b> You agree to be bound by the
                       terms outlined in this Agreement.
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-3 int-regular">
                       <b>(vi) Compliance:</b> You consent to comply with all
                       relevant laws and regulations concerning the subject
                       matter of this Agreement.
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-3 int-regular">
                       <b>(vii) Refraining from Use:</b> <br />
                       If you do not consent to the terms of this Agreement, we
                       kindly ask you to refrain from:
                       <br />
-                      a. Accessing or utilizing the website.
+                      a. Accessing or utilizing the e-commerce site.
                       <br />
                       b. Participating in the Rewards or Reviews Program
                       <br />
@@ -376,13 +383,13 @@ function TermsConditionCustomer() {
                     <p>
                       <br />
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-2 int-regular">
                       We are excited to have you on board with Gomzi
-                      Lifescience. Your health and wellness journey is important
-                      to us, and we are committed to providing you with the best
-                      experience possible. If you have any questions or concerns
-                      regarding these Terms and Conditions, please do not
-                      hesitate to reach out to us.
+                      Lifesciences LLP. Your health and wellness journey is
+                      important to us, and we are committed to providing you
+                      with the best experience possible. If you have any
+                      questions or concerns regarding these Terms and
+                      Conditions, please do not hesitate to reach out to us.
                     </p>
                   </div>
                 </div>
@@ -391,7 +398,7 @@ function TermsConditionCustomer() {
           </div>
         </section>
       </div>
-      <p className="d-none">
+      <p className="d-none int-regular">
         whey protein and, peanut butter peanut butter, peanut butters, why
         protein, protein in powder, whey product, wayne protein, whey protein
         protein, whey protein whey, whey in protein, whey whey protein, protein

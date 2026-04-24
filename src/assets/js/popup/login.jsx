@@ -179,7 +179,7 @@ const LoginModal = ({ onClose }) => {
               controlId="formBasicUsername"
               className="mb-4 text-center"
             >
-              <Form.Label className="label_modal text-center mb-2">
+              <Form.Label className="label_modal text-center mb-2 inter-500">
                 OTP Verification
               </Form.Label>
               <Form.Control
@@ -191,7 +191,7 @@ const LoginModal = ({ onClose }) => {
             </Form.Group>
             <Button
               type="button"
-              className="submit_modal login-submit-btn"
+              className="submit_modal login-submit-btn  barlow-condensed-semi "
               onClick={handleLogin}
             >
               Log In

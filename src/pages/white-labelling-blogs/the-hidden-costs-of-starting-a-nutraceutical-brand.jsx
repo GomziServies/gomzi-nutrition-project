@@ -150,7 +150,7 @@ function TheHiddenCostsofStartingaNutraceuticalBrand() {
                    gtag('js', new Date());
                    gtag('config', 'G-J50WNKGW38');`}</noscript>
         <script>
-          { `
+          {`
           (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -290,7 +290,7 @@ function TheHiddenCostsofStartingaNutraceuticalBrand() {
                         while the manufacturing process is handled by industry
                         experts.
                       </p>
-                      <p className="blog-text">
+                      <p className="blog-text inter-500">
                         <strong>
                           {" "}
                           Several key factors have contributed to the rapid

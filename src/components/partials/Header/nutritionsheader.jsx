@@ -55,15 +55,24 @@ function NutritionHeader() {
           <div className="center-menu d-lg-block d-none">
             <ul className="center-menu-list">
               <li>
-                <Link to="/read-more-white-labelling-blogs">Blogs</Link>
+                <Link
+                  to="/read-more-white-labelling-blogs"
+                  className="inter-500"
+                >
+                  Blogs
+                </Link>
               </li>
               <li>
-                <Link to="/aboutUs" target="_blank">
+                <Link to="/aboutUs" target="_blank" className="inter-500">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/nutrition/contact-us" target="_blank">
+                <Link
+                  to="/nutrition/contact-us"
+                  target="_blank"
+                  className="inter-500"
+                >
                   Contact Us
                 </Link>
               </li>
@@ -91,15 +100,24 @@ function NutritionHeader() {
 
             <ul className="mobileUserInfo aa">
               <li>
-                <Link to="/read-more-white-labelling-blogs">Blogs</Link>
+                <Link
+                  to="/read-more-white-labelling-blogs"
+                  className="inter-500"
+                >
+                  Blogs
+                </Link>
               </li>
               <li>
-                <Link to="/aboutUs" target="_blank">
+                <Link to="/aboutUs" target="_blank" className="inter-500">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/nutrition/contact-us" target="_blank">
+                <Link
+                  to="/nutrition/contact-us"
+                  target="_blank"
+                  className="inter-500"
+                >
                   Contact Us
                 </Link>
               </li>

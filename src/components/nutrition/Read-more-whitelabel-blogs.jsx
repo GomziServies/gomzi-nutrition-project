@@ -284,7 +284,7 @@ const Readmorewhitelabelblogs = () => {
           <div className="row py-4">
             <div className="col-12 d-flex align-items-center justify-content-between pt-4 mt-4">
               <div className="col items-center d-flex justify-content-center">
-                <h2 className="f-rob-bol f-30 text-black text-uppercase">
+                <h2 className="f-30 text-black text-uppercase barlow-condensed-extra f-32">
                   All Blogs
                 </h2>
               </div>
@@ -309,7 +309,7 @@ const Readmorewhitelabelblogs = () => {
                           <div className="col-12 py-3">
                             <div className="row align-items-center">
                               <div className="col-10 text-left">
-                                <p className="m-0 f-pop-bol f-16 text-black">
+                                <p className="m-0 f-16 text-black inter-regular">
                                   {truncateTitle(blog.title)}
                                 </p>
                               </div>

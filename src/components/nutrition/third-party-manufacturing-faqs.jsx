@@ -17,7 +17,7 @@ const ProductFAQS = () => {
 
         <div className="row mt-5 pb-5 justify-content-center overflow-hidden">
           <div className="col-md-8">
-            <Accordion defaultActiveKey={["1"]} alwaysOpen>
+            <Accordion defaultActiveKey={["1"]} alwaysOpen inter-regular>
               <Accordion.Item eventKey="1" className="mt-3 p-4">
                 <Accordion.Header className="faq-question">
                   What is third-party nutraceutical manufacturing in India?
@@ -26,8 +26,9 @@ const ProductFAQS = () => {
                   Third-party nutraceutical manufacturing involves outsourcing
                   your supplement production to a specialized company. This
                   allows you to launch your own brand without having to set up a
-                  factory. At Gomzilifesciences, we provide end-to-end solutions
-                  including formulation, manufacturing, packaging, and labeling.
+                  Third-party manufacturer. At Gomzilifesciences, we provide
+                  end-to-end solutions including formulation, manufacturing,
+                  packaging, and labeling.
                 </Accordion.Body>
               </Accordion.Item>
 

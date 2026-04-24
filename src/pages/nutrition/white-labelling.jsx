@@ -18,6 +18,8 @@ import Whitelabellingblogs from "../../components/nutrition/white-labelling-blog
 import LifesinceHeader from "../../components/partials/Header/lifesinceheader";
 import WhiteLabellingVideoTestimonials from "./white-labelling-video-testimonials";
 import NutraCTA from "./NutraCTA";
+import { faBullseye, faEye } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import RequestQuoteModal from "../../components/nutrition/requestquotemodal";
 
 const processSteps = [
@@ -25,7 +27,7 @@ const processSteps = [
   "Custom Formulation & Research Development",
   "Sample Preparation & Approval",
   "Bulk Manufacturing",
-  "Quality Control & Compliance Checks",
+  "Batch traceability & Compliance Checks",
   "Packaging, Labeling & Dispatch",
 ];
 
@@ -59,7 +61,7 @@ const cards = [
   },
   {
     icon: "fa-solid fa-users",
-    title: "Customer-Centric Approach",
+    title: "Brand-founder-Centric Approach",
   },
   {
     icon: "fa-solid fa-check-circle",
@@ -278,6 +280,8 @@ const schemaData = [
 ];
 
 function WhiteLabelling() {
+  const [showVideo, setShowVideo] = useState(false);
+
   const scrollLogos = [...brandLogos, ...brandLogos];
 
   const canonicalUrl = window.location.href;
@@ -450,8 +454,8 @@ function WhiteLabelling() {
               <div className="row justify-content-center mb-4">
                 <div className="col-12 text-center px-0">
                   <h1 className="barlow-condensed-extra f-32">
-                    India's Trusted Nutraceutical Third-Party & White Label
-                    Manufacturer
+                    India’s Trusted Nutraceutical Third-Party Manufacturing &
+                    White Label Partner
                   </h1>
 
                   <div className="mt-3">
@@ -459,7 +463,7 @@ function WhiteLabelling() {
                       ISO 22000:2018 | WHO-GMP | HACCP | HALAL | FSSAI Certified
                       Manufacturing Facility
                     </h3>
-                    <p className="f-rob-bol f-18 mt-3">
+                    <p className="barlow-condensed-semi f-20 mt-3">
                       Custom Formulations | Protein Powders | Fitness
                       Supplements | Private Label & Bulk Manufacturing
                     </p>
@@ -469,7 +473,7 @@ function WhiteLabelling() {
                     <a
                       href={DownloadPdf || "#"}
                       download
-                      className="btn fw-bold shadow-lg px-5 py-2 text-capitalize request-toggle"
+                      className="btn fw-bold shadow-lg px-5 py-2 text-capitalize request-toggle barlow-condensed-semi"
                       onMouseOver={(e) =>
                         (e.currentTarget.style.transform = "scale(1.05)")
                       }
@@ -480,11 +484,11 @@ function WhiteLabelling() {
                       Download Our Brochure
                     </a>
 
-                    <a
+                    {/* <a
                       href="https://wa.me/918320077993?text=Hello%20I%20want%20to%20request%20a%20quote"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn fw-bold shadow-lg px-5 py-2 text-capitalize request-toggle"
+                      className="btn fw-bold shadow-lg px-5 py-2 text-capitalize request-toggle barlow-condensed-semi "
                       onMouseOver={(e) =>
                         (e.currentTarget.style.transform = "scale(1.05)")
                       }
@@ -493,10 +497,20 @@ function WhiteLabelling() {
                       }
                     >
                       Request a Quote
+                    </a> */}
+                    {/* <RequestQuoteModal /> */}
+                    <a
+                      href="https://wa.me/918320077993"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="homePage-btn cta btn fw-bold shadow-lg px-5 py-2 text-capitalize request-toggle barlow-condensed-semi "
+                    >
+                      Request a Quote
                     </a>
                     {/* <RequestQuoteModal/> */}
                   </div>
                 </div>
+
                 <div className="col-lg-6 mt-lg-2 d-block d-md-none">
                   <div className="item">
                     <div className="blog p-0">
@@ -523,17 +537,18 @@ function WhiteLabelling() {
                     >
                       <div className="descriptionShow text-secondary whitelable-decription">
                         <h2 className="mt-2 mb-2 fs-2 fw-normal lh-sm text-dark text-nowrap">
-                          <span className="fw-bold certified-compliant-div-hspan ">
+                          <span className="fw-bold barlow-condensed-semi certified-compliant-div-hspan ">
                             Gomzi Lifesciences LLP ?
                           </span>
                         </h2>
-                        <p className="mt-3">
+                        <p className="mt-3 inter-regular">
                           Gomzi Lifescience LLP is a leading nutraceutical
-                          third-party and white label manufacturer in India, it
-                          is a Surat-based B2B nutraceutical contract
-                          manufacturer built for India's next generation of
-                          supplement brand founders. offers end-to-end private
-                          label manufacturing across three core verticals:{" "}
+                          third-party manufacturing and white label partner in
+                          India, a Surat-based B2B nutraceutical contract
+                          manufacturing company built for India’s next
+                          generation of supplement brand founders. We offer
+                          end-to-end white label manufacturing across three core
+                          verticals:{" "}
                           <strong>
                             Sports Nutrition Supplements, Multivitamin Tablets,
                             and Whey Protein
@@ -542,7 +557,7 @@ function WhiteLabelling() {
                         </p>{" "}
                         <div className="mt-3 mb-3">
                           <div className="gls-quote-card">
-                            <p className="gls-quote-text">
+                            <p className="gls-quote-text barlow-condensed-semi">
                               " From idea to a live, selling brand - most
                               founders struggle to find one partner who can do
                               it all.
@@ -553,14 +568,14 @@ function WhiteLabelling() {
                             </p>
                           </div>
                         </div>
-                        <p className="mt-3">
+                        <p className="mt-3 inter-regular">
                           Established in 2024 and led by Dr. Gautam Jani, we are
                           an ISO 22000:2018, WHO-GMP, HACCP, HALAL, and
                           FSSAI-certified company, committed to delivering
                           international-quality nutraceutical products at
                           competitive prices.
                         </p>{" "}
-                        <p className="mt-3">
+                        <p className="mt-3 inter-regular">
                           Based in Surat, Gujarat, we specialize in
                           nutraceutical contract manufacturing, dietary
                           supplement manufacturing, private label solutions, and
@@ -569,10 +584,11 @@ function WhiteLabelling() {
                           regulatory compliance, scalability, and consistent
                           product quality.
                         </p>{" "}
-                        <p className="mt-3">
-                          As a trusted nutraceutical manufacturer in India, we
-                          provide premium-quality finished products tailored to
-                          each client's unique requirements, ensuring market
+                        <p className="mt-3 inter-regular">
+                          As a trusted nutraceutical third-party End-to-end
+                          brand launch partner in India, we provide
+                          premium-quality finished products tailored to each
+                          client’s unique requirements, ensuring market
                           reliability, safety, and long-term brand success.
                         </p>
                       </div>
@@ -580,18 +596,20 @@ function WhiteLabelling() {
                   </div>
                 </div>
 
-                <div className="col-lg-6 mt-lg-4 d-none d-md-block">
-                  <div className="item white-labelling-position">
-                    <div className="blog p-0">
-                      <img
-                        src={
-                          process.env.PUBLIC_URL +
-                          "/assets/images/nutrition/who-we-are.webp"
-                        }
-                        width="100%"
-                        className="border-radius-20"
-                        alt="gomzilifesciences"
-                      />
+                <div className="col-lg-6 mt-lg-4 pt-5">
+                  <div className="image-wrapper pt-5">
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        "/assets/images/nutrition/dr-gautam-jani.webp"
+                      }
+                      className="img-fluid border-radius-20"
+                      alt="gomzilifesciences"
+                    />
+
+                    <div className="image-text">
+                      <h4>Dr. Gautam Jani</h4>
+                      <p>Founder/Director - Gomzi Lifesciences LLP</p>
                     </div>
                   </div>
                 </div>
@@ -601,164 +619,182 @@ function WhiteLabelling() {
             </div>
           </div>
 
-          <div className="vision-mission-container mt-0 pt-0">
-            <div className="row mission-section align-items-start">
-              <div className="left-section sticky-img d-none d-md-block">
-                <img
-                  src="/assets/images/nutrition/what-makes-us.webp"
-                  alt="Gomzi Lifescience Third-Party Manufacturing Partner"
-                  className="white-labelling-top-0"
-                />
-              </div>
-              <div className="left-section d-block d-md-none">
-                <img
-                  src="/assets/images/nutrition/what-makes-us.webp"
-                  alt="Gomzi Lifescience Third-Party Manufacturing Partner"
-                  className="mb-30 white-labelling-top-0"
-                />
-              </div>
-              <div className="left-section">
-                <h2 className="mb-24">
-                  Our Nutraceutical{" "}
-                  <span className="highlight"> Manufacturing Services</span>
-                </h2>
-
-                <div className="row g-5 justify-content-center">
-                  <div className="mt-2">
-                    <div className="col-lg-6 col-md-6 col-sm-12 ">
-                      <div className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm manufacturing-services-div ">
-                        <i className="fa fa-check-circle mb-2 manufacturing-services-div-i "></i>
-                        <p className="f-rob-bol mb-0 manufacturing-services-div-i-para">
-                          Nutraceutical Third Party Manufacturing in India
-                        </p>
+          <div className="vision-mission-container mt-2 pt-0">
+            <div>
+              <h2 className="service-title barlow-condensed-semi text-center text-black">
+                Our Nutraceutical{" "}
+                <span className="highlight">Manufacturing Services</span>
+              </h2>
+              <section className="service-bg-section">
+                <div className="service-overlay">
+                  <div className="container-fluid px-4 px-md-5">
+                    <div className="row service-card-wrapper">
+                      <div className="col-lg-4 col-md-6 col-12 mb-4">
+                        <div className="service-card-box">
+                          <i className="fa fa-check-circle service-icon"></i>
+                          <p className="service-text inter-500">
+                            Nutraceutical Third Party Manufacturing in India
+                          </p>
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="col-lg-6 col-md-6 col-sm-12">
-                      <div className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm manufacturing-services-div">
-                        <i className="fa fa-check-circle mb-2 manufacturing-services-div-i "></i>
-                        <p className="f-rob-bol mb-0 manufacturing-services-div-i-para">
-                          White Label & Private Label Supplement Manufacturing
-                        </p>
+                      <div className="col-lg-4 col-md-6 col-12 mb-4">
+                        <div className="service-card-box">
+                          <i className="fa fa-check-circle service-icon"></i>
+                          <p className="service-text inter-500">
+                            White Label & Private Label Supplement Manufacturing
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </div>
 
-                  <div className="mt-2">
-                    <div className="col-lg-6 col-md-6 col-sm-12">
-                      <div className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm manufacturing-services-div">
-                        <i className="fa fa-check-circle mb-2 manufacturing-services-div-i "></i>
-                        <p className="f-rob-bol mb-0 manufacturing-services-div-i-para">
-                          Protein Powder Manufacturing
-                        </p>
+                      <div className="col-lg-4 col-md-6 col-12 mb-4">
+                        <div className="service-card-box">
+                          <i className="fa fa-check-circle service-icon"></i>
+                          <p className="service-text inter-500">
+                            Protein Powder Manufacturing
+                          </p>
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="col-lg-6 col-md-6 col-sm-12">
-                      <div className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm manufacturing-services-div">
-                        <i className="fa fa-check-circle mb-2 manufacturing-services-div-i "></i>
-                        <p className="f-rob-bol mb-0 manufacturing-services-div-i-para">
-                          Dietary Supplement Contract Manufacturing
-                        </p>
+                      <div className="col-lg-4 col-md-6 col-12 mb-4">
+                        <div className="service-card-box">
+                          <i className="fa fa-check-circle service-icon"></i>
+                          <p className="service-text inter-500">
+                            Dietary Supplement Contract Manufacturing
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </div>
 
-                  <div className="mt-2">
-                    <div className="col-lg-6 col-md-6 col-sm-12">
-                      <div className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm manufacturing-services-div">
-                        <i className="fa fa-check-circle mb-2 manufacturing-services-div-i "></i>
-                        <p className="f-rob-bol mb-0 manufacturing-services-div-i-para">
-                          Custom Formulation & R&D Support
-                        </p>
+                      <div className="col-lg-4 col-md-6 col-12 mb-4">
+                        <div className="service-card-box">
+                          <i className="fa fa-check-circle service-icon"></i>
+                          <p className="service-text inter-500">
+                            Custom Formulation & R&D Support
+                          </p>
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="col-lg-6 col-md-6 col-sm-12 mt-2 mt-md-0">
-                      <div className="p-3 d-flex flex-column align-items-center justify-content-center text-center shadow-sm manufacturing-services-div">
-                        <i className="fa fa-check-circle mb-2 manufacturing-services-div-i "></i>
-                        <p className="f-rob-bol mb-0 manufacturing-services-div-i-para">
-                          Bulk Manufacturing, Packaging & Labeling Solutions
-                        </p>
+                      <div className="col-lg-4 col-md-6 col-12 mb-4">
+                        <div className="service-card-box">
+                          <i className="fa fa-check-circle service-icon"></i>
+                          <p className="service-text inter-500">
+                            Bulk Manufacturing, Packaging & Labeling Solutions
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
+                </div>
+              </section>
+            </div>
+
+            <div className="container-fluid">
+              <div className="row mission-section align-items-center">
+                <div className="col-12 order-1">
+                  <h2 className="mb-4 barlow-condensed-semi text-center text-lg-start">
+                    Our <span className="highlight"> Product Range</span>
+                  </h2>
+                </div>
+
+                <div className="col-lg-6 col-md-12 order-2 order-lg-3 text-center mb-4 mb-lg-0">
+                  <div className="img-style">
+                    <img
+                      src="/assets/images/nutrition/products-combo.webp"
+                      alt="Gomzi Lifescience Third-Party Manufacturing Partner"
+                      className="img-fluid"
+                    />
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-md-12 order-3 order-lg-2">
+                  <Link
+                    to="/third-party-manufacturing/protein-powder"
+                    className="text-decoration-none d-block mb-3"
+                  >
+                    <div className="product-range-section">
+                      <p className="f-18 mb-0 gomzi-llp-para inter-regular">
+                        <strong className="product-range-section-span-title barlow-condensed-semi f-24">
+                          Protein Supplements
+                        </strong>
+                        <br />
+                        Whey Protein, Mass Gainer
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/third-party-manufacturing/sports-nutrition-supplements"
+                    className="text-decoration-none d-block mb-3"
+                  >
+                    <div className="product-range-section">
+                      <p className="f-18 mb-0 gomzi-llp-para inter-regular">
+                        <strong className="product-range-section-span-title barlow-condensed-semi f-24">
+                          Performance Supplements
+                        </strong>
+                        <br />
+                        Pre-Workout, Creatine, BCAA, EAA
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/third-party-manufacturing/multivitamins-tablet"
+                    className="text-decoration-none d-block"
+                  >
+                    <div className="product-range-section">
+                      <p className="f-18 mb-0 gomzi-llp-para inter-regular">
+                        <strong className="product-range-section-span-title barlow-condensed-semi f-24">
+                          Daily Health Supplements
+                        </strong>
+                        <br />
+                        Multivitamins
+                      </p>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
 
             <div className="row mission-section align-items-start">
-              <div className="left-section product-range-order-2">
-                <h2 className="mb-20">
-                  Our <span className="highlight"> Product Range</span>
-                </h2>
-
-                <Link
-                  to="/third-party-manufacturing/protein-powder"
-                  className="text-decoration-none d-block mb-3"
-                >
-                  <div className="d-flex align-items-center p-3 product-range-section">
-                    <p className="f-rob-bol f-20 mb-0 gomzi-llp-para ">
-                      <strong className="product-range-section-span-title">
-                        Protein Supplements
-                      </strong>
-                      <br />
-                      Whey Protein, Mass Gainer
-                    </p>
-                  </div>
-                </Link>
-
-                <Link
-                  to="/third-party-manufacturing/sports-nutrition-supplements"
-                  className="text-decoration-none d-block mb-3"
-                >
-                  <div className="d-flex align-items-center p-3 product-range-section">
-                    <p className="f-rob-bol f-20 mb-0 gomzi-llp-para ">
-                      <strong className="product-range-section-span-title">
-                        Performance Supplements
-                      </strong>
-                      <br />
-                      Pre-Workout, Creatine, BCAA, EAA
-                    </p>
-                  </div>
-                </Link>
-
-                <Link
-                  to="/third-party-manufacturing/multivitamins-tablet"
-                  className="text-decoration-none d-block mb-3"
-                >
-                  <div className="d-flex align-items-center p-3 product-range-section">
-                    <p className="f-rob-bol f-20 mb-0 gomzi-llp-para ">
-                      <strong className="product-range-section-span-title">
-                        Daily Health Supplements
-                      </strong>
-                      <br />
-                      Multivitamins
-                    </p>
-                  </div>
-                </Link>
-              </div>
-
               <div className="left-section product-range-order-1">
-                <img
-                  src="/assets/images/nutrition/what-makes-us.webp"
-                  alt="Gomzi Lifescience Third-Party Manufacturing Partner"
-                  className=" pb-5 pb-md-0 white-labelling-top-0 "
-                />
-              </div>
-            </div>
+                <div className="video-box" onClick={() => setShowVideo(true)}>
+                  <video
+                    className="illustration-image-home"
+                    muted
+                    loop
+                    playsInline
+                  >
+                    <source
+                      src="/assets/video/homepage-video.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
 
-            <div className="row mission-section align-items-start">
-              <div className="left-section product-range-order-1">
-                <img
-                  src="/assets/images/nutrition/white-labelling-vision-001.webp"
-                  alt="Gomzi Lifesciences"
-                  className="illustration-image pb-5 pb-md-0"
-                />
+                  <div className="play-btn">▶</div>
+                </div>
               </div>
+              {showVideo && (
+                <div className="video-modal">
+                  <div className="video-container">
+                    <span
+                      className="close-btn"
+                      onClick={() => setShowVideo(false)}
+                    >
+                      ✖
+                    </span>
+
+                    <video controls autoPlay>
+                      <source
+                        src="/assets/video/homepage-video.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              )}
 
               <div className="left-section product-range-order-2">
-                <h2 className="mb-20 ">
+                <h2 className="mb-20 barlow-condensed-semi">
                   Why Choose{" "}
                   <span className="highlight">Gomzi Lifescience LLP?</span>
                 </h2>
@@ -766,25 +802,25 @@ function WhiteLabelling() {
                 <div className="descriptionShow text-secondary whitelable-decription">
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className="f-rob-bol mb-0 iso-para ">
-                        <strong>Low MOQ:</strong> Start from just 50–100 KG per
-                        product
+                      <p className=" mb-0 iso-para inter-regular ">
+                        <strong>Starting at 50 KG:</strong> Start from just
+                        50–100 KG per product
                       </p>
                     </div>
                   </div>
 
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className="f-rob-bol mb-0 iso-para ">
+                      <p className=" mb-0 iso-para inter-regular ">
                         <strong>Fast Turnaround:</strong> Get your products
-                        ready in 15–20 days
+                        ready in 15–20 working days
                       </p>
                     </div>
                   </div>
 
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className="f-rob-bol mb-0 iso-para ">
+                      <p className=" mb-0 iso-para inter-regular ">
                         <strong>Ready-to-Market Formulations:</strong> No R&D
                         delays
                       </p>
@@ -793,7 +829,7 @@ function WhiteLabelling() {
 
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className="f-rob-bol mb-0 iso-para ">
+                      <p className=" mb-0 iso-para inter-regular ">
                         <strong>Indian Flavour Innovation:</strong> Stand out
                         with unique taste profiles
                       </p>
@@ -802,7 +838,7 @@ function WhiteLabelling() {
 
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className="f-rob-bol mb-0 iso-para ">
+                      <p className=" mb-0 iso-para inter-regular ">
                         <strong>Affordable Manufacturing: </strong>Cost
                         advantage with Gujarat-based production
                       </p>
@@ -811,7 +847,7 @@ function WhiteLabelling() {
 
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className="f-rob-bol mb-0 iso-para ">
+                      <p className=" mb-0 iso-para inter-regular ">
                         <strong>ISO & WHO-GMP:</strong>Certified Manufacturing
                         Facility
                       </p>
@@ -821,13 +857,16 @@ function WhiteLabelling() {
               </div>
             </div>
 
-            <div className="row mission-section align-items-start">
+            <div className="row mission-section no-sticky align-items-start">
               <div className="left-section product-range-order-2">
-                <h2 className="mb-20 text-center">
+                <h2 className="mb-20 text-center barlow-condensed-semi">
                   Our <span className="highlight"> Mission</span>
                 </h2>
                 <div className="mission-box mb-4">
-                  <p className="mission-text">
+                  <div className="mission-icon">
+                    <FontAwesomeIcon icon={faBullseye} />
+                  </div>
+                  <p className="mission-text barlow-condensed-semi">
                     “ To be the most trusted manufacturing partner for India's
                     next generation of supplement brand founders - delivering
                     certified quality, formulation expertise, and brand-building
@@ -837,12 +876,15 @@ function WhiteLabelling() {
               </div>
 
               <div className="left-section product-range-order-1">
-                <h2 className="mb-20 text-center">
+                <h2 className="mb-20 text-center barlow-condensed-semi">
                   Our <span className="highlight"> Vision</span>
                 </h2>
 
                 <div className="vision-box">
-                  <p className="vision-text">
+                  <div className="vision-icon">
+                    <FontAwesomeIcon icon={faEye} />
+                  </div>
+                  <p className="vision-text barlow-condensed-semi">
                     “ To manufacture the brands that define Indian wellness for
                     the next decade - built by creators, trainers, and
                     entrepreneurs who chose GLS as their first and lasting
@@ -852,60 +894,55 @@ function WhiteLabelling() {
               </div>
             </div>
 
-            <div className="row mission-section align-items-start">
-              <div className="left-section mb-2 product-range-order-1">
-                <img
-                  src="/assets/images/nutrition/white-labelling-mission-001.webp"
-                  alt="Gomzi Lifesciences Manufacturing Process"
-                  className="pb-5 pb-md-0 white-labelling-top-0 "
-                />
-              </div>
+            <div>
+              <h2 className="mp-title barlow-condensed-semi text-center text-black">
+                Our <span className="highlight">Manufacturing Process</span>
+              </h2>
+              <section className="mp-section">
+                <div className="mp-overlay">
+                  <div className="container-fluid px-4 px-md-5">
+                    <div className="row">
+                      {processSteps.map((step, index) => (
+                        <div
+                          key={index}
+                          className="col-lg-4 col-md-6 col-12 mb-4"
+                        >
+                          <div className="mp-card">
+                            <div className="mp-card-number">{index + 1}</div>
 
-              <div className="left-section product-range-order-2 ">
-                <h2 className="mb-30-fw-700">
-                  Our{" "}
-                  <span className="certified-compliant-div-hspan ">
-                    Manufacturing Process
-                  </span>
-                </h2>
-
-                <div className="manufacturing-process-div">
-                  <div className="manufacturing-process-steps-div-main"></div>
-
-                  {processSteps.map((step, index) => (
-                    <div
-                      key={index}
-                      className="manufacturing-process-steps-div-inner"
-                    >
-                      <div className="manufacturing-process-steps-num ">
-                        {index + 1}
-                      </div>
-
-                      <div>
-                        <h6 className="manufacturing-process-steps-title">
-                          {step}
-                        </h6>
-                      </div>
+                            <h6 className="mp-card-text inter-regular">
+                              {step}
+                            </h6>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
                 </div>
-              </div>
+              </section>
             </div>
 
             <div className="row mission-section align-items-start">
               <div className="left-section product-range-order-2">
-                <h2 className="mb-20 ">
-                  <strong> More Than White Labelling - We Build Brands</strong>
+                <h2 className="mb-30 barlow-condensed-semi">
+                  More Than White Labelling -
+                  <span className="certified-compliant-div-hspan ">
+                    We Build Brands
+                  </span>
                 </h2>
-                <p className="mb-3 fts-18">
-                  Most manufacturers stop at production. We go beyond that.
+
+                <p className="mb-3 fts-18 inter-regular">
+                  Most third-party manufacturing companies stop at production.
+                  We go beyond that.
                 </p>
-                <p className="mb-3 fts-18">With Gomzi Lifesciences, you get:</p>
+                <p className="mb-3 fts-18 inter-regular">
+                  With Gomzi Lifesciences, you get:
+                </p>
 
                 <div className="descriptionShow text-secondary whitelable-decription">
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className="f-rob-bol mb-0 iso-para ">
+                      <p className="mb-0 iso-para inter-regular">
                         Product selection & guidance
                       </p>
                     </div>
@@ -913,15 +950,15 @@ function WhiteLabelling() {
 
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className="f-rob-bol mb-0 iso-para ">
-                        Custom branding & label design
+                      <p className="mb-0 iso-para inter-regular">
+                        product packaging & label design
                       </p>
                     </div>
                   </div>
 
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className="f-rob-bol mb-0 iso-para ">
+                      <p className=" mb-0 iso-para inter-regular">
                         Packaging solutions
                       </p>
                     </div>
@@ -929,31 +966,31 @@ function WhiteLabelling() {
 
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className="f-rob-bol mb-0 iso-para ">
-                        Website development support
+                      <p className="mb-0 iso-para inter-regular">
+                        E-commerce site development support
                       </p>
                     </div>
                   </div>
 
                   <div className="mb-3">
                     <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className="f-rob-bol mb-0 iso-para ">
+                      <p className="mb-0 iso-para inter-regular">
                         Marketing setup assistance
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <p className="mb-3 fts-18 text-center">
+                <p className="mb-3 fts-18 text-center inter-regular">
                   <strong>One partner. Zero hassle. Faster launch.</strong>
                 </p>
               </div>
 
               <div className="left-section product-range-order-1">
                 <img
-                  src="/assets/images/nutrition/white-labelling-vision-001.webp"
+                  src="/assets/images/nutrition/gym-owner.webp"
                   alt="Gomzi Lifesciences"
-                  className="illustration-image pb-5 pb-md-0"
+                  className="illustration-image custom-small-img  pb-5 pb-md-0"
                 />
               </div>
             </div>
@@ -976,7 +1013,7 @@ function WhiteLabelling() {
                 <div className="kf-icon-wrap">
                   <i className={card.icon}></i>
                 </div>
-                <p className="kf-title">{card.title}</p>
+                <p className="kf-title barlow-condensed-semi">{card.title}</p>
               </div>
             ))}
           </div>
@@ -1076,7 +1113,6 @@ function WhiteLabelling() {
 
         <FactoryPhotoSection />
         <Whitelabellingblogs />
-        <ThirdPartyManufacturingFAQS />
       </div>
       <p className="d-none">
         whey protein and, peanut butter peanut butter, peanut butters, why

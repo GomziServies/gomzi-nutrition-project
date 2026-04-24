@@ -44,12 +44,12 @@ function CancellationPolicyCustomer() {
     <>
       <Helmet>
         <title>
-          Cancellation Policy | Gomzi Lifescience Family - Easy & Transparent
+          Cancellation Policy | Gomzi Lifesciences Family - Easy & Transparent
           Cancellations
         </title>
         <meta
           name="description"
-          content="Learn about Gomzi Lifescience Family's Cancellation Policy. Find details on order cancellations, eligibility, and refund procedures for a hassle-free experience."
+          content="Learn about Gomzi Lifesciences Family's Cancellation Policy. Find details on order cancellations, eligibility, and refund procedures for a hassle-free experience."
         />
         <meta
           name="keyword"
@@ -84,7 +84,7 @@ function CancellationPolicyCustomer() {
         />
         <meta
           property="og:description"
-          content="Learn about Gomzi Lifescience Family's Cancellation Policy. Find details on order cancellations, eligibility, and refund procedures for a hassle-free experience."
+          content="Learn about Gomzi Lifesciences Family's Cancellation Policy. Find details on order cancellations, eligibility, and refund procedures for a hassle-free experience."
         />
         <meta
           property="og:image"
@@ -119,7 +119,7 @@ function CancellationPolicyCustomer() {
           gtag('js', new Date());
           gtag('config', 'G-J50WNKGW38');`}</noscript>
         <script>
-          { `
+          {`
           (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -131,7 +131,7 @@ function CancellationPolicyCustomer() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifescience Details. "
+          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifesciences Details. "
         }
         options={{ pageRef: true }}
       />
@@ -314,130 +314,130 @@ function CancellationPolicyCustomer() {
             <div className="container-fluid w-80">
               <div className="row">
                 <div className="col-12 pt-4 text-left">
-                  <h1 className="f-rob-bol f-30 mb-2 text-black text-uppercase">
-                    <b>Cancellation Policy for Gomzi Lifescience</b>
+                  <h1 className=" f-30 mb-2 text-black text-uppercase barlow-condensed-extra font-weight-normal">
+                    <b>Cancellation Policy for Gomzi Lifesciences LLP</b>
                   </h1>
                 </div>
                 <div className="col-12 text-center mb-4 px-4">
                   <div className="ql-editor text-left mt-3">
-                    <p className="mb-2">
-                      At Gomzi Lifescience, we are committed to providing our
-                      customers with high-quality nutraceutical products and an
-                      excellent shopping experience. We understand that
+                    <p className="mb-2 int-regular">
+                      At Gomzi Lifesciences LLP, we are committed to providing
+                      our customers with high-quality nutraceutical products and
+                      an excellent shopping experience. We understand that
                       situations can arise that may require you to cancel your
                       order. This Cancellation Policy outlines the procedures
                       and conditions regarding order cancellations. Our goal is
                       to ensure clarity and convenience for our valued
                       customers.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>1. Order Cancellation Overview:</b>
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-2  int-regular">
                       We strive to process orders quickly to get our products to
                       you as soon as possible. However, we recognize that you
                       may need to cancel an order for various reasons. Our
                       cancellation policy is designed to accommodate your needs
                       while ensuring a smooth process.
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-2  int-500">
                       <b>(i) Cancellation Before Shipment:</b>
                     </p>
-                    <p className="mb-2">
-                      Immediate Action: If you decide to cancel your order,
+                    <p className="mb-2  int-regular">
+                      <strong>Immediate Action:</strong> If you decide to cancel your order,
                       please contact us as soon as possible. We recommend
                       reaching out within a few hours of placing your order, as
                       this increases the likelihood that we can process your
                       request before your order is shipped.
                     </p>
-                    <p className="mb-2">
-                      Refund Process: If your order has not yet been shipped, we
+                    <p className="mb-2  int-regular">
+                     <strong>Refund Process:</strong>  If your order has not yet been shipped, we
                       will process your cancellation request promptly. You will
                       receive a full refund, which will be issued to the
                       original payment method. Please allow 5-7 business days
                       for the refund to reflect in your account.
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-2  int-500">
                       <b>(ii) Cancellation After Shipment:</b>
                     </p>
-                    <p className="mb-2">
-                      Post-Shipment Policy: Once an order has been shipped, we
+                    <p className="mb-2  int-regular">
+                     <strong>Post-Shipment Policy:</strong>  Once an order has been shipped, we
                       are unable to cancel it. In such cases, you will need to
                       follow our Return Policy to return the item once it is
                       delivered.
                     </p>
-                    <p className="mb-2">
-                      Return Process: If you receive your order and wish to
+                    <p className="mb-3  int-regular">
+                      <strong>Return Process:</strong> If you receive your order and wish to
                       return it, please review our Return Policy for
                       instructions on how to proceed.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>2. How to Cancel Your Order:</b>
                     </p>
-                    <p className="mb-2">
-                      Contact Customer Service: Reach out to our dedicated
+                    <p className="mb-2  int-regular">
+                      <strong>Contact Customer Service:</strong> Reach out to our dedicated
                       customer service team via:
                       <br />
-                      Email: gomzinutrition@gmail.com
+                      <strong>Email:</strong> info@gomzilifesciences.in
                       <br />
-                      Phone: +91 88668 42520
+                      <strong>Phone:</strong> +91 8320077993
                       <br />
                       Include your order number and a brief explanation of why
                       you would like to cancel your order.
                     </p>
-                    <p className="mb-2">
-                      Confirmation of Cancellation: Our customer service
+                    <p className="mb-2  int-regular">
+                     <strong> Confirmation of Cancellation:</strong> Our customer service
                       representative will verify the status of your order and
                       confirm whether it can be canceled. We will communicate
                       the next steps to you as quickly as possible.
                     </p>
-                    <p className="mb-2">
-                      Processing Your Refund: If your cancellation is approved,
+                    <p className="mb-3  int-regular">
+                      <strong>Processing Your Refund:</strong> If your cancellation is approved,
                       we will initiate a full refund to your original payment
                       method. The processing time for refunds typically ranges
                       from 5-7 business days, depending on your financial
                       institution.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>3. Exceptions to the Cancellation Policy:</b>
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-2  int-regular">
                       <b>(i) Subscription Services:</b>
                     </p>
-                    <p className="mb-2">
-                      Recurring Orders: If you are subscribed to a recurring
+                    <p className="mb-2  int-regular">
+                     <strong>Recurring Orders:</strong>  If you are subscribed to a recurring
                       order or service, you can cancel your subscription at any
                       time. To avoid being charged for the next billing cycle,
                       please ensure that you cancel at least 24 hours before the
                       scheduled billing date.
                     </p>
-                    <p className="mb-2">
-                      Subscription Cancellation Process: To cancel your
+                    <p className="mb-2  int-regular">
+                      <strong>Subscription Cancellation Process:</strong> To cancel your
                       subscription, please contact our customer service team for
                       assistance. You will receive confirmation once your
                       subscription has been successfully canceled.
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-2  int-500">
                       <b>(ii) Promotional Offers:</b>
                     </p>
-                    <p className="mb-2">
-                      Special Promotions: Certain promotional offers may have
+                    <p className="mb-3  int-regular">
+                      <strong>Special Promotions:</strong> Certain promotional offers may have
                       specific terms and conditions related to cancellations.
                       These terms will be clearly outlined at the time of
                       purchase. Please review these terms carefully to
                       understand any cancellation restrictions.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>4. Important Considerations:</b>
                     </p>
-                    <p className="mb-2">
-                      Timeliness: We encourage you to act quickly if you wish to
+                    <p className="mb-2  int-regular">
+                      <strong>Timeliness:</strong> We encourage you to act quickly if you wish to
                       cancel your order. Once an order is in the shipping
                       process, it may be too late to cancel, and you will need
                       to initiate a return.
                     </p>
-                    <p className="mb-2">
-                      Contacting Us: Our customer service team is here to assist
+                    <p className="mb-2  int-regular">
+                      <strong>Contacting Us:</strong> Our customer service team is here to assist
                       you with any questions or concerns regarding your order
                       cancellation. We strive to respond to all inquiries
                       promptly.

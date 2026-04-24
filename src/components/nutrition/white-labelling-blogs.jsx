@@ -46,7 +46,7 @@ const Whitelabellingblogs = () => {
                         <div className="col-12 py-3">
                           <div className="row align-items-center">
                             <div className="col-10 text-left">
-                              <p className="m-0 f-pop-bol f-16 text-black">
+                              <p className="m-0 inter-regular f-16 text-black">
                                 {truncateTitle(blog.title)}
                               </p>
                             </div>
@@ -67,7 +67,7 @@ const Whitelabellingblogs = () => {
         <div className="text-center py-3">
           <Link
             to="/read-more-white-labelling-blogs"
-            className="btn text-white px-4 py-2 read-more-blogs-btn 
+            className="btn text-white px-4 py-2 read-more-blogs-btn barlow-condensed-semi 
 "
           >
             Read More Blogs...

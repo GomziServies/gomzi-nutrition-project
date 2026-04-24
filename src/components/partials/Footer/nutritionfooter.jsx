@@ -18,17 +18,19 @@ function NutritionFooter() {
           <div className="container ">
             <div className="row ">
               <div className="col-md-3 f1 f2">
-                <h4 className="mb-0">Gomzi Lifesciences LLP</h4>
-                <p>
+                <h4 className="mb-0 barlow-condensed-semi">
+                  Gomzi Lifesciences LLP
+                </h4>
+                <p className="int-regular">
                   Your Trusted Partner for Premium Nutraceutical Manufacturing.
                 </p>
                 <div className="f2">
-                  <p className="mb-2 mt-2">
+                  <p className="mb-2 mt-2 int-regular">
                     <Link to="tel:+918320077993">
-                      Gautam Jani - +91 8320077993
+                       +91 8320077993
                     </Link>
                   </p>
-                  <p className="mb-4">
+                  <p className="mb-4 int-regular">
                     <Link to="mailto:info@gomzilifesciences.in">
                       info@gomzilifesciences.in
                     </Link>
@@ -37,7 +39,7 @@ function NutritionFooter() {
               </div>
 
               <div className="col-md-2 f2">
-                <h4>Links</h4>
+                <h4 className="barlow-condensed-semi">Links</h4>
 
                 <p className="mb-4">
                   <Link to="/nutrition/contact-us" target="_blank">
@@ -51,7 +53,7 @@ function NutritionFooter() {
                 </p>
               </div>
               <div className="col-md-4 f2">
-                <h4>Information</h4>
+                <h4 className="barlow-condensed-semi">Information</h4>
                 <p className="mb-3">
                   <Link to="/nutrition/terms-condition-customer">
                     Terms & Conditions
@@ -85,7 +87,7 @@ function NutritionFooter() {
               </div>
               <div className="col-md-3 f2">
                 <div className="f3 p-0">
-                  <h4>Follow Us</h4>
+                  <h4 className="barlow-condensed-semi">Follow Us</h4>
                   <Link
                     to="https://www.facebook.com/Gomzilifesciences"
                     className="fb"
@@ -116,7 +118,7 @@ function NutritionFooter() {
                   </Link>
                 </div>
                 <div className="f2 mt-3">
-                  <h4 className="mb-4">Partner With Us</h4>
+                  <h4 className="mb-4 int-500 ft-pwu">Partner With Us</h4>
                   <p className="mb-3">
                     <Link
                       onClick={() =>

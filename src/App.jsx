@@ -40,7 +40,6 @@ import WheyVsPlantProteinWhichIsMoreProfitabletoManufacture from "./pages/white-
 import HowSportsSupplementsAreManufacturedFromIngredientstoPackaging from "./pages/white-labelling-blogs/how-sports-supplements-are-manufactured-from-ingredients-to-packaging";
 import TheFutureofNutraceuticalManufacturingin202610GameChangingTrendsBrandsCantIgnore from "./pages/white-labelling-blogs/the-future-of-nutraceutical-manufacturing-in 2026-10-game-changing-trends-brands-cant-ignore";
 import TheHiddenCostsofStartingaNutraceuticalBrand from "./pages/white-labelling-blogs/the-hidden-costs-of-starting-a-nutraceutical-brand";
-import LandingPage from "./pages/LandingPage";
 
 const UserProfile = lazy(() => import("./pages/account/profile"));
 const UserOrder = lazy(() => import("./pages/account/order"));
@@ -390,7 +389,6 @@ function App() {
           element={<BulkInquiryNutrition />}
         />
         <Route path="/nutrition/white-labelling" element={<WhiteLabelling />} />
-        <Route path="/nutrition/landing-page" element={<LandingPage />} />
 
         <Route
           path="/nutrition/sample-booking-update"

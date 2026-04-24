@@ -417,8 +417,9 @@ const MultivitaminTablet = () => {
     {
       id: 1,
       title: "Advanced Multivitamin Formulation",
+      target: "PREMIUM WELLNESS · CLINICAL BRANDS",
       description1:
-        "As a trusted multivitamin tablet manufacturer, we develop advanced formulations that combine essential vitamins, minerals, amino acids, herbal extracts, and antioxidants.",
+        "As a trusted multivitamin tablet End-to-End Brand Launch Partner, we develop advanced formulations that combine essential vitamins, minerals, amino acids, herbal extracts, and antioxidants.",
       description2:
         "Our scientifically designed formulations help support immunity, energy metabolism, and overall wellness, produced using carefully selected raw materials and advanced manufacturing processes.",
       features: [
@@ -431,6 +432,7 @@ const MultivitaminTablet = () => {
     {
       id: 2,
       title: "Complete Third Party Manufacturing Services",
+      target: "TARGET: D2C STARTUPS · PHARMA COMPANIES",
       description1:
         "We provide complete multivitamin third party manufacturing services for nutraceutical brands, pharmaceutical companies, and healthcare startups.",
       description2:
@@ -445,6 +447,7 @@ const MultivitaminTablet = () => {
     {
       id: 3,
       title: "General Wellness Multivitamin",
+      target: "TARGET: MASS MARKET · PREVENTIVE CARE",
       description1:
         "Our general wellness multivitamin tablets are formulated with a comprehensive blend of essential vitamins, minerals, amino acids, antioxidants, and herbal extracts to support overall health.",
       description2:
@@ -459,6 +462,7 @@ const MultivitaminTablet = () => {
     {
       id: 4,
       title: "Immune Support & Active Lifestyle Multivitamin",
+      target: "TARGET: CORPORATE PROFESSIONAL · BUSY PARENT",
       description1:
         "Our immune support and active lifestyle multivitamin formulations are developed for supplement brands targeting fitness enthusiasts, athletes, and health-conscious consumers.",
       description2:
@@ -475,8 +479,23 @@ const MultivitaminTablet = () => {
     },
   ];
 
+  const certificates = [
+    { file: "nutri-certi-1.webp", name: "HACCP", sub: "Hazard Control Point" },
+    {
+      file: "nutri-certi-2.webp",
+      name: "GMP",
+      sub: "Good Manufacturing Practice",
+    },
+    { file: "nutri-certi-3.webp", name: "HALAL", sub: "Halal Certified" },
+    { file: "nutri-certi-4.webp", name: "KOSHER", sub: "Kosher Certified" },
+    { file: "nutri-certi-5.webp", name: "FSSAI", sub: "Licensed & Approved" },
+  ];
+
   const productSpecs = [
-    { specification: "Manufacturer", details: "Gomzi Lifescience LLP" },
+    {
+      specification: "End-to-end brand launch partner",
+      details: "Gomzi Lifesciences LLP",
+    },
     { specification: "Form", details: "Tablet" },
     {
       specification: "Packaging Size",
@@ -488,9 +507,9 @@ const MultivitaminTablet = () => {
     },
     { specification: "Composition", details: "As Per Brand Requirement" },
     { specification: "Shelf Life", details: "24 Months" },
-    { specification: "Delivery Time", details: "15–20 Days" },
+    { specification: "Delivery Time", details: "15–20 working days" },
     {
-      specification: "Branding",
+      specification: "Product packaging",
       details: "Private Label & White Labelling Available",
     },
     { specification: "Certifications", details: "FSSAI, GMP" },
@@ -540,7 +559,7 @@ const MultivitaminTablet = () => {
               <a
                 href={DownloadPdf || "#"}
                 download
-                className="download-brochure"
+                className="download-brochure barlow-condensed-semi f-18"
               >
                 Download Our Brochure
               </a>
@@ -550,7 +569,7 @@ const MultivitaminTablet = () => {
                 href="https://wa.me/918320077993?text=Hello%20I%20am%20interested%20in%20Protein%20Powders"
                 target="_blank"
                 rel="noreferrer"
-                className="download-brochure"
+                className="download-brochure barlow-condensed-semi f-18"
               >
                 Enquiry Now
               </a>
@@ -560,26 +579,26 @@ const MultivitaminTablet = () => {
                 href="tel:+918320077993"
                 target="_blank"
                 rel="noreferrer"
-                className="download-brochure"
+                className="download-brochure barlow-condensed-semi f-18"
               >
                 Call To Our Expert Team
               </a>
             </div>
           </div>
 
-          <h1 className="wh-page-title">
-            Private Label Multivitamin Tablet Manufacturer <br /> In Surat,
-            India
+          <h1 className="wh-page-title barlow-condensed-extra f-32">
+            Private Label Multivitamin Tablet End-to-End Brand Launch Partner{" "}
+            <br /> In Surat, India
           </h1>
 
-          <h2 className="wh-sec-title-multi multivitamin-subtext">
+          <h2 className="wh-sec-title-multi multivitamin-subtext barlow-condensed-semi">
             Complete Multivitamin Tablet Manufacturing Solutions for
             Nutraceutical Brands
           </h2>
 
           <div className="whey-protein-div-main">
             <div className="whey-protein-div-text-multivitamin">
-              <p className="wh-desc">
+              <p className="wh-desc inter-regular">
                 Multivitamin supplements are among the most popular
                 nutraceutical products worldwide due to increasing awareness
                 about preventive healthcare and nutritional deficiencies.
@@ -587,13 +606,13 @@ const MultivitaminTablet = () => {
                 minerals, antioxidants, and other essential nutrients that
                 support overall wellness.
               </p>
-              <p className="wh-desc">
+              <p className="wh-desc inter-regular">
                 Our company offers multivitamin third party manufacturing
                 services for nutraceutical brands, pharmaceutical companies,
                 healthcare startups, and supplement distributors looking to
                 launch their own private label products.
               </p>
-              <p className="wh-desc">
+              <p className="wh-desc inter-regular">
                 With advanced infrastructure, experienced R&D teams, and
                 high-quality raw materials, we provide custom multivitamin
                 formulation, manufacturing, packaging, and private label
@@ -615,11 +634,11 @@ const MultivitaminTablet = () => {
         </div>
         <div className="wh-section wh-section-white">
           <div className="wh-container">
-            <h2 className="wh-sec-title-our-whey-protein">
+            <h2 className="wh-sec-title-our-whey-protein barlow-condensed-semi">
               Our Multivitamin Manufacturing Solution
             </h2>
 
-            <p className="wh-sec-desc-whey-protein">
+            <p className="wh-sec-desc-whey-protein inter-regular">
               We manufacture different multivitamin formulations depending on
               the target health segment , nutritional requirements and intended
               application.
@@ -630,14 +649,26 @@ const MultivitaminTablet = () => {
                 <div key={category.id} className="wh-cat-row-item">
                   <div className="wh-cat-row-header wh-cat-row-header-top">
                     <div className="wh-cat-num">{category.id}</div>
-                    <div className="wh-cat-title">{category.title}</div>
+                    <div className="wh-cat-title barlow-condensed-semi">
+                      {category.title}
+                    </div>
                   </div>
 
                   <div className="wh-cat-row-left">
-                    <p className="wh-cat-desc">{category.description1}</p>
-                    <p className="wh-cat-desc">{category.description2}</p>
-                    <span className="wh-kf-label">Key Features</span>
-                    <KeyFeatures features={category.features} />
+                    <div className="wh-cat-target inter-500">
+                      {category.target}
+                    </div>
+                    <p className="wh-cat-desc inter-regular">
+                      {category.description1}
+                    </p>
+                    <p className="wh-cat-desc inter-regular">
+                      {category.description2}
+                    </p>
+                    <span className="wh-kf-label inter-500">Key Features</span>
+                    <KeyFeatures
+                      className="inter-500"
+                      features={category.features}
+                    />
                   </div>
                   <div className="wh-prod-card">
                     <img
@@ -648,7 +679,7 @@ const MultivitaminTablet = () => {
                     <div className="wh-prod-card-btn">
                       <a
                         href={products[category.id - 1]?.productLink}
-                        className="wh-prod-btn"
+                        className="wh-prod-btn barlow-condensed-semi f-18"
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -656,7 +687,7 @@ const MultivitaminTablet = () => {
                       </a>
                       <a
                         href="tel:+918320077993"
-                        className="wh-prod-btn"
+                        className="wh-prod-btn barlow-condensed-semi f-18"
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -672,10 +703,53 @@ const MultivitaminTablet = () => {
 
         <div className="wh-section wh-section-alt">
           <div className="wh-container">
-            <h2 className="wh-sec-title">
+            <h2 className="wh-sec-title barlow-condensed-semi">
+              MARKET OPPORTUNITY
+            </h2>
+            <p className="wh-sec-desc inter-500">
+              <strong>A Category Built on Trust.</strong>
+            </p>
+            <div className="market-cards-section">
+              <div className="market-cards-container">
+                <div className="market-card">
+                  <h3 className="barlow-condensed-semi">5.17B</h3>
+                  <p className="inter-regular">
+                    India dietary supplements market — growing at{" "}
+                    <strong>13.1% CAGR.</strong>Multivitamins remain the
+                    highest-trust, highest-repurchase category.
+                  </p>
+                </div>
+
+                <div className="market-card">
+                  <h3 className="barlow-condensed-semi">74%</h3>
+                  <p className="inter-regular">
+                    Of Indian adults are
+                    <strong> deficient in Vitamin D.</strong>
+                    B12, Iron, and Zinc deficiencies affect the majority of
+                    urban consumers. Your product solves a real, documented
+                    problem.
+                  </p>
+                </div>
+              </div>
+
+              <div className="market-bottom-text">
+                <p className="inter-regular">
+                  “The Indian consumer doesn't just want vitamins. They want{" "}
+                  <strong>a brand they can trust</strong>— from a certified
+                  facility with verified ingredients. That's the gap GLS helps
+                  you fill.”
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="wh-section wh-section-white">
+          <div className="wh-container">
+            <h2 className="wh-sec-title barlow-condensed-semi">
               Nutritional Composition of Multivitamin Tablets
             </h2>
-            <p className="wh-sec-desc">
+            <p className="wh-sec-desc inter-regular">
               Our multivitamin tablets are formulated with a comprehensive blend
               of essential vitamins, minerals, amino acids, antioxidants, and
               herbal extracts to support overall health and wellness. The
@@ -690,8 +764,8 @@ const MultivitaminTablet = () => {
               initialRows={10}
             />
 
-            <h3 className="wh-sec-sub">Essential Vitamins</h3>
-            <p className="wh-body-text">
+            <h3 className="wh-sec-sub inter-500">Essential Vitamins</h3>
+            <p className="wh-body-text inter-regular">
               Our multivitamin tablets contain important vitamins that support
               daily nutritional needs and overall health.
             </p>
@@ -703,13 +777,13 @@ const MultivitaminTablet = () => {
               col2Label="Key Benefit"
               initialRows={10}
             />
-            <p className="wh-body-text">
+            <p className="wh-body-text inter-regular">
               These essential vitamins make our product suitable for brands
               looking for high-quality multivitamin supplement manufacturing.
             </p>
 
-            <h3 className="wh-sec-sub">Essential Minerals</h3>
-            <p className="wh-body-text">
+            <h3 className="wh-sec-sub inter-500">Essential Minerals</h3>
+            <p className="wh-body-text inter-regular">
               Minerals are equally important for maintaining metabolic balance,
               nerve function, and bone strength. Our formulations include
               carefully balanced mineral blends that complement the vitamin
@@ -723,13 +797,15 @@ const MultivitaminTablet = () => {
               col2Label="Health Benefit"
               initialRows={10}
             />
-            <p className="wh-body-text">
+            <p className="wh-body-text inter-regular">
               Balanced mineral composition ensures optimal nutrient absorption
               and nutritional effectiveness.
             </p>
 
-            <h3 className="wh-sec-sub">Amino Acids and Antioxidants</h3>
-            <p className="wh-body-text">
+            <h3 className="wh-sec-sub inter-500">
+              Amino Acids and Antioxidants
+            </h3>
+            <p className="wh-body-text inter-regular">
               To improve the nutritional value of our multivitamin supplements,
               the formulation also includes amino acids and antioxidants.
             </p>
@@ -741,7 +817,7 @@ const MultivitaminTablet = () => {
               col2Label="Benefit"
               initialRows={10}
             />
-            <p className="wh-body-text">
+            <p className="wh-body-text inter-regular">
               These ingredients enhance the effectiveness of the multivitamin
               formulation and support overall vitality.
             </p>
@@ -750,21 +826,23 @@ const MultivitaminTablet = () => {
 
         <div className="wh-section wh-section-white">
           <div className="wh-container">
-            <h2 className="wh-sec-title">Benefits of Multivitamin Tablets</h2>
-            <p className="wh-sec-desc">
+            <h2 className="wh-sec-title barlow-condensed-semi">
+              Benefits of Multivitamin Tablets
+            </h2>
+            <p className="wh-sec-desc int-regular">
               Our multivitamin tablets are designed to support daily nutritional
               needs and overall wellness.
             </p>
-            <h3 className="wh-sec-sub">Key Benefits</h3>
+            <h3 className="wh-sec-sub inter-500">Key Benefits</h3>
             <div className="wh-grid-3">
               {keyBenefits.map((benefit, idx) => (
-                <div key={idx} className="wh-grid-item">
-                  <span className="wh-grid-check">➤</span>
+                <div key={idx} className="wh-grid-item ">
+                  <span className="wh-grid-check ">➤</span>
                   {benefit}
                 </div>
               ))}
             </div>
-            <p className="wh-body-text point">
+            <p className="wh-body-text point int-regular">
               These benefits make our products ideal for brands looking for
               nutraceutical multivitamin supplement manufacturing.
             </p>
@@ -773,47 +851,110 @@ const MultivitaminTablet = () => {
 
         <div className="wh-section wh-section-alt">
           <div className="wh-container">
-            <h2 className="wh-sec-title">
+            <h2 className="wh-sec-title barlow-condensed-semi">HOW IT WORKS</h2>
+            <p className="wh-sec-desc mb-1 inter-regular">
+              <strong>From Brief to Brand.</strong>
+            </p>
+            <p className="wh-sec-desc inter-regular">
+              A clear 5-stage process with committed timelines. No ambiguity.
+            </p>
+
+            <div className="wh-steps-section bg-white">
+              <div className="wh-steps-container">
+                {[
+                  {
+                    id: "01",
+                    title: "Idea & Strategy",
+                    desc: "Product brief, target demographic, SKU selection, and competitive positioning.",
+                    days: "1–2 DAYS",
+                  },
+                  {
+                    id: "02",
+                    title: "Formulation",
+                    desc: "Sample production in our GMP facility. Flavour development and ingredient finalisation.",
+                    days: "5–7 DAYS",
+                  },
+                  {
+                    id: "03",
+                    title: "Manufacturing",
+                    desc: "Full batch with COA documentation. Blister packing or bottling based on your spec.",
+                    days: "7–10 DAYS",
+                  },
+                  {
+                    id: "04",
+                    title: "Packaging",
+                    desc: "3D label mockup, FSSAI-compliant design, digiprint / flexo print options. Your brand, our execution.",
+                    days: "3–4 DAYS",
+                  },
+                  {
+                    id: "05",
+                    title: "Store & Launch",
+                    desc: "D2C Shopify store, Meta Ads structure, product photography brief. Ready to sell.",
+                    days: "2–3 DAYS",
+                  },
+                ].map((step, index) => (
+                  <div key={index} className="wh-step-item">
+                    <div className="wh-step-circle">{step.id}</div>
+
+                    <h4 className="wh-step-title barlow-condensed-semi">
+                      {step.title}
+                    </h4>
+
+                    <p className="wh-step-desc inter-regular">{step.desc}</p>
+
+                    <span className="wh-step-days">{step.days}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="wh-section wh-section-white">
+          <div className="wh-container">
+            <h2 className="wh-sec-title barlow-condensed-semi">
               Multivitamin Third Party Manufacturing Services
             </h2>
-            <p className="wh-sec-desc">
+            <p className="wh-sec-desc int-regular">
               We provide complete multivitamin third party manufacturing
               services for nutraceutical brands, pharmaceutical companies, and
               healthcare startups.
             </p>
-            <p className="wh-body-text">
+            <p className="wh-body-text int-regular">
               Our company offers reliable contract manufacturing for
               multivitamin supplements, helping brands launch their own products
               in the market.
             </p>
-            <h3 className="wh-sec-sub">Our Services Include:</h3>
+            <h3 className="wh-sec-sub int-500">Our Services Include:</h3>
 
             <div className="section-indent">
               <ul className="mfg-timeline">
                 {manufacturingServices.map((item, idx) => (
-                  <li key={idx} className="mfg-timeline-item">
+                  <li key={idx} className="mfg-timeline-item int-regular">
                     <div className="mfg-timeline-number">{idx + 1}</div>
                     <div className="mfg-timeline-content">{item}</div>
                   </li>
                 ))}
               </ul>
             </div>
-            <p className="wh-body-text point ">
-              As an experienced multivitamin tablet manufacturer, we help
-              businesses develop high-quality dietary supplements under their
-              own brand name.
+            <p className="wh-body-text point int-regular">
+              As an experienced multivitamin tablet end-to-end brand launch
+              partner, we help businesses develop high-quality dietary
+              supplements under their own brand name.
             </p>
           </div>
         </div>
 
-        <div className="wh-section wh-section-white">
+        <div className="wh-section wh-section-alt">
           <div className="wh-container">
-            <h2 className="wh-sec-title">Packaging Options</h2>
-            <p className="wh-sec-desc">
+            <h2 className="wh-sec-title barlow-condensed-semi">
+              Packaging Options
+            </h2>
+            <p className="wh-sec-desc int-regular">
               We provide flexible packaging solutions for multivitamin tablets
               and nutraceutical supplements.
             </p>
-            <h3 className="wh-sec-sub">Available Packaging Options:</h3>
+            <h3 className="wh-sec-sub int-500">Available Packaging Options:</h3>
             <div className="wh-grid-3 point">
               {[
                 { text: "HDPE bottles", icon: "fa-bottle-water" },
@@ -831,16 +972,18 @@ const MultivitaminTablet = () => {
                 </div>
               ))}
             </div>
-            <p className="wh-body-text">
+            <p className="wh-body-text int-regular">
               Our packaging solutions support brands looking for private label
               multivitamin supplements.
             </p>
           </div>
         </div>
 
-        <div className="wh-section wh-section-alt">
+        <div className="wh-section wh-section-white">
           <div className="wh-container">
-            <h2 className="wh-sec-title">Product Specifications</h2>
+            <h2 className="wh-sec-title barlow-condensed-semi">
+              Product Specifications
+            </h2>
             <div className="wh-tbl-wrap">
               <table className="wh-spec-tbl">
                 <thead>
@@ -862,12 +1005,14 @@ const MultivitaminTablet = () => {
           </div>
         </div>
 
-        <div className="wh-section wh-section-white">
+        <div className="wh-section wh-section-alt">
           <div className="wh-container">
-            <h2 className="wh-sec-title">Quality Standards</h2>
-            <p className="wh-sec-desc">
+            <h2 className="wh-sec-title barlow-condensed-semi">
+              Quality Standards
+            </h2>
+            <p className="wh-sec-desc int-regular">
               As a reliable nutraceutical manufacturing company, we follow
-              strict quality control standards to ensure product safety and
+              strict Batch tracking standards to ensure product safety and
               effectiveness.
             </p>
             <div className="wh-grid-2">
@@ -891,23 +1036,23 @@ const MultivitaminTablet = () => {
                 </div>
               ))}
             </div>
-            <p className="wh-body-text">
-              These standards make us a trusted multivitamin tablet manufacturer
-              in India.
+            <p className="wh-body-text int-regular">
+              These standards make us a trusted multivitamin tablet End-to-end
+              brand launch partner in India.
             </p>
           </div>
         </div>
 
         <div className="wh-section wh-section-alt">
           <div className="wh-container">
-            <h2 className="wh-sec-title">
+            <h2 className="wh-sec-title barlow-condensed-semi">
               Applications of Multivitamin Tablets
             </h2>
-            <p className="wh-sec-desc">
+            <p className="wh-sec-desc int-regular">
               Multivitamin supplements are used across multiple health and
               wellness segments.
             </p>
-            <strong className="this-include ">
+            <strong className="this-include int-500">
               Common applications include:
             </strong>
             <div className="wh-grid-2">
@@ -942,14 +1087,14 @@ const MultivitaminTablet = () => {
 
         <div className="wh-section wh-section-white">
           <div className="wh-container">
-            <h2 className="wh-sec-title">
+            <h2 className="wh-sec-title barlow-condensed-semi">
               Who Can Launch Multivitamin Brands?
             </h2>
-            <p className="wh-sec-desc">
+            <p className="wh-sec-desc int-regular">
               Our manufacturing solutions are suitable for a wide range of
               businesses entering the dietary supplement market.
             </p>
-            <strong className="this-include ">These include:</strong>
+            <strong className="this-include int-500">These include:</strong>
             <div className="wh-who-grid">
               {[
                 "Nutraceutical startups",
@@ -967,39 +1112,128 @@ const MultivitaminTablet = () => {
           </div>
         </div>
 
-        <div className="wh-section wh-section-white">
-          <div className="wh-container">
-            <div className="whey-protein-div-main">
-              <div className="whey-protein-div-text-multivitamin">
-                <h2 className="wh-sec-title">
-                  Why Choose Us as Your Multivitamin Manufacturer?
-                </h2>
-                <div className="section-indent">
-                  <ul className="mfg-timeline">
-                    {whyChooseUs.map((item, idx) => (
-                      <li key={idx} className="mfg-timeline-item">
-                        <div className="mfg-timeline-number">{idx + 1}</div>
-                        <div className="mfg-timeline-content">{item}</div>
-                      </li>
-                    ))}
-                  </ul>
+        <div className="wh-section wh-section-alt">
+          <div className="container">
+            <h2 className="wh-sec-title barlow-condensed-semi text-center mb-5">
+              Why Choose Us as Your Multivitamin End-to-End Brand Launch
+              Partner?
+            </h2>
+
+            <div className="row why-card-wrapper justify-content-center">
+              {whyChooseUs.map((item, idx) => (
+                <div
+                  key={idx}
+                  className={`col-lg-5 col-md-6 col-12 mb-4 
+          ${idx === whyChooseUs.length - 1 ? "last-card-center" : ""}`}
+                >
+                  <div className="why-card">
+                    <div className="why-number">{idx + 1}</div>
+
+                    <p className="why-text">{item}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="blog-multivitamin p-0">
-                <img
-                  src="/assets/images/nutrition/white-labelling-vision-001.webp"
-                  alt="Gomzi Lifesciences"
-                  className="illustration-image illustration-image-why-choose-us  pb-5 pb-md-0"
-                />
-              </div>
+              ))}
             </div>
           </div>
         </div>
 
+        <section class="qua-wh-section bg-white" id="certification">
+          <p className="wh-sec-title barlow-condensed-semi text-center">
+            Quality Assurance
+          </p>
+
+          <h1 className="wh-sec-desc barlow-condensed-semi text-center">
+            Every Batch, Verified.
+          </h1>
+
+          <div className="gym-cert-grid">
+            {certificates.map((cert, index) => {
+              const filePath =
+                process.env.PUBLIC_URL +
+                `/assets/images/nutrition/${cert.file}`;
+
+              return (
+                <div className="gym-cert-card" key={index}>
+                  <div className="gym-cert-img-wrap">
+                    <img
+                      src={filePath}
+                      alt={`${cert.name} Certificate`}
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div className="gym-cert-label-wrap">
+                    <span className="gym-cert-label-name barlow-condensed-semi">
+                      {cert.name}
+                    </span>
+                    <span className="gym-cert-label-sub inter-regular">
+                      {cert.sub}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div class="qua-content">
+            <div class="qua-item">
+              <div class="check-box">
+                <svg class="check-icon" viewBox="0 0 14 14">
+                  <polyline points="2,7 5.5,10.5 12,3" />
+                </svg>
+              </div>
+              <div class="qua-item-text">
+                <h3>GMP-Certified Production</h3>
+                <p>
+                  Manufactured to international Good Manufacturing Practice
+                  standards.
+                </p>
+              </div>
+            </div>
+
+            <div class="qua-item">
+              <div class="check-box">
+                <svg class="check-icon" viewBox="0 0 14 14">
+                  <polyline points="2,7 5.5,10.5 12,3" />
+                </svg>
+              </div>
+              <div class="qua-item-text">
+                <h3>Batch COA on Every Order</h3>
+                <p>
+                  Certificate of Analysis shipped with every production run.
+                </p>
+              </div>
+            </div>
+
+            <div class="qua-item">
+              <div class="check-box">
+                <svg class="check-icon" viewBox="0 0 14 14">
+                  <polyline points="2,7 5.5,10.5 12,3" />
+                </svg>
+              </div>
+              <div class="qua-item-text">
+                <h3>Third-Party Lab Testing</h3>
+                <p>Independent verification of purity, potency, and safety.</p>
+              </div>
+            </div>
+          </div>
+          <div className="text-center">
+            <a
+              href={DownloadPdf || "#"}
+              download
+              className="download-btn barlow-condensed-semi"
+            >
+              <i class="fa-solid fa-download"></i> Download Our Brochure
+            </a>
+          </div>
+        </section>
+
         <div className="wh-section wh-section-white">
           <section className="testi-section">
             <div className="testimonial-div">
-              <h2 className="wh-sec-title-our-whey-protein">Testimonials</h2>
+              <h2 className="wh-sec-title-our-whey-protein barlow-condensed-semi">
+                Testimonials
+              </h2>
             </div>
 
             <div className="testi-carousel-wrap">
@@ -1028,15 +1262,15 @@ const MultivitaminTablet = () => {
                           {renderStars(item.rating)}
                         </div>
                       </div>
-                      <p className="testi-text">{item.text}</p>
+                      <p className="testi-text inter-regular">{item.text}</p>
                     </div>
                     <div className="testi-author">
                       <div className="testi-author-dot">
                         {item.name.charAt(0)}
                       </div>
                       <div>
-                        <p className="testi-name">{item.name}</p>
-                        <p className="testi-role">{item.role}</p>
+                        <p className="testi-name inter-500">{item.name}</p>
+                        <p className="testi-role inter-regular">{item.role}</p>
                       </div>
                     </div>
                   </div>

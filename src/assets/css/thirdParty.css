@@ -1,5 +1,5 @@
 .faq-section {
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 .faq-intro {
@@ -94,7 +94,6 @@
   display: inline-block;
   background: #86c33a;
   color: #fff;
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 0.5px;
@@ -129,7 +128,6 @@
   line-height: 1.8;
   color: #727272;
   margin-bottom: 16px;
-  font-family: "Roboto", sans-serif;
 }
 
 .third-party-manufacturing-card {
@@ -200,7 +198,6 @@
   line-height: 1.8;
   color: #727272;
   margin-bottom: 16px;
-  font-family: "Roboto", sans-serif;
   text-align: justify;
 }
 
@@ -240,7 +237,6 @@
   line-height: 1.8;
   color: #727272;
   margin-bottom: 16px;
-  font-family: "Roboto", sans-serif;
   text-align: justify;
 }
 
@@ -280,7 +276,6 @@
   line-height: 1.8;
   color: #727272;
   margin-bottom: 16px;
-  font-family: "Roboto", sans-serif;
   text-align: justify;
 }
 
@@ -323,23 +318,22 @@
   color: #fff !important;
   text-decoration: none !important;
   font-weight: 700;
-  font-size: 15px;
-  padding: 12px 30px;
+  font-size: 18px;
+  padding: 12px 24px;
   border-radius: 6px;
   box-shadow: 0 4px 18px rgba(134, 195, 58, 0.38);
   transition:
     transform 0.2s,
     box-shadow 0.2s;
-  font-family: "Roboto", sans-serif;
 }
 .wh-pg .download-brochure:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 26px rgba(134, 195, 58, 0.55);
   color: #fff !important;
+  background-color: #5fa320;
 }
 
 .wh-pg {
-  font-family: "Roboto", sans-serif;
   color: #333;
   background: #fff;
 }
@@ -396,10 +390,10 @@
 
 .wh-pg .wh-sec-title {
   font-size: clamp(22px, 2.3vw, 30px);
-  font-weight: 750;
   color: #111;
   margin: 0 0 10px;
   line-height: 1.25;
+  font-weight: 700;
 }
 .wh-pg .wh-sec-bar {
   width: 44px;
@@ -422,7 +416,6 @@
   margin: 0 0 10px;
   line-height: 1.25;
   text-align: center;
-  font-family: "roboto-bold", sans-serif;
 }
 
 .wh-sec-desc-whey-protein {
@@ -475,14 +468,10 @@
   justify-content: center;
 }
 .wh-pg .wh-cat-title {
-  font-size: 26px;
+  font-size: 29px;
   font-weight: 650;
   color: #111;
   line-height: 1.25;
-
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .wh-pg .wh-cat-desc {
   font-size: 18px;
@@ -490,6 +479,7 @@
   line-height: 1.72;
   margin-bottom: 8px;
 }
+
 .wh-pg .wh-kf-label {
   font-size: 18px;
   font-weight: 750;
@@ -518,17 +508,36 @@
   border-radius: 7px;
   padding: 8px 10px;
 }
+
+.center-fix {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.center-fix .wh-feat-item {
+  width: calc(50% - 4px);
+}
+
+@media (max-width: 480px) {
+  .center-fix .wh-feat-item {
+    width: 100%;
+  }
+}
 .wh-feat-icon {
   color: #86c33a;
   font-size: 19px;
   flex-shrink: 0;
 }
+
 .wh-feat-text {
   font-size: 17px;
   color: #333;
-  font-weight: 600;
   line-height: 1.35;
   text-transform: capitalize;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 500;
 }
 
 .wh-pg .wh-who-grid {
@@ -557,7 +566,6 @@
   border-radius: 9px;
   padding: 13px 15px;
   font-size: 18px;
-  font-weight: 700;
   color: #333;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
@@ -585,10 +593,11 @@
 .wh-pg .wh-spec-tbl thead th {
   padding: 13px 20px;
   color: #fff;
-  font-weight: 700;
   text-align: left;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 0.3px;
+  font-family: "Barlow Condensed", Arial, sans-serif;
+  font-weight: 600;
 }
 .wh-pg .wh-spec-tbl tbody tr {
   border-bottom: 1px solid #e8f5e1;
@@ -608,6 +617,7 @@
   padding: 12px 20px;
   color: #333;
   vertical-align: top;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 .wh-pg .wh-spec-tbl tbody td:first-child {
@@ -639,7 +649,9 @@
   color: #fff;
   font-weight: 700;
   text-align: left;
-  font-size: 16px;
+  font-size: 20px;
+  font-family: "Barlow Condensed", Arial, sans-serif;
+  font-weight: 600;
   white-space: nowrap;
 }
 .wh-pg .wh-cmp-tbl thead th:first-child {
@@ -663,6 +675,7 @@
   padding: 10px 14px;
   color: #333;
   vertical-align: top;
+  font-family: "Inter", Arial, sans-serif;
 }
 .wh-pg .wh-cmp-tbl tbody td:first-child {
   font-weight: 700;
@@ -725,7 +738,7 @@
 
 .wh-pg .wh-mfg-left-title {
   font-size: 21px;
-  font-weight: 800;
+  font-weight: 700;
   color: #111;
   margin: 0 0 18px;
 }
@@ -761,7 +774,7 @@
 }
 .wh-pg .wh-cert-panel-title {
   font-size: 21px;
-  font-weight: 900;
+  font-weight: 700;
   margin: 0 0 10px;
 }
 .wh-pg .wh-cert-panel-sub {
@@ -858,13 +871,194 @@
   color: #fff !important;
   text-decoration: none;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   padding: 10px 18px;
   border-radius: 6px;
   transition: background 0.18s;
 }
 .wh-pg .wh-prod-btn:hover {
   background: #5fa320;
+}
+
+.wh-cat-target {
+  margin-top: 7px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #000;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.wh-steps-section {
+  background: #f8fdf2;
+  padding: 13px 20px;
+}
+
+.wh-steps-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+  margin-top: 40px;
+}
+
+.wh-steps-container::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #e5f3d6;
+}
+
+.wh-step-item {
+  flex: 1;
+  position: relative;
+}
+
+.wh-step-circle {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #86c33a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #86c33a;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  background: #fff;
+}
+.qua-wh-section {
+  padding: 75px 80px;
+  background: #f8fdf2;
+}
+
+.wh-works-section {
+  padding: 75px 80px;
+}
+
+.wh-step-title {
+  font-size: 23px;
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: 600;
+}
+
+.wh-step-desc {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.wh-step-days {
+  display: inline-block;
+  margin-top: 12px;
+  color: #86c33a;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.wh-steps-bottom {
+  margin-top: 50px;
+  background: #fff;
+  border: 1px solid #e5f3d6;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(134, 195, 58, 0.08);
+}
+
+.wh-total-label {
+  font-size: 11px;
+  color: #777;
+  letter-spacing: 1px;
+}
+
+.wh-total h3 {
+  color: #86c33a;
+  margin-top: 5px;
+  font-size: 26px;
+}
+
+.wh-flow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wh-flow span {
+  font-size: 12px;
+  color: #777;
+}
+
+.wh-flow h4 {
+  color: #86c33a;
+  margin: 0;
+  font-size: 27px;
+}
+
+.arrow {
+  font-size: 20px;
+  color: #86c33a;
+}
+
+.wh-step-item:hover .wh-step-circle {
+  background: #86c33a;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.wh-step-item:hover .wh-step-title {
+  color: #86c33a;
+}
+
+@media (max-width: 992px) {
+  .wh-steps-container {
+    flex-direction: column;
+  }
+
+  .wh-steps-container::before {
+    display: none;
+  }
+
+  .wh-step-item {
+    padding-left: 25px;
+    border-left: 2px solid #e5f3d6;
+  }
+
+  .wh-step-circle {
+    position: absolute;
+    left: -22px;
+    top: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .wh-step-title {
+    font-size: 16px;
+  }
+
+  .wh-step-desc {
+    font-size: 13px;
+  }
+
+  .wh-steps-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .wh-total h3 {
+    font-size: 22px;
+  }
 }
 
 .wh-pg .wh-faq-section {
@@ -896,7 +1090,7 @@
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
 }
 .wh-pg .wh-faq-section .accordion-button {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Inter", Arial, sans-serif !important;
   font-size: 17px !important;
   font-weight: 700 !important;
   color: #111 !important;
@@ -916,6 +1110,102 @@
   background: #f8fdf2;
   padding: 14px 20px !important;
   border-top: 1px solid #e2efcf;
+}
+
+.market-cards-section {
+  background: #f8fdf2;
+  padding: 0px 0px;
+}
+
+.market-cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.market-card {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #e5f3d6;
+  border-radius: 12px;
+  padding: 30px;
+  transition: 0.3s ease;
+}
+
+.market-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(134, 195, 58, 0.15);
+}
+
+.market-card h3 {
+  font-size: 48px;
+  color: #86c33a;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.market-card p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.market-card strong {
+  color: #000;
+}
+
+.market-bottom-text {
+  margin-top: 40px;
+  background: #86c33a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.market-bottom-text p {
+  margin: 0;
+  font-size: 15px;
+  text-align: center;
+}
+
+.market-bottom-text strong {
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .market-cards-container {
+    flex-direction: column;
+  }
+
+  .market-card {
+    text-align: center;
+  }
+
+  .market-card h3 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .market-card {
+    padding: 20px;
+  }
+
+  .market-card h3 {
+    font-size: 32px;
+  }
+
+  .market-card p {
+    font-size: 15px;
+  }
+  .market-cards-section {
+    padding: 20px 0px;
+  }
 }
 
 .whey-protein-div-main {
@@ -1060,14 +1350,12 @@
   color: #fff;
   font-size: 17px;
   font-weight: 700;
-  font-family: "Roboto", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .mfg-timeline-content {
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
   color: #000;
   font-weight: 600;
   line-height: 1.5;
@@ -1121,7 +1409,7 @@
 }
 
 .this-include {
-  font-size: 16px;
+  font-size: 21px;
   color: #111;
   display: block;
   margin-bottom: 12px;
@@ -1144,7 +1432,6 @@
   padding: 4px 14px;
   font-size: 14px;
   color: #444;
-  font-family: "Roboto", sans-serif;
 }
 
 .wh-pg .wh-sec-title-multi {
@@ -1198,6 +1485,8 @@
   font-size: 16px;
   color: #333;
   line-height: 1.4;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 500;
 }
 .wh-pg .wh-grid-check {
   color: #86c33a;
@@ -1238,6 +1527,12 @@
     display: block;
   }
 
+  @media (max-width: 640px) {
+    .qua-wh-section {
+      padding: 36px 20px;
+    }
+  }
+
   .whey-protein-div-main {
     flex-direction: column;
     align-items: flex-start;
@@ -1258,9 +1553,9 @@
 
 .wh-sec-sub {
   font-size: clamp(18px, 1.8vw, 22px);
-  font-weight: 700;
   color: #111;
   margin: 28px 0 8px;
+  font-weight: 600;
 }
 .illustration-image-why-choose-us {
   padding-top: 40px;
@@ -1271,16 +1566,164 @@
   margin-top: 14;
 }
 
+.bg-white {
+  background-color: #fff;
+}
+
+.wh-flavour-section {
+  padding: 0px 0px;
+}
+
+.wh-flavour-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.wh-flavour-left {
+  flex: 1;
+}
+
+.wh-flavour-highlight {
+  background: #ffffff;
+  border: 1px solid #e5f3d6;
+  padding: 36px 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.wh-flavour-highlight h3 {
+  color: #86c33a;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.wh-flavour-highlight p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.wh-trending-label {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #86c33a;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.wh-flavour-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  gap: 10px;
+}
+
+.wh-flavour-tag {
+  border: 1px solid #e5f3d6;
+  background: #fff;
+  padding: 13px 15px;
+  border-radius: 8px;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.wh-flavour-tag:hover {
+  background: #86c33a;
+  color: #fff;
+}
+
+.wh-flavour-right {
+  flex: 1;
+}
+
+@media (max-width: 576px) {
+  .wh-flavour-tags {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .wh-flavour-tag {
+    width: calc(50% - 5px);
+    text-align: center;
+  }
+
+  .wh-flavour-highlight h3 {
+    font-size: 18px;
+  }
+}
+
+.wh-flavour-desc {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 13px;
+  line-height: 1.6;
+}
+
+.wh-flavour-list {
+  padding-left: 18px;
+  margin-bottom: 20px;
+}
+
+.wh-flavour-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.wh-flavour-btn {
+  background: #86c33a;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.wh-flavour-btn:hover {
+  background: #6da82f;
+}
+
+@media (max-width: 992px) {
+  .wh-flavour-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .wh-flavour-tags {
+    grid-template-columns: 1fr;
+  }
+
+  .wh-flavour-highlight h3 {
+    font-size: 18px;
+  }
+}
+
 .read-more-less-btn {
   background: #86c33a;
   color: #fff;
   border: none;
+
   padding: 10px 28px;
   border-radius: 6px;
   font-weight: 700;
   font-size: 14px;
   cursor: pointer;
   transition: background 0.18s;
+}
+
+.img-style {
+  padding: 60px !important;
+  border: 1px solid #86c33a;
+  border-radius: 12px;
 }
 
 .product-range-section-span-title {
@@ -1308,10 +1751,14 @@
   background-color: #86c33a;
   color: #fff;
   border-radius: 50px;
-  font-size: 17px;
+  font-size: 19px;
   letter-spacing: 1px;
   transition: transform 0.2s ease;
   font-weight: 600;
+}
+
+.request-toggle:hover {
+  background-color: #5fa320;
 }
 
 .gap-3 {

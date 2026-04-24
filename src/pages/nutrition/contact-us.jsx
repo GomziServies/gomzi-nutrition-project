@@ -105,7 +105,7 @@ function ContactUs() {
         <div className="container-fluid w-80">
           <div className="row py-4">
             <div className="col-12 pt-4 text-left">
-              <h1 className="f-rob-bol f-30 mb-2 text-black text-uppercase">
+              <h1 className=" f-30 mb-2 text-black text-uppercase barlow-condensed-extra">
                 <b>Contact us</b>
               </h1>
             </div>
@@ -116,13 +116,16 @@ function ContactUs() {
                     <div className="blog-product-card bg-white text-center py-5  br-15">
                       <div className="col-12 d-flex align-items-center justify-content-between">
                         <div className="col">
-                          <h2 className="f-rob-bol f-24 text-black text-uppercase">
+                          <h2 className=" f-24 text-black text-uppercase barlow-condensed-semi">
                             Email
                           </h2>
                         </div>
                       </div>
                       <div class="col-12 p-0">
-                        <Link to="tel:+918320077993" className="text-secondary">
+                        <Link
+                          to="tel:+918320077993"
+                          className="text-secondary inter-500"
+                        >
                           {" "}
                           <b>info@gomzilifesciences.in</b>
                         </Link>
@@ -135,21 +138,19 @@ function ContactUs() {
                     <div className="blog-product-card bg-white text-center py-5  br-15">
                       <div className="col-12 d-flex align-items-center justify-content-between">
                         <div className="col">
-                          <h2 className="f-rob-bol f-24 text-black text-uppercase">
+                          <h2 className=" f-24 text-black text-uppercase barlow-condensed-semi">
                             Contact No.
                           </h2>
                         </div>
                       </div>
                       <div class="col-12 p-0">
-                        <p class="text-ellipse-custom text-secondary mb-0 mt-1 f-rob-med f-20">
-                          <Link
-                            to="tel:+918320077993"
-                            className="text-secondary"
-                          >
-                            {" "}
-                            <b>+91 8320077993</b>
-                          </Link>
-                        </p>
+                        <Link
+                          to="tel:+918320077993"
+                          className="text-secondary inter-500"
+                        >
+                          {" "}
+                          <b>+91 8320077993</b>
+                        </Link>
                       </div>
                     </div>
                   </div>

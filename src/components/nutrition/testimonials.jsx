@@ -6,7 +6,7 @@ import "../../assets/css/nutrition.css";
 
 const testimonials = [
   {
-    text: "Gomzi Life Science is a very good work, I have also made this product and they provide very good quality, they do not compromise on quality, moreover they provide timely delivery, if you want to join them then you can join, I have a positive review, thank you gomzi life science and especially Gautam sir is very good, thank you Gautam sir",
+    text: "Gomzi Life Sciences is a very good work, I have also made this product and they provide very good quality, they do not compromise on quality, moreover they provide timely delivery, if you want to join them then you can join, I have a positive review, thank you gomzi life science and especially Gautam sir is very good, thank you Gautam sir",
     name: "Sarvottam Prasad",
     role: "Founder of Five Fitness",
     rating: 5,
@@ -43,13 +43,13 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: "We at Pro Wolf Nutrition are truly impressed with Gomzi Life Science for their exceptional supplement manufacturing services. They played a key role in bringing our premium Intence Pre Workout to life — available in our signature Tangy Orange and Green Apple flavors.",
+    text: "We at Pro Wolf Nutrition are truly impressed with Gomzi Life Sciences for their exceptional supplement manufacturing services. They played a key role in bringing our premium Intence Pre Workout to life — available in our signature Tangy Orange and Green Apple flavors.",
     name: "Rathod Kishan",
     role: "Founder of Prowolf",
     rating: 5,
   },
   {
-    text: "I got my brand ready with Gomzi Supplement Manufacturing, and they were incredibly helpful in getting my brand ready and gave me excellent suggestions. This helped me build my brand effectively. They were incredibly helpful and their team is incredibly good, and I look forward to working with them again. Thank you so much!",
+    text: "I got my brand ready with Gomzi Lifesciences Supplement Manufacturing, and they were incredibly helpful in getting my brand ready and gave me excellent suggestions. This helped me build my brand effectively. They were incredibly helpful and their team is incredibly good, and I look forward to working with them again. Thank you so much!",
     name: "Samirbhai",
     role: "Founder of Bio Kinetic",
     rating: 5,
@@ -123,13 +123,13 @@ const TestimonialSection = () => {
                       {renderStars(item.rating)}
                     </div>
                   </div>
-                  <p className="testi-text">{item.text}</p>
+                  <p className="testi-text inter-regular">{item.text}</p>
                 </div>
                 <div className="testi-author">
                   <div className="testi-author-dot">{item.name.charAt(0)}</div>
                   <div>
-                    <p className="testi-name">{item.name}</p>
-                    <p className="testi-role">{item.role}</p>
+                    <p className="testi-name inter-500">{item.name}</p>
+                    <p className="testi-role inter-regular">{item.role}</p>
                   </div>
                 </div>
               </div>

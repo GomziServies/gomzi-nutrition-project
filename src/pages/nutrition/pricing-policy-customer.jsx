@@ -44,11 +44,12 @@ function PricingPolicyCustomer() {
     <>
       <Helmet>
         <title>
-          Pricing Policy | Gomzi Lifescience Family - Transparent & Fair Pricing
+          Pricing Policy | Gomzi Lifesciences Family - Transparent & Fair
+          Pricing
         </title>
         <meta
           name="description"
-          content="Explore Gomzi Lifescience Family's Pricing Policy. Learn how we ensure fair, competitive, and transparent pricing on all our nutraceutical products."
+          content="Explore Gomzi Lifesciences Family's Pricing Policy. Learn how we ensure fair, competitive, and transparent pricing on all our nutraceutical products."
         />
         <meta
           name="keyword"
@@ -79,11 +80,11 @@ function PricingPolicyCustomer() {
         />
         <meta
           property="og:title"
-          content="Pricing Policy | Gomzi Lifescience Family - Transparent & Fair Pricing"
+          content="Pricing Policy | Gomzi Lifesciences Family - Transparent & Fair Pricing"
         />
         <meta
           property="og:description"
-          content="Explore Gomzi Lifescience Family's Pricing Policy. Learn how we ensure fair, competitive, and transparent pricing on all our nutraceutical products."
+          content="Explore Gomzi Lifesciences Family's Pricing Policy. Learn how we ensure fair, competitive, and transparent pricing on all our nutraceutical products."
         />
         <meta
           property="og:image"
@@ -118,7 +119,7 @@ function PricingPolicyCustomer() {
           gtag('js', new Date());
           gtag('config', 'G-J50WNKGW38');`}</noscript>
         <script>
-          { `
+          {`
           (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -130,7 +131,7 @@ function PricingPolicyCustomer() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifescience Details. "
+          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifesciences Details. "
         }
         options={{ pageRef: true }}
       />
@@ -313,98 +314,102 @@ function PricingPolicyCustomer() {
             <div className="container-fluid w-80">
               <div className="row">
                 <div className="col-12 pt-4 text-left">
-                  <h1 className="f-rob-bol f-30 mb-2 text-black text-uppercase">
-                    <b>Pricing Policy for Gomzi Lifescience</b>
+                  <h1 className="f-30 mb-2 text-black text-uppercase barlow-condensed-extra font-weight-normal">
+                    <b>Pricing Policy for Gomzi Lifesciences LLP</b>
                   </h1>
                 </div>
                 <div className="col-12 text-center mb-4 px-4">
                   <div className="ql-editor text-left mt-3">
-                    <p className="mb-2">
-                      At Gomzi Lifescience, we strive to provide our customers
-                      with transparent and fair pricing for our high-quality
-                      nutraceutical products. This Pricing Policy outlines how
-                      we determine and display prices on our website, including
-                      the inclusion of Goods and Services Tax (GST).
+                    <p className="mb-2 int-regular">
+                      At Gomzi Lifesciences LLP, we strive to provide our
+                      customers with transparent and fair pricing for our
+                      high-quality nutraceutical products. This Pricing Policy
+                      outlines how we determine and display prices on our
+                      e-commerce site, including the inclusion of Goods and
+                      Services Tax (GST).
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>1. Price Display:</b>
                     </p>
-                    <p className="mb-2">
-                      Inclusive Pricing: All prices listed on our website are
-                      inclusive of 18% Goods and Services Tax (GST). This means
-                      that the price you see is the total amount you will pay at
-                      checkout, with no additional taxes added at that time.
+                    <p className="mb-2 int-regular">
+                      <strong>Inclusive Pricing:</strong> All prices listed on
+                      our e-commerce site are inclusive of 18% Goods and
+                      Services Tax (GST). This means that the price you see is
+                      the total amount you will pay at checkout, with no
+                      additional taxes added at that time.
                     </p>
-                    <p className="mb-2">
-                      Currency: All prices are displayed in [insert currency,
-                      e.g., USD, INR] and are subject to change without prior
-                      notice. The currency will be clearly indicated on the
-                      website for your convenience.
+                    <p className="mb-3 int-regular">
+                      <strong>Currency:</strong> All prices are displayed in
+                      [insert currency, e.g., USD, INR] and are subject to
+                      change without prior notice. The currency will be clearly
+                      indicated on the e-commerce site for your convenience.
                     </p>
-                    <p className="mb-2">
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>2. Price Changes:</b>
                     </p>
-                    <p className="mb-2">
-                      Adjustments: While we aim to maintain consistent pricing,
-                      we reserve the right to change our prices at any time due
-                      to factors such as supplier costs, demand, or market
-                      conditions. Any changes will be reflected on our website.
+                    <p className="mb-2 int-regular">
+                      <strong>Adjustments:</strong> While we aim to maintain
+                      consistent pricing, we reserve the right to change our
+                      prices at any time due to factors such as supplier costs,
+                      demand, or market conditions. Any changes will be
+                      reflected on our e-commerce site.
                     </p>
-                    <p className="mb-2">
-                      Current Prices: The price applicable to your order will be
-                      the price displayed at the time of purchase. If there is a
-                      discrepancy between the displayed price and the price you
-                      are charged, please contact our customer service team for
-                      clarification.
+                    <p className="mb-3 int-regular">
+                      <strong>Current Prices:</strong> The price applicable to
+                      your order will be the price displayed at the time of
+                      purchase. If there is a discrepancy between the displayed
+                      price and the price you are charged, please contact our
+                      customer service team for clarification.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>3. Discounts and Promotions:</b>
                     </p>
-                    <p className="mb-2">
-                      Promotional Pricing: From time to time, we may offer
-                      discounts, special promotions, or bundle deals. These
-                      promotions will be clearly indicated on our website,
-                      including the duration and terms of the offer.
+                    <p className="mb-2 int-regular">
+                      <strong>Promotional Pricing:</strong> From time to time,
+                      we may offer discounts, special promotions, or bundle
+                      deals. These promotions will be clearly indicated on our
+                      e-commerce site, including the duration and terms of the
+                      offer.
                     </p>
-                    <p className="mb-2">
-                      Applicability: Discounts are applied at checkout and will
-                      be clearly shown in your order summary. Please note that
-                      promotions may be subject to specific terms and
-                      conditions.
+                    <p className="mb-3 int-regular">
+                      <strong>Applicability:</strong> Discounts are applied at
+                      checkout and will be clearly shown in your order summary.
+                      Please note that promotions may be subject to specific
+                      terms and conditions.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>4. Payment Methods:</b>
                     </p>
-                    <p className="mb-2">
-                      Accepted Payment Methods: We accept various payment
-                      methods for your convenience, including credit/debit
-                      cards, digital wallets, and bank transfers. All payment
-                      options will be listed at checkout.
+                    <p className="mb-2 int-regular">
+                      <strong>Accepted Payment Methods:</strong> We accept
+                      various payment methods for your convenience, including
+                      credit/debit cards, digital wallets, and bank transfers.
+                      All payment options will be listed at checkout.
                     </p>
-                    <p className="mb-2">
-                      Security: We utilize secure payment gateways to ensure
-                      that your payment information is processed safely and
-                      confidentially.
+                    <p className="mb-3 int-regular">
+                      <strong>Security:</strong> We utilize secure payment
+                      gateways to ensure that your payment information is
+                      processed safely and confidentially.
                     </p>
-                    <p className="mb-2">
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>5. Customer Support:</b>
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-2 int-regular">
                       If you have any questions or concerns regarding pricing,
                       please do not hesitate to reach out to our customer
                       service team:
                       <br />
-                      Email: gomzinutrition@gmail.com
+                      <strong>Email:</strong> info@gomzilifesciences.in
                       <br />
-                      Phone: +91 88668 42520
+                      <strong>Phone:</strong> +91 8320077993
                       <br />
                     </p>
-                    <p className="mb-2">
-                      Thank you for choosing Gomzi Lifescience! We are dedicated
-                      to providing you with the best products and services to
-                      support your health and wellness journey. We appreciate
-                      your understanding of our pricing policy and look forward
-                      to serving you.
+                    <p className="mb-2 int-regular">
+                      Thank you for choosing Gomzi Lifesciences LLP. We are
+                      dedicated to providing you with the best products and
+                      services to support your health and wellness journey. We
+                      appreciate your understanding of our pricing policy and
+                      look forward to serving you.
                     </p>
                   </div>
                 </div>

@@ -43,7 +43,7 @@ function PrivacyPolicyCustomer() {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy | Gomzi Lifescience Family</title>
+        <title>Privacy Policy | Gomzi Lifesciences Family</title>
         <meta
           name="description"
           content="Discover how Gomzi Lifescience Family protects your privacy. Read our Privacy Policy to understand data collection, security measures, and your rights as a customer."
@@ -116,7 +116,7 @@ function PrivacyPolicyCustomer() {
           gtag('js', new Date());
           gtag('config', 'G-J50WNKGW38');`}</noscript>
         <script>
-          { `
+          {`
           (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -128,7 +128,7 @@ function PrivacyPolicyCustomer() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifescience Details. "
+          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifesciences Details. "
         }
         options={{ pageRef: true }}
       />
@@ -311,87 +311,92 @@ function PrivacyPolicyCustomer() {
             <div className="container-fluid w-80">
               <div className="row">
                 <div className="col-12 pt-4 text-left">
-                  <h1 className="f-rob-bol f-30 mb-2 text-black text-uppercase">
-                    <b>Privacy Policy for Gomzi Lifescience</b>
+                  <h1 className=" f-30 mb-2 text-black text-capitalize barlow-condensed-extra font-weight-normal">
+                    <b>Privacy Policy for Gomzi Lifesciences LLP</b>
                   </h1>
                 </div>
                 <div className="col-12 text-center mb-4 px-4">
                   <div className="ql-editor text-left mt-3">
-                    <p className="mb-2">
-                      At Gomzi Lifescience, we value your privacy and are
+                    <p className="mb-2 int-regular">
+                      At Gomzi Lifesciences LLP, we value your privacy and are
                       committed to protecting your personal information. This
                       Privacy Policy outlines how we collect, use, and safeguard
-                      your information when you interact with our website and
-                      services. By using our site, you consent to the practices
-                      described in this policy.
+                      your information when you interact with our e-commerce
+                      site and services. By using our site, you consent to the
+                      practices described in this policy.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>1. Information We Collect:</b>
                     </p>
-                    <p className="mb-2">
-                      Personal Information: This includes any information that
-                      can identify you, such as your name, email address, phone
-                      number, shipping address, and payment information. We
-                      collect this information when you create an account, place
-                      an order, or subscribe to our newsletters.
+                    <p className="mb-2 int-regular">
+                      <strong>Personal Information:</strong> This includes any
+                      information that can identify you, such as your name,
+                      email address, phone number, shipping address, and payment
+                      information. We collect this information when you create
+                      an account, place an order, or subscribe to our
+                      newsletters.
                     </p>
-                    <p className="mb-2">
-                      Non-Personal Information: We may also collect non-personal
-                      information that cannot be used to identify you. This
-                      includes data about your device, browsing behavior, and
-                      usage patterns, which we collect through cookies and other
-                      tracking technologies.
+                    <p className="mb-3 int-regular">
+                      <strong>Non-Personal Information:</strong> We may also
+                      collect non-personal information that cannot be used to
+                      identify you. This includes data about your device,
+                      browsing behavior, and usage patterns, which we collect
+                      through cookies and other tracking technologies.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>2. How We Use Your Information:</b>
                     </p>
-                    <p className="mb-2">
-                      Order Processing: To process your orders, manage payments,
-                      and deliver products to you.
+                    <p className="mb-2 int-regular">
+                      <strong>Order Processing:</strong> To process your orders,
+                      manage payments, and deliver products to you.
                     </p>
-                    <p className="mb-2">
-                      Customer Support: To respond to your inquiries, provide
-                      customer service, and assist you with your account.
+                    <p className="mb-2 int-regular">
+                      <strong>Customer Support:</strong> To respond to your
+                      inquiries, provide customer service, and assist you with
+                      your account.
                     </p>
-                    <p className="mb-2">
-                      Marketing Communications: To send you promotional
-                      materials, newsletters, and special offers, unless you
-                      have opted out of receiving such communications.
+                    <p className="mb-2 int-regular">
+                      <strong>Marketing Communications:</strong> To send you
+                      promotional materials, newsletters, and special offers,
+                      unless you have opted out of receiving such
+                      communications.
                     </p>
-                    <p className="mb-2">
-                      Website Improvement: To analyze usage patterns, enhance
-                      our website, and develop new products and services.
+                    <p className="mb-2 int-regular">
+                      <strong>e-commerce site Improvement:</strong> To analyze
+                      usage patterns, enhance our e-commerce site, and develop
+                      new products and services.
                     </p>
-                    <p className="mb-2">
-                      Compliance: To comply with legal obligations, resolve
-                      disputes, and enforce our terms and conditions.
+                    <p className="mb-3 int-regular">
+                      <strong>Compliance: </strong>To comply with legal
+                      obligations, resolve disputes, and enforce our terms and
+                      conditions.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>3. Information Sharing and Disclosure:</b>
                     </p>
-                    <p className="mb-2">
-                      Service Providers: We may engage third-party companies and
-                      individuals to perform services on our behalf, such as
-                      payment processing, shipping, and marketing. These third
-                      parties have access to your personal information only to
-                      perform these tasks on our behalf and are obligated to
-                      protect it.
+                    <p className="mb-2 int-regular">
+                      <strong>Service Providers:</strong> We may engage
+                      third-party companies and individuals to perform services
+                      on our behalf, such as payment processing, shipping, and
+                      marketing. These third parties have access to your
+                      personal information only to perform these tasks on our
+                      behalf and are obligated to protect it.
                     </p>
-                    <p className="mb-2">
-                      Legal Compliance: We may disclose your information if
-                      required to do so by law or in response to valid requests
-                      by public authorities.
+                    <p className="mb-2 int-regular">
+                      <strong>Legal Compliance:</strong> We may disclose your
+                      information if required to do so by law or in response to
+                      valid requests by public authorities.
                     </p>
-                    <p className="mb-2">
-                      Business Transfers: In the event of a merger, acquisition,
-                      or sale of all or a portion of our assets, your personal
-                      information may be transferred as part of that business
-                      transaction.
+                    <p className="mb-3 int-regular">
+                      <strong>Business Transfers:</strong> In the event of a
+                      merger, acquisition, or sale of all or a portion of our
+                      assets, your personal information may be transferred as
+                      part of that business transaction.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>4. Data Security:</b>
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-3 int-regular">
                       We implement reasonable security measures to protect your
                       personal information from unauthorized access, disclosure,
                       alteration, and destruction. However, no method of
@@ -399,59 +404,60 @@ function PrivacyPolicyCustomer() {
                       100% secure. While we strive to protect your personal
                       information, we cannot guarantee its absolute security.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>5. Your Rights:</b>
                     </p>
-                    <p className="mb-2">
-                      Access: You may request access to the personal information
-                      we hold about you.
+                    <p className="mb-2 int-regular">
+                      <strong>Access:</strong> You may request access to the
+                      personal information we hold about you.
                     </p>
-                    <p className="mb-2">
-                      Correction: You may request corrections to any inaccurate
-                      or incomplete information.
+                    <p className="mb-2 int-regular">
+                      <strong>Correction:</strong> You may request corrections
+                      to any inaccurate or incomplete information.
                     </p>
-                    <p className="mb-2">
-                      Deletion: You may request the deletion of your personal
-                      information, subject to our legal obligations to retain
-                      certain information.
+                    <p className="mb-2 int-regular">
+                      <strong>Deletion:</strong> You may request the deletion of
+                      your personal information, subject to our legal
+                      obligations to retain certain information.
                     </p>
-                    <p className="mb-2">
-                      Opt-Out: You may opt out of receiving promotional
-                      communications from us at any time by following the
-                      unsubscribe instructions in the emails or contacting us
-                      directly.
+                    <p className="mb-3 int-regular">
+                      <strong>Opt-Out:</strong> You may opt out of receiving
+                      promotional communications from us at any time by
+                      following the unsubscribe instructions in the emails or
+                      contacting us directly.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>6. Cookies and Tracking Technologies:</b>
                     </p>
-                    <p className="mb-2">
-                      Our website uses cookies and similar tracking technologies
-                      to enhance your experience. Cookies are small data files
-                      stored on your device that help us recognize you and track
-                      your preferences. You can manage your cookie preferences
-                      through your browser settings. However, disabling cookies
-                      may affect your ability to use certain features of our
-                      website.
+                    <p className="mb-3 int-regular">
+                      Our e-commerce site uses cookies and similar tracking
+                      technologies to enhance your experience. Cookies are small
+                      data files stored on your device that help us recognize
+                      you and track your preferences. You can manage your cookie
+                      preferences through your browser settings. However,
+                      disabling cookies may affect your ability to use certain
+                      features of our e-commerce site.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>7. Third-Party Links:</b>
                     </p>
-                    <p className="mb-2">
-                      Our website may contain links to third-party websites. We
-                      are not responsible for the privacy practices or content
-                      of these websites. We encourage you to review the privacy
-                      policies of any third-party sites you visit.
+                    <p className="mb-2 int-regular">
+                      Our e-commerce site may contain links to third-party
+                      e-commerce site. We are not responsible for the privacy
+                      practices or content of these e-commerce site. We
+                      encourage you to review the privacy policies of any
+                      third-party sites you visit.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>8. Changes to This Privacy Policy:</b>
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-2 int-regular">
                       We may update this Privacy Policy from time to time to
                       reflect changes in our practices or applicable laws. We
                       will notify you of any significant changes by posting the
-                      new policy on our website with a revised effective date.
-                      We encourage you to review this policy periodically for
-                      any updates.
+                      new policy on our e-commerce site with a revised effective
+                      date. We encourage you to review this policy periodically
+                      for any updates.
                     </p>
                   </div>
                 </div>
@@ -460,7 +466,7 @@ function PrivacyPolicyCustomer() {
           </div>
         </section>
       </div>
-      <p className="d-none">
+      <p className="d-none int-regular">
         whey protein and, peanut butter peanut butter, peanut butters, why
         protein, protein in powder, whey product, wayne protein, whey protein
         protein, whey protein whey, whey in protein, whey whey protein, protein

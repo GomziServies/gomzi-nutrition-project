@@ -27,24 +27,32 @@ const CertifiedProduct = () => {
           </div>
 
           <div className="gym-cert-grid">
-            {certificates.map((cert, index) => (
-              <div className="gym-cert-card" key={index}>
-                <div className="gym-cert-img-wrap">
-                  <img
-                    src={
-                      process.env.PUBLIC_URL +
-                      `/assets/images/nutrition/${cert.file}`
-                    }
-                    alt={`${cert.name} Certificate`}
-                    loading="lazy"
-                  />
+            {certificates.map((cert, index) => {
+              const filePath =
+                process.env.PUBLIC_URL +
+                `/assets/images/nutrition/${cert.file}`;
+
+              return (
+                <div className="gym-cert-card" key={index}>
+                  <div className="gym-cert-img-wrap">
+                    <img
+                      src={filePath}
+                      alt={`${cert.name} Certificate`}
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div className="gym-cert-label-wrap">
+                    <span className="gym-cert-label-name barlow-condensed-semi">
+                      {cert.name}
+                    </span>
+                    <span className="gym-cert-label-sub inter-regular">
+                      {cert.sub}
+                    </span>
+                  </div>
                 </div>
-                <div className="gym-cert-label-wrap">
-                  <span className="gym-cert-label-name">{cert.name}</span>
-                  <span className="gym-cert-label-sub">{cert.sub}</span>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

@@ -44,12 +44,12 @@ function ReturnAndRefundPolicyCustomer() {
     <>
       <Helmet>
         <title>
-          Return & Refund Policy | Gomzi Lifescience Family - Hassle-Free
+          Return & Refund Policy | Gomzi Lifesciences LLP Family - Hassle-Free
           Nutraceutical Returns
         </title>
         <meta
           name="description"
-          content="Learn about Gomzi Lifescience Family's Return & Refund Policy for nutraceutical products. Easy returns, refund guidelines, and customer-friendly policies for a smooth experience."
+          content="Learn about Gomzi Lifesciences Family's Return & Refund Policy for nutraceutical products. Easy returns, refund guidelines, and customer-friendly policies for a smooth experience."
         />
         <meta
           name="keyword"
@@ -80,11 +80,11 @@ function ReturnAndRefundPolicyCustomer() {
         />
         <meta
           property="og:title"
-          content="Return & Refund Policy | Gomzi Lifescience Family - Hassle-Free Nutraceutical Returns"
+          content="Return & Refund Policy | Gomzi Lifesciences LLP Family - Hassle-Free Nutraceutical Returns"
         />
         <meta
           property="og:description"
-          content="Learn about Gomzi Lifescience Family's Return & Refund Policy for nutraceutical products. Easy returns, refund guidelines, and customer-friendly policies for a smooth experience."
+          content="Learn about Gomzi Lifesciences Family's Return & Refund Policy for nutraceutical products. Easy returns, refund guidelines, and customer-friendly policies for a smooth experience."
         />
         <meta
           property="og:image"
@@ -119,7 +119,7 @@ function ReturnAndRefundPolicyCustomer() {
           gtag('js', new Date());
           gtag('config', 'G-J50WNKGW38');`}</noscript>
         <script>
-          { `
+          {`
           (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -308,93 +308,95 @@ function ReturnAndRefundPolicyCustomer() {
           </section>
         </>
       )}
+
       <div className="main-content margintop-nutrition">
         <section className="blog-main pb-5">
           <div>
             <div className="container-fluid w-80">
               <div className="row">
                 <div className="col-12 pt-4 text-left">
-                  <h1 className="f-rob-bol f-30 mb-2 text-black text-uppercase">
+                  <h1 className="f-30 mb-2 text-black text-capitalize barlow-condensed-extra font-weight-normal">
                     <b>Return and Refund Policy for Nutraceutical Products</b>
                   </h1>
                 </div>
                 <div className="col-12 text-center mb-4 px-4">
-                  <div className="ql-editor text-left mt-3">
-                    <p className="mb-2">
-                      At Gomzi Lifescience, we strive to ensure that you are
-                      completely satisfied with your purchase. However, we
+                  <div className="ql-editor text-left mt-3 int-regular">
+                    <p className="mb-2 int-regular">
+                      At Gomzi Lifesciences LLP, we strive to ensure that you
+                      are completely satisfied with your purchase. However, we
                       understand that there may be instances where you need to
                       return a product. Please read our Return and Refund Policy
                       carefully.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>Eligibility for Returns:</b>
                     </p>
-                    <p className="mb-2">
-                      Product Condition: To be eligible for a return, the
-                      product must be unopened, unused, and in its original
-                      packaging. Products that have been opened or partially
-                      used cannot be returned due to health and safety
+                    <p className="mb-2 int-regular">
+                      <strong>Product Condition:</strong> To be eligible for a
+                      return, the product must be unopened, unused, and in its
+                      original packaging. Products that have been opened or
+                      partially used cannot be returned due to health and safety
                       regulations.
                     </p>
-                    <p className="mb-2">
-                      Time Frame: Returns must be initiated within 30 days of
-                      the purchase date. After this period, we regret that we
-                      cannot offer a refund or exchange.
+                    <p className="mb-3 int-regular">
+                      <strong>Time Frame:</strong> Returns must be initiated
+                      within 30 days of the purchase date. After this period, we
+                      regret that we cannot offer a refund or exchange.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>Return Process:</b>
                     </p>
-                    <p className="mb-2">
-                      Contact Us: To initiate a return, please contact our
-                      customer service team at [customer service email/phone
-                      number]. Provide your order number and the reason for the
-                      return.
+                    <p className="mb-2 int-regular">
+                      <strong>Contact Us:</strong> To initiate a return, please
+                      contact our Customer service team at [Customer service
+                      email/phone number]. Provide your order number and the
+                      reason for the return.
                     </p>
-                    <p className="mb-2">
-                      Shipping Costs: Customers are responsible for return
-                      shipping costs unless the return is due to an error on our
-                      part (e.g., wrong item shipped, defective product).
+                    <p className="mb-3 int-regular">
+                      <strong>Shipping Costs:</strong> Customer are responsible
+                      for return shipping costs unless the return is due to an
+                      error on our part (e.g., wrong item shipped, defective
+                      product).
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>Refund Process:</b>
                     </p>
-                    <p className="mb-2">
-                      Processing Time: Refunds will be processed within 7-10
-                      business days after we receive and inspect the returned
-                      item.
+                    <p className="mb-2 int-regular">
+                      <strong>Processing Time:</strong> Refunds will be
+                      processed within 7-10 business days after we receive and
+                      inspect the returned item.
                     </p>
-                    <p className="mb-2">
-                      Refund Method: Refunds will be issued to the original
-                      payment method used for the purchase. Please note that it
-                      may take additional time for your bank or credit card
-                      company to process and post the refund.
+                    <p className="mb-3 int-regular">
+                      <strong>Refund Method:</strong> Refunds will be issued to
+                      the original payment method used for the purchase. Please
+                      note that it may take additional time for your bank or
+                      credit card company to process and post the refund.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>Non-Returnable Items:</b>
                     </p>
-                    <p className="mb-2">
-                      Exceptions: The following items are non-returnable: Opened
-                      or used nutraceutical products. Products purchased from
-                      unauthorized retailers.
+                    <p className="mb-3 int-regular">
+                      <strong>Exceptions:</strong> The following items are
+                      non-returnable: Opened or used nutraceutical products.
+                      Products purchased from unauthorized retailers.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>Exchanges:</b>
                     </p>
-                    <p className="mb-2">
-                      Exchanges for Defective Products: If you receive a
-                      defective or damaged product, please contact us
-                      immediately at [customer service email/phone number]. We
+                    <p className="mb-3 int-regular">
+                      <strong>Exchanges for Defective Products:</strong> If you
+                      receive a defective or damaged product, please contact us
+                      immediately at [Customer service email/phone number]. We
                       will arrange for a replacement at no additional cost to
                       you.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>Changes to Policy:</b>
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-2 int-regular">
                       We reserve the right to update or change our Return and
                       Refund Policy at any time. Changes will be effective
-                      immediately upon posting on our website.
+                      immediately upon posting on our e-commerce site.
                     </p>
                   </div>
                 </div>
@@ -403,7 +405,7 @@ function ReturnAndRefundPolicyCustomer() {
           </div>
         </section>
       </div>
-      <p className="d-none">
+      <p className="d-none int-regular">
         whey protein and, peanut butter peanut butter, peanut butters, why
         protein, protein in powder, whey product, wayne protein, whey protein
         protein, whey protein whey, whey in protein, whey whey protein, protein

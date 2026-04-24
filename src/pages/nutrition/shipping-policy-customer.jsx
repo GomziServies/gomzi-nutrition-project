@@ -44,11 +44,11 @@ function ShippingPolicyCustomer() {
     <>
       <Helmet>
         <title>
-          Shipping Policy | Gomzi Lifescience Family - Fast & Reliable Delivery
+          Shipping Policy | Gomzi Lifesciences Family - Fast & Reliable Delivery
         </title>
         <meta
           name="description"
-          content="Learn about Gomzi Lifescience Family's Shipping Policy. Get details on delivery times, shipping charges, and order tracking for a smooth shopping experience."
+          content="Learn about Gomzi Lifesciences Family's Shipping Policy. Get details on delivery times, shipping charges, and order tracking for a smooth shopping experience."
         />
         <meta
           name="keyword"
@@ -79,11 +79,11 @@ function ShippingPolicyCustomer() {
         />
         <meta
           property="og:title"
-          content="Shipping Policy | Gomzi Lifescience Family - Fast & Reliable Delivery"
+          content="Shipping Policy | Gomzi Lifesciences Family - Fast & Reliable Delivery"
         />
         <meta
           property="og:description"
-          content="Learn about Gomzi Lifescience Family's Shipping Policy. Get details on delivery times, shipping charges, and order tracking for a smooth shopping experience."
+          content="Learn about Gomzi Lifesciences Family's Shipping Policy. Get details on delivery times, shipping charges, and order tracking for a smooth shopping experience."
         />
         <meta
           property="og:image"
@@ -118,7 +118,7 @@ function ShippingPolicyCustomer() {
           gtag('js', new Date());
           gtag('config', 'G-J50WNKGW38');`}</noscript>
         <script>
-          { `
+          {`
           (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -130,7 +130,7 @@ function ShippingPolicyCustomer() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifescience Details. "
+          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifesciences Details. "
         }
         options={{ pageRef: true }}
       />
@@ -313,87 +313,87 @@ function ShippingPolicyCustomer() {
             <div className="container-fluid w-80">
               <div className="row">
                 <div className="col-12 pt-4 text-left">
-                  <h1 className="f-rob-bol f-30 mb-2 text-black text-uppercase">
-                    <b>Shipping Policy for Gomzi Lifescience</b>
+                  <h1 className="f-30 mb-2 text-black text-uppercase barlow-condensed-extra font-weight-normal">
+                    <b>Shipping Policy for Gomzi Lifesciences LLP</b>
                   </h1>
                 </div>
                 <div className="col-12 text-center mb-4 px-4">
                   <div className="ql-editor text-left mt-3">
-                    <p className="mb-2">
+                    <p className="mb-2 int-regular">
                       At Gomzi Life Science, we are committed to providing you
                       with the best possible shopping experience. Our shipping
                       policy is designed to ensure that your orders are
                       processed and delivered in a timely manner, allowing you
                       to receive your products as quickly as possible.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>1. Processing Time:</b>
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-3  int-regular">
                       Once your order is placed, our team works diligently to
                       process it within 24 hours. This ensures that your
                       products are carefully packaged and dispatched promptly.
                     </p>
-                    <p>
-                      <b>2. Shipping Time:</b>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
+                      <b>2. Delivery time:</b>
                     </p>
-                    <p className="mb-2">
-                      We are pleased to offer a standard shipping time of 2
+                    <p className="mb-3 int-regular">
+                      We are pleased to offer a standard Delivery time of 2
                       business days for all orders within our delivery areas.
                       Please note that this timeframe begins after your order
                       has been processed and dispatched. We utilize reliable
                       carriers to ensure that your package arrives safely and on
                       time.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>3. Shipping Methods:</b>
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-2 int-regular">
                       Standard Shipping: Delivered within 2 business days.
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-3 int-regular">
                       Express Shipping: Available for an additional fee,
                       ensuring even faster delivery.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>4. Shipping Rates:</b>
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-3 int-regular">
                       Shipping costs are calculated at checkout based on your
                       location and the size of your order. We strive to provide
                       competitive rates and transparent pricing.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>5. Order Tracking:</b>
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-3 int-regular">
                       Once your order has been shipped, you will receive a
                       confirmation email containing your tracking number. You
                       can use this number to track your shipment in real-time,
                       ensuring you are always informed about the status of your
                       order.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>6. Delivery Issues:</b>
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-3 int-regular">
                       If you experience any issues with your delivery, such as a
                       delayed shipment or an incorrect address, please contact
-                      our customer service team at gomzinutrition@gmail.com or
-                      +91 88668 42520. We are here to assist you and resolve any
+                      our customer service team at info@gomzilifesciences.in or
+                      +91 8320077993. We are here to assist you and resolve any
                       concerns you may have.
                     </p>
-                    <p>
+                    <p className="barlow-condensed-semi font-weight-normal f-24 mb-2">
                       <b>7. Customer Satisfaction:</b>
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-2 int-regular">
                       At Gomzi Life Science, we value your satisfaction. If for
                       any reason you are not completely satisfied with your
                       order, please reach out to us within 30 days of receipt.
                       We will do our best to address your concerns and ensure a
                       positive experience.
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-2 int-regular">
                       Thank you for choosing Gomzi Life Science. We appreciate
                       your trust in us and look forward to serving you!.
                     </p>
