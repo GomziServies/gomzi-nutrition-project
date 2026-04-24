@@ -259,7 +259,7 @@ function App() {
         <Route path="/" element={<Home />} />
 
         <Route
-          path="/Whey-landing"
+          path="/whey-landing"
           element={<Wheylanding/>}
         />
 
