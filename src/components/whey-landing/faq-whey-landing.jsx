@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 // ─── FAQ DATA ────────────────────────────────────────────────────────────────
 const faqData = [
@@ -77,6 +77,23 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
 const Faqwheylanding = () => {
   // ✅ Single open item — string instead of object
   const [openId, setOpenId] = useState(null)
+  const [isMobileView, setIsMobileView] = useState(false)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const mediaQuery = window.matchMedia('(max-width: 768px)')
+    const handleViewportChange = (event) => {
+      setIsMobileView(event.matches)
+    }
+
+    setIsMobileView(mediaQuery.matches)
+    mediaQuery.addEventListener('change', handleViewportChange)
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleViewportChange)
+    }
+  }, [])
 
   const toggleItem = (id) => {
     // Same item click → close it; else open new one (prev closes automatically)
@@ -96,8 +113,12 @@ const Faqwheylanding = () => {
               key={item.id}
               question={item.question}
               answer={item.answer}
-              isOpen={openId === item.id}
-              onToggle={() => toggleItem(item.id)}
+              isOpen={isMobileView || openId === item.id}
+              onToggle={() => {
+                if (!isMobileView) {
+                  toggleItem(item.id)
+                }
+              }}
             />
           ))}
         </div>

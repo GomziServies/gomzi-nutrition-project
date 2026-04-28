@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { publicAxiosInstance } from "../../assets/js/config/api";
 // import './ContactFormWheyLanding.css'
 
@@ -40,6 +42,7 @@ const stageLabels = {
 };
 
 const ContactFormWheyLanding = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -60,17 +63,17 @@ const ContactFormWheyLanding = () => {
     const trimmedPhone = formData.phone.replace(/\s/g, "");
 
     if (!trimmedName) {
-      alert("Please enter your name.");
+      toast.error("Please enter your name.");
       return;
     }
 
     if (!/^[6-9]\d{9}$/.test(trimmedPhone)) {
-      alert("Please enter a valid 10-digit phone number.");
+      toast.error("Please enter a valid 10-digit phone number.");
       return;
     }
 
     if (!formData.stage) {
-      alert("Please select your current stage.");
+      toast.error("Please select your current stage.");
       return;
     }
 
@@ -95,17 +98,19 @@ const ContactFormWheyLanding = () => {
         instagram: "",
         stage: "",
       });
-      alert("Form submitted! Our expert will reach out shortly.");
+      setTimeout(() => {
+        navigate("/thank-you");
+      }, 900);
     } catch (error) {
       console.error("Whey landing contact form submission error:", error);
-      alert("Something went wrong. Please try again.");
+      toast.error("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="whey-wrap" id="contact">
+    <div className="whey-wrap">
       <div className="whey-section">
         {/* LEFT PANEL */}
         <div className="whey-left">
@@ -152,7 +157,7 @@ const ContactFormWheyLanding = () => {
         </div>
 
         {/* RIGHT PANEL */}
-        <div className="whey-right">
+        <div className="whey-right" id="contact">
           <div className="form-card">
             <h2 className="form-title">
               Talk To Our Manufacturing Expert Free.

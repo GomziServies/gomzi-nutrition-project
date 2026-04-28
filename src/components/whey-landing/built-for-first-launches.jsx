@@ -43,7 +43,7 @@ const cards = [
   {
     stat: '15-20 Days',
     title: 'Delivery timeline',
-    desc: 'Move from approval to dispatch on a defined schedule.',
+    desc: 'Move from approval to dispatch on a clear, defined schedule.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10"/>
@@ -54,7 +54,7 @@ const cards = [
   {
     stat: 'Packaging',
     title: 'Label design & mockups',
-    desc: 'Present your product like a brand, not a placeholder.',
+    desc: 'Present your product like a brand, not a placeholder, with clean mockups.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="3" width="18" height="18" rx="2"/>

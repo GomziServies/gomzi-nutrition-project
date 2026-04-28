@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ShieldIcon = () => (
   <svg
@@ -70,6 +70,16 @@ const ArrowRight = () => (
 
 export default function HeroSection() {
   const styleRef = useRef(null);
+  const [showStickyCta, setShowStickyCta] = useState(true);
+
+  const handleContactClick = () => {
+    setTimeout(() => {
+      const contactEl = document.getElementById("contact");
+      if (contactEl) {
+        contactEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 50);
+  }
 
   useEffect(() => {
     const tag = document.createElement("style");
@@ -79,98 +89,217 @@ export default function HeroSection() {
     return () => tag.remove();
   }, []);
 
+  useEffect(() => {
+    const footer = document.querySelector('.footer');
+
+    if (!footer) {
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowStickyCta(!entry.isIntersecting);
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    observer.observe(footer);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="hero-section">
-      {/* Desktop BG image */}
-      <div className="hero-bg-desktop" />
+      {/* Desktop: Background Images */}
+      <div className="hero-bg-row row g-0 d-none d-lg-flex">
+        <div className="hero-bg-col col-12">
+          <img
+            className="hero-bg-desktop"
+            src="/assets/images/whey-landing/herobgimage.webp"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+      </div>
 
-      {/* 
-        Mobile / Tablet BG image
-        KEY: On mobile this is now position:relative (in-flow), 
-        NOT absolute. So content flows naturally BELOW the image.
-      */}
-      <div className="hero-bg-mobile" />
+      <div className="hero-bg-row row g-0 d-none d-lg-flex">
+        <div className="hero-bg-col col-12">
+          <div className="hero-overlay" />
+        </div>
+      </div>
 
-      {/* Gradient overlay — fades image bottom into content bg */}
-      <div className="hero-overlay" />
+      {/* Desktop: Content with overlay */}
+      <div className="hero-container container d-none d-lg-block">
+        <div className="row">
+          <div className="hero-content col-lg-6">
+            {/* Headline */}
+            <h1 className="hero-title">
+              Launch Your Own
+              <span className="green"> Protein</span> Brand.
+            </h1>
 
-      {/* Main container — flows after image on mobile */}
-      <div className="hero-container">
-        <div className="hero-content">
-          {/* Headline */}
-          <h1 className="hero-title">
-            Launch Your Own
-            <span className="green"> Protein</span> Brand.
-          </h1>
+            {/* Green divider */}
+            <div className="hero-divider" />
 
-          {/* Green divider */}
-          <div className="hero-divider" />
+            {/* Subtitle */}
+            <p className="hero-subtitle">
+              You built the audience. Now build the product. Get clear answers on
+              formulation, pricing, quality, and timelines before you place your
+              first order, your next order, or your switch order.
+            </p>
 
-          {/* Subtitle */}
-          <p className="hero-subtitle">
-            You built the audience. Now build the product. Get clear answers on
-            formulation, pricing, quality, and timelines before you place your
-            first order, your next order, or your switch order.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="hero-btns">
-            <button
-              className="btn-primary-green"
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              Talk to Our Manufacturing Expert <ArrowRight />
-            </button>
-          </div>
-          {/* Trust Badges */}
-          <div className="hero-badges">
-            <div className="badge-item">
-              <span className="badge-icon">
-                <ShieldIcon />
-              </span>
-              <span>
-                Quality
-                <br />
-                Assured
-              </span>
+            {/* CTA Buttons */}
+            <div className="hero-btns">
+              <button
+                className="btn-primary-green"
+                onClick={handleContactClick}
+              >
+                Talk to Our Manufacturing Expert <ArrowRight />
+              </button>
             </div>
-            <div className="badge-item">
-              <span className="badge-icon">
-                <ChartIcon />
-              </span>
-              <span>
-                Scalable
-                <br />
-                Solutions
-              </span>
-            </div>
-            <div className="badge-item">
-              <span className="badge-icon">
-                <ClockIcon />
-              </span>
-              <span>
-                On-Time
-                <br />
-                Delivery
-              </span>
-            </div>
-            <div className="badge-item">
-              <span className="badge-icon">
-                <FlaskIcon />
-              </span>
-              <span>
-                Science
-                <br />
-                Backed
-              </span>
+            {/* Trust Badges */}
+            <div className="hero-badges">
+              <div className="badge-item">
+                <span className="badge-icon">
+                  <ShieldIcon />
+                </span>
+                <span>
+                  Quality
+                  <br />
+                  Assured
+                </span>
+              </div>
+              <div className="badge-item">
+                <span className="badge-icon">
+                  <ChartIcon />
+                </span>
+                <span>
+                  Scalable
+                  <br />
+                  Solutions
+                </span>
+              </div>
+              <div className="badge-item">
+                <span className="badge-icon">
+                  <ClockIcon />
+                </span>
+                <span>
+                  On-Time
+                  <br />
+                  Delivery
+                </span>
+              </div>
+              <div className="badge-item">
+                <span className="badge-icon">
+                  <FlaskIcon />
+                </span>
+                <span>
+                  Science
+                  <br />
+                  Backed
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Mobile: Content Only */}
+      <div className="hero-container-mobile d-lg-none pt-0">
+        <img
+          className="hero-mobile-image"
+          src="/assets/images/whey-landing/heromobilebgimage.webp"
+          alt="Whey Protein Product"
+        />
+        <div className="hero-content">
+            {/* Headline */}
+            <h1 className="hero-title">
+              Launch Your Own
+              <span className="green"> Protein</span> Brand.
+            </h1>
+
+            {/* Green divider */}
+            <div className="hero-divider" />
+
+            {/* Subtitle */}
+            <p className="hero-subtitle">
+              You built the audience. Now build the product. Get clear answers on
+              formulation, pricing, quality, and timelines before you place your
+              first order, your next order, or your switch order.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="hero-btns">
+              <button
+                className="btn-primary-green"
+                onClick={handleContactClick}
+              >
+                Talk to Our Manufacturing Expert <ArrowRight />
+              </button>
+            </div>
+            {/* Trust Badges */}
+            <div className="hero-badges">
+              <div className="badge-item">
+                <span className="badge-icon">
+                  <ShieldIcon />
+                </span>
+                <span>
+                  Quality
+                  <br />
+                  Assured
+                </span>
+              </div>
+              <div className="badge-item">
+                <span className="badge-icon">
+                  <ChartIcon />
+                </span>
+                <span>
+                  Scalable
+                  <br />
+                  Solutions
+                </span>
+              </div>
+              <div className="badge-item">
+                <span className="badge-icon">
+                  <ClockIcon />
+                </span>
+                <span>
+                  On-Time
+                  <br />
+                  Delivery
+                </span>
+              </div>
+              <div className="badge-item">
+                <span className="badge-icon">
+                  <FlaskIcon />
+                </span>
+                <span>
+                  Science
+                  <br />
+                  Backed
+                </span>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      {showStickyCta && (
+        <div className="hero-sticky-cta-wrap">
+          <a
+            href="#contact"
+            className="hero-sticky-cta"
+            onClick={(event) => {
+              event.preventDefault()
+              handleContactClick()
+            }}
+          >
+            <span className="hero-sticky-cta-label">Talk to Our Manufacturing Expert</span>
+            <ArrowRight />
+          </a>
+        </div>
+      )}
     </section>
   );
 }

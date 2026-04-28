@@ -44,7 +44,7 @@ const HowItWorks = () => {
 
           {/* ── Header ── */}
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-12">
               
               <h2 className="mfg-headline">
                 Move From <span> Question</span> <br /> to Decision.
