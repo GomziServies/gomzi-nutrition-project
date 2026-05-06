@@ -254,6 +254,9 @@ const Wheylanding = lazy(
 const ThankYouLanding = lazy(
   () => import("./pages/whey-landing/thank-you-landing"),
 );
+const SupplementLanding = lazy(
+  () => import("./pages/supplement-landing/supplement-landing"),
+);
 function App() {
   return (
     <>
@@ -267,6 +270,10 @@ function App() {
         <Route
           path="/thank-you"
           element={<ThankYouLanding />}
+        />
+        <Route
+          path="/free-consultation"
+          element={<SupplementLanding />}
         />
 
         <Route
