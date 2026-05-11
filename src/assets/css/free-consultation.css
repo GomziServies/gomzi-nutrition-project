@@ -98,6 +98,32 @@
   transform: translateY(-2px);
 }
 
+.sl-cta-wrapper {
+  margin-bottom: 40px;
+}
+
+.sl-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--sl-accent);
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(109, 197, 44, 0.2);
+}
+
+.sl-call-btn:hover {
+  background: var(--sl-accent-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(109, 197, 44, 0.3);
+  color: #fff;
+}
+
 /* --- Right Section (Form) --- */
 .sl-right {
   flex: 0.8;
@@ -192,10 +218,86 @@
   }
   
   .sl-product-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .sl-product-btn {
+    padding: 10px 5px;
+    font-size: 13px;
   }
   
   .sl-right {
     padding: 24px;
+  }
+
+  /* Center the "Talk to Our Manufacturing Expert" button text on mobile */
+  .sl-page .wh-cta:not(.desktop) {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .sl-page .wh-cta:not(.desktop) svg {
+    display: none !important;
+  }
+}
+
+/* --- Sticky CTA --- */
+.sl-sticky-cta-wrap {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.sl-sticky-cta {
+  pointer-events: auto;
+  background: var(--sl-accent);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 400px;
+  justify-content: center;
+}
+
+.sl-sticky-cta:hover {
+  background: var(--sl-accent-hover);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.sl-sticky-cta svg {
+  transition: transform 0.2s ease;
+}
+
+.sl-sticky-cta:hover svg {
+  transform: translateX(4px);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%) scale(0.9); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@media (min-width: 768px) {
+  .sl-sticky-cta-wrap {
+    display: none; /* Only show sticky CTA on mobile */
   }
 }

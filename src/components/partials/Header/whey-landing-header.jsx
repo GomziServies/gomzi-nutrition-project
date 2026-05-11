@@ -87,10 +87,6 @@ const WheyLandingHeader = () => {
             onClick={(event) => handleSectionClick(event, '#contact')}
           >
             Talk to Our Manufacturing Expert
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M2 7h10M8 3l4 4-4 4" stroke="#ffffff"
-                    strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
           </a>
 
           <button
@@ -120,10 +116,6 @@ const WheyLandingHeader = () => {
           onClick={(event) => handleSectionClick(event, '#contact')}
         >
           Talk to Our Manufacturing Expert
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M2 7h10M8 3l4 4-4 4" stroke="#ffffff"
-                  strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
         </a>
       </div>
     </>

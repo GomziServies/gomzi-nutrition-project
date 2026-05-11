@@ -248,14 +248,15 @@ const SampleBooking = lazy(
   () => import("./pages/sample-booking/sample-booking"),
 );
 
-const Wheylanding = lazy(
-  () => import("./pages/whey-landing/whey-landing"),
-);
+const Wheylanding = lazy(() => import("./pages/whey-landing/whey-landing"));
 const ThankYouLanding = lazy(
   () => import("./pages/whey-landing/thank-you-landing"),
 );
-const SupplementLanding = lazy(
-  () => import("./pages/supplement-landing/supplement-landing"),
+const FreeConsultation = lazy(
+  () => import("./pages/free-consultation/free-consultation"),
+);
+const ThankYouFreeConsultation = lazy(
+  () => import("./pages/free-consultation/thank-you-free-consultation"),
 );
 function App() {
   return (
@@ -263,17 +264,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
 
+        <Route path="/whey-landing" element={<Wheylanding />} />
+        <Route path="/thank-you" element={<ThankYouLanding />} />
+        <Route path="/free-consultation" element={<FreeConsultation />} />
         <Route
-          path="/whey-landing"
-          element={<Wheylanding/>}
-        />
-        <Route
-          path="/thank-you"
-          element={<ThankYouLanding />}
-        />
-        <Route
-          path="/free-consultation"
-          element={<SupplementLanding />}
+          path="/free-consultation/thank-you"
+          element={<ThankYouFreeConsultation />}
         />
 
         <Route

@@ -156,7 +156,7 @@ export default function HeroSection() {
                 className="btn-primary-green"
                 onClick={handleContactClick}
               >
-                Talk to Our Manufacturing Expert <ArrowRight />
+                Talk to Our Manufacturing Expert
               </button>
             </div>
             {/* Trust Badges */}
@@ -236,7 +236,7 @@ export default function HeroSection() {
                 className="btn-primary-green"
                 onClick={handleContactClick}
               >
-                Talk to Our Manufacturing Expert <ArrowRight />
+                Talk to Our Manufacturing Expert
               </button>
             </div>
             {/* Trust Badges */}
@@ -296,7 +296,6 @@ export default function HeroSection() {
             }}
           >
             <span className="hero-sticky-cta-label">Talk to Our Manufacturing Expert</span>
-            <ArrowRight />
           </a>
         </div>
       )}

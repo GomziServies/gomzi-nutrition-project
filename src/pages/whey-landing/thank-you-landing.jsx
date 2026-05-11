@@ -8,9 +8,7 @@ const wheylanding = () => {
   return (
     <>
       <Helmet>
-        <title>
-          Order Confirmed | Gomzi Lifescience - Thank You
-        </title>
+        <title>Order Confirmed | Gomzi Lifescience - Thank You</title>
         <meta
           name="description"
           content="Thank you for your order! Your order has been confirmed. Check your email for the invoice and track your order status with Gomzi Lifescience."
@@ -57,7 +55,8 @@ const wheylanding = () => {
             <h1>Form submitted! Our expert will reach out shortly.</h1>
 
             <p className="thankyou-copy">
-              We have received your details. Our team will review your request and get back to you soon with the next steps.
+              We have received your details. Our team will review your request
+              and get back to you soon with the next steps.
             </p>
 
             <div className="thankyou-actions">
