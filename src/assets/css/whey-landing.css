@@ -1135,8 +1135,21 @@
   padding: 50px 24px 0 24px;
 }
 
+@media(max-width:991px){
+
+  .protein-brand-sticky-image{
+    position:relative;
+    top:0;
+    margin-top:30px;
+  }
+
+}
+
+.justify-center {
+  justify-content: center;
+}
 .founders-inner {
-  max-width: 1200px;
+  max-width: 1300px;
   width: 100%;
   margin: 0 auto;
   /* display: grid; */
@@ -3895,14 +3908,17 @@
 
     .protein-brand-landing-cards-section{
     width:100%;
-    padding:40px 0;
+    padding:0px 0;
     background:#fff;
 }
-
+.protein-brand-sticky-image{
+  position: sticky;
+  top: 100px;
+}
 .protein-brand-landing-cards-wrapper{
     width:100%;
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(2,1fr);
     gap:22px;
 }
 

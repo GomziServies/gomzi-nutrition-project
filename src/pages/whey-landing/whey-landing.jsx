@@ -18,7 +18,8 @@ const wheylanding = () => {
     <>
       <Helmet>
         <title>
-          Premium Whey Protein Contract Manufacturing in India | Gomzi Life Sciences
+          Premium Whey Protein Contract Manufacturing in India | Gomzi Life
+          Sciences
         </title>
         <meta
           name="description"
@@ -52,13 +53,15 @@ const wheylanding = () => {
         <WheyLandingHeader />
         <Herosection />
         <WhoSection />
+
         <FoundersLanding />
+        <ContactFormWheyLanding />
         <BuiltForFirstLaunches />
+
         <HowItWorks />
         <Certifications />
-       
-        <ContactFormWheyLanding />
-         <Faqwheylanding />
+
+        <Faqwheylanding />
         <WheyLandingFooter />
       </div>
     </>

@@ -38,11 +38,9 @@ const HowItWorks = () => {
     <>
     
 
-      <section className="hiw-section" id="how">
-        {/* <div className="container"> */}
+      {/* <section className="hiw-section" id="how">
         <div className="hiw-inner">
 
-          {/* ── Header ── */}
           <div className="row">
             <div className="col-12">
               
@@ -53,7 +51,6 @@ const HowItWorks = () => {
             </div>
           </div>
 
-          {/* ── Step Cards ── */}
           <div className="row g-3">
             {steps.map((step) => (
               <div className="col-12 col-sm-6 col-lg my-3" key={step.number}>
@@ -70,9 +67,9 @@ const HowItWorks = () => {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
-        <section className="founders-section">
+        {/* <section className="founders-section">
         <div className="founders-inner">
           <div className="founders-content">
          
@@ -147,23 +144,11 @@ const HowItWorks = () => {
               </div>
             </section>
 
-            {/* <AccordionList items={checkItems1} /> */}
           </div>
 
-          {/* <div className="founders-image">
-            <img
-              src="/assets/images/whey-landing/sad-owner.webp"
-              alt="Sad founder"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                borderRadius: "12px",
-              }}
-            />
-          </div> */}
+       
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

@@ -101,10 +101,10 @@ const ContactFormWheyLanding = () => {
       return;
     }
 
-    if (!formData.stage) {
-      alert("Please select your current stage.");
-      return;
-    }
+    // if (!formData.stage) {
+    //   alert("Please select your current stage.");
+    //   return;
+    // }
 
     if (!formData.city.trim()) {
       alert("Please enter your city.");
