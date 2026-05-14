@@ -1,67 +1,66 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
 const WheyLandingHeader = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState('')   // ← new
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState(""); // ← new
 
   const navLinks = [
-    { label: "Who It's For", href: "#who",          id: "who" },
-    { label: "Capabilities",  href: "#capabilities", id: "capabilities" },
-    { label: "How It Works",  href: "#how",          id: "how" },
-    { label: "Certifications",href: "#certifications",id: "certifications" },
-  ]
+    { label: "Who It's For", href: "#who", id: "who" },
+    { label: "Capabilities", href: "#capabilities", id: "capabilities" },
+    { label: "How It Works", href: "#how", id: "how" },
+    { label: "Certifications", href: "#certifications", id: "certifications" },
+  ];
 
   const handleSectionClick = (event, href) => {
-    if (!href || !href.startsWith('#')) {
-      return
+    if (!href || !href.startsWith("#")) {
+      return;
     }
 
-    event.preventDefault()
+    event.preventDefault();
 
-    const sectionId = href.slice(1)
-    const targetElement = document.getElementById(sectionId)
+    const sectionId = href.slice(1);
+    const targetElement = document.getElementById(sectionId);
     if (!targetElement) {
-      return
+      return;
     }
 
-    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    window.history.replaceState(null, '', `#${sectionId}`)
-    setActiveSection(sectionId)
-    setMenuOpen(false)
-  }
+    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.history.replaceState(null, "", `#${sectionId}`);
+    setActiveSection(sectionId);
+    setMenuOpen(false);
+  };
 
   // ── SCROLL SPY ──────────────────────────────────────────
   useEffect(() => {
-    const sectionIds = navLinks.map(l => l.id)
+    const sectionIds = navLinks.map((l) => l.id);
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
+            setActiveSection(entry.target.id);
           }
-        })
+        });
       },
       {
-        rootMargin: '-20% 0px -70% 0px', // fires when section hits top 30% viewport
+        rootMargin: "-20% 0px -70% 0px", // fires when section hits top 30% viewport
         threshold: 0,
-      }
-    )
+      },
+    );
 
     sectionIds.forEach((id) => {
-      const el = document.getElementById(id)
-      if (el) observer.observe(el)
-    })
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
 
-    return () => observer.disconnect()  // cleanup
-  }, [])
+    return () => observer.disconnect(); // cleanup
+  }, []);
   // ────────────────────────────────────────────────────────
 
   return (
     <>
       <header className="wh-header">
         <div className="wh-inner">
-
           <a href="/Whey-landing" className="wh-brand">
             <img src="/assets/images/logo/gomzi-life-science-logo.webp"
                  alt="Gomzi Life Science Logo"
@@ -69,11 +68,11 @@ const WheyLandingHeader = () => {
           </a>
 
           <nav className="wh-nav">
-            {navLinks.map(link => (
+            {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className={activeSection === link.id ? 'active' : ''}
+                className={activeSection === link.id ? "active" : ""}
                 onClick={(event) => handleSectionClick(event, link.href)}
               >
                 {link.label}
@@ -84,27 +83,38 @@ const WheyLandingHeader = () => {
           <a
             href="#contact"
             className="wh-cta desktop"
-            onClick={(event) => handleSectionClick(event, '#contact')}
+            onClick={(event) => handleSectionClick(event, "#contact")}
           >
-            Talk to Our Manufacturing Expert
+            Request Sample & Start Your Whey Brand
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 7h10M8 3l4 4-4 4"
+                stroke="#ffffff"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </a>
 
           <button
-            className={`wh-hamburger ${menuOpen ? 'open' : ''}`}
+            className={`wh-hamburger ${menuOpen ? "open" : ""}`}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            <span /><span /><span />
+            <span />
+            <span />
+            <span />
           </button>
         </div>
       </header>
 
-      <div className={`wh-drawer ${menuOpen ? 'open' : ''}`}>
-        {navLinks.map(link => (
+      <div className={`wh-drawer ${menuOpen ? "open" : ""}`}>
+        {navLinks.map((link) => (
           <a
             key={link.label}
             href={link.href}
-            className={activeSection === link.id ? 'active' : ''}
+            className={activeSection === link.id ? "active" : ""}
             onClick={(event) => handleSectionClick(event, link.href)}
           >
             {link.label}
@@ -113,13 +123,22 @@ const WheyLandingHeader = () => {
         <a
           href="#contact"
           className="wh-cta"
-          onClick={(event) => handleSectionClick(event, '#contact')}
+          onClick={(event) => handleSectionClick(event, "#contact")}
         >
-          Talk to Our Manufacturing Expert
+          Request Sample & Start Your Whey Brand
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path
+              d="M2 7h10M8 3l4 4-4 4"
+              stroke="#ffffff"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </a>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default WheyLandingHeader
+export default WheyLandingHeader;

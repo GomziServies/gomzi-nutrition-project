@@ -1,3 +1,5 @@
+import RequestQuoteButton from "../../components/nutrition/RequestQuoteButton";
+
 export default function NutraceuticalSection() {
   return (
     <>
@@ -26,18 +28,12 @@ export default function NutraceuticalSection() {
             </div>
 
             <div className="ns-btns">
-              <button
+              <RequestQuoteButton
                 className="btn-p barlow-condensed-semi"
-                onClick={() =>
-                  window.open(
-                    "https://wa.me/918320077993?text=Hello%20I%20want%20to%20start%20my%20nutraceutical%20brand",
-                    "_blank",
-                  )
-                }
-              >
-                <i className="fa-brands fa-whatsapp me-2  "></i> Request a Quote
-                <span className="btn-arrow">→</span>
-              </button>
+                text={"Request a Quote →"}
+                subject={"request a quote"}
+              />
+
               <a href="tel:+918320077993" className="btn-s inter-500">
                 <i className="fa-solid fa-phone me-2"></i> Talk to Our
                 Manufacturing Expert

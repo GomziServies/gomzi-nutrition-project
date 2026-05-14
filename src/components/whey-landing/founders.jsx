@@ -1,22 +1,49 @@
 import { useState, useEffect, useRef } from "react";
 
 const checkItems1 = [
-  { title: "Choose the right product.", desc: "Not every formulation fits your audience or your price point." },
-  { title: "Understand the numbers.", desc: "MOQ, pricing direction, and packaging all affect your margin." },
-  { title: "Reduce brand risk.", desc: "Quality process, documentation, and consistency protect your reputation." },
+  {
+    title: "Choose the right product.",
+    desc: "Not every formulation fits your audience or your price point.",
+  },
+  {
+    title: "Understand the numbers.",
+    desc: "MOQ, pricing direction, and packaging all affect your margin.",
+  },
+  {
+    title: "Reduce brand risk.",
+    desc: "Quality process, documentation, and consistency protect your reputation.",
+  },
 ];
 
 const checkItems2 = [
-  { title: "Right formulation recommendation.", desc: "For your audience and stage -not a generic suggestion." },
-  { title: "Clear MOQ and realistic pricing direction.", desc: "Understand numbers before you commit to an order." },
-  { title: "Delivery timeline from approval to dispatch.", desc: "No more guessing when your product will be ready." },
-  { title: "Visibility into certifications and quality checks.", desc: "Batch documentation that protects your brand reputation." },
+  {
+    title: "Right formulation recommendation.",
+    desc: "For your audience and stage -not a generic suggestion.",
+  },
+  {
+    title: "Clear MOQ and realistic pricing direction.",
+    desc: "Understand numbers before you commit to an order.",
+  },
+  {
+    title: "Delivery timeline from approval to dispatch.",
+    desc: "No more guessing when your product will be ready.",
+  },
+  {
+    title: "Visibility into certifications and quality checks.",
+    desc: "Batch documentation that protects your brand reputation.",
+  },
 ];
 
 function CheckIcon() {
   return (
     <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-      <path d="M2.5 8L5.8 11.5L12.5 4" stroke="#6dc52c" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M2.5 8L5.8 11.5L12.5 4"
+        stroke="#6dc52c"
+        strokeWidth="2.1"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -24,7 +51,13 @@ function CheckIcon() {
 function ChevronIcon() {
   return (
     <svg className="acc-chevron" viewBox="0 0 20 20" fill="none">
-      <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M5 7.5L10 12.5L15 7.5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -33,7 +66,9 @@ function AccordionItem({ title, desc, isOpen, onToggle }) {
   return (
     <div className={`acc-item${isOpen ? " open" : ""}`}>
       <button className="acc-trigger" onClick={onToggle}>
-        <div className="acc-icon"><CheckIcon /></div>
+        <div className="acc-icon">
+          <CheckIcon />
+        </div>
         <span className="acc-trigger-title">{title}</span>
         <ChevronIcon />
       </button>
@@ -99,42 +134,172 @@ export default function FoundersLanding() {
       {/* ══ SECTION 1 ══ */}
       <section className="founders-section">
         <div className="founders-inner">
-
           <div className="founders-content">
-            <h1 className="hero-headline">
-              Most Founders Get Stuck Before They Place the Order.
-            </h1>
-            <p className="hero-sub">
-              They compare manufacturers. They collect vague quotes. They still don't
-              know what to make, what it will cost, or what quality process backs the product.
-            </p>
-            <AccordionList items={checkItems1} />
+          
+            <h2 class="ws-heading text-center">
+              Start Your Protein Brand With the <br />
+              <em> Right Formula, Sample, and Manufacturing</em>{" "}
+            </h2>
+
+            <section class="protein-brand-landing-cards-section">
+              <div class="protein-brand-landing-cards-wrapper">
+                <div class="protein-brand-landing-cards">
+                  <div class="protein-brand-landing-cards-icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 3v5l-5 9a2 2 0 002 3h12a2 2 0 002-3l-5-9V3"
+                      />
+                    </svg>
+                  </div>
+
+                  <h3>Choose the Right Formula</h3>
+
+                  <p>
+                    Select whey concentrate, whey isolate, whey blend, or a
+                    custom formulation based on your customer's needs and price
+                    point.
+                  </p>
+                </div>
+
+                <div class="protein-brand-landing-cards">
+                  <div class="protein-brand-landing-cards-icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12h6m-3-3v6m5 4H7a2 2 0 01-2-2V7a2 2 0 012-2h3l2-2h4a2 2 0 012 2v12a2 2 0 01-2 2z"
+                      />
+                    </svg>
+                  </div>
+
+                  <h3>Request Sample Before Production</h3>
+
+                  <p>
+                    Test taste, mixability, texture, and quality before
+                    committing to manufacturing. Don't go blind into production.
+                  </p>
+                </div>
+
+                <div class="protein-brand-landing-cards">
+                  <div class="protein-brand-landing-cards-icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3
+            3-1.343 3-3-1.343-3-3-3zm0-5v2m0 14v2m9-9h-2M5 12H3"
+                      />
+                      <circle cx="12" cy="12" r="9" />
+                    </svg>
+                  </div>
+
+                  <h3>Understand MOQ and Pricing</h3>
+
+                  <p>
+                    Get clear quantity-wise pricing and starting batch guidance
+                    so you can plan your investment and margins properly.
+                  </p>
+                </div>
+
+                <div class="protein-brand-landing-cards">
+                  <div class="protein-brand-landing-cards-icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                      <rect x="3" y="4" width="18" height="16" rx="2" />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 10h18M10 20V10"
+                      />
+                    </svg>
+                  </div>
+
+                  <h3>Plan Packaging and Labeling</h3>
+
+                  <p>
+                    Finalize jar, pouch, label, and branding options. Your
+                    packaging is your first impression — get it right.
+                  </p>
+                </div>
+
+                <div class="protein-brand-landing-cards">
+                  <div class="protein-brand-landing-cards-icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9.5 12.5l1.5 1.5 3-3"
+                      />
+                    </svg>
+                  </div>
+
+                  <h3>Review Quality Checks</h3>
+
+                  <p>
+                    Check certifications, test reports, and product quality
+                    standards before dispatch. Every batch comes documented.
+                  </p>
+                </div>
+
+                <div class="protein-brand-landing-cards">
+                  <div class="protein-brand-landing-cards-icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                      <circle cx="12" cy="12" r="9" />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 7v5l3 3"
+                      />
+                    </svg>
+                  </div>
+
+                  <h3>Know Production Timeline</h3>
+
+                  <p>
+                    Get a clear timeline from formulation to delivery so you can
+                    plan your launch, inventory, and marketing accordingly.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* <AccordionList items={checkItems1} /> */}
           </div>
 
-          <div className="founders-image">
+          {/* <div className="founders-image">
             <img
               src="/assets/images/whey-landing/sad-owner.webp"
               alt="Sad founder"
-              style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: "12px",
+              }}
             />
-          </div>
-
+          </div> */}
         </div>
       </section>
 
       {/* ══ SECTION 2 ══ */}
-      <section className="twocol-section">
+      {/* <section className="twocol-section">
         <div className="twocol-inner">
           <div className="fl-wrap">
 
-            {/* LEFT - Scroll-linked image */}
+          
             <div className="scroll-img-wrapper" ref={wrapperRef}>
               <div
                 ref={imgRef}
                 className="scroll-img-inner"
                 style={{
                   transform: "translateX(-130px)",
-                  // opacity: 0,
+               
                   willChange: "transform, opacity",
                   transition: "transform 0.08s ease-out, opacity 0.08s ease-out",
                 }}
@@ -147,7 +312,7 @@ export default function FoundersLanding() {
               </div>
             </div>
 
-            {/* RIGHT - Content */}
+        
             <div className="fl-content-col">
               <h2 className="hero-headline-2">Clear Answers You Can Use.</h2>
               <p className="hero-sub-2">
@@ -158,7 +323,7 @@ export default function FoundersLanding() {
 
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

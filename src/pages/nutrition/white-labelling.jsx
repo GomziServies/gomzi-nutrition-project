@@ -20,7 +20,8 @@ import WhiteLabellingVideoTestimonials from "./white-labelling-video-testimonial
 import NutraCTA from "./NutraCTA";
 import { faBullseye, faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import RequestQuoteModal from "../../components/nutrition/requestquotemodal";
+import RequestQuoteModal from "../../components/nutrition/requestquotemodal";
+import RequestQuoteButton from "../../components/nutrition/RequestQuoteButton";
 
 const processSteps = [
   "Product Consultation & Requirement Analysis",
@@ -296,6 +297,7 @@ function WhiteLabelling() {
 
   return (
     <>
+      <RequestQuoteModal />
       <ModalVideo
         channel="youtube"
         isOpen={isVideoOpen}
@@ -459,7 +461,7 @@ function WhiteLabelling() {
                   </h1>
 
                   <div className="mt-3">
-                    <h3 className="barlow-condensed-semi">
+                    <h3 className="barlow-condensed-semi f-24">
                       ISO 22000:2018 | WHO-GMP | HACCP | HALAL | FSSAI Certified
                       Manufacturing Facility
                     </h3>
@@ -484,30 +486,11 @@ function WhiteLabelling() {
                       Download Our Brochure
                     </a>
 
-                    {/* <a
-                      href="https://wa.me/918320077993?text=Hello%20I%20want%20to%20request%20a%20quote"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn fw-bold shadow-lg px-5 py-2 text-capitalize request-toggle barlow-condensed-semi "
-                      onMouseOver={(e) =>
-                        (e.currentTarget.style.transform = "scale(1.05)")
-                      }
-                      onMouseOut={(e) =>
-                        (e.currentTarget.style.transform = "scale(1)")
-                      }
-                    >
-                      Request a Quote
-                    </a> */}
-                    {/* <RequestQuoteModal /> */}
-                    <a
-                      href="https://wa.me/918320077993"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="homePage-btn cta btn fw-bold shadow-lg px-5 py-2 text-capitalize request-toggle barlow-condensed-semi "
-                    >
-                      Request a Quote
-                    </a>
-                    {/* <RequestQuoteModal/> */}
+                    <RequestQuoteButton
+                      className="homePage-btn cta"
+                      text={"Request Quote"}
+                      subject={"request a quote"}
+                    />
                   </div>
                 </div>
 
@@ -541,7 +524,7 @@ function WhiteLabelling() {
                             Gomzi Lifesciences LLP ?
                           </span>
                         </h2>
-                        <p className="mt-3 inter-regular">
+                        <p className="mt-3 inter-regular justify-text">
                           Gomzi Lifescience LLP is a leading nutraceutical
                           third-party manufacturing and white label partner in
                           India, a Surat-based B2B nutraceutical contract
@@ -568,14 +551,14 @@ function WhiteLabelling() {
                             </p>
                           </div>
                         </div>
-                        <p className="mt-3 inter-regular">
+                        <p className="mt-3 inter-regular justify-text">
                           Established in 2024 and led by Dr. Gautam Jani, we are
                           an ISO 22000:2018, WHO-GMP, HACCP, HALAL, and
                           FSSAI-certified company, committed to delivering
                           international-quality nutraceutical products at
                           competitive prices.
                         </p>{" "}
-                        <p className="mt-3 inter-regular">
+                        <p className="mt-3 inter-regular justify-text">
                           Based in Surat, Gujarat, we specialize in
                           nutraceutical contract manufacturing, dietary
                           supplement manufacturing, private label solutions, and
@@ -584,7 +567,7 @@ function WhiteLabelling() {
                           regulatory compliance, scalability, and consistent
                           product quality.
                         </p>{" "}
-                        <p className="mt-3 inter-regular">
+                        <p className="mt-3 inter-regular justify-text">
                           As a trusted nutraceutical third-party End-to-end
                           brand launch partner in India, we provide
                           premium-quality finished products tailored to each
@@ -604,7 +587,7 @@ function WhiteLabelling() {
                         "/assets/images/nutrition/dr-gautam-jani.webp"
                       }
                       className="img-fluid border-radius-20"
-                      alt="gomzilifesciences"
+                      alt="Dr-gautam-jani"
                     />
 
                     <div className="image-text">
@@ -625,7 +608,10 @@ function WhiteLabelling() {
                 Our Nutraceutical{" "}
                 <span className="highlight">Manufacturing Services</span>
               </h2>
-              <section className="service-bg-section">
+              <section
+                className="service-bg-section"
+                alt="Nutraceutical Third Party Manufacturing in India banner"
+              >
                 <div className="service-overlay">
                   <div className="container-fluid px-4 px-md-5">
                     <div className="row service-card-wrapper">
@@ -700,7 +686,7 @@ function WhiteLabelling() {
                   <div className="img-style">
                     <img
                       src="/assets/images/nutrition/products-combo.webp"
-                      alt="Gomzi Lifescience Third-Party Manufacturing Partner"
+                      alt="Gomzi Lifescience Third-Party Manufacturing Partner products"
                       className="img-fluid"
                     />
                   </div>
@@ -739,7 +725,7 @@ function WhiteLabelling() {
 
                   <Link
                     to="/third-party-manufacturing/multivitamins-tablet"
-                    className="text-decoration-none d-block"
+                    className="text-decoration-none d-block mb-3"
                   >
                     <div className="product-range-section">
                       <p className="f-18 mb-0 gomzi-llp-para inter-regular">
@@ -751,106 +737,123 @@ function WhiteLabelling() {
                       </p>
                     </div>
                   </Link>
+
+                  <Link
+                    to="/third-party-manufacturing/peanut-butter"
+                    className="text-decoration-none d-block"
+                  >
+                    <div className="product-range-section">
+                      <p className="f-18 mb-0 gomzi-llp-para inter-regular">
+                        <strong className="product-range-section-span-title barlow-condensed-semi f-24">
+                          Peanut butter
+                        </strong>
+                        <br />
+                        Creamy/Crunchy textures with dark chocolate, jaggery, or
+                        high-protein options
+                      </p>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
 
-            <div className="row mission-section align-items-start">
-              <div className="left-section product-range-order-1">
-                <div className="video-box" onClick={() => setShowVideo(true)}>
-                  <video
-                    className="illustration-image-home"
-                    muted
-                    loop
-                    playsInline
-                  >
-                    <source
-                      src="/assets/video/homepage-video.mp4"
-                      type="video/mp4"
+            <div>
+              <h2 className="mb-0 barlow-condensed-semi text-center">
+                Why Choose{" "}
+                <span className="highlight">Gomzi Lifescience LLP?</span>
+              </h2>
+
+              <div className="row mission-section align-items-start">
+                <div className="left-section product-range-order-1">
+                  <div className="video-box" onClick={() => setShowVideo(true)}>
+                    <img
+                      src="/assets/images/nutrition/video-cover-img.webp"
+                      alt="video preview"
+                      className="video-thumbnail"
                     />
-                  </video>
 
-                  <div className="play-btn">▶</div>
-                </div>
-              </div>
-              {showVideo && (
-                <div className="video-modal">
-                  <div className="video-container">
-                    <span
-                      className="close-btn"
-                      onClick={() => setShowVideo(false)}
-                    >
-                      ✖
-                    </span>
-
-                    <video controls autoPlay>
-                      <source
-                        src="/assets/video/homepage-video.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
+                    <div className="play-btn">▶</div>
                   </div>
                 </div>
-              )}
+                {showVideo && (
+                  <div className="video-modal">
+                    <div className="video-container">
+                      <span
+                        className="close-btn"
+                        onClick={() => setShowVideo(false)}
+                      >
+                        ✖
+                      </span>
 
-              <div className="left-section product-range-order-2">
-                <h2 className="mb-20 barlow-condensed-semi">
+                      <video controls autoPlay>
+                        <source
+                          src="/assets/video/homepage-video.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                  </div>
+                )}
+
+                <div className="left-section product-range-order-2">
+                  {/* <h2 className="mb-20 barlow-condensed-semi">
                   Why Choose{" "}
                   <span className="highlight">Gomzi Lifescience LLP?</span>
-                </h2>
+                </h2> */}
 
-                <div className="descriptionShow text-secondary whitelable-decription">
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className=" mb-0 iso-para inter-regular ">
-                        <strong>Starting at 50 KG:</strong> Start from just
-                        50–100 KG per product
-                      </p>
+                  <div className="descriptionShow text-secondary whitelable-decription">
+                    <div className="mb-3">
+                      <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                        <p className=" mb-0 iso-para inter-regular ">
+                          <strong>Starting at 50 KG:</strong> Start from just
+                          50–100 KG per product
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className=" mb-0 iso-para inter-regular ">
-                        <strong>Fast Turnaround:</strong> Get your products
-                        ready in 15–20 working days
-                      </p>
+                    <div className="mb-3">
+                      <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                        <p className=" mb-0 iso-para inter-regular ">
+                          <strong>Fast Turnaround:</strong> Get your products
+                          ready in 15–20 working days
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className=" mb-0 iso-para inter-regular ">
-                        <strong>Ready-to-Market Formulations:</strong> No R&D
-                        delays
-                      </p>
+                    <div className="mb-3">
+                      <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                        <p className=" mb-0 iso-para inter-regular ">
+                          <strong>Ready-to-Market Formulations:</strong> No R&D
+                          delays
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className=" mb-0 iso-para inter-regular ">
-                        <strong>Indian Flavour Innovation:</strong> Stand out
-                        with unique taste profiles
-                      </p>
+                    <div className="mb-3">
+                      <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                        <p className=" mb-0 iso-para inter-regular ">
+                          <strong>Indian Flavour Innovation:</strong> Stand out
+                          with unique taste profiles
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className=" mb-0 iso-para inter-regular ">
-                        <strong>Affordable Manufacturing: </strong>Cost
-                        advantage with Gujarat-based production
-                      </p>
+                    <div className="mb-3">
+                      <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                        <p className=" mb-0 iso-para inter-regular ">
+                          <strong>Affordable Manufacturing: </strong>Cost
+                          advantage with Gujarat-based production
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className=" mb-0 iso-para inter-regular ">
-                        <strong>ISO & WHO-GMP:</strong>Certified Manufacturing
-                        Facility
-                      </p>
+                    <div className="mb-3">
+                      <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                        <p className=" mb-0 iso-para inter-regular ">
+                          <strong>ISO & WHO-GMP:</strong>Certified Manufacturing
+                          Facility
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -898,7 +901,10 @@ function WhiteLabelling() {
               <h2 className="mp-title barlow-condensed-semi text-center text-black">
                 Our <span className="highlight">Manufacturing Process</span>
               </h2>
-              <section className="mp-section">
+              <section
+                className="mp-section"
+                alt="manufacturing process banner"
+              >
                 <div className="mp-overlay">
                   <div className="container-fluid px-4 px-md-5">
                     <div className="row">
@@ -922,76 +928,78 @@ function WhiteLabelling() {
               </section>
             </div>
 
-            <div className="row mission-section align-items-start">
-              <div className="left-section product-range-order-2">
-                <h2 className="mb-30 barlow-condensed-semi">
-                  More Than White Labelling -
-                  <span className="certified-compliant-div-hspan ">
-                    We Build Brands
-                  </span>
-                </h2>
+            <div>
+              <h2 className="mb-0 barlow-condensed-semi mt-5 text-center">
+                More Than White Labelling -
+                <span className="certified-compliant-div-hspan">
+                  We Build Brands
+                </span>
+              </h2>
 
-                <p className="mb-3 fts-18 inter-regular">
-                  Most third-party manufacturing companies stop at production.
-                  We go beyond that.
-                </p>
-                <p className="mb-3 fts-18 inter-regular">
-                  With Gomzi Lifesciences, you get:
-                </p>
+              <div className="row mission-section align-items-start">
+                <div className="left-section product-range-order-2">
+                  <p className="mb-3 fts-18 inter-regular">
+                    Most third-party manufacturing companies stop at production.
+                    We go beyond that.
+                  </p>
+                  <p className="mb-3 fts-18 inter-regular">
+                    With Gomzi Lifesciences, you get:
+                  </p>
 
-                <div className="descriptionShow text-secondary whitelable-decription">
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className="mb-0 iso-para inter-regular">
-                        Product selection & guidance
-                      </p>
+                  <div className="descriptionShow text-secondary whitelable-decription">
+                    <div className="mb-3">
+                      <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                        <p className="mb-0 iso-para inter-regular">
+                          Product selection & guidance
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mb-3">
+                      <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                        <p className="mb-0 iso-para inter-regular">
+                          product packaging & label design
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mb-3">
+                      <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                        <p className=" mb-0 iso-para inter-regular">
+                          Packaging solutions
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mb-3">
+                      <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                        <p className="mb-0 iso-para inter-regular">
+                          E-commerce site development support
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mb-3">
+                      <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
+                        <p className="mb-0 iso-para inter-regular">
+                          Marketing setup assistance
+                        </p>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className="mb-0 iso-para inter-regular">
-                        product packaging & label design
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className=" mb-0 iso-para inter-regular">
-                        Packaging solutions
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className="mb-0 iso-para inter-regular">
-                        E-commerce site development support
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center p-3 why-choose-gomzi-para">
-                      <p className="mb-0 iso-para inter-regular">
-                        Marketing setup assistance
-                      </p>
-                    </div>
-                  </div>
+                  <p className="mb-3 fts-18 text-center inter-regular">
+                    <strong>One partner. Zero hassle. Faster launch.</strong>
+                  </p>
                 </div>
 
-                <p className="mb-3 fts-18 text-center inter-regular">
-                  <strong>One partner. Zero hassle. Faster launch.</strong>
-                </p>
-              </div>
-
-              <div className="left-section product-range-order-1">
-                <img
-                  src="/assets/images/nutrition/gym-owner.webp"
-                  alt="Gomzi Lifesciences"
-                  className="illustration-image custom-small-img  pb-5 pb-md-0"
-                />
+                <div className="left-section product-range-order-1">
+                  <img
+                    src="/assets/images/nutrition/gym-owner.webp"
+                    alt="Gomzi Lifesciences"
+                    className="illustration-image custom-small-img  pb-5 pb-md-0"
+                  />
+                </div>
               </div>
             </div>
           </div>

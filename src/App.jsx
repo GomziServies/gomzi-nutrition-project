@@ -40,6 +40,9 @@ import WheyVsPlantProteinWhichIsMoreProfitabletoManufacture from "./pages/white-
 import HowSportsSupplementsAreManufacturedFromIngredientstoPackaging from "./pages/white-labelling-blogs/how-sports-supplements-are-manufactured-from-ingredients-to-packaging";
 import TheFutureofNutraceuticalManufacturingin202610GameChangingTrendsBrandsCantIgnore from "./pages/white-labelling-blogs/the-future-of-nutraceutical-manufacturing-in 2026-10-game-changing-trends-brands-cant-ignore";
 import TheHiddenCostsofStartingaNutraceuticalBrand from "./pages/white-labelling-blogs/the-hidden-costs-of-starting-a-nutraceutical-brand";
+import TheRiseofWhiteLabelSupplementsinIndiaWhyBrandsareChoosingOutsourced from "./pages/white-labelling-blogs/the-rise-of-white-label-supplements-in-india-why-brands-are-choosing-outsourced";
+import HowMuchInvestmentisRequiredtoStartaSportsNutritionBrand from "./pages/white-labelling-blogs/how-much-investment-is-required-to-start-a-sports-nutrition-brand";
+import IndiaLeadingCDMOforFitnessBrandsProteinSupplementManufacturing from "./pages/white-labelling-blogs/india-leadingcdmo-for-fitness-brands -protein-supplement-manufacturing";
 
 const UserProfile = lazy(() => import("./pages/account/profile"));
 const UserOrder = lazy(() => import("./pages/account/order"));
@@ -606,6 +609,24 @@ function App() {
         <Route
           path="/blogs/the-hidden-costs-of-starting-a-nutraceutical-brand"
           element={<TheHiddenCostsofStartingaNutraceuticalBrand />}
+        />
+
+        <Route
+          path="/blogs/the-rise-of-white-label-supplements-in-india-why-brands-are-choosing-outsourced"
+          element={
+            <TheRiseofWhiteLabelSupplementsinIndiaWhyBrandsareChoosingOutsourced />
+          }
+        />
+        <Route
+          path="/blogs/how-much-investment-is-required-to-start-a-sports-nutrition-brand"
+          element={<HowMuchInvestmentisRequiredtoStartaSportsNutritionBrand />}
+        />
+
+        <Route
+          path="/blogs/india-leadingcdmo-for-fitness-brands -protein-supplement-manufacturing"
+          element={
+            <IndiaLeadingCDMOforFitnessBrandsProteinSupplementManufacturing />
+          }
         />
 
         <Route

@@ -23,10 +23,17 @@ const data = [
 ];
 
 const WhoSection = () => {
+  const handleContactClick = () => {
+    setTimeout(() => {
+      const contactEl = document.getElementById("contact");
+      if (contactEl) {
+        contactEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 50);
+  };
   return (
     <section className="ws-root" id="who">
       <div className="ws-inner">
-
         {/* Heading */}
         <h2 className="ws-heading text-center">
           Build, Scale <em>OR</em> Switch.
@@ -46,7 +53,7 @@ const WhoSection = () => {
               <div className="ws-card-content">
                 <div className="ws-card-top">
                   <span className="ws-num">{item.id}</span>
-                <h4 className="px-3"> {item.title}</h4>
+                  <h4 className="px-3"> {item.title}</h4>
                 </div>
                 <div className="ws-divider" />
                 <p>{item.desc}</p>
@@ -54,6 +61,12 @@ const WhoSection = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="ws-bottom-cta">
+        <button className="btn-primary-green" onClick={handleContactClick}>
+          Request Sample & Start Your Whey Brand
+        </button>
       </div>
     </section>
   );

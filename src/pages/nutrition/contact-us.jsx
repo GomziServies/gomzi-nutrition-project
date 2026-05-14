@@ -5,12 +5,16 @@ import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import WhatsappHeaderApp from "../../components/NutritionWhatsappHeaderBtn";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import RequestQuoteButton from "../../components/nutrition/RequestQuoteButton";
+import RequestQuoteModal from "../../components/nutrition/requestquotemodal";
 
 function ContactUs() {
   const canonicalUrl = window.location.href;
 
   return (
     <>
+      <RequestQuoteModal />
+
       <Helmet>
         <title>Contact Us | Gomzi Lifescience Family – We're Here to He</title>
         <meta
@@ -97,80 +101,117 @@ function ContactUs() {
       <NutritionHeader />
       <WhatsappHeaderApp
         message={
-          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifescience Details. "
+          "Hello, I wanted to know more about Terms & Conditions for Gomzi Lifesciences LLP Details. "
         }
         options={{ pageRef: true }}
       />
-      <section className="margintop-nutrition">
+
+      <section className="contact-us-section margintop-nutrition">
         <div className="container-fluid w-80">
-          <div className="row py-4">
-            <div className="col-12 pt-4 text-left">
-              <h1 className=" f-30 mb-2 text-black text-uppercase barlow-condensed-extra">
-                <b>Contact us</b>
-              </h1>
-            </div>
-            <div className="col-12 mt-4">
-              <div className="row col-md-6 d-flex align-items-center pr-0">
-                <div className="col-12 mb-3">
-                  <div className="blog-product-card-main">
-                    <div className="blog-product-card bg-white text-center py-5  br-15">
-                      <div className="col-12 d-flex align-items-center justify-content-between">
-                        <div className="col">
-                          <h2 className=" f-24 text-black text-uppercase barlow-condensed-semi">
-                            Email
-                          </h2>
-                        </div>
-                      </div>
-                      <div class="col-12 p-0">
-                        <Link
-                          to="tel:+918320077993"
-                          className="text-secondary inter-500"
-                        >
-                          {" "}
-                          <b>info@gomzilifesciences.in</b>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
+          <div className="contact-us-wrapper">
+            <div className="contact-us-left">
+              <h2 className="mb-3 barlow-condensed-extra">
+                <span className="highlight-contact-us">Gomzi Lifesciences</span>{" "}
+                LLP
+              </h2>
+
+              <div className="info-box">
+                <div className="icon">
+                  <i className="fas fa-phone"></i>
                 </div>
-                <div className="col-12 mb-3">
-                  <div className="blog-product-card-main">
-                    <div className="blog-product-card bg-white text-center py-5  br-15">
-                      <div className="col-12 d-flex align-items-center justify-content-between">
-                        <div className="col">
-                          <h2 className=" f-24 text-black text-uppercase barlow-condensed-semi">
-                            Contact No.
-                          </h2>
-                        </div>
-                      </div>
-                      <div class="col-12 p-0">
-                        <Link
-                          to="tel:+918320077993"
-                          className="text-secondary inter-500"
-                        >
-                          {" "}
-                          <b>+91 8320077993</b>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
+                <div>
+                  <h4 className="barlow-condensed-semi">Contact Number:</h4>
+                  <p>
+                    {" "}
+                    <a href="tel:+918320077993">+91 8320077993</a>
+                  </p>
                 </div>
               </div>
-              <div className="row col-md-6 pr-0">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7440.1362802841695!2d72.73385979145098!3d21.189451922001158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s443%2C444%2C445%2C%201St%20Floor%2C%20RJD%20Textile%20Park%2C%20At.Ichchhapor%2C%20Hazira%20Road%2C%20Surat%2C%20Gujarat%20394510!5e0!3m2!1sen!2sin!4v1776337784490!5m2!1sen!2sin"
-                  height="450"
-                  className="check-out-width-border"
-                  title="Gomzi Lifesciences Location Map"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+
+              <div className="info-box">
+                <div className="icon">
+                  <i className="fab fa-whatsapp"></i>
+                </div>
+                <div>
+                  <h4 className="barlow-condensed-semi">WhatsApp:</h4>
+                  <p>
+                    <a href="https://wa.me/+918320077993" target="_blank">
+                      Chat with us on WhatsApp
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <div className="info-box">
+                <div className="icon">
+                  <i className="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h4 className="barlow-condensed-semi">Email Address:</h4>
+                  <p>
+                    {" "}
+                    <a href="mailto:info@gomzilifesciences.in">
+                      info@gomzilifesciences.in
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <div className="info-box">
+                <div className="icon">
+                  <i className="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h4 className="barlow-condensed-semi">Address:</h4>
+                  <p>
+                    443,444,445, 1St Floor, RJD Textile Park, At.Ichchhapor,
+                    Hazira Road, Surat, Gujarat 394510
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="contact-us-right">
+              <h2 className="mb-3 barlow-condensed-extra">
+                <span className="highlight-contact-us">Our</span> Location
+              </h2>
+
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7440.1362802841695!2d72.73385979145098!3d21.189451922001158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s443%2C444%2C445%2C%201St%20Floor%2C%20RJD%20Textile%20Park%2C%20At.Ichchhapor%2C%20Hazira%20Road%2C%20Surat%2C%20Gujarat%20394510!5e0!3m2!1sen!2sin!4v1776337784490!5m2!1sen!2sin"
+                height="450"
+                className="check-out-width-border"
+                title="Gomzi Lifesciences Location Map"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container-fluid w-80">
+          <div className="row py-4 justify-content-center">
+            <div className="col-lg-6 col-md-6 col-12 mt-4">
+              <div className="contact-us-bottom text-center">
+                <h2 className="mb-3 barlow-condensed-extra">
+                  <span className="highlight-contact-us">Send A</span> Message
+                </h2>
+
+                <p className="desc">Have questions? We are here to help you.</p>
+
+                <RequestQuoteButton
+                  className="contact-us-btn cta"
+                  text={"Contact Us →"}
+                  subject={"contact us"}
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <p className="d-none">
         whey protein and, peanut butter peanut butter, peanut butters, why
         protein, protein in powder, whey product, wayne protein, whey protein

@@ -106,7 +106,8 @@ const Faqwheylanding = () => {
 
         {/* ── LEFT ── */}
         <div>
-          <h2 className="faq-left-heading">Know This Before You Move.</h2>
+          <h2 className="faq-left-heading">Frequently Asked
+Questions</h2>
 
           {faqData.map(item => (
             <FAQItem

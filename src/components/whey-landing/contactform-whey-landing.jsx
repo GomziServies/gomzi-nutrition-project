@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import { publicAxiosInstance } from "../../assets/js/config/api";
 // import './ContactFormWheyLanding.css'
 
@@ -41,13 +39,44 @@ const stageLabels = {
   switching_manufacturer: "Switching from another manufacturer",
 };
 
+const businessStageLabels = {
+  launching_new_brand: "Launching a new brand",
+  scaling_existing_brand: "Scaling an existing brand",
+  switching_manufacturer: "Switching manufacturer",
+  exploring_future: "Exploring for future",
+};
+
+const requirementLabels = {
+  sample: "Sample",
+  pricing: "Pricing",
+  formulation_guidance: "Formulation guidance",
+  packaging_support: "Packaging support",
+  full_launch_support: "Full launch support",
+};
+
+const startTimelineLabels = {
+  immediately: "Immediately",
+  within_15_days: "Within 15 days",
+  within_30_days: "Within 30 days",
+  after_1_2_months: "After 1–2 months",
+  just_researching: "Just researching",
+};
+
 const ContactFormWheyLanding = () => {
-  const navigate = useNavigate();
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   phone: "",
+  //   instagram: "",
+  //   stage: "",
+  // });
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    instagram: "",
-    stage: "",
+    city: "",
+    businessStage: "",
+    requirement: "",
+    startTimeline: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -63,17 +92,37 @@ const ContactFormWheyLanding = () => {
     const trimmedPhone = formData.phone.replace(/\s/g, "");
 
     if (!trimmedName) {
-      toast.error("Please enter your name.");
+      alert("Please enter your name.");
       return;
     }
 
     if (!/^[6-9]\d{9}$/.test(trimmedPhone)) {
-      toast.error("Please enter a valid 10-digit phone number.");
+      alert("Please enter a valid 10-digit phone number.");
       return;
     }
 
     if (!formData.stage) {
-      toast.error("Please select your current stage.");
+      alert("Please select your current stage.");
+      return;
+    }
+
+    if (!formData.city.trim()) {
+      alert("Please enter your city.");
+      return;
+    }
+
+    if (!formData.businessStage) {
+      alert("Please select your business stage.");
+      return;
+    }
+
+    if (!formData.requirement) {
+      alert("Please select your requirement.");
+      return;
+    }
+
+    if (!formData.startTimeline) {
+      alert("Please select your start timeline.");
       return;
     }
 
@@ -85,59 +134,63 @@ const ContactFormWheyLanding = () => {
         name: trimmedName,
         email: `wheylanding+${trimmedPhone}@gomzi.in`,
         mobile: trimmedPhone,
+        // message: [
+        //   `Instagram Handle / Brand Name: ${formData.instagram.trim() || "N/A"}`,
+        //   `Stage: ${stageLabels[formData.stage] || formData.stage}`,
+        // ].join("\n"),
         message: [
-          `Instagram Handle / Brand Name: ${formData.instagram.trim() || "N/A"}`,
-          `Stage: ${stageLabels[formData.stage] || formData.stage}`,
+          `City: ${formData.city}`,
+          `Business Stage: ${businessStageLabels[formData.businessStage]}`,
+          `Requirement: ${requirementLabels[formData.requirement]}`,
+          `Start Timeline: ${startTimelineLabels[formData.startTimeline]}`,
         ].join("\n"),
         source: window.location.href,
       });
 
+      // setFormData({
+      //   name: "",
+      //   phone: "",
+      //   instagram: "",
+      //   stage: "",
+      // });
       setFormData({
         name: "",
         phone: "",
-        instagram: "",
-        stage: "",
+        city: "",
+        businessStage: "",
+        requirement: "",
+        startTimeline: "",
       });
-      setTimeout(() => {
-        navigate("/thank-you");
-      }, 900);
+      alert("Form submitted! Our expert will reach out shortly.");
     } catch (error) {
       console.error("Whey landing contact form submission error:", error);
-      toast.error("Something went wrong. Please try again.");
+      alert("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="whey-wrap">
+    <div className="whey-wrap" id="contact">
       <div className="whey-section">
         {/* LEFT PANEL */}
         <div className="whey-left">
           <h1 className="hero-headline">
-            Launch Your Own
-            <br />
-            <span>Protein Brand.</span>
+            Launch Your Protein Brand{" "}
+            <span>With Clear Manufacturing Guidance</span>
           </h1>
 
           <p className="hero-sub">
-            Start with clarity on formulation, pricing, quality, and timelines.
-            Then decide the next move with confidence.
+            Get sample support, formulation guidance, MOQ clarity, pricing
+            direction, and production timelines before you place your first
+            batch.
           </p>
 
           <div className="trust-grid">
-            <div className="trust-chip">
-              <CheckCircleIcon /> GMP Certified
-            </div>
-            <div className="trust-chip">
-              <BriefcaseIcon /> Clear MOQ Guidance
-            </div>
-            <div className="trust-chip">
-              <CupIcon /> No Hard Sell
-            </div>
-            <div className="trust-chip">
-              <LockIcon /> Confidential
-            </div>
+            <div className="trust-chip">Sample Before Ord</div>
+            <div className="trust-chip">MOQ From 50 KG</div>
+            <div className="trust-chip">Private Label Support</div>
+            <div className="trust-chip">Expert Formulation Help</div>
           </div>
 
           <div className="stat-row">
@@ -157,13 +210,14 @@ const ContactFormWheyLanding = () => {
         </div>
 
         {/* RIGHT PANEL */}
-        <div className="whey-right" id="contact">
+        <div className="whey-right">
           <div className="form-card">
             <h2 className="form-title">
-              Talk To Our Manufacturing Expert Free.
+              Request Sample & Start Your Whey Brand
             </h2>
             <p className="form-subtitle">
-              Get clarity before you build, scale, or switch.
+              Fill the details below. Our team will share sample, MOQ, pricing,
+              and manufacturing guidance on WhatsApp.
             </p>
             <div className="form-divider" />
 
@@ -193,44 +247,131 @@ const ContactFormWheyLanding = () => {
               </div>
 
               <div className="field-group">
-                <label className="field-label">
-                  Instagram Handle / Brand Name
-                </label>
+                <label className="field-label">City</label>
+
                 <input
                   className="form-input"
                   type="text"
-                  name="instagram"
-                  placeholder="@yourhandle or brand name"
-                  value={formData.instagram}
+                  name="city"
+                  placeholder="Enter your city"
+                  value={formData.city}
                   onChange={handleChange}
                 />
               </div>
 
               <div className="field-group">
-                <label className="field-label">Where Are You Right Now?</label>
+                <label className="field-label">
+                  Are you launching a new brand or scaling an existing one?
+                </label>
+
                 <select
-                  className={`form-select ${formData.stage ? "value-selected" : "placeholder-active"}`}
-                  name="stage"
-                  value={formData.stage}
+                  className={`form-select ${
+                    formData.businessStage
+                      ? "value-selected"
+                      : "placeholder-active"
+                  }`}
+                  name="businessStage"
+                  value={formData.businessStage}
                   onChange={handleChange}
                 >
                   <option value="" disabled>
-                    Select your stage
+                    Select option
                   </option>
-                  <option value="Starting_my_first_brand">
-                    Starting my first brand
+
+                  <option value="launching_new_brand">
+                    Launching a new brand
                   </option>
-                  <option value="already_selling">
-                    Already selling, looking to scale
+
+                  <option value="scaling_existing_brand">
+                    Scaling an existing brand
                   </option>
+
                   <option value="switching_manufacturer">
-                    Switching from another manufacturer
+                    Switching manufacturer
+                  </option>
+
+                  <option value="exploring_future">Exploring for future</option>
+                </select>
+              </div>
+
+              <div className="field-group">
+                <label className="field-label">What do you need first?</label>
+
+                <select
+                  className={`form-select ${
+                    formData.requirement
+                      ? "value-selected"
+                      : "placeholder-active"
+                  }`}
+                  name="requirement"
+                  value={formData.requirement}
+                  onChange={handleChange}
+                >
+                  <option value="" disabled>
+                    Select requirement
+                  </option>
+
+                  <option value="sample">Sample</option>
+
+                  <option value="pricing">Pricing</option>
+
+                  <option value="formulation_guidance">
+                    Formulation guidance
+                  </option>
+
+                  <option value="packaging_support">Packaging support</option>
+
+                  <option value="full_launch_support">
+                    Full launch support
                   </option>
                 </select>
               </div>
 
-              <button type="submit" className="cta-btn">
-                Talk to Our Expert - It's Free
+              <div className="field-group">
+                <label className="field-label">
+                  When do you want to start?
+                </label>
+
+                <select
+                  className={`form-select ${
+                    formData.startTimeline
+                      ? "value-selected"
+                      : "placeholder-active"
+                  }`}
+                  name="startTimeline"
+                  value={formData.startTimeline}
+                  onChange={handleChange}
+                >
+                  <option value="" disabled>
+                    Select timeline
+                  </option>
+
+                  <option value="immediately">Immediately</option>
+
+                  <option value="within_15_days">Within 15 days</option>
+
+                  <option value="within_30_days">Within 30 days</option>
+
+                  <option value="after_1_2_months">After 1–2 months</option>
+
+                  <option value="just_researching">Just researching</option>
+                </select>
+              </div>
+
+              <button
+                type="submit"
+                className="cta-btn"
+                disabled={
+                  !formData.name.trim() ||
+                  !formData.phone.trim() ||
+                  !formData.city.trim() ||
+                  !formData.businessStage ||
+                  !formData.requirement ||
+                  !formData.startTimeline ||
+                  isSubmitting
+                }
+              >
+                Request Sample & Start Your Whey Brand
               </button>
             </form>
           </div>

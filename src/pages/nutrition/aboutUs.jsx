@@ -5,11 +5,14 @@ import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import WhatsappHeaderApp from "../../components/NutritionWhatsappHeaderBtn";
 import "../../assets/css/about.css";
 import "../../assets/css/nutrition.css";
+import RequestQuoteButton from "../../components/nutrition/RequestQuoteButton";
+import RequestQuoteModal from "../../components/nutrition/requestquotemodal";
 
 function aboutUs() {
   const canonicalUrl = window.location.href;
   return (
     <>
+      <RequestQuoteModal />
       <Helmet>
         <title>
           About Us | Gomzi Lifescience Family - Your Trusted Wellness Partner
@@ -98,14 +101,11 @@ function aboutUs() {
               </p>
 
               <div class="about-hero-buttons">
-                <a
-                  href="https://wa.me/918320077993"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="about-primary-btn barlow-condensed-semi"
-                >
-                  Request a Quote
-                </a>
+                <RequestQuoteButton
+                  className="about-primary-btn barlow-condensed-semi"
+                  text={" Request a Quote"}
+                  subject={"request a quote"}
+                />
 
                 <button
                   className="about-secondary-btn barlow-condensed-semi"
@@ -309,7 +309,7 @@ function aboutUs() {
       <section className="brand-start-section">
         <div className="brand-start-container">
           <h2 className="brand-start-title barlow-condensed-semi">
-            Start Your Brand With GLS
+            Start Your Brand With Gomzi Lifesciences LLP
           </h2>
 
           <p className="brand-start-desc inter-regular">

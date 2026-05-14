@@ -5,9 +5,35 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 33,
+    title:
+      "India’s Leading CDMO for Fitness Brands — Protein & Supplement Manufacturing",
+    url: "/blogs/india-leadingcdmo-for-fitness-brands -protein-supplement-manufacturing",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/india-leadingcdmo-for-fitness-brands -protein-supplement-manufacturing.webp",
+  },
+  {
+    number: 32,
+    title: "Cost to Start a Sports Nutrition Brand: 2026 Investment Guide",
+    url: "/blogs/how-much-investment-is-required-to-start-a-sports-nutrition-brand",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-much-investment-is-required-to-start-a-sports-nutrition-brand.webp",
+  },
+  {
+    number: 31,
+    title:
+      "The Rise of White Label Supplements in India: Why Brands are Choosing Outsourced R&D in 2026",
+    url: "/blogs/the-rise-of-white-label-supplements-in-india-why-brands-are-choosing-outsourced",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/the-rise-of-white-label-supplements-in-india-why-brands-are-choosing-outsourced.webp",
+  },
+  {
     number: 30,
     title:
-      "The Hidden Costs of Starting a Nutraceutical Brand (What Most Manufacturers Don’t Tell You)",
+      "The Hidden Costs of Starting a Nutraceutical Brand (What Most Manufacturers Don't Tell You)",
     url: "/blogs/the-hidden-costs-of-starting-a-nutraceutical-brand",
     imgSrc:
       process.env.PUBLIC_URL +

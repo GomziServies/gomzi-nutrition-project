@@ -16,6 +16,8 @@ import { Helmet } from "react-helmet";
 import WhatsappHeaderApp from "../components/NutritionWhatsappHeaderBtn";
 import WhiteLabellingVideoTestimonials from "./nutrition/white-labelling-video-testimonials";
 import CertifiedProduct from "../components/nutrition/certified";
+import RequestQuoteButton from "../components/nutrition/RequestQuoteButton";
+import RequestQuoteModal from "../components/nutrition/requestquotemodal";
 
 const logos = [
   {
@@ -79,6 +81,7 @@ function Home() {
 
   return (
     <>
+      <RequestQuoteModal />
       <Helmet>
         <title>
           Gomzi Lifescience | Best Whey Protein in India | Premium Supplements
@@ -263,12 +266,20 @@ function Home() {
                       Multivitamin Tablets
                     </a>
                   </li>
+                  <li>
+                    <a
+                      className="inter-500"
+                      href="/third-party-manufacturing/peanut-butter"
+                    >
+                      Peanut Butter
+                    </a>
+                  </li>
                 </ul>
               </li>
 
               <li className="has-dropdown">
                 <a href="#" className="inter-500">
-                  Why GLS{" "}
+                  Why Gomzi Lifesciences{" "}
                   <span className="dd-arrow">
                     <i class="fa-solid fa-caret-down"></i>
                   </span>
@@ -299,24 +310,19 @@ function Home() {
               <li>
                 <a
                   className="inter-500"
-                  href="/read-more-white-labelling-blogs"
+                  href="/nutrition/contact-us"
+                  onClick={sideclose}
                 >
-                  Blog
+                  Contact Us
                 </a>
               </li>
 
               <li>
                 <a
                   className="inter-500"
-                  href="#faq"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document
-                      .getElementById("faq")
-                      .scrollIntoView({ behavior: "smooth" });
-                  }}
+                  href="/read-more-white-labelling-blogs"
                 >
-                  FAQ
+                  Blog
                 </a>
               </li>
             </ul>
@@ -393,12 +399,22 @@ function Home() {
                       Multivitamin Tablets
                     </a>
                   </li>
+
+                  <li>
+                    <a
+                      className="inter-500"
+                      href="/third-party-manufacturing/peanut-butter"
+                      onClick={sideclose}
+                    >
+                      Peanut Butter
+                    </a>
+                  </li>
                 </ul>
               </li>
 
               <li className="mob-has-dropdown">
                 <a className="inter-500">
-                  Why GLS{" "}
+                  Why Gomzi Lifesciences{" "}
                   <span className="dd-arrow">
                     <i class="fa-solid fa-caret-down"></i>
                   </span>
@@ -430,6 +446,17 @@ function Home() {
                   </li>
                 </ul>
               </li>
+
+              <li>
+                <a
+                  className="inter-500"
+                  href="/nutrition/contact-us"
+                  onClick={sideclose}
+                >
+                  Contact Us
+                </a>
+              </li>
+
               <li>
                 <a
                   className="inter-500"
@@ -438,31 +465,13 @@ function Home() {
                   Blog
                 </a>
               </li>
-              <li>
-                <a
-                  className="inter-500"
-                  href="#faq"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document
-                      .getElementById("faq")
-                      .scrollIntoView({ behavior: "smooth" });
-                    sideclose();
-                  }}
-                >
-                  FAQ
-                </a>
-              </li>
 
               <Link to="">
-                <a
-                  href="https://wa.me/918320077993"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="homePage-btn cta"
-                >
-                  Get Free Quote
-                </a>
+                <RequestQuoteButton
+                  className="homePage-btn cta barlow-condensed-semi"
+                  text={"Get Free Quote"}
+                  subject={"request a quote"}
+                />
               </Link>
             </ul>
           </div>
@@ -476,14 +485,11 @@ function Home() {
 
           <div className="login d-lg-block d-none">
             <ul>
-              <a
-                href="https://wa.me/918320077993"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="homePage-btn cta"
-              >
-                Get Free Quote
-              </a>
+              <RequestQuoteButton
+                className="homePage-btn cta barlow-condensed-semi"
+                text={"Get Free Quote"}
+                subject={"request a quote"}
+              />
             </ul>
           </div>
         </div>
@@ -492,7 +498,10 @@ function Home() {
       <section>
         {" "}
         <div className="homepage-hero-section ">
-          <div className="homepage-hero-banner">
+          <div
+            className="homepage-hero-banner"
+            alt="Launch Your Own Supplement Brand banner"
+          >
             <div className="homepage-hero-overlay"></div>
             <div className="homepage-hero-content">
               <div className="homepage-badge">
@@ -509,14 +518,11 @@ function Home() {
                 website - one partner, 15-20 day delivery, 50 KG MOQ.
               </p>
               <div class="homepage-hbtns">
-                <a
-                  href="https://wa.me/918320077993"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="homepage-bp barlow-condensed-semi "
-                >
-                  Book Your Free Roadmap
-                </a>
+                <RequestQuoteButton
+                  className="homepage-bp barlow-condensed-semi"
+                  text={"Book your Free Roadmap"}
+                  subject={"Book from free road map"}
+                />
 
                 <button
                   className="homepage-bg barlow-condensed-semi"
@@ -600,7 +606,7 @@ function Home() {
                 alt="whey protein"
               />
               <h3 className="inter-500">Whey Protein</h3>
-              <p className="int-regular">
+              <p className="int-regular text-capitalize">
                 Concentrate, isolate, blends. 25g+ protein per serve in flavours
                 customers love.
               </p>
@@ -618,7 +624,7 @@ function Home() {
                 alt="Pre-Workout Supplement"
               />
               <h3 className="inter-500">Sports Nutrition</h3>
-              <p className="int-regular">
+              <p className="int-regular text-capitalize">
                 Pre-workout, BCAA, creatine. Custom flavours for the Indian
                 palate.
               </p>
@@ -636,7 +642,7 @@ function Home() {
                 alt="multivitamin-tablet"
               />
               <h3 className="inter-500">Multivitamin Tablets</h3>
-              <p className="int-regular">
+              <p className="int-regular text-capitalize">
                 Daily wellness essentials. Clinically backed for men, women, and
                 active lifestyles.
               </p>
@@ -647,13 +653,31 @@ function Home() {
                 Explore Range
               </Link>
             </div>
+
+            <div className="card">
+              <img
+                src="/assets/images/nutrition/peanut-butter-combo-1.webp"
+                alt="peanut-butter"
+              />
+              <h3 className="inter-500">Peanut Butter</h3>
+              <p className="int-regular text-capitalize">
+                Natural, clean-label ingredients. Zero hydrogenated oils, no
+                added sugar, and high-protein content
+              </p>
+              <Link
+                to="/third-party-manufacturing/peanut-butter"
+                className="explore-range-btn barlow-condensed-semi"
+              >
+                Explore Range
+              </Link>
+            </div>
           </div>
 
           <div className="product-cta-bar">
             <p className="inter-regular">
-              Want your own brand on these products?{" "}
+              Your brand, our expertise —{" "}
               <span className="inter-500">
-                We handle everything — formula to label.
+                from product formulation to finished packaging.
               </span>
             </p>
 
@@ -722,7 +746,10 @@ function Home() {
           <div class="works-journey-steps">
             <div class="works-step">
               <div class="works-step-img">
-                <img src="/assets/images/nutrition/idea-new-2.webp" alt="" />
+                <img
+                  src="/assets/images/nutrition/idea-new-2.webp"
+                  alt="idea"
+                />
               </div>
 
               <div class="works-step-circle">1</div>
@@ -737,7 +764,7 @@ function Home() {
               <div class="works-step-img">
                 <img
                   src="/assets/images/nutrition/formulation-new-3.webp"
-                  alt=""
+                  alt="formulation"
                 />
               </div>
               <div class="works-step-circle">2</div>
@@ -752,7 +779,7 @@ function Home() {
               <div class="works-step-img">
                 <img
                   src="/assets/images/nutrition/manufacturer-new.webp"
-                  alt=""
+                  alt="manufacturing"
                 />
               </div>
               <div class="works-step-circle">3</div>
@@ -767,7 +794,7 @@ function Home() {
               <div class="works-step-img">
                 <img
                   src="/assets/images/nutrition/whey-protein-combo.webp"
-                  alt=""
+                  alt="packaging"
                 />
               </div>
               <div class="works-step-circle">4</div>
@@ -780,7 +807,10 @@ function Home() {
 
             <div class="works-step">
               <div class="works-step-img">
-                <img src="/assets/images/nutrition/website-new.webp" alt="" />
+                <img
+                  src="/assets/images/nutrition/website-new.webp"
+                  alt="website"
+                />
               </div>
               <div class="works-step-circle">5</div>
               <h4 className="barlow-condensed-semi">Website</h4>
@@ -792,39 +822,6 @@ function Home() {
           </div>
         </div>
       </section>
-
-      {/* <section class="why-section bg-white">
-        <div class="why-container">
-          <div className="left-section product-range-order-1">
-            <div className="video-box" onClick={() => setShowVideo(true)}>
-              <video className="illustration-image-home" muted loop playsInline>
-                <source
-                  src="/assets/video/homepage-video.mp4"
-                  type="video/mp4"
-                />
-              </video>
-
-              <div className="play-btn">▶</div>
-            </div>
-          </div>
-          {showVideo && (
-            <div className="video-modal">
-              <div className="video-container">
-                <span className="close-btn" onClick={() => setShowVideo(false)}>
-                  ✖
-                </span>
-
-                <video controls autoPlay>
-                  <source
-                    src="/assets/video/homepage-video.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-            </div>
-          )}
-        </div>
-      </section> */}
 
       <section class="qua-section" id="certification">
         <p className="qua-label barlow-condensed-semi">Quality Assurance</p>
@@ -925,7 +922,7 @@ function Home() {
               <div>
                 <img
                   src="/assets/images/nutrition/fitness-creator.webp"
-                  alt=""
+                  alt="Fitness Creator"
                 />
               </div>
               <h3 className="inter-500">Fitness Creator</h3>
@@ -937,7 +934,10 @@ function Home() {
 
             <div className="who-card">
               <div>
-                <img src="/assets/images/nutrition/gym-owner.webp" alt="" />
+                <img
+                  src="/assets/images/nutrition/gym-owner.webp"
+                  alt="Gym Owner"
+                />
               </div>
 
               <h3 className="inter-500">Gym Owner</h3>
@@ -951,7 +951,7 @@ function Home() {
               <div>
                 <img
                   src="/assets/images/nutrition/pharma-distributor.webp"
-                  alt=""
+                  alt="Pharma Distributor"
                 />
               </div>
 
@@ -1087,10 +1087,11 @@ function Home() {
           </p>
 
           <div class="launch-hbtns">
-            <button class="launch-bp barlow-condensed-semi ">
-              Get Free Quote →
-            </button>
-
+            <RequestQuoteButton
+              className="launch-bp barlow-condensed-semi"
+              text={"Get Free Quote →"}
+              subject={"request a quote"}
+            />
             <a
               href="https://wa.me/918320077993"
               target="_blank"
@@ -1123,6 +1124,18 @@ function Home() {
                       info@gomzilifesciences.in
                     </Link>
                   </p>
+                  <p className="mb-4 int-regular location-text">
+                    <a
+                      href="https://www.google.com/maps?q=443,444,445,RJD+Textile+Park,Ichchhapor,Hazira+Road,Surat,Gujarat,394510"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="location-link"
+                    >
+                      <i className="fas fa-map-marker-alt location-icon"></i>
+                      443,444,445, 1st Floor, RJD Textile Park, At. Ichchhapor,
+                      Hazira Road, Surat, Gujarat 394510
+                    </a>
+                  </p>
                 </div>
               </div>
 
@@ -1148,6 +1161,11 @@ function Home() {
                     Multivitamin
                   </Link>
                 </p>
+                <p className="mb-3">
+                  <Link to="/third-party-manufacturing/peanut-butter">
+                    Peanut Butter
+                  </Link>
+                </p>
               </div>
 
               <div className="col-md-2 f2">
@@ -1162,6 +1180,23 @@ function Home() {
                   <Link to="/aboutUs" target="_blank">
                     AboutUs
                   </Link>
+                </p>
+                <p className="mb-4">
+                  {/* <Link to="/aboutUs" target="_blank">
+                    Faq
+                  </Link> */}
+                  <a
+                    href="#faq"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document
+                        .getElementById("faq")
+                        .scrollIntoView({ behavior: "smooth" });
+                      sideclose();
+                    }}
+                  >
+                    Faq
+                  </a>
                 </p>
               </div>
 

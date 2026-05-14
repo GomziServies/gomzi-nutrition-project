@@ -587,8 +587,8 @@ const MultivitaminTablet = () => {
           </div>
 
           <h1 className="wh-page-title barlow-condensed-extra f-32">
-            Private Label Multivitamin Tablet End-to-End Brand Launch Partner{" "}
-            <br /> In Surat, India
+            Private Label Multivitamin Tablet End-to-End Brand Launch Partner In{" "}
+            <br /> Surat, India
           </h1>
 
           <h2 className="wh-sec-title-multi multivitamin-subtext barlow-condensed-semi">
@@ -597,7 +597,7 @@ const MultivitaminTablet = () => {
           </h2>
 
           <div className="whey-protein-div-main">
-            <div className="whey-protein-div-text-multivitamin">
+            <div className="whey-protein-div-text-multivitamin justify-text">
               <p className="wh-desc inter-regular">
                 Multivitamin supplements are among the most popular
                 nutraceutical products worldwide due to increasing awareness
@@ -704,7 +704,7 @@ const MultivitaminTablet = () => {
         <div className="wh-section wh-section-alt">
           <div className="wh-container">
             <h2 className="wh-sec-title barlow-condensed-semi">
-              MARKET OPPORTUNITY
+              Market Opportunity
             </h2>
             <p className="wh-sec-desc inter-500">
               <strong>A Category Built on Trust.</strong>
@@ -851,7 +851,7 @@ const MultivitaminTablet = () => {
 
         <div className="wh-section wh-section-alt">
           <div className="wh-container">
-            <h2 className="wh-sec-title barlow-condensed-semi">HOW IT WORKS</h2>
+            <h2 className="wh-sec-title barlow-condensed-semi">How It Works</h2>
             <p className="wh-sec-desc mb-1 inter-regular">
               <strong>From Brief to Brand.</strong>
             </p>
@@ -963,10 +963,7 @@ const MultivitaminTablet = () => {
               ].map((item, idx) => (
                 <div key={idx} className="wh-grid-item">
                   <span className="wh-grid-check">
-                    <i
-                      className={`fas ${item.icon}`}
-                      style={{ color: "#86c33a" }}
-                    ></i>
+                    <i className={`fas ${item.icon} text-yellow`}></i>
                   </span>
                   {item.text}
                 </div>
@@ -1027,10 +1024,7 @@ const MultivitaminTablet = () => {
               ].map((item, idx) => (
                 <div key={idx} className="wh-grid-item">
                   <span className="wh-grid-check">
-                    <i
-                      className={`fas ${item.icon}`}
-                      style={{ color: "#86c33a" }}
-                    ></i>
+                    <i className={`fas ${item.icon} text-yellow`}></i>
                   </span>
                   {item.text}
                 </div>
@@ -1073,10 +1067,7 @@ const MultivitaminTablet = () => {
               ].map((item, idx) => (
                 <div key={idx} className="wh-grid-item">
                   <span className="wh-grid-check">
-                    <i
-                      className={`fas ${item.icon}`}
-                      style={{ color: "#86c33a" }}
-                    ></i>
+                    <i className={`fas ${item.icon} text-yellow`}></i>
                   </span>
                   {item.text}
                 </div>

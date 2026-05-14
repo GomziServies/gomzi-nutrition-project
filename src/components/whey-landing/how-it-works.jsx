@@ -71,6 +71,99 @@ const HowItWorks = () => {
 
         </div>
       </section>
+
+        <section className="founders-section">
+        <div className="founders-inner">
+          <div className="founders-content">
+         
+            <h2 class="ws-heading text-center">
+              Launch Your Own<br />
+              <em>  Protien Brand </em>{" "}
+            </h2>
+
+            <section class="protein-brand-landing-cards-section">
+              <div class="protein-brand-landing-cards-wrapper">
+                <div class="protein-brand-landing-cards">
+                
+
+                  <h3>Pick Your Formula
+</h3>
+
+                  <p>
+                    Whey concentrate, isolate, blend, or custom - we help you choose what fits your target customer and budget.
+                  </p>
+                </div>
+
+                <div class="protein-brand-landing-cards">
+                 
+
+                  <h3>Sample & Approve</h3>
+
+                  <p>
+                  Get your sample, test it, and approve before production. No surprises on quality or taste.
+                  </p>
+                </div>
+
+                <div class="protein-brand-landing-cards">
+                
+                  <h3>Design Packaging
+</h3>
+
+                  <p>
+                  Finalize jar, pouch, label, and branding — your logo, your colors, your brand identity.
+
+                  </p>
+                </div>
+
+                <div class="protein-brand-landing-cards">
+                 
+
+                  <h3>Confirm MOQ & Price</h3>
+
+                  <p>
+                   Get exact per-KG pricing based on your batch size. Transparent, no hidden costs.
+                  </p>
+                </div>
+
+                <div class="protein-brand-landing-cards">
+                
+
+                  <h3>Production Begins</h3>
+
+                  <p>
+                    Manufacturing starts with quality checks at every stage. COA and test reports included.
+                  </p>
+                </div>
+
+                <div class="protein-brand-landing-cards">
+                 
+
+                  <h3>Receive & Sell</h3>
+
+                  <p>
+                   Products dispatched with full documentation. Ready to sell online, in gym, or through distributors.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* <AccordionList items={checkItems1} /> */}
+          </div>
+
+          {/* <div className="founders-image">
+            <img
+              src="/assets/images/whey-landing/sad-owner.webp"
+              alt="Sad founder"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: "12px",
+              }}
+            />
+          </div> */}
+        </div>
+      </section>
     </>
   );
 };

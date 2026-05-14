@@ -7,6 +7,8 @@ import { Accordion } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DownloadPdf from "../../pdf/performance-supplement.pdf";
 import "../../assets/css/blog.css";
+import RequestQuoteButton from "../../components/nutrition/RequestQuoteButton";
+import RequestQuoteModal from "../../components/nutrition/requestquotemodal";
 
 import {
   faChartBar,
@@ -485,803 +487,820 @@ const PerformanceSupplements = () => {
   ];
 
   return (
-    <div className="tpm-bg">
-      <PageMeta
-        title="Private Label Performance Supplement Manufacturer in Surat, India | Gomzi Lifescience"
-        description="Gomzi Lifesciences LLP is a private label performance supplement manufacturer in Surat, India. Custom Pre-Workout, Creatine, BCAA, EAA formulations. FSSAI, GMP, HACCP, HALAL and Kosher certified."
-      />
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
-      </Helmet>
-      <NutritionHeader />
-
-      <div className="protein-powder-banner">
-        <img
-          src="/assets/images/third-party-manufacturing/performnace-supplement.webp"
-          alt="Performance Supplement Manufacturer Banner"
-          className="protein-powder-banner-image desktop-banner"
+    <>
+      <RequestQuoteModal />
+      <div className="tpm-bg">
+        <PageMeta
+          title="Private Label Performance Supplement Manufacturer in Surat, India | Gomzi Lifescience"
+          description="Gomzi Lifesciences LLP is a private label performance supplement manufacturer in Surat, India. Custom Pre-Workout, Creatine, BCAA, EAA formulations. FSSAI, GMP, HACCP, HALAL and Kosher certified."
         />
-        <img
-          src="/assets/images/third-party-manufacturing/performance-supplement-banner.webp"
-          alt="Performance Supplement Manufacturer Banner"
-          className="protein-powder-banner-image mobile-banner"
-        />
-      </div>
+        <Helmet>
+          <script type="application/ld+json">
+            {JSON.stringify(schemaData)}
+          </script>
+        </Helmet>
+        <NutritionHeader />
 
-      <div className="wh-pg">
-        <div className="wh-container">
-          <div className="btn-gp">
-            <div>
-              <a
-                href={DownloadPdf || "#"}
-                download
-                className=" download-brochure barlow-condensed-semi f-18"
-              >
-                Download Our Brochure
-              </a>
-            </div>
-            <div>
-              <a
-                href="https://wa.me/918320077993?text=Hello%20I%20am%20interested%20in%20Protein%20Powders"
-                target="_blank"
-                rel="noreferrer"
-                className="download-brochure barlow-condensed-semi f-18"
-              >
-                Enquiry Now
-              </a>
-            </div>
-            <div>
-              <a
-                href="tel:+918320077993"
-                target="_blank"
-                rel="noreferrer"
-                className="download-brochure barlow-condensed-semi f-18"
-              >
-                Call To Our Expert Team
-              </a>
-            </div>
-          </div>
-
-          <h1 className="wh-page-title barlow-condensed-extra f-32">
-            Private Label Performance Supplement End-to-End Brand Launch
-            <br />
-            Partner In Surat, Gujarat
-          </h1>
-
-          <div className="whey-protein-div-main">
-            <div>
-              <p className="wh-desc inter-regular">
-                Gomzi Lifesciences LLP manufactures a wide range of performance
-                supplements for sports nutrition brands, gym owners, fitness
-                trainers, athletes, and e-commerce supplement businesses.
-              </p>
-              <p className="wh-desc inter-regular">
-                Our facility focuses on powder-based nutraceutical
-                manufacturing, allowing us to develop customized sports
-                nutrition products designed for workout performance, endurance,
-                strength, and recovery.
-              </p>
-              <p className="wh-desc inter-regular">
-                All products are manufactured under certified systems including{" "}
-                <strong>FSSAI | GMP | HACCP | HALAL | Kosher</strong>
-              </p>
-            </div>
-            <div className="blog p-0">
-              <img
-                src={
-                  process.env.PUBLIC_URL +
-                  "/assets/images/nutrition/who-we-are.webp"
-                }
-                width="100%"
-                className="border-radius-20"
-                alt="gomzilifesciences"
-              />
-            </div>
-          </div>
+        <div className="protein-powder-banner">
+          <img
+            src="/assets/images/third-party-manufacturing/performnace-supplement.webp"
+            alt="Performance Supplement Manufacturer Banner"
+            className="protein-powder-banner-image desktop-banner"
+          />
+          <img
+            src="/assets/images/third-party-manufacturing/performance-supplement-banner.webp"
+            alt="Performance Supplement Manufacturer Banner"
+            className="protein-powder-banner-image mobile-banner"
+          />
         </div>
 
-        <div className="wh-section wh-section-white">
+        <div className="wh-pg">
           <div className="wh-container">
-            <h2 className="wh-sec-title-our-whey-protein barlow-condensed-semi">
-              Our Performance Supplement Categories
-            </h2>
-            <p className="wh-sec-desc-whey-protein inter-regular">
-              We offer a range of performance supplement products widely used in
-              sports nutrition and gym supplement industries. Each product can
-              be developed in multiple formulation levels based on the ideal
-              customer, such as beginners, gym users, or professional athletes.
-            </p>
-
-            <div className="wh-cat-list">
-              {productCategories.map((category) => (
-                <div
-                  key={category.id}
-                  className="wh-cat-row-item-performance-supplement"
+            <div className="btn-gp">
+              <div>
+                <a
+                  href={DownloadPdf || "#"}
+                  download
+                  className=" download-brochure barlow-condensed-semi f-18"
                 >
-                  <div className="wh-cat-row-header wh-cat-row-header-top">
-                    <div className="wh-cat-num">{category.id}</div>
-                    <div className="wh-cat-title barlow-condensed-semi">
-                      {category.title}
+                  Download Our Brochure
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://wa.me/918320077993?text=Hello%20I%20am%20interested%20in%20Protein%20Powders"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="download-brochure barlow-condensed-semi f-18"
+                >
+                  Enquiry Now
+                </a>
+              </div>
+              <div>
+                <a
+                  href="tel:+918320077993"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="download-brochure barlow-condensed-semi f-18"
+                >
+                  Call To Our Expert Team
+                </a>
+              </div>
+            </div>
+
+            <h1 className="wh-page-title barlow-condensed-extra f-32">
+              Private Label Performance Supplement End-to-End Brand Launch
+              Partner In Surat, Gujarat
+            </h1>
+
+            <div className="whey-protein-div-main">
+              <div className="justify-text">
+                <p className="wh-desc inter-regular">
+                  Gomzi Lifesciences LLP manufactures a wide range of
+                  performance supplements for sports nutrition brands, gym
+                  owners, fitness trainers, athletes, and e-commerce supplement
+                  businesses.
+                </p>
+                <p className="wh-desc inter-regular">
+                  Our facility focuses on powder-based nutraceutical
+                  manufacturing, allowing us to develop customized sports
+                  nutrition products designed for workout performance,
+                  endurance, strength, and recovery.
+                </p>
+                <p className="wh-desc inter-regular">
+                  All products are manufactured under certified systems
+                  including{" "}
+                  <strong>FSSAI | GMP | HACCP | HALAL | Kosher</strong>
+                </p>
+              </div>
+              <div className="blog p-0">
+                <img
+                  src={
+                    process.env.PUBLIC_URL +
+                    "/assets/images/nutrition/who-we-are.webp"
+                  }
+                  width="100%"
+                  className="border-radius-20"
+                  alt="gomzilifesciences"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="wh-section wh-section-white">
+            <div className="wh-container">
+              <h2 className="wh-sec-title-our-whey-protein barlow-condensed-semi">
+                Our Performance Supplement Categories
+              </h2>
+              <p className="wh-sec-desc-whey-protein inter-regular">
+                We offer a range of performance supplement products widely used
+                in sports nutrition and gym supplement industries. Each product
+                can be developed in multiple formulation levels based on the
+                ideal customer, such as beginners, gym users, or professional
+                athletes.
+              </p>
+
+              <div className="wh-cat-list">
+                {productCategories.map((category) => (
+                  <div
+                    key={category.id}
+                    className="wh-cat-row-item-performance-supplement"
+                  >
+                    <div className="wh-cat-row-header wh-cat-row-header-top">
+                      <div className="wh-cat-num">{category.id}</div>
+                      <div className="wh-cat-title barlow-condensed-semi">
+                        {category.title}
+                      </div>
+                    </div>
+
+                    <div className="wh-cat-row-left">
+                      <div className="wh-cat-target inter-500">
+                        {category.target}
+                      </div>
+                      <p className="wh-cat-desc inter-regular">
+                        {category.description}
+                      </p>
+
+                      <h4 className="mb-2 wh-kf-label inter-500">
+                        {category.formulationTitle}
+                      </h4>
+                      <div className="sub-indent">
+                        <ul className="pl-3">
+                          {category.formulations.map((f, idx) => (
+                            <li
+                              key={idx}
+                              className="protein-powder-page-description mb-1 inter-regular"
+                            >
+                              {f.desc ? (
+                                <>
+                                  <strong>{f.label}</strong> – {f.desc}
+                                </>
+                              ) : (
+                                f.label
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                        <span className="wh-kf-label  inter-500">
+                          Key Features
+                        </span>
+                        <KeyFeatures
+                          className="inter-500"
+                          features={category.features}
+                        />
+                      </div>
+
+                      <h4 className="mb-2 wh-kf-label inter-500">
+                        {category.customTitle}
+                      </h4>
+                      <div className="sub-indent">
+                        <ul className="pl-3">
+                          {category.customFormulations.map((item, idx) => (
+                            <li
+                              key={idx}
+                              className="protein-powder-page-description mb-1 inter-regular"
+                            >
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <h4 className="mb-2 wh-kf-label inter-500">
+                        Common Ingredients Used
+                      </h4>
+                      <div className="sub-indent">
+                        <div className="ingredients-tags">
+                          {category.commonIngredients.map((ing, idx) => (
+                            <span
+                              key={idx}
+                              className="ingredient-tag inter-regular"
+                            >
+                              {ing}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="wh-prod-card">
+                      <img
+                        src={products[category.id - 1]?.imageSrc}
+                        alt={category.title}
+                        className="wh-pg wh-cat-row-img-performance"
+                      />
+                      <div className="wh-prod-card-btn">
+                        <a
+                          href={products[category.id - 1]?.productLink}
+                          className="wh-prod-btn barlow-condensed-semi f-18"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Enquiry Now
+                        </a>
+                        <a
+                          href="tel:+918320077993"
+                          className="wh-prod-btn barlow-condensed-semi f-18"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Call Now
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="wh-section wh-section-alt">
+            <div className="wh-container">
+              <h2 className="wh-sec-title barlow-condensed-semi">
+                Market Opportunity
+              </h2>
+              <p className="wh-sec-desc inter-500">
+                <strong>The Category Is Exploding.</strong>
+              </p>
+              <div className="market-cards-section">
+                <div className="market-cards-container">
+                  <div className="market-card">
+                    <h3 className="barlow-condensed-semi">₹1.9B</h3>
+                    <p className="inter-regular">
+                      India's sports nutrition market — growing at{" "}
+                      <strong>9–11% CAGR.</strong> The window to build a
+                      category-defining brand is right now.
+                    </p>
+                  </div>
+
+                  <div className="market-card">
+                    <h3 className="barlow-condensed-semi">1,000+</h3>
+                    <p className="inter-regular">
+                      New supplement brands launching in India
+                      <strong> this year alone.</strong>
+                      The winners will be those who manufacture smarter — not
+                      louder.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="market-bottom-text">
+                  <p className="inter-regular">
+                    “Over 1,000 new supplement brands will launch in India this
+                    year. The question is:{" "}
+                    <strong>who manufactures the ones that win?</strong>
+                    The answer starts with the quality of your manufacturing
+                    partner.”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="wh-section wh-section-white">
+            <div className="wh-container">
+              <h2 className="wh-sec-title barlow-condensed-semi">
+                Who Can Start a Performance Supplement Brand With Us?
+              </h2>
+              <p className="wh-sec-desc">
+                <strong>Our manufacturing services are suitable for:</strong>
+              </p>
+              <div className="wh-who-grid">
+                {[
+                  "Gym Owners",
+                  "Fitness Trainers",
+                  "Sports Nutrition Brands",
+                  "E-commerce Sellers (Amazon, Flipkart, Shopify)",
+                  "Athletes and Sports Professionals",
+                  "Health and Wellness Entrepreneurs",
+                ].map((item, i) => (
+                  <div key={i} className="wh-who-card inter-500">
+                    <FontAwesomeIcon icon={faCheckCircle} />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="wh-section wh-section-alt">
+            <div className="wh-container">
+              <h2 className="wh-sec-title barlow-condensed-semi">
+                Product Specifications
+              </h2>
+
+              <div className="wh-tbl-wrap">
+                <table className="wh-spec-tbl">
+                  <thead>
+                    <tr>
+                      <th>Specification</th>
+                      <th>Details</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {productSpecs.map((row, idx) => (
+                      <tr key={idx}>
+                        <td>{row.specification}</td>
+                        <td>{row.details}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div className="wh-section wh-section-white">
+            <div className="container">
+              <h2 className="wh-sec-title text-center mb-5 barlow-condensed-semi">
+                Why Choose Gomzi Lifesciences?
+              </h2>
+
+              <div className="row why-card-wrapper justify-content-center">
+                {whyChoose.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className={`col-lg-4 col-md-6 col-12 mb-4 
+      ${idx === whyChoose.length - 1 ? "last-card-center" : ""}`}
+                  >
+                    <div className="why-card">
+                      <div className="why-number">{idx + 1}</div>
+
+                      <p className="why-text">{item}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="wh-section wh-section-alt">
+            <div className="wh-container">
+              <h2 className="wh-sec-title barlow-condensed-semi">
+                Formulation Expertise
+              </h2>
+
+              <p className="wh-sec-desc inter-regular">
+                The Indian Flavour Edge.
+              </p>
+
+              <div className="wh-flavour-section">
+                <div className="wh-flavour-container">
+                  <div className="wh-flavour-left">
+                    <div className="wh-flavour-highlight">
+                      <h3 className="barlow-condensed-semi text-capitalize">
+                        Why Mawa Kulfi Outsells Chocolate For Tier 2 City Brands
+                      </h3>
+
+                      <p className="inter-regular">
+                        Global supplement brands default to Chocolate, Vanilla,
+                        and Strawberry. But India's fitness market is different.
+                        <strong>
+                          {" "}
+                          Tier 2 and Tier 3 city buyers — your fastest growing
+                          customer segment —
+                        </strong>
+                        respond to familiar flavour profiles they grew up with.
+                      </p>
+
+                      <p className="inter-regular">
+                        Brands using regional Indian flavours report
+                        <strong>
+                          {" "}
+                          35–50% better repeat purchase rates
+                        </strong>{" "}
+                        vs. standard flavours in non-metro markets. This is your
+                        formulation moat.
+                      </p>
                     </div>
                   </div>
 
-                  <div className="wh-cat-row-left">
-                    <div className="wh-cat-target inter-500">
-                      {category.target}
-                    </div>
-                    <p className="wh-cat-desc inter-regular">
-                      {category.description}
+                  <div className="wh-flavour-right">
+                    <p className="wh-flavour-desc">
+                      Our formulation team analyses Google Trends, Amazon BSR
+                      data, and sales patterns from 50+ active supplement brands
+                      to identify which flavours will win before you commit to a
+                      batch.
                     </p>
 
-                    <h4 className="mb-2 wh-kf-label inter-500">
-                      {category.formulationTitle}
-                    </h4>
-                    <div className="sub-indent">
-                      <ul className="pl-3">
-                        {category.formulations.map((f, idx) => (
-                          <li
-                            key={idx}
-                            className="protein-powder-page-description mb-1 inter-regular"
-                          >
-                            {f.desc ? (
-                              <>
-                                <strong>{f.label}</strong> – {f.desc}
-                              </>
-                            ) : (
-                              f.label
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                      <span className="wh-kf-label  inter-500">
-                        Key Features
-                      </span>
-                      <KeyFeatures
-                        className="inter-500"
-                        features={category.features}
+                    <ul className="wh-flavour-list">
+                      <li>
+                        <strong>Trend analysis</strong> — Google Trends + Amazon
+                        BSR data across 200+ supplement keywords monthly
+                      </li>
+                      <li>
+                        <strong>Regional mapping</strong> — flavour preferences
+                        mapped by state and city tier
+                      </li>
+                      <li>
+                        <strong>Sample first</strong> — taste and test your
+                        shortlisted flavours before committing to production
+                      </li>
+                      <li>
+                        <strong>Custom development</strong> — have a flavour
+                        idea? Our R&D team can develop it in 10–14 days
+                      </li>
+                    </ul>
+
+                    <RequestQuoteButton
+                      className="wh-flavour-btn homePage-btn cta btn fw-bold shadow-lg px-5 py-2 text-capitalize request-toggle barlow-condensed-semi"
+                      text={" Request a Quote"}
+                      subject={"request a quote"}
+                    />
+                  </div>
+                </div>
+
+                <span className="wh-trending-label barlow-condensed-semi">
+                  TRENDING FLAVOURS – INDIAN MARKET
+                </span>
+
+                <div className="wh-flavour-tags">
+                  {[
+                    "Lemon",
+                    "Fruit Punch",
+                    "Watermelon",
+                    "Tangy Orange",
+                    "Blueberry",
+                  ].map((flavour, index) => (
+                    <div key={index} className="wh-flavour-tag inter-500">
+                      {flavour}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="wh-section wh-section-white">
+            <div className="wh-container">
+              <h2 className="wh-sec-title barlow-condensed-semi">
+                How It Works
+              </h2>
+
+              <p className="wh-sec-desc inter-regular">
+                A committed timeline. Documented at every stage. No delays, no
+                ambiguity.
+              </p>
+
+              <div className="wh-steps-section">
+                <div className="wh-steps-container">
+                  {[
+                    {
+                      id: "01",
+                      title: "Idea & Strategy",
+                      desc: "Product brief, target customer, competitive positioning, and SKU selection for your vertical.",
+                      days: "1–2 DAYS",
+                    },
+                    {
+                      id: "02",
+                      title: "Formulation",
+                      desc: "Sample production in our GMP facility. Flavour development and ingredient finalisation.",
+                      days: "5–7 DAYS",
+                    },
+                    {
+                      id: "03",
+                      title: "Manufacturing",
+                      desc: "Batch production with full COA documentation. Third-party lab verification available.",
+                      days: "7–10 DAYS",
+                    },
+                    {
+                      id: "04",
+                      title: "Packaging",
+                      desc: "3D label mockup, FSSAI-compliant design, digiprint / flexo print options. Your brand, our execution.",
+                      days: "3–4 DAYS",
+                    },
+                    {
+                      id: "05",
+                      title: "Website & Go-Live",
+                      desc: "D2C Shopify store, Meta Ads structure, product photography brief. Ready to sell.",
+                      days: "2–3 DAYS",
+                    },
+                  ].map((step, index) => (
+                    <div key={index} className="wh-step-item">
+                      <div className="wh-step-circle">{step.id}</div>
+
+                      <h4 className="wh-step-title barlow-condensed-semi">
+                        {step.title}
+                      </h4>
+
+                      <p className="wh-step-desc inter-regular">{step.desc}</p>
+
+                      <span className="wh-step-days">{step.days}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="qua-wh-section bg-white" id="certification">
+            <p className="wh-sec-title barlow-condensed-semi text-center">
+              Quality Assurance
+            </p>
+
+            <h1 className="wh-sec-desc barlow-condensed-semi text-center">
+              Every Batch, Verified.
+            </h1>
+
+            <div className="gym-cert-grid">
+              {certificates.map((cert, index) => {
+                const filePath =
+                  process.env.PUBLIC_URL +
+                  `/assets/images/nutrition/${cert.file}`;
+
+                return (
+                  <div className="gym-cert-card" key={index}>
+                    <div className="gym-cert-img-wrap">
+                      <img
+                        src={filePath}
+                        alt={`${cert.name} Certificate`}
+                        loading="lazy"
                       />
                     </div>
 
-                    <h4 className="mb-2 wh-kf-label inter-500">
-                      {category.customTitle}
-                    </h4>
-                    <div className="sub-indent">
-                      <ul className="pl-3">
-                        {category.customFormulations.map((item, idx) => (
-                          <li
-                            key={idx}
-                            className="protein-powder-page-description mb-1 inter-regular"
-                          >
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <h4 className="mb-2 wh-kf-label inter-500">
-                      Common Ingredients Used
-                    </h4>
-                    <div className="sub-indent">
-                      <div className="ingredients-tags">
-                        {category.commonIngredients.map((ing, idx) => (
-                          <span
-                            key={idx}
-                            className="ingredient-tag inter-regular"
-                          >
-                            {ing}
-                          </span>
-                        ))}
-                      </div>
+                    <div className="gym-cert-label-wrap">
+                      <span className="gym-cert-label-name barlow-condensed-semi">
+                        {cert.name}
+                      </span>
+                      <span className="gym-cert-label-sub inter-regular">
+                        {cert.sub}
+                      </span>
                     </div>
                   </div>
-
-                  <div className="wh-prod-card">
-                    <img
-                      src={products[category.id - 1]?.imageSrc}
-                      alt={category.title}
-                      className="wh-pg wh-cat-row-img-performance"
-                    />
-                    <div className="wh-prod-card-btn">
-                      <a
-                        href={products[category.id - 1]?.productLink}
-                        className="wh-prod-btn barlow-condensed-semi f-18"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Enquiry Now
-                      </a>
-                      <a
-                        href="tel:+918320077993"
-                        className="wh-prod-btn barlow-condensed-semi f-18"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Call Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
-          </div>
-        </div>
 
-        <div className="wh-section wh-section-alt">
-          <div className="wh-container">
-            <h2 className="wh-sec-title barlow-condensed-semi">
-              MARKET OPPORTUNITY
-            </h2>
-            <p className="wh-sec-desc inter-500">
-              <strong>The Category Is Exploding.</strong>
-            </p>
-            <div className="market-cards-section">
-              <div className="market-cards-container">
-                <div className="market-card">
-                  <h3 className="barlow-condensed-semi">₹1.9B</h3>
-                  <p className="inter-regular">
-                    India's sports nutrition market — growing at{" "}
-                    <strong>9–11% CAGR.</strong> The window to build a
-                    category-defining brand is right now.
-                  </p>
+            <div class="qua-content">
+              <div class="qua-item">
+                <div class="check-box">
+                  <svg class="check-icon" viewBox="0 0 14 14">
+                    <polyline points="2,7 5.5,10.5 12,3" />
+                  </svg>
                 </div>
-
-                <div className="market-card">
-                  <h3 className="barlow-condensed-semi">1,000+</h3>
-                  <p className="inter-regular">
-                    New supplement brands launching in India
-                    <strong> this year alone.</strong>
-                    The winners will be those who manufacture smarter — not
-                    louder.
+                <div class="qua-item-text">
+                  <h3>GMP-Certified Production</h3>
+                  <p>
+                    Manufactured to international Good Manufacturing Practice
+                    standards.
                   </p>
                 </div>
               </div>
 
-              <div className="market-bottom-text">
-                <p className="inter-regular">
-                  “Over 1,000 new supplement brands will launch in India this
-                  year. The question is:{" "}
-                  <strong>who manufactures the ones that win?</strong>
-                  The answer starts with the quality of your manufacturing
-                  partner.”
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="wh-section wh-section-white">
-          <div className="wh-container">
-            <h2 className="wh-sec-title">
-              Who Can Start a Performance Supplement Brand With Us?
-            </h2>
-            <p className="wh-sec-desc">
-              <strong>Our manufacturing services are suitable for:</strong>
-            </p>
-            <div className="wh-who-grid">
-              {[
-                "Gym Owners",
-                "Fitness Trainers",
-                "Sports Nutrition Brands",
-                "E-commerce Sellers (Amazon, Flipkart, Shopify)",
-                "Athletes and Sports Professionals",
-                "Health and Wellness Entrepreneurs",
-              ].map((item, i) => (
-                <div key={i} className="wh-who-card inter-500">
-                  <FontAwesomeIcon icon={faCheckCircle} />
-                  <span>{item}</span>
+              <div class="qua-item">
+                <div class="check-box">
+                  <svg class="check-icon" viewBox="0 0 14 14">
+                    <polyline points="2,7 5.5,10.5 12,3" />
+                  </svg>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="wh-section wh-section-alt">
-          <div className="wh-container">
-            <h2 className="wh-sec-title">Product Specifications</h2>
-
-            <div className="wh-tbl-wrap">
-              <table className="wh-spec-tbl">
-                <thead>
-                  <tr>
-                    <th>Specification</th>
-                    <th>Details</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {productSpecs.map((row, idx) => (
-                    <tr key={idx}>
-                      <td>{row.specification}</td>
-                      <td>{row.details}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <div className="wh-section wh-section-white">
-          <div className="container">
-            <h2 className="wh-sec-title text-center mb-5">
-              Why Choose Gomzi Lifesciences?
-            </h2>
-
-            <div className="row why-card-wrapper justify-content-center">
-              {whyChoose.map((item, idx) => (
-                <div
-                  key={idx}
-                  className={`col-lg-4 col-md-6 col-12 mb-4 
-      ${idx === whyChoose.length - 1 ? "last-card-center" : ""}`}
-                >
-                  <div className="why-card">
-                    <div className="why-number">{idx + 1}</div>
-
-                    <p className="why-text">{item}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="wh-section wh-section-alt">
-          <div className="wh-container">
-            <h2 className="wh-sec-title barlow-condensed-semi">
-              FORMULATION EXPERTISE
-            </h2>
-
-            <p className="wh-sec-desc inter-regular">
-              The Indian Flavour Edge.
-            </p>
-
-            <div className="wh-flavour-section">
-              <div className="wh-flavour-container">
-                <div className="wh-flavour-left">
-                  <div className="wh-flavour-highlight">
-                    <h3 className="barlow-condensed-semi">
-                      Why Mawa Kulfi Outsells Chocolate For Tier 2 City Brands
-                    </h3>
-
-                    <p className="inter-regular">
-                      Global supplement brands default to Chocolate, Vanilla,
-                      and Strawberry. But India's fitness market is different.
-                      <strong>
-                        {" "}
-                        Tier 2 and Tier 3 city buyers — your fastest growing
-                        customer segment —
-                      </strong>
-                      respond to familiar flavour profiles they grew up with.
-                    </p>
-
-                    <p className="inter-regular">
-                      Brands using regional Indian flavours report
-                      <strong> 35–50% better repeat purchase rates</strong> vs.
-                      standard flavours in non-metro markets. This is your
-                      formulation moat.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="wh-flavour-right">
-                  <p className="wh-flavour-desc">
-                    Our formulation team analyses Google Trends, Amazon BSR
-                    data, and sales patterns from 50+ active supplement brands
-                    to identify which flavours will win before you commit to a
-                    batch.
+                <div class="qua-item-text">
+                  <h3>Batch COA on Every Order</h3>
+                  <p>
+                    Certificate of Analysis shipped with every production run.
                   </p>
-
-                  <ul className="wh-flavour-list">
-                    <li>
-                      <strong>Trend analysis</strong> — Google Trends + Amazon
-                      BSR data across 200+ supplement keywords monthly
-                    </li>
-                    <li>
-                      <strong>Regional mapping</strong> — flavour preferences
-                      mapped by state and city tier
-                    </li>
-                    <li>
-                      <strong>Sample first</strong> — taste and test your
-                      shortlisted flavours before committing to production
-                    </li>
-                    <li>
-                      <strong>Custom development</strong> — have a flavour idea?
-                      Our R&D team can develop it in 10–14 days
-                    </li>
-                  </ul>
-                  <a
-                    href="https://wa.me/918320077993"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="wh-flavour-btn homePage-btn cta btn fw-bold shadow-lg px-5 py-2 text-capitalize request-toggle barlow-condensed-semi "
-                  >
-                    Request a Quote
-                  </a>
                 </div>
               </div>
 
-              <span className="wh-trending-label barlow-condensed-semi">
-                TRENDING FLAVOURS – INDIAN MARKET
-              </span>
-
-              <div className="wh-flavour-tags">
-                {[
-                  "Lemon",
-                  "Fruit Punch",
-                  "Watermelon",
-                  "Tangy Orange",
-                  "Blueberry",
-                ].map((flavour, index) => (
-                  <div key={index} className="wh-flavour-tag inter-500">
-                    {flavour}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="wh-section wh-section-white">
-          <div className="wh-container">
-            <h2 className="wh-sec-title barlow-condensed-semi">HOW IT WORKS</h2>
-
-            <p className="wh-sec-desc inter-regular">
-              A committed timeline. Documented at every stage. No delays, no
-              ambiguity.
-            </p>
-
-            <div className="wh-steps-section">
-              <div className="wh-steps-container">
-                {[
-                  {
-                    id: "01",
-                    title: "Idea & Strategy",
-                    desc: "Product brief, target customer, competitive positioning, and SKU selection for your vertical.",
-                    days: "1–2 DAYS",
-                  },
-                  {
-                    id: "02",
-                    title: "Formulation",
-                    desc: "Sample production in our GMP facility. Flavour development and ingredient finalisation.",
-                    days: "5–7 DAYS",
-                  },
-                  {
-                    id: "03",
-                    title: "Manufacturing",
-                    desc: "Batch production with full COA documentation. Third-party lab verification available.",
-                    days: "7–10 DAYS",
-                  },
-                  {
-                    id: "04",
-                    title: "Packaging",
-                    desc: "3D label mockup, FSSAI-compliant design, digiprint / flexo print options. Your brand, our execution.",
-                    days: "3–4 DAYS",
-                  },
-                  {
-                    id: "05",
-                    title: "Website & Go-Live",
-                    desc: "D2C Shopify store, Meta Ads structure, product photography brief. Ready to sell.",
-                    days: "2–3 DAYS",
-                  },
-                ].map((step, index) => (
-                  <div key={index} className="wh-step-item">
-                    <div className="wh-step-circle">{step.id}</div>
-
-                    <h4 className="wh-step-title barlow-condensed-semi">
-                      {step.title}
-                    </h4>
-
-                    <p className="wh-step-desc inter-regular">{step.desc}</p>
-
-                    <span className="wh-step-days">{step.days}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <section class="qua-wh-section bg-white" id="certification">
-          <p className="wh-sec-title barlow-condensed-semi text-center">
-            Quality Assurance
-          </p>
-
-          <h1 className="wh-sec-desc barlow-condensed-semi text-center">
-            Every Batch, Verified.
-          </h1>
-
-          <div className="gym-cert-grid">
-            {certificates.map((cert, index) => {
-              const filePath =
-                process.env.PUBLIC_URL +
-                `/assets/images/nutrition/${cert.file}`;
-
-              return (
-                <div className="gym-cert-card" key={index}>
-                  <div className="gym-cert-img-wrap">
-                    <img
-                      src={filePath}
-                      alt={`${cert.name} Certificate`}
-                      loading="lazy"
-                    />
-                  </div>
-
-                  <div className="gym-cert-label-wrap">
-                    <span className="gym-cert-label-name barlow-condensed-semi">
-                      {cert.name}
-                    </span>
-                    <span className="gym-cert-label-sub inter-regular">
-                      {cert.sub}
-                    </span>
-                  </div>
+              <div class="qua-item">
+                <div class="check-box">
+                  <svg class="check-icon" viewBox="0 0 14 14">
+                    <polyline points="2,7 5.5,10.5 12,3" />
+                  </svg>
                 </div>
-              );
-            })}
-          </div>
-
-          <div class="qua-content">
-            <div class="qua-item">
-              <div class="check-box">
-                <svg class="check-icon" viewBox="0 0 14 14">
-                  <polyline points="2,7 5.5,10.5 12,3" />
-                </svg>
-              </div>
-              <div class="qua-item-text">
-                <h3>GMP-Certified Production</h3>
-                <p>
-                  Manufactured to international Good Manufacturing Practice
-                  standards.
-                </p>
+                <div class="qua-item-text">
+                  <h3>Third-Party Lab Testing</h3>
+                  <p>
+                    Independent verification of purity, potency, and safety.
+                  </p>
+                </div>
               </div>
             </div>
-
-            <div class="qua-item">
-              <div class="check-box">
-                <svg class="check-icon" viewBox="0 0 14 14">
-                  <polyline points="2,7 5.5,10.5 12,3" />
-                </svg>
-              </div>
-              <div class="qua-item-text">
-                <h3>Batch COA on Every Order</h3>
-                <p>
-                  Certificate of Analysis shipped with every production run.
-                </p>
-              </div>
-            </div>
-
-            <div class="qua-item">
-              <div class="check-box">
-                <svg class="check-icon" viewBox="0 0 14 14">
-                  <polyline points="2,7 5.5,10.5 12,3" />
-                </svg>
-              </div>
-              <div class="qua-item-text">
-                <h3>Third-Party Lab Testing</h3>
-                <p>Independent verification of purity, potency, and safety.</p>
-              </div>
-            </div>
-          </div>
-          <div className="text-center">
-            <a
-              href={DownloadPdf || "#"}
-              download
-              className="download-btn barlow-condensed-semi"
-            >
-              <i class="fa-solid fa-download"></i> Download Our Brochure
-            </a>
-          </div>
-        </section>
-
-        <div className="wh-section wh-section-white">
-          <section className="testi-section">
-            <div className="testimonial-div">
-              <h2 className="wh-sec-title-our-whey-protein barlow-condensed-semi">
-                Testimonials
-              </h2>
-            </div>
-
-            <div className="testi-carousel-wrap">
-              <OwlCarousel className="owl-theme" {...carouselOptions}>
-                {testimonials.map((item, i) => (
-                  <div className="testi-card" key={i}>
-                    <div>
-                      <div className="testi-quote-wrap">
-                        <div className="testi-quote-mark">
-                          <svg
-                            viewBox="0 0 28 28"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M3 17.5C3 13.5 5.8 10.2 10.5 9L11.5 11.5C8.8 12.4 7.2 14.3 7 16.3H11V22H3V17.5Z"
-                              fill="white"
-                            />
-                            <path
-                              d="M15 17.5C15 13.5 17.8 10.2 22.5 9L23.5 11.5C20.8 12.4 19.2 14.3 19 16.3H23V22H15V17.5Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </div>
-                        <div className="testi-stars">
-                          {renderStars(item.rating)}
-                        </div>
-                      </div>
-                      <p className="testi-text inter-regular">{item.text}</p>
-                    </div>
-                    <div className="testi-author">
-                      <div className="testi-author-dot">
-                        {item.name.charAt(0)}
-                      </div>
-                      <div>
-                        <p className="testi-name inter-500">{item.name}</p>
-                        <p className="testi-role inter-regular">{item.role}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </OwlCarousel>
+            <div className="text-center">
+              <a
+                href={DownloadPdf || "#"}
+                download
+                className="download-btn barlow-condensed-semi"
+              >
+                <i class="fa-solid fa-download"></i> Download Our Brochure
+              </a>
             </div>
           </section>
-        </div>
 
-        <div className="wh-container">
-          <div className="blog-section">
-            <h2 className="wh-sec-title barlow-condensed-semi">FAQ's</h2>
+          <div className="wh-section wh-section-white">
+            <section className="testi-section">
+              <div className="testimonial-div">
+                <h2 className="wh-sec-title-our-whey-protein barlow-condensed-semi">
+                  Testimonials
+                </h2>
+              </div>
 
-            <Accordion defaultActiveKey={["1"]} alwaysOpen inter-regular>
-              <Accordion.Item eventKey="1" className="mt-3 p-4">
-                <Accordion.Header className="faq-question">
-                  What are Pre-Workout Supplements?
-                </Accordion.Header>
-                <Accordion.Body className="faq-answer">
-                  Pre-Workout supplements are designed to support energy, focus,
-                  endurance, and workout performance before training sessions.
-                  They are commonly used by gym users, athletes, and fitness
-                  supplement brands. We offer Basic, Standard, and Advanced
-                  formulation levels.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="2" className="mt-3 p-4">
-                <Accordion.Header className="faq-question">
-                  What Creatine products does Gomzi Lifesciences manufacture?
-                </Accordion.Header>
-                <Accordion.Body className="faq-answer">
-                  We manufacture Creatine Monohydrate, Micronized Creatine, and
-                  Creatine Blend Formulations including custom blends with
-                  Electrolytes and Amino Acids.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="3" className="mt-3 p-4">
-                <Accordion.Header className="faq-question">
-                  What BCAA ratios are available?
-                </Accordion.Header>
-                <Accordion.Body className="faq-answer">
-                  We manufacture BCAA in 2:1:1, 4:1:1, and 8:1:1 ratios with
-                  custom formulations including BCAA with Electrolytes, BCAA
-                  with Glutamine, and Intra-Workout Hydration Formulas.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="4" className="mt-3 p-4">
-                <Accordion.Header className="faq-question">
-                  Who can start a performance supplement brand with Gomzi
-                  Lifesciences?
-                </Accordion.Header>
-                <Accordion.Body className="faq-answer">
-                  Our manufacturing services are suitable for Gym Owners,
-                  Fitness Trainers, Sports Nutrition Brands, E-commerce Sellers
-                  (Amazon, Flipkart, Shopify), Athletes and Sports
-                  Professionals, and Health and Wellness Entrepreneurs.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="5" className="mt-3 p-4">
-                <Accordion.Header className="faq-question">
-                  What certifications does Gomzi Lifesciences hold?
-                </Accordion.Header>
-                <Accordion.Body className="faq-answer">
-                  All products are manufactured under certified quality systems
-                  including FSSAI, GMP, HACCP, HALAL and Kosher standards.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="6" className="mt-3 p-4">
-                <Accordion.Header className="faq-question">
-                  What is the minimum order quantity?
-                </Accordion.Header>
-                <Accordion.Body className="faq-answer">
-                  Gomzi Lifesciences offers a Low Minimum Order Quantity of
-                  50–100 KG for performance supplement manufacturing.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="7" className="mt-3 p-4">
-                <Accordion.Header className="faq-question">
-                  What Pre-Workout formulation levels are available?
-                </Accordion.Header>
-                <Accordion.Body className="faq-answer">
-                  We offer Basic Pre-Workout for beginner fitness users,
-                  Standard Pre-Workout for regular gym users, and Advanced
-                  Pre-Workout with high-performance formulas designed for
-                  athletes.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="8" className="mt-3 p-4">
-                <Accordion.Header className="faq-question">
-                  Can I get private label performance supplement manufacturing
-                  in Surat?
-                </Accordion.Header>
-                <Accordion.Body className="faq-answer">
-                  Yes. Gomzi Lifesciences LLP is based in Surat and specializes
-                  in private label performance supplement manufacturing for
-                  sports nutrition brands, gym owners, fitness trainers,
-                  athletes, and e-commerce businesses.
-                </Accordion.Body>
-              </Accordion.Item>
+              <div className="testi-carousel-wrap">
+                <OwlCarousel className="owl-theme" {...carouselOptions}>
+                  {testimonials.map((item, i) => (
+                    <div className="testi-card" key={i}>
+                      <div>
+                        <div className="testi-quote-wrap">
+                          <div className="testi-quote-mark">
+                            <svg
+                              viewBox="0 0 28 28"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M3 17.5C3 13.5 5.8 10.2 10.5 9L11.5 11.5C8.8 12.4 7.2 14.3 7 16.3H11V22H3V17.5Z"
+                                fill="white"
+                              />
+                              <path
+                                d="M15 17.5C15 13.5 17.8 10.2 22.5 9L23.5 11.5C20.8 12.4 19.2 14.3 19 16.3H23V22H15V17.5Z"
+                                fill="white"
+                              />
+                            </svg>
+                          </div>
+                          <div className="testi-stars">
+                            {renderStars(item.rating)}
+                          </div>
+                        </div>
+                        <p className="testi-text inter-regular">{item.text}</p>
+                      </div>
+                      <div className="testi-author">
+                        <div className="testi-author-dot">
+                          {item.name.charAt(0)}
+                        </div>
+                        <div>
+                          <p className="testi-name inter-500">{item.name}</p>
+                          <p className="testi-role inter-regular">
+                            {item.role}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </OwlCarousel>
+              </div>
+            </section>
+          </div>
 
-              <Accordion.Item eventKey="9" className="mt-3 p-4">
-                <Accordion.Header className="faq-question">
-                  What supplement formats can you manufacture?
-                </Accordion.Header>
-                <Accordion.Body className="faq-answer">
-                  Powders (tubs and flat-bottom pouches), capsules, tablets,
-                  blister packs, stick packs, and sachets. For sports nutrition
-                  specifically — pre-workouts, BCAAs, and mass gainers are
-                  available in both tub and resealable pouch formats. MOQ starts
-                  at 50 KG per SKU.
-                </Accordion.Body>
-              </Accordion.Item>
+          <div className="wh-container">
+            <div className="blog-section">
+              <h2 className="wh-sec-title barlow-condensed-semi">FAQ's</h2>
 
-              <Accordion.Item eventKey="10" className="mt-3 p-4">
-                <Accordion.Header className="faq-question">
-                  Do you offer women's sports nutrition formulas?
-                </Accordion.Header>
-                <Accordion.Body className="faq-answer">
-                  one of our fastest-growing categories. We formulate
-                  collagen-protein blends, iron and folate-fortified recovery
-                  supplements, and hormone-support pre-workouts specifically
-                  designed for the Indian women's wellness market.
-                </Accordion.Body>
-              </Accordion.Item>
+              <Accordion defaultActiveKey={["1"]} alwaysOpen inter-regular>
+                <Accordion.Item eventKey="1" className="mt-3 p-4">
+                  <Accordion.Header className="faq-question">
+                    What are Pre-Workout Supplements?
+                  </Accordion.Header>
+                  <Accordion.Body className="faq-answer">
+                    Pre-Workout supplements are designed to support energy,
+                    focus, endurance, and workout performance before training
+                    sessions. They are commonly used by gym users, athletes, and
+                    fitness supplement brands. We offer Basic, Standard, and
+                    Advanced formulation levels.
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="2" className="mt-3 p-4">
+                  <Accordion.Header className="faq-question">
+                    What Creatine products does Gomzi Lifesciences manufacture?
+                  </Accordion.Header>
+                  <Accordion.Body className="faq-answer">
+                    We manufacture Creatine Monohydrate, Micronized Creatine,
+                    and Creatine Blend Formulations including custom blends with
+                    Electrolytes and Amino Acids.
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="3" className="mt-3 p-4">
+                  <Accordion.Header className="faq-question">
+                    What BCAA ratios are available?
+                  </Accordion.Header>
+                  <Accordion.Body className="faq-answer">
+                    We manufacture BCAA in 2:1:1, 4:1:1, and 8:1:1 ratios with
+                    custom formulations including BCAA with Electrolytes, BCAA
+                    with Glutamine, and Intra-Workout Hydration Formulas.
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="4" className="mt-3 p-4">
+                  <Accordion.Header className="faq-question">
+                    Who can start a performance supplement brand with Gomzi
+                    Lifesciences?
+                  </Accordion.Header>
+                  <Accordion.Body className="faq-answer">
+                    Our manufacturing services are suitable for Gym Owners,
+                    Fitness Trainers, Sports Nutrition Brands, E-commerce
+                    Sellers (Amazon, Flipkart, Shopify), Athletes and Sports
+                    Professionals, and Health and Wellness Entrepreneurs.
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="5" className="mt-3 p-4">
+                  <Accordion.Header className="faq-question">
+                    What certifications does Gomzi Lifesciences hold?
+                  </Accordion.Header>
+                  <Accordion.Body className="faq-answer">
+                    All products are manufactured under certified quality
+                    systems including FSSAI, GMP, HACCP, HALAL and Kosher
+                    standards.
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="6" className="mt-3 p-4">
+                  <Accordion.Header className="faq-question">
+                    What is the minimum order quantity?
+                  </Accordion.Header>
+                  <Accordion.Body className="faq-answer">
+                    Gomzi Lifesciences offers a Low Minimum Order Quantity of
+                    50–100 KG for performance supplement manufacturing.
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="7" className="mt-3 p-4">
+                  <Accordion.Header className="faq-question">
+                    What Pre-Workout formulation levels are available?
+                  </Accordion.Header>
+                  <Accordion.Body className="faq-answer">
+                    We offer Basic Pre-Workout for beginner fitness users,
+                    Standard Pre-Workout for regular gym users, and Advanced
+                    Pre-Workout with high-performance formulas designed for
+                    athletes.
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="8" className="mt-3 p-4">
+                  <Accordion.Header className="faq-question">
+                    Can I get private label performance supplement manufacturing
+                    in Surat?
+                  </Accordion.Header>
+                  <Accordion.Body className="faq-answer">
+                    Yes. Gomzi Lifesciences LLP is based in Surat and
+                    specializes in private label performance supplement
+                    manufacturing for sports nutrition brands, gym owners,
+                    fitness trainers, athletes, and e-commerce businesses.
+                  </Accordion.Body>
+                </Accordion.Item>
 
-              <Accordion.Item eventKey="11" className="mt-3 p-4">
-                <Accordion.Header className="faq-question">
-                  What flavours are available, and can I request custom ones?
-                </Accordion.Header>
-                <Accordion.Body className="faq-answer">
-                  We have standard flavours including Indian-market profiles
-                  —lemon, fruit punch , watermelon, tangy orange, blueberry.
-                  Custom flavour development is available — typically 10–14 days
-                  for a new flavour sample.
-                </Accordion.Body>
-              </Accordion.Item>
+                <Accordion.Item eventKey="9" className="mt-3 p-4">
+                  <Accordion.Header className="faq-question">
+                    What supplement formats can you manufacture?
+                  </Accordion.Header>
+                  <Accordion.Body className="faq-answer">
+                    Powders (tubs and flat-bottom pouches), capsules, tablets,
+                    blister packs, stick packs, and sachets. For sports
+                    nutrition specifically — pre-workouts, BCAAs, and mass
+                    gainers are available in both tub and resealable pouch
+                    formats. MOQ starts at 50 KG per SKU.
+                  </Accordion.Body>
+                </Accordion.Item>
 
-              <Accordion.Item eventKey="12" className="mt-3 p-4">
-                <Accordion.Header className="faq-question">
-                  Are your products Halal and Kosher certified?
-                </Accordion.Header>
-                <Accordion.Body className="faq-answer">
-                  Yes. Our facility holds both certifications — making your
-                  products export-ready for the Middle East and Southeast Asia
-                  from your very first batch. Certificate documentation ships
-                  with every order.
-                </Accordion.Body>
-              </Accordion.Item>
+                <Accordion.Item eventKey="10" className="mt-3 p-4">
+                  <Accordion.Header className="faq-question">
+                    Do you offer women's sports nutrition formulas?
+                  </Accordion.Header>
+                  <Accordion.Body className="faq-answer">
+                    one of our fastest-growing categories. We formulate
+                    collagen-protein blends, iron and folate-fortified recovery
+                    supplements, and hormone-support pre-workouts specifically
+                    designed for the Indian women's wellness market.
+                  </Accordion.Body>
+                </Accordion.Item>
 
-              <Accordion.Item eventKey="13" className="mt-3 p-4">
-                <Accordion.Header className="faq-question">
-                  What does a COA (Certificate of Analysis) include?
-                </Accordion.Header>
-                <Accordion.Body className="faq-answer">
-                  Every batch COA covers actual protein percentage verification,
-                  microbiology (yeast, mould, E.coli, Salmonella), heavy metal
-                  screening (arsenic, cadmium, lead), and identity confirmation
-                  of key active ingredients. It tests the finished product — not
-                  just the inputs.
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
+                <Accordion.Item eventKey="11" className="mt-3 p-4">
+                  <Accordion.Header className="faq-question">
+                    What flavours are available, and can I request custom ones?
+                  </Accordion.Header>
+                  <Accordion.Body className="faq-answer">
+                    We have standard flavours including Indian-market profiles
+                    —lemon, fruit punch , watermelon, tangy orange, blueberry.
+                    Custom flavour development is available — typically 10–14
+                    days for a new flavour sample.
+                  </Accordion.Body>
+                </Accordion.Item>
+
+                <Accordion.Item eventKey="12" className="mt-3 p-4">
+                  <Accordion.Header className="faq-question">
+                    Are your products Halal and Kosher certified?
+                  </Accordion.Header>
+                  <Accordion.Body className="faq-answer">
+                    Yes. Our facility holds both certifications — making your
+                    products export-ready for the Middle East and Southeast Asia
+                    from your very first batch. Certificate documentation ships
+                    with every order.
+                  </Accordion.Body>
+                </Accordion.Item>
+
+                <Accordion.Item eventKey="13" className="mt-3 p-4">
+                  <Accordion.Header className="faq-question">
+                    What does a COA (Certificate of Analysis) include?
+                  </Accordion.Header>
+                  <Accordion.Body className="faq-answer">
+                    Every batch COA covers actual protein percentage
+                    verification, microbiology (yeast, mould, E.coli,
+                    Salmonella), heavy metal screening (arsenic, cadmium, lead),
+                    and identity confirmation of key active ingredients. It
+                    tests the finished product — not just the inputs.
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </div>
           </div>
         </div>
-      </div>
 
-      <NutritionFooter />
-    </div>
+        <NutritionFooter />
+      </div>
+    </>
   );
 };
 

@@ -79,7 +79,7 @@ export default function HeroSection() {
         contactEl.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }, 50);
-  }
+  };
 
   useEffect(() => {
     const tag = document.createElement("style");
@@ -90,7 +90,7 @@ export default function HeroSection() {
   }, []);
 
   useEffect(() => {
-    const footer = document.querySelector('.footer');
+    const footer = document.querySelector(".footer");
 
     if (!footer) {
       return undefined;
@@ -102,7 +102,7 @@ export default function HeroSection() {
       },
       {
         threshold: 0.15,
-      }
+      },
     );
 
     observer.observe(footer);
@@ -144,10 +144,16 @@ export default function HeroSection() {
             <div className="hero-divider" />
 
             {/* Subtitle */}
+            <p>
+              Start your whey protein brand with expert formulation, private
+              label manufacturing, sample support, and clear pricing, all from
+              one trusted partner.
+            </p>
+
             <p className="hero-subtitle">
-              You built the audience. Now build the product. Get clear answers on
-              formulation, pricing, quality, and timelines before you place your
-              first order, your next order, or your switch order.
+              For founders, gym owners, supplement sellers, and D2C brands
+              looking to launch private label whey products with formulation,
+              manufacturing, and sample support.
             </p>
 
             {/* CTA Buttons */}
@@ -156,50 +162,85 @@ export default function HeroSection() {
                 className="btn-primary-green"
                 onClick={handleContactClick}
               >
-                Talk to Our Manufacturing Expert
+                Request Sample & Start Your Whey Brand
               </button>
             </div>
-            {/* Trust Badges */}
-            <div className="hero-badges">
-              <div className="badge-item">
-                <span className="badge-icon">
-                  <ShieldIcon />
-                </span>
-                <span>
-                  Quality
-                  <br />
-                  Assured
-                </span>
+
+            <div class="whey-landing-hero-badge-wrapper">
+              <div class="whey-landing-hero-badge">
+                <div class="whey-landing-hero-badge-icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+
+                <div class="whey-landing-hero-badge-text">
+                  Whey Sample Support
+                </div>
               </div>
-              <div className="badge-item">
-                <span className="badge-icon">
-                  <ChartIcon />
-                </span>
-                <span>
-                  Scalable
-                  <br />
-                  Solutions
-                </span>
+
+              <div class="whey-landing-hero-badge">
+                <div class="whey-landing-hero-badge-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 10h2v4H4z"
+                    />
+
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M18 10h2v4h-2z"
+                    />
+
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 9h2v6H6z"
+                    />
+
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M16 9h2v6h-2z"
+                    />
+
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8 12h8"
+                    />
+                  </svg>
+                </div>
+
+                <div class="whey-landing-hero-badge-text">Start From 50 KG</div>
               </div>
-              <div className="badge-item">
-                <span className="badge-icon">
-                  <ClockIcon />
-                </span>
-                <span>
-                  On-Time
-                  <br />
-                  Delivery
-                </span>
-              </div>
-              <div className="badge-item">
-                <span className="badge-icon">
-                  <FlaskIcon />
-                </span>
-                <span>
-                  Science
-                  <br />
-                  Backed
-                </span>
+
+              <div class="whey-landing-hero-badge">
+                <div class="whey-landing-hero-badge-icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 3v5l-5 9a2 2 0 002 3h12a2 2 0 002-3l-5-9V3"
+                    />
+                  </svg>
+                </div>
+
+                <div class="whey-landing-hero-badge-text">
+                  Formulation Guidance
+                </div>
               </div>
             </div>
           </div>
@@ -214,78 +255,115 @@ export default function HeroSection() {
           alt="Whey Protein Product"
         />
         <div className="hero-content">
-            {/* Headline */}
-            <h1 className="hero-title">
-              Launch Your Own
-              <span className="green"> Protein</span> Brand.
-            </h1>
+          {/* Headline */}
+          <h1 className="hero-title">
+            Launch Your Own
+            <span className="green"> Protein</span> Brand.
+          </h1>
 
-            {/* Green divider */}
-            <div className="hero-divider" />
+          {/* Green divider */}
+          <div className="hero-divider" />
 
-            {/* Subtitle */}
-            <p className="hero-subtitle">
-              You built the audience. Now build the product. Get clear answers on
-              formulation, pricing, quality, and timelines before you place your
-              first order, your next order, or your switch order.
-            </p>
+          {/* Subtitle */}
+          <p>
+            Start your whey protein brand with expert formulation, private label
+            manufacturing, sample support, and clear pricing, all from one
+            trusted partner.
+          </p>
 
-            {/* CTA Buttons */}
-            <div className="hero-btns">
-              <button
-                className="btn-primary-green"
-                onClick={handleContactClick}
-              >
-                Talk to Our Manufacturing Expert
-              </button>
+          <p className="hero-subtitle">
+            For founders, gym owners, supplement sellers, and D2C brands looking
+            to launch private label whey products with formulation,
+            manufacturing, and sample support.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="hero-btns">
+            <button className="btn-primary-green" onClick={handleContactClick}>
+              Request Sample & Start Your Whey Brand
+            </button>
+          </div>
+          <div class="whey-landing-hero-badge-wrapper">
+            <div class="whey-landing-hero-badge">
+              <div class="whey-landing-hero-badge-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+
+              <div class="whey-landing-hero-badge-text">
+                Whey Sample Support
+              </div>
             </div>
-            {/* Trust Badges */}
-            <div className="hero-badges">
-              <div className="badge-item">
-                <span className="badge-icon">
-                  <ShieldIcon />
-                </span>
-                <span>
-                  Quality
-                  <br />
-                  Assured
-                </span>
+
+            <div class="whey-landing-hero-badge">
+              <div class="whey-landing-hero-badge-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 10h2v4H4z"
+                  />
+
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M18 10h2v4h-2z"
+                  />
+
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 9h2v6H6z"
+                  />
+
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M16 9h2v6h-2z"
+                  />
+
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8 12h8"
+                  />
+                </svg>
               </div>
-              <div className="badge-item">
-                <span className="badge-icon">
-                  <ChartIcon />
-                </span>
-                <span>
-                  Scalable
-                  <br />
-                  Solutions
-                </span>
+
+              <div class="whey-landing-hero-badge-text">Start From 50 KG</div>
+            </div>
+
+            <div class="whey-landing-hero-badge">
+              <div class="whey-landing-hero-badge-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 3v5l-5 9a2 2 0 002 3h12a2 2 0 002-3l-5-9V3"
+                  />
+                </svg>
               </div>
-              <div className="badge-item">
-                <span className="badge-icon">
-                  <ClockIcon />
-                </span>
-                <span>
-                  On-Time
-                  <br />
-                  Delivery
-                </span>
-              </div>
-              <div className="badge-item">
-                <span className="badge-icon">
-                  <FlaskIcon />
-                </span>
-                <span>
-                  Science
-                  <br />
-                  Backed
-                </span>
+
+              <div class="whey-landing-hero-badge-text">
+                Formulation Guidance
               </div>
             </div>
           </div>
+        </div>
       </div>
 
-      {showStickyCta && (
+      {/* {showStickyCta && (
         <div className="hero-sticky-cta-wrap">
           <a
             href="#contact"
@@ -298,7 +376,7 @@ export default function HeroSection() {
             <span className="hero-sticky-cta-label">Talk to Our Manufacturing Expert</span>
           </a>
         </div>
-      )}
+      )} */}
     </section>
   );
 }

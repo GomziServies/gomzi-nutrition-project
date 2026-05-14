@@ -26,14 +26,25 @@ function NutritionFooter() {
                 </p>
                 <div className="f2">
                   <p className="mb-2 mt-2 int-regular">
-                    <Link to="tel:+918320077993">
-                       +91 8320077993
-                    </Link>
+                    <Link to="tel:+918320077993">+91 8320077993</Link>
                   </p>
                   <p className="mb-4 int-regular">
                     <Link to="mailto:info@gomzilifesciences.in">
                       info@gomzilifesciences.in
                     </Link>
+                  </p>
+
+                  <p className="mb-4 int-regular location-text">
+                    <a
+                      href="https://www.google.com/maps?q=443,444,445,RJD+Textile+Park,Ichchhapor,Hazira+Road,Surat,Gujarat,394510"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="location-link"
+                    >
+                      <i className="fas fa-map-marker-alt location-icon"></i>
+                      443,444,445, 1st Floor, RJD Textile Park, At. Ichchhapor,
+                      Hazira Road, Surat, Gujarat 394510
+                    </a>
                   </p>
                 </div>
               </div>

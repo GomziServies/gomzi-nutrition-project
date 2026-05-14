@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { publicAxiosInstance } from "../../assets/js/config/api";
+import "../../assets/css/nutrition.css";
 
 // ─── Fireworks Canvas ─────────────────────────────────────────────────────────
 function FireworksCanvas() {
@@ -116,43 +117,13 @@ function FireworksCanvas() {
     };
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        pointerEvents: "none",
-        zIndex: 20,
-        borderRadius: 0,
-      }}
-    />
-  );
+  return <canvas ref={canvasRef} className="request-modal-canvas" />;
 }
 
 // ─── Radio Option ─────────────────────────────────────────────────────────────
 function RadioOption({ name, value, label, selected, onChange }) {
   return (
-    <label
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "0.65rem 0.9rem",
-        border: `1.5px solid ${selected ? "#89c149" : "#e5e7eb"}`,
-        borderRadius: "10px",
-        marginBottom: "0.5rem",
-        cursor: "pointer",
-        background: selected ? "#f0f9e8" : "#fff",
-        transition: "all 0.15s ease",
-        fontSize: "0.88rem",
-        color: "#1a1a1a",
-        fontWeight: selected ? 600 : 400,
-      }}
-    >
+    <label className={`custom-label-radio ${selected ? "active" : ""}`}>
       <span>{label}</span>
       <input
         type="radio"
@@ -160,32 +131,10 @@ function RadioOption({ name, value, label, selected, onChange }) {
         value={value}
         checked={selected}
         onChange={() => onChange(name, value)}
-        style={{ display: "none" }}
+        className="d-none"
       />
-      <div
-        style={{
-          width: "20px",
-          height: "20px",
-          borderRadius: "50%",
-          border: `2px solid ${selected ? "#89c149" : "#d1d5db"}`,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexShrink: 0,
-          background: selected ? "#89c149" : "#fff",
-          transition: "all 0.15s ease",
-        }}
-      >
-        {selected && (
-          <div
-            style={{
-              width: "8px",
-              height: "8px",
-              borderRadius: "50%",
-              background: "#fff",
-            }}
-          />
-        )}
+      <div className={`custom-radio ${selected ? "active" : ""}`}>
+        {selected && <div className="custom-radio-div" />}
       </div>
     </label>
   );
@@ -195,44 +144,11 @@ function RadioOption({ name, value, label, selected, onChange }) {
 function BudgetOption({ value, selected, onChange }) {
   return (
     <label
-      style={{
-        display: "flex",
-        alignItems: "center",
-        gap: "0.5rem",
-        padding: "0.55rem 0.75rem",
-        border: `1.5px solid ${selected ? "#89c149" : "#e5e7eb"}`,
-        borderRadius: "8px",
-        cursor: "pointer",
-        background: selected ? "#f0f9e8" : "#fff",
-        fontSize: "0.8rem",
-        fontWeight: selected ? 600 : 400,
-        transition: "all 0.15s",
-      }}
+      className={`custom-budget-label ${selected ? "active" : ""}`}
       onClick={() => onChange("budget", value)}
     >
-      <div
-        style={{
-          width: "16px",
-          height: "16px",
-          borderRadius: "50%",
-          border: `2px solid ${selected ? "#89c149" : "#d1d5db"}`,
-          background: selected ? "#89c149" : "#fff",
-          flexShrink: 0,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        {selected && (
-          <div
-            style={{
-              width: "6px",
-              height: "6px",
-              borderRadius: "50%",
-              background: "#fff",
-            }}
-          />
-        )}
+      <div className={`custom-radio-sm ${selected ? "active" : ""}`}>
+        {selected && <div className="custom-radio-sm-div" />}
       </div>
       {value}
     </label>
@@ -300,13 +216,20 @@ export default function RequestQuoteModal() {
   const [form, setForm] = useState(EMPTY_FORM);
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
+  const [subject, setSubject] = useState("Quote Request");
 
   const totalSteps = STEPS.length + 1;
   const progressPercent = (step / totalSteps) * 100;
 
   // ── Sidebar / external trigger via window event ──────────────────────────
   useEffect(() => {
-    const handleOpen = () => setIsOpen(true);
+    const handleOpen = () => {
+      // Get subject from window if set by button
+      if (window.quoteSubject) {
+        setSubject(window.quoteSubject);
+      }
+      setIsOpen(true);
+    };
     window.addEventListener("open-quote", handleOpen);
     return () => window.removeEventListener("open-quote", handleOpen);
   }, []);
@@ -335,7 +258,7 @@ export default function RequestQuoteModal() {
     setLoading(true);
     try {
       await publicAxiosInstance.post("/contact-inquiry", {
-        subject: "Quote Request",
+        subject: subject,
         name: form.name,
         email: form.email,
         mobile: form.phone,
@@ -439,17 +362,6 @@ export default function RequestQuoteModal() {
   // ─────────────────────────────────────────────────────────────────────────
   return (
     <>
-      {/* ── Trigger button ── */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="btn fw-bold shadow-lg px-5 py-2 text-capitalize request-toggle"
-        onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-        onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
-        style={{ transition: "transform 0.2s" }}
-      >
-        Request a Quote
-      </button>
-
       {/* ── Right Sidebar Drawer ── */}
       {isOpen &&
         createPortal(
@@ -466,38 +378,12 @@ export default function RequestQuoteModal() {
           `}</style>
 
             {/* Backdrop */}
-            <div
-              style={{
-                position: "fixed",
-                inset: 0,
-                background: "rgba(0,0,0,0.45)",
-                zIndex: 9999,
-                animation: "fadeInOverlay 0.25s ease",
-              }}
-              onClick={handleClose}
-            />
+            <div className="backdrop" onClick={handleClose} />
 
             {/* Sidebar Panel */}
-            <div
-              style={{
-                position: "fixed",
-                top: 0,
-                right: 0,
-                width: "100%",
-                maxWidth: "480px",
-                height: "100vh",
-                background: "#fff",
-                overflowY: "auto",
-                zIndex: 10000,
-                animation: "slideInRight 0.3s ease",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
+            <div className="sidebar-panel">
               {/* Progress Bar */}
-              <div
-                style={{ height: "4px", background: "#f0f0f0", flexShrink: 0 }}
-              >
+              <div className="progess-bar">
                 <div
                   style={{
                     height: "100%",
@@ -511,94 +397,35 @@ export default function RequestQuoteModal() {
               {!submitted ? (
                 <>
                   {/* Header */}
-                  <div
-                    style={{
-                      padding: "1.5rem 1.5rem 0.5rem",
-                      borderBottom: "0.5px solid #f0f0f0",
-                      flexShrink: 0,
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontSize: "0.62rem",
-                        fontWeight: 700,
-                        letterSpacing: "2px",
-                        textTransform: "uppercase",
-                        color: "#8ab36a",
-                        background: "#f0f9e8",
-                        border: "1px solid #c5e49a",
-                        borderRadius: "100px",
-                        display: "inline-block",
-                        padding: "3px 12px",
-                        marginBottom: "0.6rem",
-                      }}
-                    >
-                      Get a Quote
-                    </div>
-                    <h2
-                      style={{
-                        fontSize: "1.5rem",
-                        fontWeight: 700,
-                        color: "#1a1a1a",
-                        lineHeight: 1.2,
-                      }}
-                    >
+                  <div className="requestmodal-header">
+                    <div className="requestmodal-get-quote">Get a Quote</div>
+                    <h2 className="tell-us">
                       Tell us about
                       <br />
-                      <span style={{ color: "#89c149" }}>your needs.</span>
+                      <span>your needs.</span>
                     </h2>
-                    <p
-                      style={{
-                        fontSize: "0.73rem",
-                        color: "#aeaeb2",
-                        marginTop: "0.25rem",
-                      }}
-                    >
+                    <p className="step-p">
                       Step {step + 1} of {totalSteps}
                     </p>
                     <button
                       onClick={handleClose}
-                      style={{
-                        position: "absolute",
-                        top: "1rem",
-                        right: "1rem",
-                        background: "none",
-                        border: "none",
-                        fontSize: "1.1rem",
-                        color: "#aeaeb2",
-                        cursor: "pointer",
-                      }}
+                      className="requestmodal-close"
                     >
                       ✕
                     </button>
                   </div>
 
                   {/* Body — grows to fill available space */}
-                  <div style={{ padding: "1.2rem 1.5rem", flex: 1 }}>
+                  <div className="Body-grows">
                     {/* Radio / Budget steps */}
                     {step < STEPS.length &&
                       (() => {
                         const s = STEPS[step];
                         return (
                           <>
-                            <p
-                              style={{
-                                fontSize: "0.95rem",
-                                fontWeight: 600,
-                                color: "#1a1a1a",
-                                marginBottom: "1rem",
-                              }}
-                            >
-                              {s.question}
-                            </p>
+                            <p className="s-question">{s.question}</p>
                             {s.type === "budget" ? (
-                              <div
-                                style={{
-                                  display: "grid",
-                                  gridTemplateColumns: "1fr 1fr",
-                                  gap: "0.4rem",
-                                }}
-                              >
+                              <div className="s-type-budget">
                                 {s.options.map((o) => (
                                   <BudgetOption
                                     key={o}
@@ -621,14 +448,7 @@ export default function RequestQuoteModal() {
                               ))
                             )}
                             {errors[s.key] && (
-                              <span
-                                style={{
-                                  color: "#e24b4a",
-                                  fontSize: "0.72rem",
-                                }}
-                              >
-                                {errors[s.key]}
-                              </span>
+                              <span className="error-key">{errors[s.key]}</span>
                             )}
                           </>
                         );
@@ -637,33 +457,13 @@ export default function RequestQuoteModal() {
                     {/* Contact step */}
                     {step === STEPS.length && (
                       <>
-                        <p
-                          style={{
-                            fontSize: "0.95rem",
-                            fontWeight: 600,
-                            color: "#1a1a1a",
-                            marginBottom: "0.3rem",
-                          }}
-                        >
+                        <p className="contact-step-title">
                           Contact &amp; Product Details
                         </p>
-                        <p
-                          style={{
-                            fontSize: "0.75rem",
-                            color: "#aeaeb2",
-                            marginBottom: "1rem",
-                          }}
-                        >
+                        <p className="contact-step-para">
                           Fill in your details below
                         </p>
-                        <div
-                          style={{
-                            display: "grid",
-                            gridTemplateColumns: "1fr 1fr",
-                            gap: "0.75rem",
-                            marginBottom: "0.75rem",
-                          }}
-                        >
+                        <div className="contact-form-div">
                           {[
                             {
                               label: "Full Name",
@@ -703,15 +503,7 @@ export default function RequestQuoteModal() {
                             },
                           ].map(({ label, name, placeholder, type }) => (
                             <div key={name}>
-                              <label
-                                style={{
-                                  fontSize: "0.8rem",
-                                  fontWeight: 600,
-                                  color: "#555",
-                                  display: "block",
-                                  marginBottom: "0.3rem",
-                                }}
-                              >
+                              <label className="contact-form-label">
                                 {label}
                               </label>
                               <input
@@ -723,28 +515,15 @@ export default function RequestQuoteModal() {
                                 style={inputStyle(!!errors[name])}
                               />
                               {errors[name] && (
-                                <span
-                                  style={{
-                                    color: "#e24b4a",
-                                    fontSize: "0.68rem",
-                                  }}
-                                >
+                                <span className="error-key">
                                   {errors[name]}
                                 </span>
                               )}
                             </div>
                           ))}
                         </div>
-                        <div style={{ marginBottom: "0.75rem" }}>
-                          <label
-                            style={{
-                              fontSize: "0.8rem",
-                              fontWeight: 600,
-                              color: "#555",
-                              display: "block",
-                              marginBottom: "0.3rem",
-                            }}
-                          >
+                        <div className="mb-rem">
+                          <label className="contact-form-label">
                             Packaging Requirement
                           </label>
                           <input
@@ -757,15 +536,7 @@ export default function RequestQuoteModal() {
                           />
                         </div>
                         <div>
-                          <label
-                            style={{
-                              fontSize: "0.8rem",
-                              fontWeight: 600,
-                              color: "#555",
-                              display: "block",
-                              marginBottom: "0.3rem",
-                            }}
-                          >
+                          <label className="contact-form-label">
                             Additional Message
                           </label>
                           <textarea
@@ -782,14 +553,8 @@ export default function RequestQuoteModal() {
                   </div>
 
                   {/* Footer */}
-                  <div
-                    style={{
-                      padding: "1rem 1.5rem 1.5rem",
-                      borderTop: "0.5px solid #f0f0f0",
-                      flexShrink: 0,
-                    }}
-                  >
-                    <div style={{ display: "flex", gap: "0.75rem" }}>
+                  <div className="requestmodal-footer">
+                    <div className="requestmodal-footer-div">
                       {step > 0 && (
                         <button onClick={handleBack} style={btnBack}>
                           ← Back
@@ -830,14 +595,7 @@ export default function RequestQuoteModal() {
                         </button>
                       )}
                     </div>
-                    <p
-                      style={{
-                        fontSize: "0.68rem",
-                        color: "#aeaeb2",
-                        textAlign: "center",
-                        marginTop: "0.7rem",
-                      }}
-                    >
+                    <p className="info-safe">
                       🔒 Your info is safe with us. No spam, ever.
                     </p>
                   </div>
@@ -845,47 +603,15 @@ export default function RequestQuoteModal() {
               ) : (
                 /* ── Success Screen ── */
                 <>
-                  <button
-                    onClick={handleClose}
-                    style={{
-                      position: "absolute",
-                      top: "1rem",
-                      right: "1rem",
-                      zIndex: 30,
-                      background: "none",
-                      border: "none",
-                      fontSize: "1.1rem",
-                      color: "#aeaeb2",
-                      cursor: "pointer",
-                    }}
-                  >
+                  <button onClick={handleClose} className="requestmodal-close ">
                     ✕
                   </button>
 
                   {/* Fireworks Canvas */}
                   <FireworksCanvas />
 
-                  <div
-                    style={{
-                      position: "relative",
-                      zIndex: 1,
-                      textAlign: "center",
-                      padding: "2.5rem 1.5rem",
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: "80px",
-                        height: "80px",
-                        borderRadius: "50%",
-                        background: "#f0f9e8",
-                        border: "2px solid #c5e49a",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        margin: "0 auto 1.25rem",
-                      }}
-                    >
+                  <div className="fireworks-canvas-div">
+                    <div className="fireworks-canvas-div-svg">
                       <svg
                         width="36"
                         height="36"
@@ -903,158 +629,40 @@ export default function RequestQuoteModal() {
                       </svg>
                     </div>
 
-                    <div
-                      style={{
-                        fontSize: "0.62rem",
-                        fontWeight: 700,
-                        letterSpacing: "2px",
-                        textTransform: "uppercase",
-                        color: "#3B6D11",
-                        background: "#f0f9e8",
-                        border: "1px solid #c5e49a",
-                        borderRadius: "100px",
-                        display: "inline-block",
-                        padding: "4px 14px",
-                        marginBottom: "0.9rem",
-                      }}
-                    >
-                      Request Received
-                    </div>
+                    <div className="request-received">Request Received</div>
 
-                    <h2
-                      style={{
-                        fontSize: "1.4rem",
-                        fontWeight: 700,
-                        color: "#1a1a1a",
-                        marginBottom: "0.4rem",
-                      }}
-                    >
-                      You're all set! 🎉
-                    </h2>
-                    <p
-                      style={{
-                        fontSize: "0.85rem",
-                        color: "#6e6e73",
-                        marginBottom: "1.5rem",
-                      }}
-                    >
-                      Thanks, <strong>{form.name}</strong>! Your quote request
-                      has been submitted successfully.
+                    <h2 className="all-set">You're all set! 🎉</h2>
+                    <p className="all-set-para ">
+                      Thanks, <strong>{form.name}</strong>! Your request has
+                      been submitted successfully.
                     </p>
 
-                    <div
-                      style={{
-                        background: "#f9faf7",
-                        border: "0.5px solid #ddeec8",
-                        borderRadius: "12px",
-                        padding: "1rem",
-                        marginBottom: "1.4rem",
-                      }}
-                    >
-                      <p
-                        style={{
-                          fontSize: "0.72rem",
-                          fontWeight: 600,
-                          letterSpacing: "1.5px",
-                          textTransform: "uppercase",
-                          color: "#8ab36a",
-                          marginBottom: "0.5rem",
-                        }}
-                      >
+                    <div className="contact-you-div">
+                      <p className="contact-you-div-para">
                         We'll contact you on
                       </p>
-                      <p
-                        style={{
-                          fontSize: "1.15rem",
-                          fontWeight: 700,
-                          color: "#1a1a1a",
-                          margin: 0,
-                        }}
-                      >
-                        {form.phone}
-                      </p>
+                      <p className="form-phone">{form.phone}</p>
                     </div>
 
-                    <div style={{ textAlign: "left", marginBottom: "1.5rem" }}>
-                      <p
-                        style={{
-                          fontSize: "0.68rem",
-                          fontWeight: 600,
-                          letterSpacing: "1.5px",
-                          textTransform: "uppercase",
-                          color: "#aeaeb2",
-                          marginBottom: "0.6rem",
-                        }}
-                      >
-                        What happens next
-                      </p>
+                    <div className="happens-div">
+                      <p>What happens next</p>
                       {[
                         "Our team reviews your request",
                         "We call you within 24 hours",
                         "Quotation & sample dispatch",
                       ].map((t, i) => (
-                        <div
-                          key={i}
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            gap: "10px",
-                            marginBottom: "8px",
-                          }}
-                        >
-                          <div
-                            style={{
-                              width: "22px",
-                              height: "22px",
-                              borderRadius: "50%",
-                              background: "#f0f9e8",
-                              border: "1.5px solid #c5e49a",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              fontSize: "11px",
-                              fontWeight: 700,
-                              color: "#3B6D11",
-                              flexShrink: 0,
-                            }}
-                          >
-                            {i + 1}
-                          </div>
-                          <span
-                            style={{ fontSize: "0.82rem", color: "#6e6e73" }}
-                          >
-                            {t}
-                          </span>
+                        <div key={i} className="happens-div-map">
+                          <div className="index-1">{i + 1}</div>
+                          <span className="index-t">{t}</span>
                         </div>
                       ))}
                     </div>
 
-                    <button
-                      onClick={handleClose}
-                      style={{
-                        width: "100%",
-                        background: "#1a1a1a",
-                        color: "#fff",
-                        border: "none",
-                        padding: "0.85rem",
-                        borderRadius: "12px",
-                        fontSize: "0.9rem",
-                        fontWeight: 600,
-                        cursor: "pointer",
-                      }}
-                    >
+                    <button onClick={handleClose} className="done-btn ">
                       Done
                     </button>
 
-                    <p
-                      style={{
-                        fontSize: "0.68rem",
-                        color: "#aeaeb2",
-                        marginTop: "0.75rem",
-                      }}
-                    >
-                      🔒 Your data is safe with us
-                    </p>
+                    <p className="data-safe-p ">🔒 Your data is safe with us</p>
                   </div>
                 </>
               )}

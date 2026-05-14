@@ -97,6 +97,14 @@ const facilities = [
 ];
 
 const Certifications = () => {
+  const handleContactClick = () => {
+    setTimeout(() => {
+      const contactEl = document.getElementById("contact");
+      if (contactEl) {
+        contactEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 50);
+  };
   return (
     <>
       <section className="cert-section " id="certifications">
@@ -181,6 +189,11 @@ const Certifications = () => {
               </div>
             ))}
           </div>
+        </div>
+        <div className="ws-bottom-cta">
+          <button className="btn-primary-green" onClick={handleContactClick}>
+            Request Sample & Start Your Whey Brand
+          </button>
         </div>
       </section>
     </>

@@ -743,7 +743,7 @@
   .btn-primary-green {
     width: 100%;
     justify-content: center;
-    font-size: 14px;
+    font-size: 13px;
     white-space: normal;
     text-align: center;
   }
@@ -1139,9 +1139,9 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr; */
+  /* gap: 60px; */
   align-items: center;
 }
 
@@ -1201,12 +1201,27 @@
 }
 
 .hero-headline {
-  font-size: clamp(30px, 5.5vw, 52px);
-  font-weight: 800;
+  font-size: var(--fs-hero);
+  font-weight: 900;
   color: var(--clr-text);
-  line-height: 1.12;
-  letter-spacing: -0.025em;
-  margin-bottom: 20px;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--mb-headline);
+  overflow: visible;
+}
+
+.whey-left{
+   overflow: visible;
+}
+
+.whey-right{
+   overflow: visible;
+}
+
+.whey-wrap,
+.whey-section{
+   height: auto !important;
+   min-height: auto !important;
 }
 
 .hero-sub {
@@ -1846,10 +1861,10 @@
     padding: 40px 16px;
   }
 
-  .founders-inner {
+  /* .founders-inner {
     grid-template-columns: 1fr;
     gap: 30px;
-  }
+  } */
 
   .founders-image {
     min-height: 300px;
@@ -1902,7 +1917,7 @@
 
 .mfg-section {
   position: relative;
-  padding: 50px 32px 40px;
+  padding: 50px 32px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2205,7 +2220,7 @@
 /* ── MOBILE (≤ 768px) ── */
 @media (max-width: 768px) {
   .mfg-section {
-    padding: 30px 12px 34px;
+    padding: 0px 12px 0px;
   }
 
   .mfg-inner {
@@ -2213,8 +2228,17 @@
     padding: 0;
   }
 
+  .cert-section{
+    padding: 0px !important;
+  }
+
   .mfg-headline {
     font-size: clamp(24px, 6vw, 32px);
+    padding-bottom: 10px !important;
+  }
+
+  .hiw-section>.hiw-inner>.row:first-child {
+    margin-bottom: 0px !important;
   }
 
   .mfg-card {
@@ -3077,26 +3101,27 @@
 }
 
 /* ── WRAPPER ── */
+
+
 .whey-wrap {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  min-height: 100dvh;
   box-sizing: border-box;
   padding: var(--pad-wrap);
-  /* background: #ffffff; */
+  overflow: hidden;
 }
 
 /* ── SECTION SHELL ── */
 .whey-section {
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   display: flex;
   flex-direction: column;
-  /* mobile: stacked */
   width: 100%;
+  max-width: 1400px;
   border-radius: var(--radius-card);
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* ════════════════════════════════
@@ -3148,7 +3173,7 @@
 }
 
 .hero-headline span {
-  color: var(--clr-accent-dark);
+  color: var(--clr-accent);
 }
 
 /* Hero subtext */
@@ -3202,7 +3227,7 @@
 .stat-num {
   font-size: var(--fs-stat-num);
   font-weight: 800;
-  color: var(--clr-accent-dark);
+  color: var(--clr-accent);
   line-height: 1;
 }
 
@@ -3217,15 +3242,16 @@
    RIGHT PANEL
 ════════════════════════════════ */
 .whey-right {
-  /* background: #ffffff; */
   display: flex;
   align-items: flex-start;
   justify-content: center;
   padding: var(--pad-right);
-  padding-top: 28px;
-  padding-bottom: 36px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
+  min-width: 0;
+  box-sizing: border-box;
   border-top: 1px solid var(--clr-border-light);
 }
 
@@ -3243,6 +3269,7 @@
 
 .form-card {
   width: 100%;
+  max-width: 100%;
   position: relative;
   z-index: 1;
 }
@@ -3495,8 +3522,8 @@
     padding: 52px 44px;
     border-top: none;
     /* border-left: 1px solid var(--clr-border-light); */
-    overflow: auto;
-    scrollbar-width: none;
+    /* overflow: auto; */
+    /* scrollbar-width: none; */
   }
 
   .whey-right::-webkit-scrollbar {
@@ -3788,3 +3815,248 @@
     }
   }
 }
+
+
+ .whey-landing-hero-badge-wrapper{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      justify-content:center;
+}
+
+
+
+    .whey-landing-hero-badge{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      background:#ffffff;
+      border:1px solid #d9dfd2;
+      border-radius:14px;
+      padding:14px 22px;
+      min-width:240px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.04);
+    }
+
+    .whey-landing-hero-badge-icon{
+      width:20px;
+      height:20px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+    }
+
+    .whey-landing-hero-badge-icon svg{
+      width:20px;
+      height:20px;
+      stroke:#79c143;
+    }
+
+    .whey-landing-hero-badge-text{
+      font-size:16px;
+      font-weight:500;
+      color:#111111;
+      line-height:1.2;
+    }
+
+    /* Responsive */
+
+    @media (max-width:768px){
+
+      .whey-landing-hero-badge{
+        width:100%;
+        min-width:unset;
+        padding:13px 18px;
+      }
+
+      .whey-landing-hero-badge-text{
+        font-size:16px;
+      }
+    }
+
+    @media (max-width:480px){
+
+      .whey-landing-hero-badge{
+        padding:12px 16px;
+        border-radius:12px;
+      }
+
+      .whey-landing-hero-badge-text{
+        font-size:15px;
+      }
+
+      .whey-landing-hero-badge-icon svg{
+        width:18px;
+        height:18px;
+      }
+    }
+
+
+    .protein-brand-landing-cards-section{
+    width:100%;
+    padding:40px 0;
+    background:#fff;
+}
+
+.protein-brand-landing-cards-wrapper{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.protein-brand-landing-cards{
+    background:#f7f7f4;
+    border:1px solid #d7e3cf;
+    border-radius:22px;
+    padding:28px 28px 30px;
+    transition:0.3s ease;
+}
+
+.protein-brand-landing-cards:hover{
+    transform:translateY(-4px);
+}
+
+.protein-brand-landing-cards-icon{
+    width:52px;
+    height:52px;
+    border-radius:14px;
+    background:#e7f1df;
+    border:1px solid #b8d7a6;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:24px;
+}
+
+.protein-brand-landing-cards-icon svg{
+    width:24px;
+    height:24px;
+    stroke:#4f9c35;
+}
+
+.protein-brand-landing-cards h3{
+    font-size:17px;
+    line-height:1.4;
+    font-weight:700;
+    color:#111111;
+    margin-bottom:14px;
+}
+
+.protein-brand-landing-cards p{
+    font-size:16px;
+    line-height:1.8;
+    color:#5f6773;
+    font-weight:400;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width:991px){
+
+    .protein-brand-landing-cards-wrapper{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:767px){
+
+    .protein-brand-landing-cards-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .protein-brand-landing-cards{
+        padding:24px 22px;
+        border-radius:18px;
+    }
+
+    .protein-brand-landing-cards h3{
+        font-size:18px;
+    }
+
+    .protein-brand-landing-cards p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+}
+
+.cta-btn:disabled{
+  opacity:0.6;
+  cursor:not-allowed;
+}
+
+@media (min-width: 992px){
+
+  .whey-section{
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .whey-left{
+    width: 52%;
+    min-width: 0;
+  }
+
+  .whey-right{
+    width: 48%;
+    min-width: 0;
+    border-top: none;
+    padding-left: 20px;
+  }
+
+}
+
+
+@media (max-width: 767px){
+
+  .whey-wrap{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .whey-left,
+  .whey-right{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero-headline{
+    line-height: 1.15;
+    word-break: break-word;
+  }
+
+  .form-title{
+    line-height: 1.25;
+    word-break: break-word;
+  }
+
+}
+
+@media (max-width: 767px){
+
+    .protein-brand-landing-cards-section{
+        padding: 0px 0;
+    }
+
+}
+
+.ws-bottom-cta{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:40px;
+    padding:40px 20px;
+    background:#eef5ea;
+    border-top:1px solid #d7e6cd;
+}
+/* 
+.ws-bottom-cta .cta-btn{
+    width:100%;
+    max-width:520px;
+} */

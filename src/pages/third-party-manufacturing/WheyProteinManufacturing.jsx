@@ -596,23 +596,23 @@ const WheyProteinManufacturing = () => {
           </div>
 
           <h1 className="wh-page-title barlow-condensed-extra f-32">
-            Private Label Whey Protein End-to-End Brand Launch Partner <br /> in
-            Surat, Gujarat
+            Private Label Whey Protein End-to-End Brand Launch Partner in Surat,
+            Gujarat
           </h1>
 
           <div className="whey-protein-div-main">
             <div>
-              <p className="wh-desc inter-regular">
+              <p className="wh-desc inter-regular justify-text">
                 Gomzi Lifesciences LLP specializes in manufacturing high-quality
                 whey protein supplements for sports nutrition brands, gym
                 owners, fitness trainers, athletes, and e-commerce businesses.
               </p>
-              <p className="wh-desc inter-regular">
+              <p className="wh-desc inter-regular justify-text">
                 Our manufacturing facility supports custom formulations, private
                 labeling, and bulk production for whey protein products designed
                 for performance nutrition and daily protein supplementation.
               </p>
-              <p className="wh-desc inter-regular">
+              <p className="wh-desc inter-regular justify-text">
                 All products are manufactured under certified quality systems
                 including <strong>FSSAI, GMP, HACCP, HALAL and Kosher</strong>{" "}
                 standards.
@@ -703,7 +703,7 @@ const WheyProteinManufacturing = () => {
         <div className="wh-section wh-section-alt">
           <div className="wh-container">
             <h2 className="wh-sec-title barlow-condensed-semi">
-              MARKET OPPORTUNITY
+              Market Opportunity
             </h2>
             <p className="wh-sec-desc inter-500">
               <strong>A Protein-Deficient Nation Waking Up.</strong>
@@ -888,7 +888,7 @@ const WheyProteinManufacturing = () => {
 
         <div className="wh-section wh-section-white">
           <div className="wh-container">
-            <h2 className="wh-sec-title barlow-condensed-semi">HOW IT WORKS</h2>
+            <h2 className="wh-sec-title barlow-condensed-semi">How It Works</h2>
 
             <p className="wh-sec-desc inter-regular">
               A committed timeline. Documented at every stage. No delays, no

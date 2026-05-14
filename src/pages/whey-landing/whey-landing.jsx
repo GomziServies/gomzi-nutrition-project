@@ -56,8 +56,9 @@ const wheylanding = () => {
         <BuiltForFirstLaunches />
         <HowItWorks />
         <Certifications />
-        <Faqwheylanding />
+       
         <ContactFormWheyLanding />
+         <Faqwheylanding />
         <WheyLandingFooter />
       </div>
     </>
