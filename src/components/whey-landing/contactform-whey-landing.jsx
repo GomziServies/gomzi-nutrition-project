@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { publicAxiosInstance } from "../../assets/js/config/api";
 // import './ContactFormWheyLanding.css'
 
@@ -79,6 +80,7 @@ const ContactFormWheyLanding = () => {
     startTimeline: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -161,7 +163,7 @@ const ContactFormWheyLanding = () => {
         requirement: "",
         startTimeline: "",
       });
-      alert("Form submitted! Our expert will reach out shortly.");
+      navigate("/thank-you");
     } catch (error) {
       console.error("Whey landing contact form submission error:", error);
       alert("Something went wrong. Please try again.");
