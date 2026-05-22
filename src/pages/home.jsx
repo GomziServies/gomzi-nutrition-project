@@ -15,32 +15,31 @@ import DownloadPdf from "../pdf/white-labelling.pdf";
 import { Helmet } from "react-helmet";
 import WhatsappHeaderApp from "../components/NutritionWhatsappHeaderBtn";
 import WhiteLabellingVideoTestimonials from "./nutrition/white-labelling-video-testimonials";
-import CertifiedProduct from "../components/nutrition/certified";
 import RequestQuoteButton from "../components/nutrition/RequestQuoteButton";
 import RequestQuoteModal from "../components/nutrition/requestquotemodal";
 
-const logos = [
-  {
-    id: 1,
-    imageSrc: "/assets/images/third-party-manufacturing/fassai.webp",
-  },
-  {
-    id: 2,
-    imageSrc: "/assets/images/third-party-manufacturing/gmp.webp",
-  },
-  {
-    id: 3,
-    imageSrc: "/assets/images/third-party-manufacturing/haccp.webp",
-  },
-  {
-    id: 4,
-    imageSrc: "/assets/images/third-party-manufacturing/halal.webp",
-  },
-  {
-    id: 5,
-    imageSrc: "/assets/images/third-party-manufacturing/kosher.webp",
-  },
-];
+// const logos = [
+//   {
+//     id: 1,
+//     imageSrc: "/assets/images/third-party-manufacturing/fassai.webp",
+//   },
+//   {
+//     id: 2,
+//     imageSrc: "/assets/images/third-party-manufacturing/gmp.webp",
+//   },
+//   {
+//     id: 3,
+//     imageSrc: "/assets/images/third-party-manufacturing/haccp.webp",
+//   },
+//   {
+//     id: 4,
+//     imageSrc: "/assets/images/third-party-manufacturing/halal.webp",
+//   },
+//   {
+//     id: 5,
+//     imageSrc: "/assets/images/third-party-manufacturing/kosher.webp",
+//   },
+// ];
 
 const certificates = [
   { file: "nutri-certi-1.webp", name: "HACCP", sub: "Hazard Control Point" },
@@ -55,7 +54,7 @@ const certificates = [
 ];
 
 function Home() {
-  const [showVideo, setShowVideo] = useState(false);
+  // const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
     const dropdowns = document.querySelectorAll(".mob-has-dropdown > a");

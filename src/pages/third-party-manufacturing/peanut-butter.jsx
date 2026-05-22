@@ -11,15 +11,15 @@ import { Accordion } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
-const KeyFeatures = ({ features, className = "" }) => (
-  <div className={`wh-feat-grid ${className}`}>
-    {features.map((feature, index) => (
-      <div key={index} className="wh-feat-item">
-        <span className="wh-feat-text">{feature.label}</span>
-      </div>
-    ))}
-  </div>
-);
+// const KeyFeatures = ({ features, className = "" }) => (
+//   <div className={`wh-feat-grid ${className}`}>
+//     {features.map((feature, index) => (
+//       <div key={index} className="wh-feat-item">
+//         <span className="wh-feat-text">{feature.label}</span>
+//       </div>
+//     ))}
+//   </div>
+// );
 
 const productCategories = [
   {

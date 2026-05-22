@@ -21,7 +21,6 @@ import {
   faCheckCircle,
   faDroplet,
   faMedal,
-  faGem,
   faMugHot,
 } from "@fortawesome/free-solid-svg-icons";
 import OwlCarousel from "react-owl-carousel";

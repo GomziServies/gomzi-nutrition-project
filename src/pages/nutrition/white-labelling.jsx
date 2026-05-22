@@ -9,7 +9,6 @@ import CertifiedProduct from "../../components/nutrition/certified";
 import FactoryPhotoSection from "../../components/factoryPhotoSection";
 import { Helmet } from "react-helmet";
 import Testimonials from "../../components/nutrition/testimonials";
-import ThirdPartyManufacturingFAQS from "../../components/nutrition/third-party-manufacturing-faqs";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";

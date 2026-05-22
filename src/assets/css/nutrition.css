@@ -8481,7 +8481,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .center-menu-list li a {
   position: relative;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 0;
   color: black;
 }
@@ -10044,7 +10044,7 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: center;
   }
   .homepage-hero-banner {
-    background-image: url("/public/assets/images/nutrition/homepage-mobileview-banner.webp");
+    background-image: none;
   }
 }
 
@@ -10082,7 +10082,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .homepage-hero-banner {
-    background-image: url("/public/assets/images/nutrition/homepage-mobileview-banner.webp");
+    background-image: none;
   }
 
   .homepage-hsub {
@@ -10644,9 +10644,14 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media (max-width: 576px) {
+  .works-step-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
   .works-step-img img {
-    width: 60px;
-    height: 60px;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -12409,6 +12414,28 @@ input[type="number"]::-webkit-outer-spin-button {
   background: #f1f1f1;
   padding: 30px;
   border-radius: 12px;
+}
+
+/* Strong mobile override to ensure process images fill their container */
+@media (max-width: 576px) {
+  .works-step-img {
+    width: 100% !important;
+    padding: 0 !important;
+    aspect-ratio: 1 / 1;
+    display: block !important;
+  }
+
+  .works-step-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    display: block !important;
+  }
 }
 
 .contact-us-bottom h2 {
