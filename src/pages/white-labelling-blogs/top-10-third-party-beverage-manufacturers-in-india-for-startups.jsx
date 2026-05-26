@@ -15,7 +15,7 @@ const faqData = [
     eventKey: "faq1",
     question: " 1. What is the typical MOQ for startups?",
     answer:
-      "   Usually 3,000–10,000 units, some manufacturers accept smaller pilot batches.",
+      "   Usually 3,000-10,000 units, some manufacturers accept smaller pilot batches.",
   },
   {
     eventKey: "faq2",

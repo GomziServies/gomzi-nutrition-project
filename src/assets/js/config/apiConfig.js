@@ -2,14 +2,22 @@ const hostname = window.location.hostname.trim(); // Trimming whitespace from th
 let baseUrl = "http://localhost";
 let razorpayMerchantId = "rzp_test_F0TUZmabOwKkhe";
 
-if (
-  hostname === "gomzilifesciences.in" ||
-  hostname === "www.gomzilifesciences.in"
+// Allow local storage override for dynamic backend URL or port (highly flexible for local testing)
+const customBackendUrl = localStorage.getItem("fg_backend_url");
+const customBackendPort = localStorage.getItem("fg_backend_port") || "80";
+
+if (customBackendUrl) {
+  baseUrl = customBackendUrl;
+} else if (
+  hostname === "gomzilifesciences.in/" ||
+  hostname === "www.gomzilifesciences.in/"
 ) {
   baseUrl = "https://api.fggroup.in";
   razorpayMerchantId = "rzp_live_tdfTCMm8C9gJNN";
 } else if (hostname === "test.gomzilifesciences.in") {
   baseUrl = "https://dev-api.fggroup.in";
+} else if (hostname === "localhost" || hostname === "127.0.0.1") {
+  baseUrl = `http://localhost:${customBackendPort}`;
 } else {
   baseUrl = "https://dev-api.fggroup.in";
 }

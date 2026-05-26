@@ -255,13 +255,13 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                       </h3>
                       <ul className="blog-list">
                         <li>
-                          <strong>Fast-track launch:</strong> 4–8 weeks
+                          <strong>Fast-track launch:</strong> 4-8 weeks
                         </li>
                         <li>
-                          <strong>Standard launch:</strong> 8–16 weeks
+                          <strong>Standard launch:</strong> 8-16 weeks
                         </li>
                         <li>
-                          <strong>Custom formulation:</strong> 3–6 months
+                          <strong>Custom formulation:</strong> 3-6 months
                         </li>
                       </ul>
                       <p className="blog-text">
@@ -298,8 +298,8 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                       <ul className="blog-list">
                         <strong>
                           {" "}
-                          <li>1–3 weeks (white label)</li>
-                          <li>3–6 weeks (custom formulation)</li>
+                          <li>1-3 weeks (white label)</li>
+                          <li>3-6 weeks (custom formulation)</li>
                         </strong>
                       </ul>
                       <p className="blog-text">
@@ -324,7 +324,7 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                         <li>Quality testing (purity, safety)</li>
                       </ul>
                       <h2 className="blog-subsection-title">
-                        Time Required: 2–4 weeks
+                        Time Required: 2-4 weeks
                       </h2>
 
                       <p className="blog-text">
@@ -358,7 +358,7 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                         <li>Compliance with standards</li>
                       </ul>
                       <h2 className="blog-subsection-title">
-                        Time Required: 3–6 weeks
+                        Time Required: 3-6 weeks
                       </h2>
 
                       <p className="blog-text">
@@ -393,7 +393,7 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                         <li>Printing and final packing</li>
                       </ul>
                       <h3 className="blog-subsection-title">
-                        Time Required: 2–3 weeks
+                        Time Required: 2-3 weeks
                       </h3>
                       <p className="blog-text mb-8">
                         Labels must comply with regulatory guidelines such as
@@ -429,7 +429,7 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                         <li>Shipping &amp; distribution</li>
                       </ul>
                       <h3 className="blog-subsection-title">
-                        Time Required: 1–2 weeks
+                        Time Required: 1-2 weeks
                       </h3>
                       <p className="blog-text">
                         At this stage, your product is ready for:

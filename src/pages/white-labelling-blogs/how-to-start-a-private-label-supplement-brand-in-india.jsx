@@ -170,7 +170,7 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       <ul className="blog-list">
                         <li className="blog-list-item">Low startup cost</li>
                         <li className="blog-list-item">
-                          Faster launch (30–45 days)
+                          Faster launch (30-45 days)
                         </li>
                         <li className="blog-list-item">
                           Access to tested formulas
@@ -227,7 +227,7 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                                 Manufacturer offers base formulas; you customize
                                 flavor, packaging, branding
                               </td>
-                              <td>Medium–High</td>
+                              <td>Medium-High</td>
                               <td>Brands wanting product differentiation</td>
                             </tr>
                             <tr>
@@ -235,7 +235,7 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                               <td>
                                 Ready-made formulas you can instantly brand
                               </td>
-                              <td>Low–Medium</td>
+                              <td>Low-Medium</td>
                               <td>Fast launch, low-budget startups</td>
                             </tr>
                             <tr>
@@ -360,7 +360,7 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                           Inspection (if required)
                         </li>
                         <li className="blog-list-item">
-                          License approval (15–45 days)
+                          License approval (15-45 days)
                         </li>
                       </ol>
 
@@ -704,10 +704,10 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                       </p>
                       <ul className="blog-list">
                         <li className="blog-list-item">
-                          Small scale: ₹1–5 lakhs
+                          Small scale: ₹1-5 lakhs
                         </li>
                         <li className="blog-list-item">
-                          Medium scale: ₹5–15 lakhs
+                          Medium scale: ₹5-15 lakhs
                         </li>
                         <li className="blog-list-item">
                           Large scale: ₹20+ lakhs

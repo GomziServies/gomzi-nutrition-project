@@ -572,7 +572,7 @@ function Home() {
           <div class="tsep"></div>
           <span>50 KG MOQ</span>
           <div class="tsep"></div>
-          <span>15–20 DAY DELIVERY</span>
+          <span>15-20 DAY DELIVERY</span>
           <div class="tsep"></div>
           {/* duplicate */}
           <span>FSSAI</span>
@@ -587,7 +587,7 @@ function Home() {
           <div class="tsep"></div>
           <span>50 KG MOQ</span>
           <div class="tsep"></div>
-          <span>15–20 DAY DELIVERY</span>
+          <span>15-20 DAY DELIVERY</span>
           <div class="tsep"></div>
         </div>
       </div>
@@ -982,7 +982,7 @@ function Home() {
                   <Accordion.Body className="faq-answer">
                     Our MOQ starts at 50 KG per SKU — enough to launch a real
                     brand without overcommitting inventory. Most first-time
-                    founders start with 1–2 SKUs at 50 KG each.
+                    founders start with 1-2 SKUs at 50 KG each.
                   </Accordion.Body>
                 </Accordion.Item>
 
@@ -991,7 +991,7 @@ function Home() {
                     How long does it take from order to delivery?
                   </Accordion.Header>
                   <Accordion.Body className="faq-answer">
-                    15–20 working days from confirmed purchase order. That
+                    15-20 working days from confirmed purchase order. That
                     covers formulation finalization, production, COA testing,
                     and packaging. We commit to this timeline in writing.
                   </Accordion.Body>

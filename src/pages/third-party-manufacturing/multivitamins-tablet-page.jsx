@@ -507,7 +507,7 @@ const MultivitaminTablet = () => {
     },
     { specification: "Composition", details: "As Per Brand Requirement" },
     { specification: "Shelf Life", details: "24 Months" },
-    { specification: "Delivery Time", details: "15–20 working days" },
+    { specification: "Delivery Time", details: "15-20 working days" },
     {
       specification: "Product packaging",
       details: "Private Label & White Labelling Available",
@@ -866,31 +866,31 @@ const MultivitaminTablet = () => {
                     id: "01",
                     title: "Idea & Strategy",
                     desc: "Product brief, target demographic, SKU selection, and competitive positioning.",
-                    days: "1–2 DAYS",
+                    days: "1-2 DAYS",
                   },
                   {
                     id: "02",
                     title: "Formulation",
                     desc: "Sample production in our GMP facility. Flavour development and ingredient finalisation.",
-                    days: "5–7 DAYS",
+                    days: "5-7 DAYS",
                   },
                   {
                     id: "03",
                     title: "Manufacturing",
                     desc: "Full batch with COA documentation. Blister packing or bottling based on your spec.",
-                    days: "7–10 DAYS",
+                    days: "7-10 DAYS",
                   },
                   {
                     id: "04",
                     title: "Packaging",
                     desc: "3D label mockup, FSSAI-compliant design, digiprint / flexo print options. Your brand, our execution.",
-                    days: "3–4 DAYS",
+                    days: "3-4 DAYS",
                   },
                   {
                     id: "05",
                     title: "Store & Launch",
                     desc: "D2C Shopify store, Meta Ads structure, product photography brief. Ready to sell.",
-                    days: "2–3 DAYS",
+                    days: "2-3 DAYS",
                   },
                 ].map((step, index) => (
                   <div key={index} className="wh-step-item">

@@ -15,7 +15,7 @@ function ContactUs() {
       <RequestQuoteModal />
 
       <Helmet>
-        <title>Contact Us | Gomzi Lifescience Family – We're Here to He</title>
+        <title>Contact Us | Gomzi Lifescience Family - We're Here to He</title>
         <meta
           name="description"
           content="Have questions or need support? Contact Gomzi Lifescience Family for inquiries, assistance, and expert guidance on our nutraceutical products. Get in touch today!"

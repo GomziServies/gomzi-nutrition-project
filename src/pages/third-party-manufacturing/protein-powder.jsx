@@ -153,7 +153,7 @@ const ProteinPowder = () => {
           name: "How long does it take to manufacture white label protein powder?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Manufacturing typically takes 4–6 weeks depending on the formula, order size, and packaging requirements.",
+            text: "Manufacturing typically takes 4-6 weeks depending on the formula, order size, and packaging requirements.",
           },
         },
         {

@@ -176,7 +176,7 @@ const STEPS = [
   {
     key: "timeline",
     question: "What is your expected launch timeline?",
-    options: ["Immediate", "Within 30 days", "1–3 months", "Exploring"],
+    options: ["Immediate", "Within 30 days", "1-3 months", "Exploring"],
   },
   {
     key: "budget",
@@ -184,9 +184,9 @@ const STEPS = [
     type: "budget",
     options: [
       "Under ₹50,000",
-      "₹50,000–₹1,00,000",
-      "₹1,00,000–₹2,50,000",
-      "₹2,50,000–₹5,00,000",
+      "₹50,000-₹1,00,000",
+      "₹1,00,000-₹2,50,000",
+      "₹2,50,000-₹5,00,000",
       "₹5,00,000+",
       "Need guidance",
     ],

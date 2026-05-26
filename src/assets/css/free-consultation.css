@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap");
 
 :root {
   --sl-bg: #f5f6f2;
@@ -15,7 +15,7 @@
 .sl-page {
   background-color: var(--sl-bg);
   color: var(--sl-text);
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -89,7 +89,7 @@
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 .sl-product-btn:hover {
@@ -131,7 +131,7 @@
   padding: 40px;
   border-radius: 20px;
   border: 1px solid var(--sl-border);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 .sl-form-title {
@@ -148,7 +148,9 @@
   gap: 16px;
 }
 
-.sl-input, .sl-select, .sl-textarea {
+.sl-input,
+.sl-select,
+.sl-textarea {
   background: #fcfcfc;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -159,7 +161,9 @@
   transition: all 0.2s;
 }
 
-.sl-input:focus, .sl-select:focus, .sl-textarea:focus {
+.sl-input:focus,
+.sl-select:focus,
+.sl-textarea:focus {
   outline: none;
   border-color: var(--sl-accent);
   background: #fff;
@@ -205,8 +209,9 @@
     padding: 60px 20px;
     gap: 40px;
   }
-  
-  .sl-left, .sl-right {
+
+  .sl-left,
+  .sl-right {
     width: 100%;
     max-width: 600px;
   }
@@ -216,7 +221,7 @@
   .sl-title {
     font-size: 32px;
   }
-  
+
   .sl-product-grid {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
@@ -226,7 +231,7 @@
     padding: 10px 5px;
     font-size: 13px;
   }
-  
+
   .sl-right {
     padding: 24px;
   }
@@ -292,12 +297,334 @@
 }
 
 @keyframes slideUp {
-  from { transform: translateY(100%) scale(0.9); opacity: 0; }
-  to { transform: translateY(0) scale(1); opacity: 1; }
+  from {
+    transform: translateY(100%) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
 }
 
 @media (min-width: 768px) {
   .sl-sticky-cta-wrap {
     display: none; /* Only show sticky CTA on mobile */
+  }
+}
+
+/* --- Premium WhatsApp OTP Modal --- */
+.otp-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 16px;
+}
+
+.otp-modal {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 28px;
+  padding: 40px 32px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.18),
+    0 0 0 1px rgba(0, 0, 0, 0.03);
+  text-align: center;
+  position: relative;
+  animation: scaleIn 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.otp-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  transition: all 0.2s;
+  font-weight: bold;
+}
+
+.otp-modal-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #111;
+  transform: rotate(90deg);
+}
+
+.otp-icon-wrap {
+  width: 68px;
+  height: 68px;
+  background: rgba(109, 197, 44, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sl-accent);
+  margin: 0 auto 20px;
+  font-size: 28px;
+  animation: pulseGreen 2s infinite;
+}
+
+.otp-modal-title {
+  font-size: 22px;
+  font-weight: 850;
+  color: #111111;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.otp-modal-desc {
+  font-size: 14px;
+  color: var(--sl-text-muted);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.otp-phone-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: rgba(109, 197, 44, 0.06);
+  border: 1.5px dashed rgba(109, 197, 44, 0.25);
+  border-radius: 14px;
+  padding: 10px 18px;
+  margin: 10px auto 24px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  width: fit-content;
+}
+
+.otp-phone-edit {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--sl-accent);
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s;
+  border-radius: 4px;
+}
+
+.otp-phone-edit:hover {
+  background: rgba(109, 197, 44, 0.1);
+  transform: scale(1.1);
+}
+
+.otp-edit-input-wrapper {
+  margin: 15px 0 24px;
+  background: #fbfbfb;
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.otp-edit-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1.5px solid #d0d0d0;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.otp-edit-input:focus {
+  border-color: var(--sl-accent);
+  box-shadow: 0 0 0 3px rgba(109, 197, 44, 0.1);
+}
+
+.otp-edit-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.otp-action-btn {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.otp-action-btn.save {
+  background: var(--sl-accent);
+  color: white;
+}
+
+.otp-action-btn.save:hover {
+  background: var(--sl-accent-hover);
+  transform: translateY(-1px);
+}
+
+.otp-action-btn.cancel {
+  background: #e5e5e5;
+  color: #444;
+}
+
+.otp-action-btn.cancel:hover {
+  background: #d8d8d8;
+}
+
+.otp-input-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.otp-digit-input {
+  width: 44px;
+  height: 52px;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  background: #fcfcfc;
+  color: #111;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+}
+
+.otp-digit-input:focus {
+  outline: none;
+  border-color: var(--sl-accent);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(109, 197, 44, 0.12);
+  transform: scale(1.06);
+}
+
+.otp-timer-text {
+  font-size: 13.5px;
+  color: var(--sl-text-muted);
+  margin-bottom: 28px;
+  font-weight: 550;
+}
+
+.otp-timer-text span {
+  color: var(--sl-accent);
+  font-weight: 750;
+}
+
+.otp-resend-btn {
+  background: none;
+  border: none;
+  color: var(--sl-accent);
+  font-weight: 750;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.otp-resend-btn:hover:not(:disabled) {
+  color: var(--sl-accent-hover);
+  background: rgba(109, 197, 44, 0.06);
+}
+
+.otp-resend-btn:disabled {
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.otp-verify-submit {
+  width: 100%;
+  background: var(--sl-accent);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 6px 18px rgba(109, 197, 44, 0.25);
+}
+
+.otp-verify-submit:hover:not(:disabled) {
+  background: var(--sl-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(109, 197, 44, 0.35);
+}
+
+.otp-verify-submit:disabled {
+  background: #cccccc;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.otp-dev-helper {
+  margin-top: 16px;
+  padding: 10px;
+  background: rgba(255, 166, 0, 0.08);
+  border: 1px solid rgba(255, 166, 0, 0.2);
+  border-radius: 10px;
+  font-size: 12px;
+  color: #d48300;
+  font-weight: 600;
+}
+
+@keyframes pulseGreen {
+  0% {
+    box-shadow: 0 0 0 0 rgba(109, 197, 44, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(109, 197, 44, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(109, 197, 44, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }

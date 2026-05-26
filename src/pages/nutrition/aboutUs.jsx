@@ -124,8 +124,8 @@ function aboutUs() {
       </section>
 
       <div className="about-hero-features">
-        <div className="inter-regular">50–100 KG MOQ</div>
-        <div className="inter-regular">15–20 Day Delivery</div>
+        <div className="inter-regular">50-100 KG MOQ</div>
+        <div className="inter-regular">15-20 Day Delivery</div>
         <div className="inter-regular">Certified Facility</div>
         <div className="inter-regular">End-to-End Support</div>
         <div className="inter-regular">Indian Flavour Innovation</div>
@@ -151,7 +151,7 @@ function aboutUs() {
               </div>
               <h3 className="barlow-condensed-semi">Low MOQ</h3>
               <p className="inter-regular">
-                Start with 50–100 KG per SKU and grow without large upfront
+                Start with 50-100 KG per SKU and grow without large upfront
                 pressure.
               </p>
             </div>
@@ -162,7 +162,7 @@ function aboutUs() {
               </div>
               <h3 className="barlow-condensed-semi">Fast Turnaround</h3>
               <p className="inter-regular">
-                Standard orders move from confirmation to dispatch in 15–20
+                Standard orders move from confirmation to dispatch in 15-20
                 days.
               </p>
             </div>

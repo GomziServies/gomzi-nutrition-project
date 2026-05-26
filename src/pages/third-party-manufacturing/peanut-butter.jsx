@@ -318,7 +318,7 @@ const PeanutButter = () => {
           name: "What is the minimum order quantity for peanut butter?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Our MOQ is 50 KG per variant. This typically yields approximately 100–200 units depending on your jar size (250g, 500g, or 1kg). Many first-time brand owners start with 2–3 variants at 50 KG each to validate which flavours resonate with their customers before scaling.",
+            text: "Our MOQ is 50 KG per variant. This typically yields approximately 100-200 units depending on your jar size (250g, 500g, or 1kg). Many first-time brand owners start with 2-3 variants at 50 KG each to validate which flavours resonate with their customers before scaling.",
           },
         },
         {
@@ -326,7 +326,7 @@ const PeanutButter = () => {
           name: "Can I get custom flavours not listed in your 12 variants?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: " Yes — our R&D team can develop custom peanut butter flavours in 10–14 days. If you have a specific flavour concept (e.g. rose, saffron, date & nut), share it with us during the formulation call. Custom flavour development may carry a small R&D fee depending on complexity.",
+            text: " Yes — our R&D team can develop custom peanut butter flavours in 10-14 days. If you have a specific flavour concept (e.g. rose, saffron, date & nut), share it with us during the formulation call. Custom flavour development may carry a small R&D fee depending on complexity.",
           },
         },
         {
@@ -358,7 +358,7 @@ const PeanutButter = () => {
           name: "How long is the shelf life of your peanut butter variants?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: " Natural variants (no added preservatives): 6–9 months in sealed packaging. Classic and Chocolate variants: 9–12 months.Specialty variants (Elaichi, Mango Chia, White Chocolate, Cookie & Cream): 6–9 months. Shelf life is validated through stability testing and declared on the COA. Specific shelf life data for your variant is confirmed at formulation stage.",
+            text: " Natural variants (no added preservatives): 6-9 months in sealed packaging. Classic and Chocolate variants: 9-12 months.Specialty variants (Elaichi, Mango Chia, White Chocolate, Cookie & Cream): 6-9 months. Shelf life is validated through stability testing and declared on the COA. Specific shelf life data for your variant is confirmed at formulation stage.",
           },
         },
         {
@@ -366,7 +366,7 @@ const PeanutButter = () => {
           name: " What is the protein content per 100g in your peanut butter?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: " Our Natural variants typically deliver 24–26g protein per 100g. Classic and Chocolate variants: 22–25g per 100g. Specialty variants vary based on additional inclusions. Exact nutritional profiles — protein, fat (total, saturated, unsaturated), carbohydrates, fibre, calories — are provided in the formula sheet and verified in the COA.",
+            text: " Our Natural variants typically deliver 24-26g protein per 100g. Classic and Chocolate variants: 22-25g per 100g. Specialty variants vary based on additional inclusions. Exact nutritional profiles — protein, fat (total, saturated, unsaturated), carbohydrates, fibre, calories — are provided in the formula sheet and verified in the COA.",
           },
         },
       ],
@@ -614,7 +614,7 @@ const PeanutButter = () => {
                   <h3 className="barlow-condensed-semi">1,800Cr</h3>
                   <p className="inter-regular">
                     India's peanut butter market — growing at{" "}
-                    <strong>25–28% CAGR</strong>. First-time buyers entering the
+                    <strong>25-28% CAGR</strong>. First-time buyers entering the
                     category daily as health awareness rises across Tier 2 and
                     Tier 3 cities.
                   </p>
@@ -686,31 +686,31 @@ const PeanutButter = () => {
                     id: "01",
                     title: "Idea",
                     desc: "Product brief, variant selection, target customer, and pricing strategy confirmed.",
-                    days: "1–2 DAYS",
+                    days: "1-2 DAYS",
                   },
                   {
                     id: "02",
                     title: "Formulation",
                     desc: "Sample batch produced. Flavour development, texture, and consistency testing.",
-                    days: "5–7 DAYS",
+                    days: "5-7 DAYS",
                   },
                   {
                     id: "03",
                     title: "Manufacturing",
                     desc: "Full batch with COA documentation. FSSAI-compliant production.",
-                    days: "5–7 DAYS",
+                    days: "5-7 DAYS",
                   },
                   {
                     id: "04",
                     title: "Packaging",
                     desc: "Label artwork, FSSAI-compliant design, jar or pouch format. Your brand, our execution.",
-                    days: "3–4 DAYS",
+                    days: "3-4 DAYS",
                   },
                   {
                     id: "05",
                     title: "Dispatch",
                     desc: "D2C Shopify store optional. Product dispatched. Your brand is on the market.",
-                    days: "1–2 DAYS",
+                    days: "1-2 DAYS",
                   },
                 ].map((step, index) => (
                   <div key={index} className="wh-step-item">
@@ -875,8 +875,8 @@ const PeanutButter = () => {
                 </Accordion.Header>
                 <Accordion.Body className="faq-answer">
                   Our MOQ is 50 KG per variant. This typically yields
-                  approximately 100–200 units depending on your jar size (250g,
-                  500g, or 1kg). Many first-time brand owners start with 2–3
+                  approximately 100-200 units depending on your jar size (250g,
+                  500g, or 1kg). Many first-time brand owners start with 2-3
                   variants at 50 KG each to validate which flavours resonate
                   with their customers before scaling.
                 </Accordion.Body>
@@ -887,7 +887,7 @@ const PeanutButter = () => {
                 </Accordion.Header>
                 <Accordion.Body className="faq-answer">
                   Yes — our R&D team can develop custom peanut butter flavours
-                  in 10–14 days. If you have a specific flavour concept (e.g.
+                  in 10-14 days. If you have a specific flavour concept (e.g.
                   rose, saffron, date & nut), share it with us during the
                   formulation call. Custom flavour development may carry a small
                   R&D fee depending on complexity.
@@ -936,10 +936,10 @@ const PeanutButter = () => {
                   How long is the shelf life of your peanut butter variants?
                 </Accordion.Header>
                 <Accordion.Body className="faq-answer">
-                  Natural variants (no added preservatives): 6–9 months in
-                  sealed packaging. Classic and Chocolate variants: 9–12 months.
+                  Natural variants (no added preservatives): 6-9 months in
+                  sealed packaging. Classic and Chocolate variants: 9-12 months.
                   Specialty variants (Elaichi, Mango Chia, White Chocolate,
-                  Cookie & Cream): 6–9 months. Shelf life is validated through
+                  Cookie & Cream): 6-9 months. Shelf life is validated through
                   stability testing and declared on the COA. Specific shelf life
                   data for your variant is confirmed at formulation stage.
                 </Accordion.Body>
@@ -949,8 +949,8 @@ const PeanutButter = () => {
                   What is the protein content per 100g in your peanut butter?
                 </Accordion.Header>
                 <Accordion.Body className="faq-answer">
-                  Our Natural variants typically deliver 24–26g protein per
-                  100g. Classic and Chocolate variants: 22–25g per 100g.
+                  Our Natural variants typically deliver 24-26g protein per
+                  100g. Classic and Chocolate variants: 22-25g per 100g.
                   Specialty variants vary based on additional inclusions. Exact
                   nutritional profiles — protein, fat (total, saturated,
                   unsaturated), carbohydrates, fibre, calories — are provided in

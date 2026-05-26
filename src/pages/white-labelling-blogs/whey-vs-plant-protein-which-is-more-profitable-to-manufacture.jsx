@@ -166,7 +166,7 @@ function WheyVsPlantProteinWhichIsMoreProfitabletoManufacture() {
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
                     <h1 className="text-white f-rob-bol f-43">
-                      Whey vs Plant Protein – Which Is More Profitable to
+                      Whey vs Plant Protein - Which Is More Profitable to
                       Manufacture?
                     </h1>
                   </div>

@@ -457,7 +457,7 @@ const WheyProteinManufacturing = () => {
         "Chocolate, Coffee, Mava Kulfi & Many More Custom Flavours Available",
     },
     { specification: "Shelf Life", details: "18 Months" },
-    { specification: "Delivery Time", details: "15–20 working days" },
+    { specification: "Delivery Time", details: "15-20 working days" },
     {
       specification: "Product packaging",
       details: "Private Label & White Labelling Available",
@@ -901,31 +901,31 @@ const WheyProteinManufacturing = () => {
                     id: "01",
                     title: "Idea & Brief",
                     desc: "Product type (WPC/WPI/blend), flavours, pack size, and brand positioning confirmed.",
-                    days: "1–2 DAYS",
+                    days: "1-2 DAYS",
                   },
                   {
                     id: "02",
                     title: "Formulation",
                     desc: "Sample batch produced in GMP facility. Flavour development and mixability testing.",
-                    days: "5–7 DAYS",
+                    days: "5-7 DAYS",
                   },
                   {
                     id: "03",
                     title: "Manufacturing",
                     desc: "Full production batch with Batch COA. Third-party lab testing available.",
-                    days: "5–7 DAYS",
+                    days: "5-7 DAYS",
                   },
                   {
                     id: "04",
                     title: "Packaging",
                     desc: "Label artwork, 3D pouch/tub mockup, FSSAI compliance check. Digiprint or flexo.",
-                    days: "3–4 DAYS",
+                    days: "3-4 DAYS",
                   },
                   {
                     id: "05",
                     title: "Dispatch",
                     desc: "D2C Shopify store optionally live. Product dispatched. Your brand is on the market.",
-                    days: "1–2 DAYS",
+                    days: "1-2 DAYS",
                   },
                 ].map((step, index) => (
                   <div key={index} className="wh-step-item">

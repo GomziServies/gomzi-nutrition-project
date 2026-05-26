@@ -1,44 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { publicAxiosInstance } from "../../assets/js/config/api";
+import { toast } from "react-toastify";
 // import './ContactFormWheyLanding.css'
-
-const CheckCircleIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#3d7a18" strokeWidth="2.5">
-    <path d="M9 12l2 2 4-4" />
-    <circle cx="12" cy="12" r="10" />
-  </svg>
-);
-
-const BriefcaseIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#3d7a18" strokeWidth="2.5">
-    <rect x="2" y="7" width="20" height="14" rx="2" />
-    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-  </svg>
-);
-
-const CupIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#3d7a18" strokeWidth="2.5">
-    <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-    <line x1="6" y1="1" x2="6" y2="4" />
-    <line x1="10" y1="1" x2="10" y2="4" />
-    <line x1="14" y1="1" x2="14" y2="4" />
-  </svg>
-);
-
-const LockIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#3d7a18" strokeWidth="2.5">
-    <rect x="3" y="11" width="18" height="11" rx="2" />
-    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-  </svg>
-);
-
-const stageLabels = {
-  Starting_my_first_brand: "Starting my first brand",
-  already_selling: "Already selling, looking to scale",
-  switching_manufacturer: "Switching from another manufacturer",
-};
 
 const businessStageLabels = {
   launching_new_brand: "Launching a new brand",
@@ -59,7 +23,7 @@ const startTimelineLabels = {
   immediately: "Immediately",
   within_15_days: "Within 15 days",
   within_30_days: "Within 30 days",
-  after_1_2_months: "After 1–2 months",
+  after_1_2_months: "After 1-2 months",
   just_researching: "Just researching",
 };
 
@@ -80,10 +44,217 @@ const ContactFormWheyLanding = () => {
     startTimeline: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showOtpModal, setShowOtpModal] = useState(false);
+  const [otpValues, setOtpValues] = useState(["", "", "", "", "", ""]);
+  const [verificationId, setVerificationId] = useState("");
+  const [isSendingOtp, setIsSendingOtp] = useState(false);
+  const [isVerifyingOtp, setIsVerifyingOtp] = useState(false);
+  const [countdown, setCountdown] = useState(60);
+  const [editablePhone, setEditablePhone] = useState("");
+  const [isEditingPhone, setIsEditingPhone] = useState(false);
+  const [otpError, setOtpError] = useState("");
   const navigate = useNavigate();
+
+  const clearAuthSession = () => {
+    localStorage.removeItem("fg_group_user_authorization");
+    localStorage.removeItem("user_info");
+  };
+
+  useEffect(() => {
+    let timer;
+    if (showOtpModal && countdown > 0) {
+      timer = setInterval(() => {
+        setCountdown((prev) => prev - 1);
+      }, 1000);
+    }
+
+    return () => clearInterval(timer);
+  }, [showOtpModal, countdown]);
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSendOtp = async (phoneToUse) => {
+    setIsSendingOtp(true);
+    setOtpError("");
+
+    try {
+      const cleanPhone = phoneToUse.replace(/\s/g, "");
+      const res = await publicAxiosInstance.post("/inquiry-otp/send", {
+        mobile: cleanPhone,
+        country_code: "+91",
+      });
+
+      if (res.data?.status === 200) {
+        setVerificationId(res.data.data.verification_id);
+        toast.success("OTP sent to your WhatsApp number!");
+        setCountdown(60);
+      } else {
+        setOtpError(res.data?.message || "Failed to send OTP.");
+        toast.error(res.data?.message || "Failed to send OTP.");
+      }
+    } catch (err) {
+      console.error("Error sending OTP:", err);
+      setOtpError(err.response?.data?.message || "Error sending OTP.");
+      toast.error(err.response?.data?.message || "Error sending OTP.");
+    } finally {
+      setIsSendingOtp(false);
+    }
+  };
+
+  const handleOtpInputChange = (index, val) => {
+    const newVal = val.replace(/[^0-9]/g, "");
+    if (otpError) setOtpError("");
+
+    if (newVal === "") {
+      const newOtp = [...otpValues];
+      newOtp[index] = "";
+      setOtpValues(newOtp);
+      return;
+    }
+
+    const singleDigit = newVal.slice(-1);
+    const newOtp = [...otpValues];
+    newOtp[index] = singleDigit;
+    setOtpValues(newOtp);
+
+    if (index < 5) {
+      const nextInput = document.getElementById(`whey-otp-input-${index + 1}`);
+      if (nextInput) nextInput.focus();
+    }
+  };
+
+  const handleOtpKeyDown = (index, e) => {
+    if (e.key === "Backspace") {
+      if (otpValues[index] === "" && index > 0) {
+        const newOtp = [...otpValues];
+        newOtp[index - 1] = "";
+        setOtpValues(newOtp);
+        const prevInput = document.getElementById(
+          `whey-otp-input-${index - 1}`,
+        );
+        if (prevInput) prevInput.focus();
+      } else {
+        const newOtp = [...otpValues];
+        newOtp[index] = "";
+        setOtpValues(newOtp);
+      }
+    }
+  };
+
+  const handleOtpPaste = (e) => {
+    e.preventDefault();
+    if (otpError) setOtpError("");
+    const pasteData = e.clipboardData
+      .getData("text")
+      .trim()
+      .replace(/[^0-9]/g, "");
+
+    if (pasteData.length >= 6) {
+      const newOtp = pasteData.slice(0, 6).split("");
+      setOtpValues(newOtp);
+      const lastInput = document.getElementById("whey-otp-input-5");
+      if (lastInput) lastInput.focus();
+    }
+  };
+
+  const handleVerifyAndSubmit = async (e) => {
+    if (e) e.preventDefault();
+    setOtpError("");
+
+    const enteredOtp = otpValues.join("");
+    const incorrectOtpMessage = "Incorrect OTP. Please try again.";
+    const isWrongOtpError = (message = "") =>
+      message.includes("verification_id") ||
+      message.toLowerCase().includes("otp");
+
+    if (!verificationId) {
+      setOtpError(incorrectOtpMessage);
+      return;
+    }
+
+    if (enteredOtp.length < 6) {
+      setOtpError("Please enter a valid 6-digit OTP.");
+      return;
+    }
+
+    setIsVerifyingOtp(true);
+
+    try {
+      const verifyRes = await publicAxiosInstance.post("/inquiry-otp/verify", {
+        verification_id: verificationId,
+        otp: enteredOtp,
+      });
+
+      if (verifyRes.data?.status === 200) {
+        toast.success("Mobile verified successfully!");
+        setIsSubmitting(true);
+
+        const trimmedName = formData.name.trim();
+        const trimmedPhone = formData.phone.replace(/\s/g, "");
+
+        await publicAxiosInstance.post("/contact-inquiry", {
+          subject: "Whey Landing Contact Form",
+          name: trimmedName,
+          email: `wheylanding+${trimmedPhone}@gomzi.in`,
+          mobile: trimmedPhone,
+          message: [
+            `City: ${formData.city}`,
+            `Business Stage: ${businessStageLabels[formData.businessStage]}`,
+            `Requirement: ${requirementLabels[formData.requirement]}`,
+            `Start Timeline: ${startTimelineLabels[formData.startTimeline]}`,
+          ].join("\n"),
+          source: window.location.href,
+        });
+
+        setFormData({
+          name: "",
+          phone: "",
+          city: "",
+          businessStage: "",
+          requirement: "",
+          startTimeline: "",
+        });
+        clearAuthSession();
+        setShowOtpModal(false);
+        setOtpValues(["", "", "", "", "", ""]);
+        setVerificationId("");
+
+        setTimeout(() => {
+          navigate("/thank-you");
+        }, 900);
+      } else {
+        setOtpError(incorrectOtpMessage);
+      }
+    } catch (err) {
+      console.error("OTP verification error:", err);
+      const backendMessage = err.response?.data?.message || "";
+
+      if (backendMessage && isWrongOtpError(backendMessage)) {
+        setOtpError(incorrectOtpMessage);
+        return;
+      }
+
+      const message = backendMessage || incorrectOtpMessage;
+      setOtpError(message);
+      toast.error(message);
+    } finally {
+      setIsVerifyingOtp(false);
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleSavePhone = () => {
+    if (!/^[6-9]\d{9}$/.test(editablePhone)) {
+      toast.error("Please enter a valid 10-digit phone number.");
+      return;
+    }
+
+    setFormData((prev) => ({ ...prev, phone: editablePhone }));
+    setIsEditingPhone(false);
+    setOtpError("");
+    handleSendOtp(editablePhone);
   };
 
   const handleSubmit = async (e) => {
@@ -128,48 +299,15 @@ const ContactFormWheyLanding = () => {
       return;
     }
 
-    setIsSubmitting(true);
+    setShowOtpModal(true);
+    setCountdown(60);
+    setOtpValues(["", "", "", "", "", ""]);
+    setVerificationId("");
+    setOtpError("");
+    setEditablePhone(trimmedPhone);
+    setIsEditingPhone(false);
 
-    try {
-      await publicAxiosInstance.post("/contact-inquiry", {
-        subject: "Whey Landing Contact Form",
-        name: trimmedName,
-        email: `wheylanding+${trimmedPhone}@gomzi.in`,
-        mobile: trimmedPhone,
-        // message: [
-        //   `Instagram Handle / Brand Name: ${formData.instagram.trim() || "N/A"}`,
-        //   `Stage: ${stageLabels[formData.stage] || formData.stage}`,
-        // ].join("\n"),
-        message: [
-          `City: ${formData.city}`,
-          `Business Stage: ${businessStageLabels[formData.businessStage]}`,
-          `Requirement: ${requirementLabels[formData.requirement]}`,
-          `Start Timeline: ${startTimelineLabels[formData.startTimeline]}`,
-        ].join("\n"),
-        source: window.location.href,
-      });
-
-      // setFormData({
-      //   name: "",
-      //   phone: "",
-      //   instagram: "",
-      //   stage: "",
-      // });
-      setFormData({
-        name: "",
-        phone: "",
-        city: "",
-        businessStage: "",
-        requirement: "",
-        startTimeline: "",
-      });
-      navigate("/thank-you");
-    } catch (error) {
-      console.error("Whey landing contact form submission error:", error);
-      alert("Something went wrong. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
+    await handleSendOtp(trimmedPhone);
   };
 
   return (
@@ -354,7 +492,7 @@ const ContactFormWheyLanding = () => {
 
                   <option value="within_30_days">Within 30 days</option>
 
-                  <option value="after_1_2_months">After 1–2 months</option>
+                  <option value="after_1_2_months">After 1-2 months</option>
 
                   <option value="just_researching">Just researching</option>
                 </select>
@@ -379,6 +517,164 @@ const ContactFormWheyLanding = () => {
           </div>
         </div>
       </div>
+
+      {showOtpModal && (
+        <div className="otp-modal-overlay">
+          <div className="otp-modal">
+            <button
+              type="button"
+              className="otp-modal-close"
+              onClick={() => setShowOtpModal(false)}
+            >
+              &times;
+            </button>
+
+            <div className="otp-icon-wrap">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+
+            <h3 className="otp-modal-title">Verify WhatsApp Number</h3>
+            <p className="otp-modal-desc">
+              We have sent a 6-digit OTP verification code to your WhatsApp
+              number to process your consultation request.
+            </p>
+
+            {otpError && <div className="otp-warning-banner">{otpError}</div>}
+
+            {isEditingPhone ? (
+              <div className="otp-edit-input-wrapper">
+                <input
+                  type="tel"
+                  className="otp-edit-input"
+                  value={editablePhone}
+                  onChange={(e) =>
+                    setEditablePhone(e.target.value.replace(/[^0-9]/g, ""))
+                  }
+                  placeholder="Enter WhatsApp Number"
+                  maxLength="10"
+                  autoFocus
+                />
+                <div className="otp-edit-actions">
+                  <button
+                    type="button"
+                    className="otp-action-btn save"
+                    onClick={handleSavePhone}
+                  >
+                    Send OTP
+                  </button>
+                  <button
+                    type="button"
+                    className="otp-action-btn cancel"
+                    onClick={() => setIsEditingPhone(false)}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="otp-phone-wrapper">
+                <span>+91 {formData.phone}</span>
+                <button
+                  type="button"
+                  className="otp-phone-edit"
+                  title="Edit Number"
+                  onClick={() => {
+                    setEditablePhone(formData.phone);
+                    setIsEditingPhone(true);
+                  }}
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                    <path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4Z"></path>
+                  </svg>
+                </button>
+              </div>
+            )}
+
+            <form onSubmit={handleVerifyAndSubmit}>
+              <div className="otp-input-container">
+                {otpValues.map((digit, index) => (
+                  <input
+                    key={index}
+                    id={`whey-otp-input-${index}`}
+                    type="text"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    maxLength="1"
+                    className="otp-digit-input"
+                    value={digit}
+                    onChange={(e) =>
+                      handleOtpInputChange(index, e.target.value)
+                    }
+                    onKeyDown={(e) => handleOtpKeyDown(index, e)}
+                    onPaste={handleOtpPaste}
+                    required
+                    autoComplete="off"
+                    autoFocus={index === 0}
+                  />
+                ))}
+              </div>
+
+              <div className="otp-timer-text">
+                {countdown > 0 ? (
+                  <>
+                    Resend OTP in <span>{countdown}s</span>
+                  </>
+                ) : (
+                  <button
+                    type="button"
+                    className="otp-resend-btn"
+                    onClick={() => handleSendOtp(formData.phone)}
+                    disabled={isSendingOtp}
+                  >
+                    {isSendingOtp ? "Resending..." : "Resend OTP via WhatsApp"}
+                  </button>
+                )}
+              </div>
+
+              <button
+                type="submit"
+                className="otp-verify-submit"
+                disabled={isVerifyingOtp || otpValues.join("").length < 6}
+              >
+                {isVerifyingOtp ? "Verifying..." : "Verify & Start My Brand"}
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -445,7 +445,7 @@ const PerformanceSupplements = () => {
 
   const whyChoose = [
     "Specialized Powder Supplement Manufacturing Facility",
-    "Low Minimum Order Quantity (50–100 KG)",
+    "Low Minimum Order Quantity (50-100 KG)",
     "Custom Formulation Development",
     "Private Label Manufacturing",
     "Flavor Customization",
@@ -475,7 +475,7 @@ const PerformanceSupplements = () => {
         "Chocolate, Coffee, Mava Kulfi & Many More Custom Flavours Available",
     },
     { specification: "Shelf Life", details: "18 Months" },
-    { specification: "Delivery Time", details: "15–20 Days" },
+    { specification: "Delivery Time", details: "15-20 Days" },
     {
       specification: "Product packaging",
       details: "Private Label & White Labelling Available",
@@ -633,7 +633,7 @@ const PerformanceSupplements = () => {
                             >
                               {f.desc ? (
                                 <>
-                                  <strong>{f.label}</strong> – {f.desc}
+                                  <strong>{f.label}</strong> - {f.desc}
                                 </>
                               ) : (
                                 f.label
@@ -728,7 +728,7 @@ const PerformanceSupplements = () => {
                     <h3 className="barlow-condensed-semi">₹1.9B</h3>
                     <p className="inter-regular">
                       India's sports nutrition market — growing at{" "}
-                      <strong>9–11% CAGR.</strong> The window to build a
+                      <strong>9-11% CAGR.</strong> The window to build a
                       category-defining brand is right now.
                     </p>
                   </div>
@@ -867,7 +867,7 @@ const PerformanceSupplements = () => {
                         Brands using regional Indian flavours report
                         <strong>
                           {" "}
-                          35–50% better repeat purchase rates
+                          35-50% better repeat purchase rates
                         </strong>{" "}
                         vs. standard flavours in non-metro markets. This is your
                         formulation moat.
@@ -898,7 +898,7 @@ const PerformanceSupplements = () => {
                       </li>
                       <li>
                         <strong>Custom development</strong> — have a flavour
-                        idea? Our R&D team can develop it in 10–14 days
+                        idea? Our R&D team can develop it in 10-14 days
                       </li>
                     </ul>
 
@@ -911,7 +911,7 @@ const PerformanceSupplements = () => {
                 </div>
 
                 <span className="wh-trending-label barlow-condensed-semi">
-                  TRENDING FLAVOURS – INDIAN MARKET
+                  TRENDING FLAVOURS - INDIAN MARKET
                 </span>
 
                 <div className="wh-flavour-tags">
@@ -949,31 +949,31 @@ const PerformanceSupplements = () => {
                       id: "01",
                       title: "Idea & Strategy",
                       desc: "Product brief, target customer, competitive positioning, and SKU selection for your vertical.",
-                      days: "1–2 DAYS",
+                      days: "1-2 DAYS",
                     },
                     {
                       id: "02",
                       title: "Formulation",
                       desc: "Sample production in our GMP facility. Flavour development and ingredient finalisation.",
-                      days: "5–7 DAYS",
+                      days: "5-7 DAYS",
                     },
                     {
                       id: "03",
                       title: "Manufacturing",
                       desc: "Batch production with full COA documentation. Third-party lab verification available.",
-                      days: "7–10 DAYS",
+                      days: "7-10 DAYS",
                     },
                     {
                       id: "04",
                       title: "Packaging",
                       desc: "3D label mockup, FSSAI-compliant design, digiprint / flexo print options. Your brand, our execution.",
-                      days: "3–4 DAYS",
+                      days: "3-4 DAYS",
                     },
                     {
                       id: "05",
                       title: "Website & Go-Live",
                       desc: "D2C Shopify store, Meta Ads structure, product photography brief. Ready to sell.",
-                      days: "2–3 DAYS",
+                      days: "2-3 DAYS",
                     },
                   ].map((step, index) => (
                     <div key={index} className="wh-step-item">
@@ -1205,7 +1205,7 @@ const PerformanceSupplements = () => {
                   </Accordion.Header>
                   <Accordion.Body className="faq-answer">
                     Gomzi Lifesciences offers a Low Minimum Order Quantity of
-                    50–100 KG for performance supplement manufacturing.
+                    50-100 KG for performance supplement manufacturing.
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="7" className="mt-3 p-4">
@@ -1264,7 +1264,7 @@ const PerformanceSupplements = () => {
                   <Accordion.Body className="faq-answer">
                     We have standard flavours including Indian-market profiles
                     —lemon, fruit punch , watermelon, tangy orange, blueberry.
-                    Custom flavour development is available — typically 10–14
+                    Custom flavour development is available — typically 10-14
                     days for a new flavour sample.
                   </Accordion.Body>
                 </Accordion.Item>

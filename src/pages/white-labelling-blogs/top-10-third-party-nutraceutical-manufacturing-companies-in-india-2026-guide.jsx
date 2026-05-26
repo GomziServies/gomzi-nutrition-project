@@ -69,7 +69,7 @@ const faqData = [
       <>
         The first batch usually takes <strong>45-60 days</strong> (includes
         formulation and label approval). Repeat orders are faster, typically
-        ready within <strong>25–30 days</strong>.
+        ready within <strong>25-30 days</strong>.
       </>
     ),
   },

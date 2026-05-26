@@ -31,11 +31,11 @@ const faqData = [
       <>
         <ul>
           <li>
-            <strong>Private Label:</strong> 8–12 weeks (using proven formulas).
+            <strong>Private Label:</strong> 8-12 weeks (using proven formulas).
           </li>
           <li>
             <strong>Custom Formulation: </strong>
-            6–9 months (due to R&D and stability testing).
+            6-9 months (due to R&D and stability testing).
           </li>
         </ul>
       </>
@@ -290,7 +290,7 @@ function HowMuchInvestmentisRequiredtoStartaSportsNutritionBrand() {
 
                       <ul className="blog-list">
                         <li>
-                          <strong>Investment:</strong> $5,000 – $15,000.
+                          <strong>Investment:</strong> $5,000 - $15,000.
                         </li>
                         <li>
                           <strong>Why it works: </strong>
@@ -310,7 +310,7 @@ function HowMuchInvestmentisRequiredtoStartaSportsNutritionBrand() {
                       </p>
                       <ul className="blog-list">
                         <li>
-                          <strong>Investment:</strong> $30,000 – $75,000+.
+                          <strong>Investment:</strong> $30,000 - $75,000+.
                         </li>
                         <li>
                           <strong> The Reality: </strong>
@@ -389,7 +389,7 @@ function HowMuchInvestmentisRequiredtoStartaSportsNutritionBrand() {
                       <ul className="blog-list">
                         <li>
                           <strong>Product Liability Insurance: </strong> Expect
-                          to pay $2,500 – $4,000 annually. This protects you if
+                          to pay $2,500 - $4,000 annually. This protects you if
                           a consumer has an adverse reaction.
                         </li>
                         <li>
@@ -411,12 +411,12 @@ function HowMuchInvestmentisRequiredtoStartaSportsNutritionBrand() {
                           <strong> Label Design: </strong> Labels must meet
                           strict FDA guidelines. A professional designer who
                           understands Supplement Facts panels will charge $1,500
-                          – $3,000.
+                          - $3,000.
                         </li>
                         <li>
                           <strong> eCommerce: </strong>A high-converting Shopify
                           store with subscription logic is essential for
-                          recurring revenue. Budget $2,000 – $5,000 for a clean,
+                          recurring revenue. Budget $2,000 - $5,000 for a clean,
                           professional setup.
                         </li>
                       </ul>
@@ -451,7 +451,7 @@ function HowMuchInvestmentisRequiredtoStartaSportsNutritionBrand() {
                         <li>
                           <strong> 3PL & Fulfillment: </strong> Unless you are
                           packing boxes in your garage, a Third-Party Logistics
-                          provider will charge roughly $1.50–$3.00 per order.
+                          provider will charge roughly $1.50-$3.00 per order.
                         </li>
                         <li>
                           <strong>Software Stack: </strong>Email marketing
@@ -470,7 +470,7 @@ function HowMuchInvestmentisRequiredtoStartaSportsNutritionBrand() {
                         <li>
                           <strong>Start with One SKU: </strong> Unless you are
                           packing boxes in your garage, a Third-Party Logistics
-                          provider will charge roughly $1.50–$3.00 per
+                          provider will charge roughly $1.50-$3.00 per
                           orderDon't launch five flavors. Launch one "Hero"
                           product (like a high-performance pre-workout) and
                           master the marketing before expanding.

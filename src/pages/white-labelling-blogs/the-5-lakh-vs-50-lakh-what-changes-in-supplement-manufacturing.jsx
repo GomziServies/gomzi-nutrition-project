@@ -17,9 +17,9 @@ const faqData = [
       <>
         <p>
           For <strong>₹5 Lakh</strong>, you are looking at roughly{" "}
-          <strong>500–1,000 units</strong> of a single product. With{" "}
+          <strong>500-1,000 units</strong> of a single product. With{" "}
           <strong>₹50 Lakh</strong>, you can scale up to{" "}
-          <strong>10,000+ units</strong> or launch a complete product line (3–5
+          <strong>10,000+ units</strong> or launch a complete product line (3-5
           different items) simultaneously.
         </p>
       </>
@@ -164,7 +164,7 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
                       gtag('js', new Date());
                       gtag('config', 'G-J50WNKGW38');`}</noscript>
         <script>
-          { `
+          {`
           (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -337,7 +337,7 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
                         Realistic Example:
                       </h2>
                       <ul className="blog-list">
-                        <li>500–2000 units</li>
+                        <li>500-2000 units</li>
                         <li>Basic protein or capsule product</li>
                         <li>Standard labeling</li>
                         <li>Moderate profit margins</li>
@@ -424,7 +424,7 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
                         Realistic Example:
                       </h3>
                       <ul className="blog-list">
-                        <li>5,000–20,000 units</li>
+                        <li>5,000-20,000 units</li>
                         <li>Custom protein or advanced formulation</li>
                         <li>Premium packaging</li>
                         <li>Strong brand identity</li>
@@ -433,7 +433,7 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
 
                     <div className="blog-section">
                       <h2 className="blog-section-title">
-                        ₹5 LAKH vs ₹50 LAKH – SIMPLE COMPARISON
+                        ₹5 LAKH vs ₹50 LAKH - SIMPLE COMPARISON
                       </h2>
                       <div className="table-responsive">
                         <table className="table table-bordered blog-table">
