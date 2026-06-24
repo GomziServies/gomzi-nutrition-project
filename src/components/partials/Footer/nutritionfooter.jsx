@@ -154,6 +154,16 @@ function NutritionFooter() {
                       Become an affiliate
                     </Link>
                   </p>
+
+                   <div className="d-flex flex-wrap gap-2 mt-4" style={{ maxWidth: "180px" }}>
+                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/fassai.webp"} alt="FSSAI" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
+                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/gmp.webp"} alt="GMP" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
+                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/haccp.webp"} alt="HACCP" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
+                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/halal.webp"} alt="HALAL" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
+                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/kosher.webp"} alt="KOSHER" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
+                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/FDA-logo.webp"} alt="FDA" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
+                  </div>
+
                 </div>
               </div>
             </div>

@@ -1220,7 +1220,7 @@
   }
 }
 
-.logo-src {
+/* .logo-src {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1230,6 +1230,22 @@
 .logo-src img {
   width: 76px;
   height: auto;
+} */
+
+.logo-src {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-items: center;
+  gap: 20px 25px;
+}
+
+.logo-src img {
+  width: 100%;
+  max-width: 85px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {

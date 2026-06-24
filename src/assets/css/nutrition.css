@@ -8004,7 +8004,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .gym-cert-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 2px;
   background: rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.1);

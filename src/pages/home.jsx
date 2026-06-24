@@ -42,6 +42,7 @@ import RequestQuoteModal from "../components/nutrition/requestquotemodal";
 // ];
 
 const certificates = [
+   { file: "nutri-certi-6.webp", name: "FDA", sub: "FDA Registreted" },
   { file: "nutri-certi-1.webp", name: "HACCP", sub: "Hazard Control Point" },
   {
     file: "nutri-certi-2.webp",
@@ -299,6 +300,11 @@ function Home() {
                     </a>
                   </li>
                   <li>
+                    <a className="inter-500" href="/founder">
+                      Founder Story
+                    </a>
+                    </li>
+                  <li>
                     <a className="inter-500" href="/aboutus">
                       About Us
                     </a>
@@ -437,12 +443,22 @@ function Home() {
                   <li>
                     <a
                       className="inter-500"
+                      href="/founder"
+                      onClick={sideclose}
+                    >
+                      Founder Story
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="inter-500"
                       href="/aboutus"
                       onClick={sideclose}
                     >
                       About Us
                     </a>
                   </li>
+
                 </ul>
               </li>
 
@@ -570,6 +586,8 @@ function Home() {
           <div class="tsep"></div>
           <span>HALAL</span>
           <div class="tsep"></div>
+          <span>FDA</span>
+          <div class="tsep"></div>
           <span>50 KG MOQ</span>
           <div class="tsep"></div>
           <span>15-20 DAY DELIVERY</span>
@@ -584,6 +602,8 @@ function Home() {
           <span>KOSHER</span>
           <div class="tsep"></div>
           <span>HALAL</span>
+          <div class="tsep"></div>
+          <span>FDA</span>
           <div class="tsep"></div>
           <span>50 KG MOQ</span>
           <div class="tsep"></div>
@@ -1291,6 +1311,14 @@ function Home() {
                       Become an affiliate
                     </Link>
                   </p>
+                      <div className="d-flex flex-wrap gap-2 mt-4" style={{ maxWidth: "180px" }}>
+                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/fassai.webp"} alt="FSSAI" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
+                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/gmp.webp"} alt="GMP" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
+                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/haccp.webp"} alt="HACCP" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
+                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/halal.webp"} alt="HALAL" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
+                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/kosher.webp"} alt="KOSHER" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
+                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/FDA-logo.webp"} alt="FDA" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
+                  </div>
                 </div>
               </div>
             </div>

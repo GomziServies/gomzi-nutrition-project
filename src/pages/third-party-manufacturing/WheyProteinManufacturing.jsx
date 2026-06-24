@@ -176,6 +176,10 @@ const WheyProteinManufacturing = () => {
       id: 5,
       imageSrc: "/assets/images/third-party-manufacturing/kosher.webp",
     },
+    {
+      id: 6,
+      imageSrc: "/assets/images/third-party-manufacturing/FDA-logo.webp",
+    },
   ];
 
   const schemaData = [
@@ -344,6 +348,7 @@ const WheyProteinManufacturing = () => {
   ];
 
   const certificates = [
+    { file: "nutri-certi-6.webp", name: "FDA", sub: "FDA Registreted" },
     { file: "nutri-certi-1.webp", name: "HACCP", sub: "Hazard Control Point" },
     {
       file: "nutri-certi-2.webp",

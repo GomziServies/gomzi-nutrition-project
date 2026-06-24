@@ -43,6 +43,7 @@ import TheHiddenCostsofStartingaNutraceuticalBrand from "./pages/white-labelling
 import TheRiseofWhiteLabelSupplementsinIndiaWhyBrandsareChoosingOutsourced from "./pages/white-labelling-blogs/the-rise-of-white-label-supplements-in-india-why-brands-are-choosing-outsourced";
 import HowMuchInvestmentisRequiredtoStartaSportsNutritionBrand from "./pages/white-labelling-blogs/how-much-investment-is-required-to-start-a-sports-nutrition-brand";
 import IndiaLeadingCDMOforFitnessBrandsProteinSupplementManufacturing from "./pages/white-labelling-blogs/india-leadingcdmo-for-fitness-brands -protein-supplement-manufacturing";
+import FounderPage from "./pages/nutrition/founderPage";
 
 const UserProfile = lazy(() => import("./pages/account/profile"));
 const UserOrder = lazy(() => import("./pages/account/order"));
@@ -288,6 +289,11 @@ function App() {
         <Route
           path="/third-party-manufacturing/energy-drinks"
           element={<EnergyDrink />}
+        />
+
+          <Route
+          path="/founder"
+          element={<FounderPage />}
         />
 
         <Route
