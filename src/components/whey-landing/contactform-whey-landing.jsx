@@ -195,9 +195,9 @@ const ContactFormWheyLanding = () => {
         const trimmedPhone = formData.phone.replace(/\s/g, "");
 
         await publicAxiosInstance.post("/contact-inquiry", {
-          subject: "Whey Landing Contact Form",
+          subject: "Suppliment Landing Contact Form",
           name: trimmedName,
-          email: `wheylanding+${trimmedPhone}@gomzi.in`,
+          email: `supplimentlanding+${trimmedPhone}@gomzi.in`,
           mobile: trimmedPhone,
           message: [
             `City: ${formData.city}`,
@@ -316,7 +316,7 @@ const ContactFormWheyLanding = () => {
         {/* LEFT PANEL */}
         <div className="whey-left">
           <h1 className="hero-headline">
-            Launch Your Protein Brand{" "}
+            Launch Your Suppliment Brand{" "}
             <span>With Clear Manufacturing Guidance</span>
           </h1>
 
@@ -353,7 +353,7 @@ const ContactFormWheyLanding = () => {
         <div className="whey-right">
           <div className="form-card">
             <h2 className="form-title">
-              Request Sample & Start Your Whey Brand
+              Request Sample & Start Your Suppliment Brand
             </h2>
             <p className="form-subtitle">
               Fill the details below. Our team will share sample, MOQ, pricing,
@@ -511,7 +511,7 @@ const ContactFormWheyLanding = () => {
                   isSubmitting
                 }
               >
-                Request Sample & Start Your Whey Brand
+                Request Sample & Start Your Suppliment Brand
               </button>
             </form>
           </div>

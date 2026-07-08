@@ -136,7 +136,7 @@ export default function FoundersLanding() {
         <div className="founders-inner">
           <div className="founders-content">
             <h2 class="ws-heading text-center">
-              Start Your Protein Brand With the <br />
+              Start Your Suppliment Brand With the <br />
               <em> Right Formula, Sample, and Manufacturing</em>{" "}
             </h2>
 

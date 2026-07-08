@@ -18,12 +18,12 @@ const wheylanding = () => {
     <>
       <Helmet>
         <title>
-          Premium Whey Protein Contract Manufacturing in India | Gomzi Life
+          Premium Suppliment Contract Manufacturing in India | Gomzi Life
           Sciences
         </title>
         <meta
           name="description"
-          content="Gomzi Life Sciences is a trusted whey protein manufacturer supplying brands, retailers & distributors across India. Consistent quality. Scalable supply. Connect with us."
+          content="Gomzi Life Sciences is a trusted suppliment manufacturer supplying brands, retailers & distributors across India. Consistent quality. Scalable supply. Connect with us."
         />
         <meta property="og:url" content={canonicalUrl} />
         <link rel="canonical" href={canonicalUrl} />

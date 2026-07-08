@@ -5,7 +5,7 @@ const data = [
   {
     id: "01",
     title: "Start your first brand",
-    desc: "You want to launch your own protein. You need clarity on formulation, pricing, and MOQ before you place batch one.",
+    desc: "You want to launch your own suppliment. You need clarity on formulation, pricing, and MOQ before you place batch one.",
     blobColor: "#a3d666",
   },
   {
@@ -65,7 +65,7 @@ const WhoSection = () => {
 
       <div className="ws-bottom-cta">
         <button className="btn-primary-green" onClick={handleContactClick}>
-          Request Sample & Start Your Whey Brand
+          Request Sample & Start Your Suppliment Brand
         </button>
       </div>
     </section>

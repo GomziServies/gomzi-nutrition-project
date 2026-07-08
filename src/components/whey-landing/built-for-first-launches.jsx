@@ -28,7 +28,7 @@ const cards = [
   {
     stat: "WPC & WPI",
     title: "Multiple formulation paths",
-    desc: "Blend, 100% Whey, WPC 80%, and WPI 90% across different positions.",
+    desc: "Blend, 100% Suppliment, WPC 80%, and WPI 90% across different positions.",
     icon: (
       <svg
         width="22"
@@ -195,7 +195,7 @@ const BuiltForFirstLaunches = () => {
       </section>
       <div className="ws-bottom-cta">
         <button className="btn-primary-green" onClick={handleContactClick}>
-          Request Sample & Start Your Whey Brand
+          Request Sample & Start Your Suppliment Brand
         </button>
       </div>
     </>

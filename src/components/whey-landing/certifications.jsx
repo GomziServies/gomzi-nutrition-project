@@ -192,7 +192,7 @@ const Certifications = () => {
         </div>
         <div className="ws-bottom-cta">
           <button className="btn-primary-green" onClick={handleContactClick}>
-            Request Sample & Start Your Whey Brand
+            Request Sample & Start Your Suppliment Brand
           </button>
         </div>
       </section>

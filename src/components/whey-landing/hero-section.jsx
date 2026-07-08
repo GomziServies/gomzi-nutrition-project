@@ -137,7 +137,7 @@ export default function HeroSection() {
             {/* Headline */}
             <h1 className="hero-title">
               Launch Your Own
-              <span className="green"> Protein</span> Brand.
+              <span className="green"> Suppliment</span> Brand.
             </h1>
 
             {/* Green divider */}
@@ -145,14 +145,14 @@ export default function HeroSection() {
 
             {/* Subtitle */}
             <p>
-              Start your whey protein brand with expert formulation, private
+              Start your suppliment brand with expert formulation, private
               label manufacturing, sample support, and clear pricing, all from
               one trusted partner.
             </p>
 
             <p className="hero-subtitle">
               For founders, gym owners, supplement sellers, and D2C brands
-              looking to launch private label whey products with formulation,
+              looking to launch private label suppliment products with formulation,
               manufacturing, and sample support.
             </p>
 
@@ -162,7 +162,7 @@ export default function HeroSection() {
                 className="btn-primary-green"
                 onClick={handleContactClick}
               >
-                Request Sample & Start Your Whey Brand
+                Request Sample & Start Your Suppliment Brand
               </button>
             </div>
 
@@ -179,7 +179,7 @@ export default function HeroSection() {
                 </div>
 
                 <div class="whey-landing-hero-badge-text">
-                  Whey Sample Support
+                  Suppliment Sample Support
                 </div>
               </div>
 
@@ -252,13 +252,13 @@ export default function HeroSection() {
         <img
           className="hero-mobile-image"
           src="/assets/images/whey-landing/heromobilebgimage.webp"
-          alt="Whey Protein Product"
+          alt="Suppliment Product"
         />
         <div className="hero-content">
           {/* Headline */}
           <h1 className="hero-title">
             Launch Your Own
-            <span className="green"> Protein</span> Brand.
+            <span className="green"> Suppliment</span> Brand.
           </h1>
 
           {/* Green divider */}
@@ -266,21 +266,21 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <p>
-            Start your whey protein brand with expert formulation, private label
+            Start your suppliment brand with expert formulation, private label
             manufacturing, sample support, and clear pricing, all from one
             trusted partner.
           </p>
 
           <p className="hero-subtitle">
             For founders, gym owners, supplement sellers, and D2C brands looking
-            to launch private label whey products with formulation,
+            to launch private label suppliment products with formulation,
             manufacturing, and sample support.
           </p>
 
           {/* CTA Buttons */}
           <div className="hero-btns">
             <button className="btn-primary-green" onClick={handleContactClick}>
-              Request Sample & Start Your Whey Brand
+              Request Sample & Start Your Suppliment Brand
             </button>
           </div>
           <div class="whey-landing-hero-badge-wrapper">
@@ -296,7 +296,7 @@ export default function HeroSection() {
               </div>
 
               <div class="whey-landing-hero-badge-text">
-                Whey Sample Support
+                Suppliment Sample Support
               </div>
             </div>
 

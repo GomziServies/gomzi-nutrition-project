@@ -85,7 +85,7 @@ const WheyLandingHeader = () => {
             className="wh-cta desktop"
             onClick={(event) => handleSectionClick(event, "#contact")}
           >
-            Request Sample & Start Your Whey Brand
+            Request Sample & Start Your Suppliment Brand
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path
                 d="M2 7h10M8 3l4 4-4 4"
@@ -125,7 +125,7 @@ const WheyLandingHeader = () => {
           className="wh-cta"
           onClick={(event) => handleSectionClick(event, "#contact")}
         >
-          Request Sample & Start Your Whey Brand
+          Request Sample & Start Your Suppliment Brand
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path
               d="M2 7h10M8 3l4 4-4 4"
