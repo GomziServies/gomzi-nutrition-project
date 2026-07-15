@@ -181,55 +181,7 @@ const WheyProteinManufacturing = () => {
       imageSrc: "/assets/images/third-party-manufacturing/FDA-logo.webp",
     },
   ];
-
   const schemaData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "@id":
-        "https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder/#product",
-      name: "Private Label Whey Protein Manufacturer in surat, India",
-      image:
-        "https://www.gomzilifesciences.in/assets/images/third-party-manufacturing/whey-100.png",
-      description:
-        "Gomzi Lifesciences is a leading whey protein manufacturer insurat,  India offering private label, white label, and third party manufacturing for sports nutrition brands. We provide custom formulations, bulk production, and certified supplement manufacturing services.",
-      brand: {
-        "@type": "Brand",
-        name: "Gomzilifesciences",
-      },
-      manufacturer: {
-        "@type": "Organization",
-        "@id": "https://www.gomzilifesciences.in/#organization",
-      },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.8",
-        reviewCount: "53",
-      },
-    },
-
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": "https://www.gomzilifesciences.in/#organization",
-      name: "Gomzilifesciences",
-      url: "https://www.gomzilifesciences.in",
-      logo: "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
-      sameAs: [
-        "https://www.facebook.com/Gomzilifesciences",
-        "https://www.instagram.com/gomzi_lifesciences/",
-        "https://www.linkedin.com/in/gomzi-lifesciences-423558312/",
-        "https://www.youtube.com/@Gomzilifesciences",
-      ],
-      contactPoint: {
-        "@type": "ContactPoint",
-        telephone: "+91 8320077993",
-        contactType: "customer support",
-        areaServed: "IN",
-        availableLanguage: ["English", "Hindi", "gujrati"],
-      },
-    },
-
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
@@ -239,10 +191,99 @@ const WheyProteinManufacturing = () => {
       name: "Whey Protein Manufacturer in India | Private Label Supplement Manufacturing",
       description:
         "Explore private label whey protein manufacturing services in India. Gomzi Lifesciences offers custom formulations, contract manufacturing, and bulk production for sports nutrition brands.",
-      inLanguage: "en",
+      inLanguage: "en-IN",
+      about: {
+        "@id": "https://www.gomzilifesciences.in/#organization",
+      },
       isPartOf: {
-        "@type": "WebSite",
         "@id": "https://www.gomzilifesciences.in/#website",
+      },
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id":
+        "https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder/#service",
+      url: "https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder",
+      name: "Private Label Whey Protein Manufacturing Services",
+      serviceType: "Private Label Whey Protein Manufacturing",
+      provider: {
+        "@id": "https://www.gomzilifesciences.in/#organization",
+      },
+      mainEntityOfPage: {
+        "@id":
+          "https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder/#webpage",
+      },
+      description:
+        "Private label whey protein manufacturing services including whey protein concentrate, whey protein isolate, protein blends, mass gainers, custom formulations, packaging, labeling and sports nutrition supplement manufacturing for brands across India.",
+      category: [
+        "Protein Powder Manufacturing",
+        "Sports Nutrition Manufacturing",
+        "Private Label Supplement Manufacturing",
+      ],
+      audience: {
+        "@type": "Audience",
+        audienceType:
+          "Supplement Brands, Gym Owners, Fitness Entrepreneurs, Distributors, Amazon Sellers and D2C Brands",
+      },
+      areaServed: [
+        {
+          "@type": "City",
+          name: "Surat",
+        },
+        {
+          "@type": "State",
+          name: "Gujarat",
+        },
+        {
+          "@type": "Country",
+          name: "India",
+        },
+      ],
+      knowsAbout: [
+        "Whey Protein Concentrate",
+        "Whey Protein Isolate",
+        "Protein Powder Manufacturing",
+        "Sports Nutrition Manufacturing",
+        "Mass Gainer Manufacturing",
+        "Private Label Supplements",
+        "Custom Supplement Formulation",
+        "Flavor Development",
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Protein Powder Manufacturing Solutions",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Whey Protein Concentrate Manufacturing",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Whey Protein Isolate Manufacturing",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Mass Gainer Manufacturing",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Custom Protein Blend Development",
+            },
+          },
+        ],
       },
     },
 
@@ -267,7 +308,7 @@ const WheyProteinManufacturing = () => {
         {
           "@type": "ListItem",
           position: 3,
-          name: "Protein Powder",
+          name: "Protein Powder Manufacturing",
           item: "https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder",
         },
       ],
@@ -284,7 +325,7 @@ const WheyProteinManufacturing = () => {
           name: "What is Whey Protein Blend?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Whey Protein Blend is a formulation that combines different whey protein sources such as whey protein concentrate and whey protein isolate to achieve a balanced nutritional profile and optimized cost structure. It is commonly used in sports nutrition supplements and daily protein products.",
+            text: "Whey Protein Blend combines different whey protein sources such as whey protein concentrate and whey protein isolate to achieve a balanced nutritional profile and optimized cost structure.",
           },
         },
         {
@@ -292,31 +333,31 @@ const WheyProteinManufacturing = () => {
           name: "What is the difference between Whey Protein Isolate and Whey Protein Concentrate?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Whey Protein Isolate 90% is a highly purified protein produced through advanced filtration processes that remove most fats and lactose, resulting in faster absorption. Whey Protein Concentrate 80% has a balanced nutritional composition and is one of the most widely used ingredients in sports nutrition supplements.",
+            text: "Whey Protein Isolate is a highly purified protein with lower fat and lactose content, while Whey Protein Concentrate offers a balanced nutritional profile and is widely used in sports nutrition supplements.",
           },
         },
         {
           "@type": "Question",
-          name: "Who can start a whey protein brand with Gomzi Lifescience?",
+          name: "Who can start a whey protein brand with Gomzi Lifesciences LLP?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Our whey protein manufacturing services are suitable for gym owners, fitness trainers, sports nutrition brands, e-commerce sellers (Amazon, Flipkart, Shopify), athletes, sports professionals, and health and wellness entrepreneurs.",
+            text: "Our whey protein manufacturing services are suitable for gym owners, fitness trainers, sports nutrition brands, e-commerce sellers, athletes and health and wellness entrepreneurs.",
           },
         },
         {
           "@type": "Question",
-          name: "What certifications does Gomzi Lifescience hold?",
+          name: "What certifications does Gomzi Lifesciences LLP hold?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "All products are manufactured under certified quality systems including FSSAI, GMP, HACCP, HALAL, and Kosher standards.",
+            text: "Products are manufactured under certified quality systems including FSSAI, GMP, HACCP, HALAL and Kosher standards.",
           },
         },
         {
           "@type": "Question",
-          name: "What manufacturing capabilities does Gomzi Lifescience offer?",
+          name: "What manufacturing capabilities does Gomzi Lifesciences LLP offer?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Our facility supports custom whey protein formulations, private label supplement manufacturing, flavor customization, packaging and labeling, and bulk production for supplement brands.",
+            text: "We offer custom whey protein formulations, private label manufacturing, flavor customization, packaging, labeling and bulk production for supplement brands.",
           },
         },
         {
@@ -324,15 +365,7 @@ const WheyProteinManufacturing = () => {
           name: "Which whey protein is best for premium sports nutrition products?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Whey Protein Isolate 90% is preferred for premium and advanced sports nutrition products due to its high protein concentration, low lactose and fat content, and fast absorption rate.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What is 100% Whey Protein used for?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "100% Whey Protein formulations are widely used in gym nutrition products, fitness supplements, and athlete-focused protein powders. They are developed to support muscle recovery and daily protein intake requirements.",
+            text: "Whey Protein Isolate is generally preferred for premium sports nutrition products because of its higher protein concentration and lower fat and lactose content.",
           },
         },
         {
@@ -340,7 +373,7 @@ const WheyProteinManufacturing = () => {
           name: "Can I get private label whey protein manufacturing in Surat?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Gomzi Lifescience LLP is based in Surat and specializes in private label whey protein manufacturing for sports nutrition brands, gym owners, fitness trainers, athletes, and e-commerce businesses.",
+            text: "Yes. Gomzi Lifesciences LLP is based in Surat and specializes in private label whey protein manufacturing for sports nutrition brands and fitness businesses.",
           },
         },
       ],
@@ -557,11 +590,17 @@ const WheyProteinManufacturing = () => {
           src="/assets/images/third-party-manufacturing/whey-protein.webp"
           alt="Whey Protein Manufacturer Banner"
           className="protein-powder-banner-image desktop-banner"
+          fetchpriority="high"
+          width={1600}
+          height={350}
         />
         <img
           src="/assets/images/third-party-manufacturing/whey-protein-banner.webp"
           alt="Whey Protein Manufacturer Banner"
           className="protein-powder-banner-image mobile-banner"
+          fetchpriority="high"
+          width={720}
+          height={480}
         />
       </div>
 

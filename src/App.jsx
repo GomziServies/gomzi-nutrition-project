@@ -38,11 +38,51 @@ import HowToLaunchYourOwnMultivitaminBrandWithoutManufacturingFacilities from ".
 import FromFSSAItoCDSCOIstheRegulationofIndianNutraceuticalsChangingIn from "./pages/white-labelling-blogs/from-fssai-to-cdsco-is-the-regulation-of-indian-nutraceuticals-changing-in-2026";
 import WheyVsPlantProteinWhichIsMoreProfitabletoManufacture from "./pages/white-labelling-blogs/whey-vs-plant-protein-which-is-more-profitable-to-manufacture";
 import HowSportsSupplementsAreManufacturedFromIngredientstoPackaging from "./pages/white-labelling-blogs/how-sports-supplements-are-manufactured-from-ingredients-to-packaging";
-import TheFutureofNutraceuticalManufacturingin202610GameChangingTrendsBrandsCantIgnore from "./pages/white-labelling-blogs/the-future-of-nutraceutical-manufacturing-in 2026-10-game-changing-trends-brands-cant-ignore";
+import TheFutureofNutraceuticalManufacturingin202610GameChangingTrendsBrandsCantIgnore from "./pages/white-labelling-blogs/the-future-of-nutraceutical-manufacturing-in-2026-10-game-changing-trends-brands-cant-ignore";
 import TheHiddenCostsofStartingaNutraceuticalBrand from "./pages/white-labelling-blogs/the-hidden-costs-of-starting-a-nutraceutical-brand";
 import TheRiseofWhiteLabelSupplementsinIndiaWhyBrandsareChoosingOutsourced from "./pages/white-labelling-blogs/the-rise-of-white-label-supplements-in-india-why-brands-are-choosing-outsourced";
 import HowMuchInvestmentisRequiredtoStartaSportsNutritionBrand from "./pages/white-labelling-blogs/how-much-investment-is-required-to-start-a-sports-nutrition-brand";
-import IndiaLeadingCDMOforFitnessBrandsProteinSupplementManufacturing from "./pages/white-labelling-blogs/india-leadingcdmo-for-fitness-brands -protein-supplement-manufacturing";
+import IndiaLeadingCDMOforFitnessBrandsProteinSupplementManufacturing from "./pages/white-labelling-blogs/india-leadingcdmo-for-fitness-brands-protein-supplement-manufacturing";
+
+import PersonalizedSupplementTrends2026 from "./pages/white-labelling-blogs/2026-personalized-supplement-trends-what-B2B-brands-should-launch-for-sleep-stress-and-daily-wellness";
+import WhyFormulationIsOnlyHalfTheJobInNutraceuticalManufacturing from "./pages/white-labelling-blogs/why-formulation-is-only-half-the-job-in-nutraceutical-manufacturing";
+import WhySomeSupplementBrandsSellFasterThanOthers from "./pages/white-labelling-blogs/why-some-supplement-brands-sell-faster-than-others";
+import WhyTheSameWheyProteinFormulaMadeInTwoDifferentIndianFactoriesTastesCompletelyDifferent from "./pages/white-labelling-blogs/why-the-same-whey-protein-formula-made-in-two-different-indian-factories-tastes-completely-different";
+import HowSupplementManufacturingActuallyWorks from "./pages/white-labelling-blogs/how-supplement-manufacturing-actually-works";
+import WhatGymBuyersInIndiaAreReallySearchingForIn2026 from "./pages/white-labelling-blogs/what-gym-buyers-in-india-are-really-searching-for-in-2026";
+import WhyEveryFitnessBrandNeedsAPreWorkoutManufacturerNotJustAFormula from "./pages/white-labelling-blogs/why-every-fitness-brand-needs-a-pre-workout-manufacturer-not-just-a-formula";
+import Why72PercentOfNewSupplementBrandsInIndiaAreChoosingThirdPartyManufacturingIn2026 from "./pages/white-labelling-blogs/why-72-percent-of-new-supplement-brands-in-india-are-choosing-third-party-manufacturing-in-2026";
+import WhatIfYourSupplementHadACharacter from "./pages/white-labelling-blogs/what-if-your-supplement-had-a-character-how-brand-storytelling-turns-protein-powder-into-a-hero-product";
+import WhatIsTheCheapestWheyProteinPowderAvailableInIndiaBuyerGuide from "./pages/white-labelling-blogs/what-is-the-cheapest-whey-protein-powder-available-in-india-buyer-guide";
+import ThirdPartyMultivitaminManufacturerInIndiaHowToChooseTheRightPartner from "./pages/white-labelling-blogs/third-party-multivitamin-manufacturer-in-india-how-to-choose-the-right-partner";
+import TheRiseOfPreWorkoutSupplementsHowFitnessBrandsCanWinIn2026 from "./pages/white-labelling-blogs/the-rise-of-pre-workout-supplements-how-fitness-brands-can-win-in-2026";
+import TheRealReasonSomeProteinBrandsFeelTrustworthyAndOthersDont from "./pages/white-labelling-blogs/the-real-reason-some-protein-brands-feel-trustworthy-and-others-dont";
+import TheHiddenQuestionsBuyersAskBeforeChoosingASupplementManufacturer from "./pages/white-labelling-blogs/the-hidden-questions-buyers-ask-before-choosing-a-supplement-manufacturer";
+import NutraceuticalManufacturingKPIsHowToTrackQualityEfficiencyAndComplianceInProduction from "./pages/white-labelling-blogs/nutraceutical-manufacturing-KPIs-how-to-track-quality-efficiency-and-compliance-in-production";
+import IndiaDoesNotNeedMoreProteinBrandsItNeedsMoreHonestOnes from "./pages/white-labelling-blogs/india-does-not-need-more-protein-brands";
+import HowToLaunchAGymFocusedPreWorkoutLine from "./pages/white-labelling-blogs/how-to-launch-a-gym-focused-pre-workout-line-from-formulation-to-shelf-a-step-by-step-guide-for-brands";
+import HowFlavourDevelopmentImpactsProteinPowderSuccess from "./pages/white-labelling-blogs/how-flavour-development-impacts-protein-powder-success";
+import HowFirstTimeFoundersCanAvoidCommonSupplementLaunchMistakes from "./pages/white-labelling-blogs/how-first-time-founders-can-avoid-common-supplement-launch-mistakes";
+import FSSAIRegulationsForFunctionalFoodsAndNutraceuticals2026Update from "./pages/white-labelling-blogs/fssai-regulations-for-functional-foods-and-nutraceuticals-2026-update";
+import BestSupplementsToReduceStressAndAnxietyNaturally from "./pages/white-labelling-blogs/best-supplements-to-reduce-stress-and-anxiety-naturally";
+import BestNutraceuticalManufacturingCompaniesInIndiaForOmega3AndSportsSupplements from "./pages/white-labelling-blogs/best-nutraceutical-manufacturing-companies-in-india-for-omega-3-and-sports-supplements";
+import HowRawMaterialQualityAffectsSupplementTasteAndPerformance from "./pages/white-labelling-blogs/how-raw-material-quality-affects-supplement-taste-and-performance";
+import HowToValidateASupplementIdeaBeforeSpendingOnManufacturing from "./pages/white-labelling-blogs/how-to-validate-a-supplement-idea-before-spending-on-manufacturing";
+import IsASupplementBrandReallyPassiveIncome from "./pages/white-labelling-blogs/is-a-supplement-brand-really-passive-income-the-honest-truth";
+import ThePackagingSignalsThatMakeASupplementBrandLookEstablished from "./pages/white-labelling-blogs/the-packaging-signals-that-make-a-supplement-brand-look-established";
+import WhyIndianFlavoursCanBeAGrowthAdvantageInSportsNutrition from "./pages/white-labelling-blogs/why-indian-flavours-can-be-a-growth-advantage-in-sports-nutrition";
+import WhatMakesANutraceuticalBrandFeelReady from "./pages/white-labelling-blogs/what-makes-a-nutraceutical-brand-feel-ready-in-the-customers-mind";
+import TopThingsToKnowBeforeStartingAMultivitaminTabletBrand from "./pages/white-labelling-blogs/top-things-to-know-before-starting-a-multivitamin-tablet-brand";
+import ThePsychologyOfBuyingSupplements from "./pages/white-labelling-blogs/the-psychology-of-buying-supplements";
+import WhyInternationalBrandsSourceNutraceuticalProductsFromGujarat from "./pages/white-labelling-blogs/why-international-brands-source-nutraceutical-products-from-gujarat";
+import QuestionsToAskBeforeSelectingAProteinManufacturer from "./pages/white-labelling-blogs/questions-to-ask-before-selecting-a-protein-manufacturer";
+import HowMuchDoesItCostToLaunchAPrivateLabelProteinPowderBrandInIndia from "./pages/white-labelling-blogs/how-much-does-it-cost-to-launch-a-private-label-protein-powder-brand-in-india";
+import NicheVsMassMarketWhatWorksBetterInTheSupplementIndustry from "./pages/white-labelling-blogs/niche-vs-mass-market-what-works-better-in-the-supplement-industry";
+import WhyPreWorkoutRecoveryAndHydrationProductsAreGrowingFast from "./pages/white-labelling-blogs/why-pre-workout-recover-and-hydration-products-are-growing-fast";
+import WhyCheapManufacturingIsTheMostExpensiveDecisionYouWillMake from "./pages/white-labelling-blogs/why-cheap-manufacturing-is-the-most-expensive-decision-you-will-make";
+import PrivateLabelGymSupplementsStartYourOwnFitnessSupplementBrand from "./pages/white-labelling-blogs/private-label-gym-supplements-start-your-own-fitness-supplement-brand";
+import WheyProteinConcentrateManufacturerBenefits from "./pages/white-labelling-blogs/whey-protein-concentrate-manufacturer-enefits-from-gomzi-lifescience-manufacture";
+import HowToFindHighDemandSupplementIdeasUsingMarketData from "./pages/white-labelling-blogs/how-to-find-high-demand-supplement-ideas-using-market-data";
 import FounderPage from "./pages/nutrition/founderPage";
 
 const UserProfile = lazy(() => import("./pages/account/profile"));
@@ -606,7 +646,7 @@ function App() {
         />
 
         <Route
-          path="/blogs/the-future-of-nutraceutical-manufacturing-in 2026-10-game-changing-trends-brands-cant-ignore"
+          path="/blogs/the-future-of-nutraceutical-manufacturing-in-2026-10-game-changing-trends-brands-cant-ignore"
           element={
             <TheFutureofNutraceuticalManufacturingin202610GameChangingTrendsBrandsCantIgnore />
           }
@@ -629,11 +669,171 @@ function App() {
         />
 
         <Route
-          path="/blogs/india-leadingcdmo-for-fitness-brands -protein-supplement-manufacturing"
+          path="/blogs/india-leadingcdmo-for-fitness-brands-protein-supplement-manufacturing"
           element={
             <IndiaLeadingCDMOforFitnessBrandsProteinSupplementManufacturing />
           }
         />
+
+
+        <Route
+            path="/blogs/how-much-does-it-cost-to-launch-a-private-label-protein-powder-brand-in-india"
+            element={<HowMuchDoesItCostToLaunchAPrivateLabelProteinPowderBrandInIndia />}
+          />
+          <Route
+            path="/blogs/questions-to-ask-before-selecting-a-protein-manufacturer"
+            element={<QuestionsToAskBeforeSelectingAProteinManufacturer />}
+          />
+          <Route
+            path="/blogs/why-international-brands-source-nutraceutical-products-from-gujarat"
+            element={<WhyInternationalBrandsSourceNutraceuticalProductsFromGujarat />}
+          />
+          <Route
+            path="/blogs/the-psychology-of-buying-supplements"
+            element={<ThePsychologyOfBuyingSupplements />}
+          />
+          <Route
+            path="/blogs/top-things-to-know-before-starting-a-multivitamin-tablet-brand"
+            element={<TopThingsToKnowBeforeStartingAMultivitaminTabletBrand />}
+          />
+          <Route
+            path="/blogs/what-makes-a-nutraceutical-brand-feel-ready-in-the-customers-mind"
+            element={<WhatMakesANutraceuticalBrandFeelReady />}
+          />
+          <Route
+            path="/blogs/why-indian-flavours-can-be-a-growth-advantage-in-sports-nutrition"
+            element={<WhyIndianFlavoursCanBeAGrowthAdvantageInSportsNutrition />}
+          />
+          <Route
+            path="/blogs/the-packaging-signals-that-make-a-supplement-brand-look-established"
+            element={<ThePackagingSignalsThatMakeASupplementBrandLookEstablished />}
+          />
+          <Route
+            path="/blogs/is-a-supplement-brand-really-passive-income-the-honest-truth"
+            element={<IsASupplementBrandReallyPassiveIncome />}
+          />
+          <Route
+            path="/blogs/how-to-validate-a-supplement-idea-before-spending-on-manufacturing"
+            element={<HowToValidateASupplementIdeaBeforeSpendingOnManufacturing />}
+          />
+          <Route
+            path="/blogs/how-raw-material-quality-affects-supplement-taste-and-performance"
+            element={<HowRawMaterialQualityAffectsSupplementTasteAndPerformance />}
+          />
+          <Route
+            path="/blogs/best-nutraceutical-manufacturing-companies-in-india-for-omega-3-and-sports-supplements"
+            element={<BestNutraceuticalManufacturingCompaniesInIndiaForOmega3AndSportsSupplements />}
+          />
+          <Route
+            path="/blogs/best-supplements-to-reduce-stress-and-anxiety-naturally"
+            element={<BestSupplementsToReduceStressAndAnxietyNaturally />}
+          />
+          <Route
+            path="/blogs/FSSAI-regulations-for-functional-foods-and-nutraceuticals-2026-update"
+            element={<FSSAIRegulationsForFunctionalFoodsAndNutraceuticals2026Update />}
+          />
+          <Route
+            path="/blogs/how-first-time-founders-can-avoid-common-supplement-launch-mistakes"
+            element={<HowFirstTimeFoundersCanAvoidCommonSupplementLaunchMistakes />}
+          />
+          <Route
+            path="/blogs/how-flavour-development-impacts-protein-powder-success"
+            element={<HowFlavourDevelopmentImpactsProteinPowderSuccess />}
+          />
+          <Route
+            path="/blogs/how-to-launch-a-gym-focused-pre-workout-line-from-formulation-to-shelf-a-step-by-step-guide-for-brands"
+            element={<HowToLaunchAGymFocusedPreWorkoutLine />}
+          />
+          <Route
+            path="/blogs/india-does-not-need-more-protein-brands"
+            element={<IndiaDoesNotNeedMoreProteinBrandsItNeedsMoreHonestOnes />}
+          />
+
+          <Route
+            path="/blogs/nutraceutical-manufacturing-KPIs-how-to-track-quality-efficiency-and-compliance-in-production"
+            element={<NutraceuticalManufacturingKPIsHowToTrackQualityEfficiencyAndComplianceInProduction />}
+          />
+          <Route
+            path="/blogs/the-hidden-questions-buyers-ask-before-choosing-a-supplement-manufacturer"
+            element={<TheHiddenQuestionsBuyersAskBeforeChoosingASupplementManufacturer />}
+          />
+          <Route
+            path="/blogs/the-real-reason-some-protein-brands-feel-trustworthy-and-others-dont"
+            element={<TheRealReasonSomeProteinBrandsFeelTrustworthyAndOthersDont />}
+          />
+          <Route
+            path="/blogs/the-rise-of-pre-workout-supplements-how-fitness-brands-can-win-in-2026"
+            element={<TheRiseOfPreWorkoutSupplementsHowFitnessBrandsCanWinIn2026 />}
+          />
+          <Route
+            path="/blogs/third-party-multivitamin-manufacturer-in-india-how-to-choose-the-right-partner"
+            element={<ThirdPartyMultivitaminManufacturerInIndiaHowToChooseTheRightPartner />}
+          />
+          <Route
+            path="/blogs/what-is-the-cheapest-whey-protein-powder-available-in-india-buyer-guide"
+            element={<WhatIsTheCheapestWheyProteinPowderAvailableInIndiaBuyerGuide />}
+          />
+          <Route
+            path="/blogs/what-if-your-supplement-had-a-character-how-brand-storytelling-turns-protein-powder-into-a-hero-product"
+            element={<WhatIfYourSupplementHadACharacter />}
+          />
+          <Route
+            path="/blogs/why-72-percent-of-new-supplement-brands-in-india-are-choosing-third-party-manufacturing-in-2026"
+            element={<Why72PercentOfNewSupplementBrandsInIndiaAreChoosingThirdPartyManufacturingIn2026 />}
+          />
+          <Route
+            path="/blogs/why-every-fitness-brand-needs-a-pre-workout-manufacturer-not-just-a-formula"
+            element={<WhyEveryFitnessBrandNeedsAPreWorkoutManufacturerNotJustAFormula />}
+          />
+          <Route
+            path="/blogs/what-gym-buyers-in-india-are-really-searching-for-in-2026"
+            element={<WhatGymBuyersInIndiaAreReallySearchingForIn2026 />}
+          />
+          <Route
+            path="/blogs/how-supplement-manufacturing-actually-works"
+            element={<HowSupplementManufacturingActuallyWorks />}
+          />
+          <Route
+            path="/blogs/why-the-same-whey-protein-formula-made-in-two-different-indian-factories-tastes-completely-different"
+            element={<WhyTheSameWheyProteinFormulaMadeInTwoDifferentIndianFactoriesTastesCompletelyDifferent />}
+          />
+          <Route
+            path="/blogs/why-some-supplement-brands-sell-faster-than-others"
+            element={<WhySomeSupplementBrandsSellFasterThanOthers />}
+          />
+          <Route
+            path="/blogs/why-formulation-is-only-half-the-job-in-nutraceutical-manufacturing"
+            element={<WhyFormulationIsOnlyHalfTheJobInNutraceuticalManufacturing />}
+          />
+
+          <Route
+            path="/blogs/2026-personalized-supplement-trends-what-B2B-brands-should-launch-for-sleep-stress-and-daily-wellness"
+            element={<PersonalizedSupplementTrends2026 />}
+          />
+          <Route
+            path="/blogs/how-to-find-high-demand-supplement-ideas-using-market-data"
+            element={<HowToFindHighDemandSupplementIdeasUsingMarketData />}
+          />
+          <Route
+            path="/blogs/whey-protein-concentrate-manufacturer-enefits-from-gomzi-lifescience-manufacture"
+            element={<WheyProteinConcentrateManufacturerBenefits />}
+          />
+          <Route
+            path="/blogs/private-label-gym-supplements-start-your-own-fitness-supplement-brand"
+            element={<PrivateLabelGymSupplementsStartYourOwnFitnessSupplementBrand />}
+          />
+          <Route
+            path="/blogs/why-cheap-manufacturing-is-the-most-expensive-decision-you-will-make"
+            element={<WhyCheapManufacturingIsTheMostExpensiveDecisionYouWillMake />}
+          />
+          <Route
+            path="/blogs/niche-vs-mass-market-what-works-better-in-the-supplement-industry"
+            element={<NicheVsMassMarketWhatWorksBetterInTheSupplementIndustry />}
+          />
+          <Route
+            path="/blogs/why-pre-workout-recover-and-hydration-products-are-growing-fast"
+            element={<WhyPreWorkoutRecoveryAndHydrationProductsAreGrowingFast />}
+          /> 
 
         <Route
           path="/nutrition/gomzi-nutrition-refuel-mass-gainer-powder"

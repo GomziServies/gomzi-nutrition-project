@@ -178,7 +178,7 @@ const PerformanceSupplements = () => {
         "@type": "Organization",
         name: "Gomzilifesciences",
         url: "https://www.gomzilifesciences.in",
-        logo: "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
+        logo: "https://www.gomzilifesciences.in/assets/images/logo/gomzi-life-science-logo.webp",
       },
       areaServed: {
         "@type": "Country",
@@ -507,11 +507,17 @@ const PerformanceSupplements = () => {
             src="/assets/images/third-party-manufacturing/performnace-supplement.webp"
             alt="Performance Supplement Manufacturer Banner"
             className="protein-powder-banner-image desktop-banner"
+            fetchpriority="high"
+            width={1600}
+            height={350}
           />
           <img
             src="/assets/images/third-party-manufacturing/performance-supplement-banner.webp"
             alt="Performance Supplement Manufacturer Banner"
             className="protein-powder-banner-image mobile-banner"
+            fetchpriority="high"
+            width={720}
+            height={480}
           />
         </div>
 
@@ -529,7 +535,7 @@ const PerformanceSupplements = () => {
               </div>
               <div>
                 <a
-                  href="https://wa.me/918320077993?text=Hello%20I%20am%20interested%20in%20Protein%20Powders"
+                  href="https://wa.me/918320077993?text=Hello%20I%20am%20interested%20in%20Performance%20Supplements"
                   target="_blank"
                   rel="noreferrer"
                   className="download-brochure barlow-condensed-semi f-18"
