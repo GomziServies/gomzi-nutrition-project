@@ -5,10 +5,350 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 72,
+    title:
+      "How Much Does It Cost to Launch a Private Label Protein Powder Brand in India?",
+    url: "/blogs/how-much-does-it-cost-to-launch-a-private-label-protein-powder-brand-in-india",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-much-does-it-cost-to-launch-a-private-label-protein-powder-brand-in-india.webp",
+  },
+  {
+    number: 71,
+    title: "Questions to Ask Before Selecting a Protein Manufacturer ",
+    url: "/blogs/questions-to-ask-before-selecting-a-protein-manufacturer",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/questions-to-ask-before-selecting-a-protein-manufacturer.webp",
+  },
+  {
+    number: 70,
+    title:
+      "Why International Brands Source Nutraceutical Products from Gujarat?",
+    url: "/blogs/why-international-brands-source-nutraceutical-products-from-gujarat",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/why-international-brands-source-nutraceutical-products-from-gujarat.webp",
+  },
+  {
+    number: 69,
+    title:
+      "The Psychology of Buying Supplements: What Makes Customers Choose One Brand?",
+    url: "/blogs/the-psychology-of-buying-supplements",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/the-psychology-of-buying-supplements.webp",
+  },
+  {
+    number: 68,
+    title: "Top Things to Know Before Starting a Multivitamin Tablet Brand",
+    url: "/blogs/top-things-to-know-before-starting-a-multivitamin-tablet-brand",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/top-things-to-know-before-starting-a-multivitamin-tablet-brand.webp",
+  },
+  {
+    number: 67,
+    title:
+      "What Makes a Nutraceutical Brand Feel “Ready” in the Customer’s Mind?",
+    url: "/blogs/what-makes-a-nutraceutical-brand-feel-ready-in-the-customers-mind",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/what-makes-a-nutraceutical-brand-feel-ready-in-the-customers-mind.webp",
+  },
+  {
+    number: 66,
+    title: "Why Indian Flavours Can Be a Growth Advantage in Sports Nutrition?",
+    url: "/blogs/why-indian-flavours-can-be-a-growth-advantage-in-sports-nutrition",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/why-indian-flavours-can-be-a-growth-advantage-in-sports-nutrition.webp",
+  },
+  {
+    number: 65,
+    title:
+      "The Packaging Signals That Make a Supplement Brand Look Established",
+    url: "/blogs/the-packaging-signals-that-make-a-supplement-brand-look-established",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/the-packaging-signals-that-make-a-supplement-brand-look-established.webp",
+  },
+  {
+    number: 64,
+    title: "Is a Supplement Brand Really Passive Income? The Honest Truth",
+    url: "/blogs/is-a-supplement-brand-really-passive-income-the-honest-truth",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/is-a-supplement-brand-really-passive-income-the-honest-truth.webp",
+  },
+  {
+    number: 63,
+    title:
+      "How to Validate a Supplement Idea Before Spending on Manufacturing?",
+    url: "/blogs/how-to-validate-a-supplement-idea-before-spending-on-manufacturing",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-to-validate-a-supplement-idea-before-spending-on-manufacturing.webp",
+  },
+  {
+    number: 62,
+    title: "How Raw Material Quality Affects Supplement Taste and Performance?",
+    url: "/blogs/how-raw-material-quality-affects-supplement-taste-and-performance",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-raw-material-quality-affects-supplement-taste-and-performance.webp",
+  },
+  {
+    number: 61,
+    title:
+      "Best Nutraceutical Manufacturing Companies in India for Omega-3 & Sports Supplements ",
+    url: "/blogs/best-nutraceutical-manufacturing-companies-in-india-for-omega-3-and-sports-supplements",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/best-nutraceutical-manufacturing-companies-in-india-for-omega-3-and-sports-supplements.webp",
+  },
+  {
+    number: 60,
+    title: "Best Supplements to Reduce Stress & Anxiety Naturally",
+    url: "/blogs/best-supplements-to-reduce-stress-and-anxiety-naturally",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/best-supplements-to-reduce-stress-and-anxiety-naturally.webp",
+  },
+  {
+    number: 59,
+    title:
+      "FSSAI Regulations for Functional Foods and Nutraceuticals 2026 Update",
+    url: "/blogs/FSSAI-regulations-for-functional-foods-and-nutraceuticals-2026-update",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/fssai-regulations-for-functional-foods-and-nutraceuticals-2026-update.webp",
+  },
+  {
+    number: 58,
+    title:
+      "How First-Time Founders Can Avoid Common Supplement Launch Mistakes?",
+    url: "/blogs/how-first-time-founders-can-avoid-common-supplement-launch-mistakes",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-first-time-founders-can-avoid-common-supplement-launch-mistakes.webp",
+  },
+  {
+    number: 57,
+    title: "How Flavour Development Impacts Protein Powder Success?",
+    url: "/blogs/how-flavour-development-impacts-protein-powder-success",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-flavour-development-impacts-protein-powder-success.webp",
+  },
+  {
+    number: 56,
+    title:
+      "How to Launch a Gym-Focused Pre-Workout Line: From Formulation to Shelf  A Step-by-Step Guide for Brands?",
+    url: "/blogs/how-to-launch-a-gym-focused-pre-workout-line-from-formulation-to-shelf-a-step-by-step-guide-for-brands",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-to-launch-a-gym-focused-pre-workout-line-from-formulation-to-shelf-a-step-by-step-guide-for-brands.webp",
+  },
+  {
+    number: 55,
+    title:
+      "India Does Not Need More Protein Brands. It Needs More Honest Ones.",
+    url: "/blogs/india-does-not-need-more-protein-brands",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/india-does-not-need-more-protein-brands.webp",
+  },
+  {
+    number: 54,
+    title:
+      "Nutraceutical Manufacturing KPIs: How to Track Quality, Efficiency, and Compliance in Production",
+    url: "/blogs/nutraceutical-manufacturing-KPIs-how-to-track-quality-efficiency-and-compliance-in-production",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/nutraceutical-manufacturing-KPIs-how-to-track-quality-efficiency-and-compliance-in-production.webp",
+  },
+  {
+    number: 53,
+    title:
+      "The Hidden Questions Buyers Ask Before Choosing a Supplement Manufacturer",
+    url: "/blogs/the-hidden-questions-buyers-ask-before-choosing-a-supplement-manufacturer",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/the-hidden-questions-buyers-ask-before-choosing-a-supplement-manufacturer.webp",
+  },
+  {
+    number: 52,
+    title:
+      "The Real Reason Some Protein Brands Feel Trustworthy and Others Don’t?",
+    url: "/blogs/the-real-reason-some-protein-brands-feel-trustworthy-and-others-dont",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/the-real-reason-some-protein-brands-feel-trustworthy-and-others-dont.webp",
+  },
+  {
+    number: 51,
+    title:
+      "The Rise of Pre-Workout Supplements: How Fitness Brands Can Win in 2026?",
+    url: "/blogs/the-rise-of-pre-workout-supplements-how-fitness-brands-can-win-in-2026",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/the-rise-of-pre-workout-supplements-how-fitness-brands-can-win-in-2026.webp",
+  },
+  {
+    number: 50,
+    title:
+      "Third Party Multivitamin Manufacturer in India: How to Choose the Right Partner",
+    url: "/blogs/third-party-multivitamin-manufacturer-in-india-how-to-choose-the-right-partner",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/third-party-multivitamin-manufacturer-in-india-how-to-choose-the-right-partner.webp",
+  },
+  {
+    number: 49,
+    title:
+      "What Is the Cheapest Whey Protein Powder Available in India? | Buyer Guide",
+    url: "/blogs/what-is-the-cheapest-whey-protein-powder-available-in-india-buyer-guide",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/what-is-the-cheapest-whey-protein-powder-available-in-india-buyer-guide.webp",
+  },
+  {
+    number: 48,
+    title:
+      "What If Your Supplement Had a Character? How Brand Storytelling Turns Protein Powder Into a Hero Product",
+    url: "/blogs/what-if-your-supplement-had-a-character-how-brand-storytelling-turns-protein-powder-into-a-hero-product",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/what-if-your-supplement-had-a-character-how-brand-storytelling-turns-protein-powder-into-a-hero-product.webp",
+  },
+  {
+    number: 47,
+    title:
+      "Why 72% of New Supplement Brands in India Are Choosing Third Party Manufacturing in 2026?",
+    url: "/blogs/why-72-percent-of-new-supplement-brands-in-india-are-choosing-third-party-manufacturing-in-2026",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/why-72-percent-of-new-supplement-brands-in-india-are-choosing-third-party-manufacturing-in-2026.webp",
+  },
+  {
+    number: 46,
+    title:
+      "Why Every Fitness Brand Needs a Pre-Workout Manufacturer, Not Just a Formula?",
+    url: "/blogs/why-every-fitness-brand-needs-a-pre-workout-manufacturer-not-just-a-formula",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/why-every-fitness-brand-needs-a-pre-workout-manufacturer-not-just-a-formula.webp",
+  },
+  {
+    number: 45,
+    title: "What Gym Buyers in India Are Really Searching for in 2026?",
+    url: "/blogs/what-gym-buyers-in-india-are-really-searching-for-in-2026",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/what-gym-buyers-in-india-are-really-searching-for-in-2026.webp",
+  },
+  {
+    number: 44,
+    title: "How Supplement Manufacturing Actually Works (Step-by-Step)?",
+    url: "/blogs/how-supplement-manufacturing-actually-works",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-supplement-manufacturing-actually-works-step-by-step.webp",
+  },
+  {
+    number: 43,
+    title:
+      "Why the Same Whey Protein Formula Made in Two Different Indian Factories Tastes Completely Different?",
+    url: "/blogs/why-the-same-whey-protein-formula-made-in-two-different-indian-factories-tastes-completely-different",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/why-the-same-whey-protein-formula-made-in-two-different-indian-factories-tastes-completely-different.webp",
+  },
+  {
+    number: 42,
+    title: "Why Some Supplement Brands Sell Faster Than Others?",
+    url: "/blogs/why-some-supplement-brands-sell-faster-than-others",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/why-some-supplement-brands-sell-faster.webp",
+  },
+  {
+    number: 41,
+    title:
+      "Why Formulation Is Only Half the Job in Nutraceutical Manufacturing?",
+    url: "/blogs/why-formulation-is-only-half-the-job-in-nutraceutical-manufacturing",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/why-formulation-is-only-half-the-job.webp",
+  },
+  {
+    number: 40,
+    title:
+      "2026 Personalized Supplement Trends: What B2B Brands Should Launch for Sleep, Stress, and Daily Wellness",
+    url: "/blogs/2026-personalized-supplement-trends-what-B2B-brands-should-launch-for-sleep-stress-and-daily-wellness",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/2026-personalized-supplement-trend.webp",
+  },
+  {
+    number: 39,
+    title: "How to Find High-Demand Supplement Ideas Using Market Data?",
+    url: "/blogs/how-to-find-high-demand-supplement-ideas-using-market-data",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/supplement-ideas-using-market-data.webp",
+  },
+  {
+    number: 38,
+    title:
+      "Whey Protein Concentrate Manufacturer: Benefits from gomzi lifescience manufacturer",
+    url: "/blogs/whey-protein-concentrate-manufacturer-enefits-from-gomzi-lifescience-manufacture",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/whey-protein-concentrate-manufacturer.webp",
+  },
+  {
+    number: 37,
+    title:
+      "Private Label Gym Supplements: Start Your Own Fitness Supplement Brand",
+    url: "/blogs/private-label-gym-supplements-start-your-own-fitness-supplement-brand",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/private-label-gym-supplements.webp",
+  },
+  {
+    number: 36,
+    title:
+      "Why “Cheap Manufacturing” Is the Most Expensive Decision You’ll Make?",
+    url: "/blogs/why-cheap-manufacturing-is-the-most-expensive-decision-you-will-make",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/why-cheap-manufacturing.webp",
+  },
+  {
+    number: 35,
+    title:
+      "Niche vs. Mass Market: What Works Better in the Supplement Industry?",
+    url: "/blogs/niche-vs-mass-market-what-works-better-in-the-supplement-industry",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/niche-vs-mass-market.webp",
+  },
+  {
+    number: 34,
+    title:
+      "Why Pre-Workout, Recovery, and Hydration Products Are Growing Fast in India (2026 Guide)",
+    url: "/blogs/why-pre-workout-recover-and-hydration-products-are-growing-fast",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/why-pre-workout-recover-and-hydration-products-are-growing-fast.webp",
+  },
+  {
     number: 33,
     title:
       "India’s Leading CDMO for Fitness Brands — Protein & Supplement Manufacturing",
-    url: "/blogs/india-leadingcdmo-for-fitness-brands -protein-supplement-manufacturing",
+    url: "/blogs/india-leadingcdmo-for-fitness-brands-protein-supplement-manufacturing",
     imgSrc:
       process.env.PUBLIC_URL +
       "/assets/images/white-labelling-blogs/india-leadingcdmo-for-fitness-brands -protein-supplement-manufacturing.webp",
@@ -43,7 +383,7 @@ export const whitelabelBloglist = [
     number: 29,
     title:
       "Top 10 Nutraceutical Manufacturing Trends 2026 | AI, Sustainability & Smart Production",
-    url: "/blogs/the-future-of-nutraceutical-manufacturing-in 2026-10-game-changing-trends-brands-cant-ignore",
+    url: "/blogs/the-future-of-nutraceutical-manufacturing-in-2026-10-game-changing-trends-brands-cant-ignore",
     imgSrc:
       process.env.PUBLIC_URL +
       "/assets/images/white-labelling-blogs/the-future-of-nutraceutical-manufacturing-in 2026-10-game-changing-trends-brands-cant-ignore.webp",

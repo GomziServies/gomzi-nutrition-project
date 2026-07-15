@@ -1196,6 +1196,7 @@ html {
   display: -webkit-box !important;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-clamp: 2;
   -webkit-line-clamp: 2;
   max-height: 39px;
   min-height: 39px;
@@ -1826,7 +1827,7 @@ h2 {
 }
 
 .f-16 {
-  font-size: 16px !important;
+  font-size: 14px !important;
 }
 
 @media screen and (max-width: 767px) {
@@ -3199,6 +3200,7 @@ body.cart-body {
   font-size: 20px;
   letter-spacing: 0.1px;
   background-color: transparent;
+   appearance: none;
   -webkit-appearance: none;
 }
 
@@ -4105,6 +4107,7 @@ body.cart-body {
   display: -webkit-box !important;
   overflow: hidden;
   text-overflow: ellipsis;
+   line-clamp: 1;    
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   color: #b3b3b5;
@@ -9265,7 +9268,6 @@ input[type="number"]::-webkit-outer-spin-button {
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  group: true;
 }
 
 .happy-video-card img {
@@ -11070,6 +11072,15 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: center;
   }
 }
+
+@media (max-width: 576px) {
+    .who-card img {
+        width: 100% !important;
+        height: 429px !important;
+        object-fit: cover !important;
+    }
+}
+
 
 @media (max-width: 768px) {
   .who-card {

@@ -89,7 +89,7 @@ function aboutUs() {
           <div className="about-hero-banner">
             <div className="about-hero-overlay"></div>
             <div className="about-hero-content">
-              <h1 className="about-title barlow-condensed-semi">
+              <h1 class="about-title barlow-condensed-semi">
                 We help supplement founders build{" "}
                 <span>brands people trust.</span>
               </h1>
@@ -317,23 +317,12 @@ function aboutUs() {
             concept to manufacturing to launch.
           </p>
 
-          <div className="brand-start-core">
-            <h3 className="barlow-condensed-semi">Best for</h3>
-
-            <p className="inter-regular mb-2">
-              Protein powders, sports supplements, and multivitamin brands
-              looking for a reliable manufacturing partner.
-            </p>
-
-            <ul className="inter-regular">
-              <li>
-                <strong>Location: </strong> Surat, Gujarat, India.
-              </li>
-              <li>
-                <strong>Business model: </strong> B2B Third-Party & Private
-                Label Manufacturing.
-              </li>
-            </ul>
+          <div className="d-flex justify-content-center">
+            <RequestQuoteButton
+              className="about-primary-btn barlow-condensed-semi"
+              text={" Request a Quote"}
+              subject={"request a quote"}
+            />
           </div>
         </div>
       </section>

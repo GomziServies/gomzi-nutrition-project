@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "../assets/css/nutrition.css";
 import { Accordion } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,31 +18,8 @@ import WhiteLabellingVideoTestimonials from "./nutrition/white-labelling-video-t
 import RequestQuoteButton from "../components/nutrition/RequestQuoteButton";
 import RequestQuoteModal from "../components/nutrition/requestquotemodal";
 
-// const logos = [
-//   {
-//     id: 1,
-//     imageSrc: "/assets/images/third-party-manufacturing/fassai.webp",
-//   },
-//   {
-//     id: 2,
-//     imageSrc: "/assets/images/third-party-manufacturing/gmp.webp",
-//   },
-//   {
-//     id: 3,
-//     imageSrc: "/assets/images/third-party-manufacturing/haccp.webp",
-//   },
-//   {
-//     id: 4,
-//     imageSrc: "/assets/images/third-party-manufacturing/halal.webp",
-//   },
-//   {
-//     id: 5,
-//     imageSrc: "/assets/images/third-party-manufacturing/kosher.webp",
-//   },
-// ];
-
 const certificates = [
-   { file: "nutri-certi-6.webp", name: "FDA", sub: "FDA Registreted" },
+  { file: "nutri-certi-6.webp", name: "FDA", sub: "FDA Registreted" },
   { file: "nutri-certi-1.webp", name: "HACCP", sub: "Hazard Control Point" },
   {
     file: "nutri-certi-2.webp",
@@ -52,6 +29,218 @@ const certificates = [
   { file: "nutri-certi-3.webp", name: "HALAL", sub: "Halal Certified" },
   { file: "nutri-certi-4.webp", name: "KOSHER", sub: "Kosher Certified" },
   { file: "nutri-certi-5.webp", name: "FSSAI", sub: "Licensed & Approved" },
+];
+
+const schemaData = [
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.gomzilifesciences.in/#organization",
+        name: "Gomzi Lifesciences",
+        legalName: "Gomzi Lifesciences LLP",
+        url: "https://www.gomzilifesciences.in/",
+        logo: "https://www.gomzilifesciences.in/assets/images/logo/gomzi-life-science-logo.webp",
+        description:
+          "Gomzi Lifesciences is a GMP-certified nutraceutical manufacturer in Surat, Gujarat, India, offering third-party manufacturing, private label manufacturing and white label manufacturing services for whey protein, sports nutrition supplements, peanut butter and multivitamin tablets.",
+        telephone: "+91 8320077993",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress:
+            "443,444,445, 1st Floor, RJD Textile Park, Hazira Road",
+          addressLocality: "Ichchhapor",
+          addressRegion: "Gujarat",
+          postalCode: "394510",
+          addressCountry: "IN",
+        },
+        sameAs: [
+          "https://www.facebook.com/Gomzilifesciences",
+          "https://www.instagram.com/gomzi_lifesciences/",
+          "https://www.youtube.com/@Gomzilifesciences",
+          "https://www.linkedin.com/in/gomzi-lifesciences-423558312/",
+        ],
+      },
+
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.gomzilifesciences.in/#localbusiness",
+        name: "Gomzi Lifesciences LLP",
+        url: "https://www.gomzilifesciences.in/",
+        image:
+          "https://www.gomzilifesciences.in/assets/images/logo/gomzi-life-science-logo.webp",
+        telephone: "+91 8320077993",
+        priceRange: "₹₹",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress:
+            "443,444,445, 1st Floor, RJD Textile Park, Hazira Road",
+          addressLocality: "Ichchhapor",
+          addressRegion: "Gujarat",
+          postalCode: "394510",
+          addressCountry: "IN",
+        },
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+            ],
+            opens: "09:00",
+            closes: "20:00",
+          },
+        ],
+        areaServed: {
+          "@type": "Country",
+          name: "India",
+        },
+      },
+
+      {
+        "@type": "Service",
+        "@id": "https://www.gomzilifesciences.in/#protein-powder-manufacturing",
+        name: "Whey Protein Third Party Manufacturing",
+        serviceType: "Protein Powder Manufacturing",
+        description:
+          "Third-party manufacturing of whey protein, mass gainers, protein blends and nutritional supplements for supplement brands across India.",
+        provider: {
+          "@id": "https://www.gomzilifesciences.in/#organization",
+        },
+        areaServed: {
+          "@type": "Country",
+          name: "India",
+        },
+        url: "https://www.gomzilifesciences.in/third-party-manufacturing/protein-powder",
+      },
+
+      {
+        "@type": "Service",
+        "@id":
+          "https://www.gomzilifesciences.in/#sports-nutrition-manufacturing",
+        name: "Sports Nutrition Supplement Manufacturing",
+        serviceType: "Sports Supplement Manufacturing",
+        description:
+          "Third-party manufacturing of sports nutrition supplements including pre-workout, BCAA, creatine, recovery supplements and performance nutrition products.",
+        provider: {
+          "@id": "https://www.gomzilifesciences.in/#organization",
+        },
+        areaServed: {
+          "@type": "Country",
+          name: "India",
+        },
+        url: "https://www.gomzilifesciences.in/third-party-manufacturing/sports-nutrition-supplements",
+      },
+
+      {
+        "@type": "Service",
+        "@id": "https://www.gomzilifesciences.in/#peanut-butter-manufacturing",
+        name: "Peanut Butter Manufacturing",
+        serviceType: "Peanut Butter Manufacturing",
+        description:
+          "Third-party and private label manufacturing of natural, creamy, crunchy, chocolate and high-protein peanut butter products.",
+        provider: {
+          "@id": "https://www.gomzilifesciences.in/#organization",
+        },
+        areaServed: {
+          "@type": "Country",
+          name: "India",
+        },
+        url: "https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter",
+      },
+
+      {
+        "@type": "Service",
+        "@id":
+          "https://www.gomzilifesciences.in/#multivitamin-tablet-manufacturing",
+        name: "Multivitamin Tablet Manufacturing",
+        serviceType: "Nutraceutical Tablet Manufacturing",
+        description:
+          "Third-party manufacturing of multivitamin tablets, health supplements and nutraceutical tablet formulations for wellness brands.",
+        provider: {
+          "@id": "https://www.gomzilifesciences.in/#organization",
+        },
+        areaServed: {
+          "@type": "Country",
+          name: "India",
+        },
+        url: "https://www.gomzilifesciences.in/third-party-manufacturing/multivitamins-tablet",
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "What is the minimum order quantity?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our MOQ starts at 50 KG per SKU — enough to launch a real brand without overcommitting inventory. Most first-time founders start with 1–2 SKUs at 50 KG each.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How long does it take from order to delivery?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "15–20 working days from confirmed purchase order. That covers formulation finalization, production, COA testing, and packaging. We commit to this timeline in writing.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Do you offer white labelling and private label?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes — completely. Your brand name, your logo, your packaging. We handle formulation, manufacturing, COA documentation, FSSAI-compliant labelling, and dispatch. also website development , full brand launch support.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What certifications do your products carry?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our facility is WHO-GMP certified, FSSAI licensed, HACCP, Halal, and Kosher certified. Every batch ships with a Certificate of Analysis. Certification documents available on request.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What products can you manufacture?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Whey protein (WPC/WPI), mass gainers, pre-workouts, BCAAs, multivitamins, herbal supplements, and custom formulations. Powder, capsule, tablet, sachet, and blister pack formats available.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can you help with FSSAI registration and label compliance?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "We review every label for FSSAI compliance before production begins — mandatory elements, health claim restrictions, allergen declarations, batch numbering. We flag issues before they become problems.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Do you support exports?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. Our Halal and Kosher certifications make products export-ready for the Middle East and Southeast Asia. We supply to buyers in UAE, Malaysia, and Singapore with full documentation support.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can I manufacture for Amazon or D2C without my own factory?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "That's exactly what third-party manufacturing is for. You own the brand, we handle production. Many of our clients sell on Amazon India, Flipkart, and their own Shopify stores — no factory needed.",
+            },
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 function Home() {
@@ -174,6 +363,7 @@ function Home() {
           })(window, document, "clarity", "script", "wbdpmwgoji");
           `}
         </script>
+        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
 
       <WhatsappHeaderApp
@@ -235,7 +425,13 @@ function Home() {
               </li>
 
               <li className="has-dropdown">
-                <a href="#" className="inter-500">
+                <a
+                  href="/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                  }}
+                  className="inter-500"
+                >
                   Our Products{" "}
                   <span className="dd-arrow">
                     <i class="fa-solid fa-caret-down"></i>
@@ -278,7 +474,13 @@ function Home() {
               </li>
 
               <li className="has-dropdown">
-                <a href="#" className="inter-500">
+                <a
+                  href="/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                  }}
+                  className="inter-500"
+                >
                   Why Gomzi Lifesciences{" "}
                   <span className="dd-arrow">
                     <i class="fa-solid fa-caret-down"></i>
@@ -303,7 +505,7 @@ function Home() {
                     <a className="inter-500" href="/founder">
                       Founder Story
                     </a>
-                    </li>
+                  </li>
                   <li>
                     <a className="inter-500" href="/aboutus">
                       About Us
@@ -370,7 +572,13 @@ function Home() {
               </li>
 
               <li className="mob-has-dropdown">
-                <a className="inter-500">
+                <a
+                  href="/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                  }}
+                  className="inter-500"
+                >
                   Our Products{" "}
                   <span className="dd-arrow">
                     <i class="fa-solid fa-caret-down"></i>
@@ -418,7 +626,13 @@ function Home() {
               </li>
 
               <li className="mob-has-dropdown">
-                <a className="inter-500">
+                <a
+                  href="/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                  }}
+                  className="inter-500"
+                >
                   Why Gomzi Lifesciences{" "}
                   <span className="dd-arrow">
                     <i class="fa-solid fa-caret-down"></i>
@@ -458,7 +672,6 @@ function Home() {
                       About Us
                     </a>
                   </li>
-
                 </ul>
               </li>
 
@@ -1264,7 +1477,7 @@ function Home() {
                     <FontAwesomeIcon icon={faFacebook} />
                   </Link>
                   <Link
-                    to="https://www.instagram.com/gomzilifesciences/"
+                    to="https://www.instagram.com/gomzi_lifesciences/"
                     className="insta"
                     aria-label="Follow us on Instagram"
                   >
@@ -1311,13 +1524,82 @@ function Home() {
                       Become an affiliate
                     </Link>
                   </p>
-                      <div className="d-flex flex-wrap gap-2 mt-4" style={{ maxWidth: "180px" }}>
-                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/fassai.webp"} alt="FSSAI" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
-                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/gmp.webp"} alt="GMP" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
-                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/haccp.webp"} alt="HACCP" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
-                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/halal.webp"} alt="HALAL" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
-                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/kosher.webp"} alt="KOSHER" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
-                    <img src={process.env.PUBLIC_URL + "/assets/images/third-party-manufacturing/FDA-logo.webp"} alt="FDA" style={{ width: "45px", height: "auto", objectFit: "contain" }} />
+                  <div
+                    className="d-flex flex-wrap gap-2 mt-4"
+                    style={{ maxWidth: "180px" }}
+                  >
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        "/assets/images/third-party-manufacturing/fassai.webp"
+                      }
+                      alt="FSSAI"
+                      style={{
+                        width: "45px",
+                        height: "auto",
+                        objectFit: "contain",
+                      }}
+                    />
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        "/assets/images/third-party-manufacturing/gmp.webp"
+                      }
+                      alt="GMP"
+                      style={{
+                        width: "45px",
+                        height: "auto",
+                        objectFit: "contain",
+                      }}
+                    />
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        "/assets/images/third-party-manufacturing/haccp.webp"
+                      }
+                      alt="HACCP"
+                      style={{
+                        width: "45px",
+                        height: "auto",
+                        objectFit: "contain",
+                      }}
+                    />
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        "/assets/images/third-party-manufacturing/halal.webp"
+                      }
+                      alt="HALAL"
+                      style={{
+                        width: "45px",
+                        height: "auto",
+                        objectFit: "contain",
+                      }}
+                    />
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        "/assets/images/third-party-manufacturing/kosher.webp"
+                      }
+                      alt="KOSHER"
+                      style={{
+                        width: "45px",
+                        height: "auto",
+                        objectFit: "contain",
+                      }}
+                    />
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        "/assets/images/third-party-manufacturing/FDA-logo.webp"
+                      }
+                      alt="FDA"
+                      style={{
+                        width: "45px",
+                        height: "auto",
+                        objectFit: "contain",
+                      }}
+                    />
                   </div>
                 </div>
               </div>

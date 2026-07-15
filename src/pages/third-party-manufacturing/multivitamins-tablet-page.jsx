@@ -184,7 +184,7 @@ const MultivitaminTablet = () => {
       imageSrc:
         "/assets/images/third-party-manufacturing/complete-third-party.webp",
       productName: "Complete Third Party Manufacturing Services",
-      productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "Complete Third Party Manufacturing Services Tablet")}`,
+      productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "Complete Third Party Multivitamin Manufacturing Services Tablet")}`,
     },
     {
       id: 3,
@@ -203,51 +203,90 @@ const MultivitaminTablet = () => {
 
   const schemaData = [
     {
-      "@context": "https://schema.org/",
+      "@context": "https://schema.org",
       "@type": "Service",
       "@id":
-        "https://www.gomzilifesciences.in/third-party-manufacturing/multivitamins-tablet/#product",
-      name: "Multivitamin Tablet Manufacturer in India | Private Label Nutraceutical Manufacturing",
-      image:
-        "https://www.gomzilifesciences.in/assets/images/third-party-manufacturing/multivitamin-general.png",
-      description:
-        "Gomzi Lifescience LLP offers complete multivitamin tablet manufacturing services in India, including custom formulation, private label nutraceutical manufacturing, packaging, and bulk production. FSSAI and GMP certified facility.",
-      brand: {
-        "@type": "Brand",
-        name: "Gomzilifesciences",
+        "https://www.gomzilifesciences.in/third-party-manufacturing/multivitamins-tablet/#service",
+      url: "https://www.gomzilifesciences.in/third-party-manufacturing/multivitamins-tablet",
+      name: "Multivitamin Tablet Manufacturing Services",
+      serviceType: "Private Label Multivitamin Manufacturing",
+      provider: {
+        "@id": "https://www.gomzilifesciences.in/#organization",
       },
-      manufacturer: {
-        "@type": "Organization",
-        name: "Gomzilifesciences",
-        url: "https://www.gomzilifesciences.in",
-        logo: "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
+      mainEntityOfPage: {
+        "@id":
+          "https://www.gomzilifesciences.in/third-party-manufacturing/multivitamins-tablet/#webpage",
+      },
+      description:
+        "Private label and third party multivitamin tablet manufacturing services including custom formulations, nutraceutical tablets, vitamin supplements, mineral supplements, packaging, labeling and contract manufacturing for brands across India.",
+      category: [
+        "Multivitamin Manufacturing",
+        "Nutraceutical Manufacturing",
+        "Tablet Manufacturing",
+        "Private Label Supplement Manufacturing",
+      ],
+      audience: {
+        "@type": "Audience",
+        audienceType:
+          "Supplement Brands, Healthcare Brands, Wellness Companies, Distributors, Amazon Sellers, D2C Brands and Entrepreneurs",
       },
       areaServed: {
         "@type": "Country",
         name: "India",
       },
-      additionalProperty: [
-        {
-          "@type": "PropertyValue",
-          name: "Form",
-          value: "Tablet",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Packaging",
-          value: "HDPE Bottle, Blister Pack, Strip Packaging",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Shelf Life",
-          value: "24 Months",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Certifications",
-          value: "FSSAI, GMP",
-        },
+      knowsAbout: [
+        "Multivitamin Tablets",
+        "Vitamin Supplements",
+        "Mineral Supplements",
+        "Nutraceutical Manufacturing",
+        "Tablet Manufacturing",
+        "Private Label Supplements",
+        "Custom Supplement Formulation",
+        "Packaging and Labeling",
+        "Contract Manufacturing",
+        "Wellness Supplements",
       ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Multivitamin Manufacturing Solutions",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Multivitamin Tablet Manufacturing",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Multimineral Tablet Manufacturing",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Effervescent Tablet Manufacturing",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Herbal Nutraceutical Manufacturing",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Custom Multivitamin Formulation Development",
+            },
+          },
+        ],
+      },
     },
     {
       "@context": "https://schema.org",
@@ -545,11 +584,17 @@ const MultivitaminTablet = () => {
           className="protein-powder-banner-image desktop-banner"
           src="/assets/images/third-party-manufacturing/multivitamin-banner.webp"
           alt="Multivitamin Tablet Manufacturer Banner"
+          fetchpriority="high"
+          width={1600}
+          height={350}
         />
         <img
           src="/assets/images/third-party-manufacturing/multivitamin-banner-mobile.webp"
           alt="Multivitamin Tablet Manufacturer Banner"
           className="protein-powder-banner-image mobile-banner"
+          fetchpriority="high"
+          width={720}
+          height={480}
         />
       </div>
 
@@ -567,7 +612,7 @@ const MultivitaminTablet = () => {
             </div>
             <div>
               <a
-                href="https://wa.me/918320077993?text=Hello%20I%20am%20interested%20in%20Protein%20Powders"
+                href="https://wa.me/918320077993?text=Hello%20I%20am%20interested%20in%20Multivitamin%20Tablets"
                 target="_blank"
                 rel="noreferrer"
                 className="download-brochure barlow-condensed-semi f-18"

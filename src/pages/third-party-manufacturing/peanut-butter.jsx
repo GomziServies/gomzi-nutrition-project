@@ -164,21 +164,21 @@ const PeanutButter = () => {
       imageSrc:
         "/assets/images/third-party-manufacturing/chocolate-crispy-peanut-butter.webp",
       productName: "Chocolate Crispy",
-      productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "Chocolate Crispy")}`,
+      productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "Chocolate Crispy Peanut Butter")}`,
     },
     {
       id: 4,
       imageSrc:
         "/assets/images/third-party-manufacturing/mango-chia-seeds.webp",
       productName: "Mango Chia Seeds",
-      productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "Mango Chia Seeds")}`,
+      productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "Mango Chia Seeds Peanut Butter")}`,
     },
     {
       id: 4,
       imageSrc:
         "/assets/images/third-party-manufacturing/cookie-and-cream.webp",
       productName: "Cookie & Cream",
-      productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "Cookie & Cream")}`,
+      productLink: `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(baseMessage + "Cookie & Cream Peanut Butter")}`,
     },
   ];
 
@@ -283,7 +283,7 @@ const PeanutButter = () => {
       manufacturer: {
         "@type": "Organization",
         name: "Gomzilifesciences",
-        logo: "https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp",
+        logo: "https://www.gomzilifesciences.in/assets/images/logo/gomzi-life-science-logo.webp",
         url: "https://www.gomzilifesciences.in",
       },
       aggregateRating: {
@@ -319,7 +319,7 @@ const PeanutButter = () => {
           name: "What is the minimum order quantity for peanut butter?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Our MOQ is 50 KG per variant. This typically yields approximately 100-200 units depending on your jar size (250g, 500g, or 1kg). Many first-time brand owners start with 2-3 variants at 50 KG each to validate which flavours resonate with their customers before scaling.",
+            text: "Our MOQ is 50 KG per variant. This typically yields approximately 100–200 units depending on your jar size (250g, 500g, or 1kg). Many first-time brand owners start with 2–3 variants at 50 KG each to validate which flavours resonate with their customers before scaling.",
           },
         },
         {
@@ -327,7 +327,7 @@ const PeanutButter = () => {
           name: "Can I get custom flavours not listed in your 12 variants?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: " Yes — our R&D team can develop custom peanut butter flavours in 10-14 days. If you have a specific flavour concept (e.g. rose, saffron, date & nut), share it with us during the formulation call. Custom flavour development may carry a small R&D fee depending on complexity.",
+            text: " Yes  our R&D team can develop custom peanut butter flavours in 10–14 days. If you have a specific flavour concept (e.g. rose, saffron, date & nut), share it with us during the formulation call. Custom flavour development may carry a small R&D fee depending on complexity.",
           },
         },
         {
@@ -335,7 +335,7 @@ const PeanutButter = () => {
           name: "Is your peanut butter FSSAI compliant for selling on Amazon India and Flipkart?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: " Yes. Every product we manufacture meets FSSAI labelling requirements — FSSAI licence number, complete ingredient list with quantities, batch number, manufacturing date, expiry date, net weight, allergen declaration, and nutritional facts panel. All mandatory elements are verified before production. Your product is marketplace-ready.",
+            text: " Yes. Every product we manufacture meets FSSAI labelling requirements  FSSAI licence number, complete ingredient list with quantities, batch number, manufacturing date, expiry date, net weight, allergen declaration, and nutritional facts panel. All mandatory elements are verified before production. Your product is marketplace-ready.",
           },
         },
         {
@@ -343,7 +343,7 @@ const PeanutButter = () => {
           name: "What packaging formats are available for peanut butter?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "  We offer glass jars (250g, 500g, 1kg), PET plastic jars (250g, 500g, 1kg), and flexible pouches for bulk/HoReCa formats. Glass jars are preferred for premium D2C positioning. PET jars are more cost-effective for mass-market channels. Custom label design is included — we work with your designer or our team.",
+            text: "  We offer glass jars (250g, 500g, 1kg), PET plastic jars (250g, 500g, 1kg), and flexible pouches for bulk/HoReCa formats. Glass jars are preferred for premium D2C positioning. PET jars are more cost-effective for mass-market channels. Custom label design is included  we work with your designer or our team.",
           },
         },
         {
@@ -351,7 +351,7 @@ const PeanutButter = () => {
           name: "Is your peanut butter Halal certified? Can I export it?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: " Yes — our facility holds Halal and Kosher certifications, making your peanut butter export-ready for UAE, Saudi Arabia, Malaysia, Singapore, and other markets. Certificate documentation is provided with every export order. Full export documentation support is available on request.",
+            text: " Yes  our facility holds Halal and Kosher certifications, making your peanut butter export-ready for UAE, Saudi Arabia, Malaysia, Singapore, and other markets. Certificate documentation is provided with every export order. Full export documentation support is available on request.",
           },
         },
         {
@@ -359,7 +359,7 @@ const PeanutButter = () => {
           name: "How long is the shelf life of your peanut butter variants?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: " Natural variants (no added preservatives): 6-9 months in sealed packaging. Classic and Chocolate variants: 9-12 months.Specialty variants (Elaichi, Mango Chia, White Chocolate, Cookie & Cream): 6-9 months. Shelf life is validated through stability testing and declared on the COA. Specific shelf life data for your variant is confirmed at formulation stage.",
+            text: " Natural variants (no added preservatives): 6–9 months in sealed packaging. Classic and Chocolate variants: 9–12 months.Specialty variants (Elaichi, Mango Chia, White Chocolate, Cookie & Cream): 6–9 months. Shelf life is validated through stability testing and declared on the COA. Specific shelf life data for your variant is confirmed at formulation stage.",
           },
         },
         {
@@ -367,7 +367,7 @@ const PeanutButter = () => {
           name: " What is the protein content per 100g in your peanut butter?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: " Our Natural variants typically deliver 24-26g protein per 100g. Classic and Chocolate variants: 22-25g per 100g. Specialty variants vary based on additional inclusions. Exact nutritional profiles — protein, fat (total, saturated, unsaturated), carbohydrates, fibre, calories — are provided in the formula sheet and verified in the COA.",
+            text: " Our Natural variants typically deliver 24–26g protein per 100g. Classic and Chocolate variants: 22–25g per 100g. Specialty variants vary based on additional inclusions. Exact nutritional profiles  protein, fat (total, saturated, unsaturated), carbohydrates, fibre, calories  are provided in the formula sheet and verified in the COA.",
           },
         },
       ],
@@ -398,6 +398,99 @@ const PeanutButter = () => {
         },
       ],
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id":
+        "https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter/#service",
+      url: "https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter",
+      name: "Private Label Peanut Butter Manufacturing Services",
+      serviceType: "Peanut Butter Manufacturing",
+      provider: {
+        "@id": "https://www.gomzilifesciences.in/#organization",
+      },
+      mainEntityOfPage: {
+        "@id":
+          "https://www.gomzilifesciences.in/third-party-manufacturing/peanut-butter/#webpage",
+      },
+      description:
+        "Private label and third party peanut butter manufacturing services including natural peanut butter, crunchy peanut butter, creamy peanut butter, chocolate peanut butter, high protein peanut butter, custom formulations, packaging, labeling and contract manufacturing for brands across India.",
+      category: [
+        "Peanut Butter Manufacturing",
+        "Private Label Food Manufacturing",
+        "Private Label Peanut Butter",
+        "Third Party Manufacturing",
+      ],
+      audience: {
+        "@type": "Audience",
+        audienceType:
+          "Food Brands, Nutrition Brands, Supplement Brands, Distributors, Amazon Sellers, D2C Brands and Entrepreneurs",
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "India",
+      },
+      knowsAbout: [
+        "Natural Peanut Butter",
+        "Crunchy Peanut Butter",
+        "Creamy Peanut Butter",
+        "Chocolate Peanut Butter",
+        "High Protein Peanut Butter",
+        "Private Label Manufacturing",
+        "Custom Formulation",
+        "Food Packaging",
+        "Nutritional Labeling",
+        "Contract Manufacturing",
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Peanut Butter Manufacturing Solutions",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Natural Peanut Butter Manufacturing",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Crunchy Peanut Butter Manufacturing",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Creamy Peanut Butter Manufacturing",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Chocolate Peanut Butter Manufacturing",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "High Protein Peanut Butter Manufacturing",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Custom Peanut Butter Formulation",
+            },
+          },
+        ],
+      },
+    },
   ];
 
   return (
@@ -416,11 +509,17 @@ const PeanutButter = () => {
           className="protein-powder-banner-image desktop-banner"
           src="/assets/images/third-party-manufacturing/peanut-butter-banner.webp"
           alt="Peanut butter Manufacturer Banner"
+          fetchpriority="high"
+          width={1600}
+          height={350}
         />
         <img
           src="/assets/images/third-party-manufacturing/peanut-butter-mobile.webp"
           alt="Peanut butter Manufacturer Banner"
           className="protein-powder-banner-image mobile-banner"
+          fetchpriority="high"
+          width={720}
+          height={480}
         />
       </div>
 
@@ -429,7 +528,7 @@ const PeanutButter = () => {
           <div className="btn-gp">
             <div>
               <a
-                href="https://wa.me/918320077993?text=Hello%20I%20am%20interested%20in%20Protein%20Powders"
+                href="https://wa.me/918320077993?text=Hello%20I%20am%20interested%20in%20third%20party%20peanut%20butter%20manufacturing%20services"
                 target="_blank"
                 rel="noreferrer"
                 className="download-brochure barlow-condensed-semi f-18"

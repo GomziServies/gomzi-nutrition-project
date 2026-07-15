@@ -7,7 +7,6 @@ import "../../assets/css/blog.css";
 import NutritionFooter from "../../components/partials/Footer/nutritionfooter";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Accordion } from "react-bootstrap";
 
 function IndiaLeadingCDMOforFitnessBrandsProteinSupplementManufacturing() {
   const canonicalUrl = window.location.href;

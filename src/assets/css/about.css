@@ -294,7 +294,8 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgb(0 0 0 / 53%);;
+
 }
 
 .about-hero-content {
@@ -324,6 +325,12 @@
 .about-hero-buttons {
   display: flex;
   gap: 15px;
+}
+
+@media (max-width: 576px) {
+    .about-hero-buttons {
+        flex-direction: column;
+    }
 }
 
 .about-primary-btn {
@@ -402,6 +409,7 @@
   .about-hero-banner {
     min-height: auto;
     padding: 89px 20px;
+    background: none !important;
   }
 
   .about-hero-content {
@@ -416,6 +424,8 @@
 
   .about-para {
     font-size: 16px;
+    max-width: 100%;
+    text-align: justify;
   }
 }
 
