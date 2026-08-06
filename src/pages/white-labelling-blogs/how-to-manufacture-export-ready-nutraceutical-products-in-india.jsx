@@ -12,8 +12,8 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
 
   return (
@@ -218,7 +218,7 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                           strips.
                         </strong>{" "}
                         More importantly, your formula must be
-                        bioavailable—meaning the body can actually absorb the
+                        bioavailable-meaning the body can actually absorb the
                         nutrients. Using technologies like microencapsulation or
                         liposomal delivery can set your brand apart.
                       </p>

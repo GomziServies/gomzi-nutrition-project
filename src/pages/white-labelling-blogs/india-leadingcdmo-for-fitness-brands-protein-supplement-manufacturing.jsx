@@ -12,14 +12,14 @@ function IndiaLeadingCDMOforFitnessBrandsProteinSupplementManufacturing() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
   return (
     <>
       <Helmet>
         <title>
-          India’s Leading CDMO for Fitness Brands — Protein & Supplement
+          India’s Leading CDMO for Fitness Brands - Protein & Supplement
           Manufacturing
         </title>
         <meta
@@ -32,7 +32,7 @@ function IndiaLeadingCDMOforFitnessBrandsProteinSupplementManufacturing() {
         />
         <meta
           property="og:title"
-          content="India’s Leading CDMO for Fitness Brands — Protein & Supplement Manufacturing"
+          content="India’s Leading CDMO for Fitness Brands - Protein & Supplement Manufacturing"
         />
         <meta
           property="og:description"
@@ -111,7 +111,7 @@ function IndiaLeadingCDMOforFitnessBrandsProteinSupplementManufacturing() {
                   <div className="layer"></div>
                   <div className="col-12 detail-title">
                     <h1 className="text-white f-rob-bol f-43">
-                      India’s Leading CDMO for Fitness Brands — Protein &
+                      India’s Leading CDMO for Fitness Brands - Protein &
                       Supplement Manufacturing
                     </h1>
                   </div>
@@ -136,7 +136,7 @@ function IndiaLeadingCDMOforFitnessBrandsProteinSupplementManufacturing() {
 
                       <p className="blog-text mb-8">
                         For growing brands, working with a specialized CDMO is
-                        no longer optional — it’s a strategic decision. At{" "}
+                        no longer optional - it’s a strategic decision. At{" "}
                         <strong>Gomzi Lifesciences</strong>, we operate as a
                         third party nutraceutical manufacturing partner, helping
                         brands transform ideas into compliant, market-ready
@@ -160,7 +160,7 @@ function IndiaLeadingCDMOforFitnessBrandsProteinSupplementManufacturing() {
 
                       <p className="blog-text mb-8">
                         This approach reduces operational risks and improves
-                        speed to market — two critical factors in today’s
+                        speed to market - two critical factors in today’s
                         competitive supplement landscape.
                       </p>
 
@@ -268,7 +268,7 @@ function IndiaLeadingCDMOforFitnessBrandsProteinSupplementManufacturing() {
                       </h3>
                       <p className="blog-text mb-8">
                         In the supplement sector, compliance is not just a
-                        requirement — it's a trust-building tool.
+                        requirement - it's a trust-building tool.
                       </p>
                       <p className="blog-text mb-8">
                         At Gomzi Lifesciences, we follow structured quality
@@ -324,7 +324,7 @@ function IndiaLeadingCDMOforFitnessBrandsProteinSupplementManufacturing() {
                         For supplement entrepreneurs and established fitness
                         brands alike, this creates a competitive advantage. By
                         partnering with a capable CDMO, companies can focus on
-                        marketing, distribution, and brand building — while
+                        marketing, distribution, and brand building - while
                         manufacturing remains professionally managed.
                       </p>
                     </div>
@@ -402,7 +402,7 @@ function IndiaLeadingCDMOforFitnessBrandsProteinSupplementManufacturing() {
                         <li>Long-term scalability</li>
                       </ul>
                       <p className="blog-text mb-8">
-                        Manufacturing is no longer just a backend function — it
+                        Manufacturing is no longer just a backend function - it
                         is the foundation of brand credibility.
                       </p>
                     </div>

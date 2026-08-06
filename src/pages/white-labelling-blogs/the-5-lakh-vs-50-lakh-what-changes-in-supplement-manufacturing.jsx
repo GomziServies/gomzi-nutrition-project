@@ -60,7 +60,7 @@ const faqData = [
       <>
         <p>
           Actually, <strong>₹5 Lakh</strong> (Ready-made formulas) is usually
-          faster to launch—often within <strong>3-4 weeks</strong>. A{" "}
+          faster to launch-often within <strong>3-4 weeks</strong>. A{" "}
           <strong>₹50 Lakh</strong> project involving custom formulation and
           premium packaging can take <strong>2-3 months</strong> due to R&D and
           specialized sourcing.
@@ -105,8 +105,8 @@ function The5LakhVs50LakhWhatChangesInSupplementManufacturing() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
   return (
     <>

@@ -98,8 +98,8 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
   return (
     <>
@@ -316,7 +316,7 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                         Most people don't realize this:
                       </p>
                       <p className="blog-text mb-8">
-                        protein powders don't start as powder — they start as
+                        protein powders don't start as powder - they start as
                         liquid.
                       </p>
                       <p className="blog-text mb-8">
@@ -392,7 +392,7 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                       </p>
                       <p className="blog-text mb-8">
                         That's not a coincidence. It's the result of{" "}
-                        <strong>particle engineering</strong> — an area where
+                        <strong>particle engineering</strong> - an area where
                         advanced{" "}
                         <strong>whey protein concentrate manufacturers</strong>{" "}
                         focus heavily.
@@ -516,7 +516,7 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                         Today's supplement market is more competitive than ever.
                       </p>
                       <p className="blog-text mb-8">
-                        Brands are no longer just looking for manufacturers —
+                        Brands are no longer just looking for manufacturers -
                         they're looking for{" "}
                         <strong>
                           partners who understand performance, quality, and
@@ -554,7 +554,7 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                         </p>
                       </blockquote>
                       <p className="blog-text">
-                        Two products may look identical on paper — yet deliver
+                        Two products may look identical on paper - yet deliver
                         completely different results.
                       </p>
                     </div>
@@ -581,7 +581,7 @@ function FromRawProteintoFinishedPowderWhatReallyDeterminesSupplementQuality() {
                             custom sports supplement manufacturer
                           </Link>
                         </strong>{" "}
-                        will not only produce your product — they will help you
+                        will not only produce your product - they will help you
                         build a brand that customers trust.
                       </p>
                     </div>

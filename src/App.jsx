@@ -1,5 +1,6 @@
 import React, { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
+import RequestQuoteModal from "./components/nutrition/requestquotemodal";
 
 import Home from "./pages/home";
 import PeanutButter from "./pages/third-party-manufacturing/peanut-butter";
@@ -84,105 +85,15 @@ import PrivateLabelGymSupplementsStartYourOwnFitnessSupplementBrand from "./page
 import WheyProteinConcentrateManufacturerBenefits from "./pages/white-labelling-blogs/whey-protein-concentrate-manufacturer-enefits-from-gomzi-lifescience-manufacture";
 import HowToFindHighDemandSupplementIdeasUsingMarketData from "./pages/white-labelling-blogs/how-to-find-high-demand-supplement-ideas-using-market-data";
 import FounderPage from "./pages/nutrition/founderPage";
+import HowNutraceuticalBrandsCanChooseTheRightManufacturingPartnerIn2026 from "./pages/white-labelling-blogs/how-nutraceutical-brands-can-choose-the-right-manufacturing-partner-in-2026";
+import TheAmazonEffectHowECommerceIsChangingNutraceuticalManufacturing from "./pages/white-labelling-blogs/the-amazon-effect-how-e-commerce-is-changing-nutraceutical-manufacturing";
+import EverySupplementBrandIsFightingTheWrongBattle from "./pages/white-labelling-blogs/every-supplement-brand-is-fighting-the-wrong-battle";
 
 const UserProfile = lazy(() => import("./pages/account/profile"));
 const UserOrder = lazy(() => import("./pages/account/order"));
-const AddToCart = lazy(() => import("./pages/add-to-cart"));
 
-const GomziNutritionWheyProteinIsolate = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-whey-protein-isolate"),
-);
-const BulkInquiryNutrition = lazy(
-  () => import("./pages/nutrition/bulk-inquriy-nutrition"),
-);
-const GomziNutritionWheyProtein = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-whey-protein"),
-);
-const GomziNutritionWheyProteinConcentrate = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-whey-protein-concentrate"),
-);
-const GomziNutritionIgniteFatBurner = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-ignite-fat-burner"),
-);
-const GomziNutritionMassGainerPowder = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-mass-gainer-powder"),
-);
-const GomziNutritionSparkEAA = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-spark-eaa"),
-);
-const GomziNutritionATPCreatine = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-atp-creatine"),
-);
-const GomziNutritionActiveTShirt = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-sports-active-t-shirt"),
-);
-const GomziNutritionSportsJogger = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-sports-jogger"),
-);
-const GomziNutritionPerformancePreWorkoutDrink = lazy(
-  () =>
-    import("./pages/nutrition/gomzi-nutrition-performance-pre-workout-drink"),
-);
-const GomziNutritionPerformanceEAADrink = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-performance-eaa-drink"),
-);
-const GomziNutritionPerformanceCreatineDrink = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-performance-creatine-drink"),
-);
-const GomziNutritionMangoChiaSeedCrunchyPeanutButter = lazy(
-  () =>
-    import("./pages/nutrition/gomzi-nutrition-mango-chia-seed-crunchy-peanut-butter"),
-);
-const GomziNutritionChocolateCrunchyPeanutButter = lazy(
-  () =>
-    import("./pages/nutrition/gomzi-nutrition-chocolate-crunchy-peanut-butter"),
-);
-const GomziNutritionNaturalCrunchyPeanutButter = lazy(
-  () =>
-    import("./pages/nutrition/gomzi-nutrition-natural-crunchy-peanut-butter"),
-);
-const GomziNutritionRefuelWheyProtein = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-refuel-whey-protein"),
-);
-const GomziNutritionRefuelWheyProteinIsolate = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-refuel-whey-protein-isolate"),
-);
-const GomziNutritionRefuelWheyProteinConcentrate = lazy(
-  () =>
-    import("./pages/nutrition/gomzi-nutrition-refuel-whey-protein-concentrate"),
-);
-const GomziNutritionRefuelIgniteFatBurner = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-refuel-ignite-fat-burner"),
-);
-const GomziNutritionRefuelATPCreatine = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-refuel-atp-creatine"),
-);
-const GomziNutritionRefuelSparkEAA = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-refuel-spark-eaa"),
-);
-const GomziNutritionRefuelMassGainerPowder = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-refuel-mass-gainer-powder"),
-);
 const InvoiceViewPage = lazy(() => import("./pages/nutrition/InvoiceViewPage"));
-const GomziNutritionChocolateProteinBar = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-chocolate-protein-bar"),
-);
-const GomziNutritionAllCombo = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-all-combo"),
-);
-const GomziNutritionMuscleBuildCombo = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-muscle-build-combo"),
-);
-const GomziNutritionFatLossCombo = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-fat-loss-combo"),
-);
-const GomziNutritionShakerBottle = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-shaker-bottle"),
-);
-const TrainerNutrition = lazy(
-  () => import("./pages/nutrition/trainer-nutrition"),
-);
-const CheckOut = lazy(() => import("./pages/nutrition/check-out"));
+
 const ContactUs = lazy(() => import("./pages/nutrition/contact-us"));
 const TermsConditionCustomer = lazy(
   () => import("./pages/nutrition/terms-condition-customer"),
@@ -202,43 +113,9 @@ const PricingPolicyCustomer = lazy(
 const ReturnAndRefundPolicyCustomer = lazy(
   () => import("./pages/nutrition/return-and-refund-policy-customer"),
 );
-const GomziNutritionBuy2MassGainer = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-buy-2-mass-gainer"),
-);
-const GomziNutritionBuy1MassGainer = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-buy-1kg-mass-gainer"),
-);
-const GomziNutritionBuy1KgIsolate = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-buy-1kg-isolate"),
-);
-const GomziNutritionBuy1KgConcentrate = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-buy-1kg-concentrate"),
-);
-const GomziNutritionBuy3Combo = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-buy-3-combo"),
-);
+
 const WhiteLabelling = lazy(() => import("./pages/nutrition/white-labelling"));
-const GomziNutritionAyurstrengthPowder = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-ayurstrength-powder"),
-);
-const GomziNutritionSugarguardDiabetesCarePowder = lazy(
-  () =>
-    import("./pages/nutrition/gomzi-nutrition-sugarguard-diabetes-care-powder"),
-);
-const GomziNutritionAyureaseGastricReliefPowder = lazy(
-  () =>
-    import("./pages/nutrition/gomzi-nutrition-ayurease-gastric-relief-powder"),
-);
-const GomziNutritionB12Veda = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-b12-veda"),
-);
-const GomziNutritionSlimAyurFatLossPowder = lazy(
-  () => import("./pages/nutrition/gomzi-nutrition-slimayur-fat-loss-powder"),
-);
-const GomziNutritionboweleaseConstipationReliefPowder = lazy(
-  () =>
-    import("./pages/nutrition/gomzi-nutrition-bowelease-constipation-relief-powder"),
-);
+
 const ThankYouProductPage = lazy(
   () => import("./pages/nutrition/thank-you-purchase-product"),
 );
@@ -246,11 +123,6 @@ const ThankYouProductPage = lazy(
 const ScrollRestoration = lazy(() => import("./components/scroll-restoration"));
 
 const NotFoundPage = lazy(() => import("./pages/404"));
-
-const RefuelSeries = lazy(() => import("./pages/refuel-series/refuel-series"));
-const GomziNutritionRetailerCombo = lazy(
-  () => import("./pages/refuel-series/gomzi-nutrition-retailer-combo"),
-);
 
 const Readmoreblogs = lazy(
   () => import("./components/nutrition/read-more-blogs"),
@@ -331,10 +203,7 @@ function App() {
           element={<EnergyDrink />}
         />
 
-          <Route
-          path="/founder"
-          element={<FounderPage />}
-        />
+        <Route path="/founder" element={<FounderPage />} />
 
         <Route
           path="/third-party-manufacturing/peanut-butter"
@@ -344,72 +213,6 @@ function App() {
         <Route
           path="/third-party-manufacturing/multivitamins-tablet"
           element={<MultivitaminTablet />}
-        />
-
-        <Route
-          path="/nutrition/gomzi-nutrition-whey-protein-isolate"
-          element={<GomziNutritionWheyProteinIsolate />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-whey-protein-chocolate"
-          element={<GomziNutritionWheyProtein />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-whey-protein-concentrate"
-          element={<GomziNutritionWheyProteinConcentrate />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-ignite-fat-burner"
-          element={<GomziNutritionIgniteFatBurner />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-spark-eaa"
-          element={<GomziNutritionSparkEAA />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-atp-creatine"
-          element={<GomziNutritionATPCreatine />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-chocolate-protein-bar"
-          element={<GomziNutritionChocolateProteinBar />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-all-combo"
-          element={<GomziNutritionAllCombo />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-mass-gainer-powder"
-          element={<GomziNutritionMassGainerPowder />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-ayurstrength-powder"
-          element={<GomziNutritionAyurstrengthPowder />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-sugarguard-diabetes-care-powder"
-          element={<GomziNutritionSugarguardDiabetesCarePowder />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-ayurease-gastric-relief-powder"
-          element={<GomziNutritionAyureaseGastricReliefPowder />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-b12-veda"
-          element={<GomziNutritionB12Veda />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-bowelease-constipation-relief-powder"
-          element={<GomziNutritionboweleaseConstipationReliefPowder />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-slimayur-fat-loss-powder"
-          element={<GomziNutritionSlimAyurFatLossPowder />}
-        />
-
-        <Route
-          path="/nutrition/gomzi-nutrition-shaker-bottle"
-          element={<GomziNutritionShakerBottle />}
         />
 
         <Route path="/read-more-blogs" element={<Readmoreblogs />} />
@@ -430,23 +233,7 @@ function App() {
           path="/blogs/best-whey-protein-in-india"
           element={<BestWheyProteinInIndia />}
         />
-        <Route
-          path="/nutrition/gomzi-nutrition-muscle-build-combo"
-          element={<GomziNutritionMuscleBuildCombo />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-fat-loss-combo"
-          element={<GomziNutritionFatLossCombo />}
-        />
-        <Route path="/nutrition/check-out" element={<CheckOut />} />
-        <Route
-          path="/nutrition/trainer-nutrition"
-          element={<TrainerNutrition />}
-        />
-        <Route
-          path="/nutrition/bulk-inquiry-nutrition"
-          element={<BulkInquiryNutrition />}
-        />
+
         <Route path="/nutrition/white-labelling" element={<WhiteLabelling />} />
 
         <Route
@@ -675,226 +462,218 @@ function App() {
           }
         />
 
+        <Route
+          path="/blogs/how-much-does-it-cost-to-launch-a-private-label-protein-powder-brand-in-india"
+          element={
+            <HowMuchDoesItCostToLaunchAPrivateLabelProteinPowderBrandInIndia />
+          }
+        />
+        <Route
+          path="/blogs/questions-to-ask-before-selecting-a-protein-manufacturer"
+          element={<QuestionsToAskBeforeSelectingAProteinManufacturer />}
+        />
+        <Route
+          path="/blogs/why-international-brands-source-nutraceutical-products-from-gujarat"
+          element={
+            <WhyInternationalBrandsSourceNutraceuticalProductsFromGujarat />
+          }
+        />
+        <Route
+          path="/blogs/the-psychology-of-buying-supplements"
+          element={<ThePsychologyOfBuyingSupplements />}
+        />
+        <Route
+          path="/blogs/top-things-to-know-before-starting-a-multivitamin-tablet-brand"
+          element={<TopThingsToKnowBeforeStartingAMultivitaminTabletBrand />}
+        />
+        <Route
+          path="/blogs/what-makes-a-nutraceutical-brand-feel-ready-in-the-customers-mind"
+          element={<WhatMakesANutraceuticalBrandFeelReady />}
+        />
+        <Route
+          path="/blogs/why-indian-flavours-can-be-a-growth-advantage-in-sports-nutrition"
+          element={<WhyIndianFlavoursCanBeAGrowthAdvantageInSportsNutrition />}
+        />
+        <Route
+          path="/blogs/the-packaging-signals-that-make-a-supplement-brand-look-established"
+          element={
+            <ThePackagingSignalsThatMakeASupplementBrandLookEstablished />
+          }
+        />
+        <Route
+          path="/blogs/is-a-supplement-brand-really-passive-income-the-honest-truth"
+          element={<IsASupplementBrandReallyPassiveIncome />}
+        />
+        <Route
+          path="/blogs/how-to-validate-a-supplement-idea-before-spending-on-manufacturing"
+          element={
+            <HowToValidateASupplementIdeaBeforeSpendingOnManufacturing />
+          }
+        />
+        <Route
+          path="/blogs/how-raw-material-quality-affects-supplement-taste-and-performance"
+          element={
+            <HowRawMaterialQualityAffectsSupplementTasteAndPerformance />
+          }
+        />
+        <Route
+          path="/blogs/best-nutraceutical-manufacturing-companies-in-india-for-omega-3-and-sports-supplements"
+          element={
+            <BestNutraceuticalManufacturingCompaniesInIndiaForOmega3AndSportsSupplements />
+          }
+        />
+        <Route
+          path="/blogs/best-supplements-to-reduce-stress-and-anxiety-naturally"
+          element={<BestSupplementsToReduceStressAndAnxietyNaturally />}
+        />
+        <Route
+          path="/blogs/FSSAI-regulations-for-functional-foods-and-nutraceuticals-2026-update"
+          element={
+            <FSSAIRegulationsForFunctionalFoodsAndNutraceuticals2026Update />
+          }
+        />
+        <Route
+          path="/blogs/how-first-time-founders-can-avoid-common-supplement-launch-mistakes"
+          element={
+            <HowFirstTimeFoundersCanAvoidCommonSupplementLaunchMistakes />
+          }
+        />
+        <Route
+          path="/blogs/how-flavour-development-impacts-protein-powder-success"
+          element={<HowFlavourDevelopmentImpactsProteinPowderSuccess />}
+        />
+        <Route
+          path="/blogs/how-to-launch-a-gym-focused-pre-workout-line-from-formulation-to-shelf-a-step-by-step-guide-for-brands"
+          element={<HowToLaunchAGymFocusedPreWorkoutLine />}
+        />
+        <Route
+          path="/blogs/india-does-not-need-more-protein-brands"
+          element={<IndiaDoesNotNeedMoreProteinBrandsItNeedsMoreHonestOnes />}
+        />
 
         <Route
-            path="/blogs/how-much-does-it-cost-to-launch-a-private-label-protein-powder-brand-in-india"
-            element={<HowMuchDoesItCostToLaunchAPrivateLabelProteinPowderBrandInIndia />}
-          />
-          <Route
-            path="/blogs/questions-to-ask-before-selecting-a-protein-manufacturer"
-            element={<QuestionsToAskBeforeSelectingAProteinManufacturer />}
-          />
-          <Route
-            path="/blogs/why-international-brands-source-nutraceutical-products-from-gujarat"
-            element={<WhyInternationalBrandsSourceNutraceuticalProductsFromGujarat />}
-          />
-          <Route
-            path="/blogs/the-psychology-of-buying-supplements"
-            element={<ThePsychologyOfBuyingSupplements />}
-          />
-          <Route
-            path="/blogs/top-things-to-know-before-starting-a-multivitamin-tablet-brand"
-            element={<TopThingsToKnowBeforeStartingAMultivitaminTabletBrand />}
-          />
-          <Route
-            path="/blogs/what-makes-a-nutraceutical-brand-feel-ready-in-the-customers-mind"
-            element={<WhatMakesANutraceuticalBrandFeelReady />}
-          />
-          <Route
-            path="/blogs/why-indian-flavours-can-be-a-growth-advantage-in-sports-nutrition"
-            element={<WhyIndianFlavoursCanBeAGrowthAdvantageInSportsNutrition />}
-          />
-          <Route
-            path="/blogs/the-packaging-signals-that-make-a-supplement-brand-look-established"
-            element={<ThePackagingSignalsThatMakeASupplementBrandLookEstablished />}
-          />
-          <Route
-            path="/blogs/is-a-supplement-brand-really-passive-income-the-honest-truth"
-            element={<IsASupplementBrandReallyPassiveIncome />}
-          />
-          <Route
-            path="/blogs/how-to-validate-a-supplement-idea-before-spending-on-manufacturing"
-            element={<HowToValidateASupplementIdeaBeforeSpendingOnManufacturing />}
-          />
-          <Route
-            path="/blogs/how-raw-material-quality-affects-supplement-taste-and-performance"
-            element={<HowRawMaterialQualityAffectsSupplementTasteAndPerformance />}
-          />
-          <Route
-            path="/blogs/best-nutraceutical-manufacturing-companies-in-india-for-omega-3-and-sports-supplements"
-            element={<BestNutraceuticalManufacturingCompaniesInIndiaForOmega3AndSportsSupplements />}
-          />
-          <Route
-            path="/blogs/best-supplements-to-reduce-stress-and-anxiety-naturally"
-            element={<BestSupplementsToReduceStressAndAnxietyNaturally />}
-          />
-          <Route
-            path="/blogs/FSSAI-regulations-for-functional-foods-and-nutraceuticals-2026-update"
-            element={<FSSAIRegulationsForFunctionalFoodsAndNutraceuticals2026Update />}
-          />
-          <Route
-            path="/blogs/how-first-time-founders-can-avoid-common-supplement-launch-mistakes"
-            element={<HowFirstTimeFoundersCanAvoidCommonSupplementLaunchMistakes />}
-          />
-          <Route
-            path="/blogs/how-flavour-development-impacts-protein-powder-success"
-            element={<HowFlavourDevelopmentImpactsProteinPowderSuccess />}
-          />
-          <Route
-            path="/blogs/how-to-launch-a-gym-focused-pre-workout-line-from-formulation-to-shelf-a-step-by-step-guide-for-brands"
-            element={<HowToLaunchAGymFocusedPreWorkoutLine />}
-          />
-          <Route
-            path="/blogs/india-does-not-need-more-protein-brands"
-            element={<IndiaDoesNotNeedMoreProteinBrandsItNeedsMoreHonestOnes />}
-          />
-
-          <Route
-            path="/blogs/nutraceutical-manufacturing-KPIs-how-to-track-quality-efficiency-and-compliance-in-production"
-            element={<NutraceuticalManufacturingKPIsHowToTrackQualityEfficiencyAndComplianceInProduction />}
-          />
-          <Route
-            path="/blogs/the-hidden-questions-buyers-ask-before-choosing-a-supplement-manufacturer"
-            element={<TheHiddenQuestionsBuyersAskBeforeChoosingASupplementManufacturer />}
-          />
-          <Route
-            path="/blogs/the-real-reason-some-protein-brands-feel-trustworthy-and-others-dont"
-            element={<TheRealReasonSomeProteinBrandsFeelTrustworthyAndOthersDont />}
-          />
-          <Route
-            path="/blogs/the-rise-of-pre-workout-supplements-how-fitness-brands-can-win-in-2026"
-            element={<TheRiseOfPreWorkoutSupplementsHowFitnessBrandsCanWinIn2026 />}
-          />
-          <Route
-            path="/blogs/third-party-multivitamin-manufacturer-in-india-how-to-choose-the-right-partner"
-            element={<ThirdPartyMultivitaminManufacturerInIndiaHowToChooseTheRightPartner />}
-          />
-          <Route
-            path="/blogs/what-is-the-cheapest-whey-protein-powder-available-in-india-buyer-guide"
-            element={<WhatIsTheCheapestWheyProteinPowderAvailableInIndiaBuyerGuide />}
-          />
-          <Route
-            path="/blogs/what-if-your-supplement-had-a-character-how-brand-storytelling-turns-protein-powder-into-a-hero-product"
-            element={<WhatIfYourSupplementHadACharacter />}
-          />
-          <Route
-            path="/blogs/why-72-percent-of-new-supplement-brands-in-india-are-choosing-third-party-manufacturing-in-2026"
-            element={<Why72PercentOfNewSupplementBrandsInIndiaAreChoosingThirdPartyManufacturingIn2026 />}
-          />
-          <Route
-            path="/blogs/why-every-fitness-brand-needs-a-pre-workout-manufacturer-not-just-a-formula"
-            element={<WhyEveryFitnessBrandNeedsAPreWorkoutManufacturerNotJustAFormula />}
-          />
-          <Route
-            path="/blogs/what-gym-buyers-in-india-are-really-searching-for-in-2026"
-            element={<WhatGymBuyersInIndiaAreReallySearchingForIn2026 />}
-          />
-          <Route
-            path="/blogs/how-supplement-manufacturing-actually-works"
-            element={<HowSupplementManufacturingActuallyWorks />}
-          />
-          <Route
-            path="/blogs/why-the-same-whey-protein-formula-made-in-two-different-indian-factories-tastes-completely-different"
-            element={<WhyTheSameWheyProteinFormulaMadeInTwoDifferentIndianFactoriesTastesCompletelyDifferent />}
-          />
-          <Route
-            path="/blogs/why-some-supplement-brands-sell-faster-than-others"
-            element={<WhySomeSupplementBrandsSellFasterThanOthers />}
-          />
-          <Route
-            path="/blogs/why-formulation-is-only-half-the-job-in-nutraceutical-manufacturing"
-            element={<WhyFormulationIsOnlyHalfTheJobInNutraceuticalManufacturing />}
-          />
-
-          <Route
-            path="/blogs/2026-personalized-supplement-trends-what-B2B-brands-should-launch-for-sleep-stress-and-daily-wellness"
-            element={<PersonalizedSupplementTrends2026 />}
-          />
-          <Route
-            path="/blogs/how-to-find-high-demand-supplement-ideas-using-market-data"
-            element={<HowToFindHighDemandSupplementIdeasUsingMarketData />}
-          />
-          <Route
-            path="/blogs/whey-protein-concentrate-manufacturer-enefits-from-gomzi-lifescience-manufacture"
-            element={<WheyProteinConcentrateManufacturerBenefits />}
-          />
-          <Route
-            path="/blogs/private-label-gym-supplements-start-your-own-fitness-supplement-brand"
-            element={<PrivateLabelGymSupplementsStartYourOwnFitnessSupplementBrand />}
-          />
-          <Route
-            path="/blogs/why-cheap-manufacturing-is-the-most-expensive-decision-you-will-make"
-            element={<WhyCheapManufacturingIsTheMostExpensiveDecisionYouWillMake />}
-          />
-          <Route
-            path="/blogs/niche-vs-mass-market-what-works-better-in-the-supplement-industry"
-            element={<NicheVsMassMarketWhatWorksBetterInTheSupplementIndustry />}
-          />
-          <Route
-            path="/blogs/why-pre-workout-recover-and-hydration-products-are-growing-fast"
-            element={<WhyPreWorkoutRecoveryAndHydrationProductsAreGrowingFast />}
-          /> 
+          path="/blogs/nutraceutical-manufacturing-KPIs-how-to-track-quality-efficiency-and-compliance-in-production"
+          element={
+            <NutraceuticalManufacturingKPIsHowToTrackQualityEfficiencyAndComplianceInProduction />
+          }
+        />
+        <Route
+          path="/blogs/the-hidden-questions-buyers-ask-before-choosing-a-supplement-manufacturer"
+          element={
+            <TheHiddenQuestionsBuyersAskBeforeChoosingASupplementManufacturer />
+          }
+        />
+        <Route
+          path="/blogs/the-real-reason-some-protein-brands-feel-trustworthy-and-others-dont"
+          element={
+            <TheRealReasonSomeProteinBrandsFeelTrustworthyAndOthersDont />
+          }
+        />
+        <Route
+          path="/blogs/the-rise-of-pre-workout-supplements-how-fitness-brands-can-win-in-2026"
+          element={
+            <TheRiseOfPreWorkoutSupplementsHowFitnessBrandsCanWinIn2026 />
+          }
+        />
+        <Route
+          path="/blogs/third-party-multivitamin-manufacturer-in-india-how-to-choose-the-right-partner"
+          element={
+            <ThirdPartyMultivitaminManufacturerInIndiaHowToChooseTheRightPartner />
+          }
+        />
+        <Route
+          path="/blogs/what-is-the-cheapest-whey-protein-powder-available-in-india-buyer-guide"
+          element={
+            <WhatIsTheCheapestWheyProteinPowderAvailableInIndiaBuyerGuide />
+          }
+        />
+        <Route
+          path="/blogs/what-if-your-supplement-had-a-character-how-brand-storytelling-turns-protein-powder-into-a-hero-product"
+          element={<WhatIfYourSupplementHadACharacter />}
+        />
+        <Route
+          path="/blogs/why-72-percent-of-new-supplement-brands-in-india-are-choosing-third-party-manufacturing-in-2026"
+          element={
+            <Why72PercentOfNewSupplementBrandsInIndiaAreChoosingThirdPartyManufacturingIn2026 />
+          }
+        />
+        <Route
+          path="/blogs/why-every-fitness-brand-needs-a-pre-workout-manufacturer-not-just-a-formula"
+          element={
+            <WhyEveryFitnessBrandNeedsAPreWorkoutManufacturerNotJustAFormula />
+          }
+        />
+        <Route
+          path="/blogs/what-gym-buyers-in-india-are-really-searching-for-in-2026"
+          element={<WhatGymBuyersInIndiaAreReallySearchingForIn2026 />}
+        />
+        <Route
+          path="/blogs/how-supplement-manufacturing-actually-works"
+          element={<HowSupplementManufacturingActuallyWorks />}
+        />
+        <Route
+          path="/blogs/why-the-same-whey-protein-formula-made-in-two-different-indian-factories-tastes-completely-different"
+          element={
+            <WhyTheSameWheyProteinFormulaMadeInTwoDifferentIndianFactoriesTastesCompletelyDifferent />
+          }
+        />
+        <Route
+          path="/blogs/why-some-supplement-brands-sell-faster-than-others"
+          element={<WhySomeSupplementBrandsSellFasterThanOthers />}
+        />
+        <Route
+          path="/blogs/why-formulation-is-only-half-the-job-in-nutraceutical-manufacturing"
+          element={
+            <WhyFormulationIsOnlyHalfTheJobInNutraceuticalManufacturing />
+          }
+        />
 
         <Route
-          path="/nutrition/gomzi-nutrition-refuel-mass-gainer-powder"
-          element={<GomziNutritionRefuelMassGainerPowder />}
+          path="/blogs/2026-personalized-supplement-trends-what-B2B-brands-should-launch-for-sleep-stress-and-daily-wellness"
+          element={<PersonalizedSupplementTrends2026 />}
         />
         <Route
-          path="/nutrition/gomzi-nutrition-refuel-spark-eaa"
-          element={<GomziNutritionRefuelSparkEAA />}
+          path="/blogs/how-to-find-high-demand-supplement-ideas-using-market-data"
+          element={<HowToFindHighDemandSupplementIdeasUsingMarketData />}
         />
         <Route
-          path="/nutrition/gomzi-nutrition-refuel-atp-creatine"
-          element={<GomziNutritionRefuelATPCreatine />}
+          path="/blogs/whey-protein-concentrate-manufacturer-enefits-from-gomzi-lifescience-manufacture"
+          element={<WheyProteinConcentrateManufacturerBenefits />}
         />
         <Route
-          path="/nutrition/gomzi-nutrition-refuel-ignite-fat-burner"
-          element={<GomziNutritionRefuelIgniteFatBurner />}
+          path="/blogs/private-label-gym-supplements-start-your-own-fitness-supplement-brand"
+          element={
+            <PrivateLabelGymSupplementsStartYourOwnFitnessSupplementBrand />
+          }
         />
         <Route
-          path="/nutrition/gomzi-nutrition-refuel-whey-protein-concentrate"
-          element={<GomziNutritionRefuelWheyProteinConcentrate />}
+          path="/blogs/why-cheap-manufacturing-is-the-most-expensive-decision-you-will-make"
+          element={
+            <WhyCheapManufacturingIsTheMostExpensiveDecisionYouWillMake />
+          }
         />
         <Route
-          path="/nutrition/gomzi-nutrition-refuel-whey-protein-isolate"
-          element={<GomziNutritionRefuelWheyProteinIsolate />}
+          path="/blogs/niche-vs-mass-market-what-works-better-in-the-supplement-industry"
+          element={<NicheVsMassMarketWhatWorksBetterInTheSupplementIndustry />}
         />
         <Route
-          path="/nutrition/gomzi-nutrition-refuel-whey-protein"
-          element={<GomziNutritionRefuelWheyProtein />}
+          path="/blogs/why-pre-workout-recover-and-hydration-products-are-growing-fast"
+          element={<WhyPreWorkoutRecoveryAndHydrationProductsAreGrowingFast />}
         />
         <Route
-          path="/nutrition/gomzi-nutrition-natural-crunchy-peanut-butter"
-          element={<GomziNutritionNaturalCrunchyPeanutButter />}
+          path="/blogs/how-nutraceutical-brands-can-choose-the-right-manufacturing-partner-in-2026"
+          element={<HowNutraceuticalBrandsCanChooseTheRightManufacturingPartnerIn2026 />}
         />
-        <Route
-          path="/nutrition/gomzi-nutrition-chocolate-crunchy-peanut-butter"
-          element={<GomziNutritionChocolateCrunchyPeanutButter />}
+         <Route
+          path="/blogs/the-amazon-effect-how-e-commerce-is-changing-nutraceutical-manufacturing"
+          element={<TheAmazonEffectHowECommerceIsChangingNutraceuticalManufacturing />}
         />
-        <Route
-          path="/nutrition/gomzi-nutrition-mango-chia-seed-crunchy-peanut-butter"
-          element={<GomziNutritionMangoChiaSeedCrunchyPeanutButter />}
+
+          <Route
+          path="/blogs/every-supplement-brand-is-fighting-the-wrong-battle"
+          element={<EverySupplementBrandIsFightingTheWrongBattle />}
         />
-        <Route
-          path="/nutrition/gomzi-nutrition-performance-creatine-drink"
-          element={<GomziNutritionPerformanceCreatineDrink />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-performance-eaa-drink"
-          element={<GomziNutritionPerformanceEAADrink />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-performance-pre-workout-drink"
-          element={<GomziNutritionPerformancePreWorkoutDrink />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-sports-jogger"
-          element={<GomziNutritionSportsJogger />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-sports-active-t-shirt"
-          element={<GomziNutritionActiveTShirt />}
-        />
+
         <Route path="/nutrition/contact-us" element={<ContactUs />} />
         <Route
           path="/nutrition/terms-condition-customer"
@@ -920,32 +699,12 @@ function App() {
           path="/nutrition/return-and-refund-policy-customer"
           element={<ReturnAndRefundPolicyCustomer />}
         />
-        <Route
-          path="/nutrition/gomzi-nutrition-buy-2-mass-gainer"
-          element={<GomziNutritionBuy2MassGainer />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-buy-1kg-mass-gainer"
-          element={<GomziNutritionBuy1MassGainer />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-buy-1kg-isolate"
-          element={<GomziNutritionBuy1KgIsolate />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-buy-1kg-concentrate"
-          element={<GomziNutritionBuy1KgConcentrate />}
-        />
-        <Route
-          path="/nutrition/gomzi-nutrition-buy-3-combo"
-          element={<GomziNutritionBuy3Combo />}
-        />
+
         <Route path="/aboutus" element={<AboutUs />} />
         <Route
           path="/nutrition/thank-you-for-order"
           element={<ThankYouProductPage />}
         />
-        <Route path="/nutrition/cart" element={<AddToCart />} />
 
         <Route path="/user/profile" element={<UserProfile />} />
         <Route path="/user/order" element={<UserOrder />} />
@@ -953,14 +712,9 @@ function App() {
         <Route path="/invoice/:invoice_id" element={<InvoiceViewPage />} />
 
         <Route path="*" element={<NotFoundPage />} />
-
-        <Route path="/refuel-series" element={<RefuelSeries />} />
-        <Route
-          path="/gomzi-nutrition-retailer-combo"
-          element={<GomziNutritionRetailerCombo />}
-        />
       </Routes>
       <ScrollRestoration />
+      <RequestQuoteModal />
     </>
   );
 }

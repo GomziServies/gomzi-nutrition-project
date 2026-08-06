@@ -280,7 +280,7 @@ const EnergyDrink = () => {
           </ul>
         </p>
         <p className="energy-drinks-page-description">
-          At Gomzilifesciences, we don't just manufacture drinks—we help you
+          At Gomzilifesciences, we don't just manufacture drinks-we help you
           create products that stand out in the sports nutrition and beverage
           market.
         </p>

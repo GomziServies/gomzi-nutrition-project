@@ -91,8 +91,8 @@ function TheHiddenCostsofStartingaNutraceuticalBrand() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
   return (
     <>
@@ -103,7 +103,7 @@ function TheHiddenCostsofStartingaNutraceuticalBrand() {
         </title>
         <meta
           name="description"
-          content="Thinking of starting a nutraceutical brand? Discover the hidden costs most manufacturers don’t reveal—from production and compliance to marketing and logistics—so you can plan smarter and avoid costly mistakes."
+          content="Thinking of starting a nutraceutical brand? Discover the hidden costs most manufacturers don’t reveal-from production and compliance to marketing and logistics-so you can plan smarter and avoid costly mistakes."
         />
         <meta
           name="keyword"
@@ -115,7 +115,7 @@ function TheHiddenCostsofStartingaNutraceuticalBrand() {
         />
         <meta
           property="og:description"
-          content="Thinking of starting a nutraceutical brand? Discover the hidden costs most manufacturers don’t reveal—from production and compliance to marketing and logistics—so you can plan smarter and avoid costly mistakes."
+          content="Thinking of starting a nutraceutical brand? Discover the hidden costs most manufacturers don’t reveal-from production and compliance to marketing and logistics-so you can plan smarter and avoid costly mistakes."
         />
         <meta
           property="og:image"

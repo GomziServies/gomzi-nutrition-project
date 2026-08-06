@@ -77,8 +77,8 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
 
   return (
@@ -193,7 +193,7 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                       <p className="blog-text mb-8">
                         The nutraceutical industry is undergoing a fundamental
                         transformation. For decades, supplements followed a mass
-                        production model — one formula for millions. Today,
+                        production model - one formula for millions. Today,
                         however, both consumers and{" "}
                         <strong>
                           <Link
@@ -455,7 +455,7 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                       <p className="blog-text">This is critical because:</p>
 
                       <p className="blog-text">
-                        Traditional systems require bulk inventory holding —
+                        Traditional systems require bulk inventory holding -
                         micro-batch avoids dead stock.
                       </p>
 
@@ -493,7 +493,7 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                         The Hidden Challenge: Why It's Not Easy
                       </h2>
                       <p className="blog-text">
-                        Micro-batch manufacturing solves many problems — but
+                        Micro-batch manufacturing solves many problems - but
                         creates new ones.
                       </p>
 
@@ -613,7 +613,7 @@ function MicroBatchManufacturingTheHiddenEngineBehindPersonalizedNutraceuticalBr
                           </li>
                         </ul>
                         <p className="blog-text">
-                          Brands that embrace this model will not just compete —
+                          Brands that embrace this model will not just compete -
                           they will define the next generation of healthcare.
                         </p>
                       </div>

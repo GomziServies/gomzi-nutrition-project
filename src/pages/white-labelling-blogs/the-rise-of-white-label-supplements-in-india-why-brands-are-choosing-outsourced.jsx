@@ -91,8 +91,8 @@ function TheRiseofWhiteLabelSupplementsinIndiaWhyBrandsareChoosingOutsourced() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
   return (
     <>
@@ -321,7 +321,7 @@ function TheRiseofWhiteLabelSupplementsinIndiaWhyBrandsareChoosingOutsourced() {
                         brands using{" "}
                         <strong>private label nutraceuticals India</strong> are
                         winning by creating flavors that resonate with the
-                        Indian palate—think Thandai flavored BCAA or Masala Chai
+                        Indian palate-think Thandai flavored BCAA or Masala Chai
                         Whey.
                       </p>
 

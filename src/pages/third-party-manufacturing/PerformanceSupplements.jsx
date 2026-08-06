@@ -84,7 +84,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: "We at Pro Wolf Nutrition are truly impressed with Gomzi Life Science for their exceptional supplement manufacturing services. They played a key role in bringing our premium Intence Pre Workout to life — available in our signature Tangy Orange and Green Apple flavors.",
+    text: "We at Pro Wolf Nutrition are truly impressed with Gomzi Life Science for their exceptional supplement manufacturing services. They played a key role in bringing our premium Intence Pre Workout to life - available in our signature Tangy Orange and Green Apple flavors.",
     name: "Rathod Kishan",
     role: "Founder of Prowolf",
     rating: 5,
@@ -106,8 +106,8 @@ const carouselOptions = {
   autoplayTimeout: 4000,
   autoplayHoverPause: true,
   navText: [
-    `<span class="testi-nav-btn prev-btn">&#8592;</span>`,
-    `<span class="testi-nav-btn next-btn">&#8594;</span>`,
+    `<span className="testi-nav-btn prev-btn">&#8592;</span>`,
+    `<span className="testi-nav-btn next-btn">&#8594;</span>`,
   ],
   responsive: {
     0: { items: 1 },
@@ -734,7 +734,7 @@ const PerformanceSupplements = () => {
                   <div className="market-card">
                     <h3 className="barlow-condensed-semi">₹1.9B</h3>
                     <p className="inter-regular">
-                      India's sports nutrition market — growing at{" "}
+                      India's sports nutrition market - growing at{" "}
                       <strong>9-11% CAGR.</strong> The window to build a
                       category-defining brand is right now.
                     </p>
@@ -745,7 +745,7 @@ const PerformanceSupplements = () => {
                     <p className="inter-regular">
                       New supplement brands launching in India
                       <strong> this year alone.</strong>
-                      The winners will be those who manufacture smarter — not
+                      The winners will be those who manufacture smarter - not
                       louder.
                     </p>
                   </div>
@@ -864,8 +864,8 @@ const PerformanceSupplements = () => {
                         and Strawberry. But India's fitness market is different.
                         <strong>
                           {" "}
-                          Tier 2 and Tier 3 city buyers — your fastest growing
-                          customer segment —
+                          Tier 2 and Tier 3 city buyers - your fastest growing
+                          customer segment -
                         </strong>
                         respond to familiar flavour profiles they grew up with.
                       </p>
@@ -892,19 +892,19 @@ const PerformanceSupplements = () => {
 
                     <ul className="wh-flavour-list">
                       <li>
-                        <strong>Trend analysis</strong> — Google Trends + Amazon
+                        <strong>Trend analysis</strong> - Google Trends + Amazon
                         BSR data across 200+ supplement keywords monthly
                       </li>
                       <li>
-                        <strong>Regional mapping</strong> — flavour preferences
+                        <strong>Regional mapping</strong> - flavour preferences
                         mapped by state and city tier
                       </li>
                       <li>
-                        <strong>Sample first</strong> — taste and test your
+                        <strong>Sample first</strong> - taste and test your
                         shortlisted flavours before committing to production
                       </li>
                       <li>
-                        <strong>Custom development</strong> — have a flavour
+                        <strong>Custom development</strong> - have a flavour
                         idea? Our R&D team can develop it in 10-14 days
                       </li>
                     </ul>
@@ -1000,7 +1000,7 @@ const PerformanceSupplements = () => {
             </div>
           </div>
 
-          <section class="qua-wh-section bg-white" id="certification">
+          <section className="qua-wh-section bg-white" id="certification">
             <p className="wh-sec-title barlow-condensed-semi text-center">
               Quality Assurance
             </p>
@@ -1038,14 +1038,14 @@ const PerformanceSupplements = () => {
               })}
             </div>
 
-            <div class="qua-content">
-              <div class="qua-item">
-                <div class="check-box">
-                  <svg class="check-icon" viewBox="0 0 14 14">
+            <div className="qua-content">
+              <div className="qua-item">
+                <div className="check-box">
+                  <svg className="check-icon" viewBox="0 0 14 14">
                     <polyline points="2,7 5.5,10.5 12,3" />
                   </svg>
                 </div>
-                <div class="qua-item-text">
+                <div className="qua-item-text">
                   <h3>GMP-Certified Production</h3>
                   <p>
                     Manufactured to international Good Manufacturing Practice
@@ -1054,13 +1054,13 @@ const PerformanceSupplements = () => {
                 </div>
               </div>
 
-              <div class="qua-item">
-                <div class="check-box">
-                  <svg class="check-icon" viewBox="0 0 14 14">
+              <div className="qua-item">
+                <div className="check-box">
+                  <svg className="check-icon" viewBox="0 0 14 14">
                     <polyline points="2,7 5.5,10.5 12,3" />
                   </svg>
                 </div>
-                <div class="qua-item-text">
+                <div className="qua-item-text">
                   <h3>Batch COA on Every Order</h3>
                   <p>
                     Certificate of Analysis shipped with every production run.
@@ -1068,13 +1068,13 @@ const PerformanceSupplements = () => {
                 </div>
               </div>
 
-              <div class="qua-item">
-                <div class="check-box">
-                  <svg class="check-icon" viewBox="0 0 14 14">
+              <div className="qua-item">
+                <div className="check-box">
+                  <svg className="check-icon" viewBox="0 0 14 14">
                     <polyline points="2,7 5.5,10.5 12,3" />
                   </svg>
                 </div>
-                <div class="qua-item-text">
+                <div className="qua-item-text">
                   <h3>Third-Party Lab Testing</h3>
                   <p>
                     Independent verification of purity, potency, and safety.
@@ -1088,7 +1088,7 @@ const PerformanceSupplements = () => {
                 download
                 className="download-btn barlow-condensed-semi"
               >
-                <i class="fa-solid fa-download"></i> Download Our Brochure
+                <i className="fa-solid fa-download"></i> Download Our Brochure
               </a>
             </div>
           </section>
@@ -1246,7 +1246,7 @@ const PerformanceSupplements = () => {
                   <Accordion.Body className="faq-answer">
                     Powders (tubs and flat-bottom pouches), capsules, tablets,
                     blister packs, stick packs, and sachets. For sports
-                    nutrition specifically — pre-workouts, BCAAs, and mass
+                    nutrition specifically - pre-workouts, BCAAs, and mass
                     gainers are available in both tub and resealable pouch
                     formats. MOQ starts at 50 KG per SKU.
                   </Accordion.Body>
@@ -1270,8 +1270,8 @@ const PerformanceSupplements = () => {
                   </Accordion.Header>
                   <Accordion.Body className="faq-answer">
                     We have standard flavours including Indian-market profiles
-                    —lemon, fruit punch , watermelon, tangy orange, blueberry.
-                    Custom flavour development is available — typically 10-14
+                    -lemon, fruit punch , watermelon, tangy orange, blueberry.
+                    Custom flavour development is available - typically 10-14
                     days for a new flavour sample.
                   </Accordion.Body>
                 </Accordion.Item>
@@ -1281,7 +1281,7 @@ const PerformanceSupplements = () => {
                     Are your products Halal and Kosher certified?
                   </Accordion.Header>
                   <Accordion.Body className="faq-answer">
-                    Yes. Our facility holds both certifications — making your
+                    Yes. Our facility holds both certifications - making your
                     products export-ready for the Middle East and Southeast Asia
                     from your very first batch. Certificate documentation ships
                     with every order.
@@ -1297,7 +1297,7 @@ const PerformanceSupplements = () => {
                     verification, microbiology (yeast, mould, E.coli,
                     Salmonella), heavy metal screening (arsenic, cadmium, lead),
                     and identity confirmation of key active ingredients. It
-                    tests the finished product — not just the inputs.
+                    tests the finished product - not just the inputs.
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>

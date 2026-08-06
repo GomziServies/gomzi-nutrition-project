@@ -45,8 +45,8 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
 
   return (
@@ -474,12 +474,12 @@ function Top10ThirdPartyBeverageManufacturersInIndiaForStartups() {
                           We've shown you that finding a{" "}
                           <strong>low MOQ beverage manufacturer India</strong>{" "}
                           is entirely possible. By focusing on partners who
-                          specialize in your niche—whether it's
+                          specialize in your niche-whether it's
                           <strong>
                             functional beverage manufacturers in India
                           </strong>{" "}
                           like Gomzi Lifesciences or specialized juice
-                          co-packers—you accelerate your speed to market and
+                          co-packers-you accelerate your speed to market and
                           ensure quality control.
                         </p>
                       </div>

@@ -101,8 +101,8 @@ function The7CostlyMistakestoAvoidWhenChoosingaPrivateLabelNutraceuticalManufact
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
 
   const stepsData = [
@@ -530,7 +530,7 @@ function The7CostlyMistakestoAvoidWhenChoosingaPrivateLabelNutraceuticalManufact
                       </p>
                       <p className="blog-text">
                         Choosing the right manufacturing partner is not just a
-                        production decision — it is a strategic business
+                        production decision - it is a strategic business
                         decision that directly affects your brand's growth.
                       </p>
                     </div>

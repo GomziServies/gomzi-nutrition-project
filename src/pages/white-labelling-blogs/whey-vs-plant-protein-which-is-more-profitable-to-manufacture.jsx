@@ -68,8 +68,8 @@ function WheyVsPlantProteinWhichIsMoreProfitabletoManufacture() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
   return (
     <>
@@ -183,7 +183,7 @@ function WheyVsPlantProteinWhichIsMoreProfitabletoManufacture() {
                     <div className="blog-section">
                       <p className="blog-text mb-8">
                         In 2026, the sports nutrition market is no longer just
-                        about building muscle — it's about building brands.
+                        about building muscle - it's about building brands.
                       </p>
                       <p className="blog-text mb-8">
                         Every month, new fitness startups approach{" "}
@@ -212,7 +212,7 @@ function WheyVsPlantProteinWhichIsMoreProfitabletoManufacture() {
                           </Link>
                         </strong>
                         , this guide will help you understand which option makes
-                        more business sense — without the marketing hype.
+                        more business sense - without the marketing hype.
                       </p>
                       <p className="blog-text mb-8">
                         Let's break it down in a practical, real-world way.
@@ -332,7 +332,7 @@ function WheyVsPlantProteinWhichIsMoreProfitabletoManufacture() {
                       <h2 className="blog-section-title">Profit Insight:</h2>
                       <p className="blog-text">
                         Whey protein usually delivers strong sales volume, but
-                        competition is intense. Margins are good — but pricing
+                        competition is intense. Margins are good - but pricing
                         pressure from big brands can reduce flexibility.{" "}
                       </p>
 
@@ -409,7 +409,7 @@ function WheyVsPlantProteinWhichIsMoreProfitabletoManufacture() {
                       <h2 className="blog-section-title">Profit Insight:</h2>
                       <p className="blog-text">
                         Plant protein often offers slightly better percentage
-                        margins — especially in D2C and export models.
+                        margins - especially in D2C and export models.
                         <strong>Side-by-Side Profit Comparison</strong>
                       </p>
                       <div className="table-responsive">
@@ -575,7 +575,7 @@ function WheyVsPlantProteinWhichIsMoreProfitabletoManufacture() {
                         <h2 className="blog-section-title">Final Verdict</h2>
                         <p className="blog-text mb-5px">
                           The protein market in 2026 isn't about choosing sides
-                          — it's about understanding consumer psychology.
+                          - it's about understanding consumer psychology.
                         </p>
                         <p className="blog-text mb-5px">
                           Whey protein dominates traditional fitness markets.

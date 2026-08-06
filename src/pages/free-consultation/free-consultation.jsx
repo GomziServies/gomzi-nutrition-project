@@ -30,7 +30,7 @@ const FreeConsultation = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showStickyCta, setShowStickyCta] = useState(true);
+  const [, setShowStickyCta] = useState(true);
 
   // OTP Verification States
   const [showOtpModal, setShowOtpModal] = useState(false);
@@ -39,7 +39,7 @@ const FreeConsultation = () => {
   const [isSendingOtp, setIsSendingOtp] = useState(false);
   const [isVerifyingOtp, setIsVerifyingOtp] = useState(false);
   const [countdown, setCountdown] = useState(60);
-  const [devOtp, setDevOtp] = useState("");
+  const [, setDevOtp] = useState("");
   const [isEditingPhone, setIsEditingPhone] = useState(false);
   const [editablePhone, setEditablePhone] = useState("");
 

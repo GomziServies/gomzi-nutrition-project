@@ -59,8 +59,8 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
 
   return (
@@ -200,7 +200,7 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       <p className="blog-text">
                         Today, we are pulling back the curtain on the most
                         common myths and exploring why the source of your
-                        supplements — down to the factory floor — matters more
+                        supplements - down to the factory floor - matters more
                         than you think.
                       </p>
                     </div>
@@ -292,7 +292,7 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                           </Link>
                         </strong>{" "}
                         provides cutting-edge research and development in the
-                        wellness space, their philosophy — and ours — is that
+                        wellness space, their philosophy - and ours - is that
                         precision nutrition works best when paired with a
                         "whole-foods first" mindset.
                       </p>
@@ -400,7 +400,7 @@ function WhatSupplementsActuallyWorkDebunking7CommonNutraceuticalMyths() {
                       <div className="blog-conclusion">
                         <h2 className="blog-section-title">Conclusion</h2>
                         <p className="blog-text">
-                          The future of health isn't found in a "magic pill" —
+                          The future of health isn't found in a "magic pill" -
                           it's found in <strong>Precision Nutrition</strong>. By
                           choosing products backed by clinical research and
                           manufactured by trusted partners, you are investing in

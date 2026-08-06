@@ -221,7 +221,7 @@ const PeanutButter = () => {
       rating: 5,
     },
     {
-      text: "We at Pro Wolf Nutrition are truly impressed with Gomzi Life Science for their exceptional supplement manufacturing services. They played a key role in bringing our premium Intence Pre Workout to life — available in our signature Tangy Orange and Green Apple flavors.",
+      text: "We at Pro Wolf Nutrition are truly impressed with Gomzi Life Science for their exceptional supplement manufacturing services. They played a key role in bringing our premium Intence Pre Workout to life - available in our signature Tangy Orange and Green Apple flavors.",
       name: "Rathod Kishan",
       role: "Founder of Prowolf",
       rating: 5,
@@ -243,8 +243,8 @@ const PeanutButter = () => {
     autoplayTimeout: 4000,
     autoplayHoverPause: true,
     navText: [
-      `<span class="testi-nav-btn prev-btn">&#8592;</span>`,
-      `<span class="testi-nav-btn next-btn">&#8594;</span>`,
+      `<span className="testi-nav-btn prev-btn">&#8592;</span>`,
+      `<span className="testi-nav-btn next-btn">&#8594;</span>`,
     ],
     responsive: {
       0: { items: 1 },
@@ -595,7 +595,7 @@ const PeanutButter = () => {
             </h2>
             <p className="wh-sec-desc-whey-protein inter-regular">
               Every variant available under your brand, in your packaging.
-              Formulated for the Indian palate — from classic to premium
+              Formulated for the Indian palate - from classic to premium
               specialty flavours.
             </p>
 
@@ -713,7 +713,7 @@ const PeanutButter = () => {
                 <div className="market-card">
                   <h3 className="barlow-condensed-semi">1,800Cr</h3>
                   <p className="inter-regular">
-                    India's peanut butter market — growing at{" "}
+                    India's peanut butter market - growing at{" "}
                     <strong>25-28% CAGR</strong>. First-time buyers entering the
                     category daily as health awareness rises across Tier 2 and
                     Tier 3 cities.
@@ -726,7 +726,7 @@ const PeanutButter = () => {
                     Growth in online peanut butter searches since 2021.
                     <strong>Protein-conscious Indians</strong> are switching
                     from traditional snacks to peanut butter as a daily protein
-                    source — your customer is already searching.
+                    source - your customer is already searching.
                   </p>
                 </div>
               </div>
@@ -735,7 +735,7 @@ const PeanutButter = () => {
                 <p className="inter-regular">
                   “Over 500 new food brands will launch peanut butter products
                   in India this year. The brands that win are those who start
-                  with the <strong>right manufacturer </strong>— not the
+                  with the <strong>right manufacturer </strong>- not the
                   cheapest one.”
                 </p>
               </div>
@@ -830,7 +830,7 @@ const PeanutButter = () => {
           </div>
         </div>
 
-        <section class="qua-wh-section bg-white">
+        <section className="qua-wh-section bg-white">
           <p className="wh-sec-title barlow-condensed-semi text-center">
             Quality Assurance
           </p>
@@ -868,14 +868,14 @@ const PeanutButter = () => {
             })}
           </div>
 
-          <div class="qua-content">
-            <div class="qua-item">
-              <div class="check-box">
-                <svg class="check-icon" viewBox="0 0 14 14">
+          <div className="qua-content">
+            <div className="qua-item">
+              <div className="check-box">
+                <svg className="check-icon" viewBox="0 0 14 14">
                   <polyline points="2,7 5.5,10.5 12,3" />
                 </svg>
               </div>
-              <div class="qua-item-text">
+              <div className="qua-item-text">
                 <h3>GMP-Certified Production</h3>
                 <p>
                   Manufactured to international Good Manufacturing Practice
@@ -884,13 +884,13 @@ const PeanutButter = () => {
               </div>
             </div>
 
-            <div class="qua-item">
-              <div class="check-box">
-                <svg class="check-icon" viewBox="0 0 14 14">
+            <div className="qua-item">
+              <div className="check-box">
+                <svg className="check-icon" viewBox="0 0 14 14">
                   <polyline points="2,7 5.5,10.5 12,3" />
                 </svg>
               </div>
-              <div class="qua-item-text">
+              <div className="qua-item-text">
                 <h3>Batch COA on Every Order</h3>
                 <p>
                   Certificate of Analysis shipped with every production run.
@@ -898,13 +898,13 @@ const PeanutButter = () => {
               </div>
             </div>
 
-            <div class="qua-item">
-              <div class="check-box">
-                <svg class="check-icon" viewBox="0 0 14 14">
+            <div className="qua-item">
+              <div className="check-box">
+                <svg className="check-icon" viewBox="0 0 14 14">
                   <polyline points="2,7 5.5,10.5 12,3" />
                 </svg>
               </div>
-              <div class="qua-item-text">
+              <div className="qua-item-text">
                 <h3>Third-Party Lab Testing</h3>
                 <p>Independent verification of purity, potency, and safety.</p>
               </div>
@@ -986,7 +986,7 @@ const PeanutButter = () => {
                   Can I get custom flavours not listed in your 12 variants?
                 </Accordion.Header>
                 <Accordion.Body className="faq-answer">
-                  Yes — our R&D team can develop custom peanut butter flavours
+                  Yes - our R&D team can develop custom peanut butter flavours
                   in 10-14 days. If you have a specific flavour concept (e.g.
                   rose, saffron, date & nut), share it with us during the
                   formulation call. Custom flavour development may carry a small
@@ -1000,7 +1000,7 @@ const PeanutButter = () => {
                 </Accordion.Header>
                 <Accordion.Body className="faq-answer">
                   Yes. Every product we manufacture meets FSSAI labelling
-                  requirements — FSSAI licence number, complete ingredient list
+                  requirements - FSSAI licence number, complete ingredient list
                   with quantities, batch number, manufacturing date, expiry
                   date, net weight, allergen declaration, and nutritional facts
                   panel. All mandatory elements are verified before production.
@@ -1016,7 +1016,7 @@ const PeanutButter = () => {
                   500g, 1kg), and flexible pouches for bulk/HoReCa formats.
                   Glass jars are preferred for premium D2C positioning. PET jars
                   are more cost-effective for mass-market channels. Custom label
-                  design is included — we work with your designer or our team.
+                  design is included - we work with your designer or our team.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="5" className="mt-3 p-4">
@@ -1024,7 +1024,7 @@ const PeanutButter = () => {
                   Is your peanut butter Halal certified? Can I export it?
                 </Accordion.Header>
                 <Accordion.Body className="faq-answer">
-                  Yes — our facility holds Halal and Kosher certifications,
+                  Yes - our facility holds Halal and Kosher certifications,
                   making your peanut butter export-ready for UAE, Saudi Arabia,
                   Malaysia, Singapore, and other markets. Certificate
                   documentation is provided with every export order. Full export
@@ -1052,8 +1052,8 @@ const PeanutButter = () => {
                   Our Natural variants typically deliver 24-26g protein per
                   100g. Classic and Chocolate variants: 22-25g per 100g.
                   Specialty variants vary based on additional inclusions. Exact
-                  nutritional profiles — protein, fat (total, saturated,
-                  unsaturated), carbohydrates, fibre, calories — are provided in
+                  nutritional profiles - protein, fat (total, saturated,
+                  unsaturated), carbohydrates, fibre, calories - are provided in
                   the formula sheet and verified in the COA.
                 </Accordion.Body>
               </Accordion.Item>

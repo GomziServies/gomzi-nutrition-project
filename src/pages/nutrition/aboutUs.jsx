@@ -89,7 +89,7 @@ function aboutUs() {
           <div className="about-hero-banner">
             <div className="about-hero-overlay"></div>
             <div className="about-hero-content">
-              <h1 class="about-title barlow-condensed-semi">
+              <h1 className="about-title barlow-condensed-semi">
                 We help supplement founders build{" "}
                 <span>brands people trust.</span>
               </h1>
@@ -100,7 +100,7 @@ function aboutUs() {
                 idea to formulation, manufacturing, packaging, and launch.
               </p>
 
-              <div class="about-hero-buttons">
+              <div className="about-hero-buttons">
                 <RequestQuoteButton
                   className="about-primary-btn barlow-condensed-semi"
                   text={" Request a Quote"}
@@ -180,7 +180,7 @@ function aboutUs() {
 
             <div className="why-gls-card">
               <div className="why-gls-icon">
-                <i class="fa-solid fa-certificate"></i>
+                <i className="fa-solid fa-certificate"></i>
               </div>
               <h3 className="barlow-condensed-semi">Certified Quality</h3>
               <p className="inter-regular">

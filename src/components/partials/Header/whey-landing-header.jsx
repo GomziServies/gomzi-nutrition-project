@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 
-const WheyLandingHeader = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState(""); // ← new
-
-  const navLinks = [
+ const navLinks = [
     { label: "Who It's For", href: "#who", id: "who" },
     { label: "Capabilities", href: "#capabilities", id: "capabilities" },
     { label: "How It Works", href: "#how", id: "how" },
     { label: "Certifications", href: "#certifications", id: "certifications" },
   ];
 
+
+const WheyLandingHeader = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState(""); // ← new
+
+ 
   const handleSectionClick = (event, href) => {
     if (!href || !href.startsWith("#")) {
       return;

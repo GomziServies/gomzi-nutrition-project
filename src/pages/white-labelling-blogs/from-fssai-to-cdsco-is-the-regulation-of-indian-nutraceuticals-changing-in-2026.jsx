@@ -12,8 +12,8 @@ function FromFSSAItoCDSCOIstheRegulationofIndianNutraceuticalsChangingIn() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
   return (
     <>
@@ -188,7 +188,7 @@ function FromFSSAItoCDSCOIstheRegulationofIndianNutraceuticalsChangingIn() {
                       </p>
                       <p className="blog-text mb-8">
                         Furthermore, ingredients that have a pharmacological
-                        effect — previously found in a regulatory loophole — are
+                        effect - previously found in a regulatory loophole - are
                         being reassessed.
                       </p>
                       <p className="blog-text mb-8">
@@ -377,7 +377,7 @@ function FromFSSAItoCDSCOIstheRegulationofIndianNutraceuticalsChangingIn() {
                               Nutraceutical Regulatory Updates 2026
                             </Link>
                           </strong>{" "}
-                          — This article provides a deep dive into the specific
+                          - This article provides a deep dive into the specific
                           regulatory changes and the industry's response to the
                           FSSAI-CDSCO transition in India.
                         </p>

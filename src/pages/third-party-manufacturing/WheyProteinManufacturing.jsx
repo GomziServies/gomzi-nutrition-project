@@ -78,7 +78,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: "We at Pro Wolf Nutrition are truly impressed with Gomzi Life Science for their exceptional supplement manufacturing services. They played a key role in bringing our premium Intence Pre Workout to life — available in our signature Tangy Orange and Green Apple flavors.",
+    text: "We at Pro Wolf Nutrition are truly impressed with Gomzi Life Science for their exceptional supplement manufacturing services. They played a key role in bringing our premium Intence Pre Workout to life - available in our signature Tangy Orange and Green Apple flavors.",
     name: "Rathod Kishan",
     role: "Founder of Prowolf",
     rating: 5,
@@ -100,8 +100,8 @@ const carouselOptions = {
   autoplayTimeout: 4000,
   autoplayHoverPause: true,
   navText: [
-    `<span class="testi-nav-btn prev-btn">&#8592;</span>`,
-    `<span class="testi-nav-btn next-btn">&#8594;</span>`,
+    `<span className="testi-nav-btn prev-btn">&#8592;</span>`,
+    `<span className="testi-nav-btn next-btn">&#8594;</span>`,
   ],
   responsive: {
     0: { items: 1 },
@@ -765,7 +765,7 @@ const WheyProteinManufacturing = () => {
                 <div className="market-card">
                   <h3 className="barlow-condensed-semi">267M</h3>
                   <p className="inter-regular">
-                    India's whey protein market — growing fast as fitness
+                    India's whey protein market - growing fast as fitness
                     culture moves beyond metros into Tier 2 and Tier 3 cities.
                     <strong>
                       {" "}
@@ -779,7 +779,7 @@ const WheyProteinManufacturing = () => {
                   <p className="inter-regular">
                     Growth in online protein supplement searches since 2020.
                     <strong> First-time buyers</strong> are entering the
-                    category — they'll be loyal to the brand they start with.
+                    category - they'll be loyal to the brand they start with.
                   </p>
                 </div>
               </div>
@@ -989,7 +989,7 @@ const WheyProteinManufacturing = () => {
           </div>
         </div>
 
-        <section class="qua-wh-section" id="certification">
+        <section className="qua-wh-section" id="certification">
           <p className="wh-sec-title barlow-condensed-semi text-center">
             Quality Assurance
           </p>
@@ -1027,14 +1027,14 @@ const WheyProteinManufacturing = () => {
             })}
           </div>
 
-          <div class="qua-content">
-            <div class="qua-item">
-              <div class="check-box">
-                <svg class="check-icon" viewBox="0 0 14 14">
+          <div className="qua-content">
+            <div className="qua-item">
+              <div className="check-box">
+                <svg className="check-icon" viewBox="0 0 14 14">
                   <polyline points="2,7 5.5,10.5 12,3" />
                 </svg>
               </div>
-              <div class="qua-item-text">
+              <div className="qua-item-text">
                 <h3>GMP-Certified Production</h3>
                 <p>
                   Manufactured to international Good Manufacturing Practice
@@ -1043,13 +1043,13 @@ const WheyProteinManufacturing = () => {
               </div>
             </div>
 
-            <div class="qua-item">
-              <div class="check-box">
-                <svg class="check-icon" viewBox="0 0 14 14">
+            <div className="qua-item">
+              <div className="check-box">
+                <svg className="check-icon" viewBox="0 0 14 14">
                   <polyline points="2,7 5.5,10.5 12,3" />
                 </svg>
               </div>
-              <div class="qua-item-text">
+              <div className="qua-item-text">
                 <h3>Batch COA on Every Order</h3>
                 <p>
                   Certificate of Analysis shipped with every production run.
@@ -1057,13 +1057,13 @@ const WheyProteinManufacturing = () => {
               </div>
             </div>
 
-            <div class="qua-item">
-              <div class="check-box">
-                <svg class="check-icon" viewBox="0 0 14 14">
+            <div className="qua-item">
+              <div className="check-box">
+                <svg className="check-icon" viewBox="0 0 14 14">
                   <polyline points="2,7 5.5,10.5 12,3" />
                 </svg>
               </div>
-              <div class="qua-item-text">
+              <div className="qua-item-text">
                 <h3>Third-Party Lab Testing</h3>
                 <p>Independent verification of purity, potency, and safety.</p>
               </div>
@@ -1075,7 +1075,7 @@ const WheyProteinManufacturing = () => {
               download
               className="download-btn barlow-condensed-semi"
             >
-              <i class="fa-solid fa-download"></i> Download Our Brochure
+              <i className="fa-solid fa-download"></i> Download Our Brochure
             </a>
           </div>
         </section>
