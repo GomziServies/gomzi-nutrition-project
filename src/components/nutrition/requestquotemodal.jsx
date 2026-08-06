@@ -282,7 +282,7 @@ export default function RequestQuoteModal() {
     } finally {
       setLoading(false);
     }
-  }, [form, validateContact]);
+  }, [form,subject, validateContact]);
 
   // ── Form handlers ─────────────────────────────────────────────────────────
   const handleRadioChange = (name, value) => {

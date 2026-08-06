@@ -1,100 +1,4 @@
-import { useState, useEffect, useRef } from "react";
-
-const checkItems1 = [
-  {
-    title: "Choose the right product.",
-    desc: "Not every formulation fits your audience or your price point.",
-  },
-  {
-    title: "Understand the numbers.",
-    desc: "MOQ, pricing direction, and packaging all affect your margin.",
-  },
-  {
-    title: "Reduce brand risk.",
-    desc: "Quality process, documentation, and consistency protect your reputation.",
-  },
-];
-
-const checkItems2 = [
-  {
-    title: "Right formulation recommendation.",
-    desc: "For your audience and stage -not a generic suggestion.",
-  },
-  {
-    title: "Clear MOQ and realistic pricing direction.",
-    desc: "Understand numbers before you commit to an order.",
-  },
-  {
-    title: "Delivery timeline from approval to dispatch.",
-    desc: "No more guessing when your product will be ready.",
-  },
-  {
-    title: "Visibility into certifications and quality checks.",
-    desc: "Batch documentation that protects your brand reputation.",
-  },
-];
-
-function CheckIcon() {
-  return (
-    <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-      <path
-        d="M2.5 8L5.8 11.5L12.5 4"
-        stroke="#6dc52c"
-        strokeWidth="2.1"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function ChevronIcon() {
-  return (
-    <svg className="acc-chevron" viewBox="0 0 20 20" fill="none">
-      <path
-        d="M5 7.5L10 12.5L15 7.5"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function AccordionItem({ title, desc, isOpen, onToggle }) {
-  return (
-    <div className={`acc-item${isOpen ? " open" : ""}`}>
-      <button className="acc-trigger" onClick={onToggle}>
-        <div className="acc-icon">
-          <CheckIcon />
-        </div>
-        <span className="acc-trigger-title">{title}</span>
-        <ChevronIcon />
-      </button>
-      <div className="acc-body">
-        <div className="acc-body-inner">{desc}</div>
-      </div>
-    </div>
-  );
-}
-
-function AccordionList({ items }) {
-  const [openIndex, setOpenIndex] = useState(null);
-  return (
-    <div className="acc-list">
-      {items.map((item, i) => (
-        <AccordionItem
-          key={i}
-          title={item.title}
-          desc={item.desc}
-          isOpen={openIndex === i}
-          onToggle={() => setOpenIndex(openIndex === i ? null : i)}
-        />
-      ))}
-    </div>
-  );
-}
+import { useEffect, useRef } from "react";
 
 export default function FoundersLanding() {
   const imgRef = useRef(null);
@@ -132,20 +36,20 @@ export default function FoundersLanding() {
   return (
     <>
       {/* ══ SECTION 1 ══ */}
-      <section className="founders-section">
+      <section className="founders-section" id="how">
         <div className="founders-inner">
           <div className="founders-content">
-            <h2 class="ws-heading text-center">
+            <h2 className="ws-heading text-center">
               Start Your Protein Brand With the <br />
               <em> Right Formula, Sample, and Manufacturing</em>{" "}
             </h2>
 
             <div className="row justify-center">
               <div className="col-lg-7 col-md-7 col-12">
-                <section class="protein-brand-landing-cards-section">
-                  <div class="protein-brand-landing-cards-wrapper">
-                    <div class="protein-brand-landing-cards">
-                      <div class="protein-brand-landing-cards-icon">
+                <section className="protein-brand-landing-cards-section">
+                  <div className="protein-brand-landing-cards-wrapper">
+                    <div className="protein-brand-landing-cards">
+                      <div className="protein-brand-landing-cards-icon">
                         <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
                           <path
                             stroke-linecap="round"
@@ -164,8 +68,8 @@ export default function FoundersLanding() {
                       </p>
                     </div>
 
-                    <div class="protein-brand-landing-cards">
-                      <div class="protein-brand-landing-cards-icon">
+                    <div className="protein-brand-landing-cards">
+                      <div className="protein-brand-landing-cards-icon">
                         <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
                           <path
                             stroke-linecap="round"
@@ -184,8 +88,8 @@ export default function FoundersLanding() {
                       </p>
                     </div>
 
-                    <div class="protein-brand-landing-cards">
-                      <div class="protein-brand-landing-cards-icon">
+                    <div className="protein-brand-landing-cards">
+                      <div className="protein-brand-landing-cards-icon">
                         <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
                           <path
                             stroke-linecap="round"
@@ -206,8 +110,8 @@ export default function FoundersLanding() {
                       </p>
                     </div>
 
-                    <div class="protein-brand-landing-cards">
-                      <div class="protein-brand-landing-cards-icon">
+                    <div className="protein-brand-landing-cards">
+                      <div className="protein-brand-landing-cards-icon">
                         <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
                           <rect x="3" y="4" width="18" height="16" rx="2" />
                           <path
@@ -222,12 +126,12 @@ export default function FoundersLanding() {
 
                       <p>
                         Finalize jar, pouch, label, and branding options. Your
-                        packaging is your first impression — get it right.
+                        packaging is your first impression - get it right.
                       </p>
                     </div>
 
-                    <div class="protein-brand-landing-cards">
-                      <div class="protein-brand-landing-cards-icon">
+                    <div className="protein-brand-landing-cards">
+                      <div className="protein-brand-landing-cards-icon">
                         <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
                           <path
                             stroke-linecap="round"
@@ -250,8 +154,8 @@ export default function FoundersLanding() {
                       </p>
                     </div>
 
-                    <div class="protein-brand-landing-cards">
-                      <div class="protein-brand-landing-cards-icon">
+                    <div className="protein-brand-landing-cards">
+                      <div className="protein-brand-landing-cards-icon">
                         <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
                           <circle cx="12" cy="12" r="9" />
                           <path

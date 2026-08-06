@@ -134,7 +134,7 @@ function ContactUs() {
                 <div>
                   <h4 className="barlow-condensed-semi">WhatsApp:</h4>
                   <p>
-                    <a href="https://wa.me/+918320077993" target="_blank">
+                    <a href="https://wa.me/+918320077993" target="_blank" rel="noreferrer">
                       Chat with us on WhatsApp
                     </a>
                   </p>

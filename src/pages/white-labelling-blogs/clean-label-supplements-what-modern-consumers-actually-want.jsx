@@ -85,8 +85,8 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
   return (
     <>
@@ -215,8 +215,8 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                       <p className="blog-text mb-8">
                         For a brand, this means prioritizing non-GMO sourcing,
                         eliminating artificial sweeteners like aspartame, and
-                        ensuring that every claim — from "grass-fed whey" to
-                        "organic extracts" — is backed by rigorous third-party
+                        ensuring that every claim - from "grass-fed whey" to
+                        "organic extracts" - is backed by rigorous third-party
                         testing and clear, honest packaging.
                       </p>
                       <blockquote className="blog-quote">
@@ -247,7 +247,7 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                         Understanding the Supplement Launch Timeline
                       </h2>
                       <p className="blog-text">
-                        Launching a supplement brand is not a one-step process —
+                        Launching a supplement brand is not a one-step process -
                         it involves multiple stages working together.
                       </p>
                       <h3 className="blog-subsection-title">
@@ -540,7 +540,7 @@ function CleanLabelSupplementsWhatModernConsumersActuallyWant() {
                         <p className="blog-text">
                           Start your journey with a trusted nutraceutical
                           manufacturing partner and bring your product to market
-                          faster with complete support—from formulation to final
+                          faster with complete support-from formulation to final
                           packaging.
                         </p>
                       </div>

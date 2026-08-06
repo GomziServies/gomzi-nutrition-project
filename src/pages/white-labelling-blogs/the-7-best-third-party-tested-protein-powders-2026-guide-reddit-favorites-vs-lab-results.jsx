@@ -47,8 +47,8 @@ function The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResu
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
 
   return (
@@ -178,7 +178,7 @@ function The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResu
                             protein powder companies in India{" "}
                           </Link>
                         </strong>
-                        and globally is no longer just about muscle growth —
+                        and globally is no longer just about muscle growth -
                         it's about long-term health safety.
                       </p>
                       <p className="blog-text mb-8">
@@ -195,7 +195,7 @@ function The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResu
                         1. Why Reddit Is the Ultimate "B.S. Filter"
                       </h2>
                       <p className="blog-text">
-                        Google's algorithm now prioritizes "Hidden Gems"—real
+                        Google's algorithm now prioritizes "Hidden Gems"-real
                         human experiences over corporate AI-written lists. On
                         Reddit, the feedback is unfiltered.
                       </p>
@@ -213,7 +213,7 @@ function The7BestThirdPartyTestedProteinPowders2026GuideRedditFavoritesVsLabResu
                         <strong>nutraceutical protein powder,</strong> you are
                         trusting that company with your digestive health and
                         hormonal balance. The brands listed below don't just
-                        claim to be "the best" — they prove it with independent
+                        claim to be "the best" - they prove it with independent
                         data.
                       </p>
                     </div>

@@ -137,7 +137,7 @@ const ProteinPowder = () => {
           name: "What types of protein powders can I white-label?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "You can white-label whey protein, plant-based protein, soy protein, whey isolate, blends, and more—with full customization options for flavor, nutrition, and packaging.",
+            text: "You can white-label whey protein, plant-based protein, soy protein, whey isolate, blends, and more-with full customization options for flavor, nutrition, and packaging.",
           },
         },
         {
@@ -232,7 +232,7 @@ const ProteinPowder = () => {
           </strong>
           . Each of these is carefully formulated to support muscle growth,
           recovery, and overall health. Exciting flavors include Chocolate, Mava
-          Kulfi, Coffee, and Mango — packed in hygienic jars of 500 gm, 1 kg,
+          Kulfi, Coffee, and Mango - packed in hygienic jars of 500 gm, 1 kg,
           and 2 kg.
         </p>
 
@@ -253,7 +253,7 @@ const ProteinPowder = () => {
         <p className="protein-powder-page-description">
           We manufacture all protein powders and supplements in a WHO GMP and
           FSSAI certified facility. Each batch undergoes rigorous quality checks
-          from raw material sourcing to final packaging — to ensure purity,
+          from raw material sourcing to final packaging - to ensure purity,
           potency, and safety.
         </p>
 
@@ -434,7 +434,7 @@ const ProteinPowder = () => {
             <li>
               <b>Product Versatility:</b>We specialize in both dairy-based
               supplements and are expert plant based protein powder
-              manufacturers—offering you a full range of products for your
+              manufacturers-offering you a full range of products for your
               brand.
             </li>
           </ul>

@@ -19,7 +19,7 @@ const faqData = [
         <p>
           Answer with a summary of trends like AI adoption, personalized
           nutrition, sustainability, advanced delivery systems, smart factories,
-          and regulatory upgrades — similar to your article’s sections.
+          and regulatory upgrades - similar to your article’s sections.
           (Summarizes broad industry interest)
         </p>
       </>
@@ -32,7 +32,7 @@ const faqData = [
       <>
         <p>
           Discuss real applications like predictive maintenance, quality control
-          automation, and production optimization — this is a popular practical
+          automation, and production optimization - this is a popular practical
           question.
         </p>
       </>
@@ -72,7 +72,7 @@ const faqData = [
       <>
         <p>
           Include issues like ingredient quality, regulatory compliance,
-          contamination risks, and cost management — common concerns in
+          contamination risks, and cost management - common concerns in
           production.
         </p>
       </>
@@ -98,7 +98,7 @@ const faqData = [
       <>
         <p>
           Include digital traceability, blockchain, IoT sensors, and continuous
-          manufacturing — topics industry professionals are curious about.
+          manufacturing - topics industry professionals are curious about.
         </p>
       </>
     ),
@@ -124,7 +124,7 @@ const faqData = [
       <>
         <p>
           Define third-party manufacturing, how it works, and why brands choose
-          it — a high-interest practical query. (Commercial intent)
+          it - a high-interest practical query. (Commercial intent)
         </p>
       </>
     ),
@@ -137,7 +137,7 @@ const faqData = [
       <>
         <p>
           Answer with key factors: quality systems, flexibility, compliance,
-          capacity, transparency — helpful for businesses planning production.
+          capacity, transparency - helpful for businesses planning production.
           (Commercial intent)
         </p>
       </>
@@ -149,8 +149,8 @@ function TheFutureofNutraceuticalManufacturingin202610GameChangingTrendsBrandsCa
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
   return (
     <>
@@ -275,7 +275,7 @@ function TheFutureofNutraceuticalManufacturingin202610GameChangingTrendsBrandsCa
                       </p>
                       <p className="blog-text mb-8">
                         Step inside a modern manufacturing facility today and
-                        you'll see something fascinating — digital dashboards
+                        you'll see something fascinating - digital dashboards
                         monitoring quality in real-time, AI systems predicting
                         contamination risks, and smart machines adjusting
                         formulations with precision.
@@ -316,7 +316,7 @@ function TheFutureofNutraceuticalManufacturingin202610GameChangingTrendsBrandsCa
                         <li>Automate compliance documentation</li>
                       </ul>
                       <p className="blog-text">
-                        This reduces downtime and increases efficiency — two
+                        This reduces downtime and increases efficiency - two
                         factors critical for scalable supplement brands.
                       </p>
                       <p className="blog-text">
@@ -360,7 +360,7 @@ function TheFutureofNutraceuticalManufacturingin202610GameChangingTrendsBrandsCa
                         that allow smaller, customized batches.
                       </p>
                       <p className="blog-text">
-                        Personalization is no longer luxury — it's expectation.
+                        Personalization is no longer luxury - it's expectation.
                       </p>
                       <p className="blog-text">
                         Established brands also prefer Nutraceuticals Third
@@ -400,7 +400,7 @@ function TheFutureofNutraceuticalManufacturingin202610GameChangingTrendsBrandsCa
                         Sustainable Supplement Manufacturing
                       </h2>
                       <p className="blog-text">
-                        Sustainability is no longer a marketing trend — it's a
+                        Sustainability is no longer a marketing trend - it's a
                         purchasing factor.
                       </p>
                       <p className="blog-text">2026 leaders are adopting:</p>
@@ -458,7 +458,7 @@ function TheFutureofNutraceuticalManufacturingin202610GameChangingTrendsBrandsCa
                         <li>Real-time quality dashboards</li>
                       </ul>
                       <p className="blog-text">
-                        This improves accuracy and reduces human error — crucial
+                        This improves accuracy and reduces human error - crucial
                         for export markets.
                       </p>
                     </div>
@@ -488,7 +488,7 @@ function TheFutureofNutraceuticalManufacturingin202610GameChangingTrendsBrandsCa
                         Microbiome &amp; Gut Health Manufacturing
                       </h2>
                       <p className="blog-text">
-                        Probiotics, prebiotics, synbiotics — gut health
+                        Probiotics, prebiotics, synbiotics - gut health
                         continues to dominate. Manufacturers are upgrading:
                       </p>
                       <ul className="blog-list">
@@ -565,7 +565,7 @@ function TheFutureofNutraceuticalManufacturingin202610GameChangingTrendsBrandsCa
                       </ul>
                       <p className="blog-text">
                         Choosing the right manufacturer is no longer just
-                        operational — it's strategic.
+                        operational - it's strategic.
                       </p>
                     </div>
 

@@ -108,8 +108,8 @@ function Top10ThirdPartyNutraceuticalManufacturingCompaniesinIndia() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
 
   return (
@@ -267,7 +267,7 @@ function Top10ThirdPartyNutraceuticalManufacturingCompaniesinIndia() {
                       </p>
                       <p className="blog-text">
                         <strong>Why they win:</strong> They offer a "one-stop"
-                        solution—from in-house R&D and flavor development to{" "}
+                        solution-from in-house R&D and flavor development to{" "}
                         <strong>FSSAI-compliant packaging</strong>. For a
                         startup looking for high-quality production without the
                         "big-brand" price tag, Gomzi is the gold standard.

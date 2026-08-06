@@ -11,8 +11,8 @@ function WhyPartneringWithTheRightContractManufacturer() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
 
   return (
@@ -720,7 +720,7 @@ function WhyPartneringWithTheRightContractManufacturer() {
                         </strong>{" "}
                         because it delivers a complete ecosystem of product
                         development, large-scale production, compliance support,
-                        and innovative formulation capabilities—all aligned with
+                        and innovative formulation capabilities-all aligned with
                         modern market needs.
                       </p>
 

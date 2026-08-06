@@ -19,7 +19,7 @@ const faqData = [
         many <strong>nutraceutical companies in India</strong> focus only on
         safety (compliance), our{" "}
         <strong>contract manufacturing services</strong> focus on the "clinical
-        window"—the exact dose required to see a physiological change.
+        window"-the exact dose required to see a physiological change.
       </>
     ),
   },
@@ -112,8 +112,8 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
 
   return (
@@ -243,7 +243,7 @@ function HowtoEducateConsumersAboutSafeEffectiveNutraceuticalUsewhite() {
                       </p>
                       <p className="blog-text mb-8">
                         The Indian wellness landscape has shifted. By 2026, the
-                        consumer is no longer just a buyer — they are a
+                        consumer is no longer just a buyer - they are a
                         "biohacker" looking for intentional, preventive, and
                         evidence-backed solutions.
                       </p>

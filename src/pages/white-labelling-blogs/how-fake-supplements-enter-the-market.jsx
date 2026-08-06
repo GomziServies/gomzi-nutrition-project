@@ -132,14 +132,14 @@ function HowFakeSupplementsEntertheMarket() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
   return (
     <>
       <Helmet>
         <title>
-          How Fake Supplements Enter the Market (And How to Avoid Them) — Risks,
+          How Fake Supplements Enter the Market (And How to Avoid Them) - Risks,
           Red Flags & Safety
         </title>
         <meta
@@ -152,7 +152,7 @@ function HowFakeSupplementsEntertheMarket() {
         />
         <meta
           property="og:title"
-          content="How Fake Supplements Enter the Market (And How to Avoid Them) — Risks, Red Flags & Safety"
+          content="How Fake Supplements Enter the Market (And How to Avoid Them) - Risks, Red Flags & Safety"
         />
         <meta
           property="og:description"

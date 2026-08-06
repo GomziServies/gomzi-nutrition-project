@@ -4,6 +4,33 @@ import NutritionHeader from "../partials/Header/nutritionsheader";
 import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
+   {
+    number: 75,
+    title:
+      "Every Supplement Brand Is Fighting the Wrong Battle (And It's Costing Them Customers)",
+    url: "/blogs/every-supplement-brand-is-fighting-the-wrong-battle",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/every-supplement-brand-is-fighting-the-wrong-battle.webp",
+  },
+   {
+    number: 74,
+    title:
+      "The Amazon Effect: How E-commerce Is Changing Nutraceutical Manufacturing",
+    url: "/blogs/the-amazon-effect-how-e-commerce-is-changing-nutraceutical-manufacturing",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/the-amazon-effect-how-e-commerce-is-changing-nutraceutical-manufacturing.webp",
+  },
+   {
+    number: 73,
+    title:
+      "How Nutraceutical Brands Can Choose the Right Manufacturing Partner in 2026",
+    url: "/blogs/how-nutraceutical-brands-can-choose-the-right-manufacturing-partner-in-2026",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-nutraceutical-brands-can-choose-the-right-manufacturing-partner-in-2026.webp",
+  },
   {
     number: 72,
     title:
@@ -347,7 +374,7 @@ export const whitelabelBloglist = [
   {
     number: 33,
     title:
-      "India’s Leading CDMO for Fitness Brands — Protein & Supplement Manufacturing",
+      "India’s Leading CDMO for Fitness Brands - Protein & Supplement Manufacturing",
     url: "/blogs/india-leadingcdmo-for-fitness-brands-protein-supplement-manufacturing",
     imgSrc:
       process.env.PUBLIC_URL +
@@ -425,7 +452,7 @@ export const whitelabelBloglist = [
   {
     number: 24,
     title:
-      "How Fake Supplements Enter the Market (And How to Avoid Them) — Risks, Red Flags & Safety",
+      "How Fake Supplements Enter the Market (And How to Avoid Them) - Risks, Red Flags & Safety",
     url: "/blogs/how-fake-supplements-enter-the-market",
     imgSrc:
       process.env.PUBLIC_URL +

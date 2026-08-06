@@ -51,7 +51,7 @@ const faqData = [
     eventKey: "faq7",
     question: " 7. What is product traceability?",
     answer:
-      " The ability to instantly trace a single finished bottle back to the specific raw material lot, equipment, and staff used — essential for quick product recall readiness.",
+      " The ability to instantly trace a single finished bottle back to the specific raw material lot, equipment, and staff used - essential for quick product recall readiness.",
   },
   {
     eventKey: "faq8",
@@ -78,8 +78,8 @@ function GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025() {
 
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
 
   const stepsData = [
@@ -133,7 +133,7 @@ function GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025() {
         <>
           Does the factory floor plan make sense? Ingredients shouldn't cross
           paths to prevent <strong>cross-contamination</strong>. Look at the{" "}
-          <strong>Sanitation Logs</strong> — are surfaces cleaned meticulously
+          <strong>Sanitation Logs</strong> - are surfaces cleaned meticulously
           between batches?
         </>
       ),
@@ -373,7 +373,7 @@ function GMPAuditGuideforNutraceuticalManufacturersStepbyStepProcess2025() {
                       </p>
                       <p className="blog-text mb-8">
                         To build a successful business, you don't just need a
-                        vendor — you need a strategic partner who operates at
+                        vendor - you need a strategic partner who operates at
                         the highest level of quality and professionalism.
                       </p>
                       <p className="blog-text mb-8">

@@ -108,8 +108,8 @@ function HowSportsSupplementsAreManufacturedFromIngredientstoPackaging() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
   return (
     <>
@@ -624,9 +624,9 @@ function HowSportsSupplementsAreManufacturedFromIngredientstoPackaging() {
                         <p className="blog-text mb-5px">
                           The journey from raw ingredients to finished
                           supplement products involves a complex and carefully
-                          controlled process. Each stage — from formulation and
+                          controlled process. Each stage - from formulation and
                           ingredient sourcing to manufacturing, testing, and
-                          packaging — plays a critical role in ensuring product
+                          packaging - plays a critical role in ensuring product
                           quality.
                         </p>
                         <p className="blog-text mb-5px">

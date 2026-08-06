@@ -12,8 +12,8 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
   return (
     <>
@@ -21,7 +21,7 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
         <title>Why Most Supplement Brands Fail Before Their First Sale</title>
         <meta
           name="description"
-          content="Discover the real reasons why most supplement brands fail before launch. Learn key mistakes in formulation, branding, and manufacturing—and how to avoid them."
+          content="Discover the real reasons why most supplement brands fail before launch. Learn key mistakes in formulation, branding, and manufacturing-and how to avoid them."
         />
         <meta
           name="keyword"
@@ -33,7 +33,7 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
         />
         <meta
           property="og:description"
-          content="Discover the real reasons why most supplement brands fail before launch. Learn key mistakes in formulation, branding, and manufacturing—and how to avoid them."
+          content="Discover the real reasons why most supplement brands fail before launch. Learn key mistakes in formulation, branding, and manufacturing-and how to avoid them."
         />
         <meta
           property="og:image"
@@ -126,7 +126,7 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       <p className="blog-text mb-8">
                         Launching a supplement brand looks simple from the
                         outside. Pick a product, design a label, and start
-                        selling — right?
+                        selling - right?
                       </p>
                       <p className="blog-text mb-8">
                         Many businesses today rely on a{" "}
@@ -257,7 +257,7 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                         <li>Product consistency is not guaranteed</li>
                       </ul>
                       <p className="blog-text">
-                        Testing is not just a technical step — it is what
+                        Testing is not just a technical step - it is what
                         ensures <strong>trust and safety</strong>.
                       </p>
                     </div>
@@ -337,7 +337,7 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       </ul>
                       <p className="blog-text">
                         When these elements are in place, marketing becomes much
-                        easier — because the product itself delivers value.
+                        easier - because the product itself delivers value.
                       </p>
                     </div>
 
@@ -347,7 +347,7 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       </h2>
                       <p className="blog-text mb-8">
                         An experienced manufacturing approach doesn't just
-                        produce a product — it helps avoid common mistakes.
+                        produce a product - it helps avoid common mistakes.
                       </p>
                       <p className="blog-text mb-5px">
                         From formulation to final production, the focus remains
@@ -364,7 +364,7 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       </p>
                       <p className="blog-text mb-8">
                         Experienced manufacturers understand that success begins
-                        long before production — with the right decisions around
+                        long before production - with the right decisions around
                         formulation, sourcing, and process control.
                       </p>
                       <p className="blog-text mb-8">
@@ -388,7 +388,7 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                         <li>
                           <strong>The Reality:</strong> When you put a little
                           bit of everything in, you often end up with "pixie
-                          dusting" — where no single ingredient is at a high
+                          dusting" - where no single ingredient is at a high
                           enough dosage to actually work.
                         </li>
                         <li>
@@ -427,7 +427,7 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                       <div className="blog-conclusion">
                         <h2 className="blog-section-title">Conclusion</h2>
                         <p className="blog-text mb-5px">
-                          A supplement brand is not built in the market — it is
+                          A supplement brand is not built in the market - it is
                           built{" "}
                           <strong>before the product is even launched.</strong>
                         </p>

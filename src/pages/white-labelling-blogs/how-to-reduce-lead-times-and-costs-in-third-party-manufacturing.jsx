@@ -12,8 +12,8 @@ function HowtoReduceLeadTimesAndCosts() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
 
   return (
@@ -134,7 +134,7 @@ function HowtoReduceLeadTimesAndCosts() {
                           </Link>
                         </strong>{" "}
                         has reached an all-time high. Consumers are no longer
-                        just looking for "vitamins"—they want specialized,
+                        just looking for "vitamins"-they want specialized,
                         bioavailable, and fast-acting health solutions.
                       </p>
                       <p className="blog-text">
@@ -223,7 +223,7 @@ function HowtoReduceLeadTimesAndCosts() {
                       </h2>
                       <p className="blog-text">
                         Global supply chain volatility remains a risk. Top-tier
-                        manufacturers are now "reshoring"—sourcing raw materials
+                        manufacturers are now "reshoring"-sourcing raw materials
                         domestically to avoid international shipping
                         bottlenecks.
                       </p>

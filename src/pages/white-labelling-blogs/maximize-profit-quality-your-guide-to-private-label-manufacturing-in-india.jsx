@@ -128,8 +128,8 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
 
   return (
@@ -498,12 +498,12 @@ function MaximizeProfitQualityYourGuidetoPrivateLabelManufacturinginIndia() {
                         <p className="blog-text">
                           The opportunity in the global health and wellness
                           market is immense, but true success demands more than
-                          basic production — it requires a strategic partnership
+                          basic production - it requires a strategic partnership
                           focused on innovation and radical transparency.
                         </p>
                         <p className="blog-text">
                           By choosing a forward-thinking manufacturing partner
-                          like top third party manufacturer —
+                          like top third party manufacturer -
                           <strong> Gomzi Lifesciences</strong>, you gain a
                           powerful advantage in product quality, international
                           compliance, and access to cutting-edge formats.

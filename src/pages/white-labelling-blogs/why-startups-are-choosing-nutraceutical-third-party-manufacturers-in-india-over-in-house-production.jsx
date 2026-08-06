@@ -34,7 +34,7 @@ const faqData = [
     eventKey: "faq4",
     question: "4. Will I still have control over my product?",
     answer:
-      "Yes, you can decide everything—ingredients, flavor, packaging, and branding. A good manufacturer works according to your requirements.",
+      "Yes, you can decide everything-ingredients, flavor, packaging, and branding. A good manufacturer works according to your requirements.",
   },
   {
     eventKey: "faq5",
@@ -54,8 +54,8 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
   return (
     <>
@@ -190,7 +190,7 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
                         .
                       </p>
                       <p className="blog-text mb-8">
-                        This shift is not just a trend — it's a strategic
+                        This shift is not just a trend - it's a strategic
                         decision driven by cost efficiency, scalability, and
                         speed.
                       </p>
@@ -519,7 +519,7 @@ function WhyStartupsAreChoosingNutraceuticalThirdPartyManufacturersinIndiaOverIn
                           </strong>{" "}
                           reflects a fundamental shift in the industry. For
                           startups, outsourcing manufacturing is no longer just
-                          an option — it's a strategic necessity.
+                          an option - it's a strategic necessity.
                         </p>
                         <p className="blog-text mb-5px">
                           By reducing costs, accelerating product launches, and

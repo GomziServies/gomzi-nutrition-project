@@ -16,7 +16,6 @@ import { Helmet } from "react-helmet";
 import WhatsappHeaderApp from "../components/NutritionWhatsappHeaderBtn";
 import WhiteLabellingVideoTestimonials from "./nutrition/white-labelling-video-testimonials";
 import RequestQuoteButton from "../components/nutrition/RequestQuoteButton";
-import RequestQuoteModal from "../components/nutrition/requestquotemodal";
 
 const certificates = [
   { file: "nutri-certi-6.webp", name: "FDA", sub: "FDA Registreted" },
@@ -178,7 +177,7 @@ const schemaData = [
             name: "What is the minimum order quantity?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Our MOQ starts at 50 KG per SKU — enough to launch a real brand without overcommitting inventory. Most first-time founders start with 1–2 SKUs at 50 KG each.",
+              text: "Our MOQ starts at 50 KG per SKU - enough to launch a real brand without overcommitting inventory. Most first-time founders start with 1–2 SKUs at 50 KG each.",
             },
           },
           {
@@ -194,7 +193,7 @@ const schemaData = [
             name: "Do you offer white labelling and private label?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Yes — completely. Your brand name, your logo, your packaging. We handle formulation, manufacturing, COA documentation, FSSAI-compliant labelling, and dispatch. also website development , full brand launch support.",
+              text: "Yes - completely. Your brand name, your logo, your packaging. We handle formulation, manufacturing, COA documentation, FSSAI-compliant labelling, and dispatch. also website development , full brand launch support.",
             },
           },
           {
@@ -218,7 +217,7 @@ const schemaData = [
             name: "Can you help with FSSAI registration and label compliance?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "We review every label for FSSAI compliance before production begins — mandatory elements, health claim restrictions, allergen declarations, batch numbering. We flag issues before they become problems.",
+              text: "We review every label for FSSAI compliance before production begins - mandatory elements, health claim restrictions, allergen declarations, batch numbering. We flag issues before they become problems.",
             },
           },
           {
@@ -234,7 +233,7 @@ const schemaData = [
             name: "Can I manufacture for Amazon or D2C without my own factory?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "That's exactly what third-party manufacturing is for. You own the brand, we handle production. Many of our clients sell on Amazon India, Flipkart, and their own Shopify stores — no factory needed.",
+              text: "That's exactly what third-party manufacturing is for. You own the brand, we handle production. Many of our clients sell on Amazon India, Flipkart, and their own Shopify stores - no factory needed.",
             },
           },
         ],
@@ -270,7 +269,6 @@ function Home() {
 
   return (
     <>
-      <RequestQuoteModal />
       <Helmet>
         <title>
           Gomzi Lifescience | Best Whey Protein in India | Premium Supplements
@@ -357,6 +355,7 @@ function Home() {
         <script>
           {`
           (function(c,l,a,r,i,t,y){
+              if (c[a]) return;
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
@@ -377,7 +376,7 @@ function Home() {
         <section className="header-main"></section>
       </div>
       <div className="container-fluid main p-0 m-0 homePage-header-position ">
-        <div className="homePage-header-position-div ">
+        <div className="homePage-header-position-div">
           <div className="d-lg-block d-none log-new">
             <Link to="/">
               <div>
@@ -434,7 +433,7 @@ function Home() {
                 >
                   Our Products{" "}
                   <span className="dd-arrow">
-                    <i class="fa-solid fa-caret-down"></i>
+                    <i className="fa-solid fa-caret-down"></i>
                   </span>
                 </a>
                 <ul className="dd-menu">
@@ -483,7 +482,7 @@ function Home() {
                 >
                   Why Gomzi Lifesciences{" "}
                   <span className="dd-arrow">
-                    <i class="fa-solid fa-caret-down"></i>
+                    <i className="fa-solid fa-caret-down"></i>
                   </span>
                 </a>
                 <ul className="dd-menu">
@@ -581,7 +580,7 @@ function Home() {
                 >
                   Our Products{" "}
                   <span className="dd-arrow">
-                    <i class="fa-solid fa-caret-down"></i>
+                    <i className="fa-solid fa-caret-down"></i>
                   </span>
                 </a>
                 <ul className="mob-dd-menu">
@@ -635,7 +634,7 @@ function Home() {
                 >
                   Why Gomzi Lifesciences{" "}
                   <span className="dd-arrow">
-                    <i class="fa-solid fa-caret-down"></i>
+                    <i className="fa-solid fa-caret-down"></i>
                   </span>
                 </a>
                 <ul className="mob-dd-menu">
@@ -733,19 +732,19 @@ function Home() {
             <div className="homepage-hero-overlay"></div>
             <div className="homepage-hero-content">
               <div className="homepage-badge">
-                <p class="homepage-hlabel barlow-condensed-semi">
+                <p className="homepage-hlabel barlow-condensed-semi">
                   Private Label Supplements · Surat, Gujarat
                 </p>
               </div>
 
-              <h1 class="homepage-hh barlow-condensed-semi">
+              <h1 className="homepage-hh barlow-condensed-semi">
                 Launch Your <span>Own</span> <br /> Supplement Brand
               </h1>
-              <p class="homepage-hsub inter-regular">
+              <p className="homepage-hsub inter-regular">
                 GMP-certified manufacturing, custom packaging, and a D2C-ready
                 website - one partner, 15-20 day delivery, 50 KG MOQ.
               </p>
-              <div class="homepage-hbtns">
+              <div className="homepage-hbtns">
                 <RequestQuoteButton
                   className="homepage-bp barlow-condensed-semi"
                   text={"Book your Free Roadmap"}
@@ -772,14 +771,14 @@ function Home() {
                 </Link>
               </p>
 
-              <div class="homepage-hstats">
+              <div className="homepage-hstats">
                 <div>
-                  <div class="homepage-sn barlow-condensed-semi">50 KG</div>
-                  <div class="homepage-sl inter-regular">Minimum Order</div>
+                  <div className="homepage-sn barlow-condensed-semi">50 KG</div>
+                  <div className="homepage-sl inter-regular">Minimum Order</div>
                 </div>
                 <div>
-                  <div class="homepage-sn barlow-condensed-semi">15-20</div>
-                  <div class="homepage-sl inter-regular">Day Delivery</div>
+                  <div className="homepage-sn barlow-condensed-semi">15-20</div>
+                  <div className="homepage-sl inter-regular">Day Delivery</div>
                 </div>
               </div>
             </div>
@@ -787,41 +786,41 @@ function Home() {
         </div>
       </section>
 
-      <div class="tbar">
-        <div class="tbar-track">
+      <div className="tbar">
+        <div className="tbar-track">
           <span>FSSAI</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
           <span>GMP CERTIFIED</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
           <span>HACCP</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
           <span>KOSHER</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
           <span>HALAL</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
           <span>FDA</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
           <span>50 KG MOQ</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
           <span>15-20 DAY DELIVERY</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
           {/* duplicate */}
           <span>FSSAI</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
           <span>GMP CERTIFIED</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
           <span>HACCP</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
           <span>KOSHER</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
           <span>HALAL</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
           <span>FDA</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
           <span>50 KG MOQ</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
           <span>15-20 DAY DELIVERY</span>
-          <div class="tsep"></div>
+          <div className="tsep"></div>
         </div>
       </div>
 
@@ -907,7 +906,7 @@ function Home() {
 
           <div className="product-cta-bar">
             <p className="inter-regular">
-              Your brand, our expertise —{" "}
+              Your brand, our expertise -{" "}
               <span className="inter-500">
                 from product formulation to finished packaging.
               </span>
@@ -923,44 +922,44 @@ function Home() {
         </div>
       </section>
 
-      <section class="why-section">
-        <div class="why-container">
-          <p class="why-label barlow-condensed-semi">
+      <section className="why-section">
+        <div className="why-container">
+          <p className="why-label barlow-condensed-semi">
             WHY CHOOSE GOMZI LIFESCIENCE LLP ?
           </p>
 
-          <h2 class="why-title barlow-condensed-semi">
+          <h2 className="why-title barlow-condensed-semi">
             Built to Launch Brands, Not Just Batches
           </h2>
 
-          <div class="why-strip">
-            <div class="why-item">
+          <div className="why-strip">
+            <div className="why-item">
               <h3 className="barlow-condensed-semi">50 KG</h3>
-              <p class="why-head inter-500">Minimum Order</p>
+              <p className="why-head inter-500">Minimum Order</p>
               <span>Start lean. Scale fast. No warehouse risk.</span>
             </div>
 
-            <div class="why-item">
+            <div className="why-item">
               <h3 className="barlow-condensed-semi">20 Days</h3>
-              <p class="why-head inter-500">Fast Delivery</p>
+              <p className="why-head inter-500">Fast Delivery</p>
               <span>From formulation to dispatch.</span>
             </div>
 
-            <div class="why-item">
+            <div className="why-item">
               <h3 className="barlow-condensed-semi">End-to-End</h3>
-              <p class="why-head inter-500">Full Service</p>
+              <p className="why-head inter-500">Full Service</p>
               <span>Formula · Pack · Website in one shot.</span>
             </div>
 
-            <div class="why-item">
+            <div className="why-item">
               <h3 className="barlow-condensed-semi">Indian</h3>
-              <p class="why-head inter-500">Traditional Flavours</p>
+              <p className="why-head inter-500">Traditional Flavours</p>
               <span>Mango, Guava, Kesar Pista.</span>
             </div>
 
-            <div class="why-item">
+            <div className="why-item">
               <h3 className="barlow-condensed-semi">Halal & Kosher</h3>
-              <p class="why-head inter-500">Certified</p>
+              <p className="why-head inter-500">Certified</p>
               <span>Export-ready certifications.</span>
             </div>
           </div>
@@ -973,18 +972,18 @@ function Home() {
             Your 5-Stage Launch Journey
           </h1>
 
-          <div class="works-journey-line"></div>
+          <div className="works-journey-line"></div>
 
-          <div class="works-journey-steps">
-            <div class="works-step">
-              <div class="works-step-img">
+          <div className="works-journey-steps">
+            <div className="works-step">
+              <div className="works-step-img">
                 <img
                   src="/assets/images/nutrition/idea-new-2.webp"
                   alt="idea"
                 />
               </div>
 
-              <div class="works-step-circle">1</div>
+              <div className="works-step-circle">1</div>
               <h4 className="barlow-condensed-semi">Idea</h4>
               <p className="inter-regular">
                 Share your vision and target market.
@@ -992,14 +991,14 @@ function Home() {
               <span>1-3 DAYS</span>
             </div>
 
-            <div class="works-step">
-              <div class="works-step-img">
+            <div className="works-step">
+              <div className="works-step-img">
                 <img
                   src="/assets/images/nutrition/formulation-new-3.webp"
                   alt="formulation"
                 />
               </div>
-              <div class="works-step-circle">2</div>
+              <div className="works-step-circle">2</div>
               <h4 className="barlow-condensed-semi">Formulation</h4>
               <p className="inter-regular">
                 Custom formula + flavour development.
@@ -1007,14 +1006,14 @@ function Home() {
               <span>3-5 DAYS</span>
             </div>
 
-            <div class="works-step">
-              <div class="works-step-img">
+            <div className="works-step">
+              <div className="works-step-img">
                 <img
                   src="/assets/images/nutrition/manufacturer-new.webp"
                   alt="manufacturing"
                 />
               </div>
-              <div class="works-step-circle">3</div>
+              <div className="works-step-circle">3</div>
               <h4 className="barlow-condensed-semi">Manufacturing</h4>
               <p className="inter-regular">
                 GMP-certified production with COA.
@@ -1022,14 +1021,14 @@ function Home() {
               <span>5-7 DAYS</span>
             </div>
 
-            <div class="works-step">
-              <div class="works-step-img">
+            <div className="works-step">
+              <div className="works-step-img">
                 <img
                   src="/assets/images/nutrition/whey-protein-combo.webp"
                   alt="packaging"
                 />
               </div>
-              <div class="works-step-circle">4</div>
+              <div className="works-step-circle">4</div>
               <h4 className="barlow-condensed-semi">Packaging</h4>
               <p className="inter-regular">
                 Design, print, fill - <br /> turnkey.
@@ -1037,14 +1036,14 @@ function Home() {
               <span>3-4 DAYS</span>
             </div>
 
-            <div class="works-step">
-              <div class="works-step-img">
+            <div className="works-step">
+              <div className="works-step-img">
                 <img
                   src="/assets/images/nutrition/website-new.webp"
                   alt="website"
                 />
               </div>
-              <div class="works-step-circle">5</div>
+              <div className="works-step-circle">5</div>
               <h4 className="barlow-condensed-semi">Website</h4>
               <p className="inter-regular">
                 D2C store ready to sell on day one.
@@ -1055,7 +1054,7 @@ function Home() {
         </div>
       </section>
 
-      <section class="qua-section" id="certification">
+      <section className="qua-section" id="certification">
         <p className="qua-label barlow-condensed-semi">Quality Assurance</p>
 
         <h1 className="qua-title barlow-condensed-semi">
@@ -1090,14 +1089,14 @@ function Home() {
           })}
         </div>
 
-        <div class="qua-content">
-          <div class="qua-item">
-            <div class="check-box">
-              <svg class="check-icon" viewBox="0 0 14 14">
+        <div className="qua-content">
+          <div className="qua-item">
+            <div className="check-box">
+              <svg className="check-icon" viewBox="0 0 14 14">
                 <polyline points="2,7 5.5,10.5 12,3" />
               </svg>
             </div>
-            <div class="qua-item-text">
+            <div className="qua-item-text">
               <h3>GMP-Certified Production</h3>
               <p>
                 Manufactured to international Good Manufacturing Practice
@@ -1106,25 +1105,25 @@ function Home() {
             </div>
           </div>
 
-          <div class="qua-item">
-            <div class="check-box">
-              <svg class="check-icon" viewBox="0 0 14 14">
+          <div className="qua-item">
+            <div className="check-box">
+              <svg className="check-icon" viewBox="0 0 14 14">
                 <polyline points="2,7 5.5,10.5 12,3" />
               </svg>
             </div>
-            <div class="qua-item-text">
+            <div className="qua-item-text">
               <h3>Batch COA on Every Order</h3>
               <p>Certificate of Analysis shipped with every production run.</p>
             </div>
           </div>
 
-          <div class="qua-item">
-            <div class="check-box">
-              <svg class="check-icon" viewBox="0 0 14 14">
+          <div className="qua-item">
+            <div className="check-box">
+              <svg className="check-icon" viewBox="0 0 14 14">
                 <polyline points="2,7 5.5,10.5 12,3" />
               </svg>
             </div>
-            <div class="qua-item-text">
+            <div className="qua-item-text">
               <h3>Third-Party Lab Testing</h3>
               <p>Independent verification of purity, potency, and safety.</p>
             </div>
@@ -1136,7 +1135,7 @@ function Home() {
             download
             className="download-btn barlow-condensed-semi"
           >
-            <i class="fa-solid fa-download"></i> Download Our Brochure
+            <i className="fa-solid fa-download"></i> Download Our Brochure
           </a>
         </div>
       </section>
@@ -1207,13 +1206,17 @@ function Home() {
 
           <div className="row pb-5 justify-content-center overflow-hidden">
             <div className="col-md-8">
-              <Accordion defaultActiveKey={["1"]} alwaysOpen inter-regular>
+              <Accordion
+                defaultActiveKey={["1"]}
+                alwaysOpen
+                className="inter-regular"
+              >
                 <Accordion.Item eventKey="1" className="mt-3 p-4">
                   <Accordion.Header className="faq-question">
                     What is the minimum order quantity?
                   </Accordion.Header>
                   <Accordion.Body className="faq-answer">
-                    Our MOQ starts at 50 KG per SKU — enough to launch a real
+                    Our MOQ starts at 50 KG per SKU - enough to launch a real
                     brand without overcommitting inventory. Most first-time
                     founders start with 1-2 SKUs at 50 KG each.
                   </Accordion.Body>
@@ -1235,7 +1238,7 @@ function Home() {
                     Do you offer white labelling and private label?
                   </Accordion.Header>
                   <Accordion.Body className="faq-answer">
-                    Yes — completely. Your brand name, your logo, your
+                    Yes - completely. Your brand name, your logo, your
                     packaging. We handle formulation, manufacturing, COA
                     documentation, FSSAI-compliant labelling, and dispatch. also
                     website development , full brand launch support
@@ -1272,7 +1275,7 @@ function Home() {
                   </Accordion.Header>
                   <Accordion.Body className="faq-answer">
                     We review every label for FSSAI compliance before production
-                    begins — mandatory elements, health claim restrictions,
+                    begins - mandatory elements, health claim restrictions,
                     allergen declarations, batch numbering. We flag issues
                     before they become problems.
                   </Accordion.Body>
@@ -1298,7 +1301,7 @@ function Home() {
                     That's exactly what third-party manufacturing is for. You
                     own the brand, we handle production. Many of our clients
                     sell on Amazon India, Flipkart, and their own Shopify stores
-                    — no factory needed.
+                    - no factory needed.
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
@@ -1307,18 +1310,18 @@ function Home() {
         </div>
       </section>
 
-      <section class="launch-section">
-        <div class="launch-container">
-          <h2 class="launch-title barlow-condensed-semi">
+      <section className="launch-section">
+        <div className="launch-container">
+          <h2 className="launch-title barlow-condensed-semi">
             Ready to Launch <br /> Your Brand?
           </h2>
 
-          <p class="launch-sub inter-regular">
+          <p className="launch-sub inter-regular">
             From idea to shelf in under 20 days. It starts with a free 30-minute
             roadmap call.
           </p>
 
-          <div class="launch-hbtns">
+          <div className="launch-hbtns">
             <RequestQuoteButton
               className="launch-bp barlow-condensed-semi"
               text={"Get Free Quote →"}

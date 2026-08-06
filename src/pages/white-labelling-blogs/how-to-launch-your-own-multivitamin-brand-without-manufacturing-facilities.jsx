@@ -76,8 +76,8 @@ function HowToLaunchYourOwnMultivitaminBrandWithoutManufacturingFacilities() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
   return (
     <>
@@ -489,7 +489,7 @@ function HowToLaunchYourOwnMultivitaminBrandWithoutManufacturingFacilities() {
                         Here's a truth most don't say:{" "}
                       </p>
                       <p className="blog-text  mb-8">
-                        Most formulas are similar —
+                        Most formulas are similar -
                         <strong>trust is what sells.</strong>
                       </p>
                       <p className="blog-text  mb-8">Add this perspective:</p>
@@ -505,7 +505,7 @@ function HowToLaunchYourOwnMultivitaminBrandWithoutManufacturingFacilities() {
                       <p className="blog-text">
                         <em>
                           "A reliable nutraceutical supplement manufacturer
-                          ensures quality — but your brand builds trust."
+                          ensures quality - but your brand builds trust."
                         </em>
                       </p>
                     </div>

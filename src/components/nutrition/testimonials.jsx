@@ -43,7 +43,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: "We at Pro Wolf Nutrition are truly impressed with Gomzi Life Sciences for their exceptional supplement manufacturing services. They played a key role in bringing our premium Intence Pre Workout to life — available in our signature Tangy Orange and Green Apple flavors.",
+    text: "We at Pro Wolf Nutrition are truly impressed with Gomzi Life Sciences for their exceptional supplement manufacturing services. They played a key role in bringing our premium Intence Pre Workout to life - available in our signature Tangy Orange and Green Apple flavors.",
     name: "Rathod Kishan",
     role: "Founder of Prowolf",
     rating: 5,
@@ -65,8 +65,8 @@ const carouselOptions = {
   autoplayTimeout: 4000,
   autoplayHoverPause: true,
   navText: [
-    `<span class="testi-nav-btn prev-btn">&#8592;</span>`,
-    `<span class="testi-nav-btn next-btn">&#8594;</span>`,
+    `<span className="testi-nav-btn prev-btn">&#8592;</span>`,
+    `<span className="testi-nav-btn next-btn">&#8594;</span>`,
   ],
   responsive: {
     0: { items: 1 },

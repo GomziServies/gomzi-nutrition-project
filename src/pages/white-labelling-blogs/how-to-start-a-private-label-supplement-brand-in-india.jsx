@@ -11,8 +11,8 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
 
   return (
@@ -188,7 +188,7 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
                         manufacturers that provide white label products,
                         allowing brands to quickly enter the market. These
                         manufacturers already follow FSSAI, GMP, and ISO
-                        standards—making the process simple for new brands that
+                        standards-making the process simple for new brands that
                         want to avoid regulatory complexity.
                       </p>
                       <p className="blog-text">

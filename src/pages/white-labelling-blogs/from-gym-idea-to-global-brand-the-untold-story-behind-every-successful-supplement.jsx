@@ -67,7 +67,7 @@ const faqData = [
     eventKey: "faq5",
     question: "5. Why is formulation important in protein supplements?",
     answer:
-      "Formulation determines taste, digestibility, absorption, and effectiveness—making it a key factor in customer satisfaction and repeat purchases.",
+      "Formulation determines taste, digestibility, absorption, and effectiveness-making it a key factor in customer satisfaction and repeat purchases.",
   },
   {
     eventKey: "faq6",
@@ -88,8 +88,8 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
   const canonicalUrl = window.location.href;
   useEffect(() => {
     const $ = window.$;
-    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+    $(".owl-prev").html('<i className="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i className="fas fa-arrow-right"></i>');
   }, []);
   return (
     <>
@@ -223,7 +223,7 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                           <strong>"Let's build a supplement brand."</strong>
                         </p>
                         <p className="blog-text mb-8">
-                          But what most people don't realize is — an idea is
+                          But what most people don't realize is - an idea is
                           just 1% of the journey.
                         </p>
                         <p className="blog-text mb-8">
@@ -243,7 +243,7 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                           India is going through a massive shift.
                         </p>
                         <p className="blog-text">
-                          People are no longer waiting to get sick — they're
+                          People are no longer waiting to get sick - they're
                           investing in <strong>preventive health</strong> .
                         </p>
                         <p className="blog-text">
@@ -334,7 +334,7 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                           <li>Taste &amp; mixability</li>
                         </ul>
                         <p className="blog-text">
-                          This is where many brands fail — and where great
+                          This is where many brands fail - and where great
                           brands are built.
                         </p>
 
@@ -358,7 +358,7 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                               in India
                             </Link>
                           </strong>{" "}
-                          becomes a critical decision — not just a vendor
+                          becomes a critical decision - not just a vendor
                           choice.
                         </p>
                         <p className="blog-text mb-8">
@@ -469,7 +469,7 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                           </li>
                         </ul>
                         <p className="blog-text">
-                          We don't just manufacture — we help you build a brand
+                          We don't just manufacture - we help you build a brand
                           that lasts.
                         </p>
                       </div>
@@ -505,7 +505,7 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                               whey protein concentrate manufacturers
                             </Link>
                           </strong>{" "}
-                          ensures that your product performs the same — every
+                          ensures that your product performs the same - every
                           single time.
                         </p>
                       </div>
@@ -574,7 +574,7 @@ function FromGymIdeatoGlobalBrandTheUntoldStoryBehindEverySuccessfulSupplement()
                           <p className="blog-text mb-5px">
                             Ready to build your supplement brand the right way?
                             Let's create something your customers don't just try
-                            — but trust and reorder.
+                            - but trust and reorder.
                           </p>
                         </div>
                       </div>

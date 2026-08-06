@@ -2,6 +2,7 @@ import React from "react";
 import "../../assets/css/nutrition.css";
 
 const certificates = [
+  { file: "nutri-certi-6.webp", name: "FDA", sub: "FDA Registreted " },
   { file: "nutri-certi-1.webp", name: "HACCP", sub: "Hazard Control Point" },
   {
     file: "nutri-certi-2.webp",

@@ -1,76 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
-const ShieldIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    width="20"
-    height="20"
-  >
-    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-    <polyline points="9 12 11 14 15 10" />
-  </svg>
-);
-const ChartIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    width="20"
-    height="20"
-  >
-    <line x1="18" y1="20" x2="18" y2="10" />
-    <line x1="12" y1="20" x2="12" y2="4" />
-    <line x1="6" y1="20" x2="6" y2="14" />
-    <line x1="2" y1="20" x2="22" y2="20" />
-  </svg>
-);
-const ClockIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    width="20"
-    height="20"
-  >
-    <circle cx="12" cy="12" r="10" />
-    <polyline points="12 6 12 12 16 14" />
-  </svg>
-);
-const FlaskIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    width="20"
-    height="20"
-  >
-    <path d="M9 3h6v11l3.5 6H5.5L9 14V3z" />
-    <line x1="9" y1="3" x2="15" y2="3" />
-  </svg>
-);
-const ArrowRight = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.5"
-    width="16"
-    height="16"
-  >
-    <line x1="5" y1="12" x2="19" y2="12" />
-    <polyline points="12 5 19 12 12 19" />
-  </svg>
-);
 
 export default function HeroSection() {
   const styleRef = useRef(null);
-  const [showStickyCta, setShowStickyCta] = useState(true);
+  const [, setShowStickyCta] = useState(true);
 
   const handleContactClick = () => {
     setTimeout(() => {
@@ -166,9 +99,9 @@ export default function HeroSection() {
               </button>
             </div>
 
-            <div class="whey-landing-hero-badge-wrapper">
-              <div class="whey-landing-hero-badge">
-                <div class="whey-landing-hero-badge-icon">
+            <div className="whey-landing-hero-badge-wrapper">
+              <div className="whey-landing-hero-badge">
+                <div className="whey-landing-hero-badge-icon">
                   <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
                     <path
                       stroke-linecap="round"
@@ -178,13 +111,13 @@ export default function HeroSection() {
                   </svg>
                 </div>
 
-                <div class="whey-landing-hero-badge-text">
+                <div className="whey-landing-hero-badge-text">
                   Whey Sample Support
                 </div>
               </div>
 
-              <div class="whey-landing-hero-badge">
-                <div class="whey-landing-hero-badge-icon">
+              <div className="whey-landing-hero-badge">
+                <div className="whey-landing-hero-badge-icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -224,11 +157,11 @@ export default function HeroSection() {
                   </svg>
                 </div>
 
-                <div class="whey-landing-hero-badge-text">Start From 50 KG</div>
+                <div className="whey-landing-hero-badge-text">Start From 50 KG</div>
               </div>
 
-              <div class="whey-landing-hero-badge">
-                <div class="whey-landing-hero-badge-icon">
+              <div className="whey-landing-hero-badge">
+                <div className="whey-landing-hero-badge-icon">
                   <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
                     <path
                       stroke-linecap="round"
@@ -238,7 +171,7 @@ export default function HeroSection() {
                   </svg>
                 </div>
 
-                <div class="whey-landing-hero-badge-text">
+                <div className="whey-landing-hero-badge-text">
                   Formulation Guidance
                 </div>
               </div>
@@ -283,9 +216,9 @@ export default function HeroSection() {
               Request Sample & Start Your Whey Brand
             </button>
           </div>
-          <div class="whey-landing-hero-badge-wrapper">
-            <div class="whey-landing-hero-badge">
-              <div class="whey-landing-hero-badge-icon">
+          <div className="whey-landing-hero-badge-wrapper">
+            <div className="whey-landing-hero-badge">
+              <div className="whey-landing-hero-badge-icon">
                 <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
                   <path
                     stroke-linecap="round"
@@ -295,13 +228,13 @@ export default function HeroSection() {
                 </svg>
               </div>
 
-              <div class="whey-landing-hero-badge-text">
+              <div className="whey-landing-hero-badge-text">
                 Whey Sample Support
               </div>
             </div>
 
-            <div class="whey-landing-hero-badge">
-              <div class="whey-landing-hero-badge-icon">
+            <div className="whey-landing-hero-badge">
+              <div className="whey-landing-hero-badge-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -341,11 +274,11 @@ export default function HeroSection() {
                 </svg>
               </div>
 
-              <div class="whey-landing-hero-badge-text">Start From 50 KG</div>
+              <div className="whey-landing-hero-badge-text">Start From 50 KG</div>
             </div>
 
-            <div class="whey-landing-hero-badge">
-              <div class="whey-landing-hero-badge-icon">
+            <div className="whey-landing-hero-badge">
+              <div className="whey-landing-hero-badge-icon">
                 <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
                   <path
                     stroke-linecap="round"
@@ -355,7 +288,7 @@ export default function HeroSection() {
                 </svg>
               </div>
 
-              <div class="whey-landing-hero-badge-text">
+              <div className="whey-landing-hero-badge-text">
                 Formulation Guidance
               </div>
             </div>
