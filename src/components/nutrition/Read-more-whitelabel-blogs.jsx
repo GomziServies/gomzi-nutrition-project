@@ -4,7 +4,15 @@ import NutritionHeader from "../partials/Header/nutritionsheader";
 import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
-   {
+  {
+    number: 76,
+    title: "India's Nutraceutical Boom Has a Trust Problems",
+    url: "/blogs/indias-nutraceutical-boom-has-a-trust-problems",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/indias-nutraceutical-boom-has-a-trust-problems.webp",
+  },
+  {
     number: 75,
     title:
       "Every Supplement Brand Is Fighting the Wrong Battle (And It's Costing Them Customers)",
@@ -13,7 +21,7 @@ export const whitelabelBloglist = [
       process.env.PUBLIC_URL +
       "/assets/images/white-labelling-blogs/every-supplement-brand-is-fighting-the-wrong-battle.webp",
   },
-   {
+  {
     number: 74,
     title:
       "The Amazon Effect: How E-commerce Is Changing Nutraceutical Manufacturing",
@@ -22,7 +30,7 @@ export const whitelabelBloglist = [
       process.env.PUBLIC_URL +
       "/assets/images/white-labelling-blogs/the-amazon-effect-how-e-commerce-is-changing-nutraceutical-manufacturing.webp",
   },
-   {
+  {
     number: 73,
     title:
       "How Nutraceutical Brands Can Choose the Right Manufacturing Partner in 2026",
