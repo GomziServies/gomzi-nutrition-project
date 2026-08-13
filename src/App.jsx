@@ -88,6 +88,7 @@ import FounderPage from "./pages/nutrition/founderPage";
 import HowNutraceuticalBrandsCanChooseTheRightManufacturingPartnerIn2026 from "./pages/white-labelling-blogs/how-nutraceutical-brands-can-choose-the-right-manufacturing-partner-in-2026";
 import TheAmazonEffectHowECommerceIsChangingNutraceuticalManufacturing from "./pages/white-labelling-blogs/the-amazon-effect-how-e-commerce-is-changing-nutraceutical-manufacturing";
 import EverySupplementBrandIsFightingTheWrongBattle from "./pages/white-labelling-blogs/every-supplement-brand-is-fighting-the-wrong-battle";
+import IndiasNutraceuticalBoomHasaTrustProblems from "./pages/white-labelling-blogs/indias-nutraceutical-boom-has-a-trust-problems";
 
 const UserProfile = lazy(() => import("./pages/account/profile"));
 const UserOrder = lazy(() => import("./pages/account/order"));
@@ -667,6 +668,11 @@ function App() {
          <Route
           path="/blogs/the-amazon-effect-how-e-commerce-is-changing-nutraceutical-manufacturing"
           element={<TheAmazonEffectHowECommerceIsChangingNutraceuticalManufacturing />}
+        />
+
+          <Route
+          path="/blogs/indias-nutraceutical-boom-has-a-trust-problems"
+          element={<IndiasNutraceuticalBoomHasaTrustProblems />}
         />
 
           <Route
