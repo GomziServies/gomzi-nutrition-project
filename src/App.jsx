@@ -89,6 +89,10 @@ import HowNutraceuticalBrandsCanChooseTheRightManufacturingPartnerIn2026 from ".
 import TheAmazonEffectHowECommerceIsChangingNutraceuticalManufacturing from "./pages/white-labelling-blogs/the-amazon-effect-how-e-commerce-is-changing-nutraceutical-manufacturing";
 import EverySupplementBrandIsFightingTheWrongBattle from "./pages/white-labelling-blogs/every-supplement-brand-is-fighting-the-wrong-battle";
 import IndiasNutraceuticalBoomHasaTrustProblems from "./pages/white-labelling-blogs/indias-nutraceutical-boom-has-a-trust-problems";
+import PlantBasedVeganProteinManufacturingInIndiaAGenuineUnderservedOpportunity from "./pages/white-labelling-blogs/plant-based-vegan-protein-manufacturing-in-india-a-genuine-underserved-opportunity";
+import HowMuchDoesItCostToManufactureAPrivateLabelSupplementInIndiaARealisticBreakdown from "./pages/white-labelling-blogs/how-much-does-it-cost-to-manufacture-a-private-label-supplement-in-india-a-realistic-breakdown";
+import FssaiVsGmpVsHaccpWhatEachCertificationActuallyMeansForYourSupplementBrand from "./pages/white-labelling-blogs/fssai-vs-gmp-vs-haccp-what-each-certification-actually-means-for-your-supplement-brand";
+import LowMoqSupplementManufacturingInIndiaWhatMoqReallyMeansHowToPlanYourFirstOrder from "./pages/white-labelling-blogs/low-moq-supplement-manufacturing-in-india-what-moq-really-means-how-to-plan-your-first-order";
 
 const UserProfile = lazy(() => import("./pages/account/profile"));
 const UserOrder = lazy(() => import("./pages/account/order"));
@@ -663,21 +667,53 @@ function App() {
         />
         <Route
           path="/blogs/how-nutraceutical-brands-can-choose-the-right-manufacturing-partner-in-2026"
-          element={<HowNutraceuticalBrandsCanChooseTheRightManufacturingPartnerIn2026 />}
+          element={
+            <HowNutraceuticalBrandsCanChooseTheRightManufacturingPartnerIn2026 />
+          }
         />
-         <Route
+        <Route
           path="/blogs/the-amazon-effect-how-e-commerce-is-changing-nutraceutical-manufacturing"
-          element={<TheAmazonEffectHowECommerceIsChangingNutraceuticalManufacturing />}
+          element={
+            <TheAmazonEffectHowECommerceIsChangingNutraceuticalManufacturing />
+          }
         />
 
-          <Route
+        <Route
           path="/blogs/indias-nutraceutical-boom-has-a-trust-problems"
           element={<IndiasNutraceuticalBoomHasaTrustProblems />}
         />
 
-          <Route
+        <Route
           path="/blogs/every-supplement-brand-is-fighting-the-wrong-battle"
           element={<EverySupplementBrandIsFightingTheWrongBattle />}
+        />
+
+        <Route
+          path="/blogs/plant-based-vegan-protein-manufacturing-in-india-a-genuine-underserved-opportunity"
+          element={
+            <PlantBasedVeganProteinManufacturingInIndiaAGenuineUnderservedOpportunity />
+          }
+        />
+
+        <Route
+          path="/blogs/how-much-does-it-cost-to-manufacture-a-private-label-supplement-in-india-a-realistic-breakdown"
+          element={
+            <HowMuchDoesItCostToManufactureAPrivateLabelSupplementInIndiaARealisticBreakdown />
+          }
+        />
+
+        <Route
+          path="/blogs/fssai-vs-gmp-vs-haccp-what-each-certification-actually-means-for-your-supplement-brand"
+          element={
+            <FssaiVsGmpVsHaccpWhatEachCertificationActuallyMeansForYourSupplementBrand />
+          }
+        />
+
+         <Route
+          path="/blogs/low-moq-supplement-manufacturing-in-india-what-moq-really-means-how-to-plan-your-first-order"
+          element={
+            <LowMoqSupplementManufacturingInIndiaWhatMoqReallyMeansHowToPlanYourFirstOrder />
+          }
         />
 
         <Route path="/nutrition/contact-us" element={<ContactUs />} />

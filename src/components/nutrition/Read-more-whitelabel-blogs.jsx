@@ -4,6 +4,43 @@ import NutritionHeader from "../partials/Header/nutritionsheader";
 import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
+   {
+    number: 80,
+    title:
+      "Low MOQ Supplement Manufacturing in India: What MOQ Really Means & How to Plan Your First Order",
+    url: "/blogs/low-moq-supplement-manufacturing-in-india-what-moq-really-means-how-to-plan-your-first-order",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/low-moq-supplement-manufacturing-in-india-what-moq-really-means-how-to-plan-your-first-order.webp",
+  },
+  
+  {
+    number: 79,
+    title:
+      "FSSAI vs. GMP vs. HACCP: What Each Certification Actually Means for Your Supplement Brand",
+    url: "/blogs/fssai-vs-gmp-vs-haccp-what-each-certification-actually-means-for-your-supplement-brand",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/fssai-vs-gmp-vs-haccp-what-each-certification-actually-means-for-your-supplement-brand.webp",
+  },
+  {
+    number: 78,
+    title:
+      "How Much Does It Cost to Manufacture a Private Label Supplement in India? A Realistic Breakdown",
+    url: "/blogs/how-much-does-it-cost-to-manufacture-a-private-label-supplement-in-india-a-realistic-breakdown",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-much-does-it-cost-to-manufacture-a-private-label-supplement-in-india-a-realistic-breakdown.webp",
+  },
+  {
+    number: 77,
+    title:
+      "Plant-Based & Vegan Protein Manufacturing in India: A Genuine, Underserved Opportunity",
+    url: "/blogs/plant-based-vegan-protein-manufacturing-in-india-a-genuine-underserved-opportunity",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/plant-based-vegan-protein-manufacturing-in-india-a-genuine-underserved-opportunity.webp",
+  },
   {
     number: 76,
     title: "India's Nutraceutical Boom Has a Trust Problems",
