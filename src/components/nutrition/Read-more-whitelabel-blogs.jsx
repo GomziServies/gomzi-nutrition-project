@@ -4,7 +4,33 @@ import NutritionHeader from "../partials/Header/nutritionsheader";
 import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
-   {
+  {
+    number: 83,
+    title:
+      "White Label vs. Private Label vs. Custom Formulation: Which Is Right for Your Supplement Brand?",
+    url: "/blogs/white-label-vs-private-label-vs-custom-formulation-which-is-right-for-your-supplement-brand",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/white-label-vs-private-label-vs-custom-formulation-which-is-right-for-your-supplement-brand.webp",
+  },
+  {
+    number: 82,
+    title: "How to Actually Evaluate a Third-Party Supplement Manufacturer",
+    url: "/blogs/how-to-actually-evaluate-a-third-party-supplement-manufacturer",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-to-actually-evaluate-a-third-party-supplement-manufacturer.webp",
+  },
+  {
+    number: 81,
+    title:
+      "What That Means If Your Brand Sells Protein Powder, Peanut Butter, and Multivitamins?",
+    url: "/blogs/what-that-means-if-your-brand-sells-protein-powder-peanut-butter-and-multivitamins",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/what-that-means-if-your-brand-sells-protein-powder-peanut-butter-and-multivitamins.webp",
+  },
+  {
     number: 80,
     title:
       "Low MOQ Supplement Manufacturing in India: What MOQ Really Means & How to Plan Your First Order",
@@ -13,7 +39,7 @@ export const whitelabelBloglist = [
       process.env.PUBLIC_URL +
       "/assets/images/white-labelling-blogs/low-moq-supplement-manufacturing-in-india-what-moq-really-means-how-to-plan-your-first-order.webp",
   },
-  
+
   {
     number: 79,
     title:

@@ -93,6 +93,9 @@ import PlantBasedVeganProteinManufacturingInIndiaAGenuineUnderservedOpportunity 
 import HowMuchDoesItCostToManufactureAPrivateLabelSupplementInIndiaARealisticBreakdown from "./pages/white-labelling-blogs/how-much-does-it-cost-to-manufacture-a-private-label-supplement-in-india-a-realistic-breakdown";
 import FssaiVsGmpVsHaccpWhatEachCertificationActuallyMeansForYourSupplementBrand from "./pages/white-labelling-blogs/fssai-vs-gmp-vs-haccp-what-each-certification-actually-means-for-your-supplement-brand";
 import LowMoqSupplementManufacturingInIndiaWhatMoqReallyMeansHowToPlanYourFirstOrder from "./pages/white-labelling-blogs/low-moq-supplement-manufacturing-in-india-what-moq-really-means-how-to-plan-your-first-order";
+import WhatThatMeansIfYourBrandSellsProteinPowderPeanutButterAndMultivitamins from "./pages/white-labelling-blogs/what-that-means-if-your-brand-sells-protein-powder-peanut-butter-and-multivitamins";
+import HowToActuallyEvaluateAThirdPartySupplementManufacturer from "./pages/white-labelling-blogs/how-to-actually-evaluate-a-third-party-supplement-manufacturer";
+import WhiteLabelVsPrivateLabelVsCustomFormulationWhichIsRightForYourSupplementBrand from "./pages/white-labelling-blogs/white-label-vs-private-label-vs-custom-formulation-which-is-right-for-your-supplement-brand";
 
 const UserProfile = lazy(() => import("./pages/account/profile"));
 const UserOrder = lazy(() => import("./pages/account/order"));
@@ -709,10 +712,29 @@ function App() {
           }
         />
 
-         <Route
+        <Route
           path="/blogs/low-moq-supplement-manufacturing-in-india-what-moq-really-means-how-to-plan-your-first-order"
           element={
             <LowMoqSupplementManufacturingInIndiaWhatMoqReallyMeansHowToPlanYourFirstOrder />
+          }
+        />
+
+        <Route
+          path="/blogs/what-that-means-if-your-brand-sells-protein-powder-peanut-butter-and-multivitamins"
+          element={
+            <WhatThatMeansIfYourBrandSellsProteinPowderPeanutButterAndMultivitamins />
+          }
+        />
+
+        <Route
+          path="/blogs/how-to-actually-evaluate-a-third-party-supplement-manufacturer"
+          element={<HowToActuallyEvaluateAThirdPartySupplementManufacturer />}
+        />
+
+        <Route
+          path="/blogs/white-label-vs-private-label-vs-custom-formulation-which-is-right-for-your-supplement-brand"
+          element={
+            <WhiteLabelVsPrivateLabelVsCustomFormulationWhichIsRightForYourSupplementBrand />
           }
         />
 
