@@ -5,6 +5,31 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 86,
+    title:
+      "How to Start a Supplement Brand in India The Real Steps, Not the Instagram Version",
+    url: "/blogs/how-to-start-a-supplement-brand-in-india",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-to-start-a-supplement-brand-in-india.webp",
+  },
+  {
+    number: 85,
+    title: "What Happens When a Batch Fails Quality Testing",
+    url: "/blogs/what-happens-when-a-batch-fails-quality-testing",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/what-happens-when-a-batch-fails-quality-testing.webp",
+  },
+  {
+    number: 84,
+    title: "Private Label vs White Label Supplements: What Founders Miss",
+    url: "/blogs/private-labe-vs-white-label-supplements-what-founders-miss",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/private-labe-vs-white-label-supplements-what-founders-miss.webp",
+  },
+  {
     number: 83,
     title:
       "White Label vs. Private Label vs. Custom Formulation: Which Is Right for Your Supplement Brand?",

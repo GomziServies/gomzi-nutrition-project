@@ -96,6 +96,9 @@ import LowMoqSupplementManufacturingInIndiaWhatMoqReallyMeansHowToPlanYourFirstO
 import WhatThatMeansIfYourBrandSellsProteinPowderPeanutButterAndMultivitamins from "./pages/white-labelling-blogs/what-that-means-if-your-brand-sells-protein-powder-peanut-butter-and-multivitamins";
 import HowToActuallyEvaluateAThirdPartySupplementManufacturer from "./pages/white-labelling-blogs/how-to-actually-evaluate-a-third-party-supplement-manufacturer";
 import WhiteLabelVsPrivateLabelVsCustomFormulationWhichIsRightForYourSupplementBrand from "./pages/white-labelling-blogs/white-label-vs-private-label-vs-custom-formulation-which-is-right-for-your-supplement-brand";
+import PrivateLabeVsWhiteLabelSupplementsWhatFoundersMiss from "./pages/white-labelling-blogs/private-labe-vs-white-label-supplements-what-founders-miss";
+import WhatHappensWhenABatchFailsQualityTesting from "./pages/white-labelling-blogs/what-happens-when-a-batch-fails-quality-testing";
+import HowToStartaSupplementBrandInIndia from "./pages/white-labelling-blogs/how-to-start-a-supplement-brand-in-india";
 
 const UserProfile = lazy(() => import("./pages/account/profile"));
 const UserOrder = lazy(() => import("./pages/account/order"));
@@ -736,6 +739,21 @@ function App() {
           element={
             <WhiteLabelVsPrivateLabelVsCustomFormulationWhichIsRightForYourSupplementBrand />
           }
+        />
+
+        <Route
+          path="/blogs/private-labe-vs-white-label-supplements-what-founders-miss"
+          element={<PrivateLabeVsWhiteLabelSupplementsWhatFoundersMiss />}
+        />
+
+        <Route
+          path="/blogs/what-happens-when-a-batch-fails-quality-testing"
+          element={<WhatHappensWhenABatchFailsQualityTesting />}
+        />
+
+        <Route
+          path="/blogs/how-to-start-a-supplement-brand-in-india"
+          element={<HowToStartaSupplementBrandInIndia />}
         />
 
         <Route path="/nutrition/contact-us" element={<ContactUs />} />
