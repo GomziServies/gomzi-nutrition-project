@@ -3200,7 +3200,7 @@ body.cart-body {
   font-size: 20px;
   letter-spacing: 0.1px;
   background-color: transparent;
-   appearance: none;
+  appearance: none;
   -webkit-appearance: none;
 }
 
@@ -4107,7 +4107,7 @@ body.cart-body {
   display: -webkit-box !important;
   overflow: hidden;
   text-overflow: ellipsis;
-   line-clamp: 1;    
+  line-clamp: 1;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   color: #b3b3b5;
@@ -8475,7 +8475,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .center-menu-list {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -11074,13 +11074,12 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media (max-width: 576px) {
-    .who-card img {
-        width: 100% !important;
-        height: 429px !important;
-        object-fit: cover !important;
-    }
+  .who-card img {
+    width: 100% !important;
+    height: 429px !important;
+    object-fit: cover !important;
+  }
 }
-
 
 @media (max-width: 768px) {
   .who-card {

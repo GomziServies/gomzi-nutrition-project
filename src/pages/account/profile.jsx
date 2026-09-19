@@ -97,15 +97,25 @@ function UserProfile() {
       const response = await axiosInstance.get("/account/profile");
       const userData = response.data.data;
       if (userData) {
+        const u = userData.user || userData;
+        const rawFirst = (u.first_name || "").trim();
+        const rawLast = (u.last_name || "").trim();
+        const cleanFirst = rawFirst.toLowerCase() === "fg" ? "" : rawFirst;
+        const cleanLast = rawLast.toLowerCase() === "user" ? "" : rawLast;
+
+        u.first_name = cleanFirst;
+        u.last_name = cleanLast;
+
+        localStorage.setItem("user_info", JSON.stringify(userData));
+        window.dispatchEvent(new Event("user-info-updated"));
         setFormData((prevData) => ({
           ...prevData,
-          user_id: userData.user.uid || "",
-          first_name: userData.user.first_name || "",
-          last_name: userData.user.last_name || "",
-          mobile: userData.user.mobile || "",
-          email: userData.user.email || "",
-          profilePhoto:
-            "https://files.fggroup.in/" + (userData.user.profile_image || ""),
+          user_id: u.uid || "",
+          first_name: cleanFirst,
+          last_name: cleanLast,
+          mobile: u.mobile || "",
+          email: u.email || "",
+          profilePhoto: "https://files.fggroup.in/" + (u.profile_image || ""),
         }));
       }
     } catch (error) {
@@ -147,7 +157,8 @@ function UserProfile() {
             </Col>
             <Col md={4}>
               <h4 className="font-weight-bold">
-                {formData.first_name} {formData.last_name}
+                {`${formData.first_name || ""} ${formData.last_name || ""}`.trim() ||
+                  "User Profile"}
               </h4>
               <input
                 accept="image/*"

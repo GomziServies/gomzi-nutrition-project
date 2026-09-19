@@ -5,6 +5,15 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 87,
+    title:
+      "What Quick Commerce Is Quietly Requiring From Supplement Manufacturers in 2026",
+    url: "/blogs/what-quick-commerce-is-quietly-requiring-from-supplement-manufacturers",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/what-quick-commerce-is-quietly-requiring-from-supplement-manufacturers.webp",
+  },
+  {
     number: 86,
     title:
       "How to Start a Supplement Brand in India The Real Steps, Not the Instagram Version",

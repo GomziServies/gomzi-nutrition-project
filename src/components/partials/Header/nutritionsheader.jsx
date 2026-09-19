@@ -76,6 +76,11 @@ function NutritionHeader() {
                   Contact Us
                 </Link>
               </li>
+              <li>
+                <Link to="/help-center" target="_blank" className="inter-500">
+                  Help Center
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -119,6 +124,12 @@ function NutritionHeader() {
                   className="inter-500"
                 >
                   Contact Us
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/help-center" target="_blank" className="inter-500">
+                  Help Center
                 </Link>
               </li>
 
