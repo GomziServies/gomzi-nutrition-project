@@ -1,0 +1,1208 @@
+/* fwg-complaints.css - Gomzi Lifesciences Theme Redesign */
+
+:root {
+  --gls-primary: #86c33a;
+  --gls-primary-hover: #74ac32;
+  --gls-primary-dark: #2e5a00;
+  --gls-primary-light: #e8f7e0;
+  --gls-primary-tint: #f8fdf2;
+  --gls-text-heading: #111827;
+  --gls-text-body: #4b5563;
+  --gls-text-muted: #6b7280;
+  --gls-border: #e5e9e0;
+  --gls-border-subtle: #eef2ea;
+  --gls-card-bg: #ffffff;
+}
+
+/* --- Base Layout --- */
+.hc-page-wrapper {
+  margin-top: 70px;
+  background-color: #ffffff;
+  color: var(--gls-text-body);
+  font-family: "Inter", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* --- Hero Section --- */
+.hc-hero-section {
+  position: relative;
+  background: linear-gradient(180deg, #f4f9ed 0%, #ffffff 100%);
+  padding: 60px 0 50px;
+  border-bottom: 1px solid var(--gls-border-subtle);
+}
+
+.hc-hero-content {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--gls-primary-light);
+  color: var(--gls-primary-dark);
+  padding: 7px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border: 1px solid rgba(134, 195, 58, 0.3);
+}
+
+.hc-badge i {
+  font-size: 12px;
+  color: var(--gls-primary);
+}
+
+.hc-hero-title {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 1.25;
+  color: var(--gls-text-heading);
+  margin-bottom: 18px;
+}
+
+.hc-hero-title .highlight {
+  color: var(--gls-primary);
+}
+
+.hc-hero-desc {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--gls-text-body);
+  margin-bottom: 30px;
+}
+
+.hc-hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hc-btn-primary {
+  background: linear-gradient(135deg, #86c33a 0%, #76b52c 100%);
+  color: #ffffff !important;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 13px 32px;
+  border-radius: 30px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(134, 195, 58, 0.35);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hc-btn-primary:hover {
+  background: linear-gradient(135deg, #74ac32 0%, #68a324 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(134, 195, 58, 0.45);
+  color: #ffffff;
+}
+
+.hc-btn-outline {
+  background: #ffffff;
+  color: var(--gls-primary-dark) !important;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 13px 30px;
+  border-radius: 30px;
+  border: 1.5px solid var(--gls-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hc-btn-outline:hover {
+  background: var(--gls-primary-light);
+  transform: translateY(-2px);
+  color: var(--gls-primary-dark);
+}
+
+/* --- 4-Step Process Section --- */
+.hc-process-section {
+  padding: 70px 0;
+  background-color: #ffffff;
+}
+
+.hc-section-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.hc-section-title {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  color: var(--gls-text-heading);
+  margin-bottom: 12px;
+}
+
+.hc-section-title .highlight {
+  color: var(--gls-primary);
+}
+
+.hc-section-subtitle {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  color: var(--gls-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hc-step-card {
+  background: #ffffff;
+  border: 1px solid var(--gls-border-subtle);
+  border-radius: 18px;
+  padding: 32px 20px;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.hc-step-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gls-primary);
+  box-shadow: 0 12px 30px rgba(134, 195, 58, 0.12);
+}
+
+.hc-step-badge {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  color: var(--gls-primary);
+  background: var(--gls-primary-light);
+  padding: 3px 9px;
+  border-radius: 12px;
+}
+
+.hc-step-icon {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #86c33a 0%, #76b52c 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 26px;
+  box-shadow: 0 8px 18px rgba(134, 195, 58, 0.32);
+}
+
+.hc-step-title {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gls-text-heading);
+  margin-bottom: 10px;
+}
+
+.hc-step-desc {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  color: var(--gls-text-body);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* /* --- Manufacturing Excellence Section --- */
+.hc-commitment-section {
+  padding: 80px 0;
+  background-color: var(--gls-primary-tint);
+  border-top: 1px solid var(--gls-border-subtle);
+  border-bottom: 1px solid var(--gls-border-subtle);
+}
+
+.hc-commitment-img-wrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  border: 4px solid #ffffff;
+}
+
+.hc-commitment-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.hc-commitment-content {
+  padding-left: 20px;
+}
+
+.hc-commitment-title {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  color: var(--gls-text-heading);
+  margin-bottom: 18px;
+}
+
+.hc-commitment-desc {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 15px;
+  color: var(--gls-text-body);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.hc-trust-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.hc-trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid var(--gls-border);
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--gls-primary-dark);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.hc-trust-pill i {
+  color: var(--gls-primary);
+}
+
+/* --- FAQ "For More" Action Button --- */
+.accordion .faq-answer .hc-faq-more-btn,
+.hc-faq-more-btn {
+  width: auto !important;
+  max-width: fit-content !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: var(--gls-primary) !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-family: "Inter", Arial, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding: 8px 24px !important;
+  border-radius: 20px !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 12px rgba(134, 195, 58, 0.3) !important;
+  transition: all 0.25s ease !important;
+  text-decoration: none !important;
+}
+
+.accordion .faq-answer .hc-faq-more-btn:hover,
+.accordion .faq-answer .hc-faq-more-btn:focus,
+.hc-faq-more-btn:hover,
+.hc-faq-more-btn:focus {
+  background-color: var(--gls-primary-hover) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(134, 195, 58, 0.4) !important;
+}
+
+.accordion .faq-answer .hc-faq-more-btn:active,
+.hc-faq-more-btn:active {
+  transform: translateY(0) !important;
+  color: #ffffff !important;
+}
+
+/* --- QR Code & Mobile Support Section --- */
+.hc-qr-section {
+  padding: 70px 0 90px;
+  background-color: #ffffff;
+}
+
+.hc-qr-card {
+  background: var(--gls-primary-tint);
+  border: 1.5px solid #e0ebd2;
+  border-radius: 24px;
+  padding: 45px 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.hc-qr-title {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--gls-text-heading);
+  margin-bottom: 15px;
+}
+
+.hc-qr-desc {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 15.5px;
+  color: var(--gls-text-body);
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.hc-qr-box {
+  background: #ffffff;
+  border: 2px dashed var(--gls-primary);
+  border-radius: 18px;
+  padding: 20px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(134, 195, 58, 0.1);
+}
+
+.hc-qr-box img {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.hc-qr-box span {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--gls-primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 12px;
+}
+
+/* ========================================================= */
+/* --- HELP CENTER FORM PAGE STYLES (/help-center-form) --- */
+/* ========================================================= */
+
+.hcf-hero-section {
+  background: linear-gradient(180deg, #f4f9ed 0%, #ffffff 100%);
+  padding: 55px 0 35px;
+  text-align: center;
+  border-bottom: 1px solid var(--gls-border-subtle);
+}
+
+.hcf-main-section {
+  padding: 50px 0 90px;
+  background-color: #ffffff;
+}
+
+/* --- Left Support Info Panel --- */
+.hcf-info-card {
+  background: var(--gls-primary-tint);
+  border: 1px solid #e0ebd2;
+  border-radius: 22px;
+  padding: 36px 30px;
+  height: 100%;
+}
+
+.hcf-info-title {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: var(--gls-text-heading);
+  margin-bottom: 12px;
+}
+
+.hcf-info-desc {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 15px;
+  color: var(--gls-text-body);
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.hcf-operating-hours {
+  background: #ffffff;
+  border: 1px solid var(--gls-border);
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.hcf-operating-hours h5 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--gls-text-heading);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hcf-operating-hours h5 i {
+  color: var(--gls-primary);
+}
+
+.hcf-operating-hours p {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  color: var(--gls-text-body);
+  margin: 0 0 6px 0;
+}
+
+.hcf-contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important;
+  gap: 15px;
+  background: #ffffff;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--gls-border-subtle);
+  margin-bottom: 12px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.hcf-contact-item:hover {
+  border-color: var(--gls-primary);
+  background: #ffffff;
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(134, 195, 58, 0.08);
+}
+
+.hcf-contact-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--gls-primary-light);
+  color: var(--gls-primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+.hcf-contact-text h6 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--gls-text-heading);
+  margin: 0 0 3px 0;
+}
+
+.hcf-contact-text span {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13.5px;
+  color: var(--gls-text-body);
+}
+
+.hcf-guarantee-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(134, 195, 58, 0.12);
+  border: 1px solid rgba(134, 195, 58, 0.3);
+  padding: 14px 18px;
+  border-radius: 14px;
+  margin-top: 24px;
+}
+
+.hcf-guarantee-badge i {
+  color: var(--gls-primary);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.hcf-guarantee-badge p {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  color: var(--gls-primary-dark);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* --- Right Form Card --- */
+.hcf-form-card {
+  background: #ffffff;
+  border: 1.5px solid var(--gls-border-subtle);
+  border-radius: 24px;
+  padding: 42px 38px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.hcf-form-card-title {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: var(--gls-text-heading);
+  margin-bottom: 8px;
+}
+
+.hcf-form-card-desc {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14.5px;
+  color: var(--gls-text-muted);
+  margin-bottom: 30px;
+}
+
+.hcf-label {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--gls-text-heading);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.hcf-label .required {
+  color: #e53e3e;
+}
+
+.hcf-input-wrap {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.hcf-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gls-text-muted);
+  font-size: 15px;
+  transition: color 0.2s ease;
+  pointer-events: none;
+}
+
+.hcf-input {
+  width: 100%;
+  padding: 13px 18px 13px 44px;
+  border-radius: 12px;
+  border: 1.5px solid #d9dfd4;
+  background-color: #fafbfa;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 15px;
+  color: var(--gls-text-heading);
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.hcf-input:focus {
+  background-color: #ffffff;
+  border-color: var(--gls-primary);
+  box-shadow: 0 0 0 4px rgba(134, 195, 58, 0.15);
+}
+
+.hcf-input-wrap:focus-within .hcf-input-icon {
+  color: var(--gls-primary);
+}
+
+.hcf-textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1.5px solid #d9dfd4;
+  background-color: #fafbfa;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 15px;
+  color: var(--gls-text-heading);
+  outline: none;
+  transition: all 0.25s ease;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.hcf-textarea:focus {
+  background-color: #ffffff;
+  border-color: var(--gls-primary);
+  box-shadow: 0 0 0 4px rgba(134, 195, 58, 0.15);
+}
+
+/* File Upload Custom Area */
+.hcf-file-upload-box {
+  border: 2px dashed #c8d4c0;
+  border-radius: 14px;
+  padding: 22px 18px;
+  text-align: center;
+  background-color: #fbfcfa;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.hcf-file-upload-box:hover {
+  border-color: var(--gls-primary);
+  background-color: var(--gls-primary-tint);
+}
+
+.hcf-file-upload-icon {
+  font-size: 28px;
+  color: var(--gls-primary);
+  margin-bottom: 8px;
+}
+
+.hcf-file-upload-text {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--gls-text-heading);
+  margin-bottom: 4px;
+}
+
+.hcf-file-upload-subtext {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  color: var(--gls-text-muted);
+}
+
+.hcf-file-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.hcf-upload-success-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--gls-primary-light);
+  color: var(--gls-primary-dark);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Evidence Upload Previews */
+.hcf-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.hcf-preview-card {
+  position: relative;
+  width: 100%;
+  height: 110px;
+  border-radius: 12px;
+  border: 1px solid var(--gls-border);
+  background-color: #f8faf6;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.hcf-preview-card:hover {
+  border-color: var(--gls-primary);
+  box-shadow: 0 4px 14px rgba(134, 195, 58, 0.2);
+  transform: translateY(-2px);
+}
+
+.hcf-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hcf-preview-pdf {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: #fffafa;
+}
+
+.hcf-preview-pdf-icon {
+  font-size: 32px;
+  color: #ef4444;
+  margin-bottom: 6px;
+}
+
+.hcf-preview-pdf-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #374151;
+  text-align: center;
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hcf-preview-remove-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: rgba(17, 24, 39, 0.75);
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+  padding: 0;
+}
+
+.hcf-preview-remove-btn:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+  transform: scale(1.15);
+}
+
+.hcf-preview-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.75) 100%);
+  color: #ffffff;
+  font-size: 10px;
+  padding: 10px 6px 4px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.hcf-submit-btn {
+  background: linear-gradient(135deg, #86c33a 0%, #76b52c 100%);
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 15px 39px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 4px 16px rgba(134, 195, 58, 0.35);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hcf-submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #74ac32 0%, #68a324 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(134, 195, 58, 0.45);
+}
+
+.hcf-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991px) {
+  .hc-hero-title {
+    font-size: 34px;
+  }
+  .hc-commitment-content {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+  .hc-qr-card {
+    padding: 35px 25px;
+  }
+  .hcf-info-card {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hc-hero-title {
+    font-size: 28px;
+  }
+  .hc-hero-desc {
+    font-size: 15px;
+  }
+  .hc-section-title {
+    font-size: 26px;
+  }
+
+  .hcf-form-card {
+    padding: 25px 20px;
+  }
+  .hcf-hero-section {
+    padding: 40px 15px 25px;
+  }
+}
+
+/* ===== CHATBOT BUTTON & MODAL STYLES ===== */
+
+/* --- Floating Chat Button (WhatsApp-style) --- */
+.chat-bot {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #2a55b1;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow:
+    0 4px 15px rgba(155, 192, 40, 0.45),
+    0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: chatbot-pulse 2s infinite;
+}
+
+.chat-bot:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 6px 22px rgba(155, 192, 40, 0.55),
+    0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
+.chat-bot:active {
+  transform: scale(0.95);
+}
+
+.chat-bot.down-icon {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  box-shadow:
+    0 4px 15px rgba(231, 76, 60, 0.4),
+    0 2px 6px rgba(0, 0, 0, 0.15);
+  animation: none;
+  font-size: 18px;
+}
+
+.chat-bot.down-icon:hover {
+  box-shadow:
+    0 6px 22px rgba(231, 76, 60, 0.5),
+    0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
+@keyframes chatbot-pulse {
+  0% {
+    box-shadow:
+      0 4px 15px rgba(155, 192, 40, 0.45),
+      0 2px 6px rgba(0, 0, 0, 0.15),
+      0 0 0 0 rgba(155, 192, 40, 0.4);
+  }
+  70% {
+    box-shadow:
+      0 4px 15px rgba(155, 192, 40, 0.45),
+      0 2px 6px rgba(0, 0, 0, 0.15),
+      0 0 0 15px rgba(155, 192, 40, 0);
+  }
+  100% {
+    box-shadow:
+      0 4px 15px rgba(155, 192, 40, 0.45),
+      0 2px 6px rgba(0, 0, 0, 0.15),
+      0 0 0 0 rgba(155, 192, 40, 0);
+  }
+}
+
+/* --- Chat Modal --- */
+.chat-bot-main {
+  position: fixed;
+  bottom: 100px;
+  right: 28px;
+  z-index: 9998;
+  width: 380px;
+  height: 520px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.18),
+    0 2px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: chatbot-slide-up 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hide scrollbar but keep scrolling */
+.chat-bot-main > div[style] {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.chat-bot-main > div[style]::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+@keyframes chatbot-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* --- Chat Header --- */
+.chatbot-header {
+  background: linear-gradient(135deg, #1c1d1f 0%, #2b2e33 100%);
+  padding: 18px 22px;
+  flex-shrink: 0;
+}
+
+.chatbot-h4 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.chatbot-header .close-icon {
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px;
+  border-radius: 50%;
+  transition: all 0.25s ease;
+  opacity: 0.8;
+}
+
+.chatbot-header .close-icon:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.15);
+  transform: rotate(90deg);
+}
+
+/* --- Chat Messages Area --- */
+.chat-message {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  font-family: "Comfortaa", cursive;
+  word-wrap: break-word;
+}
+
+.chat-message-content {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  background: linear-gradient(135deg, #9bc028 0%, #86c33a 100%);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 15px 15px 4px 15px;
+  font-family: "Comfortaa", cursive;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+/* --- Option Buttons (Issue Selection) --- */
+.complaint-action-message.option-button {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  margin-bottom: 6px;
+  background: #f4f6f8;
+  color: #333;
+  border: 1.5px solid #e1e5e9;
+  border-radius: 12px;
+  font-size: 13px;
+  font-family: "Comfortaa", cursive;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.25s ease;
+}
+
+.complaint-action-message.option-button:hover {
+  background: linear-gradient(135deg, #9bc028 0%, #86c33a 100%);
+  color: #fff;
+  border-color: #9bc028;
+  transform: translateX(4px);
+  box-shadow: 0 3px 10px rgba(155, 192, 40, 0.25);
+}
+
+/* --- Chatbot Form --- */
+.chatbot-form {
+  padding: 8px 0;
+}
+
+.chatbot-form .form-control {
+  background-color: #f4f6f8;
+  border: 1px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 13px;
+  font-family: "Comfortaa", cursive;
+  transition: all 0.3s ease;
+}
+
+.chatbot-form .form-control:focus {
+  background-color: #fff;
+  border-color: #9bc028;
+  box-shadow: 0 0 0 3px rgba(155, 192, 40, 0.15);
+  outline: none;
+}
+
+.chatbot-form label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 4px;
+}
+
+.chatbot-form textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+/* --- Submit Button --- */
+.chatbot-submit-btn {
+  width: 100%;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #9bc028 0%, #86c33a 100%);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(155, 192, 40, 0.3);
+  margin-top: 6px;
+}
+
+.chatbot-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(155, 192, 40, 0.4);
+}
+
+.chatbot-submit-btn-load {
+  width: 100%;
+  padding: 10px 20px;
+  background: #b0b0b0;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: not-allowed;
+  opacity: 0.7;
+  margin-top: 6px;
+}
+
+/* --- Thank You Message --- */
+.chatbot-thanks-message {
+  padding: 12px 0;
+}
+
+.chatbot-thanks-message .chatbot-margin-right {
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+  border: 1px solid #c8e6c9;
+  border-radius: 12px;
+  padding: 14px 18px;
+}
+
+.chatbot-thanks-message p {
+  margin: 0;
+  font-size: 13px;
+  color: #2e7d32;
+  font-family: "Comfortaa", cursive;
+  line-height: 1.5;
+}
+
+/* --- Chatbot Input Placeholder --- */
+.chatbot-input-placeholder::placeholder {
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* --- Loader Overlay --- */
+.chat-bot-main .loader-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-radius: 16px;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 480px) {
+  .chat-bot {
+    bottom: 18px;
+    right: 18px;
+    width: 54px;
+    height: 54px;
+    font-size: 22px;
+  }
+
+  .chat-bot-main {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    max-height: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .chat-bot-main {
+    width: 340px;
+    height: 480px;
+    bottom: 90px;
+    right: 18px;
+  }
+}

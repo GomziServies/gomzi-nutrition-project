@@ -89,6 +89,19 @@ import HowNutraceuticalBrandsCanChooseTheRightManufacturingPartnerIn2026 from ".
 import TheAmazonEffectHowECommerceIsChangingNutraceuticalManufacturing from "./pages/white-labelling-blogs/the-amazon-effect-how-e-commerce-is-changing-nutraceutical-manufacturing";
 import EverySupplementBrandIsFightingTheWrongBattle from "./pages/white-labelling-blogs/every-supplement-brand-is-fighting-the-wrong-battle";
 import IndiasNutraceuticalBoomHasaTrustProblems from "./pages/white-labelling-blogs/indias-nutraceutical-boom-has-a-trust-problems";
+import PlantBasedVeganProteinManufacturingInIndiaAGenuineUnderservedOpportunity from "./pages/white-labelling-blogs/plant-based-vegan-protein-manufacturing-in-india-a-genuine-underserved-opportunity";
+import HowMuchDoesItCostToManufactureAPrivateLabelSupplementInIndiaARealisticBreakdown from "./pages/white-labelling-blogs/how-much-does-it-cost-to-manufacture-a-private-label-supplement-in-india-a-realistic-breakdown";
+import FssaiVsGmpVsHaccpWhatEachCertificationActuallyMeansForYourSupplementBrand from "./pages/white-labelling-blogs/fssai-vs-gmp-vs-haccp-what-each-certification-actually-means-for-your-supplement-brand";
+import LowMoqSupplementManufacturingInIndiaWhatMoqReallyMeansHowToPlanYourFirstOrder from "./pages/white-labelling-blogs/low-moq-supplement-manufacturing-in-india-what-moq-really-means-how-to-plan-your-first-order";
+import WhatThatMeansIfYourBrandSellsProteinPowderPeanutButterAndMultivitamins from "./pages/white-labelling-blogs/what-that-means-if-your-brand-sells-protein-powder-peanut-butter-and-multivitamins";
+import HowToActuallyEvaluateAThirdPartySupplementManufacturer from "./pages/white-labelling-blogs/how-to-actually-evaluate-a-third-party-supplement-manufacturer";
+import WhiteLabelVsPrivateLabelVsCustomFormulationWhichIsRightForYourSupplementBrand from "./pages/white-labelling-blogs/white-label-vs-private-label-vs-custom-formulation-which-is-right-for-your-supplement-brand";
+import PrivateLabeVsWhiteLabelSupplementsWhatFoundersMiss from "./pages/white-labelling-blogs/private-labe-vs-white-label-supplements-what-founders-miss";
+import WhatHappensWhenABatchFailsQualityTesting from "./pages/white-labelling-blogs/what-happens-when-a-batch-fails-quality-testing";
+import HowToStartaSupplementBrandInIndia from "./pages/white-labelling-blogs/how-to-start-a-supplement-brand-in-india";
+import WhatQuickCommerceIsQuietlyRequiringFromSupplementManufacturers from "./pages/white-labelling-blogs/what-quick-commerce-is-quietly-requiring-from-supplement-manufacturers";
+import Complaints from "./pages/nutrition/complaints";
+import ComplaintForm from "./pages/nutrition/complaint-form";
 
 const UserProfile = lazy(() => import("./pages/account/profile"));
 const UserOrder = lazy(() => import("./pages/account/order"));
@@ -663,22 +676,98 @@ function App() {
         />
         <Route
           path="/blogs/how-nutraceutical-brands-can-choose-the-right-manufacturing-partner-in-2026"
-          element={<HowNutraceuticalBrandsCanChooseTheRightManufacturingPartnerIn2026 />}
+          element={
+            <HowNutraceuticalBrandsCanChooseTheRightManufacturingPartnerIn2026 />
+          }
         />
-         <Route
+        <Route
           path="/blogs/the-amazon-effect-how-e-commerce-is-changing-nutraceutical-manufacturing"
-          element={<TheAmazonEffectHowECommerceIsChangingNutraceuticalManufacturing />}
+          element={
+            <TheAmazonEffectHowECommerceIsChangingNutraceuticalManufacturing />
+          }
         />
 
-          <Route
+        <Route
           path="/blogs/indias-nutraceutical-boom-has-a-trust-problems"
           element={<IndiasNutraceuticalBoomHasaTrustProblems />}
         />
 
-          <Route
+        <Route
           path="/blogs/every-supplement-brand-is-fighting-the-wrong-battle"
           element={<EverySupplementBrandIsFightingTheWrongBattle />}
         />
+
+        <Route
+          path="/blogs/plant-based-vegan-protein-manufacturing-in-india-a-genuine-underserved-opportunity"
+          element={
+            <PlantBasedVeganProteinManufacturingInIndiaAGenuineUnderservedOpportunity />
+          }
+        />
+
+        <Route
+          path="/blogs/how-much-does-it-cost-to-manufacture-a-private-label-supplement-in-india-a-realistic-breakdown"
+          element={
+            <HowMuchDoesItCostToManufactureAPrivateLabelSupplementInIndiaARealisticBreakdown />
+          }
+        />
+
+        <Route
+          path="/blogs/fssai-vs-gmp-vs-haccp-what-each-certification-actually-means-for-your-supplement-brand"
+          element={
+            <FssaiVsGmpVsHaccpWhatEachCertificationActuallyMeansForYourSupplementBrand />
+          }
+        />
+
+        <Route
+          path="/blogs/low-moq-supplement-manufacturing-in-india-what-moq-really-means-how-to-plan-your-first-order"
+          element={
+            <LowMoqSupplementManufacturingInIndiaWhatMoqReallyMeansHowToPlanYourFirstOrder />
+          }
+        />
+
+        <Route
+          path="/blogs/what-that-means-if-your-brand-sells-protein-powder-peanut-butter-and-multivitamins"
+          element={
+            <WhatThatMeansIfYourBrandSellsProteinPowderPeanutButterAndMultivitamins />
+          }
+        />
+
+        <Route
+          path="/blogs/how-to-actually-evaluate-a-third-party-supplement-manufacturer"
+          element={<HowToActuallyEvaluateAThirdPartySupplementManufacturer />}
+        />
+
+        <Route
+          path="/blogs/white-label-vs-private-label-vs-custom-formulation-which-is-right-for-your-supplement-brand"
+          element={
+            <WhiteLabelVsPrivateLabelVsCustomFormulationWhichIsRightForYourSupplementBrand />
+          }
+        />
+
+        <Route
+          path="/blogs/private-labe-vs-white-label-supplements-what-founders-miss"
+          element={<PrivateLabeVsWhiteLabelSupplementsWhatFoundersMiss />}
+        />
+
+        <Route
+          path="/blogs/what-happens-when-a-batch-fails-quality-testing"
+          element={<WhatHappensWhenABatchFailsQualityTesting />}
+        />
+
+        <Route
+          path="/blogs/how-to-start-a-supplement-brand-in-india"
+          element={<HowToStartaSupplementBrandInIndia />}
+        />
+
+        <Route
+          path="/blogs/what-quick-commerce-is-quietly-requiring-from-supplement-manufacturers"
+          element={
+            <WhatQuickCommerceIsQuietlyRequiringFromSupplementManufacturers />
+          }
+        />
+
+        <Route path="/help-center" element={<Complaints />} />
+        <Route path="/help-center-form" element={<ComplaintForm />} />
 
         <Route path="/nutrition/contact-us" element={<ContactUs />} />
         <Route

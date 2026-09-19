@@ -6,12 +6,18 @@ import { axiosInstance } from "../config/api";
 import { Link } from "react-router-dom";
 import "../../css/nutrition.css";
 
-const LoginModal = ({ onClose }) => {
+const LoginModal = ({
+  onClose,
+  initialMobile,
+  initialFullName,
+  initialEmail,
+  onLoginSuccess,
+}) => {
   const [showModal, setShowModal] = useState(true);
   const [showSignUpModal, setShowSignUpModal] = useState(false);
   const [otpDialogOpen, setOtpDialogOpen] = useState(false);
   const [otpCode, setOtpCode] = useState("");
-  const [mobileNumber, setMobileNumber] = useState("");
+  const [mobileNumber, setMobileNumber] = useState(initialMobile || "");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailOtp, setEmailOtp] = useState("");
@@ -24,11 +30,90 @@ const LoginModal = ({ onClose }) => {
   };
 
   const getUserData = async () => {
+    const auth = localStorage.getItem("fg_group_user_authorization");
+    if (!auth) return null;
+
     try {
       const response = await axiosInstance.get("/account/profile");
-      localStorage.setItem("user_info", JSON.stringify(response.data.data));
+      const data = response?.data?.data;
+      const user = data?.user || data;
+
+      const first = (user?.first_name || "").trim();
+      const last = (user?.last_name || "").trim();
+      const full = `${first} ${last}`.trim().toLowerCase();
+      const isDefaultFirst = !first || first.toLowerCase() === "fg";
+      const isDefaultLast = !last || last.toLowerCase() === "user";
+      const isDefault =
+        isDefaultFirst || isDefaultLast || full === "fg user" || !full;
+      const isEmailEmpty = !user?.email || !user?.email.trim();
+
+      if ((isDefault || isEmailEmpty) && (initialFullName || initialEmail)) {
+        const nameParts = (initialFullName || "")
+          .trim()
+          .split(/\s+/)
+          .filter(Boolean);
+        const firstName = nameParts[0] || "";
+        const lastName =
+          nameParts.length > 1 ? nameParts.slice(1).join(" ") : "";
+        const updatePayload = {};
+
+        if (isDefault && firstName) {
+          updatePayload.first_name = firstName;
+          updatePayload.last_name = lastName;
+        }
+        if (isEmailEmpty && initialEmail && initialEmail.trim()) {
+          updatePayload.email = initialEmail.trim();
+        }
+
+        if (Object.keys(updatePayload).length > 0) {
+          if (user?.mobile || mobileNumber) {
+            updatePayload.mobile = user?.mobile || mobileNumber;
+          }
+          if (user?.uid) {
+            updatePayload.user_id = user.uid;
+          }
+          try {
+            await axiosInstance.post("/account/update-profile", updatePayload);
+            const refetched = await axiosInstance.get("/account/profile");
+            if (refetched?.data?.data) {
+              const u = refetched.data.data.user || refetched.data.data;
+              if (u) {
+                if ((u.first_name || "").trim().toLowerCase() === "fg")
+                  u.first_name = "";
+                if ((u.last_name || "").trim().toLowerCase() === "user")
+                  u.last_name = "";
+              }
+              localStorage.setItem(
+                "user_info",
+                JSON.stringify(refetched.data.data),
+              );
+              window.dispatchEvent(new Event("user-info-updated"));
+              return refetched.data.data;
+            }
+          } catch (updateErr) {
+            console.error(
+              "Failed to auto-update profile with form data in login modal:",
+              updateErr,
+            );
+          }
+        }
+      }
+
+      if (response?.data?.data) {
+        const u = response.data.data.user || response.data.data;
+        if (u) {
+          if ((u.first_name || "").trim().toLowerCase() === "fg")
+            u.first_name = "";
+          if ((u.last_name || "").trim().toLowerCase() === "user")
+            u.last_name = "";
+        }
+        localStorage.setItem("user_info", JSON.stringify(response.data.data));
+        window.dispatchEvent(new Event("user-info-updated"));
+      }
+      return response?.data?.data;
     } catch (error) {
-      console.error("Error in handleAgreeAndConfirm:", error);
+      console.error("Error in getUserData:", error);
+      return null;
     }
   };
 
@@ -68,8 +153,13 @@ const LoginModal = ({ onClose }) => {
           "fg_group_user_authorization",
           response.data.data.authorization,
         );
+        await getUserData();
         toast.success("Successfully Login!");
-        handleClose();
+        if (onLoginSuccess) {
+          onLoginSuccess(response.data.data.authorization);
+        } else {
+          handleClose();
+        }
       } else {
         setShowSignUpModal(false);
         setEmailOtpDialogOpen(true);
@@ -95,7 +185,11 @@ const LoginModal = ({ onClose }) => {
         await getUserData();
         setEmailOtpDialogOpen(false);
         toast.success("Successfully Login!");
-        window.location.reload();
+        if (onLoginSuccess) {
+          onLoginSuccess(response.data.data.authorization);
+        } else {
+          window.location.reload();
+        }
       } else {
         toast.error("Failed to verify OTP. Please try again.");
       }
@@ -122,7 +216,11 @@ const LoginModal = ({ onClose }) => {
         await getUserData();
         setOtpDialogOpen(false);
         toast.success("Successfully Login!");
-        window.location.reload();
+        if (onLoginSuccess) {
+          onLoginSuccess(response.data.data.authorization);
+        } else {
+          window.location.reload();
+        }
       } else {
         toast.error("Failed to verify OTP. Please try again.");
       }
@@ -149,7 +247,10 @@ const LoginModal = ({ onClose }) => {
   };
 
   useEffect(() => {
-    getUserData();
+    if (localStorage.getItem("fg_group_user_authorization")) {
+      getUserData();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -186,6 +287,7 @@ const LoginModal = ({ onClose }) => {
                 type="text"
                 className="fr"
                 placeholder="Enter mobile number"
+                value={mobileNumber}
                 onChange={(e) => setMobileNumber(e.target.value)}
               />
             </Form.Group>

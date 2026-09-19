@@ -50,10 +50,44 @@ const UserInfo = () => {
         }
       };
       fetchProfile();
-    } else {
-      setUserInfo(JSON.parse(user_info));
+    } else if (user_info) {
+      try {
+        setUserInfo(JSON.parse(user_info));
+      } catch (e) {}
     }
   }, [authorization]);
+
+  useEffect(() => {
+    const handleUpdate = () => {
+      const user_info = localStorage.getItem("user_info");
+      if (user_info) {
+        try {
+          setUserInfo(JSON.parse(user_info));
+        } catch (e) {}
+      }
+    };
+
+    window.addEventListener("user-info-updated", handleUpdate);
+    window.addEventListener("storage", handleUpdate);
+
+    return () => {
+      window.removeEventListener("user-info-updated", handleUpdate);
+      window.removeEventListener("storage", handleUpdate);
+    };
+  }, []);
+
+  const getUserDisplayName = () => {
+    if (!userInfo?.user) return "User";
+    const first = (userInfo.user.first_name || "").trim();
+    const last = (userInfo.user.last_name || "").trim();
+    if (first && first.toLowerCase() !== "fg") {
+      return first;
+    }
+    if (last && last.toLowerCase() !== "user") {
+      return last;
+    }
+    return last || first || "User";
+  };
 
   return (
     <div>
@@ -63,7 +97,7 @@ const UserInfo = () => {
             className="mb-1 cursor-pointer inter-500"
             onClick={toggleUserMenu}
           >
-            Hi, {userInfo.user.last_name} <i className="far fa-user"></i>
+            Hi, {getUserDisplayName()} <i className="far fa-user"></i>
           </li>
           {isUserMenuVisible && (
             <ul>

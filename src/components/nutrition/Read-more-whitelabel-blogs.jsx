@@ -5,6 +5,103 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 87,
+    title:
+      "What Quick Commerce Is Quietly Requiring From Supplement Manufacturers in 2026",
+    url: "/blogs/what-quick-commerce-is-quietly-requiring-from-supplement-manufacturers",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/what-quick-commerce-is-quietly-requiring-from-supplement-manufacturers.webp",
+  },
+  {
+    number: 86,
+    title:
+      "How to Start a Supplement Brand in India The Real Steps, Not the Instagram Version",
+    url: "/blogs/how-to-start-a-supplement-brand-in-india",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-to-start-a-supplement-brand-in-india.webp",
+  },
+  {
+    number: 85,
+    title: "What Happens When a Batch Fails Quality Testing",
+    url: "/blogs/what-happens-when-a-batch-fails-quality-testing",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/what-happens-when-a-batch-fails-quality-testing.webp",
+  },
+  {
+    number: 84,
+    title: "Private Label vs White Label Supplements: What Founders Miss",
+    url: "/blogs/private-labe-vs-white-label-supplements-what-founders-miss",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/private-labe-vs-white-label-supplements-what-founders-miss.webp",
+  },
+  {
+    number: 83,
+    title:
+      "White Label vs. Private Label vs. Custom Formulation: Which Is Right for Your Supplement Brand?",
+    url: "/blogs/white-label-vs-private-label-vs-custom-formulation-which-is-right-for-your-supplement-brand",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/white-label-vs-private-label-vs-custom-formulation-which-is-right-for-your-supplement-brand.webp",
+  },
+  {
+    number: 82,
+    title: "How to Actually Evaluate a Third-Party Supplement Manufacturer",
+    url: "/blogs/how-to-actually-evaluate-a-third-party-supplement-manufacturer",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-to-actually-evaluate-a-third-party-supplement-manufacturer.webp",
+  },
+  {
+    number: 81,
+    title:
+      "What That Means If Your Brand Sells Protein Powder, Peanut Butter, and Multivitamins?",
+    url: "/blogs/what-that-means-if-your-brand-sells-protein-powder-peanut-butter-and-multivitamins",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/what-that-means-if-your-brand-sells-protein-powder-peanut-butter-and-multivitamins.webp",
+  },
+  {
+    number: 80,
+    title:
+      "Low MOQ Supplement Manufacturing in India: What MOQ Really Means & How to Plan Your First Order",
+    url: "/blogs/low-moq-supplement-manufacturing-in-india-what-moq-really-means-how-to-plan-your-first-order",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/low-moq-supplement-manufacturing-in-india-what-moq-really-means-how-to-plan-your-first-order.webp",
+  },
+
+  {
+    number: 79,
+    title:
+      "FSSAI vs. GMP vs. HACCP: What Each Certification Actually Means for Your Supplement Brand",
+    url: "/blogs/fssai-vs-gmp-vs-haccp-what-each-certification-actually-means-for-your-supplement-brand",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/fssai-vs-gmp-vs-haccp-what-each-certification-actually-means-for-your-supplement-brand.webp",
+  },
+  {
+    number: 78,
+    title:
+      "How Much Does It Cost to Manufacture a Private Label Supplement in India? A Realistic Breakdown",
+    url: "/blogs/how-much-does-it-cost-to-manufacture-a-private-label-supplement-in-india-a-realistic-breakdown",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/how-much-does-it-cost-to-manufacture-a-private-label-supplement-in-india-a-realistic-breakdown.webp",
+  },
+  {
+    number: 77,
+    title:
+      "Plant-Based & Vegan Protein Manufacturing in India: A Genuine, Underserved Opportunity",
+    url: "/blogs/plant-based-vegan-protein-manufacturing-in-india-a-genuine-underserved-opportunity",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/plant-based-vegan-protein-manufacturing-in-india-a-genuine-underserved-opportunity.webp",
+  },
+  {
     number: 76,
     title: "India's Nutraceutical Boom Has a Trust Problems",
     url: "/blogs/indias-nutraceutical-boom-has-a-trust-problems",

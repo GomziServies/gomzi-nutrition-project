@@ -526,6 +526,16 @@ function Home() {
               <li>
                 <a
                   className="inter-500"
+                  href="/help-center"
+                  onClick={sideclose}
+                >
+                  Help Center
+                </a>
+              </li>
+
+              <li>
+                <a
+                  className="inter-500"
                   href="/read-more-white-labelling-blogs"
                 >
                   Blog
@@ -681,6 +691,16 @@ function Home() {
                   onClick={sideclose}
                 >
                   Contact Us
+                </a>
+              </li>
+
+              <li>
+                <a
+                  className="inter-500"
+                  href="/help-center"
+                  onClick={sideclose}
+                >
+                  Help Center
                 </a>
               </li>
 
@@ -1351,9 +1371,6 @@ function Home() {
                   Your Trusted Partner for Premium Nutraceutical Manufacturing.
                 </p>
                 <div className="f2">
-                  <p className="mb-2 mt-2 int-regular">
-                    <Link to="tel:+918320077993">+91 8320077993</Link>
-                  </p>
                   <p className="mb-4 int-regular">
                     <Link to="mailto:info@gomzilifesciences.in">
                       info@gomzilifesciences.in
