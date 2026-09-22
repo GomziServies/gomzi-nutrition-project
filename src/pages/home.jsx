@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import HomePopup from "../components/HomePopup";
 import "../assets/css/nutrition.css";
 import { Accordion } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -1627,6 +1628,7 @@ function Home() {
           </div>
         </div>
       </footer>
+      <HomePopup />
     </>
   );
 }
