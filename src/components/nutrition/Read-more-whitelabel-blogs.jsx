@@ -5,6 +5,31 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 90,
+    title: "GLP-1 Companion Nutrition: What It Means for Manufacturing",
+    url: "/blogs/glp-1-companion-nutrition-supplement-manufacturing",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/glp-1-companion-nutrition-supplement-manufacturing.webp",
+  },
+  {
+    number: 89,
+    title:
+      "EPR: The Plastic Packaging Law That Applies to Your Brand, Not Just Your Manufacturer",
+    url: "/blogs/epr-the-plastic-packaging-law-that-applies-to-your-brand",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/epr-the-plastic-packaging-law-that-applies-to-your-brand.webp",
+  },
+  {
+    number: 88,
+    title: "Why Bigger MOQ Doesn't Mean Better Quality?",
+    url: "/blogs/why-bigger-moq-doesnt-mean-better-quality",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/why-bigger-moq-doesnt-mean-better-quality.webp",
+  },
+  {
     number: 87,
     title:
       "What Quick Commerce Is Quietly Requiring From Supplement Manufacturers in 2026",

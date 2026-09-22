@@ -1,0 +1,82 @@
+.home-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-popup-content {
+  background: white;
+  padding: 50px 30px 30px 30px; /* Increased top padding to keep cross away from pic */
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.home-popup-close-left {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  background: transparent;
+  border: none;
+  font-size: 36px; /* Made it bigger */
+  cursor: pointer;
+  color: #333;
+  line-height: 1;
+}
+
+.home-popup-close-left:hover {
+  color: #000;
+}
+
+.home-popup-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.home-popup-tagline {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.home-popup-sub-tagline {
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.home-popup-inquire-btn {
+  display: inline-block;
+  background-color: #25d366; /* WhatsApp Green */
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.home-popup-inquire-btn:hover {
+  background-color: #128c7e;
+  color: white;
+  text-decoration: none;
+}
