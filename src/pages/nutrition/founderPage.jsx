@@ -29,6 +29,7 @@ const FounderPage = () => {
   const selectedBlogs = whitelabelBloglist.filter((blog) =>
     [30, 31, 32].includes(blog.number),
   );
+  const canonicalUrl = window.location.href;
 
   return (
     <main id="main">
@@ -36,6 +37,65 @@ const FounderPage = () => {
         <title>
           Dr. Gautam Jani Founder & Managing Director | Gomzi Lifesciences LLP
         </title>
+        <meta
+          name="description"
+          content="Dr. Gautam Jani, Founder & Managing Director of Gomzi Lifesciences LLP, leads innovation in nutrition, wellness, and healthcare with a vision for quality and growth."
+        />
+        <meta
+          name="keyword"
+          content="Gomzi Lifescience, nutraceuticals manufacturer, supplement manufacturer, third party manufacturing, white label nutrition, sports nutrition, protein powders, dietary supplements, ISO certified, FSSAI certified, WHO-GMP certified, HACCP certified, HALAL certified"
+        />
+        <meta
+          property="og:title"
+          content="Dr. Gautam Jani Founder & Managing Director | Gomzi Lifesciences LLP"
+        />
+        <meta
+          property="og:description"
+          content="Dr. Gautam Jani, Founder & Managing Director of Gomzi Lifesciences LLP, leads innovation in nutrition, wellness, and healthcare with a vision for quality and growth."
+        />
+        <meta
+          property="og:image"
+          content="https://www.gomzilifesciences.in/assets/images/logo/gomzi-life-science-logo.webp"
+        />
+        <meta property="og:type" content="website"></meta>{" "}
+        <meta property="og:site_name" content="Gomzi Lifescience"></meta>
+        <meta property="og:url" content={canonicalUrl} />
+        <link rel="canonical" href={canonicalUrl} />
+        <script>
+          {`!function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1144699046738070');
+          fbq('track', 'PageView');
+        `}
+        </script>
+        <noscript>
+          {`<img height="1" width="1" style="display:none"
+          src="https://www.facebook.com/tr?id=1144699046738070&ev=PageView&noscript=1"
+        />`}
+        </noscript>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38`}
+        ></script>
+        <noscript>{`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-J50WNKGW38');`}</noscript>
+        <script>
+          {`
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "wbdpmwgoji");
+          `}
+        </script>
       </Helmet>
 
       <NutritionHeader />

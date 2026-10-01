@@ -496,6 +496,20 @@ const PerformanceSupplements = () => {
           description="Gomzi Lifesciences LLP is a private label performance supplement manufacturer in Surat, India. Custom Pre-Workout, Creatine, BCAA, EAA formulations. FSSAI, GMP, HACCP, HALAL and Kosher certified."
         />
         <Helmet>
+          <meta
+            property="og:title"
+            content="Private Label Performance Supplement Manufacturer in Surat, India | Gomzi Lifescience"
+          />
+          <meta
+            property="og:description"
+            content="Gomzi Lifesciences LLP is a private label performance supplement manufacturer in Surat, India. Custom Pre-Workout, Creatine, BCAA, EAA formulations. FSSAI, GMP, HACCP, HALAL and Kosher certified."
+          />
+          <meta
+            property="og:image"
+            content="https://www.gomzilifesciences.in/assets/images/logo/gomzi-life-science-logo.webp"
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Gomzi Lifescience" />
           <script type="application/ld+json">
             {JSON.stringify(schemaData)}
           </script>
