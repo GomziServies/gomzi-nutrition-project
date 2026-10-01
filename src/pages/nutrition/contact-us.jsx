@@ -57,8 +57,10 @@ function ContactUs() {
         />
         <meta
           property="og:image"
-          content="https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp"
+          content="https://www.gomzilifesciences.in/assets/images/logo/gomzi-life-science-logo.webp"
         />
+        <meta property="og:type" content="website"></meta>{" "}
+        <meta property="og:site_name" content="Gomzi Lifescience"></meta>
         <meta property="og:url" content={canonicalUrl} />
         <link rel="canonical" href={canonicalUrl} />
         <script>
@@ -134,7 +136,11 @@ function ContactUs() {
                 <div>
                   <h4 className="barlow-condensed-semi">WhatsApp:</h4>
                   <p>
-                    <a href="https://wa.me/+918320077993" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://wa.me/+918320077993"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Chat with us on WhatsApp
                     </a>
                   </p>

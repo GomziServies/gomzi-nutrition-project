@@ -306,9 +306,19 @@ function Home() {
                   weight gain banana, dietary supplement near me, chocolate protein powder, sports shop near by me, diet supplements near me, best multivitamins for men india, booster testosterone, how to fat burn, supplement shop near, whey isolate vs protein, whey protein vs whey protein isolate, women's protein powder for weight gain, protein powder for weight gain woman, which best peanut butter, nutrition in 100g oats, protein shakes for weight gain female, weight gain by banana, which is best peanut butter, isolate vs whey protein, weight gain protein shakes for women, isolate whey protein vs whey protein, weight gain protein powder women, big muscles whey, peanut butter content, fat burner workout, protein powder for women to gain weight, whey isolate vs whey, women protein powder for weight gain, gain weight protein shakes for women, whey isolate vs whey protein, whey protein isolate vs whey protein, protein shake for women to gain weight, protein shake to gain weight female, whey isolate vs, how do you use protein powder, difference between whey protein and whey isolate, difference between whey protein and whey isolate protein, which is the best peanut butter, peanut butter for weight loss, gain weight with creatine, guest snacks bar, protein shakes for female weight gain, creatine in body, a body of mass 5kg, 2 spoon peanut butter calories, watermelon calories 1kg, 1 tsp peanut butter protein, whey protein mean, protein shakes to gain weight female, myfitness chocolate peanut butter, 100 grams protein, top peanut butter brands, difference between whey and isolate protein, do peanut butter gain weight, peanut butter best brand, sports store coimbatore, 250 ml to grams, protein shakes for weight gain women, whey protein means, world no 1 nutrition company in india, fitness gym kolkata, banana for weight gain, whey vs plant protein"
         />
         <meta
-          property="og:image"
-          content="https://www.gomzilifesciences.in/assets/images/logo/nutrition-logo.webp"
+          property="og:title"
+          content="Gomzi Lifescience | Best Whey Protein in India | Premium Supplements"
         />
+        <meta
+          property="og:description"
+          content="Discover Gomzi Lifescience, your go-to destination for the best whey protein and premium nutrition supplements in India. Boost your fitness journey with our high-quality products tailored for muscle growth, weight loss, and overall health."
+        />
+        <meta
+          property="og:image"
+          content="https://www.gomzilifesciences.in/assets/images/logo/gomzi-life-science-logo.webp"
+        />
+        <meta property="og:type" content="website"></meta>
+        <meta property="og:site_name" content="Gomzi Lifescience"></meta>
         <meta
           name="google-site-verification"
           content="Jtkzxut7_V1SD1dhaJP6yr85918OjJSoq-roIEZNsfQ"

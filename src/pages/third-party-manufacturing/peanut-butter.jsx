@@ -500,6 +500,20 @@ const PeanutButter = () => {
         description="Looking for third party peanut butter manufacturing? Launch creamy, crunchy, and high-protein peanut butter under your own label with quality ingredients, private label support, and scalable production."
       />
       <Helmet>
+        <meta
+          property="og:title"
+          content="Third Party Peanut Butter Manufacturing | Private Label Peanut Butter for Brands"
+        />
+        <meta
+          property="og:description"
+          content="Looking for third party peanut butter manufacturing? Launch creamy, crunchy, and high-protein peanut butter under your own label with quality ingredients, private label support, and scalable production."
+        />
+        <meta
+          property="og:image"
+          content="https://www.gomzilifesciences.in/assets/images/logo/gomzi-life-science-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Gomzi Lifescience" />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
       <NutritionHeader />

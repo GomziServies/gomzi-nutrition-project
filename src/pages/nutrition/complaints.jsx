@@ -305,7 +305,40 @@ function Complaints() {
                       alt="Gomzi Lifesciences Complaint Form QR Code"
                       loading="lazy"
                     />
-                    <span>Scan to open form</span>
+                    <span className="fwg-hc-qr-label">Scan to Submit</span>
+                    <div style={{ marginTop: "14px", textAlign: "center" }}>
+                      <p
+                        style={{
+                          margin: "0 0 8px",
+                          color: "#555",
+                          fontSize: "14px",
+                        }}
+                      >
+                        Using this device? Open the form directly:
+                      </p>
+                      <a
+                        href="https://www.gomzilifesciences.in/help-center-form"
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "8px",
+                          padding: "10px 10px",
+                          borderRadius: "999px",
+                          backgroundColor: "#86c33a",
+                          color: "#fff",
+                          fontWeight: 700,
+                          textDecoration: "none",
+                          boxShadow: "0 4px 12px rgba(25, 135, 84, 0.25)",
+                        }}
+                      >
+                        <i className="fas fa-edit" aria-hidden="true"></i>
+                        Gomzi Lifesciences Support
+                        <i
+                          className="fas fa-arrow-right"
+                          aria-hidden="true"
+                        ></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

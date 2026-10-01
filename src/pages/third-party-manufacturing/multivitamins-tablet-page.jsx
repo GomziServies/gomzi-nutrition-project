@@ -574,6 +574,20 @@ const MultivitaminTablet = () => {
         description="We offer complete multivitamin tablet third party manufacturing services for nutraceutical brands, pharmaceutical companies, and healthcare startups. Custom formulations, private label manufacturing, FSSAI and GMP certified."
       />
       <Helmet>
+        <meta
+          property="og:title"
+          content="Multivitamin Tablet Manufacturer in India | Private Label Nutraceutical Manufacturing"
+        />
+        <meta
+          property="og:description"
+          content="We offer complete multivitamin tablet third party manufacturing services for nutraceutical brands, pharmaceutical companies, and healthcare startups. Custom formulations, private label manufacturing, FSSAI and GMP certified."
+        />
+        <meta
+          property="og:image"
+          content="https://www.gomzilifesciences.in/assets/images/logo/gomzi-life-science-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Gomzi Lifescience" />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
 
