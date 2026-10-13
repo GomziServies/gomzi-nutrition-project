@@ -105,11 +105,16 @@ import ComplaintForm from "./pages/nutrition/complaint-form";
 import WhyBiggerMoqDoesntMeanBetterQuality from "./pages/white-labelling-blogs/why-bigger-moq-doesnt-mean-better-quality";
 import EprThePlasticPackagingLawThatAppliesToYourBrand from "./pages/white-labelling-blogs/epr-the-plastic-packaging-law-that-applies-to-your-brand";
 import GlpCompanionNutritionSupplementManufacturing from "./pages/white-labelling-blogs/glp-1-companion-nutrition-supplement-manufacturing";
-import FssaiRegulatioForPeanutButterManufacturerInIndia from "./pages/white-labelling-blogs/fssai-regulatio-for-peanut-butter-manufacturer-in-india";
-import HealthSupplementManufacturin10MistakeToAvoid from "./pages/white-labelling-blogs/health-supplement-manufacturing-10-mistake-to-avoid";
+
+const Shop = lazy(() => import("./pages/store/shop"));
+const ProductDetail = lazy(() => import("./pages/store/product-detail"));
+const Checkout = lazy(() => import("./pages/store/checkout"));
+const OrderInvoice = lazy(() => import("./pages/store/order-invoice"));
+const OrderStatus = lazy(() => import("./pages/store/order-status"));
 
 const UserProfile = lazy(() => import("./pages/account/profile"));
 const UserOrder = lazy(() => import("./pages/account/order"));
+const UserAddresses = lazy(() => import("./pages/account/addresses"));
 
 const InvoiceViewPage = lazy(() => import("./pages/nutrition/InvoiceViewPage"));
 
@@ -786,16 +791,6 @@ function App() {
           element={<GlpCompanionNutritionSupplementManufacturing />}
         />
 
-        <Route
-          path="/blogs/fssai-regulatio-for-peanut-butter-manufacturer-in-india"
-          element={<FssaiRegulatioForPeanutButterManufacturerInIndia />}
-        />
-
-        <Route
-          path="/blogs/health-supplement-manufacturing-10-mistake-to-avoid"
-          element={<HealthSupplementManufacturin10MistakeToAvoid />}
-        />
-
         <Route path="/help-center" element={<Complaints />} />
         <Route path="/help-center-form" element={<ComplaintForm />} />
 
@@ -831,9 +826,16 @@ function App() {
           element={<ThankYouProductPage />}
         />
 
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/shop/:id" element={<ProductDetail />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/order-status" element={<OrderStatus />} />
+
         <Route path="/user/profile" element={<UserProfile />} />
         <Route path="/user/order" element={<UserOrder />} />
+        <Route path="/user/addresses" element={<UserAddresses />} />
         <Route path="/invoice" element={<InvoicesList />} />
+        <Route path="/invoice/order/:orderId" element={<OrderInvoice />} />
         <Route path="/invoice/:invoice_id" element={<InvoiceViewPage />} />
 
         <Route path="*" element={<NotFoundPage />} />

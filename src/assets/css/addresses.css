@@ -1,0 +1,38 @@
+/* Saved addresses page + checkout address picker */
+.gz-addr-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 14px; }
+.gz-addr-head .gz-inline-btn { gap: 8px; }
+
+.gz-addr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 18px; }
+.gz-addr-card { display: flex; flex-direction: column; background: #fff; border: 1.5px solid var(--gz-border); border-radius: 16px; padding: 20px; transition: border-color .2s, box-shadow .2s; }
+.gz-addr-card:hover { box-shadow: 0 8px 24px rgba(15, 23, 42, .06); }
+.gz-addr-card.default { border-color: var(--gz-primary); background: linear-gradient(180deg, #f7fbef 0%, #fff 60%); }
+.gz-addr-card header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.gz-addr-tag { padding: 4px 12px; border-radius: 999px; background: #f1f5f9; color: #475569; font-size: 12px; font-weight: 800; }
+.gz-addr-default { padding: 4px 10px; border-radius: 999px; background: var(--gz-primary); color: #fff; font-size: 11.5px; font-weight: 800; }
+.gz-addr-name { margin: 0 0 6px; font-size: 16px; font-weight: 800; color: var(--gz-dark); }
+.gz-addr-text { margin: 0 0 8px; font-size: 14px; line-height: 1.65; color: #475569; overflow-wrap: anywhere; }
+.gz-addr-phone { margin: 0 0 16px; font-size: 13.5px; color: var(--gz-muted); }
+.gz-addr-card footer { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: auto; padding-top: 14px; border-top: 1px solid #f1f5f9; }
+.gz-addr-card footer button { display: inline-flex; align-items: center; gap: 7px; border: none; background: none; padding: 4px 0; font-size: 13.5px; font-weight: 700; color: #475569; cursor: pointer; }
+.gz-addr-card footer button:hover { color: var(--gz-primary-hover); }
+.gz-addr-card footer button.danger:hover { color: #dc2626; }
+.gz-addr-card footer button.link { margin-left: auto; color: #4d7c0f; }
+.gz-addr-card footer button:disabled { opacity: .5; cursor: not-allowed; }
+
+/* Checkout: choose a saved address */
+.gz-pick { display: grid; gap: 12px; margin-bottom: 18px; }
+.gz-pick-card { display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; border: 2px solid var(--gz-border); border-radius: 14px; background: #fff; cursor: pointer; transition: all .15s; text-align: left; width: 100%; }
+.gz-pick-card:hover { border-color: #cbd5e1; }
+.gz-pick-card.selected { border-color: var(--gz-primary); background: var(--gz-primary-light); }
+.gz-pick-radio { flex: none; width: 20px; height: 20px; margin-top: 2px; border-radius: 50%; border: 2px solid #cbd5e1; background: #fff; }
+.gz-pick-card.selected .gz-pick-radio { border: 6px solid var(--gz-primary); }
+.gz-pick-body { min-width: 0; display: flex; flex-direction: column; gap: 3px; font-size: 14px; color: #475569; line-height: 1.55; }
+.gz-pick-body strong { color: var(--gz-dark); font-size: 15px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.gz-pick-body .gz-addr-tag { font-size: 11px; padding: 3px 9px; }
+.gz-pick-body .gz-addr-default { font-size: 10.5px; }
+.gz-pick-new { display: flex; align-items: center; gap: 12px; width: 100%; padding: 14px 18px; border: 2px dashed #cbd5e1; border-radius: 14px; background: #fff; font-size: 14.5px; font-weight: 700; color: #4d7c0f; cursor: pointer; }
+.gz-pick-new.selected { border-style: solid; border-color: var(--gz-primary); background: var(--gz-primary-light); }
+.gz-save-addr { margin-top: 16px; }
+@media (max-width: 575px) {
+  .gz-addr-grid { grid-template-columns: 1fr; }
+}

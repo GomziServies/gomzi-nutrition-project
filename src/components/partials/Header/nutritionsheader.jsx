@@ -55,6 +55,11 @@ function NutritionHeader() {
           <div className="center-menu d-lg-block d-none">
             <ul className="center-menu-list">
               <li>
+                <Link to="/shop" className="inter-500">
+                  Shop
+                </Link>
+              </li>
+              <li>
                 <Link
                   to="/read-more-white-labelling-blogs"
                   className="inter-500"
@@ -104,6 +109,11 @@ function NutritionHeader() {
             </Link>
 
             <ul className="mobileUserInfo aa">
+              <li>
+                <Link to="/shop" className="inter-500">
+                  Shop
+                </Link>
+              </li>
               <li>
                 <Link
                   to="/read-more-white-labelling-blogs"

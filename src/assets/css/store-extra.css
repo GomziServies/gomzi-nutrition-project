@@ -1,0 +1,76 @@
+/* Store additions on top of ecommerce.css */
+.gz-store-wrapper { padding: 76px 0 80px; }
+.gz-store-banner { padding-top: 44px; padding-bottom: 52px; }
+.gz-img-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f1f5f9; border-radius: 8px; color: #cbd5e1; font-size: 44px; }
+.gz-load-more { display: inline-flex; flex: none; padding: 12px 32px; font-size: 14px; }
+.gz-search-input-wrap svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--gz-muted); font-size: 15px; pointer-events: none; }
+.gz-controls-bar { gap: 14px; }
+.gz-controls-bar .gz-search-input-wrap { flex: 1 1 280px; width: auto; }
+.gz-category-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.gz-store-wrapper a { text-decoration: none; }
+.gz-container { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+.gz-product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px; margin-top: 32px; }
+.gz-empty-cart, .gz-state-box { text-align: center; padding: 48px 16px; color: var(--gz-muted); }
+.gz-empty-cart .gz-btn-checkout { display: inline-block; width: auto; padding: 12px 28px; margin-top: 14px; }
+/* Product card: fixed-ratio image, aligned title / price / buttons on every card */
+.gz-product-card { border-radius: 14px; }
+.gz-card-img-wrap { position: relative; display: block; aspect-ratio: 1 / 1; height: auto; min-height: 0; padding: 0; background: #fff; border-bottom: 1px solid var(--gz-border); }
+.gz-card-img-wrap img.gz-card-img,
+.gz-card-img-wrap .gz-img-placeholder { position: absolute; inset: 14px; width: calc(100% - 28px); height: calc(100% - 28px); max-height: none; max-width: none; object-fit: contain; }
+.gz-product-card:hover .gz-card-img { transform: scale(1.04); }
+.gz-card-body { padding: 16px; display: flex; flex-direction: column; flex-grow: 1; gap: 0; }
+.gz-card-category { margin-bottom: 6px; }
+.gz-card-discount { top: 12px; bottom: auto; left: 12px; font-size: 12px; padding: 4px 9px; border-radius: 6px; z-index: 1; }
+.gz-low-stock { position: absolute; bottom: 12px; left: 12px; background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; }
+.gz-card-rating { display: flex; align-items: center; gap: 6px; min-height: 20px; margin: 0 0 10px; font-size: 13px; color: var(--gz-muted); }
+.gz-rating-num { font-weight: 700; color: var(--gz-dark); }
+.gz-rating-count { color: var(--gz-muted); }
+.gz-stars-wrap { position: relative; display: inline-block; line-height: 0; }
+.gz-stars-row { display: inline-flex; gap: 1px; }
+.gz-stars-base svg { fill: #e2e8f0; }
+.gz-stars-fill { position: absolute; left: 0; top: 0; overflow: hidden; white-space: nowrap; }
+.gz-stars-fill svg { fill: #f59e0b; flex: none; }
+.gz-price-from { font-size: 12px; font-weight: 600; color: var(--gz-muted); }
+.gz-card-price-row .gz-price-save { font-size: 12px; }
+.gz-card-title { font-size: 16px; line-height: 1.35; min-height: calc(1.35em * 2); margin-bottom: 6px; }
+.gz-card-price-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 8px; margin: auto 0 14px; padding-top: 4px; }
+.gz-price-current { font-size: 19px; font-weight: 800; }
+.gz-card-actions { display: grid; grid-template-columns: 1fr 1.4fr; gap: 10px; }
+.gz-card-actions.single { grid-template-columns: 1fr; }
+.gz-card-actions .gz-btn-view,
+.gz-card-actions .gz-btn-cart { height: 42px; padding: 0 12px; margin: 0; border-radius: 8px; font-size: 14px; font-weight: 700; line-height: 1; display: flex; align-items: center; justify-content: center; text-decoration: none; white-space: nowrap; box-sizing: border-box; }
+.gz-card-actions .gz-btn-view { background: #fff; border: 1.5px solid #cbd5e1; color: #334155; }
+.gz-card-actions .gz-btn-view:hover { border-color: var(--gz-primary); color: var(--gz-primary-hover); background: var(--gz-primary-light); }
+.gz-card-actions.single .gz-btn-view { background: var(--gz-primary); border-color: var(--gz-primary); color: #fff; }
+.gz-card-actions.single .gz-btn-view:hover { background: var(--gz-primary-hover); border-color: var(--gz-primary-hover); color: #fff; }
+.gz-btn-view, .gz-btn-cart { text-decoration: none; }
+.gz-oos { position: absolute; inset: 0; background: rgba(255,255,255,.7); display: flex; align-items: center; justify-content: center; font-weight: 800; color: #b91c1c; letter-spacing: .5px; }
+.gz-card-actions .gz-btn-cart:disabled { opacity: .5; cursor: not-allowed; }
+.gz-detail-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 32px; }
+.gz-detail-layout h1 { font-size: 30px; font-weight: 800; }
+.gz-detail-desc { white-space: pre-line; color: var(--gz-muted); line-height: 1.7; margin: 16px 0; }
+.gz-checkout-layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; margin-top: 32px; align-items: start; }
+.gz-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.gz-form-grid .full { grid-column: 1 / -1; }
+.gz-field-error { color: #dc2626; font-size: 12px; margin-top: 4px; }
+.gz-form-input.invalid { border-color: #dc2626; }
+.gz-summary-item { display: flex; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--gz-border); font-size: 14px; }
+.gz-summary-item img { width: 52px; height: 52px; border-radius: 8px; object-fit: cover; }
+.gz-summary-item .name { flex: 1; font-weight: 600; }
+.gz-sticky { position: sticky; top: 90px; }
+.gz-order-timeline { list-style: none; padding: 0; margin: 20px 0; display: flex; justify-content: space-between; }
+.gz-order-timeline li { flex: 1; text-align: center; font-size: 12px; color: var(--gz-muted); position: relative; }
+.gz-order-timeline li::before { content: ""; display: block; width: 14px; height: 14px; border-radius: 50%; background: var(--gz-border); margin: 0 auto 6px; }
+.gz-order-timeline li.done { color: var(--gz-dark); font-weight: 700; }
+.gz-order-timeline li.done::before { background: var(--gz-primary); }
+@media (max-width: 860px) {
+  .gz-detail-layout, .gz-checkout-layout { grid-template-columns: 1fr; }
+  .gz-form-grid { grid-template-columns: 1fr; }
+  .gz-product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .gz-card-body { padding: 12px; }
+  .gz-card-title { font-size: 14px; }
+  .gz-price-current { font-size: 16px; }
+  .gz-card-actions { grid-template-columns: 1fr; gap: 8px; }
+  .gz-store-wrapper { padding-top: 64px; }
+}
+

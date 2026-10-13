@@ -1,0 +1,26 @@
+/* Dialog + address form pieces */
+.gz-dialog-overlay { position: fixed; inset: 0; z-index: 10050; background: rgba(15, 23, 42, .55); backdrop-filter: blur(3px); display: flex; align-items: center; justify-content: center; padding: 16px; animation: gzFadeIn .2s ease-out; }
+.gz-dialog { width: 100%; max-height: calc(100vh - 32px); display: flex; flex-direction: column; background: #fff; border-radius: 18px; box-shadow: 0 24px 60px rgba(15, 23, 42, .3); overflow: hidden; animation: gzPopIn .25s cubic-bezier(.16, 1, .3, 1); }
+.gz-dialog-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 24px; border-bottom: 1px solid var(--gz-border); }
+.gz-dialog-head h2 { margin: 0; font-size: 18px; font-weight: 800; color: var(--gz-dark); }
+.gz-dialog-head button { width: 36px; height: 36px; border: none; border-radius: 50%; background: #f1f5f9; color: #475569; cursor: pointer; }
+.gz-dialog-head button:hover { background: #e2e8f0; }
+.gz-dialog-body { padding: 22px 24px 24px; overflow-y: auto; }
+.gz-dialog-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--gz-border); }
+.gz-dialog-actions .gz-btn-ghost, .gz-dialog-actions .gz-btn-cart { height: 44px; padding: 0 22px; border-radius: 10px; font-size: 14.5px; font-weight: 700; flex: none; }
+.gz-dialog .gz-form-grid { gap: 16px 18px; }
+.gz-dialog .gz-form-input { height: 46px; padding: 0 14px; border-radius: 10px; width: 100%; }
+.gz-dialog textarea.gz-form-input { height: auto; padding: 12px 14px; resize: vertical; }
+.gz-dialog .gz-form-input:focus { border-color: var(--gz-primary); box-shadow: 0 0 0 3px rgba(141, 198, 63, .2); outline: none; }
+
+.gz-addr-labels { display: flex; gap: 8px; margin-bottom: 18px; }
+.gz-addr-labels button { padding: 8px 18px; border-radius: 999px; border: 1.5px solid var(--gz-border); background: #fff; font-size: 13.5px; font-weight: 700; color: #475569; cursor: pointer; transition: all .15s; }
+.gz-addr-labels button:hover { border-color: var(--gz-primary); }
+.gz-addr-labels button.active { background: var(--gz-primary-light); border-color: var(--gz-primary); color: #4d7c0f; }
+
+@media (max-width: 575px) {
+  .gz-dialog-overlay { align-items: flex-end; padding: 0; }
+  .gz-dialog { border-radius: 18px 18px 0 0; max-height: 92vh; }
+  .gz-dialog-actions { flex-direction: column-reverse; }
+  .gz-dialog-actions button { width: 100%; }
+}

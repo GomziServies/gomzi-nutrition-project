@@ -562,6 +562,11 @@ function Home() {
               </li>
 
               <li>
+                <Link to="/shop" className="inter-500">
+                  Shop
+                </Link>
+              </li>
+              <li>
                 <a
                   className="inter-500"
                   href="/read-more-white-labelling-blogs"
@@ -733,6 +738,11 @@ function Home() {
               </li>
 
               <li>
+                <Link to="/shop" className="inter-500">
+                  Shop
+                </Link>
+              </li>
+              <li>
                 <a
                   className="inter-500"
                   href="/read-more-white-labelling-blogs"
@@ -798,6 +808,10 @@ function Home() {
                   text={"Book your Free Roadmap"}
                   subject={"Book from free road map"}
                 />
+
+                <Link to="/shop" className="homepage-bg barlow-condensed-semi">
+                  Shop Now
+                </Link>
 
                 <button
                   className="homepage-bg barlow-condensed-semi"

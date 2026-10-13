@@ -11,6 +11,7 @@ import "./assets/css/nutrition.css";
 import "./assets/css/fg_group.css";
 import "./assets/css/media.css";
 import "./assets/css/about.css";
+import { CartProvider } from "./context/CartContext";
 const App = lazy(() => import("./App"));
 
 window.$ = $;
@@ -123,7 +124,9 @@ const app = (
           </div>
         }
       >
-        <App />
+        <CartProvider>
+          <App />
+        </CartProvider>
       </Suspense>
     </RedirectFromHtml>
     <ToastContainer />
