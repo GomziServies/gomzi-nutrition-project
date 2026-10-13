@@ -4,7 +4,7 @@ let razorpayMerchantId = "rzp_test_F0TUZmabOwKkhe";
 
 // Allow local storage override for dynamic backend URL or port (useful for local testing)
 const customBackendUrl = localStorage.getItem("fg_backend_url");
-const customBackendPort = localStorage.getItem("fg_backend_port") || "80";
+const customBackendPort = localStorage.getItem("fg_backend_port");
 
 if (customBackendUrl) {
   baseUrl = customBackendUrl;
@@ -18,7 +18,10 @@ if (customBackendUrl) {
 } else if (hostname === "test.gomzilifesciences.in") {
   baseUrl = "https://dev-api.fggroup.in";
 } else if (hostname === "localhost" || hostname === "127.0.0.1") {
-  baseUrl = `http://localhost:${customBackendPort}`;
+  // Local dev -> live API, unless a local backend port is set via fg_backend_port
+  baseUrl = customBackendPort
+    ? `http://localhost:${customBackendPort}`
+    : "https://api.fggroup.in";
 } else {
   // Default to dev API for any other unknown hosts
   baseUrl = "https://dev-api.fggroup.in";
