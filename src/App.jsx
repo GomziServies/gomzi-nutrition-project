@@ -105,6 +105,8 @@ import ComplaintForm from "./pages/nutrition/complaint-form";
 import WhyBiggerMoqDoesntMeanBetterQuality from "./pages/white-labelling-blogs/why-bigger-moq-doesnt-mean-better-quality";
 import EprThePlasticPackagingLawThatAppliesToYourBrand from "./pages/white-labelling-blogs/epr-the-plastic-packaging-law-that-applies-to-your-brand";
 import GlpCompanionNutritionSupplementManufacturing from "./pages/white-labelling-blogs/glp-1-companion-nutrition-supplement-manufacturing";
+import FssaiRegulatioForPeanutButterManufacturerInIndia from "./pages/white-labelling-blogs/fssai-regulatio-for-peanut-butter-manufacturer-in-india";
+import HealthSupplementManufacturin10MistakeToAvoid from "./pages/white-labelling-blogs/health-supplement-manufacturing-10-mistake-to-avoid";
 
 const Shop = lazy(() => import("./pages/store/shop"));
 const ProductDetail = lazy(() => import("./pages/store/product-detail"));
@@ -789,6 +791,15 @@ function App() {
         <Route
           path="/blogs/glp-1-companion-nutrition-supplement-manufacturing"
           element={<GlpCompanionNutritionSupplementManufacturing />}
+        />
+        <Route
+          path="/blogs/fssai-regulatio-for-peanut-butter-manufacturer-in-india"
+          element={<FssaiRegulatioForPeanutButterManufacturerInIndia />}
+        />
+
+        <Route
+          path="/blogs/health-supplement-manufacturing-10-mistake-to-avoid"
+          element={<HealthSupplementManufacturin10MistakeToAvoid />}
         />
 
         <Route path="/help-center" element={<Complaints />} />

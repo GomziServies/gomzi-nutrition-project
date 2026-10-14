@@ -5,6 +5,23 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 92,
+    title: "Health Supplement Manufacturing: 10 Mistakes to Avoid",
+    url: "/blogs/health-supplement-manufacturing-10-mistake-to-avoid",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/health-supplement-manufacturing-10-mistake-to-avoid.webp",
+  },
+
+  {
+    number: 91,
+    title: "FSSAI regulation for Peanut Butter Manufacturer in India",
+    url: "/blogs/fssai-regulatio-for-peanut-butter-manufacturer-in-india",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/fssai-regulatio-for-peanut-butter-manufacturer-in-india.webp",
+  },
+  {
     number: 90,
     title: "GLP-1 Companion Nutrition: What It Means for Manufacturing",
     url: "/blogs/glp-1-companion-nutrition-supplement-manufacturing",
