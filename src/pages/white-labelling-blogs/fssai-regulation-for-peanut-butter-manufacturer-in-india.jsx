@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Accordion } from "react-bootstrap";
 
-function FssaiRegulatioForPeanutButterManufacturerInIndia() {
+function FssaiRegulationForPeanutButterManufacturerInIndia() {
   const canonicalUrl = window.location.href;
 
   useEffect(() => {
@@ -513,7 +513,7 @@ function FssaiRegulatioForPeanutButterManufacturerInIndia() {
                         documentation requirements before proceeding.
                       </p>
                       <p className="blog-text mb-8">
-                        Planning to launch your own peanut butter brand? Contact
+                        Planning to launch your own peanut butter brand? Contact{" "}
                         <strong>
                           <Link
                             to="https://www.gomzilifesciences.in/"
@@ -602,4 +602,4 @@ function FssaiRegulatioForPeanutButterManufacturerInIndia() {
   );
 }
 
-export default FssaiRegulatioForPeanutButterManufacturerInIndia;
+export default FssaiRegulationForPeanutButterManufacturerInIndia;

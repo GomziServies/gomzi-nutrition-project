@@ -8475,7 +8475,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .center-menu-list {
   display: flex;
-  gap: 30px;
+  gap: 22px;
   list-style: none;
   margin: 0;
   padding: 0;

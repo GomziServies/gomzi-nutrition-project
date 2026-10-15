@@ -5,6 +5,14 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 93,
+    title: "What is Certificate of Analysis (COA) for Dietary Supplements",
+    url: "/blogs/what-is-certificate-of-analysis-COA-for-dietary-supplements",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/what-is-certificate-of-analysis-COA-for-dietary-supplements.webp",
+  },
+  {
     number: 92,
     title: "Health Supplement Manufacturing: 10 Mistakes to Avoid",
     url: "/blogs/health-supplement-manufacturing-10-mistake-to-avoid",
@@ -16,7 +24,7 @@ export const whitelabelBloglist = [
   {
     number: 91,
     title: "FSSAI regulation for Peanut Butter Manufacturer in India",
-    url: "/blogs/fssai-regulatio-for-peanut-butter-manufacturer-in-india",
+    url: "/blogs/fssai-regulation-for-peanut-butter-manufacturer-in-india",
     imgSrc:
       process.env.PUBLIC_URL +
       "/assets/images/white-labelling-blogs/fssai-regulatio-for-peanut-butter-manufacturer-in-india.webp",
