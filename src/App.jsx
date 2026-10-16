@@ -108,6 +108,7 @@ import GlpCompanionNutritionSupplementManufacturing from "./pages/white-labellin
 import FssaiRegulationForPeanutButterManufacturerInIndia from "./pages/white-labelling-blogs/fssai-regulation-for-peanut-butter-manufacturer-in-india";
 import HealthSupplementManufacturin10MistakeToAvoid from "./pages/white-labelling-blogs/health-supplement-manufacturing-10-mistake-to-avoid";
 import WhatIsCertificateOfAnalysisCOAForDietarySupplements from "./pages/white-labelling-blogs/what-is-certificate-of-analysis-COA-for-dietary-supplements";
+import FdaRegulationsForIndianSupplementExportersCompleteGuide from "./pages/white-labelling-blogs/fda-regulations-for-indian-supplement-exporters-complete-guide";
 
 const Shop = lazy(() => import("./pages/store/shop"));
 const ProductDetail = lazy(() => import("./pages/store/product-detail"));
@@ -806,6 +807,11 @@ function App() {
         <Route
           path="/blogs/what-is-certificate-of-analysis-COA-for-dietary-supplements"
           element={<WhatIsCertificateOfAnalysisCOAForDietarySupplements />}
+        />
+
+        <Route
+          path="/blogs/fda-regulations-for-indian-supplement-exporters-complete-guide"
+          element={<FdaRegulationsForIndianSupplementExportersCompleteGuide />}
         />
 
         <Route path="/help-center" element={<Complaints />} />

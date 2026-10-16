@@ -5,6 +5,14 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 94,
+    title: "FDA Regulations for Indian Supplement Exporters: Complete Guide",
+    url: "/blogs/fda-regulations-for-indian-supplement-exporters-complete-guide",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/fda-regulations-for-indian-supplement-exporters-complete-guide.webp",
+  },
+  {
     number: 93,
     title: "What is Certificate of Analysis (COA) for Dietary Supplements",
     url: "/blogs/what-is-certificate-of-analysis-COA-for-dietary-supplements",
