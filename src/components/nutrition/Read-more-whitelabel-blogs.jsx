@@ -5,6 +5,15 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 95,
+    title:
+      "Why Cure & Treat Claims Are Restricted on Health Supplement Labels in India",
+    url: "/blogs/why-cure-treat-claims-are-restricted-on-health-supplement-labels-in-india",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/why-cure-treat-claims-are-restricted-on-health-supplement-labels-in-india.webp",
+  },
+  {
     number: 94,
     title: "FDA Regulations for Indian Supplement Exporters: Complete Guide",
     url: "/blogs/fda-regulations-for-indian-supplement-exporters-complete-guide",
