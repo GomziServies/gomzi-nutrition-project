@@ -5,6 +5,22 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 97,
+    title: "Best Protein Powder Manufacturer in India: All Owner's Guide",
+    url: "/blogs/best-protein-powder-manufacturer-in-india-all-owners-guide",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/best-protein-powder-manufacturer-in-india-all-owners-guide.webp",
+  },
+  {
+    number: 96,
+    title: "Banned Ingredients in Sports Supplements Manufacturing India",
+    url: "/blogs/banned-ingredients-in-sports-supplements-manufacturing-india",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/banned-ingredients-in-sports-supplements-manufacturing-india.webp",
+  },
+  {
     number: 95,
     title:
       "Why Cure & Treat Claims Are Restricted on Health Supplement Labels in India",

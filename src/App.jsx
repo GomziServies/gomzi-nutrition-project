@@ -110,6 +110,8 @@ import HealthSupplementManufacturin10MistakeToAvoid from "./pages/white-labellin
 import WhatIsCertificateOfAnalysisCOAForDietarySupplements from "./pages/white-labelling-blogs/what-is-certificate-of-analysis-COA-for-dietary-supplements";
 import FdaRegulationsForIndianSupplementExportersCompleteGuide from "./pages/white-labelling-blogs/fda-regulations-for-indian-supplement-exporters-complete-guide";
 import WhyCureTreatClaimsAreRestrictedOnHealthSupplementLabelsInIndia from "./pages/white-labelling-blogs/why-cure-treat-claims-are-restricted-on-health-supplement-labels-in-india";
+import BannedIngredientsInSportsSupplementsManufacturingIndia from "./pages/white-labelling-blogs/banned-ingredients-in-sports-supplements-manufacturing-india";
+import BestProteinPowderManufacturerInIndiaAllOwnersguide from "./pages/white-labelling-blogs/best-protein-powder-manufacturer-in-india-all-owners-guide";
 
 const Shop = lazy(() => import("./pages/store/shop"));
 const ProductDetail = lazy(() => import("./pages/store/product-detail"));
@@ -820,6 +822,16 @@ function App() {
           element={
             <WhyCureTreatClaimsAreRestrictedOnHealthSupplementLabelsInIndia />
           }
+        />
+
+        <Route
+          path="/blogs/banned-ingredients-in-sports-supplements-manufacturing-india"
+          element={<BannedIngredientsInSportsSupplementsManufacturingIndia />}
+        />
+
+        <Route
+          path="/blogs/best-protein-powder-manufacturer-in-india-all-owners-guide"
+          element={<BestProteinPowderManufacturerInIndiaAllOwnersguide />}
         />
 
         <Route path="/help-center" element={<Complaints />} />
