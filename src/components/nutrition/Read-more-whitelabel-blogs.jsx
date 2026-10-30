@@ -5,6 +5,14 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 99,
+    title: "Red Flags to Spot Before Signing Whey Protein Manufacturer",
+    url: "/blogs/red-flags-to-spot-before-signing-whey-protein-manufacturer",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/red-flags-to-spot-before-signing-whey-protein-manufacturer.webp",
+  },
+  {
     number: 98,
     title: "How to Start Sports Supplements Brand in India: Business Guide",
     url: "/blogs/how-to-start-sports-supplements-brand-in-india-business-guide",
@@ -14,7 +22,8 @@ export const whitelabelBloglist = [
   },
   {
     number: 97,
-    title: "Best Protein Powder Manufacturer in India: All Owner's Guide",
+    title:
+      "How to Choose Protein Powder Manufacturer in India: 7 Things to Check",
     url: "/blogs/best-protein-powder-manufacturer-in-india-all-owners-guide",
     imgSrc:
       process.env.PUBLIC_URL +

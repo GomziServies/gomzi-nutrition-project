@@ -223,12 +223,15 @@ export const CartDrawer = () => {
 
 const StoreLayout = ({ title, description, children }) => {
   const { cartCount, setIsCartOpen } = useCart();
+ const canonicalUrl = `${window.location.origin}/shop`;
 
   return (
     <>
       <Helmet>
         <title>{title ? `${title} | Gomzi Nutrition` : "Gomzi Nutrition Store"}</title>
         {description && <meta name="description" content={description} />}
+                <link rel="canonical" href={canonicalUrl} />
+
       </Helmet>
       <SiteHeader />
       <div className="gz-store-wrapper">{children}</div>

@@ -113,6 +113,7 @@ import WhyCureTreatClaimsAreRestrictedOnHealthSupplementLabelsInIndia from "./pa
 import BannedIngredientsInSportsSupplementsManufacturingIndia from "./pages/white-labelling-blogs/banned-ingredients-in-sports-supplements-manufacturing-india";
 import BestProteinPowderManufacturerInIndiaAllOwnersguide from "./pages/white-labelling-blogs/best-protein-powder-manufacturer-in-india-all-owners-guide";
 import HowToStartSportsSupplementsBrandInIndiaBusinessGuide from "./pages/white-labelling-blogs/how-to-start-sports-supplements-brand-in-india-business-guide";
+import RedFlagsToSpotBeforeSigningWheyProteinManufacturer from "./pages/white-labelling-blogs/red-flags-to-spot-before-signing-whey-protein-manufacturer";
 
 const Shop = lazy(() => import("./pages/store/shop"));
 const ProductDetail = lazy(() => import("./pages/store/product-detail"));
@@ -838,6 +839,11 @@ function App() {
         <Route
           path="/blogs/how-to-start-sports-supplements-brand-in-india-business-guide"
           element={<HowToStartSportsSupplementsBrandInIndiaBusinessGuide />}
+        />
+
+        <Route
+          path="/blogs/red-flags-to-spot-before-signing-whey-protein-manufacturer"
+          element={<RedFlagsToSpotBeforeSigningWheyProteinManufacturer />}
         />
 
         <Route path="/help-center" element={<Complaints />} />

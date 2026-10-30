@@ -14,6 +14,8 @@ import BannerSlider from "../../components/store/BannerSlider";
 import ProductCard from "../../components/store/ProductCard";
 import Stars from "../../components/store/Stars";
 import { fetchStoreProducts, formatPrice } from "../../assets/js/store/storeApi";
+import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
+
 
 const PAGE_SIZE = 12;
 
@@ -166,9 +168,60 @@ const Shop = () => {
   const [search, setSearch] = useState("");
   const [tab, setTab] = useState("all");
   const [sort, setSort] = useState("default");
-  const [filters, setFilters] = useState(EMPTY_FILTERS);
+  // const [filters, setFilters] = useState(EMPTY_FILTERS);
   const [shown, setShown] = useState(PAGE_SIZE);
   const [filterOpen, setFilterOpen] = useState(false);
+
+   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const [filterValues, setFilterValues] = useState({
+    minPrice: "",
+    maxPrice: "",
+    inStock: false,
+    minRating: 0,
+  });
+
+ const filters = useMemo(
+  () => ({
+    ...filterValues,
+    categories: searchParams.getAll("category"),
+  }),
+  [filterValues, searchParams]
+);
+
+  const setFilters = (updater) => {
+    const nextFilters =
+      typeof updater === "function" ? updater(filters) : updater;
+
+    const { categories = [], ...otherFilters } = nextFilters;
+
+    setFilterValues((prev) => ({
+      ...prev,
+      ...otherFilters,
+    }));
+
+    const currentCategories = searchParams.getAll("category");
+
+    if (JSON.stringify(currentCategories) !== JSON.stringify(categories)) {
+      const nextParams = new URLSearchParams(searchParams);
+
+      nextParams.delete("category");
+
+      categories.forEach((category) => {
+        nextParams.append("category", category);
+      });
+
+      // Convert + into %20
+      const queryString = nextParams.toString().replace(/\+/g, "%20");
+
+      // Update URL without re-serializing query parameters
+      navigate(
+        `${location.pathname}${queryString ? `?${queryString}` : ""}${location.hash}`,
+      );
+    }
+  };
 
   const load = () => {
     setState("loading");
