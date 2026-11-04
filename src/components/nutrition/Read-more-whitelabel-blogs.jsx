@@ -5,6 +5,14 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 100,
+    title: "Why Microbial Testing Matters Before Supplement Launch",
+    url: "/blogs/why-microbial-testing-matters-before-supplement-launch",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/why-microbial-testing-matters-before-supplement-launch.webp",
+  },
+  {
     number: 99,
     title: "Red Flags to Spot Before Signing Whey Protein Manufacturer",
     url: "/blogs/red-flags-to-spot-before-signing-whey-protein-manufacturer",
