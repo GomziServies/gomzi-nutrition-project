@@ -38,10 +38,10 @@ function BestWheyProteinInIndia() {
           property="og:image"
           content="https://fggroup.in/assets/images/logo/fg_group.webp"
         />
-        <meta property="og:url" content={ canonicalUrl } />
-        <link rel="canonical" href={ canonicalUrl } />
+        <meta property="og:url" content={canonicalUrl} />
+        <link rel="canonical" href={canonicalUrl} />
         <script>
-          { `!function(f,b,e,v,n,t,s)
+          {`!function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
             if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -54,22 +54,22 @@ function BestWheyProteinInIndia() {
             `}
         </script>
         <noscript>
-          { `<img height="1" width="1" style="display:none"
+          {`<img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=1144699046738070&ev=PageView&noscript=1"
             />`}
         </noscript>
         <script
           async
-          src={ `https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38` }
+          src={`https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38`}
         ></script>
         <noscript>
-          { `window.dataLayer = window.dataLayer || [];
+          {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-J50WNKGW38');`}
         </noscript>
         <script>
-          { `
+          {`
           (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -155,7 +155,7 @@ function BestWheyProteinInIndia() {
                     India, Gomzi Lifescience proudly presents its flagship Whey
                     Protein Hydrolyzed. This specially formulated blend
                     addresses the dynamic needs of fitness enthusiasts, offering
-                    a perfect balance of taste and nutrition. For more details,{ " " }
+                    a perfect balance of taste and nutrition. For more details,{" "}
                     <Link
                       to="https://www.gomzilifesciences.in/"
                       target="_blank"
@@ -207,7 +207,7 @@ function BestWheyProteinInIndia() {
                     Optimum Nutrition's Gold Standard Whey combines whey protein
                     isolate and concentrate for fast recovery and muscle growth.
                     With a protein percentage of 80% per serving, it remains a
-                    favorite for those serious about fitness. For more details,{ " " }
+                    favorite for those serious about fitness. For more details,{" "}
                     <Link
                       to="https://www.gomzilifesciences.in/"
                       target="_blank"
@@ -225,7 +225,7 @@ function BestWheyProteinInIndia() {
                   <p>
                     This product stands out as one of the best whey protein
                     choices among whey products for those who prefer
-                    high-quality pre-gym supplements.{ " " }
+                    high-quality pre-gym supplements.{" "}
                   </p>
                   <p>
                     <br />
@@ -269,7 +269,7 @@ function BestWheyProteinInIndia() {
                   <br />
                   <p>
                     Whether you need pre-gym supplements or post-workout
-                    recovery, this whey protein delivers.{ " " }
+                    recovery, this whey protein delivers.{" "}
                   </p>
                   <p>
                     <br />
@@ -300,7 +300,7 @@ function BestWheyProteinInIndia() {
                     known for its quick recovery benefits and high bioactivity,
                     ensuring a superior quality product. For those looking for
                     natural, high-quality whey products, Avvatar is an excellent
-                    option. For more details{ " " }
+                    option. For more details{" "}
                     <Link
                       to="https://www.gomzilifesciences.in/"
                       target="_blank"
@@ -318,7 +318,7 @@ function BestWheyProteinInIndia() {
                   <p>
                     Avvatar is considered one of the best whey protein choices,
                     offering great results as part of your pre-gym supplements
-                    regimen.{ " " }
+                    regimen.{" "}
                   </p>
                   <p>
                     <br />
@@ -434,7 +434,7 @@ function BestWheyProteinInIndia() {
                     protein with fast absorption, which makes it a strong
                     contender for the best whey protein category. Ideal for
                     improving workout performance, it is instantized for easy
-                    mixing and fast metabolism. For more details,{ " " }
+                    mixing and fast metabolism. For more details,{" "}
                     <Link
                       to="https://www.gomzilifesciences.in/"
                       target="_blank"
@@ -484,7 +484,7 @@ function BestWheyProteinInIndia() {
                     Muscletech Nitrotech is perfect for individuals looking to
                     amplify their muscle strength and recovery. Enriched with
                     creatine for improved workout performance, it's one of the
-                    best whey protein options available. For more details{ " " }
+                    best whey protein options available. For more details{" "}
                     <Link
                       to="https://www.gomzilifesciences.in/"
                       target="_blank"
@@ -506,7 +506,7 @@ function BestWheyProteinInIndia() {
                   </p>
                   <br />
                   <p>
-                    <b>Conclusion</b>
+                    <b>Final Takeaway</b>
                   </p>
                   <br />
                   <p>

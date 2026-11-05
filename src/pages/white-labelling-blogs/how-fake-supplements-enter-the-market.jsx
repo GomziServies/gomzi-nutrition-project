@@ -488,7 +488,7 @@ function HowFakeSupplementsEntertheMarket() {
 
                     <div className="blog-section">
                       <div className="blog-conclusion">
-                        <h2 className="blog-section-title">Conclusion</h2>
+                        <h2 className="blog-section-title">Final Takeaway</h2>
                         <p className="blog-text mb-8">
                           Fake supplements pose serious health risks, but
                           informed consumers and industry professionals can

@@ -833,7 +833,7 @@ function HowToStartAPrivateLabelSupplementBrandInIndia() {
 
                       <div className="blog-conclusion">
                         <p className="blog-text">
-                          <h2 className="blog-section-title">Conclusion</h2>
+                          <h2 className="blog-section-title">Final Takeaway</h2>
                         </p>
                         <p className="blog-text">
                           Starting a private label supplement brand in India is

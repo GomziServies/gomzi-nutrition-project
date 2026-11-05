@@ -506,7 +506,7 @@ function WhyCureTreatClaimsAreRestrictedOnHealthSupplementLabelsInIndia() {
                     </div>
 
                     <div className="blog-section">
-                      <h2 className="blog-section-title">Conclusion</h2>
+                      <h2 className="blog-section-title">Final Takeaway</h2>
                       <p className="blog-text mb-8">
                         Cure and treat claims are restricted because supplements
                         are food products, and consumers should not be led to
