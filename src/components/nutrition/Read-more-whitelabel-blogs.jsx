@@ -5,6 +5,14 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 101,
+    title: "Amino Spiking in Whey Protein: 5 Legal Risks Indian Brand Faces",
+    url: "/blogs/amino-spiking-in-whey-protein-5-legal-risks-indian-brand-faces",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/amino-spiking-in-whey-protein-5-legal-risks-indian-brand-faces.webp",
+  },
+  {
     number: 100,
     title: "Why Microbial Testing Matters Before Supplement Launch",
     url: "/blogs/why-microbial-testing-matters-before-supplement-launch",
