@@ -404,7 +404,7 @@ function Home() {
         <section className="header-main"></section>
       </div>
       <div className="container-fluid main p-0 m-0 homePage-header-position ">
-        <div className="homePage-header-position-div">
+        <div className="homePage-header-position-div site-header">
           <div className="d-lg-block d-none log-new">
             <Link to="/">
               <div>
