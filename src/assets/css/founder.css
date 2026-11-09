@@ -186,7 +186,7 @@
 
 /* Journey Section */
 .founder-journey-section {
-  background: url("/public/assets/images/nutrition/manufacturer-banner.webp") no-repeat center center/cover;
+  background: url("/assets/images/nutrition/manufacturer-banner.webp") no-repeat center center/cover;
   position: relative;
   padding: 0 !important;
 }
