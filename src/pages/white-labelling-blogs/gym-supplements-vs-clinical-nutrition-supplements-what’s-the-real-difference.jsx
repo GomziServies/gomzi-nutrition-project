@@ -528,7 +528,7 @@ function GymSupplementsvsClinicalNutritionSupplementsWhatstheRealDifference() {
 
                     <div className="blog-section">
                       <div className="blog-conclusion">
-                        <h2 className="blog-section-title">Final Thoughts</h2>
+                        <h2 className="blog-section-title">Final Takeaway</h2>
                         <p className="blog-text">
                           Gym supplements and clinical nutrition supplements may
                           appear similar, but their purpose is very different.

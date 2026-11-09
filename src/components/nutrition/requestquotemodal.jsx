@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, useRef } from "react";
+import { Fragment, useState, useCallback, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { publicAxiosInstance } from "../../assets/js/config/api";
 import "../../assets/css/nutrition.css";
@@ -160,12 +160,20 @@ const STEPS = [
   {
     key: "productCategory",
     question: "What product category are you interested in?",
+    layout: "grid",
     options: [
-      "Sports Nutrition",
       "Whey Protein",
-      "Multivitamin Tablets",
-      "Mass Gainer",
-      "Other",
+      "Plant & Vegan Protein",
+      "Mass & Weight Gainer",
+      "Creatine",
+      "Amino Acids",
+      "Pre-Workout & Hydration",
+      "Weight Management",
+      "Vitamins & Wellness",
+      "Peanut Butter",
+      "Instant Protein Beverages",
+      "Protein Snacks",
+      "Custom Demand",
     ],
   },
   {
@@ -395,7 +403,7 @@ export default function RequestQuoteModal() {
               </div>
 
               {!submitted ? (
-                <>
+                <Fragment key="quote-form">
                   {/* Header */}
                   <div className="requestmodal-header">
                     <div className="requestmodal-get-quote">Get a Quote</div>
@@ -436,16 +444,22 @@ export default function RequestQuoteModal() {
                                 ))}
                               </div>
                             ) : (
-                              s.options.map((o) => (
-                                <RadioOption
-                                  key={o}
-                                  name={s.key}
-                                  value={o}
-                                  label={o}
-                                  selected={form[s.key] === o}
-                                  onChange={handleRadioChange}
-                                />
-                              ))
+                              <div
+                                className={
+                                  s.layout === "grid" ? "s-type-grid" : undefined
+                                }
+                              >
+                                {s.options.map((o) => (
+                                  <RadioOption
+                                    key={o}
+                                    name={s.key}
+                                    value={o}
+                                    label={o}
+                                    selected={form[s.key] === o}
+                                    onChange={handleRadioChange}
+                                  />
+                                ))}
+                              </div>
                             )}
                             {errors[s.key] && (
                               <span className="error-key">{errors[s.key]}</span>
@@ -599,10 +613,10 @@ export default function RequestQuoteModal() {
                       🔒 Your info is safe with us. No spam, ever.
                     </p>
                   </div>
-                </>
+                </Fragment>
               ) : (
                 /* ── Success Screen ── */
-                <>
+                <Fragment key="quote-success">
                   <button onClick={handleClose} className="requestmodal-close ">
                     ✕
                   </button>
@@ -664,7 +678,7 @@ export default function RequestQuoteModal() {
 
                     <p className="data-safe-p ">🔒 Your data is safe with us</p>
                   </div>
-                </>
+                </Fragment>
               )}
             </div>
           </>,

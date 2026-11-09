@@ -8504,6 +8504,31 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 100%;
 }
 
+/* Site header (home + SiteHeader): keep every menu item on a single line */
+.site-header .center-menu { white-space: nowrap; }
+.site-header .center-menu-list { flex-wrap: nowrap; align-items: center; gap: 28px; }
+.site-header .center-menu-list > li { white-space: nowrap; flex: none; }
+.site-header .center-menu-list li a { white-space: nowrap; font-size: 15px; display: inline-flex; align-items: center; gap: 5px; }
+.site-header .dd-arrow { display: inline-flex; align-items: center; margin-left: 2px; line-height: 1; }
+.site-header .login .homePage-btn { white-space: nowrap; font-size: 16px; padding: 10px 20px; letter-spacing: .3px; }
+@media (max-width: 1399px) {
+  .site-header .center-menu-list { gap: 20px; }
+  .site-header .center-menu-list li a { font-size: 14px; }
+  .site-header .login .homePage-btn { font-size: 14.5px; padding: 9px 16px; }
+}
+@media (min-width: 1200px) and (max-width: 1279px) {
+  .site-header .center-menu-list { gap: 15px; }
+  .site-header .center-menu-list li a { font-size: 13.5px; }
+  .site-header .log-new { width: 88px; }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .site-header .center-menu-list { gap: 12px; }
+  .site-header .center-menu-list li a { font-size: 13px; gap: 3px; }
+  .site-header .log-new { width: 76px; margin-left: 14px; }
+  .site-header .login { right: 14px; }
+  .site-header .login .homePage-btn { font-size: 13px; padding: 8px 12px; letter-spacing: 0; }
+}
+
 .submit-btn {
   width: 100%;
   color: #fff;
@@ -12105,6 +12130,31 @@ input[type="number"]::-webkit-outer-spin-button {
   gap: 0.4rem;
 }
 
+/* Two-column radio list (product category step) */
+.s-type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.s-type-grid .custom-label-radio {
+  margin-bottom: 0;
+  gap: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.84rem;
+  line-height: 1.3;
+}
+
+.s-type-grid .custom-radio {
+  flex: none;
+}
+
+@media (max-width: 360px) {
+  .s-type-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .error-key {
   color: #e24b4a;
   font-size: 0.72rem;
@@ -12150,7 +12200,30 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .requestmodal-footer-div {
   display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
   gap: 0.75rem;
+}
+
+.requestmodal-footer-div > button {
+  min-width: 0;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+/* CRM tracking notice (inserted by fg-crm-tracking.js before the submit button):
+   give it its own full-width row above the buttons so Back / Submit stay side by side */
+.requestmodal-footer-div > [data-fg-tracking-notice] {
+  flex: 0 0 100%;
+  order: -1;
+  margin: 0 !important;
+}
+
+@media (max-width: 400px) {
+  .requestmodal-footer-div > button {
+    font-size: 0.9rem !important;
+    padding: 0.75rem 0.6rem !important;
+  }
 }
 
 .info-safe {

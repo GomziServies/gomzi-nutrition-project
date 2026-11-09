@@ -606,7 +606,7 @@ function FdaRegulationsForIndianSupplementExportersCompleteGuide() {
                     </div>
 
                     <div className="blog-section">
-                      <h2 className="blog-section-title">Conclusion</h2>
+                      <h2 className="blog-section-title">Final Takeaway</h2>
                       <p className="blog-text mb-8">
                         Understanding FDA rules for Indian supplement exporters
                         is essential for businesses preparing to enter the US

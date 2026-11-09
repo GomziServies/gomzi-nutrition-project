@@ -68,7 +68,7 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
                        gtag('js', new Date());
                        gtag('config', 'G-J50WNKGW38');`}</noscript>
         <script>
-          { `
+          {`
           (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -425,7 +425,7 @@ function WhyMostSupplementBrandsFailBeforeTheirFirstSale() {
 
                     <div className="blog-section">
                       <div className="blog-conclusion">
-                        <h2 className="blog-section-title">Conclusion</h2>
+                        <h2 className="blog-section-title">Final Takeaway</h2>
                         <p className="blog-text mb-5px">
                           A supplement brand is not built in the market - it is
                           built{" "}

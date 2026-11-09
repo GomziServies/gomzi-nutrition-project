@@ -547,7 +547,7 @@ function ThePsychologyOfBuyingSupplements() {
                     </div>
 
                     <div className="blog-conclusion">
-                      <h2 className="blog-section-title">Final Thoughts</h2>
+                      <h2 className="blog-section-title">Final Takeaway</h2>
                       <p className="blog-text mb-8">
                         The psychology of buying supplements is driven by much
                         more than ingredients or pricing. Consumers choose

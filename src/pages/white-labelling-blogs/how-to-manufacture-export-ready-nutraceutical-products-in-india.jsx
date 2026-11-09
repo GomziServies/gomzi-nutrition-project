@@ -361,7 +361,7 @@ function HowtoManufactureExportReadyNutraceuticalProductsInIndia() {
                     <div className="blog-section">
                       <div className="blog-conclusion">
                         <p className="blog-text">
-                          <h2 className="blog-section-title">Conclusion</h2>
+                          <h2 className="blog-section-title">Final Takeaway</h2>
                         </p>
                         <p className="blog-text">
                           The world is ready for Indian wellness. By combining

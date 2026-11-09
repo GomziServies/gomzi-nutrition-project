@@ -647,7 +647,7 @@ function BannedIngredientsInSportsSupplementsManufacturingIndia() {
                     </div>
 
                     <div className="blog-section">
-                      <h2 className="blog-section-title">Conclusion</h2>
+                      <h2 className="blog-section-title">Final Takeaway</h2>
                       <p className="blog-text mb-8">
                         Developing a sports supplement involves more than
                         creating a promising formula. Manufacturers also need to

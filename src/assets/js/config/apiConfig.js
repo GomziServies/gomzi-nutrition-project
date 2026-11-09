@@ -18,10 +18,10 @@ if (customBackendUrl) {
 } else if (hostname === "test.gomzilifesciences.in") {
   baseUrl = "https://dev-api.fggroup.in";
 } else if (hostname === "localhost" || hostname === "127.0.0.1") {
-  // Local dev -> live API, unless a local backend port is set via fg_backend_port
+  // Local dev -> dev API, unless a local backend port is set via fg_backend_port
   baseUrl = customBackendPort
     ? `http://localhost:${customBackendPort}`
-    : "https://api.fggroup.in";
+    : "https://dev-api.fggroup.in";
 } else {
   // Default to dev API for any other unknown hosts
   baseUrl = "https://dev-api.fggroup.in";
