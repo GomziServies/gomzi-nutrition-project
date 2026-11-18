@@ -116,6 +116,7 @@ import HowToStartSportsSupplementsBrandInIndiaBusinessGuide from "./pages/white-
 import RedFlagsToSpotBeforeSigningWheyProteinManufacturer from "./pages/white-labelling-blogs/red-flags-to-spot-before-signing-whey-protein-manufacturer";
 import WhyMicrobialTestingMattersBeforeSupplementLaunch from "./pages/white-labelling-blogs/why-microbial-testing-matters-before-supplement-launch";
 import AminoSpikingInWheyProtein5LegalRisksIndianBrandFaces from "./pages/white-labelling-blogs/amino-spiking-in-whey-protein-5-legal-risks-indian-brand-faces";
+import FatBurnerSupplementManufacturingInIndiaACompleteGuide from "./pages/white-labelling-blogs/fat-burner-supplement-manufacturing-in-india-a-complete-guide";
 
 const Shop = lazy(() => import("./pages/store/shop"));
 const ProductDetail = lazy(() => import("./pages/store/product-detail"));
@@ -856,6 +857,11 @@ function App() {
         <Route
           path="/blogs/amino-spiking-in-whey-protein-5-legal-risks-indian-brand-faces"
           element={<AminoSpikingInWheyProtein5LegalRisksIndianBrandFaces />}
+        />
+
+        <Route
+          path="/blogs/fat-burner-supplement-manufacturing-in-india-a-complete-guide"
+          element={<FatBurnerSupplementManufacturingInIndiaACompleteGuide />}
         />
 
         <Route path="/help-center" element={<Complaints />} />
