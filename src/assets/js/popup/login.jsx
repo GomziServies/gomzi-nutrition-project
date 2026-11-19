@@ -18,10 +18,25 @@ const LoginModal = ({
   const [otpDialogOpen, setOtpDialogOpen] = useState(false);
   const [otpCode, setOtpCode] = useState("");
   const [mobileNumber, setMobileNumber] = useState(initialMobile || "");
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(initialEmail || "");
   const [password, setPassword] = useState("");
   const [emailOtp, setEmailOtp] = useState("");
   const [emailOtpDialogOpen, setEmailOtpDialogOpen] = useState(false);
+  const [verificationId, setVerificationId] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [verifying, setVerifying] = useState(false);
+
+  useEffect(() => {
+    if (initialEmail) {
+      setEmail(initialEmail);
+    }
+  }, [initialEmail]);
+
+  useEffect(() => {
+    if (initialMobile) {
+      setMobileNumber(initialMobile);
+    }
+  }, [initialMobile]);
 
   const handleClose = () => {
     setShowModal(false);
@@ -46,8 +61,9 @@ const LoginModal = ({
       const isDefault =
         isDefaultFirst || isDefaultLast || full === "fg user" || !full;
       const isEmailEmpty = !user?.email || !user?.email.trim();
+      const currentEmail = (email || initialEmail || "").trim();
 
-      if ((isDefault || isEmailEmpty) && (initialFullName || initialEmail)) {
+      if ((isDefault || isEmailEmpty) && (initialFullName || currentEmail)) {
         const nameParts = (initialFullName || "")
           .trim()
           .split(/\s+/)
@@ -61,13 +77,13 @@ const LoginModal = ({
           updatePayload.first_name = firstName;
           updatePayload.last_name = lastName;
         }
-        if (isEmailEmpty && initialEmail && initialEmail.trim()) {
-          updatePayload.email = initialEmail.trim();
+        if (isEmailEmpty && currentEmail) {
+          updatePayload.email = currentEmail;
         }
 
         if (Object.keys(updatePayload).length > 0) {
-          if (user?.mobile || mobileNumber) {
-            updatePayload.mobile = user?.mobile || mobileNumber;
+          if (user?.mobile || mobileNumber || initialMobile) {
+            updatePayload.mobile = user?.mobile || mobileNumber || initialMobile;
           }
           if (user?.uid) {
             updatePayload.user_id = user.uid;
@@ -118,26 +134,48 @@ const LoginModal = ({
   };
 
   const handleLogin = async () => {
+    const trimmedEmail = (email || "").trim();
+    if (!trimmedEmail) {
+      toast.error("Please enter your email address.");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(trimmedEmail)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
     try {
+      setLoading(true);
       const response = await axiosInstance.post("/account/authorization", {
-        mobile: mobileNumber,
+        email: trimmedEmail.toLowerCase(),
       });
 
       if (response.data && response.data.data && response.data.data.OTP) {
         setOtpCode(response.data.data.OTP);
-        setShowModal(false);
-        handleOtpPopupOpen();
-        toast.success("OTP Sent on your mobile number.");
-      } else if (response.data && response.data.data) {
-        setShowModal(false);
-        handleOtpPopupOpen();
-        toast.success("OTP Sent on your mobile number.");
-      } else {
-        toast.error("Failed to send OTP. Please try again.");
       }
+      if (
+        response.data &&
+        response.data.data &&
+        response.data.data.verification_id
+      ) {
+        setVerificationId(response.data.data.verification_id);
+      }
+
+      setShowModal(false);
+      handleOtpPopupOpen();
+      toast.success(
+        response.data?.message || "OTP Sent on your email address.",
+      );
     } catch (error) {
-      toast.error("Failed to send OTP. Please try again.");
+      const msg =
+        error?.response?.data?.message ||
+        "Failed to send OTP. Please try again.";
+      toast.error(msg);
       console.error("Error in handleLogin:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -199,33 +237,60 @@ const LoginModal = ({
   };
 
   const handleOtpSubmit = async () => {
+    const trimmedOtp = (otpCode || "").trim();
+    if (!trimmedOtp) {
+      toast.error("Please enter the OTP.");
+      return;
+    }
+
     try {
+      setVerifying(true);
+      const payload = {
+        otp: trimmedOtp,
+      };
+
+      if (email && email.trim()) {
+        payload.email = email.trim().toLowerCase();
+      } else if (mobileNumber) {
+        payload.mobile = mobileNumber;
+      }
+
+      if (verificationId) {
+        payload.verification_id = verificationId;
+      }
+
       const response = await axiosInstance.post(
         "/account/authorization/verify",
-        {
-          mobile: mobileNumber,
-          otp: otpCode,
-        },
+        payload,
       );
 
       if (response.status === 200) {
-        localStorage.setItem(
-          "fg_group_user_authorization",
-          response.data.data.authorization,
-        );
+        const token =
+          response.data?.data?.authorization || response.data?.data?.token;
+        if (token) {
+          localStorage.setItem("fg_group_user_authorization", token);
+        }
         await getUserData();
         setOtpDialogOpen(false);
         toast.success("Successfully Login!");
         if (onLoginSuccess) {
-          onLoginSuccess(response.data.data.authorization);
+          onLoginSuccess(token || response.data?.data?.authorization);
         } else {
           window.location.reload();
         }
       } else {
-        toast.error("Failed to verify OTP. Please try again.");
+        toast.error(
+          response.data?.message || "Failed to verify OTP. Please try again.",
+        );
       }
     } catch (error) {
+      const msg =
+        error?.response?.data?.message ||
+        "Failed to verify OTP. Please try again.";
+      toast.error(msg);
       console.error("Error in handleOtpSubmit:", error);
+    } finally {
+      setVerifying(false);
     }
   };
 
@@ -244,6 +309,7 @@ const LoginModal = ({
 
   const handleCloseOtpModal = () => {
     setOtpDialogOpen(false);
+    if (onClose) onClose();
   };
 
   useEffect(() => {
@@ -275,7 +341,12 @@ const LoginModal = ({
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form onSubmit={(e) => e.preventDefault()}>
+          <Form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleLogin();
+            }}
+          >
             <Form.Group
               controlId="formBasicUsername"
               className="mb-4 text-center"
@@ -284,25 +355,26 @@ const LoginModal = ({
                 OTP Verification
               </Form.Label>
               <Form.Control
-                type="text"
+                type="email"
                 className="fr"
-                placeholder="Enter mobile number"
-                value={mobileNumber}
-                onChange={(e) => setMobileNumber(e.target.value)}
+                placeholder="Enter email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                autoFocus
               />
             </Form.Group>
             <Button
-              type="button"
+              type="submit"
               className="submit_modal login-submit-btn  barlow-condensed-semi "
-              onClick={handleLogin}
+              disabled={loading}
             >
-              Log In
+              {loading ? "Sending..." : "Log In"}
             </Button>
           </Form>
         </Modal.Body>
       </Modal>
 
-      <Modal Modal show={otpDialogOpen} onHide={handleCloseOtpModal} centered>
+      <Modal show={otpDialogOpen} onHide={handleCloseOtpModal} centered>
         <Modal.Header closeButton className="border-0">
           <Modal.Title>
             <div className="text-center">
@@ -311,7 +383,7 @@ const LoginModal = ({
                   <img
                     src={
                       process.env.PUBLIC_URL +
-                      "../assets/images/logo/nutrition-logo.webp"
+                      "../assets/images/logo/gomzi-life-science-logo.webp"
                     }
                     width="40%"
                     alt="Fg Group"
@@ -322,7 +394,12 @@ const LoginModal = ({
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form onSubmit={(e) => e.preventDefault()}>
+          <Form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleOtpSubmit();
+            }}
+          >
             <Form.Group
               controlId="formBasicUsername"
               className="mb-4 text-center"
@@ -337,14 +414,15 @@ const LoginModal = ({
                 className="fr"
                 value={otpCode}
                 onChange={(e) => setOtpCode(e.target.value)}
+                autoFocus
               />
             </Form.Group>
             <Button
-              type="button"
+              type="submit"
               className="submit_modal login-submit-btn"
-              onClick={handleOtpSubmit}
+              disabled={verifying}
             >
-              Verify Otp
+              {verifying ? "Verifying..." : "Verify Otp"}
             </Button>
           </Form>
         </Modal.Body>

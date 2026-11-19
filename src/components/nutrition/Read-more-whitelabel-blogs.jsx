@@ -5,6 +5,14 @@ import NutritionFooter from "../partials/Footer/nutritionfooter";
 
 export const whitelabelBloglist = [
   {
+    number: 102,
+    title: "Fat Burner Supplement Manufacturing in India: A Complete Guide",
+    url: "/blogs/fat-burner-supplement-manufacturing-in-india-a-complete-guide",
+    imgSrc:
+      process.env.PUBLIC_URL +
+      "/assets/images/white-labelling-blogs/fat-burner-supplement-manufacturing-in-india-a-complete-guide.webp",
+  },
+  {
     number: 101,
     title: "Amino Spiking in Whey Protein: 5 Legal Risks Indian Brand Faces",
     url: "/blogs/amino-spiking-in-whey-protein-5-legal-risks-indian-brand-faces",
