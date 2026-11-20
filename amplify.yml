@@ -1,0 +1,97 @@
+version: 1
+app: gomzi-nutrition-desk-site
+appRoot: .
+author: Jenil Narola
+env:
+  variables:
+    CI: "false"
+    SKIP_PRERENDER: "true"
+    BROWSER: "none"
+    INLINE_RUNTIME_CHUNK: "false"
+backend:
+  phases:
+    build:
+      commands:
+        - echo "Backend build phase started"
+        - echo "Environment - Production"
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "Installing dependencies..."
+        - npm ci
+        - echo "Dependencies installed successfully"
+    build:
+      commands:
+        - echo "Building..."
+        - npm run build
+        - echo "Build completed successfully"
+    postBuild:
+      commands:
+        - echo "Build artifacts ready for deployment"
+  artifacts:
+    baseDirectory: build
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules/**/*
+      - .eslintcache
+      - .cache
+  customHeaders:
+    - pattern: "**/*.js"
+      headers:
+        - key: "Cache-Control"
+          value: "public, max-age=31536000, immutable"
+    - pattern: "**/*.css"
+      headers:
+        - key: "Cache-Control"
+          value: "public, max-age=31536000, immutable"
+    - pattern: "**/*.woff"
+      headers:
+        - key: "Cache-Control"
+          value: "public, max-age=31536000, immutable"
+    - pattern: "**/*.woff2"
+      headers:
+        - key: "Cache-Control"
+          value: "public, max-age=31536000, immutable"
+    - pattern: "**/*.ttf"
+      headers:
+        - key: "Cache-Control"
+          value: "public, max-age=31536000, immutable"
+    - pattern: "**/*.png"
+      headers:
+        - key: "Cache-Control"
+          value: "public, max-age=31536000, immutable"
+    - pattern: "**/*.jpg"
+      headers:
+        - key: "Cache-Control"
+          value: "public, max-age=31536000, immutable"
+    - pattern: "**/*.jpeg"
+      headers:
+        - key: "Cache-Control"
+          value: "public, max-age=31536000, immutable"
+    - pattern: "**/*.webp"
+      headers:
+        - key: "Cache-Control"
+          value: "public, max-age=31536000, immutable"
+    - pattern: "**/*.svg"
+      headers:
+        - key: "Cache-Control"
+          value: "public, max-age=31536000, immutable"
+    - pattern: "/index.html"
+      headers:
+        - key: "Cache-Control"
+          value: "public, max-age=0, must-revalidate"
+    - pattern: "/sitemap.xml"
+      headers:
+        - key: "Cache-Control"
+          value: "public, max-age=3600"
+    - pattern: "/robots.txt"
+      headers:
+        - key: "Cache-Control"
+          value: "public, max-age=3600"
+    - pattern: "/manifest.json"
+      headers:
+        - key: "Cache-Control"
+          value: "public, max-age=3600"
